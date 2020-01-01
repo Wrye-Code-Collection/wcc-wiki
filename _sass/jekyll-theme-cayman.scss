@@ -3,6 +3,7 @@
 @import "variables";
 @import "adopted-styles.scss";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import themedark
 @mixin full {
   @media screen and (min-width: #{$full-breakpoint}) {
     @content;
