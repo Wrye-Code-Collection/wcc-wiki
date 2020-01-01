@@ -24,6 +24,7 @@ title: Wrye Mash Usage
 h1.header1 {
   border-top: 2px solid #000000;
   border-bottom: 2px solid #000000;
+  color: #acb7ae;
   background: #3a4660;
   // background: #262626;
   display: block;
@@ -36,6 +37,7 @@ a.header1 {
 h2.header2 {
   border-top: 2px solid #000000;
   border-bottom: 2px solid #000000;
+  color: #DCC7AA;
   background: #82716e;
   display: block;
   margin-top: 0.1rem;
@@ -55,7 +57,6 @@ h3.header3 {
 }
 
 h4.header4 {
-  font-style: italic;
   color: #444444;
   background: #C0C0C0;
   display: block;
@@ -126,11 +127,11 @@ body {
 
 
 <section>
-    <h1 class="header1"><a class="header1" name='WryeMash'>Wrye Mash</a></h1>
+    <h1 class="header1" id="WryeMash">Wrye Mash</a></h1>
     <p class=list-1>&bull;&nbsp; Latest Version: <a href="https://github.com/Wrye-Bashers/Wrye-Mash/releases">Wrye Mash</a>
     <p class=list-1>&bull;&nbsp; Discussion: <a href="https://www.afkmods.com/index.php?/topic/5068-wipz-wrye-mash/">AFK Mods Forums</a>
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a class="header2" class=header2" name='Contents'>Contents</a></h2>
+    <h2 class="header2" id="Contents">Contents</a></h2>
     <p class=list-1>&bull;&nbsp; <a href="#QuickStart">Quick Start</a></p>
     <p class=list-2>&bull;&nbsp; <a href="#MaintainYourLoadOrder">Maintain Your Load Order</a></p>
     <p class=list-2>&bull;&nbsp; <a href="#ChangeModLoadOrder">Change Mod Load Order</a></p>
@@ -226,37 +227,37 @@ body {
     <p class=list-2>&bull;&nbsp; <a href="#CreditsThanks">Credits/Thanks</a></p>
     <p class=list-2>&bull;&nbsp; <a href="#Contact">Contact</a></p>
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='QuickStart'>Quick Start</a></h2>
+    <h2 class="header2" id="QuickStart">Quick Start</h2>
     <p><B><I>Do you find long docs scary?</I></B> Here's a quick guide to Mash's most popular features.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='MaintainYourLoadOrder'>Maintain Your Load Order</a></h3>
+    <h3 class="header3" id="MaintainYourLoadOrder">Maintain Your Load Order</h3>
     <p class=list-1>&bull;&nbsp; You only have to do this once...
     <p class=list-1>&bull;&nbsp; Go to Mods tab, right click on "File" column header and make sure that "Lock Times" is checked.
     <p class=list-1>&bull;&nbsp; For more information, see <B><I><a href="#LoadOrderMaintenance">Load Order Maintenance</a>.</I></B>
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='ChangeModLoadOrder'>Change Mod Load Order</a></h3>
+    <h3 class="header3" id="ChangeModLoadOrder">Change Mod Load Order</h3>
     <p class=list-1>&bull;&nbsp; Go to mods tab, and select the mod you want to reorder.
     <p class=list-1>&bull;&nbsp; Edit the "Modified" date/time field to the date/time you want.
     <p class=list-1>&bull;&nbsp; Click Save.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='MergingLeveledLists'>Merging Leveled Lists</a></h3>
+    <h3 class="header3" id="MergingLeveledLists">Merging Leveled Lists</h3>
     <p class=list-1>&bull;&nbsp; Copy "Mashed Lists.esp" from the mopy\Extras folder to your Data Files folder.
     <p class=list-1>&bull;&nbsp; Select the mods you want to load from the Mods tab.
     <p class=list-1>&bull;&nbsp; Right click on "Mashed Lists.esp" in the Mods tab and select "Import: Merged Lists".
     <p class=list-1>&bull;&nbsp; For more information, see <B><I><a href="#ImportMergedLists">Import Merged Lists</a>.</I></B>
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='RepairingaSaveGame'>Repairing a Save Game</a></h3>
+    <h3 class="header3" id="RepairingaSaveGame">Repairing a Save Game</h3>
     <p class=list-1>&bull;&nbsp; Go to the Saves tab and right click on the save game, then select "Repair All".
     <p class=list-1>&bull;&nbsp; For more information, see <B><I><a href="#RepairRefsCommand">Repair Refs Command</a>.</I></B>
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='AddingRemovingModsFromaSaveGame'>Adding/Removing Mods From a Save Game</a></h3>
+    <h3 class="header3" id="AddingRemovingModsFromaSaveGame">Adding/Removing Mods From a Save Game</h3>
     <p class=list-1>&bull;&nbsp; Go to Mods tab and check the mods that you want to use.
     <p class=list-1>&bull;&nbsp; Go to Saves tab and select the save game you want to play.
     <p class=list-1>&bull;&nbsp; Right click on the top of the Masters List, and select "Sync to Load List".
     <p class=list-1>&bull;&nbsp; Click "Save". The checkbox for the save game should turn purple.
     <p class=list-1>&bull;&nbsp; For more information, see <B><I><a href="#MasterListUpdating">Master List Updating</a>.</I></B>
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='UsinganUpdatedVersionofaMod'>Using an Updated Version of a Mod</a></h3>
+    <h3 class="header3" id="UsinganUpdatedVersionofaMod">Using an Updated Version of a Mod</h3>
     <p class=list-1>&bull;&nbsp; <B><I>You only need to do this if the new version of the mod adds or removes references from the game!</I></B>
     <p class=list-1>&bull;&nbsp; Put both new and old versions of the Mod in the Data Files directory.
     <p class=list-1>&bull;&nbsp; Go to Mods tab, right click on the <B><I>new</I></B> mod and select "Updaters...".
@@ -270,13 +271,13 @@ body {
     <p class=list-1>&bull;&nbsp; Click Save.
     <p class=list-1>&bull;&nbsp; For more information, see <B><I><a href="#ModUpdating">Mod Updating</a>.</I></B>
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='TweakMorrowindini'>Tweak Morrowind.ini</a></h3>
+    <h3 class="header3" id="TweakMorrowindini">Tweak Morrowind.ini</h3>
     <p class=list-1>&bull;&nbsp; Settings in Morrowind.ini control aspects of the game like light attenuation, weather lighting, moon size and appearance, etc. You can tweak Morrowind.ini by hand, or by applying mit files.
     <p class=list-1>&bull;&nbsp; To apply an mit file...
     <p class=list-1>&bull;&nbsp; Go to mods tab, right click on main column header and select "INI Tweaks...". This will bring up a file selection dialog.
     <p class=list-1>&bull;&nbsp; Select one of the mit files from Morrowind\Data Files\Mits and click Open. This will apply the changes in the mit file to Morrowind.ini.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='ManageTextureReplacers'>Manage Texture Replacers</a></h3>
+    <h3 class="header3" id="ManageTextureReplacers">Manage Texture Replacers</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Setup</I></B>
     <p class=list-2>&bull;&nbsp; Create a directory called "Replacers" in your Data Files directory.
     <p class=list-2>&bull;&nbsp; Unpack/unzip the replacer package that you want to use into the Replacers directory. The name of the directory will the name of the replacer.
@@ -300,19 +301,19 @@ body {
     <p class=list-2>&bull;&nbsp; Checking a replacer will apply it. (Large replacer collections may take a while to apply.)
     <p class=list-2>&bull;&nbsp; Unchecking a replacer will remove it.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='SwitchBetweenSaveProfiles'>Switch Between Save Profiles</a></h3>
+    <h3 class="header3" id="SwitchBetweenSaveProfiles">Switch Between Save Profiles</h3>
     <p class=list-1>&bull;&nbsp; Go to Saves tab and right click on column header, then go to Profiles menu.
     <p class=list-1>&bull;&nbsp; Choose Edit... to add, rename, remove profiles.
     <p class=list-1>&bull;&nbsp; Choose a profile to switch to it. Current savegames and Morrowind.ini will be archived, and the new profile's savegames and Morrowind.ini will be loaded.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='GeneralAdvice'>General Advice</a></h3>
+    <h3 class="header3" id="GeneralAdvice">General Advice</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Run Repair All</I></B>
     <p class=list-2>&bull;&nbsp; Run Repair All on old save files &#150 this will often find problems to fix.
     <p class=list-2>&bull;&nbsp; Run Repair All once in a while after editing Master lists.
     <p class=list-1>&bull;&nbsp; <B><I>Use Duplicate</I></B>
     <p class=list-2>&bull;&nbsp; Before making major changes to a save file, create a duplicate and make the changes on it.
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='Features'>Features</a></h2>
+    <h2 class="header2" id="Features">Features</h2>
     <p class=list-1>&bull;&nbsp; <B><I>Manage Mod Files and Load List</I></B>
     <p class=list-2>&bull;&nbsp; Select load mods from a list that can be sorted by: File Name, Modification
         date, Size, Mod Author, Load Order, Selection State and file type (Esm/Esp).
@@ -356,14 +357,14 @@ body {
     <p class=list-3>&bull;&nbsp; Status icons and hilight colors.
     <p class=list-3>&bull;&nbsp; Toolbar/launcher buttons.
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='UpdatingFromPreviousVersion'>Updating From Previous Version</a></h2>
+    <h2 class="header2" id="UpdatingFromPreviousVersion">Updating From Previous Version</h2>
     <p class=empty>&nbsp;</p>
     <p><B>Remove the following three files:</B>
     <p class=list-1>&bull;&nbsp; mash.exe
     <p class=list-1>&bull;&nbsp; MSVCP71.dll
     <p class=list-1>&bull;&nbsp; MSVCR71.dll
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='WryeMashSettings'>Wrye Mash Settings</a></h2>
+    <h2 class="header2" id="WryeMashSettings">Wrye Mash Settings</h2>
     <img src="img/settings.jpg" width="475" height="245" border="0" alt="Settings Window">
     <p class=empty>&nbsp;</p>
     <p>The Installers and Installers Data folders have been updated. However, you can specify the old location if you choose.
@@ -378,8 +379,8 @@ body {
     <p class=list-1>&bull;&nbsp; [Path]\Morrowind Mods\Installers Data (installers.dat)
     <p class=list-1>&bull;&nbsp; [Path]\Morrowind Mods\Mash Installers (All installers *.zip, *.rar, *.7z)
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='Installation'>Installation</a></h2>
-    <h3 class="header3"><a name='GetandInstall'>Get and Install</a></h3>
+    <h2 class="header2" id="Installation">Installation</h2>
+    <h3 class="header3" id="GetandInstall">Get and Install</h3>
     <p class=list-1>&bull;&nbsp; Wrye Mash is written in <a href="http://www.python.org/doc/Summary.html">python</a> and uses the <a href="http://wxpython.org/what.php">wxPython GUI library</a> to provide the interface. So before you can run Wrye Mash, you'll need to download both of these.
     <p class=list-1>&bull;&nbsp; <B>Download and Install Python 2.7.12</B>
     <p class=list-1>&nbsp;&nbsp; Download link: <a href="https://www.python.org/downloads/release/python-2712/">Python 2.7.12</a>
@@ -388,16 +389,16 @@ body {
     <p class=list-1>&bull;&nbsp; <B>Unzip Wrye Mash XX.zip:</B>
     <p class=list-1>&nbsp;&nbsp; Unzip the files <I>into your Morrowind installation directory.</I> If you've done this correctly, you'll find mash.py and other mash files under Morrowind\Mopy.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='WryeMashStandalone'>Wrye Mash Standalone</a></h3>
+    <h3 class="header3" id="WryeMashStandalone">Wrye Mash Standalone</h3>
     <p>You can download a standalone EXE that doesn't require Python to be installed.
     <p class=list-1>&bull;&nbsp; <B>Wrye Mash 88 Standalone</B>
     <p class=list-1>&nbsp;&nbsp; Download link: <a href="https://github.com/Wrye-Code-Collection/Wrye-Mash/releases">Wrye Mash 88 Standalone</a>
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='StartingWryeMash'>Starting Wrye Mash</a></h3>
+    <h3 class="header3" id="StartingWryeMash">Starting Wrye Mash</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Double click</I></B> the "Wrye Mash.exe" in the Mopy directory.
     <p class=list-1>&bull;&nbsp; If this doesn't work, see <a href="#NonStandardMorrowindPythonDirectories">Non-Standard Morrowind/Python Directories</a> or <B><I><a href="#IfMashWontStart">If Mash Won't Start</a></I></B>.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='NonStandardMorrowindPythonDirectories'>Non-Standard Morrowind/Python Directories</a></h3>
+    <h3 class="header3" id="NonStandardMorrowindPythonDirectories">Non-Standard Morrowind/Python Directories</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Do this if either Morrowind or Python is in a non-standard directory.</I></B>
     <p class=list-2>&bull;&nbsp; Wrye Mash is not a regular program, but rather a script file. To run Mash, the Wrye Mash shortcut needs to tell Windows to: 1) find the Python script file interpreter (<B>pythonw.exe</B>), and 2) use it to run the <B>mash.py</B> script file that is located in the 3) <B>Morrowind\Mopy</B> directory.
     <p class=list-2>&bull;&nbsp; Ordinarily the Wrye Mash shortcut does this pretty easily, but if either Python or Morrowind is in a non-standard directory, then you need to alter it to point to the new directories. The rest of this section shows you how to do that.
@@ -409,7 +410,7 @@ body {
     <p class=list-1>&bull;&nbsp; If <B><I>Python</I></B> is in a non-standard place. then edit the <B>Target</B> field to be:
     <p class=list-2>&nbsp;&nbsp; <code>"[PythonPath]" mash.py</code> <B><I>(e.g.</I></B> <code>"C:\Python24\pythonw.exe" mash.py</code> <B><I>)</I></B>
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='IfMashWontStart'><font color=red>If Mash Won't Start</font></a></h3>
+    <h3 class="header3" id="IfMashWontStart"><font color=red>If Mash Won't Start</font></h3>
     <p class=list-1>&bull;&nbsp; <B><I>If Mash refuses to start, or quits after quickly flashing up a window...</I></B>
     <p class=list-1>&bull;&nbsp; <B>Check your Mash Shortcut</B>
     <p class=list-2>&bull;&nbsp; Most users who have problems with Mash simply need to tweak the <B>Start In</B> and/or <B>Target</B> fields of the shortcut. (See <a href="#NonStandardMorrowindPythonDirectories">Non-Standard Morrowind/Python Directories</a> for more info.)
@@ -429,27 +430,27 @@ body {
     <p class=list-2>&bull;&nbsp; If that doesn't help, then go to the forums and post the whole bugdump. Preferably, you should post the dump in the <B><I>Relz/Help</I></B> topic (see <a href="#WryeMash">Discussion</a> link at top of page) or you can start a new topic. Be sure to mention "Wrye Mash" in the text of the post.
     <p class=list-2>&bull;&nbsp; <B><I>Hint:</I></B> Control-C does not work in the command line window, but you can still copy text from it by selecting the text, and then hitting the <B>Enter</B> key.
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='Usage'>Usage</a></h2>
-    <h3 class="header3"><a name='MorrowindInstallDirectory'>Morrowind Install Directory</a></h3>
+    <h2 class="header2" id="Usage">Usage</h2>
+    <h3 class="header3" id="MorrowindInstallDirectory">Morrowind Install Directory</h3>
     <p class=list-1>&bull;&nbsp; If you have a non-standard Morrowind Install directory, then the first time
         you start, Mash will ask for the correct location. In subsequent startups,
         Mash will remember the new directory and go directly to it without asking you.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Overview'>Overview</a></h3>
+    <h3 class="header3" id="Overview">Overview</h3>
     <p class=list-1>&bull;&nbsp; The interface is divided into two tabs: <B><I>Mods and Saves.</I></B> Each of these
         is in turn divided into a list and a details view.
     <p class=list-1>&bull;&nbsp; Commands are accessed through <B><I>context menus</I></B> which are invoked by
         right-clicking on either an item or a column heading. The image above shows the context menu for the mod list column header.
     <p class=list-1>&bull;&nbsp; There is also a <B><I>Morrowind Launch</I></B> button at the left side of the status bar.
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='InstallersTab'>Installers Tab</a></h2>
+    <h2 class="header2" id="InstallersTab">Installers Tab</h2>
     <p>The Installers tab provides a mod package installer facility (called Bain). It makes mod installation simpler, and perhaps more importantly, it mades mod UN-installation simple and safe. It's also useful for resolving resource file conflicts between different mods.
     <p class=empty>&nbsp;</p>
     <p>Bain has been backported from Wrye Bash &#150 hence the name "Bain", aka Bash Installers.  (Yes, I probably should call it "Main", but that would be too boring.) If you're familiar with Timeslip's OBMM or MWMM, then Bain is fairly similar, but has some substantial advantages (and some disadvantages) compared to them. For a comparison, see <a href="http://www.uesp.net/wiki/Tes4Mod:Wrye_Bash/Bash_vs._OBMM">Bash vs. OBMM</a>.
     <p class=empty>&nbsp;</p>
     <p>Note that if you have been using the <a href="#ManageTextureReplacers">Replacers Feature</a>, then you should upgrade/switch to using Bain instead, since Bain completely supercedes Replacers.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='GettingStarted'>Getting Started</a></h3>
+    <h3 class="header3" id="GettingStarted">Getting Started</h3>
     <p>Her's a brief getting started guide. You may have to read sections further down before this section makes full sense.
     <p class=list-1>&bull;&nbsp; <B>Terminology: Package</B>
     <p class=list-2>&bull;&nbsp; A "package" is a collection of esps, esms and/or resource files. Everything listed under the Installers tab is a package. Packages can be either archive files in (zip, 7z or rar format) or directories (aka <a href="#ProjectPackages">Projects</a>).
@@ -470,7 +471,7 @@ body {
     <p class=list-2>&bull;&nbsp; For complex packages, you will likely want to configure their sub-packages before activating them.
     <p class=list-2>&bull;&nbsp; For packages with unrecognized structure (grey checkbox and name), you'll need to restructure the package's directories and files to something more like what Bain expects before you can install them.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Overview'>Overview</a></h3>
+    <h3 class="header3" id="Overview">Overview</h3>
     <p>Bain will search for and display packages from the (new) <B>Morrowind\Installers</B> directory. Mods (either archives or projects) can then be installed or uninstalled, and their status can be reviewed in the details pane on the right.
     <p class=list-1>&bull;&nbsp; <B>Checkmarks</B>
     <p class=list-2>&bull;&nbsp; Installed packages will be marked with a "+".
@@ -494,7 +495,7 @@ body {
     <p class=list-2>&bull;&nbsp; Yellow: Indicates that the package has "underrides" i.e. some of its installed files <I>should</I> be overridden by higher order packages. This may happen after reordering mods that have already been installed. It can be repaired by running Anneal or Anneal All.
     <p class=list-2>&bull;&nbsp; Grey: Indicates that some files present in the package will <B><I>not</I></B> be installed. This is usually due to a complex structure that is only partially handled by Bain, but can also be due to having files that Bain refuses to install (exe's, dlls, sub-archives, etc.)
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='PackageDetails'>Package Details</a></h3>
+    <h3 class="header3" id="PackageDetails">Package Details</h3>
     <p>Details for the currently selected package will be show on the right. There are (currently) three fields here:
     <p class=list-1>&bull;&nbsp; <B>Info Tabs</B>
     <p class=list-1>&nbsp;&nbsp; The tabs at the top display several types of information relevant to the current mod. Note that much of this information is dependent on the install status of the mod and sometimes it's order.
@@ -513,7 +514,7 @@ body {
     <p class=list-1>&bull;&nbsp; <B>Comments</B>
     <p class=list-1>&nbsp;&nbsp; This is a field where you can enter comments about the package. Useful for keeping track of what the package is supposed to do, etc.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='PackageStructure'>Package Structure</a></h3>
+    <h3 class="header3" id="PackageStructure">Package Structure</h3>
     <p>Bain recognizes three package structures:
     <p class=list-1>&bull;&nbsp; <B>Simple</B>
     <p class=list-2>&bull;&nbsp; If the package has esps, esms or bsa's at the top level, or if it has any of the regular Morrowind\Data Files subdirectories (e.g. Meshes, Textures) at that level, then it will be categorized as a simple package.
@@ -523,7 +524,7 @@ body {
     <p class=list-1>&bull;&nbsp; <B>Complex/Simple</B>
     <p class=list-2>&bull;&nbsp; If a package is complex, but has only one sub-package, then it will appear as a simple package in the interface. (I.e. there will be no sub-package options.)
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='SkippedFiles'>Skipped Files</a></h3>
+    <h3 class="header3" id="SkippedFiles">Skipped Files</h3>
     <p>Bain will skip over (never install) certain types of files in the package.
     <p class=list-1>&bull;&nbsp; <B>Silent Skip</B>
     <p class=list-1>&nbsp;&nbsp; A few files are skipped silently. Files in this group are: Thumbs.db files, and the omod conversion directory and its subfiles.
@@ -532,10 +533,10 @@ body {
     <p class=list-1>&bull;&nbsp; <B>Extension Skipping</B>
     <p class=list-1>&nbsp;&nbsp; Bain will skip files with certain extensions - mostly executables (exe, dll, dlx) and subarchives (7z,zip, etc.). Again, these will be listed in the debug pane on the right. (But only if they're not already skipped because of the directory that they're in.)
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='DocFileSweeping'>Doc File Sweeping</a></h3>
+    <h3 class="header3" id="DocFileSweeping">Doc File Sweeping</h3>
     <p>In order to prevent clutter and centralize doc file storage, Bain will sweep files that appear to be doc files into Morrowind\Data Files\Docs. Also, files named simply readme.txt (or readme.doc, etc.) will be renamed according to the package name before being swept into the Docs directory.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Ordering'>Ordering</a></h3>
+    <h3 class="header3" id="Ordering">Ordering</h3>
     <p>Bain assigns an install order to all packages. When packages are installed and/or uninstalled, the order is considered in determining which files will actually be installed/uninstalled.
     <p class=list-1>&bull;&nbsp; <B>General</B>
     <p class=list-2>&bull;&nbsp; Install order is shown the table in the "Order" column.
@@ -552,7 +553,7 @@ body {
     <p class=list-1>&bull;&nbsp; <B>Auto-Annealing</B>
     <p class=list-2>&bull;&nbsp; When you uninstall packages, Bain will also attempt to "anneal" the file system by restoring any files from active packages that were previously blocked by the packages being uninstalled. If you prefer that Bain <I>not</I> auto-anneal files, then you can deactivate "Auto-Anneal" from the context menu of the column header.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='ModNameAliasing'>Mod Name Aliasing</a></h3>
+    <h3 class="header3" id="ModNameAliasing">Mod Name Aliasing</h3>
     <p>If you make a practice of renaming your installed espm files (as I do), then Bain will not be able to match the mod in the package to the installed file. So to adjust for that, you can define a mod aliasing database.
     <p class=list-1>&bull;&nbsp; <B>Setup</B>
     <p class=list-2>&bull;&nbsp; After installing Mash, look for Data Files\Mash\Official_Local_default.csv, and copy it to "Official_Local.csv" in the same directory.
@@ -570,7 +571,7 @@ body {
     <p class=list-3>&bull;&nbsp; Return to Mash Installers tab. Mash should immediately recognize the updated file and adjust for its changes.
     <p class=list-2>&bull;&nbsp; Of course, you don't have to change mods one at a time. You can do a bunch at once and then save the file, then return to Mash/Bain.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='PackageCommands'>Package Commands</a></h3>
+    <h3 class="header3" id="PackageCommands">Package Commands</h3>
     <p>The following commands are available from context menu of packages.
     <p class=list-1>&bull;&nbsp; <B>File</B>
     <p class=list-2>&bull;&nbsp; <B>Open:</B> Open package(s) in the file system.
@@ -591,7 +592,7 @@ body {
     <p class=list-2>&bull;&nbsp; <B>Unpack to Project:</B> (Archives only.) Unpack the archive to a project.
     <p class=list-2>&bull;&nbsp; <B>Sync from Data:</B> (Projects only.) Synchronize the project with files from the Morrowind\Data Files directory. This is essentially the reverse of "Install" for projects since it copies from the Morrowind\Data Files directory to the project rather than the other way around.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='PackageHeaderCommands'>Package Header Commands</a></h3>
+    <h3 class="header3" id="PackageHeaderCommands">Package Header Commands</h3>
     <p>The following commands are available by right clicking on the column header of the Installers tab:
     <p class=list-1>&bull;&nbsp; <B>Sorting</B>
     <p class=list-2>&bull;&nbsp; <B>Sort by Active:</B> Active installers will be sorted to the top.
@@ -609,10 +610,10 @@ body {
     <p class=list-2>&bull;&nbsp; <B>Show Inactive Conflicts:</B> If checked, then the conflicts report will show conflicts with inactive as well as active mods. Usually only active conflicts are of interest, however sometimes its useful to review all conflicting packages.
     <p class=list-2>&bull;&nbsp; <B>Show Lower Conflicts:</B> If checked, then the conflicts report with show conflicts with lower order packages. If you're only interested in higher order conflicts, the uncheck this to remove some clutter from the report.
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='ModsTab'>Mods Tab</a></h2>
+    <h2 class="header2" id="ModsTab">Mods Tab</h2>
     <img src="img/Wrye Mash_01.png" width="723" height="535" border="0" alt="Mods Tab">
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='ModsList'>Mods List</a></h3>
+    <h3 class="header3" id="ModsList">Mods List</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Sorting</I></B>
     <p class=list-2>&bull;&nbsp; Sort Mod list items by (left) clicking on a column header, or by
         using the sort submenu of the column popup menu.
@@ -642,7 +643,7 @@ body {
     <p class=list-2>&bull;&nbsp; Oftentimes users will have different versions of the same mod, or different mods which do the same sort of thing in an incompatible way. Exclusion groups can be used to help flag these mods so that you don't accidentally load more than one at once. When an exclusion group is violated, all violating mods will be highlighted in orange.
     <p class=list-2>&bull;&nbsp; Defining an exclusion group is easy &#150 just change the name of the mod to include a comma. The part of the name before the comma is the exclusion group.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='ModDetails'>Mod Details</a></h3>
+    <h3 class="header3" id="ModDetails">Mod Details</h3>
     <p class=list-1>&bull;&nbsp; Make changes to the file in the details view.
     <p class=list-1>&bull;&nbsp; <B><I>File Name</I></B> Change the file name.
     <p class=list-2>&bull;&nbsp; Note that changes to the file name are <B><I>not</I></B> automatically reflected in
@@ -657,7 +658,7 @@ body {
     <p class=list-2>&bull;&nbsp; While there's rarely a need to edit the masters of a mod, if the need does arise, you can use the masters list to do so. <B><I>It is recommended that you be familiar with editing masters of save games before you attempt to edit masters of mods.</I></B>
     <p class=list-2>&bull;&nbsp; For more information, see <a href="#ModUpdating">Mod Updating</a> below.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='UsingLoadLists'>Using Load Lists</a></h3>
+    <h3 class="header3" id="UsingLoadLists">Using Load Lists</h3>
 	<img src="img/Wrye Mash_03.png" width="395" height="216" border="0" alt="Using Load Lists">
     <p class=list-1>&bull;&nbsp; Aside from using checkboxes to select and unselect mods, you can also use load lists. These are accessed through the column context menu.
     <p class=list-1>&bull;&nbsp; <B><I>None:</I></B> Unselects all files.
@@ -666,7 +667,7 @@ body {
     <p class=list-1>&bull;&nbsp; <B><I>[Load List]</I></B> Selecting a load list causes all of its files to be selected.
         This action is not exclusive, but <I>additive</I> &#150 i.e., the files will be selected <I>in addition</I> to the currently selected files.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='FileCommands'>File Commands</a></h3>
+    <h3 class="header3" id="FileCommands">File Commands</h3>
 	<img src="img/Wrye Mash_04.png" width="361" height="222" border="0" alt="File Commands">
     <p class=list-1>&bull;&nbsp; <B><I>File Operations</I></B>
     <p class=list-2>&bull;&nbsp; <B><I>Backup</I></B> Create a backup of the file. Note that backups are also automatically created (see "Revert to Backup" below). If you want to be sure that you can late restore from a specific point, use Duplicate or Snapshot instead.
@@ -704,19 +705,19 @@ body {
     <p class=list-3>&bull;&nbsp; Of course, this also may mean that it's badly out of date!
     <p class=list-2>&bull;&nbsp; <B><I>Revert to Snapshot</I></B> Reverts the file to a selected snapshot.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Usingmlox'>Using mlox</a></h3>
+    <h3 class="header3" id="Usingmlox">Using mlox</h3>
     <p class=list-1>&bull;&nbsp; If Mlox is installed somewhere within the Morrowind directory, you will be able to use mlox with Wrye Mash
     <p class=list-2>&bull;&nbsp; They are accessed through the mod context menu
     <p class=list-2>&bull;&nbsp; <B><I>Launch Mlox</I></B> lanuches mlox (You must have mlox.exe in Mopy/mlox)
     <p class=list-2>&bull;&nbsp; <B><I>Sort Using Mox</I></B> sorts your load list using the mlox rules
     <p class=list-2>&bull;&nbsp; <B><I>Revert Changes</I></B> reverts the load order to how it was before you sorted it
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Usingtes3cmd'>Using tes3cmd</a></h3>
+    <h3 class="header3" id="Usingtes3cmd">Using tes3cmd</h3>
     <p class=list-1>&bull;&nbsp; If tes3cmd is installed in the Morrowind directory or Data Files directory, you will be able to use tes3cmd with Wrye Mash
     <p class=list-2>&bull;&nbsp; To use the *clean* command, select any number of mods, right click select Tes3cmd > Clean
     <p class=list-2>&bull;&nbsp; To use the *Fixit* command, open the mod context menu and select Tes3cmd > Fixit
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='ExportImportDialog'>Export/Import Dialog</a></h3>
+    <h3 class="header3" id="ExportImportDialog">Export/Import Dialog</h3>
     <p class=list-1>&bull;&nbsp; From the mods context menu, select <B><I>Export: Dialog</I></B> to export all dialog
         text to a file, or select <B><I>Import: Dialog</I></B> to reimport dialog text from a file.
     <p class=list-2>&bull;&nbsp; The purpose of these functions is to facilitate spellchecking and general
@@ -736,11 +737,11 @@ body {
     <p class=list-2>&bull;&nbsp; Any remaining text over 511 bytes will be trimmed. If such trims are made,
         a window will popup detailing them.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='ExportImportScripts'>Export/Import Scripts</a></h3>
+    <h3 class="header3" id="ExportImportScripts">Export/Import Scripts</h3>
     <p class=list-1>&bull;&nbsp; These paired commands will export all scripts in a mod to a text file, and then subsequently reimport them.
     <p class=list-1>&bull;&nbsp; Note that after importing, you must manually recompile (in TESCS) any scripts that have been changed.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='ImportLCVSchedules'>Import LCV Schedules</a></h3>
+    <h3 class="header3" id="ImportLCVSchedules">Import LCV Schedules</h3>
     <p class=list-1>&bull;&nbsp; Generates LCV schedule scripts from an LCV schedule text file, and inserts the scripts into the current mod file.
     <p class=list-2>&bull;&nbsp; <B><I>Note: This feature is only useful for modders working with LCV Schedules.</I></B>
     <p class=list-1>&bull;&nbsp; <B><I>Schedule Generation Steps</I></B>
@@ -770,7 +771,7 @@ body {
     <p class=list-2>&bull;&nbsp; Save esp
     <p class=list-3>&bull;&nbsp; Note that <B><I>Recompile All</I></B> typically recompiles several base Morrowind scripts: DagothUrCreature1, EndGame, Float and LorkhanHeart. After you save, you should use the Details view to delete these modified scripts from your esp. Then reload the esp and save again to completely eliminate these bogus scripts.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='ImportMergedLists'>Import Merged Lists</a></h3>
+    <h3 class="header3" id="ImportMergedLists">Import Merged Lists</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Overview</I></B>
     <p class=list-2>&bull;&nbsp; Leveled lists determine what creatures you will encounter and what items you will find in various containers. Mods that add creatures or items to the world generally modify these lists. However, if two or more mods modify the same list, then the last mod to load will delete any additions/changes made be previous mods.
     <p class=list-2>&bull;&nbsp; This function combines changes made to the same leveled lists from different mods and saves the combined list to the current mod.
@@ -792,7 +793,7 @@ body {
     <p class=list-3>&bull;&nbsp; All entries from the first list, plus any new items in the second list will be included in the merged list.
     <p class=list-3>&bull;&nbsp; A deletion of a leveled list will be ignored unless the deletion comes from the last mod to modify that list.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='ImportReplacer'>Import Replacer</a></h3>
+    <h3 class="header3" id="ImportReplacer">Import Replacer</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Overview</I></B>
     <p class=list-2>&bull;&nbsp; Ref replacers allow you to systematically replace one set of references with another. For example you can "NOMify" a mod that adds towns by systematically replacing empty bottles with equivalent NOM bottles; and static ovens, grills, cauldrons and kegs with equivalent NOM activators.
     <p class=list-1>&bull;&nbsp; <B><I>Setup</I></B>
@@ -808,7 +809,7 @@ body {
     <p class=list-2>&bull;&nbsp; This means that you have to to know what you're doing when you're defining a replacement. (Probably the main limitation is not replacing soulgems or things that have uses.)
     <p class=list-2>&bull;&nbsp; Be aware that ref replacement doesn't do any spell checking... So be sure that both the original and replacement items are spelled correctly.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='RenumberRefs'>Renumber Refs</a></h3>
+    <h3 class="header3" id="RenumberRefs">Renumber Refs</h3>
     <p class=list-1>&bull;&nbsp; This is an advanced feature intended to reduce the likelihood of <a href="http://www.uesp.net/wiki/Tes3Mod:Mod_Conflicts#Local_References">local refs conflicts</a> between mods. It works by renumbering the local refs placed by the esp, so that instead of starting objectIndex numbers at 1, it starts them at some random number between 1,000 and 10,000 (or a user selected number between 1 and 100,000.)
     <p class=list-1>&bull;&nbsp; <B><I>Notes</I></B>
     <p class=list-2>&bull;&nbsp; This feature is <B><I>experimental!</I></B> Seems okay so far, but it does something a little unexpected and perhaps Morrowind engine won't like that.
@@ -818,13 +819,13 @@ body {
     <p class=list-2>&bull;&nbsp; [Optional] Duplicate the original mod and make changes to the duplicate rather than the original. If you're going to modify an esp that is already in use by save games, you'll need to do this (and create and use an updater) in order to prevent doubling.
     <p class=list-2>&bull;&nbsp; After selecting the command, you can either accept the suggested first value (randomly chosen between 1,000 and 10,000), or manually enter a value between 1 and 100,000.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='RepairRefs'>Repair Refs</a></h3>
+    <h3 class="header3" id="RepairRefs">Repair Refs</h3>
     <p class=list-1>&bull;&nbsp; See <a href="#Doubling">Doubling</a> below.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='CopytoEsmEsp'>Copy to Esm/Esp</a></h3>
+    <h3 class="header3" id="CopytoEsmEsp">Copy to Esm/Esp</h3>
     <p class=list-1>&bull;&nbsp; Copies the esm to an esp and vice versa.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='SortRecords'>Sort Records</a></h3>
+    <h3 class="header3" id="SortRecords">Sort Records</h3>
     <p class=list-1>&bull;&nbsp; This sorts the file records so that they can be more easily found in the TESCS Details view.
     <p class=list-1>&bull;&nbsp; <B><I>Ordering Details</I></B>
     <p class=list-2>&bull;&nbsp; TES files are only semi-ordered. Some records <B><I>must</I></B> be in a certain order, e.g. DIALs and their associated INFO's form a block. Other records seem to have a record preferred by TESCS/Morrowind, while other types of records are loosely intermixed (e.g., most object type records).
@@ -833,21 +834,21 @@ body {
     <p class=list-2>&bull;&nbsp; Records that are modifications of pre-existing records (i.e., records inherited from master esms and even from esps selected in the load list) will be reordered when TESCS saves the esp file so that the inherited records are moved to the top of their TESCS save group (e.g., the "most objects" group), in the order that TESCS originally saw them in &#150 which is fairly disordered.
     <p class=list-2>&bull;&nbsp; However, it seems to be safe to use the Sort Records command on the Bethesda esms themselves. (But don't be surprised if Mash hangs for a minute or so while sorting Morrowind.esm!) Once this is done, when saving your esp, the modified records will still be moved up, but at least they'll be ordered by record type and id.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Statistics'>Statistics</a></h3>
+    <h3 class="header3" id="Statistics">Statistics</h3>
     <p class=list-1>&bull;&nbsp; Displays statistics for the file's record types.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Updaters'>Updaters</a></h3>
+    <h3 class="header3" id="Updaters">Updaters</h3>
     <p class=list-1>&bull;&nbsp; See <a href="#Doubling">Doubling</a>.
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='SavesTab'>Saves Tab</a></h2>
+    <h2 class="header2" id="SavesTab">Saves Tab</h2>
     <img src="img/Wrye Mash_02.png" width="724" height="534" border="0" alt="Saves Tab">
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='SavesList'>Saves List</a></h3>
+    <h3 class="header3" id="SavesList">Saves List</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Checkbox Colors</I></B>
     <p class=list-2>&bull;&nbsp; Checkbox colors indicate the "health" of the mod file or save files master
         files. See <a href="#MasterListUpdating">Master List Updating</a> below.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='SaveDetails'>Save Details</a></h3>
+    <h3 class="header3" id="SaveDetails">Save Details</h3>
     <p class=list-1>&bull;&nbsp; Make changes to the file in the details view.
     <p class=list-1>&bull;&nbsp; <B><I>File Name</I></B> Change the file name.
     <p class=list-1>&bull;&nbsp; <B><I>Save Name</I></B> Change the save name. This is the save name that appears in the in-game game load list.
@@ -857,19 +858,19 @@ body {
     <p class=list-3>&bull;&nbsp; This is useful for forum postings where you want help debugging your load list, or just want to show off how many mods you have loaded! Note that this list is more useful than the list in the morrowind.ini file, since it lists the mods in load order.
     <p class=list-3>&bull;&nbsp; Copy list will also <B><I>include the version number</I></B> of the master if the description field of the master <B><I>includes a line like "Version ####".</I></B> Note that this is the same version labeling scheme that the Snapshot command uses.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Profiles'>Profiles</a></h3>
+    <h3 class="header3" id="Profiles">Profiles</h3>
     <p class=list-1>&bull;&nbsp; You can now define several different savegame profiles and easily switch between them. Each <I>profile</I> consists of a set of savegames and a Morrowind.ini file.
     <p class=list-1>&bull;&nbsp; Use the Profile menu (found on the column header context menu) to edit and switch between profiles.
     <p class=list-1>&bull;&nbsp; If you wish to move savegame files between profiles:
     <p class=list-2>&bull;&nbsp; Load the profile currently containing the savegames to be moved.
     <p class=list-2>&bull;&nbsp; Select the files, then right click on the slected files and select <I>File: Move To...</I> Use the directory dialog to specify to select a destination profile (i.e., one of the subdirectories of Saves\Mash\Hidden).
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='FileCommands'>File Commands</a></h3>
+    <h3 class="header3" id="FileCommands">File Commands</h3>
     <p class=list-1>&bull;&nbsp; Same as for <a href="#FileCommands">Mods Tab: File Commands</a> above.
     <p class=list-1>&bull;&nbsp; Except... <B><I>Hide</I></B> has been replaced with <B><I>Move To...".</I></B>
     <p class=list-2>&bull;&nbsp; Move To moves the selected save files to the specified directory. Usually this will be one of the subdirectories of Saves\Mash\Hidden, since these subdirectories correspond to your Profiles (see below).
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Remove'>Remove</a></h3>
+    <h3 class="header3" id="Remove">Remove</h3>
     <p class=list-1>&bull;&nbsp; There are several commands for removing different types of references and other data from save files.
     <p class=list-1>&bull;&nbsp; <B><I>Debris Cells</I></B>
     <p class=list-2>&bull;&nbsp; This removes all references in cells that have been visited, but are not supported by the current set of masters. Typically this is used to cleanup exterior cells that were added by mods that have since been removed.
@@ -893,26 +894,26 @@ body {
     <p class=list-3>&bull;&nbsp; Objects to be removed should be first on the line and surrounded by quotes. Anything after that will be ignored.
     <p class=list-3>&bull;&nbsp; Hint: if you use the export feature in TESCS, the resulting file will be in the right format to use as a remover. But be sure to edit it first! There are many unique and scripted objects which should not be reset in the game.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='JournalBrowser'>Journal Browser</a></h3>
+    <h3 class="header3" id="JournalBrowser">Journal Browser</h3>
     <p class=list-1>&bull;&nbsp; Shows the journal entries for the selected save.
     <p class=list-1>&bull;&nbsp; Note: <B><I>Journal browsing is a memory hog</I></B> and will slow down switching between save files! If you're not using it, close the window.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='LoadMasters'>Load Masters</a></h3>
+    <h3 class="header3" id="LoadMasters">Load Masters</h3>
     <p class=list-1>&bull;&nbsp; This causes the save game's master files to be loaded.
     <p class=list-2>&bull;&nbsp; Note that unlike Load Lists, this function is <B><I>exclusive, not additive.</I></B>
         I.e., <B><I>only</I></B> the masters of the save file will be selected.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='MapNotes'>Map Notes</a></h3>
+    <h3 class="header3" id="MapNotes">Map Notes</h3>
     <p class=list-1>&bull;&nbsp; From the saves context menu, select <B><I>Map Notes</I></B> to extract all of the notes that you have added to the map for that save game.
     <p class=list-1>&bull;&nbsp; Map Note Tips:
     <p class=list-2>&bull;&nbsp; Add map notes by double clicking anywhere on the map while viewing it.
     <p class=list-2>&bull;&nbsp; Notes attached to a cell are visible from the map square for for any door that leads to that cell. E.g., map notes placed in a cave will be visible not only while in that cave but in the landscape outside.
     <p class=list-2>&bull;&nbsp; So, for caves, tombs, etc. place the note inside the cave if possible.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='RepairAll'>Repair All</a></h3>
+    <h3 class="header3" id="RepairAll">Repair All</h3>
     <p class=list-1>&bull;&nbsp; See <a href="#Doubling">Doubling</a> below.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='UpdateMap'>Update Map</a></h3>
+    <h3 class="header3" id="UpdateMap">Update Map</h3>
     <p class=list-1>&bull;&nbsp; Updates the world map to reflect added and removed landmasses. Use this after adding or removing mods with landmasses, and using Repair All.
     <p class=list-1>&bull;&nbsp; Draws the borders around the visible map area.
     <p class=list-2>&bull;&nbsp; Note that lands located outside of this area will never be drawn. I.e., if you're inside, you should see the land; if you're outside, you should see nothing but blue ocean.
@@ -922,20 +923,20 @@ body {
     <p class=list-1>&bull;&nbsp; <B><I>Notes</I></B>
     <p class=list-2>&bull;&nbsp; If you see marked cells for landmasses that have been removed, try using <B>Repair All</B> first.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Review'>Review</a></h3>
+    <h3 class="header3" id="Review">Review</h3>
     <p class=list-1>&bull;&nbsp; This is something of a miscellaneous function of uncertain use. Perhaps it will grow later. For now...
     <p class=list-1>&bull;&nbsp; <B><I>Detached Global Scripts</I></B>
     <p class=list-2>&bull;&nbsp; This a list of global scripts that have a reference file with an invalid reference. This can happen normally, even with startup scripts, or it can happen as the result of mods being added or removed.
     <p class=list-2>&bull;&nbsp; Most global scripts operate independently of references, but a few operate within the context of specific references (i.e., objects in the world). If Morrowind loses track of this reference, then it assigns an invalid reference to the script. So a script presence on this list <I>may</I> indicate problem.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Statistics'>Statistics</a></h3>
+    <h3 class="header3" id="Statistics">Statistics</h3>
     <p class=list-1>&bull;&nbsp; Displays statistics for the file's record types.
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='DocBrowser'>Doc Browser</a></h2>
+    <h2 class="header2" id="DocBrowser">Doc Browser</h2>
     <p class=list-1>&bull;&nbsp; You can easily and quickly scan through your mod's document files (readme's) from the Doc Browser window. Supported doc types: text files, html and mht (html archives).
     <p class=list-1>&bull;&nbsp; To show the Doc Browser window, select "Readme..." from the mod's context menu.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='UsingtheDocBrowser'>Using the Doc Browser</a></h3>
+    <h3 class="header3" id="UsingtheDocBrowser">Using the Doc Browser</h3>
     <p class=list-1>&bull;&nbsp; When you the Doc Browser is showing and you click on the name of a Mod in the Mods Tab, Mash will try to show the document for that mod in the Doc Browser window. If Mash does not know which document to associate with the mod, it will show a blank page.
     <p class=list-1>&bull;&nbsp; To associate a document with a mod:
     <p class=list-2>&bull;&nbsp; Select the mod in the Mods Tab.
@@ -953,23 +954,23 @@ body {
     <p class=list-2>&bull;&nbsp; Any changes to the document will be automatically saved when the mod is changed, the document window is closed or the edit button is unclicked.
     <p class=list-2>&bull;&nbsp; To create a new document, just use "Set Doc..." and pick a file name that doesn't exist yet. This will give you a blank document template - and any changes to it will save automatically, creating the new file.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='WikiTextFormat'>Wiki Text Format</a></h3>
+    <h3 class="header3" id="WikiTextFormat">Wiki Text Format</h3>
     <p class=list-1>&bull;&nbsp; If the mod's doc file is a <B>.txt</B> file in wrye wiki text format, an html version of it will be automatically generated as needed, and this html version will be shown when the doc Browser is not in edit mode.
     <p class=list-1>&bull;&nbsp; <B><I>Format Documentation and Template:</I></B>
     <p class=list-2>&bull;&nbsp; The wiki text format is documented in <B>Data Files\Docs\Mash Readme Template.txt</B>.
     <p class=list-2>&bull;&nbsp; When you create a new readme document (by using "Set Doc..." to a file that doesn't exist yet), you'll be given a template wiki text file. The template will be based either on the Template above, or on <B>Data Files\Docs\My Readme Template.txt</B> if it exists.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Notes'>Notes</a></h3>
+    <h3 class="header3" id="Notes">Notes</h3>
     <p class=list-1>&bull;&nbsp; If you rename a mod in the mods tab, Mash will move the document association to the new name.
     <p class=list-1>&bull;&nbsp; Similarly, if you copy a mod, the new copy will be associated with the same document.
     <p class=list-1>&bull;&nbsp; Documents can be stored in different directories.
     <p class=list-1>&bull;&nbsp; If you <I>delete</I> a mod, then Mash will forget about its document (but won't delete it). However, if you <I>Hide</I> a mod, Mash will remember the document, and you'll still be able to select it from the Doc Browser's mod name combo box.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Suggestions'>Suggestions</a></h3>
+    <h3 class="header3" id="Suggestions">Suggestions</h3>
     <p class=list-1>&bull;&nbsp; You may want to move your docs from the Data Files directory to a new Data Files\Docs directory. This will reduce clutter somewhat and make documents easier to find.
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='Doubling'>Doubling</a></h2>
-    <h3 class="header3"><a name='DoublingTheory'>Doubling Theory</a></h3>
+    <h2 class="header2" id="Doubling">Doubling</h2>
+    <h3 class="header3" id="DoublingTheory">Doubling Theory</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Full Explanation</I></B>
     <p class=list-2>&bull;&nbsp; What follows is an extremely abridged summary of the long answer given in <a href="http://wrye.ufrealms.net/Wrye%20Mash.html"">Wrye Matching</a>.
     <p class=list-1>&bull;&nbsp; <B><I>Background: Reference Ids</I></B>
@@ -995,7 +996,7 @@ body {
         records. <B><I>(See <a href="#MasterListUpdating">Master List Updating</a>.)</I></B>
     <p class=list-3>&bull;&nbsp; Adjust for changes to objectIndex numbering from mod modification. <B><I>(See <a href="#ModUpdating">Mod Updating</a>.)</I></B>
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='LoadOrderMaintenance'>Load Order Maintenance</a></h3>
+    <h3 class="header3" id="LoadOrderMaintenance">Load Order Maintenance</h3>
     <p class=list-1>&bull;&nbsp; In order to prevent doubling and to get correct behavior out of mods, it
         is important that they load in the correct order. Since mod load order is determined by their modified time, it is important to be able to set and keep fixed the modified time.
     <p class=list-1>&bull;&nbsp; <B><I>To set the load order of a mod,</I></B> just edit the Modified field of the mod
@@ -1005,7 +1006,7 @@ body {
     <p class=list-1>&bull;&nbsp; Note: If you want <B><I>to use a non-Mash load ordering utility,</I></B> you'll first need
         to turn off "Lock Times". When you're finished with the external ordering utility, turn Lock Times back on. It will reset to use the times set by the other utility.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='ModUpdating'>Mod Updating</a></h3>
+    <h3 class="header3" id="ModUpdating">Mod Updating</h3>
     <p class=list-1>&bull;&nbsp; As described above, adding references to (or removing references from) an
         existing mod is likely to cause doubling. Part of the cause of this is reordering of the mod (which is fixed by <B><I>Lock Times</I></B> ), but the other cause is ObjectIndex renumbering. Fixing this second problem requires that the objectIndex numbers be remapped in the save file (e.g., remap object number 123 to number 234). This can be done in Mash, but requires several stages.
     <p class=list-1>&bull;&nbsp; <B><I>Procedure</I></B>
@@ -1031,7 +1032,7 @@ body {
     <p class=list-3>&bull;&nbsp; Note that should work well, so long as the merged files do not place the
         same type of object into the same cell. However, even in this case, running Repair All should fix any problems.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='MasterListUpdating'>Master List Updating</a></h3>
+    <h3 class="header3" id="MasterListUpdating">Master List Updating</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Master/Save/Mod Health</I></B>
         <img src="img/checkbox_red_on.png" width="16" height="16" border="0" alt="Red">
         <img src="img/checkbox_orange_on.png" width="16" height="16" border="0" alt="Orange">
@@ -1108,7 +1109,7 @@ body {
     <p class=list-3>&bull;&nbsp; Then use "Sync to Load List, do a final inspection and save the file.
     <p class=list-3>&bull;&nbsp; Then use <B><I>Repair All</I></B> on the file (see below).
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='RepairRefsCommand'>Repair Refs Command</a></h3>
+    <h3 class="header3" id="RepairRefsCommand">Repair Refs Command</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Note:</I></B> For save games, the Repair Refs comand has been extended into the Repair All command. Repair All performs all of the work of the Repair Refs command, plus additional cleanup, which is described <a href="#RepairAllCommand">below</a>.
     <p class=list-1>&bull;&nbsp; This Repair All function attempts to repair references and other records damaged by past changes to file list.
     <p class=list-1>&bull;&nbsp; Note: If the health of the file is not Blue or Green, then you should to update the master list before you can use the Repair All command.
@@ -1118,7 +1119,7 @@ body {
     <p class=list-1>&bull;&nbsp; If Mash finds a match, but it's already in use, then it will report "DOUBLE" and delete the reference.
     <p class=list-1>&bull;&nbsp; Also if Mash finds a reference that is marked as "Deleted" but has a modIndex of 0 (meaning that it's owned by the save file, not any of its masters), then Mash will delete the reference. Note that a save game needs to remember when a master file reference is deleted, but should not remember when a save-game owned reference is deleted &#150 since there's no need to do so. These bad deletes seem to be responsible for doors, NPCs, etc. that disappear and reappear with every change in the load list.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='RepairAllCommand'>Repair All Command</a></h3>
+    <h3 class="header3" id="RepairAllCommand">Repair All Command</h3>
     <p class=list-1>&bull;&nbsp; In addition to repairing refs, as described <a href="#RepairRefsCommand">above</a>, Repair All performs several other cleanup tasks...
     <p class=list-1>&bull;&nbsp; <B><I>Remove Orphan Contents</I></B>
     <p class=list-2>&bull;&nbsp; Content records (CREC, CNTC and NPCCC) records that have become disassociated with a place reference are removed.
@@ -1133,10 +1134,10 @@ body {
     <p class=list-2>&bull;&nbsp; Note however, that if an older script modifying mod is still present in your load list, it will most likely continue to readd the leveled list back into the savegame. The solution to this is to update/patch the offending mod to no longer use the leveled list script commands.
     <p class=list-2>&bull;&nbsp; For more info, including a list of problematic mods (and updates/patches for them) see: <a href="http://www.uesp.net/wiki/Tes3Mod:Leveled_Lists">UESP Leveled Lists</a>.
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='Mish'>Mish</a></h2>
+    <h2 class="header2" id="Mish">Mish</h2>
     <p>Mish is a command line interface to the features of mash. At the moment [5/30/2005], there are a couple of features that you can access from it that you can't access from the GUI. Also, with a bit of python coding you can do some pretty nice useful mangling of tes3 files.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='MishCommands'>Mish Commands</a></h3>
+    <h3 class="header3" id="MishCommands">Mish Commands</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Using Mish</I></B>
     <p class=list-2>&bull;&nbsp; Chdir to the mopy directory and then (if you have python environment fully defined), type mish commandName [arguments].
     <p class=list-2>&bull;&nbsp; If you don't have the python environment fully defined, then type:
@@ -1163,8 +1164,8 @@ body {
     <p class=list-2>&bull;&nbsp; This will generate yadda.html in the same directory.
     <p class=list-2>&bull;&nbsp; For etxt formatting, see "Wrye Mash.etxt" for examples.
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='Extending'>Extending</a></h2>
-    <h3 class="header3"><a name='Internationalization'>Internationalization</a></h3>
+    <h2 class="header2" id="Extending">Extending</h2>
+    <h3 class="header3" id="Internationalization">Internationalization</h3>
     <p>Mash now supports localization for most? western languages (translation of program strings to local language). It still probably does not support non-roman character sets (Cyrillic, Arabic, Asian languages, etc.). Since you're looking here, I'm assuming that you're trying to add translations for your language. Here's how:
     <p class=list-1>&bull;&nbsp; <B><I>Common Control Strings</I></B>
     <p class=list-2>&bull;&nbsp; I'm not sure if the common control strings (Save, Cancel, Okay) will translate or not. If you're running Python 2.4, they probably won't. If you're running python 2.5, I hope they will, but I really don't know.
@@ -1194,7 +1195,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Of course, it's probably a good idea to keep backup copies of your translator file in case you mess one up. If you revert to a backup copy, just throw the pkl version away to it to update. (Remember it won't autocompile unless the text file is newer than the pkl file.)
     <p class=list-2>&bull;&nbsp; Spell checking: If you're using an office suite, you might want turn on dictionaries for both English and your language &#150 Abot mentions that Open Office allows you to do this.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='PythonandwxPython'>Python and wxPython</a></h3>
+    <h3 class="header3" id="PythonandwxPython">Python and wxPython</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Python</I></B>
     <p class=list-2>&bull;&nbsp; I've programmed in something like 20-30 different languages and of those,
         Python is by far the easiest and most powerful. I strongly recommend it both for first time programmers and experienced, professional programmers.
@@ -1227,13 +1228,13 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-3>&bull;&nbsp; And of course, there's the web. A well chosen google search will
         oftentimes help substantially.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='MechanicsEditorsandNavigation'>Mechanics: Editors and Navigation</a></h3>
+    <h3 class="header3" id="MechanicsEditorsandNavigation">Mechanics: Editors and Navigation</h3>
     <p class=list-1>&bull;&nbsp; If you want to do some serious new code, you'll probably want to get a
         decent text editor (if you don't already have one). You'll find python plugins for any decent programming text editor.
     <p class=list-1>&bull;&nbsp; The files are moderately large (1000-2000 lines). My text editor (Edit
         Plus) has a function listing ability. I kind of lie to it and tell it that function lines look like "^(#|class|def) " This means that it will list root level classes and function definitions <B><I>and</I></B> lines that start with '# '. (Note the trailing space.) This allows me to set additional "bookmarks" to navigate by (e.g., "# Util Data &#150&#150").
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='GettingStarted'>Getting Started</a></h3>
+    <h3 class="header3" id="GettingStarted">Getting Started</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Python</I></B>
     <p class=list-2>&bull;&nbsp; If you're not familiar with it, check out python.org. There are lots of links to good tutorials there. Also, the python installation
     <p class=list-1>&bull;&nbsp; <B><I>Mish.py</I></B>
@@ -1258,7 +1259,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
         it's an example of a menu command that introduces a little extra GUI
         complexity.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='CodeLayout'>Code Layout</a></h3>
+    <h3 class="header3" id="CodeLayout">Code Layout</h3>
     <p class=list-1>&bull;&nbsp; The code is self documenting... Yeah, right! Actually, I keep my code pretty
         clean and well laid out so it shouldn't be too bad. But there are few hints that I can give you...
     <p class=list-2>&bull;&nbsp; Python supports internal code documentation through the the triple quote
@@ -1287,10 +1288,10 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
         various init functions. This is done to make the program more easily
         modifiable. (And easy to write in the first place!)
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='DataandExtras'>Data and Extras</a></h2>
+    <h2 class="header2" id="DataandExtras">Data and Extras</h2>
     <p>The Mash distribution includes additional files that assist in its operation and/or assist the modder in other ways...
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='DataRefRemovers'>Data: Ref Removers</a></h3>
+    <h3 class="header3" id="DataRefRemovers">Data: Ref Removers</h3>
     <p class=list-1>&bull;&nbsp; These are text files that define Ref Removers.
     <p class=list-1>&bull;&nbsp; <B><I>Beth All.etxt</I></B>
     <p class=list-2>&bull;&nbsp; Bethesda non-unique containers and creatures.
@@ -1305,7 +1306,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-1>&bull;&nbsp; <B><I>Wrye Creatures.etxt</I></B>
     <p class=list-2>&bull;&nbsp; Creatures from Bethesda plus Mephisto's <I>Creature Pack</I> and Pirate Lords's <I>Creatures.</I>
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='DataRefReplacers'>Data: Ref Replacers</a></h3>
+    <h3 class="header3" id="DataRefReplacers">Data: Ref Replacers</h3>
     <p class=list-1>&bull;&nbsp; These are text files that define Ref Replacers.
     <p class=list-1>&bull;&nbsp; <B><I>MCA Refs.etxt</I></B>
     <p class=list-2>&bull;&nbsp; MCA spawn points. Note that these require that that placeholder spawn points be pre-added to the mod first.
@@ -1313,7 +1314,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-1>&bull;&nbsp; <B><I>NOM Refs.etxt</I></B>
     <p class=list-2>&bull;&nbsp; Bottles, keg stands, ovens, wells, etc. This replaces certain statics and misc items with their NOM equivalents.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Extras'>Extras</a></h3>
+    <h3 class="header3" id="Extras">Extras</h3>
     <p class=list-1>&bull;&nbsp; These are miscellaneous files used to assist Mash functions, etc.
     <p class=list-1>&bull;&nbsp; <B><I>ESTemplate.ini</I></B>
     <p class=list-2>&bull;&nbsp; A template file for use with Enchanted Editor.
@@ -1329,12 +1330,12 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Usage: Copy these esps to your Data Files directory, set their dates as desired and then set the dates of your various mods so that they group as desired.
     <p class=list-2>&bull;&nbsp; Note that ordering is important for many mods. Reversing the order of some mods may cause problems.
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='Versions'>Versions</a></h2>
-    <h3 class="header3"><a name='88Minor Update'>88 [Minor Update]</a></h3>
+    <h2 class="header2" id="Versions">Versions</h2>
+    <h3 class="header3" id="88Minor Update">88 [Minor Update]</h3>
     <p class=list-1>&bull;&nbsp; When choosing Redate with the official files selected, Wrye Mash will set
   their BSA files to the same date.</p>
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='87InDevelopment'>87 [In Development]</a></h3>
+    <h3 class="header3" id="87InDevelopment">87 [In Development]</h3>
     <p class=list-1>&bull;&nbsp; Updated 7zip files
     <p class=list-1>&bull;&nbsp; Wrye Mash will remove plugins from Data Files when uninstalling
     <p class=list-1>&bull;&nbsp; Temporarily added pubsub from wxPython for WMSA
@@ -1344,7 +1345,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-1>&bull;&nbsp; Would return a Path object if it was of the form Path(u''), apparently
     <p class=list-1>&bull;&nbsp; Path(u'') now is True for `if not name`, prior to this is was not.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='8601022012'>86 [01/02/2012]</a></h3>
+    <h3 class="header3" id="8601022012">86 [01/02/2012]</h3>
     <p class=list-1>&bull;&nbsp; Fixed output logging
     <p class=list-1>&bull;&nbsp; Added drag and drop for mods and installers tab
     <p class=list-1>&bull;&nbsp; Fixed "Avoid at startup" option
@@ -1352,7 +1353,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-1>&bull;&nbsp; Improved unicode handling - File names are now stored as unicode
     <p class=list-1>&bull;&nbsp; Disabled marker renaming
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='8505112011'>85 [05/11/2011]</a></h3>
+    <h3 class="header3" id="8505112011">85 [05/11/2011]</h3>
     <p class=list-1>&bull;&nbsp; Merged changes with Wrye Mash Standalone
     <p class=list-1>&bull;&nbsp; Added Ctrl Based mod sorting
     <p class=list-1>&bull;&nbsp; You can now toggle mods with the space bar
@@ -1373,28 +1374,28 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Settings now is in settings.py
     <p class=list-2>&bull;&nbsp; Globals are in a file called globals.py (so it is easier to tell if a var is global)
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='84252009'>84 [2/5/2009]</a></h3>
+    <h3 class="header3" id="84252009">84 [2/5/2009]</h3>
     <p class=list-1>&bull;&nbsp; <a href="#InstallersTab">Installers Tab</a>: Fix a bug with espm filtering of aliased mods.
     <p class=list-1>&bull;&nbsp; Baltization: Switch some code to balt.
     <p class=list-1>&bull;&nbsp; Add Screens tab.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='83252009'>83 [2/5/2009]</a></h3>
+    <h3 class="header3" id="83252009">83 [2/5/2009]</h3>
     <p class=list-1>&bull;&nbsp; Baltization: Switch some code to balt.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='82242009'>82 [2/4/2009]</a></h3>
+    <h3 class="header3" id="82242009">82 [2/4/2009]</h3>
     <p class=list-1>&bull;&nbsp; Bugfix: Include new/updated icons.
     <p class=list-1>&bull;&nbsp; Baltization: Switch some code to balt.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='81242009'>81 [2/4/2009]</a></h3>
+    <h3 class="header3" id="81242009">81 [2/4/2009]</h3>
     <p class=list-1>&bull;&nbsp; <a href="#InstallersTab">Installers Tab</a> <B><I>Betaish!</I></B>
     <p class=list-2>&bull;&nbsp; Please see <a href="http://www.bethsoft.com/bgsforums/index.php?showtopic=952489">discussion topic</a>.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='8012242008'>80 [12/24/2008]</a></h3>
+    <h3 class="header3" id="8012242008">80 [12/24/2008]</h3>
     <p class=list-1>&bull;&nbsp; Minor code performance tweak.
     <p class=list-1>&bull;&nbsp; Script import no longer zeros out variable data. (Still need to recompile.)
     <p class=list-1>&bull;&nbsp; Fixed some "bash" stuff in the install instructions.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='792132008'>79 [2/13/2008]</a></h3>
+    <h3 class="header3" id="792132008">79 [2/13/2008]</h3>
     <p class=list-1>&bull;&nbsp; Bash to Mash Retrofit.
     <p class=list-2>&bull;&nbsp; Update Doc Browser.
     <p class=list-2>&bull;&nbsp; Add autoquit button.
@@ -1405,12 +1406,12 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-1>&bull;&nbsp; New: Export/Import Scripts
     <p class=list-1>&bull;&nbsp; Updated German translation by DWS.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='0782182007'>0.78 [2/18/2007]</a></h3>
+    <h3 class="header3" id="0782182007">0.78 [2/18/2007]</h3>
     <p class=list-1>&bull;&nbsp; Bugfixes/Tweaks
     <p class=list-2>&bull;&nbsp; Fix post2038 dates for python 2.5.
     <p class=list-2>&bull;&nbsp; WikiText: CSS tag.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='077GermanMisc1272007'>0.77 German, Misc. [1/27/2007]</a></h3>
+    <h3 class="header3" id="077GermanMisc1272007">0.77 German, Misc. [1/27/2007]</h3>
     <p class=list-1>&bull;&nbsp; Tweaks
     <p class=list-2>&bull;&nbsp; Improved install debugging help.
     <p class=list-2>&bull;&nbsp; Allow shorter internal link specification.
@@ -1418,20 +1419,20 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; German (by DWS)
     <p class=list-2>&bull;&nbsp; Italian tweaks (by Abot)
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='0761262007'>0.76 [1/26/2007]</a></h3>
+    <h3 class="header3" id="0761262007">0.76 [1/26/2007]</h3>
     <p class=list-1>&bull;&nbsp; Fixed a tiny little bug that broke the code.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='0751252007'>0.75 [1/25/2007]</a></h3>
+    <h3 class="header3" id="0751252007">0.75 [1/25/2007]</h3>
     <p class=list-1>&bull;&nbsp; Foreign Language Support
     <p class=list-2>&bull;&nbsp; Bugfix for translation file reading.
     <p class=list-2>&bull;&nbsp; Italian (99% Complete) (by Abot)
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='0741242007'>0.74 [1/24/2007]</a></h3>
+    <h3 class="header3" id="0741242007">0.74 [1/24/2007]</h3>
     <p class=list-1>&bull;&nbsp; Foreign Language Support
     <p class=list-2>&bull;&nbsp; Minor tweak to bish's dumpTranslation function
     <p class=list-2>&bull;&nbsp; Italian (98% Complete) (by Abot)
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='0731212007'>0.73 [1/21/2007]</a></h3>
+    <h3 class="header3" id="0731212007">0.73 [1/21/2007]</h3>
     <p class=list-1>&bull;&nbsp; Python 2.5 compatibility.
     <p class=list-1>&bull;&nbsp; Tweaked shortcuts to be more generic.
     <p class=list-1>&bull;&nbsp; <a href="#WikiTextFormat">Wiki Text</a> Html Generation.
@@ -1441,41 +1442,41 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Pirate Lord Creatures (by Dragon32)
     <p class=list-2>&bull;&nbsp; Caits Critters Unleashed (by Dragon32)
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='072152007'>0.72 [1/5/2007]</a></h3>
+    <h3 class="header3" id="072152007">0.72 [1/5/2007]</h3>
     <p class=list-1>&bull;&nbsp; New/Improved
     <p class=list-2>&bull;&nbsp; Tweaked list merging so that chance none is set to the chance none of the last mod to load rather than to the mimimum chance none. Tweak needed for MCA 5.1 Lighter to work with Mash.
     <p class=list-2>&bull;&nbsp; Added remover for Fireflies by Thaedyn Vyr (remover by Shasta Thorne).
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='07112102006'>0.71 [12/10/2006]</a></h3>
+    <h3 class="header3" id="07112102006">0.71 [12/10/2006]</h3>
     <p class=list-1>&bull;&nbsp; New/Improved
     <p class=list-2>&bull;&nbsp; Modified remover creation to accept multiple files.
     <p class=list-2>&bull;&nbsp; Removed  "Beth All", "Wrye All" and "Wrye Creatures" removers (since these can now be recreated as multi-file remover.
     <p class=list-2>&bull;&nbsp; Added many new removers (by Dragon32 and Shasta Thorne) to Data\Removers directory.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='0701142006'>0.70 [11/4/2006]</a></h3>
+    <h3 class="header3" id="0701142006">0.70 [11/4/2006]</h3>
     <p class=list-1>&bull;&nbsp; New/Improved
     <p class=list-2>&bull;&nbsp; Removed "blue" mod masters. (Blue is not relevant for mod masters).
     <p class=list-2>&bull;&nbsp; Tweaked sorting by name to ignore extension.
     <p class=list-2>&bull;&nbsp; Tweaked snapshot file wildcard filter.
     <p class=list-2>&bull;&nbsp; Added "Overriding List" check for Repair All on savegames.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='06910172006'>0.69 [10/17/2006]</a></h3>
+    <h3 class="header3" id="06910172006">0.69 [10/17/2006]</h3>
     <p class=list-1>&bull;&nbsp; New/Improved
     <p class=list-2>&bull;&nbsp; LCV Schedule generator upgrades (see LCV 03-13)
     <p class=list-2>&bull;&nbsp; Added "INI Tweaks..." function.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='06810122006'>0.68 [10/12/2006]</a></h3>
+    <h3 class="header3" id="06810122006">0.68 [10/12/2006]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; LCV Schedule generator upgrades (see LCV 03-12).
     <p class=list-1>&bull;&nbsp; <B><I>Bug fix</I></B>
     <p class=list-2>&bull;&nbsp; Ignore directories that are named like mods (e.g. "xxx.esp".)
     <p class=list-2>&bull;&nbsp; Fix bugs associated with merging lists where a list is being deleted.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='0671092006'>0.67 [10/9/2006]</a></h3>
+    <h3 class="header3" id="0671092006">0.67 [10/9/2006]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; LCV Schedule generator upgrades (see LCV 03-08 through 03-12).
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='0669262006'>0.66 [9/26/2006]</a></h3>
+    <h3 class="header3" id="0669262006">0.66 [9/26/2006]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; Finally fixed zombie progress bars! (I think.)
     <p class=list-2>&bull;&nbsp; Profile name is now included in app title.
@@ -1484,11 +1485,11 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Fixed a minor bug related to declining to remove a profile.
     <p class=list-2>&bull;&nbsp; Fixed a minor bug with error handling during leveled list merging.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='065Bugfix7142006'>0.65 Bug fix [7/14/2006]</a></h3>
+    <h3 class="header3" id="065Bugfix7142006">0.65 Bug fix [7/14/2006]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Bug fix</I></B>
     <p class=list-2>&bull;&nbsp; Fix bug with help button setting.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='064Misc7142006'>0.64 Misc. [7/14/2006]</a></h3>
+    <h3 class="header3" id="064Misc7142006">0.64 Misc. [7/14/2006]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; Added help button.
     <p class=list-2>&bull;&nbsp; Added savegame profiles.
@@ -1504,16 +1505,16 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Prevent 'DaysPassed' global from being deleted. (Apparently, like MonthsToRespawn, it's automatically added by the game engine.)
     <p class=list-2>&bull;&nbsp; Cleaned up some vestigial code. (NotesBrowser.)
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='063Misc1192006'>0.63 Misc. [1/19/2006]</a></h3>
+    <h3 class="header3" id="063Misc1192006">0.63 Misc. [1/19/2006]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Fixes/Cleanup</I></B>
     <p class=list-2>&bull;&nbsp; Fixed a new bug that broke ref removers.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='062Misc1102006'>0.62 Misc. [1/10/2006]</a></h3>
+    <h3 class="header3" id="062Misc1102006">0.62 Misc. [1/10/2006]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; <B><I>Doc Editing</I></B> Minor bug fix and improvement to make it easier to add/edit
         new doc files.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='061Misc192006'>0.61 Misc. [1/9/2006]</a></h3>
+    <h3 class="header3" id="061Misc192006">0.61 Misc. [1/9/2006]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; <B><I>Ratings:</I></B> Specify ratings (i.e., score, grade) for mods.
     <p class=list-2>&bull;&nbsp; <B><I>Hiding Files:</I></B> Hide will now first try to hide to sub-directory named for author, if it exists.
@@ -1525,43 +1526,43 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-3>&bull;&nbsp; Useful for programmatically modifying these records. See mish.py for examples.
     <p class=list-2>&bull;&nbsp; Misc. code cleanup.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='060ObjectIndexRenumbering1192005'>0.60 Object Index Renumbering [11/9/2005]</a></h3>
+    <h3 class="header3" id="060ObjectIndexRenumbering1192005">0.60 Object Index Renumbering [11/9/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>ObjectIndex Renumbering</I></B>
     <p class=list-2>&bull;&nbsp; Experimental feature to renumber object indices reduce likelihood of local ref conflicts between mods.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='059Bugfix10162005'>0.59 Bugfix [10/16/2005]</a></h3>
+    <h3 class="header3" id="059Bugfix10162005">0.59 Bugfix [10/16/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Fixes/Cleanup</I></B>
     <p class=list-2>&bull;&nbsp; Make sure backup directories exist before attempting to clean them.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='058Misc1092005'>0.58 Misc. [10/9/2005]</a></h3>
+    <h3 class="header3" id="058Misc1092005">0.58 Misc. [10/9/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Fixes/Cleanup</I></B>
     <p class=list-2>&bull;&nbsp; Fix bug with hiding files that hadn't been assigned to a group.
     <p class=list-2>&bull;&nbsp; Backup directories now cleaned on application exit.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='057ResourceReplacers1022005'>0.57 Resource Replacers [10/2/2005]</a></h3>
+    <h3 class="header3" id="057ResourceReplacers1022005">0.57 Resource Replacers [10/2/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Fixes/Cleanup</I></B>
     <p class=list-2>&bull;&nbsp; Resource Replacers:
     <p class=list-3>&bull;&nbsp; Add progress dialog on apply.
     <p class=list-3>&bull;&nbsp; Add file types: kf, bmp.
     <p class=list-3>&bull;&nbsp; Fix makedirs bug.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='056ResourceReplacers9302005'>0.56 Resource Replacers [9/30/2005]</a></h3>
+    <h3 class="header3" id="056ResourceReplacers9302005">0.56 Resource Replacers [9/30/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; Resource Replacers: Easily apply/remove resource replacers.
     <p class=list-2>&bull;&nbsp; Remove: Debris Cells for saves.
     <p class=list-2>&bull;&nbsp; Clean renamers dictionary on quit.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='055RepairMap9172005'>0.55 Repair Map [9/17/2005]</a></h3>
+    <h3 class="header3" id="055RepairMap9172005">0.55 Repair Map [9/17/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; Improved Repair Map function.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='054RepairMap9152005'>0.54 Repair Map [9/15/2005]</a></h3>
+    <h3 class="header3" id="054RepairMap9152005">0.54 Repair Map [9/15/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; Workable version of map repair. Still needs some work.
     <p class=list-1>&bull;&nbsp; <B><I>Fixes/Cleanup</I></B>
     <p class=list-2>&bull;&nbsp; Fix UI to upgrade correctly after mod select/unselect.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='053Misc982005'>0.53 Misc. [9/8/2005]</a></h3>
+    <h3 class="header3" id="053Misc982005">0.53 Misc. [9/8/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; Alpha sort multiple mods!
     <p class=list-2>&bull;&nbsp; When duplicating saves, now specify the save name, rather than the file name.
@@ -1573,17 +1574,17 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Comment out a print statement during global ref remapping.
     <p class=list-2>&bull;&nbsp; Cleaned out some junk code; refactored other code.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='052Misc8162005'>0.52 Misc. [8/16/2005]</a></h3>
+    <h3 class="header3" id="052Misc8162005">0.52 Misc. [8/16/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Fixes</I></B>
     <p class=list-2>&bull;&nbsp; Fix error.file bug.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='051Misc882005'>0.51 Misc. [8/8/2005]</a></h3>
+    <h3 class="header3" id="051Misc882005">0.51 Misc. [8/8/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Fixes</I></B>
     <p class=list-2>&bull;&nbsp; Mash will now remap global script references as part of Repair All and master file updating process.
     <p class=list-2>&bull;&nbsp; Updated Extras\ESTemplate.ini with SCPT.RNAM data.
     <p class=list-2>&bull;&nbsp; Added Review function for saves.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='050Misc832005'>0.50 Misc. [8/3/2005]</a></h3>
+    <h3 class="header3" id="050Misc832005">0.50 Misc. [8/3/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; Renamed Genre -> Group, and added editing of group names.
     <p class=list-2>&bull;&nbsp; Added a (very minimal!) ref replacer for MCA 4.1. Only works with mods designed to use it. (E.g., LCV Wolverine Hall.)
@@ -1591,7 +1592,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-1>&bull;&nbsp; <B><I>Fixes</I></B>
     <p class=list-2>&bull;&nbsp; Fixed a bug with Genres that broke Ref Replacer importing.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='049Misc7312005'>0.49 Misc. [7/31/2005]</a></h3>
+    <h3 class="header3" id="049Misc7312005">0.49 Misc. [7/31/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; Can now specify genre for any mod.
     <p class=list-2>&bull;&nbsp; Added dummy marker mods (XXX ===.esp) to Extras folder.
@@ -1603,23 +1604,23 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Refactor unpack of structs, and record and subrecord headers.
     <p class=list-2>&bull;&nbsp; Refactor Tes3Error handling.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='048Misc7272005'>0.48 Misc. [7/27/2005]</a></h3>
+    <h3 class="header3" id="048Misc7272005">0.48 Misc. [7/27/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; Tes3Error's should now print problem file.
     <p class=list-1>&bull;&nbsp; <B><I>Fixes/Tweaks</I></B>
     <p class=list-2>&bull;&nbsp; Repair All will no longer remove MonthsToRespawn global.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='047RefReplacers7262005'>0.47 Ref Replacers [7/26/2005]</a></h3>
+    <h3 class="header3" id="047RefReplacers7262005">0.47 Ref Replacers [7/26/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New/Improved</I></B>
     <p class=list-2>&bull;&nbsp; Added ref replacer ability and replacer file for NOM.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='046MashedLists7232005'>0.46 Mashed Lists [7/23/2005]</a></h3>
+    <h3 class="header3" id="046MashedLists7232005">0.46 Mashed Lists [7/23/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Mashed Lists</I></B>
     <p class=list-2>&bull;&nbsp; Added support for creating merged, resequenced lists.
     <p class=list-1>&bull;&nbsp; <B><I>Misc.</I></B>
     <p class=list-2>&bull;&nbsp; Add LEVI and LEVC to types of debris items removed during Repair All.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='045MiscFixesandTweaks7222005'>0.45 Misc. Fixes and Tweaks [7/22/2005]</a></h3>
+    <h3 class="header3" id="045MiscFixesandTweaks7222005">0.45 Misc. Fixes and Tweaks [7/22/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>LCV Script Generator</I></B>
     <p class=list-2>&bull;&nbsp; More support for off schedule NPCs.
     <p class=list-2>&bull;&nbsp; Support for initialization of NPCs through hello dialogs in each town.
@@ -1630,7 +1631,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-1>&bull;&nbsp; <B><I>Misc.</I></B>
     <p class=list-2>&bull;&nbsp; Tweak journal text display.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='044JournalBrowserRepairAll7162005'>0.44 Journal Browser, Repair All [7/16/2005]</a></h3>
+    <h3 class="header3" id="044JournalBrowserRepairAll7162005">0.44 Journal Browser, Repair All [7/16/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Journal Browser</I></B>
     <p class=list-2>&bull;&nbsp; Can now browse the journal for any save file.
     <p class=list-1>&bull;&nbsp; <B><I>Repair All vs. Repair Refs</I></B>
@@ -1643,7 +1644,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Fix possible bug in script generation.
     <p class=list-2>&bull;&nbsp; Fix a bug that prevented user from turning off "Lock Times".
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='043MiscFixes7122005'>0.43 Misc. Fixes [7/12/2005]</a></h3>
+    <h3 class="header3" id="043MiscFixes7122005">0.43 Misc. Fixes [7/12/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New</I></B>
     <p class=list-2>&bull;&nbsp; Finally added "Revert to Snapshot" command!
     <p class=list-2>&bull;&nbsp; LCV Schedule generator now checks for SC_offSchedule item.
@@ -1652,7 +1653,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Fixed a problem where some mtimes were being saved even though "Lock Times" was turned off.
     <p class=list-2>&bull;&nbsp; Fixed a problem where mod and save details were not updating correctly after a mod file date change.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='042DocBrowser732005'>0.42 Doc Browser [7/3/2005]</a></h3>
+    <h3 class="header3" id="042DocBrowser732005">0.42 Doc Browser [7/3/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Doc Browser</I></B>
     <p class=list-2>&bull;&nbsp; Docs for mod files can now be accessed easily from within Mash.
     <p class=list-1>&bull;&nbsp; <B><I>Internal</I></B>
@@ -1660,7 +1661,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
         and (in the future) other mod specific data
     <p class=list-2>&bull;&nbsp; Misc. code cleanup.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='041MiscUpgrades712005'>0.41 Misc. Upgrades [7/1/2005]</a></h3>
+    <h3 class="header3" id="041MiscUpgrades712005">0.41 Misc. Upgrades [7/1/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Ref Removers</I></B>
     <p class=list-2>&bull;&nbsp; The remove objects by id function added to the CLI in version 0.38 is now available in the GUI.
     <p class=list-1>&bull;&nbsp; <B><I>Lock Times</I></B>
@@ -1669,7 +1670,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Added doc strings.
     <p class=list-2>&bull;&nbsp; Misc. code cleanup.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='040MiscUpgrades6292005'>0.40 Misc. Upgrades [6/29/2005]</a></h3>
+    <h3 class="header3" id="040MiscUpgrades6292005">0.40 Misc. Upgrades [6/29/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Masters List: Copy List</I></B>
     <p class=list-2>&bull;&nbsp; Copy the masters list to the clipboard for forum posts, etc.
     <p class=list-1>&bull;&nbsp; <B><I>Masters List Numbering</I></B>
@@ -1688,7 +1689,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Renamed link classes.
     <p class=list-2>&bull;&nbsp; Added doc strings.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='039MiscUpgrades6252005'>0.39 Misc. Upgrades [6/25/2005]</a></h3>
+    <h3 class="header3" id="039MiscUpgrades6252005">0.39 Misc. Upgrades [6/25/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Import LCV Schedules</I></B>
     <p class=list-2>&bull;&nbsp; Imports LCV schedules into a mod file.
     <p class=list-1>&bull;&nbsp; <B><I>Map Notes</I></B>
@@ -1703,7 +1704,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Menus have been reordered slightly.
     <p class=list-2>&bull;&nbsp; This docment has been rearranged and updated.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='038MiscUpgrades5302005'>0.38 Misc. Upgrades [5/30/2005]</a></h3>
+    <h3 class="header3" id="038MiscUpgrades5302005">0.38 Misc. Upgrades [5/30/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Mish: Misc</I></B>
     <p class=list-2>&bull;&nbsp; LCV Schedule Generator
     <p class=list-2>&bull;&nbsp; Remove Objects
@@ -1714,25 +1715,25 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-1>&bull;&nbsp; <B><I>Misc.</I></B>
     <p class=list-2>&bull;&nbsp; Rearrange Masters link list.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='037WindowClosingBugfix3132005'>0.37 Window Closing Bugfix [3/13/2005]</a></h3>
+    <h3 class="header3" id="037WindowClosingBugfix3132005">0.37 Window Closing Bugfix [3/13/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Closing While Minimized</I></B>
     <p class=list-2>&bull;&nbsp; Previously, if Mash were closed while minimized, it would save a bogus
         frame position in settings, which would prevent it from opening correctly on next use. This is fixed now.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='036MiscImprovements2252005'>0.36 Misc. Improvements [2/25/2005]</a></h3>
+    <h3 class="header3" id="036MiscImprovements2252005">0.36 Misc. Improvements [2/25/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Circular Masters</I></B>
     <p class=list-2>&bull;&nbsp; Mash was going into infinite loop if masters were circular. This is fixed
         now.
     <p class=list-2>&bull;&nbsp; Sync to Load ESMs will no longer allow you to create circular masters.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='035MiscImprovements2132005'>0.35 Misc. Improvements [2/13/2005]</a></h3>
+    <h3 class="header3" id="035MiscImprovements2132005">0.35 Misc. Improvements [2/13/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Dialog Export/Import</I></B>
     <p class=list-2>&bull;&nbsp; Deleted dialogs no longer cause a problem.
     <p class=list-2>&bull;&nbsp; Entries are now better sorted.
     <p class=list-2>&bull;&nbsp; Some characters are now replaced or deleted. (@, #, curly quotes, ellipses,
         extra spaces).
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='034ObjectIndexMappingDialogExportImportMiscFixes252005'>0.34 ObjectIndex Mapping, Dialog Export/Import, Misc. Fixes [2/5/2005]</a></h3>
+    <h3 class="header3" id="034ObjectIndexMappingDialogExportImportMiscFixes252005">0.34 ObjectIndex Mapping, Dialog Export/Import, Misc. Fixes [2/5/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>ObjectIndex Remapping</I></B>
     <p class=list-2>&bull;&nbsp; Mash now does ObjectIndex remapping, thus completing its program for
         preventing/fixing doubling.
@@ -1745,7 +1746,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Mash was misidentifying interior cells with water as exterior cells. This
         may have resulted in excessive reference deletion on repair. This is corrected now.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='033MinorFixesandImprovements1292005'>0.33 Minor Fixes and Improvements [1/29/2005]</a></h3>
+    <h3 class="header3" id="033MinorFixesandImprovements1292005">0.33 Minor Fixes and Improvements [1/29/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Minor Bugfixes</I></B>
     <p class=list-2>&bull;&nbsp; Mash was throwing an error when you right clicked on a master that didn't
         exist. This is fixed now.
@@ -1755,7 +1756,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Add support for '+' at end of version numbers in descriptions (e.g.,
         "Version 1.2.3+". Use this as a note that file has changed since snapshot was taken.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='032MinorBugFix1272005'>0.32 Minor Bug Fix [1/27/2005]</a></h3>
+    <h3 class="header3" id="032MinorBugFix1272005">0.32 Minor Bug Fix [1/27/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Bugfix: New Lines in Mod Descriptions</I></B>
     <p class=list-2>&bull;&nbsp; Mash was writing descriptions with unix style new lines when it should have
         been using windows style new lines. This is fixed now.
@@ -1764,7 +1765,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; AFAIK, this produced no run time problems &#150 it just messed up your
         description display in TESCS.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='031NewFeaturesMinorFixes1272005'>0.31 New Features, Minor Fixes [1/27/2005]</a></h3>
+    <h3 class="header3" id="031NewFeaturesMinorFixes1272005">0.31 New Features, Minor Fixes [1/27/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Copy to Esm/Esp</I></B>
     <p class=list-2>&bull;&nbsp; You can now copy an esp to an esm and vice versa. Look for new command
         on Mod items context menu.
@@ -1787,11 +1788,11 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Mash now deletes backups and temp files while deleting files. However,
         it does <B><I>not</I></B> delete snapshots or hidden files.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='030IttyBittyFix1242005'>0.30 Itty Bitty Fix [1/24/2005]</a></h3>
+    <h3 class="header3" id="030IttyBittyFix1242005">0.30 Itty Bitty Fix [1/24/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Minor Bug Fix</I></B>
     <p class=list-2>&bull;&nbsp; Fix a key not found error that showed up on some Ref Repairs.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='029MiscImprovementsandFixes1232005'>0.29 Misc. Improvements and Fixes [1/23/2005]</a></h3>
+    <h3 class="header3" id="029MiscImprovementsandFixes1232005">0.29 Misc. Improvements and Fixes [1/23/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Major Bug Fix: Refs Repair on Exterior Cells</I></B>
     <p class=list-2>&bull;&nbsp; Mash was misidentifying exterior cells, and as a result erroneously marking
         a change refs in those cells as BAD::NO MASTER, when they were fine. This
@@ -1809,7 +1810,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Mash would sometimes crash if a mod file was deleted or renamed
         from outside Mash. It now handles handles this correctly.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='028MinorFixesandFeatures1222005'>0.28 Minor Fixes and Features [1/22/2005]</a></h3>
+    <h3 class="header3" id="028MinorFixesandFeatures1222005">0.28 Minor Fixes and Features [1/22/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Major Bug Fix</I></B>
     <p class=list-2>&bull;&nbsp; Mash was failing on manually unselecting files. (This is a recent "break
         something while fixing something" bug.) This is fixed now.
@@ -1823,7 +1824,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
         However, a missing [Game Files] section will still result in a failure/exit
         on startup.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='027MajorBugfix1212005'>0.27 Major Bugfix [1/21/2005]</a></h3>
+    <h3 class="header3" id="027MajorBugfix1212005">0.27 Major Bugfix [1/21/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Bugfix: File Version</I></B>
     <p class=list-2>&bull;&nbsp; Mash was reading the file version in as a float, but writing it out as
         an int! This in fact, was the cause of the death animation problem as
@@ -1843,7 +1844,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Now, Mash resets the modification dates of those files to around 1/1/2037
         and notifies you of the change.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='026MajorBugfix1202005'>0.26 Major Bugfix [1/20/2005]</a></h3>
+    <h3 class="header3" id="026MajorBugfix1202005">0.26 Major Bugfix [1/20/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>Header Editing</I></B>
     <p class=list-2>&bull;&nbsp; Instead of blowing away all leveled creatures, I now blow away all
         current animations. This seems to be a full solution.
@@ -1858,7 +1859,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
         Still, use at your own risk.
     <p class=list-2>&bull;&nbsp; Includes some additions from Beryllium as well.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='025PartialBugfixes1192005'>0.25 Partial Bugfixes [1/19/2005]</a></h3>
+    <h3 class="header3" id="025PartialBugfixes1192005">0.25 Partial Bugfixes [1/19/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>ESM Ordering</I></B>
     <p class=list-2>&bull;&nbsp; Reworked this in an effort to mimic Bethesda's ordering. Seems to be
         correct now...
@@ -1877,7 +1878,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-1>&bull;&nbsp; <B><I>EE Wrye 0.0.ini</I></B>
     <p class=list-2>&bull;&nbsp; Enchanted Editor template file with my personal updates.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='024RepairRefsetc1152005'>0.24 Repair Refs, etc. [1/15/2005]</a></h3>
+    <h3 class="header3" id="024RepairRefsetc1152005">0.24 Repair Refs, etc. [1/15/2005]</h3>
     <p class=list-1>&bull;&nbsp; <B><I>New</I></B>
     <p class=list-2>&bull;&nbsp; <B><I>Repair Refs Function</I></B>
     <p class=list-2>&bull;&nbsp; MenuItem: Backup
@@ -1888,14 +1889,14 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-2>&bull;&nbsp; Changed temp file names to remove potential problem with Morrowind launcher.
     <p class=list-2>&bull;&nbsp; Disable Backup menu items on multi-select.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='023Firstreleasewithdocs'>0.23 First release with docs!</a></h3>
+    <h3 class="header3" id="023Firstreleasewithdocs">0.23 First release with docs!</h3>
     <p class=empty>&nbsp;</p>
-    <h2 class="header2"><a name='ReuseandCredits'>Reuse and Credits</a></h2>
-    <h3 class="header3"><a name='License'>License</a></h3>
+    <h2 class="header2" id="ReuseandCredits">Reuse and Credits</h2>
+    <h3 class="header3" id="License">License</h3>
     <p class=list-1>&bull;&nbsp; None! Feel free to use/abuse the content as you like.
     <p class=list-1>&bull;&nbsp; But give me credit of course.
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='CreditsThanks'>Credits/Thanks</a></h3>
+    <h3 class="header3" id="CreditsThanks">Credits/Thanks</h3>
     <p class=list-1>&bull;&nbsp; Every modder and utility developer in the Morrowind community stands on the
         collective shoulders of everyone who preceded them, contributing time, talent,
         and inspiration. So, thanks to all the past developers and folks in the
@@ -1915,7 +1916,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
     <p class=list-1>&bull;&nbsp; <B><I>Translations</I></B>
     <p class=list-2>&bull;&nbsp; Abot
     <p class=empty>&nbsp;</p>
-    <h3 class="header3"><a name='Contact'>Contact</a></h3>
+    <h3 class="header3" id="Contact">Contact</h3>
     <p class=list-1>&bull;&nbsp; The best way to reach me is through the Elder Scrolls Forums. Check the
         forums, or PM me there (my id is "Wrye").
     <p class=list-1>&bull;&nbsp; If I'm not available (offline or working on other projects), then the
