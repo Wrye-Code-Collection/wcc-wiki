@@ -1,1 +1,9 @@
+title: Wrye-Code-Collection Wiki
+description: Collection of Wrye Bash history and information
+google_analytics:
+# show_downloads: true
 theme: jekyll-theme-cayman
+highlighter: rouge
+
+gems:
+  - jekyll-mentions
