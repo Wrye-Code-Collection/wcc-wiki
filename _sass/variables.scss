@@ -43,7 +43,7 @@ $hr-border-color: #eff0f1 !default;
   --color-conflicted: #{$orange};
   
   --warning-text-red-color: #{lighten($red-800, 15%)};
-  --color-text-href: #{lighten($blue-700, 15%)};
+  --color-text-href: #{$blue-400};
   
   --header1-text-color: #{lighten($gray-300, 5%)};
   --header1-background-color: #{darken($gray-600, 3%)};
