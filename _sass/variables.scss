@@ -41,6 +41,22 @@ $hr-border-color: #eff0f1 !default;
   --color-modified: #{$yellow-700};
   --color-renamed: #{$blue};
   --color-conflicted: #{$orange};
+  
+  --header1-text-color: #{lighten($gray-300, 5%)};
+  --header1-background-color: #{darken($gray-600, 3%)};
+  --header1-border-color: #{lighten($gray-600, 5%)};
+
+  --header2-text-color: #{$gray-200};
+  --header2-background-color: #{darken($gray-700, 3%)};
+  --header2-border-color: #{lighten($gray-700, 5%)};
+
+  --header3-text-color: #{$gray-300};
+  --header3-background-color: #{darken($gray-900, 3%)};
+  --header3-border-color: #{lighten($gray-900, 5%)};
+
+  --header4-text-color: #{darken{$gray-200, 3%)};
+  --header4-background-color: #{darken($gray-800, 3%)};
+  --header4-border-color: #{lighten($gray-800, 5%)};
 
   --text-color: #{$gray-300};
   --text-secondary-color: #{$gray-400};
