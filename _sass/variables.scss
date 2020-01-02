@@ -54,7 +54,7 @@ $hr-border-color: #eff0f1 !default;
   --header3-background-color: #{darken($gray-900, 3%)};
   --header3-border-color: #{lighten($gray-900, 5%)};
 
-  --header4-text-color: #{darken{$gray-200, 3%)};
+  --header4-text-color: #{darken($gray-200, 3%)};
   --header4-background-color: #{darken($gray-800, 3%)};
   --header4-border-color: #{lighten($gray-800, 5%)};
 
