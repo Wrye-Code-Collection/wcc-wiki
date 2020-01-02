@@ -60,7 +60,8 @@ body {
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  color: $body-text-color;
+  color: var(--text-secondary-color);
+  background: var(--header3-background-color);
 }
 
 #skip-to-content {
@@ -81,7 +82,7 @@ body {
 }
 
 a {
-  color: $body-link-color;
+  color: var(--color-text-href);
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -348,8 +349,8 @@ a {
     padding: 2px 4px;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 0.9rem;
-    color: $code-text-color;
-    background-color: $code-bg-color;
+    color: var(--syntax-variable-color);
+    background: var(--header3-background-color);
     border-radius: 0.3rem;
   }
   pre {
@@ -357,16 +358,16 @@ a {
     margin-top: 0;
     margin-bottom: 1rem;
     font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    color: $code-text-color;
+    color: var(--syntax-variable-color);
+    background: var(--header3-background-color);
     word-wrap: normal;
-    background-color: $code-bg-color;
     border: solid 1px $border-color;
     border-radius: 0.3rem;
     >code {
       padding: 0;
       margin: 0;
       font-size: 0.9rem;
-      color: $code-text-color;
+      color: var(--syntax-variable-color);
       word-break: normal;
       white-space: pre;
       background: transparent;
@@ -412,7 +413,8 @@ a {
   blockquote {
     padding: 0 1rem;
     margin-left: 0;
-    color: $blockquote-text-color;
+    color: var(--syntax-variable-color);
+	background: var(--header3-background-color);
     border-left: 0.3rem solid $border-color;
     > :first-child {
       margin-top: 0;
