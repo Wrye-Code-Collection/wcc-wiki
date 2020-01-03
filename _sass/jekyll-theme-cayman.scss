@@ -341,7 +341,7 @@ a {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: normal;
-    color: $section-headings-color;
+    color: var(--toc-header-text);
   }
   p {
     margin-bottom: 1em;
@@ -472,8 +472,6 @@ a {
     background: var(--header1-background);
     border-color: var(--header1-border);
     display: block;
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
   }
   h2.header2 {
     border-top: 2px solid #000000;
@@ -482,8 +480,6 @@ a {
     background: var(--header2-background);
     border-color: var(--header2-border);
     display: block;
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
   }
   h3.header3 {
     font-style: normal;
@@ -491,8 +487,6 @@ a {
     background: var(--header3-background);
     border-color: var(--header3-border);
     display: block;
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
   }
   h4.header4 {
     font-style: italic;
@@ -500,8 +494,6 @@ a {
     background: var(--header4-background);
     border-color: var(--header4-border);
     display: block;
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
   }
 }
 

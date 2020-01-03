@@ -61,6 +61,8 @@ $hr-border-color: #eff0f1 !default;
   --header4-background: #{darken($gray-800, 3%)};
   --header4-border: #{lighten($gray-800, 5%)};
 
+  --toc-header-text: #159957;
+
   --body-text: #{$gray-300};
   --body-text-secondary: #{$gray-400};
   --body-background: #{$gray-900};
