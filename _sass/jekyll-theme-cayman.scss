@@ -344,7 +344,8 @@ a {
     color: var(--toc-header-text);
   }
   p {
-    margin-bottom: 1em;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
     color: var(--body-text-secondary);
   }
   code {
@@ -466,16 +467,16 @@ a {
 
 .main-content {
   h1.header1 {
-    border-top: 2px solid #000000;
-    border-bottom: 2px solid #000000;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
     color: var(--header1-text);
     background: var(--header1-background);
     border-color: var(--header1-border);
     display: block;
   }
   h2.header2 {
-    border-top: 2px solid #000000;
-    border-bottom: 2px solid #000000;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
     color: var(--header2-text);
     background: var(--header2-background);
     border-color: var(--header2-border);
@@ -503,57 +504,31 @@ font.redfont {
 
 // Main content for Wrte Text Paragraphs
 .main-content {
-  pre.light {
-    color: var(--syntax-variable-color);
-    background: var(--header3-background);
-  }
-  code.light {
-    color: var(--syntax-variable-color);
-    background: var(--header3-background);
-  }
-  p {
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
-    page-break-before: auto;
-    page-break-after: auto
-  }
   p.empty {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
   }
   p.list-1 {
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
     margin-left: 0.15in;
     text-indent: -0.15in
   }
   p.list-2 {
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
     margin-left: 0.3in;
     text-indent: -0.15in
   }
   p.list-3 {
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
     margin-left: 0.45in;
     text-indent: -0.15in
   }
   p.list-4 {
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
     margin-left: 0.6in;
     text-indent: -0.15in
   }
   p.list-5 {
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
     margin-left: 0.75in;
     text-indent: -0.15in
   }
   p.list-6 {
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
     margin-left: 1.00in;
     text-indent: -0.15in
   }

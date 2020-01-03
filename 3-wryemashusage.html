@@ -299,9 +299,9 @@ title: Wrye Mash Usage
     <p class=list-1>&bull;&nbsp; Right click on the new shortcut, select <B>Properties</B>. This will open the Properties window for the shortcut.
     <p class=list-1>&bull;&nbsp; Go to the <B>Shortcut</B> tab in the Properties window.
     <p class=list-1>&bull;&nbsp; If <B><I>Morrowind</I></B> is in a non-standard directory, then edit the <B>Start In</B> field to be
-    <p class=list-2>&nbsp;&nbsp; <code class="light">[Morrowind Directory Path]\Mopy</code> <B><I>(e.g.</I></B>  <code class="light">H:\Games\Morrowind\Mopy</code> <B><I>)</I></B>
+    <p class=list-2>&nbsp;&nbsp; <code>[Morrowind Directory Path]\Mopy</code> <B><I>(e.g.</I></B>  <code>H:\Games\Morrowind\Mopy</code> <B><I>)</I></B>
     <p class=list-1>&bull;&nbsp; If <B><I>Python</I></B> is in a non-standard place. then edit the <B>Target</B> field to be:
-    <p class=list-2>&nbsp;&nbsp; <code class="light">"[PythonPath]" mash.py</code> <B><I>(e.g.</I></B> <code class="light">"C:\Python24\pythonw.exe" mash.py</code> <B><I>)</I></B>
+    <p class=list-2>&nbsp;&nbsp; <code>"[PythonPath]" mash.py</code> <B><I>(e.g.</I></B> <code>"C:\Python24\pythonw.exe" mash.py</code> <B><I>)</I></B>
     <p class=empty>&nbsp;</p>
     <h3 class="header3" id="IfMashWontStart"><font class="redfont">If Mash Won't Start</font></h3>
     <p class=list-1>&bull;&nbsp; <B><I>If Mash refuses to start, or quits after quickly flashing up a window...</I></B>
@@ -310,8 +310,8 @@ title: Wrye Mash Usage
     <p class=list-2>&bull;&nbsp; If that's fine, then there may be a bug with Mash, or a problem with your setup. You can usually figure out the problem by creating a <B><I>bug dump</I></B> and reviewing it. And if you can't puzzle it out, someone on the Elder Scrolls forums may be able to help.
     <p class=list-1>&bull;&nbsp; <B>Getting the Bugdump</B>
     <p class=list-2>&bull;&nbsp; Open a command shell (Start: Programs: Accessories: Command Prompt).
-    <p class=list-2>&bull;&nbsp; <B>chdir</B> to the Mopy directory. "chdir" means "change directory". E.g.: <code class="light">chdir C:\Program Files\Bethesda Softworks\Morrowind\Mopy</code>
-    <p class=list-2>&bull;&nbsp; Type: <code class="light">c:\python24\python.exe mash.py 0</code>
+    <p class=list-2>&bull;&nbsp; <B>chdir</B> to the Mopy directory. "chdir" means "change directory". E.g.: <code>chdir C:\Program Files\Bethesda Softworks\Morrowind\Mopy</code>
+    <p class=list-2>&bull;&nbsp; Type: <code>c:\python24\python.exe mash.py 0</code>
     <p class=list-3>&bull;&nbsp; If you have a different version/location of python, adapt the first
         argument accordingly.
     <p class=list-3>&bull;&nbsp; That's the number zero at the end, <I>not</I> the letter 'o'.
@@ -1033,7 +1033,7 @@ title: Wrye Mash Usage
     <p class=list-1>&bull;&nbsp; <B><I>Using Mish</I></B>
     <p class=list-2>&bull;&nbsp; Chdir to the mopy directory and then (if you have python environment fully defined), type mish commandName [arguments].
     <p class=list-2>&bull;&nbsp; If you don't have the python environment fully defined, then type:
-    <p class=list-2>&nbsp;&nbsp; <code class="light">python mish.py commandName [arguments]</code>
+    <p class=list-2>&nbsp;&nbsp; <code>python mish.py commandName [arguments]</code>
     <p class=list-2>&bull;&nbsp; I'm assuming that you at least have the python.exe in your command path.
     <p class=list-2>&bull;&nbsp; If you're confused, but desirous of learning more, go to python.org and look for info on setting up your python environment.
     <p class=list-1>&bull;&nbsp; <B><I>refInfo</I></B>
@@ -1062,13 +1062,13 @@ title: Wrye Mash Usage
     <p class=list-1>&bull;&nbsp; <B><I>Common Control Strings</I></B>
     <p class=list-2>&bull;&nbsp; I'm not sure if the common control strings (Save, Cancel, Okay) will translate or not. If you're running Python 2.4, they probably won't. If you're running python 2.5, I hope they will, but I really don't know.
     <p class=list-1>&bull;&nbsp; <B><I>Custom Program Strings</I></B>
-    <p class=list-2>&bull;&nbsp; Custom program strings are translated from lookup files that you'll find in the <code class="light">Mopy\local</code>. E.g., for English, it would be <code class="light">Mopy\locale\English.pkl</code>. (Of course, the program is already in English, so this isn't needed.)
-    <p class=list-2>&bull;&nbsp; These pkl files are automatically compiled from the corresponding txt files (e.g., <code class="light">Mopy\locale\English.txt</code>) as needed when Mash (or mish) starts up. So, to update the program strings for your language all you have to do is edit the txt file in a text editor adding translations for strings. Naturally, not everyone needs to do this &#150 once someone does the txt files for a language, they can redistribute them to other people &#150 including me, so that I can include them in next Mash release.
-    <p class=list-2>&bull;&nbsp; If the text file for your language doesn't exist yet, open a DOS shell, chdir to the Mopy directory and type <code class="light">python mish.py dumpTranslator</code>. This will create a new text language file for you in the locale directory (e.g., <code class="light">Mopy\locale\NEWEnglish.txt</code>). If you already have some strings translated, this new file should contain all of them. And if mash has added new strings to be translated, they will appear.
+    <p class=list-2>&bull;&nbsp; Custom program strings are translated from lookup files that you'll find in the <code>Mopy\local</code>. E.g., for English, it would be <code>Mopy\locale\English.pkl</code>. (Of course, the program is already in English, so this isn't needed.)
+    <p class=list-2>&bull;&nbsp; These pkl files are automatically compiled from the corresponding txt files (e.g., <code>Mopy\locale\English.txt</code>) as needed when Mash (or mish) starts up. So, to update the program strings for your language all you have to do is edit the txt file in a text editor adding translations for strings. Naturally, not everyone needs to do this &#150 once someone does the txt files for a language, they can redistribute them to other people &#150 including me, so that I can include them in next Mash release.
+    <p class=list-2>&bull;&nbsp; If the text file for your language doesn't exist yet, open a DOS shell, chdir to the Mopy directory and type <code>python mish.py dumpTranslator</code>. This will create a new text language file for you in the locale directory (e.g., <code>Mopy\locale\NEWEnglish.txt</code>). If you already have some strings translated, this new file should contain all of them. And if mash has added new strings to be translated, they will appear.
     <p class=list-2>&bull;&nbsp; So to create the strings, all you have to do is edit the text file to add the translations, and save the file with the leading "NEW" stripped off.
     <p class=list-1>&bull;&nbsp; <B><I>Translation Tips</I></B>
     <p class=list-2>&bull;&nbsp; Here's part of the a translator file.</p>
-    <pre class="light">
+    <pre>
 === masher.py, 4605
 Default profile cannot be removed.
 >>>>
@@ -1080,9 +1080,9 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
 
 </pre>
     <p class=list-2>&bull;&nbsp; Each entry begins with the source file and the line number (in case this helps you figure out how to translate the code).</p>
-    <p class=list-2>&bull;&nbsp; After that is the original text, then a <code class="light">>>>></code> dividing line, then the translated text. Here, the second entry has been translated, while the first has not. (Here the the "translation" consists of changing it to upper case.
-    <p class=list-2>&bull;&nbsp; It's important that you leave the formatting characters in place and in order! Formatting characters are text like <code class="light"> %s %d %08X \n</code>. The '%' strings are place holders where file names, counts, etc. are entered &#150 if they're not present, Mash will throw an exception. The \n combinations are newline characters &#150 I use them in dialogs and other places where I want line breaks.
-    <p class=list-2>&bull;&nbsp; In translating, I would suggest that you translate the strings that you see the most first. E.g., a good one for a quick test is <code class="light">masher.py, 2126: Mods</code> &#150 this is the name of the Mods tab. And right under it is the name of the Saves tab.
+    <p class=list-2>&bull;&nbsp; After that is the original text, then a <code>>>>></code> dividing line, then the translated text. Here, the second entry has been translated, while the first has not. (Here the the "translation" consists of changing it to upper case.
+    <p class=list-2>&bull;&nbsp; It's important that you leave the formatting characters in place and in order! Formatting characters are text like <code> %s %d %08X \n</code>. The '%' strings are place holders where file names, counts, etc. are entered &#150 if they're not present, Mash will throw an exception. The \n combinations are newline characters &#150 I use them in dialogs and other places where I want line breaks.
+    <p class=list-2>&bull;&nbsp; In translating, I would suggest that you translate the strings that you see the most first. E.g., a good one for a quick test is <code>masher.py, 2126: Mods</code> &#150 this is the name of the Mods tab. And right under it is the name of the Saves tab.
     <p class=list-2>&bull;&nbsp; To test your translations, just save your changes to the text file, and restart Mash. Your changes should appear immediately.
     <p class=list-2>&bull;&nbsp; Of course, it's probably a good idea to keep backup copies of your translator file in case you mess one up. If you revert to a backup copy, just throw the pkl version away to it to update. (Remember it won't autocompile unless the text file is newer than the pkl file.)
     <p class=list-2>&bull;&nbsp; Spell checking: If you're using an office suite, you might want turn on dictionaries for both English and your language &#150 Abot mentions that Open Office allows you to do this.
@@ -1826,11 +1826,11 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
             <h3 class="header3" id="MashAutoConversion">Mash Auto-Conversion</h3>
             <p>To trigger Wrye Mash's autoconversion...
             <p class=list-1>&bull;&nbsp; Choose the txt version of the file in Mash's Doc Browser.
-            <p class=list-1>&bull;&nbsp; First line of txt file must look like <code class="light">= Title ====#</code>. Note in particular, the <code class="light">= </code> at the start and the single <code class="light">#</code> character at the end!
+            <p class=list-1>&bull;&nbsp; First line of txt file must look like <code>= Title ====#</code>. Note in particular, the <code>= </code> at the start and the single <code>#</code> character at the end!
             <p class=list-1>&bull;&nbsp; View the document in the Doc Browser. If Mash sees that the html is older than the text file, it will do the conversion. Note that this means that you can edit the text file in an external text editor and still get autoconversion.
             <p class=empty>&nbsp;</p>
             <h3 class="header3" id="CustomTemplate">Custom Template</h3>
-            <p>Copy this template to <code class="light">Morrowind\Data Files\Docs\My Readme Template.txt</code> and modify as desired. That will become your default template.
+            <p>Copy this template to <code>Morrowind\Data Files\Docs\My Readme Template.txt</code> and modify as desired. That will become your default template.
             <p class=empty>&nbsp;</p>
             <h3 class="header3" id="Css">Css</h3>
             <p>The default styles can be replaced by specifying css file in a CSS tag. Note that:
@@ -1838,7 +1838,7 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
             <p class=list-1>&bull;&nbsp; Css file is not linked to, but is instead included on compilation. 
             <p class=list-1>&bull;&nbsp; Css must not contain any html markup tags (not even comments).
             <p class=list-1>&bull;&nbsp; Directory specification is not allowed. 
-            <p class=list-1>&bull;&nbsp; Css file must be present either in same directory as source document or in the <code class="light">Morrowind\Data Files\Docs</code> directory. If it's present in both, then the version in the current directory will be used.
+            <p class=list-1>&bull;&nbsp; Css file must be present either in same directory as source document or in the <code>Morrowind\Data Files\Docs</code> directory. If it's present in both, then the version in the current directory will be used.
             <p class=list-1>&bull;&nbsp; If no css file is specified, then a default, sand colored style set will be used.
             <p class=list-1>&bull;&nbsp; You can supply your own css files or one of your own. If you use your own, please give a it unique name so that it won't overwrite css files by other modders. Included css files are:
             <p class=list-2>&bull;&nbsp; wtxt_sand.css (same as default style)
@@ -1871,9 +1871,9 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
             <p class=empty>&nbsp;</p>
             <h3 class="header3" id="Html">Html</h3>
             <p class=list-1>&bull;&nbsp; <i>Html tags work fine</i>
-            <p class=list-1>&bull;&nbsp; <code class="light">code tag has special formatting</code> 
+            <p class=list-1>&bull;&nbsp; <code>code tag has special formatting</code> 
             <p class=list-1>&bull;&nbsp; <B><I>pre</I></B> tag is useful for code
-            <pre class="light">
+            <pre>
 begin widgetScript
 short counter
 end
