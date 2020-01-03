@@ -345,7 +345,7 @@ a {
   }
   p {
     margin-bottom: 1em;
-	color: var(--body-text-secondary);
+    color: var(--body-text-secondary);
   }
   code {
     padding: 2px 4px;
@@ -416,7 +416,7 @@ a {
     padding: 0 1rem;
     margin-left: 0;
     color: var(--syntax-variable-color);
-	background: var(--header3-background);
+    background: var(--header3-background);
     border-left: 0.3rem solid $border-color;
     > :first-child {
       margin-top: 0;
@@ -475,7 +475,7 @@ a {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
   }
-    h2.header2 {
+  h2.header2 {
     border-top: 2px solid #000000;
     border-bottom: 2px solid #000000;
     color: var(--header2-text);
@@ -484,8 +484,8 @@ a {
     display: block;
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
-    }
-    h3.header3 {
+  }
+  h3.header3 {
     font-style: normal;
     color: var(--header3-text);
     background: var(--header3-background);
@@ -493,8 +493,8 @@ a {
     display: block;
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
-    }
-    h4.header4 {
+  }
+  h4.header4 {
     font-style: italic;
     color: var(--header4-text);
     background: var(--header4-background);
@@ -502,7 +502,7 @@ a {
     display: block;
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
-    }
+  }
 }
 
 font.redfont {
@@ -511,60 +511,60 @@ font.redfont {
 
 // Main content for Wrte Text Paragraphs
 .main-content {
-    pre.light {
+  pre.light {
     color: var(--syntax-variable-color);
     background: var(--header3-background);
-    }
-    code.light {
+  }
+  code.light {
     color: var(--syntax-variable-color);
     background: var(--header3-background);
-    }
-    p {
+  }
+  p {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
     page-break-before: auto;
     page-break-after: auto
-    }
-    p.empty {
+  }
+  p.empty {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
-    }
-    p.list-1 {
+  }
+  p.list-1 {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
     margin-left: 0.15in;
     text-indent: -0.15in
-    }
-    p.list-2 {
+  }
+  p.list-2 {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
     margin-left: 0.3in;
     text-indent: -0.15in
-    }
-    p.list-3 {
+  }
+  p.list-3 {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
     margin-left: 0.45in;
     text-indent: -0.15in
-    }
-    p.list-4 {
+  }
+  p.list-4 {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
     margin-left: 0.6in;
     text-indent: -0.15in
-    }
-    p.list-5 {
+  }
+  p.list-5 {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
     margin-left: 0.75in;
     text-indent: -0.15in
-    }
-    p.list-6 {
+  }
+  p.list-6 {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
     margin-left: 1.00in;
     text-indent: -0.15in
-    }
+  }
 }
 
 .short-column {
