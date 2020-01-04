@@ -663,8 +663,8 @@ def htmlToWtxt(srcFile, outFile=None):
 
     def wasInBlock(isBool, wasBool):
         if not isBool and wasBool:
-            htmlToWtxt.isInFrontmatter = False
-            htmlToWtxt.wasInFrontmatter = False
+            return False, False
+        return isBool, wasBool
 
     # --- Begining of Code
     if not outFile:
