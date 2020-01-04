@@ -646,12 +646,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
 def htmlToWtxt(srcFile, outFile=None):
     """TextMunch: Converts html files to wtxt formatting."""
 
-    # classes
-    class ReturnBools:
-        def __init__(self, bool1, bool2):
-            self.bool1 = bool1
-            self.bool2 = bool2
-
     # --- Functions
     def flipBool(bool):
         return not bool
@@ -693,9 +687,7 @@ def htmlToWtxt(srcFile, outFile=None):
         writeToFile = writeOut(isInFrontmatter, wasInFrontmatter)
         if writeToFile:
             outLines.append(line)
-        if not isInFrontmatter and wasInFrontmatter:
-            isInFrontmatter = False
-            wasInFrontmatter = False
+        isInFrontmatter, wasInFrontmatter = wasInBlock(isInFrontmatter, wasInFrontmatter)
     ins.close()
     out = file(outFile, 'w')
     for line in outLines:
