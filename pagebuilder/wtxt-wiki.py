@@ -206,7 +206,9 @@ def genHtml(srcFile, outFile=None, cssDir=''):
     # Setup ---------------------------------------------------------
     # --Headers
     reHead = re.compile(r'(=+) *(.+)')
+    reHeadGreen = re.compile(r'(#+) *(.+)')
     headFormat = '<h%d class="header%d" id="%s">%s</h%d>\n'
+    headFormatGreen = '<h%d id="%s">%s</h%d>\n'
     # --List
     reList = re.compile(r'( *)([-!?\.\+\*o]) (.*)')
     # --Misc. text
@@ -290,6 +292,7 @@ def genHtml(srcFile, outFile=None, cssDir=''):
         maContents = reContentsTag.match(line)
         maCss = reCssTag.match(line)
         maHead = reHead.match(line)
+        maHeadgreen = reHeadGreen.match(line)
         maList = reList.match(line)
         maPar = rePar.match(line)
         maHRule = reHRule.match(line)
@@ -322,6 +325,23 @@ def genHtml(srcFile, outFile=None, cssDir=''):
                 contents.append((level, anchor, text))
             # --Title?
             if not title and level <= 2: title = text
+        # --Green Header
+        elif maHeadgreen:
+            lead, text = maHeadgreen.group(1, 2)
+            text = re.sub(' *\#*#?$', '', text.strip())
+            anchor = reWd.sub('', text)
+            level = len(lead)
+            if not htmlIDSet.count(anchor):
+                htmlIDSet.append(anchor)
+            else:
+                anchor += str(dupeEntryCount)
+                htmlIDSet.append(anchor)
+                dupeEntryCount += 1
+            line = headFormatGreen % (level, anchor, text, level)
+            if addContents:
+                contents.append((level, anchor, text))
+            # --Title?
+            if not title and level <= 2: title = text
         # --List item
         elif maList:
             spaces = maList.group(1)
@@ -339,7 +359,7 @@ def genHtml(srcFile, outFile=None, cssDir=''):
             line = '<hr>\n'
         # --Paragraph
         elif maPar:
-            if not wasInParagraph: line = '<p>' + line
+            if not wasInParagraph: line = '<p>' + line.rstrip() + '</p>\n'
             isInParagraph = True
         # --Empty line
         elif maEmpty:
