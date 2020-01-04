@@ -20,51 +20,13 @@
 #  Wrye Mash copyright (C) 2005, 2006, 2007, 2008, 2009 Wrye
 #
 # =============================================================================
-"""This module provides a single function for converting wtxt text files to html
-files.
-
-Headings:
-= XXXX >> H1 "XXX"
-== XXXX >> H2 "XXX"
-=== XXXX >> H3 "XXX"
-==== XXXX >> H4 "XXX"
-Notes:
-* These must start at first character of line.
-* The XXX text is compressed to form an anchor. E.g == Foo Bar gets anchored as" FooBar".
-* If the line has trailing ='s, they are discarded. This is useful for making
-  text version of level 1 and 2 headings more readable.
-
-Bullet Lists:
-* Level 1
-  * Level 2
-    * Level 3
-Notes:
-* These must start at first character of line.
-* Recognized bullet characters are: - ! ? . + * o The dot (.) produces an invisible
-  bullet, and the * produces a bullet character.
-
-Styles:
-  __Text__
-  ~~Italic~~
-  **BoldItalic**
-Notes:
-* These can be anywhere on line, and effects can continue across lines.
-
-Links:
- [[file]] produces <a href=file>file</a>
- [[file|text]] produces <a href=file>text</a>
-
-Contents
-{{CONTENTS=NN}} Where NN is the desired depth of contents (1 for single level,
-2 for two levels, etc.).
-"""
-
 # Imports ----------------------------------------------------------------------
 #--Standard
 import re
 import string
 import sys
 import types
+import os
 
 # ------------------------------------------------------------------------------
 class Callables:
@@ -153,7 +115,266 @@ def mainFunction(func):
     return func
 
 
-# Data ------------------------------------------------------------------------
+# ETXT =========================================================================
+"""This section of the module provides a single function for converting
+wtxt text files to html files."""
+etxtHeader = """
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>%s</TITLE>
+<STYLE>
+H2 { margin-top: 0in; margin-bottom: 0in; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in; background: #c6c63c; font-family: "Arial", serif; font-size: 12pt; page-break-before: auto; page-break-after: auto }
+H3 { margin-top: 0in; margin-bottom: 0in; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in; background: #e6e64c; font-family: "Arial", serif; font-size: 10pt; page-break-before: auto; page-break-after: auto }
+H4 { margin-top: 0in; margin-bottom: 0in; font-family: "Arial", serif; font-size: 10pt; font-style: normal; page-break-before: auto; page-break-after: auto }
+H5 { margin-top: 0in; margin-bottom: 0in; font-family: "Arial", serif; font-style: italic; page-break-before: auto; page-break-after: auto }
+P { margin-top: 0.01in; margin-bottom: 0.01in; font-family: "Arial", serif; font-size: 10pt; page-break-before: auto; page-break-after: auto }
+P.list-1 { margin-left: 0.15in; text-indent: -0.15in }
+P.list-2 { margin-left: 0.3in; text-indent: -0.15in }
+P.list-3 { margin-left: 0.45in; text-indent: -0.15in }
+P.list-4 { margin-left: 0.6in; text-indent: -0.15in }
+P.list-5 { margin-left: 0.75in; text-indent: -0.15in }
+P.list-6 { margin-left: 1.00in; text-indent: -0.15in }
+.date0 { background-color: #FFAAAA }
+.date1 { background-color: #ffc0b3 }
+.date2 { background-color: #ffd5bb }
+.date3 { background-color: #ffeac4 }
+</STYLE>
+</HEAD>
+<BODY BGCOLOR='#ffffcc'>
+"""
+
+
+@mainFunction
+def etxtToHtml(inFileName):
+    import time
+    """Generates an html file from an etxt file."""
+    # --Re's
+    reHead2 = re.compile(r'## *([^=]*) ?=*')
+    reHead3 = re.compile(r'# *([^=]*) ?=*')
+    reHead4 = re.compile(r'@ *(.*)\s+')
+    reHead5 = re.compile(r'% *(.*)\s+')
+    reList = re.compile(r'( *)([-!?\.\+\*o]) (.*)')
+    reBlank = re.compile(r'\s+$')
+    reMDash = re.compile(r'--')
+    reBoldEsc = re.compile(r'\_')
+    reBoldOpen = re.compile(r' _')
+    reBoldClose = re.compile(r'(?<!\\)_( |$)')
+    reItalicOpen = re.compile(r' ~')
+    reItalicClose = re.compile(r'~( |$)')
+    reBoldicOpen = re.compile(r' \*')
+    reBoldicClose = re.compile(r'\*( |$)')
+    reBold = re.compile(r'\*\*([^\*]+)\*\*')
+    reItalic = re.compile(r'\*([^\*]+)\*')
+    reLink = re.compile(r'\[\[(.*?)\]\]')
+    reHttp = re.compile(r' (http://[_~a-zA-Z0-9\./%-]+)')
+    reWww = re.compile(r' (www\.[_~a-zA-Z0-9\./%-]+)')
+    reDate = re.compile(r'\[([0-9]+/[0-9]+/[0-9]+)\]')
+    reContents = re.compile(r'\[CONTENTS=?(\d+)\]\s*$')
+    reWd = re.compile(r'\W\d*')
+    rePar = re.compile(r'\^(.*)')
+    reFullLink = re.compile(r'(:|#|\.[a-zA-Z]{3,4}$)')
+    # --Date styling (Replacement function used with reDate.)
+    dateNow = time.time()
+
+    def dateReplace(maDate):
+        date = time.mktime(
+            time.strptime(maDate.group(1), '%m/%d/%Y'))  # [1/25/2005]
+        age = int((dateNow - date) / (7 * 24 * 3600))
+        if age < 0: age = 0
+        if age > 3: age = 3
+        return '<span class=date%d>%s</span>' % (age, maDate.group(1))
+
+    def linkReplace(maLink):
+        address = text = maLink.group(1).strip()
+        if '|' in text:
+            (address, text) = [chunk.strip() for chunk in text.split('|', 1)]
+        if not reFullLink.search(address):
+            address = address + '.html'
+        return '<a href="%s">%s</a>' % (address, text)
+
+    # --Defaults
+    title = ''
+    level = 1
+    spaces = ''
+    headForm = "<h%d><a name='%s'>%s</a></h%d>\n"
+    # --Open files
+    inFileRoot = re.sub('\.[a-zA-Z]+$', '', inFileName)
+    inFile = open(inFileName)
+    # --Init
+    outLines = []
+    contents = []
+    addContents = 0
+    # --Read through inFile
+    for line in inFile.readlines():
+        maHead2 = reHead2.match(line)
+        maHead3 = reHead3.match(line)
+        maHead4 = reHead4.match(line)
+        maHead5 = reHead5.match(line)
+        maPar = rePar.match(line)
+        maList = reList.match(line)
+        maBlank = reBlank.match(line)
+        maContents = reContents.match(line)
+        # --Contents
+        if maContents:
+            if maContents.group(1):
+                addContents = int(maContents.group(1))
+            else:
+                addContents = 100
+        # --Header 2?
+        if maHead2:
+            text = maHead2.group(1)
+            name = reWd.sub('', text)
+            line = headForm % (2, name, text, 3)
+            if addContents: contents.append((2, name, text))
+            # --Title?
+            if not title: title = text
+        # --Header 3?
+        elif maHead3:
+            text = maHead3.group(1)
+            name = reWd.sub('', text)
+            line = headForm % (3, name, text, 3)
+            if addContents: contents.append((3, name, text))
+            # --Title?
+            if not title: title = text
+        # --Header 4?
+        elif maHead4:
+            text = maHead4.group(1)
+            name = reWd.sub('', text)
+            line = headForm % (4, name, text, 4)
+            if addContents: contents.append((4, name, text))
+        # --Header 5?
+        elif maHead5:
+            text = maHead5.group(1)
+            name = reWd.sub('', text)
+            line = headForm % (5, name, text, 5)
+            if addContents: contents.append((5, name, text))
+        # --List item
+        elif maList:
+            spaces = maList.group(1)
+            bullet = maList.group(2)
+            text = maList.group(3)
+            if bullet == '.':
+                bullet = '&nbsp;'
+            elif bullet == '*':
+                bullet = '&bull;'
+            level = len(spaces) / 2 + 1
+            line = spaces + '<p class=list-' + `level` + '>' + bullet + '&nbsp; '
+            line = line + text + '\n'
+        # --Paragraph
+        elif maPar:
+            line = '<p>' + maPar.group(1)
+        # --Blank line
+        elif maBlank:
+            line = spaces + '<p class=list' + `level` + '>&nbsp;</p>'
+        # --Misc. Text changes
+        line = reMDash.sub('&#150', line)
+        line = reMDash.sub('&#150', line)
+        # --New bold/italic subs
+        line = reBoldOpen.sub(' <B>', line)
+        line = reItalicOpen.sub(' <I>', line)
+        line = reBoldicOpen.sub(' <I><B>', line)
+        line = reBoldClose.sub('</B> ', line)
+        line = reBoldEsc.sub('_', line)
+        line = reItalicClose.sub('</I> ', line)
+        line = reBoldicClose.sub('</B></I> ', line)
+        # --Old style bold/italic subs
+        line = reBold.sub(r'<B><I>\1</I></B>', line)
+        line = reItalic.sub(r'<I>\1</I>', line)
+        # --Date
+        line = reDate.sub(dateReplace, line)
+        # --Local links
+        line = reLink.sub(linkReplace, line)
+        # --Hyperlink
+        line = reHttp.sub(r' <a href="\1">\1</a>', line)
+        line = reWww.sub(r' <a href="http://\1">\1</a>', line)
+        # --Write it
+        # print line
+        outLines.append(line)
+    inFile.close()
+    # --Output file
+    outFile = open(inFileRoot + '.html', 'w')
+    outFile.write(etxtHeader % (title,))
+    didContents = False
+    for line in outLines:
+        if reContents.match(line):
+            if not didContents:
+                baseLevel = min([level for (level, name, text) in contents])
+                for (level, name, text) in contents:
+                    level = level - baseLevel + 1
+                    if level <= addContents:
+                        outFile.write(
+                            '<p class=list-%d>&bull;&nbsp; <a href="#%s">%s</a></p>\n' % (
+                            level, name, text))
+                didContents = True
+        else:
+            outFile.write(line)
+    outFile.write('</body>\n</html>\n')
+    outFile.close()
+    # --Done
+
+@mainFunction
+def etxtToWtxt(fileName=None):
+    """TextMunch: Converts etxt files to wtxt formatting."""
+    if fileName:
+        ins = open(fileName)
+    else:
+        import sys
+        ins = sys.stdin
+    for line in ins:
+        line = re.sub(r'^\^ ?', '', line)
+        line = re.sub(r'^## ([^=]+) =', r'= \1 ==', line)
+        line = re.sub(r'^# ([^=]+) =', r'== \1 ', line)
+        line = re.sub(r'^@ ', r'=== ', line)
+        line = re.sub(r'^% ', r'==== ', line)
+        line = re.sub(r'\[CONTENTS=(\d+)\]', r'{{CONTENTS=\1}}', line)
+        line = re.sub(r'~([^ ].+?)~', r'~~\1~~', line)
+        line = re.sub(r'_([^ ].+?)_', r'__\1__', line)
+        line = re.sub(r'\*([^ ].+?)\*', r'**\1**', line)
+        print line,
+
+
+# Wrye Text ===================================================================
+"""This section of the module provides a single function for converting
+wtxt text files to html files.
+
+Headings:
+= XXXX >> H1 "XXX"
+== XXXX >> H2 "XXX"
+=== XXXX >> H3 "XXX"
+==== XXXX >> H4 "XXX"
+Notes:
+* These must start at first character of line.
+* The XXX text is compressed to form an anchor. E.g == Foo Bar gets anchored as" FooBar".
+* If the line has trailing ='s, they are discarded. This is useful for making
+  text version of level 1 and 2 headings more readable.
+
+Bullet Lists:
+* Level 1
+  * Level 2
+    * Level 3
+Notes:
+* These must start at first character of line.
+* Recognized bullet characters are: - ! ? . + * o The dot (.) produces an invisible
+  bullet, and the * produces a bullet character.
+
+Styles:
+  __Text__
+  ~~Italic~~
+  **BoldItalic**
+Notes:
+* These can be anywhere on line, and effects can continue across lines.
+
+Links:
+ [[file]] produces <a href=file>file</a>
+ [[file|text]] produces <a href=file>text</a>
+
+Contents
+{{CONTENTS=NN}} Where NN is the desired depth of contents (1 for single level,
+2 for two levels, etc.).
+"""
+
 htmlHead = """---
 layout: default
 title: Wrye Mash Usage
@@ -198,7 +419,7 @@ BODY { background-color: #ffffcc; }
 
 # Conversion ------------------------------------------------------------------
 @mainFunction
-def genHtml(srcFile, outFile=None, cssDir=''):
+def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     """Generates an html file from a wtxt file. CssDir specifies a directory to search for css files."""
     if not outFile:
         import os
@@ -276,9 +497,9 @@ def genHtml(srcFile, outFile=None, cssDir=''):
     inPre = False
     isInParagraph = False
     htmlIDSet = list()
+    dupeEntryCount = 1
     # --Read source file --------------------------------------------------
     ins = file(srcFile)
-    dupeEntryCount = 1
     for line in ins:
         isInParagraph, wasInParagraph = False, isInParagraph
         # --Preformatted? -----------------------------
@@ -419,6 +640,83 @@ def genHtml(srcFile, outFile=None, cssDir=''):
             out.write(line)
     out.write('</div>\n</section>\n')
     out.close()
+	
+
+@mainFunction
+def htmlToWtxt(srcFile, outFile=None):
+    """TextMunch: Converts html files to wtxt formatting."""
+
+    # classes
+    class ReturnBools:
+        def __init__(self, bool1, bool2):
+            self.bool1 = bool1
+            self.bool2 = bool2
+
+    # --- Functions
+    def flipBool(bool):
+        return not bool
+
+    def writeOut(bool1, bool2):
+        if  not bool1 and not bool2:
+            return True
+        else: return False
+
+    def wasInBlock(isBool, wasBool):
+        if not isBool and wasBool:
+            htmlToWtxt.isInFrontmatter = False
+            htmlToWtxt.wasInFrontmatter = False
+
+    # --- Begining of Code
+    if not outFile:
+        import os
+        outFile = os.path.splitext(srcFile)[0] + '.txt'
+    outLines = []
+    writeToFile = True
+    isInFrontmatter = False
+    wasInFrontmatter = False
+    # --Read source file --------------------------------------------------
+    ins = file(srcFile)
+    reFrontMatter = re.compile('---', re.I)
+    for line in ins:
+        line = re.sub(r'&bull;&nbsp;', '', line)
+        maFrontMatter = reFrontMatter.match(line)
+        if maFrontMatter:
+            isInFrontmatter, wasInFrontmatter = flipBool(isInFrontmatter), True
+        # line = re.sub(r'^## ([^=]+) =', r'= \1 ==', line)
+        # line = re.sub(r'^# ([^=]+) =', r'== \1 ', line)
+        # line = re.sub(r'^@ ', r'=== ', line)
+        # line = re.sub(r'^% ', r'==== ', line)
+        # line = re.sub(r'\[CONTENTS=(\d+)\]', r'{{CONTENTS=\1}}', line)
+        # line = re.sub(r'~([^ ].+?)~', r'~~\1~~', line)
+        # line = re.sub(r'_([^ ].+?)_', r'__\1__', line)
+        # line = re.sub(r'\*([^ ].+?)\*', r'**\1**', line)
+        writeToFile = writeOut(isInFrontmatter, wasInFrontmatter)
+        if writeToFile:
+            outLines.append(line)
+        if not isInFrontmatter and wasInFrontmatter:
+            isInFrontmatter = False
+            wasInFrontmatter = False
+    ins.close()
+    out = file(outFile, 'w')
+    for line in outLines:
+        out.write(line)
+    out.close()
+
+
+@mainFunction
+def genHtml(fileName, outFile=None, cssDir=''):
+    """Generate html from old style etxt file or from new style wtxt file."""
+    ext = os.path.splitext(fileName)[1].lower()
+    if ext == '.etxt':
+        etxtToHtml(fileName)
+    elif ext == '.txt':
+        wtxtToHtml(fileName, outFile=None, cssDir='')
+        # docsDir = r'c:\program files\bethesda softworks\morrowind\data files\docs'
+        # wtxt.genHtml(fileName, cssDir=docsDir)
+    elif ext == '.html':
+        htmlToWtxt(fileName)
+    else:
+        raise "Unrecognized file type: " + ext
 
 if __name__ == '__main__':
         callables.main()
