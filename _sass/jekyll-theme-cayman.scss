@@ -502,6 +502,31 @@ font.redfont {
   color: var(--warning-text-red);
 }
 
+.main-content {
+  img.thumbnail-large {
+    @include full {
+      max-width: 35%;
+	  padding: 10px;
+    }
+    @include huge {
+      max-width: 40%;
+	  padding: 10px;
+    }
+    @include large {
+      max-width: 45%;
+	  padding: 10px;
+    }
+    @include medium {
+      max-width: 55%;
+	  padding: 10px;
+    }
+    @include small {
+      max-width: 65%;
+	  padding: 10px;
+    }
+  }
+}
+			
 // Main content for Wrte Text Paragraphs
 .main-content {
   p.empty {
