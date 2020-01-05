@@ -24,10 +24,10 @@ __[[https://www.nexusmods.com/skyrimspecialedition/mods/164 | SSEEdit]]__
 * **Author:** ElminsterAU and xEdit team
 * SSEEdit is the Skyrim: Special Edition version of xEdit. xEdit is an advanced graphical module viewer/editor and    conflict detector.
 
-__Tome of xEdit__
+__[[https://tes5edit.github.io/docs/ | Tome of xEdit]]__
 * **Author:** Miax and Justin Other.
-** Online documentation converted by EpFwip. Updated and maintained by Sharlikran.
-* Official documentaion for xEdit
+  * Online documentation converted by EpFwip. Updated and maintained by [[https://sharlikran.github.io/ | Sharlikran]].
+  * Official documentation for xEdit
 
 === Install and Setup
 __[[https:// | Tutorial Title]]__
