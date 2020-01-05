@@ -394,6 +394,7 @@ title: Wrye Mash Usage
             <li><a href="7-tomeofpsymon.html">7. Tome of Psymon - BAIN Mod Installation Projects</a></li>
             <li><a href="8-tomeofalt3rn1ty.html">8. Tome of Alt3rn1ty</a></li>
             <li><a href="9-morrowindutilities.html">9. Morrowind Utilities</a></li>
+            <li><a href="10-contribute.html">10. Generating Wiki pages from Text Files</a></li>
         </ul>
     </div>
 </div>
@@ -643,59 +644,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
 	
 
 @mainFunction
-def htmlToWtxt(srcFile, outFile=None):
-    """TextMunch: Converts html files to wtxt formatting."""
-
-    # --- Functions
-    def flipBool(bool):
-        return not bool
-
-    def writeOut(bool1, bool2):
-        if  not bool1 and not bool2:
-            return True
-        else: return False
-
-    def wasInBlock(isBool, wasBool):
-        if not isBool and wasBool:
-            return False, False
-        return isBool, wasBool
-
-    # --- Begining of Code
-    if not outFile:
-        import os
-        outFile = os.path.splitext(srcFile)[0] + '.txt'
-    outLines = []
-    writeToFile = True
-    isInFrontmatter = False
-    wasInFrontmatter = False
-    # --Read source file --------------------------------------------------
-    ins = file(srcFile)
-    reFrontMatter = re.compile('---', re.I)
-    for line in ins:
-        line = re.sub(r'&bull;&nbsp;', '', line)
-        maFrontMatter = reFrontMatter.match(line)
-        if maFrontMatter:
-            isInFrontmatter, wasInFrontmatter = flipBool(isInFrontmatter), True
-        # line = re.sub(r'^## ([^=]+) =', r'= \1 ==', line)
-        # line = re.sub(r'^# ([^=]+) =', r'== \1 ', line)
-        # line = re.sub(r'^@ ', r'=== ', line)
-        # line = re.sub(r'^% ', r'==== ', line)
-        # line = re.sub(r'\[CONTENTS=(\d+)\]', r'{{CONTENTS=\1}}', line)
-        # line = re.sub(r'~([^ ].+?)~', r'~~\1~~', line)
-        # line = re.sub(r'_([^ ].+?)_', r'__\1__', line)
-        # line = re.sub(r'\*([^ ].+?)\*', r'**\1**', line)
-        writeToFile = writeOut(isInFrontmatter, wasInFrontmatter)
-        if writeToFile:
-            outLines.append(line)
-        isInFrontmatter, wasInFrontmatter = wasInBlock(isInFrontmatter, wasInFrontmatter)
-    ins.close()
-    out = file(outFile, 'w')
-    for line in outLines:
-        out.write(line)
-    out.close()
-
-
-@mainFunction
 def genHtml(fileName, outFile=None, cssDir=''):
     """Generate html from old style etxt file or from new style wtxt file."""
     ext = os.path.splitext(fileName)[1].lower()
@@ -705,8 +653,6 @@ def genHtml(fileName, outFile=None, cssDir=''):
         wtxtToHtml(fileName, outFile=None, cssDir='')
         # docsDir = r'c:\program files\bethesda softworks\morrowind\data files\docs'
         # wtxt.genHtml(fileName, cssDir=docsDir)
-    elif ext == '.html':
-        htmlToWtxt(fileName)
     else:
         raise "Unrecognized file type: " + ext
 
