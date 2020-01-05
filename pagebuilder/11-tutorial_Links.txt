@@ -25,7 +25,8 @@ __[[https://www.nexusmods.com/skyrimspecialedition/mods/164 | SSEEdit]]__
 * SSEEdit is the Skyrim: Special Edition version of xEdit. xEdit is an advanced graphical module viewer/editor and    conflict detector.
 
 __Tome of xEdit__
-* **Author:** Elminster and Miax
+* **Author:** Miax and Justin Other.
+** Online documentation converted by EpFwip. Updated and maintained by Sharlikran.
 * Official documentaion for xEdit
 
 === Install and Setup
@@ -132,3 +133,11 @@ __[[https:// | tool name]]__
 __[[https:// | tool name]]__
 * **Author:** 
 * Descrip of official tool
+
+== Reuse and Credits ==========================================================
+=== License: WML 1.0 Modify and Redistribute, Share Alike
+* You are free to redistribute this work in unmodified form.
+* You are free to modify and re-distribute this work, so long as you: 1) give the author(s) credit proportional to their contribution to the final work, 2) distribute the final work under the same terms, and 3) make artistic resources included with the final work available under the same terms as below.
+
+=== Credits
+* **A Filthy N'wah** Thanks to the author for providing this modder resource!
