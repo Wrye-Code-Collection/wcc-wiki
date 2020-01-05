@@ -1,0 +1,134 @@
+= Skyrim Special Edition Mod Tutorial Link Compendium =====================================================
+* A collection of Links sorted by subject to help sse modder, from beginner to advanced, to develop their skillsets.
+* Discussion: Discord - git forum - whatever
+
+== Contents ================================================================
+{{CONTENTS=2}}
+
+== Creation Kit Tutorials ================================================================
+__[[https://www.creationkit.com/index.php?title=Landing_page | Creation Kit Wiki]]__
+* **Author:** various 
+* A collection pertaining primarily to Bethesda's CK
+
+=== Getting Started: The Very Basics
+__[[https://www.creationkit.com/index.php?title=Category:Getting_Started | Basics Series - Chapter 1]]__
+* **Author:** Creation Kit Wiki Team
+* This first chapter of the tutorial will go over the basics of getting up and running with the Creation Kit.
+
+__[[https://www.youtube.com/watch?v=Dq1F62MOviY | Creation Kit SE - - Installation & Setup - - Tutorial Tuesday]]__
+* **Author:** GamerPoets
+* CreationKit Installation & Setup is a How To Mod guide for SkyrimSpecialEdition. I show how to Download, Install,    Save the windows, and fix the Single Master error. 
+
+== xEdit Tutorials ================================================================
+__[[https://www.nexusmods.com/skyrimspecialedition/mods/164 | SSEEdit]]__
+* **Author:** ElminsterAU and xEdit team
+* SSEEdit is the Skyrim: Special Edition version of xEdit. xEdit is an advanced graphical module viewer/editor and    conflict detector.
+
+__Tome of xEdit__
+* **Author:** Elminster and Miax
+* Official documentaion for xEdit
+
+=== Install and Setup
+__[[https:// | Tutorial Title]]__
+* **Author:**
+* Descrip:
+
+=== Cleaning Mods
+__[[https:// | Tutorial Title]]__
+* **Author:** 
+* Desrip:
+
+=== Basics of Editing
+__[[https:// | Tutorial Title]]__
+* **Author:**
+* Descrip:
+
+== Bethesda Archive Extractor Tutorials ================================================================
+__[[https://www.nexusmods.com/fallout4/mods/78/? | B.A.E. - Bethesda Archive Extractor]]__
+* **Author:** jonwd7
+* An extractor for the new BA2 format (extracts BSAs too!)
+
+== BethINI Tutorials ================================================================
+__[[https://www.nexusmods.com/skyrimspecialedition/mods/4875 | BethINI]]__
+* **Author:** DoubleYou
+* Bethesda's INI configuration files are a mess. BethINI optimizes the game for increased graphical fidelity and     performance.
+
+== Cathedral Assets Optimizer Tutorials ================================================================
+__[[https://www.nexusmods.com/skyrimspecialedition/mods/23316 | Cathedral Assets Optimizer]]__
+* **Author:** G_k
+* An automation tool used to optimize BSAs, meshes, textures and animations. It allows quickly porting an Oldrim mod   to Skyrim Special Edition, and can optimize assets for many Bethesda games.
+
+== DynDOLOD Tutorials ================================================================
+__[[https://forum.step-project.com/forum/101-shesons-dyndolod-support/ | DynDOLOD]]__
+* **Author:** sheson
+* Generate tree, static and dynamic distant object LOD for Skyrim with DynDOLOD.
+
+== LOOT Tutorials ================================================================
+__[[https://www.nexusmods.com/skyrimspecialedition/mods/1918 | LOOT - Load Order Optimisation Tool]]__
+* **Author:** wrinklyninja
+* Setting the right load order for your mods is a crucial step to enjoying a stable modded game. The Load Order     Optimisation Tool (LOOT) can help with that, by providing automated load order sorting that's simple to use and      fully customisable. See also: [[https://loot.github.io/ | Official LOOT site]]
+
+== Mator Smash Tutorials ================================================================
+__[[https://www.nexusmods.com/skyrim/mods/90987 | Mator Smash]]__
+* **Author:** Mator
+* Mator Smash is a tool that generates conflict resolution patches, similar to Wrye Bash's Bashed Patch. 
+  * Smash is   capable of handling conflicts in all record types.
+
+== Nif Optimizer Tutorials ================================================================
+__[[https://www.nexusmods.com/skyrimspecialedition/mods/4089 | SSE Nif Optimizer]]__
+* **Author:** ousnius
+* A tool for mod authors that optimizes your SK NIF files for the (actual) new SSE format and fixes issues. Can also   scan textures for compatibility.
+
+== NifScan Tutorials ================================================================
+__[[https://www.nexusmods.com/skyrim/mods/75916/? | NifScan]]__
+* **Author:** zilav
+* A simple command line utility to quickly scan nifs for common errors
+
+== NifSkope Tutorials ================================================================
+__[[https://github.com/jonwd7/nifskope/releases | NifSkope]]__
+* **Author:** jonwd7
+* A tool for opening and editing Model Files, also known as the NetImmerse File Format, meshes or .nifs
+
+== Paint.net Tutorials ================================================================
+__[[https://www.getpaint.net/index.html | Paint.net]]__
+* **Author:** Rick Brewster
+* Paint.NET is image and photo editing software for PCs that run Windows. It features an intuitive and innovative   user interface with support for layers, unlimited undo, special effects, and a wide variety of useful and powerful   tools. An active and growing online community provides friendly help, tutorials, and plugins.
+  * This site has it's own collection of tutorials and forums for the self-learner
+
+== xLODGen Tutorials ================================================================
+__[[https:// | tool name]]__
+* **Author:** 
+* Descrip of official tool
+
+== zEdit Tutorials ================================================================
+__[[https:// | tool name]]__
+* **Author:** 
+* Descrip of official tool
+
+= Modding Basics Tutorials ================================================================
+__A collection of tutorials and information to help the novice modder begin adding mods to SSE.__
+
+== General Beginner's Modding Information
+__[[https:// | tutorial name]]__
+* **Author:** 
+* Descrip of tutorial
+
+== Mod Organizer 2 Tutorials ================================================================
+__[[https:// | tool name]]__
+* **Author:** 
+* Descrip of official tool
+
+== Vortex Tutorials ================================================================
+__[[https:// | tool name]]__
+* **Author:** 
+* Descrip of official tool
+
+== Wrye Bash Tutorials ================================================================
+__[[https:// | tool name]]__
+* **Author:** 
+* Descrip of official tool
+
+==  Tutorials Template ================================================================
+__[[https:// | tool name]]__
+* **Author:** 
+* Descrip of official tool
