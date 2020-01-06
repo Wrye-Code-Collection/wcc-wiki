@@ -1056,88 +1056,247 @@ I may later add other example packages later.
 
 = BAIN Wizards
 
-Many familiar with Oblivion Mod Manager had lamented that BAIN lacked the ability to provide scripted installations of mods that OBMM provided. OBMM is able to modify the Oblivion ini, Mod ini files, rename plugins, arrange package contents and other related goodies that have made it so popular over the years.In response developers of BAIN have been laboring to create scripted installs with BAIN packages. For a while the most one could have hoped for is what was called triple packaging which meant BAIN ready, OMOD scripted, and packaged for manual installation ease (if that makes sense).But now BAIN scripted installs are here and they are called BAIN wizards. As this thread is mostly directed at mod users the inner workings of how to create BAIN wizards or edit them is beyond the scope of this thread (and my ability to describe). One of the main developers of Wrye Bash, Lojack, has his own thread for BAIN wizards. If you have questions about current wizards or feature requests that is the place to take them.Metallicow has created WizBAIN a utility to help in the creation of BAIN wizards ... and other things? Forum ThreadMalonn is also collecting together BAIN wizard scripts and script ideas: BAIN Wizard Installation ProjectI will say that I've been very impressed with the progress with this feature. There are several very well put together mods that make use of BAIN wizards and here is a list of some of the best:Animated Windows Lighting systemReally AEVWDAll NAturalBetter CitiesLush and Gaudy landscapes and Grass and Tree ModWith Wrye Bash 292+ Archives that have a BAIN wizard will show up in the BAIN tab as having a magic wand superimposed over them. To begin the Wizard you right click on the package in question and scroll down to where it says wizard and click. This should prompt the wizard to start. At this point the wizard will prompt you for options based on your load order and preferences. It will not install the mod for you just help you choose what packages to install and you must then install the package as normal.==================================================BAIN Reading OMOD conversion filesDevelopment on Wrye bash being able to read OMOD conversion files and therefore install OMODs (archives specifically for Oblivion Mod Manager) is happening! Stay tuned as this may be incorporated into the next version of bash (292)!==================================================BAIN conversion filesBAIN conversion files are encoded instructions one can create for use with Wrye Bash/BAIN that recombine already existing packages in new ways. These can be handy for making a set of instructions to combine several premade packages into a BAIN compilation.There is a set of instructions on the Wrye Bash readme for both creation and use of them. What is required is that a user download the archives, add them to their installers directory. With this in mind then it does require quite a bit of work to get them operational with the advantage that one does not need to offer or upload the mods that are going to be combined (although links might help).Waruddar writes:
+Many familiar with Oblivion Mod Manager had lamented that BAIN lacked the ability to provide scripted installations of mods that OBMM provided. OBMM is able to modify the Oblivion ini, Mod ini files, rename plugins, arrange package contents and other related goodies that have made it so popular over the years.
 
-The premade packages do not have to be BAIN friendly. In fact, the entire purpose of BCFs is to convert non-friendly packages into friendly packages in such a way that minimizes bandwidth and preserves author's rights.Without them, there are only two ways to distribute converted non-friendly packages:
+In response developers of BAIN have been laboring to create scripted installs with BAIN packages. For a while the most one could have hoped for is what was called triple packaging which meant BAIN ready, OMOD scripted, and packaged for manual installation ease (if that makes sense).
 
-Convert the package manually, and upload the entire BAIN friendly package. Get yelled at by authors who don't want people altering & spreading their work without permission. Possibly consume large amounts of bandwidth if the package is of any decent size (uploading a repackage of QTP3 for instance). End user only has to download one thing and install.
-Convert the package manually, and post instructions on what was done (typically a checklist or similar). Low bandwidth (typically a few kilobytes, more if images are used), no intrusion against author's rights. Time consuming to install since the end user has to do exactly the same things someone else already did. End user has to download the original package(s) and the instructions for the conversion (the checklist).
+But now BAIN scripted installs are here and they are called BAIN wizards. As this thread is mostly directed at mod users the inner workings of how to create BAIN wizards or edit them is beyond the scope of this thread (and my ability to describe). One of the main developers of Wrye Bash, Lojack, has his own [[http://forums.bethsoft.com/topic/1174346-wrye-bash-wizards/ | thread for BAIN wizards]]. If you have questions about current wizards or feature requests that is the place to take them.
+
+Metallicow has created [[https://www.nexusmods.com/oblivion/mods/38857?tab=files | WizBAIN]] a utility to help in the creation of BAIN wizards ... and other things? [[https://forums.bethsoft.com/topic/1393307-wrye-bash-wizardswizbain/ | Forum Thread]]
+
+Malonn is also collecting together BAIN wizard scripts and script ideas: BAIN Wizard Installation Project
+
+I will say that I've been very impressed with the progress with this feature. There are several very well put together mods that make use of BAIN wizards and here is a list of some of the best:
+
+[[https://www.nexusmods.com/oblivion/mods/19628 | Animated Windows Lighting system]]
+[[https://www.nexusmods.com/oblivion/mods/20053 | Really AEVWD]]
+[[https://www.nexusmods.com/oblivion/mods/18305 | All NAtural]]
+[[https://www.nexusmods.com/oblivion/mods/16513 | Better Cities]]
+[[https://www.nexusmods.com/oblivion/mods/37336 | Lush and Gaudy landscapes and Grass and Tree Mod]]
+
+With Wrye Bash 292+ Archives that have a BAIN wizard will show up in the BAIN tab as having a magic wand superimposed over them. To begin the Wizard you right click on the package in question and scroll down to where it says wizard and click. This should prompt the wizard to start. At this point the wizard will prompt you for options based on your load order and preferences. It will not install the mod for you just help you choose what packages to install and you must then install the package as normal.
+
+==================================================
+
+BAIN Reading OMOD conversion files
+
+Development on Wrye bash being able to read OMOD conversion files and therefore install OMODs (archives specifically for Oblivion Mod Manager) is happening! Stay tuned as this may be incorporated into the next version of bash (292)!
+
+==================================================
+
+BAIN conversion files
+
+BAIN conversion files are encoded instructions one can create for use with Wrye Bash/BAIN that recombine already existing packages in new ways. These can be handy for making a set of instructions to combine several premade packages into a BAIN compilation.
+
+There is a set of instructions on the Wrye Bash readme for both creation and use of them. What is required is that a user download the archives, add them to their installers directory. With this in mind then it does require quite a bit of work to get them operational with the advantage that one does not need to offer or upload the mods that are going to be combined (although links might help).
+
+Waruddar writes:
+
+The premade packages do not have to be BAIN friendly. In fact, the entire purpose of BCFs is to convert non-friendly packages into friendly packages in such a way that minimizes bandwidth and preserves author's rights.
+
+Without them, there are only two ways to distribute converted non-friendly packages:
+
+* Convert the package manually, and upload the entire BAIN friendly package. Get yelled at by authors who don't want people altering & spreading their work without permission. Possibly consume large amounts of bandwidth if the package is of any decent size (uploading a repackage of QTP3 for instance). End user only has to download one thing and install.
+* Convert the package manually, and post instructions on what was done (typically a checklist or similar). Low bandwidth (typically a few kilobytes, more if images are used), no intrusion against author's rights. Time consuming to install since the end user has to do exactly the same things someone else already did. End user has to download the original package(s) and the instructions for the conversion (the checklist).
 
 With BCFs, you have all the advantages of the checklist approach without the disadvantage:
 
-Convert the package manually, and upload the BCF. Low bandwidth (typically a few kilobytes), no intrusion against author's rights (the BCF doesn't contain any of the authors original files). Quick to install; the end user can get exactly the same conversion in three mouse clicks. End user has to download the original package(s), and the instructions for the conversion (the BCF).
+* Convert the package manually, and upload the BCF. Low bandwidth (typically a few kilobytes), no intrusion against author's rights (the 
+
+BCF doesn't contain any of the authors original files). Quick to install; the end user can get exactly the same conversion in three mouse clicks. End user has to download the original package(s), and the instructions for the conversion (the BCF).
 
 BCF's also have a couple extra advantages:
 
-The person who originally created the conversion can include custom BAIN readme's, patches, etc without a separate install file.
-The converted file has all the options set that the BCF author chose. Whether the converted package uses solid or non-solid compression, Has Extra Directories, Comments, selected sub-packages, etc can all be pre-filled in.
+* The person who originally created the conversion can include custom BAIN readme's, patches, etc without a separate install file.
+* The converted file has all the options set that the BCF author chose. Whether the converted package uses solid or non-solid compression, Has Extra Directories, Comments, selected sub-packages, etc can all be pre-filled in.
 
 A BCF is really not that different from a checklist. The main difference is that the BCF is read and used by the computer, whereas a checklist has to be read by a human. What they do is allow one person to do the work that you mention (cleaning, checking file structures, pyffi'ing, etc), and then package that work for other people to use. All a BCF contains is a set of instructions on how to rearrange the files, the settings you used, and any files that the BCF author added or changed. The only thing the BCF automates is all the work you previously did.
 
 Here is a quote from FrodoDarkLord about how to make BAIN Conversion Files:
 
-Basically it works like this- if you want a compilation similar to my weapons archive, but don't want to or can't do all the moving around and rearranging and work that goes into it, the creator of the archive can release a BCF. You then download the BCF, the necessary archives, apply the BCF and remove the BCF and the source archives. You then have the desired complex package, without any remanining clutter or packages lying around your BAIN folder- yes, you do need to temporarily have the source archives in your BAIN folder. However, once you have applied the BCF, you can delete them. And since applying a BCF takes no more than a minute or so, you're not really messying up your BAIN folder.If you want to create a BCF for a package that contains a cleaned esp, the cleaned esp is packed into the BCF- so you can do that as well. Of course, there's no real benefit for the author of the BCF- just for the user that would like to have a certain BAIN project (for example, one shown in this thread) but is intimidated by all the work necessary to get it right.For example, I would, eventually, like to have a Darnified UI BAIN package like yours- however, I am lazy and if it means doing much more work than selecting the install options in the OMOD installer, I can't be bothered. So, if you, hypothetically, created a BCF for your Darnififed UI BAIN structure, I would download all the packages you used to create it, then apply the BCF and delete or move the source archives outside of the BAIN folder. I now have the Darnified UI archive without doing any work at all. Win for me, no gain for you- other than being able to easily share your BAIN archives without permission difficulties.As far as creating the BCF goes, it works in much the same way that you apply one. You have an archive that you want to create a BCF for so you can share it with others (this is the "target archive") and you have the archives whose files went into the creation of that archive (the "source archives"). In Wrye Bash, you select all the source archives, select "Create Conversion", pick the target archive, and Wrye Bash does the rest. The BCF is now in your Bain Converters folder and you can upload it for the enjoyment of others. Again, if there are files in the target archive not present in the source archives (like a cleaned esp for example), Wrye Bash adds that file to the BCF, and when the BCF is applied by the end user, the file is drawn from the BCF archive instead of one of the source archives.As another example, say you have a quest mods archive (that you created some time ago) that you would like to share with others. Clearly, it would be endless work to get permission to upload the archive (and many mod authors will be opposed to the idea, so you would have to remove those mods and your archive would be incomplete), not to mention it is a huge file. You've also cleaned all the esp's to make sure you have a completely stable game. You then create a BCF. You get together all of the original mod archives that the mod author created and put those in your Bash Installers folder. In Wrye Bash, you select these source archives, right click on them and select "Conversion", then "Create". Wrye Bash will ask you to select a target archive. This is your finished quest mods BAIN collection. You select it in the file browser and Wrye Bash creates your BCF. This will now contain several items. First is the information of what the BCF is trying to do, what its source archives are, what the target archive is supposed to look like, details about the packages in general etc. Since you also cleaned the esps though, and those files are missing from the source archives, these cleaned esps are also present in the BCF (which is just a regular 7-zip archive).So you're pretty much done with the BCF now and can delete or remove the source archives from your BAIN folder and upload the BCF. Now, someone sees your compilation in this thread, and thinks to himself "Boy, this looks awesome, but darn, that is a helluva lot of work." So now he sees that you've created a BCF to make his life easier, and excitedly downloads your prepared BCF. He reads the readme, and downloads all the source archives - but omits one because he simply can't stand that mod. He dumps all these archives into his Bash Installers folder, puts the BCF in the Bain Converters folder and opens Wrye Bash. He selects all the source archives, right clicks and selects "Conversions" then "Apply" and finally the BCF he wants to apply. Wrye Bash asks him to name the new archive it is about to create, and then does its magic. It will copy the necessary files from the source archive to the new archive except for the missing one, which it simply omits, and then copy over the cleaned esps because those were not present in the source archives. The user now has the full BAIN archive, except for the one mod which he chose to omit. He can now remove the source archives from his Bash Installers folder, removing any unneeded clutter and install and play with the BAIN archive without having done any work.1. Put the -BFC.7zip into your Bash Installers\Bain Converters folder.2. Download all source archives3. Select all source archives in BAIN, right click, "Conversions", "Apply", "Weapon Retextures-BCF"4. Name your new archive5. Wait6. Install new archive7. Play & Enjoy!
+Basically it works like this- if you want a compilation similar to my weapons archive, but don't want to or can't do all the moving around and rearranging and work that goes into it, the creator of the archive can release a BCF. You then download the BCF, the necessary archives, apply the BCF and remove the BCF and the source archives. You then have the desired complex package, without any remanining clutter or packages lying around your BAIN folder- yes, you do need to temporarily have the source archives in your BAIN folder. However, once you have applied the BCF, you can delete them. And since applying a BCF takes no more than a minute or so, you're not really messying up your BAIN folder.
 
-Unfortunately this file no longer is available. Lojack has created a Nexus page of BAIN Conversion Files with plans to add more once completed.XJDHDR has also created a Nexus page of Scripted BCFs for Wrye Bashs BAIN installerI will be honest ... I do not see the value in this function and have only really encountered the above use of it. This could well be my own bias as I see BAIN as a tool for extending and assisting with manual installation and I do not see it as an automated tool that requires no thought by the user. This strikes me as an attempt to make BAIN more of an automated gizmo. What it will not do is the steps I consider necessary to installing mods which include:
+If you want to create a BCF for a package that contains a cleaned esp, the cleaned esp is packed into the BCF- so you can do that as well. Of course, there's no real benefit for the author of the BCF- just for the user that would like to have a certain BAIN project (for example, one shown in this thread) but is intimidated by all the work necessary to get it right.
 
-Cleaning plugins (very essential)
-Examining file structure for problems and conflicts
-Other things such as optimizing meshes and renaming readmes
+For example, I would, eventually, like to have a Darnified UI BAIN package like yours- however, I am lazy and if it means doing much more work than selecting the install options in the OMOD installer, I can't be bothered. So, if you, hypothetically, created a BCF for your Darnififed UI BAIN structure, I would download all the packages you used to create it, then apply the BCF and delete or move the source archives outside of the BAIN folder. I now have the Darnified UI archive without doing any work at all. Win for me, no gain for you- other than being able to easily share your BAIN archives without permission difficulties.
 
-For instance if one were to create a BCF of a popular quest mod that also required cleaning (like Et in Arkay described above). You would download the quest mod's original archive plus all the patches and body replacer information, use the BCF to create a more BAIN friendly and inclusive archive. Upon installing though you would still have a dirty plugin, so you would clean that. This would cause the mismatched sub-tab to show the esp as mismatched. You could ignore that but then if you decide to install a body replacer and it want to anneal out the body mod changes this mod provides then doing so would again give you the dirty plugin installed again. I concede that for overhauls that do not need cleaning or pure replacers this could be useful. I recall Wrye stating that he included this feature but that he thought it more important to convince mod makers and packagers to just adapt BAIN from the onset to avoid yet more installation steps and problems.I'm sorry if I sound unfair and I am willing to change my mind with the right argument ... Having looked at it I'm certain that I could whip together a packaged mod compilation faster than I could make a BCF of the same archives. Better yet I could, hopefully, write a passage teaching you how to do it faster too and also encourage more manual installer or modder mentality as well!So please do not ask me to make any. I will refuse. I will leave this post open to anyone willing to write a more fair and balanced assessment or expand upon the set of instructions given above.
+As far as creating the BCF goes, it works in much the same way that you apply one. You have an archive that you want to create a BCF for so you can share it with others (this is the "target archive") and you have the archives whose files went into the creation of that archive (the "source archives"). In Wrye Bash, you select all the source archives, select "Create Conversion", pick the target archive, and Wrye Bash does the rest. The BCF is now in your Bain Converters folder and you can upload it for the enjoyment of others. Again, if there are files in the target archive not present in the source archives (like a cleaned esp for example), Wrye Bash adds that file to the BCF, and when the BCF is applied by the end user, the file is drawn from the BCF archive instead of one of the source archives.
+
+As another example, say you have a quest mods archive (that you created some time ago) that you would like to share with others. Clearly, it would be endless work to get permission to upload the archive (and many mod authors will be opposed to the idea, so you would have to remove those mods and your archive would be incomplete), not to mention it is a huge file. You've also cleaned all the esp's to make sure you have a completely stable game. You then create a BCF. You get together all of the original mod archives that the mod author created and put those in your Bash Installers folder. In Wrye Bash, you select these source archives, right click on them and select "Conversion", then "Create". Wrye Bash will ask you to select a target archive. This is your finished quest mods BAIN collection. You select it in the file browser and Wrye Bash creates your BCF. This will now contain several items. First is the information of what the BCF is trying to do, what its source archives are, what the target archive is supposed to look like, details about the packages in general etc. Since you also cleaned the esps though, and those files are missing from the source archives, these cleaned esps are also present in the BCF (which is just a regular 7-zip archive).
+
+So you're pretty much done with the BCF now and can delete or remove the source archives from your BAIN folder and upload the BCF. Now, someone sees your compilation in this thread, and thinks to himself "Boy, this looks awesome, but darn, that is a helluva lot of work." So now he sees that you've created a BCF to make his life easier, and excitedly downloads your prepared BCF. He reads the readme, and downloads all the source archives - but omits one because he simply can't stand that mod. He dumps all these archives into his Bash Installers folder, puts the BCF in the Bain Converters folder and opens Wrye Bash. He selects all the source archives, right clicks and selects "Conversions" then "Apply" and finally the BCF he wants to apply. Wrye Bash asks him to name the new archive it is about to create, and then does its magic. It will copy the necessary files from the source archive to the new archive except for the missing one, which it simply omits, and then copy over the cleaned esps because those were not present in the source archives. The user now has the full BAIN archive, except for the one mod which he chose to omit. He can now remove the source archives from his Bash Installers folder, removing any unneeded clutter and install and play with the BAIN archive without having done any work.
+
+1. Put the -BFC.7zip into your Bash Installers\Bain Converters folder.
+2. Download all source archives
+3. Select all source archives in BAIN, right click, "Conversions", "Apply", "Weapon Retextures-BCF"
+4. Name your new archive
+5. Wait
+6. Install new archive
+7. Play & Enjoy!
+
+Unfortunately this file no longer is available. 
+
+Lojack has created a Nexus page of BAIN Conversion Files with plans to add more once completed.
+
+XJDHDR has also created a Nexus page of [[https://www.nexusmods.com/oblivion/mods/34414 | Scripted BCFs for Wrye Bashs BAIN installer]]
+
+I will be honest ... I do not see the value in this function and have only really encountered the above use of it. This could well be my own bias as I see BAIN as a tool for extending and assisting with manual installation and I do not see it as an automated tool that requires no thought by the user. This strikes me as an attempt to make BAIN more of an automated gizmo. What it will not do is the steps I consider necessary to installing mods which include:
+
+* Cleaning plugins (very essential)
+* Examining file structure for problems and conflicts
+* Other things such as optimizing meshes and renaming readmes
+
+For instance if one were to create a BCF of a popular quest mod that also required cleaning (like Et in Arkay described above). You would download the quest mod's original archive plus all the patches and body replacer information, use the BCF to create a more BAIN friendly and inclusive archive. Upon installing though you would still have a dirty plugin, so you would clean that. This would cause the mismatched sub-tab to show the esp as mismatched. You could ignore that but then if you decide to install a body replacer and it want to anneal out the body mod changes this mod provides then doing so would again give you the dirty plugin installed again.
+
+I concede that for overhauls that do not need cleaning or pure replacers this could be useful. I recall Wrye stating that he included this feature but that he thought it more important to convince mod makers and packagers to just adapt BAIN from the onset to avoid yet more installation steps and problems.
+
+I'm sorry if I sound unfair and I am willing to change my mind with the right argument ... Having looked at it I'm certain that I could whip together a packaged mod compilation faster than I could make a BCF of the same archives. Better yet I could, hopefully, write a passage teaching you how to do it faster too and also encourage more manual installer or modder mentality as well!
+
+So please do not ask me to make any. I will refuse.
+
+I will leave this post open to anyone willing to write a more fair and balanced assessment or expand upon the set of instructions given above.
+
+BAIN and Other Games
+
+Fallout3 and Fallout New Vegas
+
+The Wrye Flash project (formally Gary Bash). Valda fully ported over Wrye Bash for the fallout games. He has been very conscientious about updating it and even incorporating bash tags particular to Fallout. As of this writing the latest version of Wrye Flash is based on the latest version of Wrye Bash (291). Valda has also contributed to helping squash Wrye Bash bugs. Wrye flash has the following salient features:
+
+1. Is the a fully functional port of Wrye Bash (Usually based off of the latest version of Wrye Bash) to Fallout3.
+2. Has complete functioning of BAIN tab.
+3. Has working Bashed Patch functions that rival and (in my opinion) out-perform the merged list function of FO3edit.
+Valda is actively supporting and updating this utility. So if, like me, you play both games please give him support. 
+[[https://www.nexusmods.com/fallout3/mods/11336 | Wrye Flash download page]]
+[[http://forums.bethsoft.com/topic/1102449-relz-garybash-thread-2/ | latest Gary Bash thread]] as of this writing. If not active then use search.
+[[https://www.nexusmods.com/newvegas/mods/35003 | Wrye Flash for New Vegas]]
+[[http://forums.bethsoft.com/topic/1129389-relzwipzbeta-wrye-flash-nv/ | Wrye Flash NV Forum thread]]
+
+As with Wrye Bash and OBMM - it would not be fair to not mention the competition. Kaburke continues to develop the Fallout Mod Manager and has incorporated several BAIN like features:
+1. Meaningful Conflict reporting with data files that are also installed with FOMM or manually.
+2. File Manager which allows for functions much like BAIN offers with regard to managing replacers. This addresses one of the main issues with Oblivion Mod Manager but is not implemented in OBMM (only FOMM).
+3. Can be tasked to manage either Fallout3 or Fallout New Vegas or both.
+[[https://www.nexusmods.com/fallout3/mods/640 | Fallout Mod Manager Main Download]]
+[[http://forums.bethsoft.com/topic/1173611-relz-fallout-mod-manager/ | Recent FOMM Thread]]
+
+Morrowind
+
+Wrye Mash for Morrowind has been taken up by Yacoby and he has been slowly importing changes from bash to mash. he has also announced work on creating a core Wrye Bash code that would allow for more easy porting to new games (such as the upcoming Skyrim).
+[[http://forums.bethsoft.com/topic/1180562-yacobys-wrye-mash-fork/ | Yacoby Wrye Mash forum thread]]
+[[https://wrye-code-collection.github.io/wcc-wiki/3-wryemashusage.html | Wrye Mash Readme]] - [[http://wryemusings.com/#WryeMash | Original Wrye Mash Readme]]
+[https://www.nexusmods.com/morrowind/mods/27588 | Original Wrye Mash Download]]
+For those that prefer the Mod Manager approach there is a decent port of it here: [[https://www.nexusmods.com/morrowind/mods/26260 | Morrowind Mod Manager]]
+
+There are so many Morrowind Tutorials and mod use instructions pages. Here are only a few:
+[[http://forums.bethsoft.com/topic/1060141-mod-recommendations-for-new-players/ | Mod Recommendations for New Players]]
+M[[https://www.mwmythicmods.com/ | orrowind Mythic Mods]] -has many tutorials for the utilities.
+[[https://www.mwmythicmods.com/Gluby/Gluby_Main.htm | Gluby's Guide to a Modded Morrowind]] - great if new to Morrowind.
+
+I look forward to adding a section on Skyrim!
 
 
-Edited by Psymon, 20 September 2011 - 12:23 PM.
+Managing BAIN with Multiple Installs
 
+... Wait did you say multiple installs???
 
-BAIN and Other GamesFallout3 and Fallout New VegasThe Wrye Flash project (formally Gary Bash). Valda fully ported over Wrye Bash for the fallout games. He has been very conscientious about updating it and even incorporating bash tags particular to Fallout. As of this writing the latest version of Wrye Flash is based on the latest version of Wrye Bash (291). Valda has also contributed to helping squash Wrye Bash bugs. Wrye flash has the following salient features:1. Is the a fully functional port of Wrye Bash (Usually based off of the latest version of Wrye Bash) to Fallout3.2. Has complete functioning of BAIN tab.3. Has working Bashed Patch functions that rival and (in my opinion) out-perform the merged list function of FO3edit.Valda is actively supporting and updating this utility. So if, like me, you play both games please give him support. Wrye Flash download pagelatest Gary Bash thread as of this writing. If not active then use search.Wrye Flash for New VegasWrye Flash NV Forum threadAs with Wrye Bash and OBMM - it would not be fair to not mention the competition. Kaburke continues to develop the Fallout Mod Manager and has incorporated several BAIN like features:1. Meaningful Conflict reporting with data files that are also installed with FOMM or manually.2. File Manager which allows for functions much like BAIN offers with regard to managing replacers. This addresses one of the main issues with Oblivion Mod Manager but is not implemented in OBMM (only FOMM).3. Can be tasked to manage either Fallout3 or Fallout New Vegas or both.Fallout Mod Manager Main DownloadRecent FOMM ThreadMorrowindWrye Mash for Morrowind has been taken up by Yacoby and he has been slowly importing changes from bash to mash. he has also announced work on creating a core Wrye Bash code that would allow for more easy porting to new games (such as the upcoming Skyrim).Yacoby Wrye Mash forum threadOriginal Wrye Mash ReadmeOriginal Wrye Mash DownloadFor those that prefer the Mod Manager approach there is a decent port of it here: Morrowind Mod ManagerThere are so many Morrowind Tutorials and mod use instructions pages. Here are only a few:Mod Recommendations for New PlayersMorrowind Mythic Mods -has many tutorials for the utilities.Gluby's Guide to a Modded Morrowind - great if new to Morrowind.I look forward to adding a section on Skyrim!
+Yes that is right - having multiple installs of Oblivion is now very possible. This [[http://forums.bethsoft.com/topic/832760-how-to-run-multiple-copies-of-morrowind/ | is not a difficult issue]] with the earlier game of Morrowind, but has not been readily available in an automated format with Oblivion until recently. After Nehrim was released many found out that installing it meant messing up your Oblivion installation and that it was either one game or the other, but not both. Several fixes were tried to address this issue (Documented in this thread). Finally Gaticus came forward with a simple yet powerfull tool for managing multiple installs and it works with Fallout 3 as well.
 
+mTES4ManagerWhat 
 
-Edited by Psymon, 09 June 2011 - 12:58 AM.
+mTES4Manager does is take control of all related folders used by Oblivion on most operating systems. For Vista/Win7 these folders are:
+1. The Oblivion Directory - the main game folder
+2. The Oblivion Save Game Directory - containing all the save games and the game ini file
+3. The AppData folder - contains the Plugins.txt file that records your load order
 
+What the program does is mark these folders and put an ini file in them. It then groups the folders together per installation (called clones). With the program you can create new clones from existing ones and switch the active clones as desired. With each switch the program will swap out the related folders and 'fool' the computer into thinking (anthropomorphically) that it is the same game. The result is that you could have drastically different installations going on each of the folders and switch them as often as you like. Oblivion can be a long game and if you want two more versions going or use Nehrim and Oblivion then it is easy to set up (but kind of a lot of work to maintain). I think this also provides a feature that mod makers would adore if they knew it better: You could have one virgin/modding game an another a testing/modded game.
 
-Managing BAIN with Multiple Installs... Wait did you say multiple installs???Yes that is right - having multiple installs of Oblivion is now very possible. This is not a difficult issue with the earlier game of Morrowind, but has not been readily available in an automated format with Oblivion until recently. After Nehrim was released many found out that installing it meant messing up your Oblivion installation and that it was either one game or the other, but not both. Several fixes were tried to address this issue (Documented in this thread). Finally Gaticus came forward with a simple yet powerfull tool for managing multiple installs and it works with Fallout 3 as well.mTES4ManagerWhat mTES4Manager does is take control of all related folders used by Oblivion on most operating systems. For Vista/Win7 these folders are:1. The Oblivion Directory - the main game folder2. The Oblivion Save Game Directory - containing all the save games and the game ini file3. The AppData folder - contains the Plugins.txt file that records your load orderWhat the program does is mark these folders and put an ini file in them. It then groups the folders together per installation (called clones). With the program you can create new clones from existing ones and switch the active clones as desired. With each switch the program will swap out the related folders and 'fool' the computer into thinking (anthropomorphically) that it is the same game. The result is that you could have drastically different installations going on each of the folders and switch them as often as you like. Oblivion can be a long game and if you want two more versions going or use Nehrim and Oblivion then it is easy to set up (but kind of a lot of work to maintain). I think this also provides a feature that mod makers would adore if they knew it better: You could have one virgin/modding game an another a testing/modded game.mTES4Manager is available at Nexus. Several have asked me for tips in troubleshooting the tool. I've not solve all issues so here is my best (and good luck to you):
+[[https://www.nexusmods.com/oblivion/mods/35263 | mTES4Manager]] is available at Nexus. Several have asked me for tips in troubleshooting the tool. I've not solve all issues so here is my best (and good luck to you):
 
-1. Make sure the original Oblivion Game is installed outside the domain of UAC. If it is not then Wrye Bash will likely already give you grief as it will engage UAC. Do not turn UAC off - just move the install(s) outside of the area it wants to protect.2. Make sure when switching clones that the related folders are not open in windows explorer or being accessed by any open program such as OBMM or Wrye Bash.3. You can remove a clone from its control by deleting the ini file it places in the clone. This makes trouble shooting less daunting and you could manually place back whichever clone you prefer if it stops working.
+1. Make sure the original Oblivion Game is installed outside the domain of UAC. If it is not then Wrye Bash will likely already give you grief as it will engage UAC. Do not turn UAC off - just move the install(s) outside of the area it wants to protect.
+2. Make sure when switching clones that the related folders are not open in windows explorer or being accessed by any open program such as OBMM or Wrye Bash.
+3. You can remove a clone from its control by deleting the ini file it places in the clone. This makes trouble shooting less daunting and you could manually place back whichever clone you prefer if it stops working.
 
-Serious problems should be reported in the mTES4Manager thread.Multiple Oblivion ManagerMutliple Oblivion Manager Is an alternate and superior tool based off the shorcommings of mTES4Manager. It performs most of the same functions of mTES4Manager and It has an option to replicate the BAIN archive (Oblivion Mods folder). It cannot manage multiple fallout installs. The notes above apply as well to this tool.A more advanced version is being slowely developed: MIMI - Multiple Install Manager InterfaceI use MOM and recommended it.Managing Multiple installs and the problem of Wrye BashWith each install then it is important to note that most of the tools and utilities of the game will remain local to the clone in question. OBMM, Tes4edit, OBSE ... all will stay with the clone they are installed for. You could then have different versions of these tools for each clone too (even different Construction Set versions).Wrye Bash is the only tool that presents a problem. This is mainly due to how BAIN was crafted. When you first open the BAIN tab and have not adjusted the Bash.ini then Bash will generate a folder outside of the Oblivion game directory (right next to it) called Oblivion mods. Within this directory folder There should be a stucture that looks like this:
+Serious problems should be reported in the [[http://forums.bethsoft.com/topic/1142151-rel-mtes4-manager/ | mTES4Manager thread]].
+
+Multiple Oblivion Manager
+
+Mutliple Oblivion Manager Is an alternate and superior tool based off the shorcommings of mTES4Manager. It performs most of the same functions of mTES4Manager and It has an option to replicate the BAIN archive (Oblivion Mods folder). It cannot manage multiple fallout installs. The notes above apply as well to this tool.
+
+A more advanced version is being slowely developed: MIMI - Multiple Install Manager Interface
+
+I use MOM and recommended it.
+
+Managing Multiple installs and the problem of Wrye Bash
+
+With each install then it is important to note that most of the tools and utilities of the game will remain local to the clone in question. OBMM, Tes4edit, OBSE ... all will stay with the clone they are installed for. You could then have different versions of these tools for each clone too (even different Construction Set versions).
+
+Wrye Bash is the only tool that presents a problem. This is mainly due to how BAIN was crafted. When you first open the BAIN tab and have not adjusted the Bash.ini then Bash will generate a folder outside of the Oblivion game directory (right next to it) called Oblivion mods. Within this directory folder There should be a stucture that looks like this:
+
+<pre>
 Oblivion Mods
-|
-+[Bash Installers]
-| |
-| +[Bash] contains the files converters.dat and installers.dat (records all BAIN settings and what is installed)
-| |
-| + The actual archive of mods (the BAIN archive)
-|
-+[Bash Mod Data] contains the file table.dat (data about your mods, ini edits, etc.)
-Since this directory is not within any of the three folders managed by mTES4Manager they are not local to the game clones and will not change when games clones are switched. This is very problematic as you may want specific mods and replacers for one clone but another set for another clone - as soon as you switch and open BAIN you will see a nightmare of various colors which makes the point of using BAIN pointless. (the game data files are not affected but the tracking of it by BAIN is once a new data folder is presented to it). There are two solutions to this each with their own merit.Solution 1: Multiple BAIN Archives - available with Wrye Bash 291 or olderFor both solutions one must use the bash.ini - which is made by taking the bash_default.ini and copying it then renaming to just bash.iniThis has been the main solution until very recently. It is not outdated, as it has advantages of its own. This makes use of a single bash.ini setting:
+   │
+   ├[Bash Installers]
+   │   │
+   │   ├[Bash] contains the files converters.dat and installers.dat (records all BAIN settings and what is installed)
+   │   │
+   │   └ The actual archive of mods (the BAIN archive)
+   │
+   └[Bash Mod Data] contains the file table.dat (data about your mods, ini edits, etc.)
+</pre>
+
+Since this directory is not within any of the three folders managed by mTES4Manager they are not local to the game clones and will not change when games clones are switched. This is very problematic as you may want specific mods and replacers for one clone but another set for another clone - as soon as you switch and open BAIN you will see a nightmare of various colors which makes the point of using BAIN pointless. (the game data files are not affected but the tracking of it by BAIN is once a new data folder is presented to it). There are two solutions to this each with their own merit.
+
+Solution 1: Multiple BAIN Archives - available with Wrye Bash 291 or older
+
+For both solutions one must use the bash.ini - which is made by taking the bash_default.ini and copying it then renaming to just bash.ini
+
+This has been the main solution until very recently. It is not outdated, as it has advantages of its own. This makes use of a single bash.ini setting:
+
+<pre>
 ;--sOblivionMods is the Alternate root directory for installers, etc.
 
-; It is strongly recommended that you do NOT put it anywhere under the
-; Oblivion install directory itself, because Oblivion.exe will search through
-; every directory under the install directory.
-; This "directory thrashing" can then cause performance problems during gameplay.
-; sOblivionMods is defined specifically to circumvent this bug by storing files elsewhere.
+;  It is strongly recommended that you do NOT put it anywhere under the
+;  Oblivion install directory itself, because Oblivion.exe will search through
+;  every directory under the install directory.
+;  This "directory thrashing" can then cause performance problems during gameplay.
+;  sOblivionMods is defined specifically to circumvent this bug by storing files elsewhere.
 sOblivionMods=..\Oblivion Mods
-With this you can change the location of the OBlivion Mods directory and all it contains (including all BAIN archives). By moving this folder you can therefore create a different BAIN archive for each clone (install). So one install might have:
-sOblivionMods=G:\Bethesda Games\BAIN Archives\Oblivion Main Mods
-and another might have:
-sOblivionMods=G:\Bethesda Games\BAIN Archives\Oblivion Alternate Mods
-For Nehrim perhaps:
-sOblivionMods=G:\Bethesda Games\BAIN Archives\SureAI mods
-The benefit of this is that each BAIN archive is discreet and separate from each other. This could be advantageous for some and in some circumstances. Say you want to keep the BAIN mod archives separate as might be the case with Nehrim where they likely need translating to that game before they will work.The advantages of this are:
+</pre>
 
-Each BAIN archive is unique and can be taylored to each install.
-If small the BAIN tab will open faster.
-Less clutter on the BAIN tab.
+With this you can change the location of the OBlivion Mods directory and all it contains (including all BAIN archives). By moving this folder you can therefore create a different BAIN archive for each clone (install). So one install might have:
+
+<pre>
+sOblivionMods=G:\Bethesda Games\BAIN Archives\Oblivion Main Mods
+</pre>
+
+and another might have:
+
+<pre>
+sOblivionMods=G:\Bethesda Games\BAIN Archives\Oblivion Alternate Mods
+</pre>
+
+For Nehrim perhaps:
+<pre>
+sOblivionMods=G:\Bethesda Games\BAIN Archives\SureAI mods
+</pre>
+
+The benefit of this is that each BAIN archive is discreet and separate from each other. This could be advantageous for some and in some circumstances. Say you want to keep the BAIN mod archives separate as might be the case with Nehrim where they likely need translating to that game before they will work.
+
+The advantages of this are:
+
+* Each BAIN archive is unique and can be taylored to each install.
+* If small the BAIN tab will open faster.
+* Less clutter on the BAIN tab.
 
 The disadvantages are:
 
-It multiplies the amount of hard drive space needed to have multiple BAIN archives
-Makes updating take longer as you will need to update BAIN packages in multiple locations.
-Not all BAIN packages available in all installs (initially)
+* It multiplies the amount of hard drive space needed to have multiple BAIN archives
+* Makes updating take longer as you will need to update BAIN packages in multiple locations.
+* Not all BAIN packages available in all installs (initially)
 
-Solution 2: One BAIN archive for Multiple Installs - Available to those who use Wrye Bash 292+Thanks to Lojack two new ini options have been added:
+Solution 2: One BAIN archive for Multiple Installs - Available to those who use Wrye Bash 292+
+
+Thanks to Lojack two new ini options have been added:
+<pre>
 ;--sInstallersData is the directory containing data about which installers
 ; are installed by Wrye Bash. This is where 'Installers.dat' and 'Converters.dat'
 ; are stored. Only change this for advanced configuration, such as when using
@@ -1148,88 +1307,132 @@ sInstallersData=..\Oblivion Mods\Bash Installers\Bash
 ; Only change this for advanced configuration, such as when using mTES4 Manager
 ; to manage multiple Oblivion installs.
 sBashModData=..\Oblivion Mods\Bash Mod Data
+</pre>
 With these one can now move the locations of the data about the BAIN archive instead of the entire archive. The point would be to move these to locations that move with the clones (installs). For example here are versions that would work:
+<pre>
 sInstallersData=F:\Bethesda Games\Oblivion\Mopy\BAIN
 sBashModData=F:\Bethesda Games\Oblivion\Mopy\BAIN
-What this does is assigns the files to a new folder within the Mopy folder called BAIN (would need to create that folder). Then with each install these files could contain differing reads on the same BAIN archive.The advantage are:
+</pre>
+What this does is assigns the files to a new folder within the Mopy folder called BAIN (would need to create that folder). Then with each install these files could contain differing reads on the same BAIN archive.
 
-Less Hard Drive space used up, as each installer only exists once on your harddrive. If you have 4 Oblivion installs, you could (potentially) have 4x the hard drive usage from BAIN. This is of course assuming that every package you have is in each Oblivion Mods folder.
-Easier updating. When a new version of, say OOO comes out, you only have to update the one BAIN folder, and each Wrye Bash instance sees the updated package. If you went with the 4 BAIN folders in the above example, you would have to copy the updated BAIN into each Oblivion Mods folder = 4x the work (potentially)
-And one that wasn't mentioned yet: Creating a new clone/image of Oblivion would need to make a copy of that Oblivion Mods folder. Depending on the size, this could take a while.
+The advantage are:
+
+* Less Hard Drive space used up, as each installer only exists once on your harddrive. If you have 4 Oblivion installs, you could (potentially) have 4x the hard drive usage from BAIN. This is of course assuming that every package you have is in each Oblivion Mods folder.
+* Easier updating. When a new version of, say OOO comes out, you only have to update the one BAIN folder, and each Wrye Bash instance sees the updated package. If you went with the 4 BAIN folders in the above example, you would have to copy the updated BAIN into each Oblivion Mods folder = 4x the work (potentially)
+* And one that wasn't mentioned yet: Creating a new clone/image of Oblivion would need to make a copy of that Oblivion Mods folder. Depending on the size, this could take a while.
 
 Disadvantages are:
 
-Updates to a BAIN package have the potential to screw up each Oblivion's install archive. Say Clocks of Cyrodiil comes out with an update. You download the BAIN, plop it into the shared Oblivion Mods folder, each Wrye Bash instance sees the updated package. But...this time you're unlucky. You managed to download a corrupted zip file this time, one that triggers a bug in Wrye Bash so you can no longer refresh the Installers Tab. Now each instance of Wrye Bash will have that problem until you remove the offending archive.
-Some of your Oblivion installs may not require many of all your installers. Say you have a very slimmed down clone, that only uses 10 out of 300 of your installers available. The refresh time of that instance of Wrye Bash still has to look at each of the 300 installers on startup. The refresh time for any "zipped" installers (7z, zip, rar) is very quick, so not too bad. Nothing like the data folder scan, where CRCs have to be calculated.
-Also, as we currently have no good way of hiding installers (the popup menu->Hide command just moves the installers, not viable for a multiple Oblivion, single BAIN setup). So you'll end up with 280 unused installers, probably sorted to the bottom of the screen. Not a huge deal, but it gets in the way.
+* Updates to a BAIN package have the potential to screw up each Oblivion's install archive. Say Clocks of Cyrodiil comes out with an update. You download the BAIN, plop it into the shared Oblivion Mods folder, each Wrye Bash instance sees the updated package. But...this time you're unlucky. You managed to download a corrupted zip file this time, one that triggers a bug in Wrye Bash so you can no longer refresh the Installers Tab. Now each instance of Wrye Bash will have that problem until you remove the offending archive.
+* Some of your Oblivion installs may not require many of all your installers. Say you have a very slimmed down clone, that only uses 10 out of 300 of your installers available. The refresh time of that instance of Wrye Bash still has to look at each of the 300 installers on startup. The refresh time for any "zipped" installers (7z, zip, rar) is very quick, so not too bad. Nothing like the data folder scan, where CRCs have to be calculated.
+* Also, as we currently have no good way of hiding installers (the popup menu->Hide command just moves the installers, not viable for a multiple Oblivion, single BAIN setup). So you'll end up with 280 unused installers, probably sorted to the bottom of the screen. Not a huge deal, but it gets in the way.
 
-One install might have QTPIII installed while another would have Vibrant Textures. The limit is your imagination and what is available. Each install would have its own install order to read from the BAIN archive and its own set of markers and so on. It takes some getting used to this as each install would then read alterations to BAIN packages. If you alter one BAIN package in the BAIN archive then all installs will see that change. This makes updating easier but tracking alternate packages more difficult. ** Warning this does not address hidden files or hidden save games. The location of these will be shared between the clones with this solution.You can switch over to this kind of system easily. Just back up this data (highly recommended in case you miss a step) then move it with bash closed. Alter the ini to point to the new location of these files - then open the BAIN tab and check to make sure it worked..At this point I use both a shared BAIN folder and game dependent BAIN folders. I have three installs that share the same archive and two other installs that have their own (one for mod testing/making the other is Nehrim).Other Methods and notes:Infinite OblivionsThis method holds a lot of promise and is stable. With it you can set separate or shared BAIN archives for each instance/install of the game. Essentially an Oblivion.ini tweak. Change this line like so:
+One install might have QTPIII installed while another would have Vibrant Textures. The limit is your imagination and what is available. Each install would have its own install order to read from the BAIN archive and its own set of markers and so on. It takes some getting used to this as each install would then read alterations to BAIN packages. If you alter one BAIN package in the BAIN archive then all installs will see that change. This makes updating easier but tracking alternate packages more difficult. ** Warning this does not address hidden files or hidden save games. The location of these will be shared between the clones with this solution.
 
+You can switch over to this kind of system easily. Just back up this data (highly recommended in case you miss a step) then move it with bash closed. Alter the ini to point to the new location of these files - then open the BAIN tab and check to make sure it worked.
+
+At this point I use both a shared BAIN folder and game dependent BAIN folders. I have three installs that share the same archive and two other installs that have their own (one for mod testing/making the other is Nehrim).
+
+Other Methods and notes:
+
+[[http://forums.bethsoft.com/topic/1300296-relz-8-steps-to-infinite-oblivions/ | Infinite Oblivions]]
+
+This method holds a lot of promise and is stable. With it you can set separate or shared BAIN archives for each instance/install of the game. Essentially an Oblivion.ini tweak. Change this line like so:
+
+<pre>
 bUseMyGamesDirectory=0
+</pre>
 
 
-Which then moves all the info about save games and what plugins are active to the local install folder.The major drawback comes when using tools - specifically TES4Edit and TES4LODGEN. Both look in the AppData\Oblivion folder for the plugins.txt. Since infinite Oblivions moves this file to the local install directory these programs cannot find it and there is no mechanics for having them look for the correct files.Multiple Installs - One Wrye BashI'm not sure when this feature was implemented into Wrye Bash. It is a feature in at least version 295.3+. If one only installs the data folder from a wrye bash package into each install and then move the Mopy folder to somewhere else (outside of an install) then on starting the wrye bash launcher one will be prompted with a question of which game they want to manage (Oblivion or Skyrim).This however really cannot work with multiple installs sharing the same BAIN archive or infinite Oblivions - so far. Perhaps with further ini settings or at least being able to locate the bash.ini in the local game directories this could then work for those cases too.As it is this only manages things correctly if the BAIN archive location is in the default location. It will work with MOM if MOM is set to copy the BAIN archive and has. The only advantage I see to this is having to update only one Mopy folder with each update of bash. Until more options are implemented I will not consider this viable.Tip for starting a new install...If you copy and paste over the Bash.ini and the Installers.dat, converters.dat, and table.dat to the new install you will find the installers tab already configured with all the installers in the order you had from the install you copied from markers and all. It will show all the packages that were installed in the other install as red - simply opt to uninstall all packages and you are good to go. Might be worth checking if other settings also got copied over or if you want them.This post will likely be edited further later on.
+Which then moves all the info about save games and what plugins are active to the local install folder.
 
+The major drawback comes when using tools - specifically TES4Edit and TES4LODGEN. Both look in the AppData\Oblivion folder for the plugins.txt. Since infinite Oblivions moves this file to the local install directory these programs cannot find it and there is no mechanics for having them look for the correct files.
 
-Edited by Psymon, 29 January 2012 - 05:09 PM.
+Multiple Installs - One Wrye Bash
 
+I'm not sure when this feature was implemented into Wrye Bash. It is a feature in at least version 295.3+. If one only installs the data folder from a wrye bash package into each install and then move the Mopy folder to somewhere else (outside of an install) then on starting the wrye bash launcher one will be prompted with a question of which game they want to manage (Oblivion or Skyrim).
 
-An open letter appealing to the use of BAIN and Wrye Bash by mod makersHaving used BAIN since it was created I realize that I've become very used to using it. Not that I consider myself a Wrye Bash aficionado as there is much about the program I definitely do not know how to use. Part of my goal for writing this thread was to introduce the idea that BAIN really is not that complicated. I suspect that my style of writing may not have been conducive to this goal though as I prefer prose writing to technical writing. I picked up BAIN pretty quickly and have found that most people do as well. I wrote the first thread Custom BAIN Projects only two months after the program feature was implemented and only after 6 months of really getting into modding oblivion. My point being that BAIN is not really this arcane and needlessly difficult utility and is actually intuitively easy to pick up.A few years ago mod cleaning was still pretty new and today it is now common practice by many modders to clean their mods prior to release. Mod packaging, however, has remained an area of mod making that has not taken advantage of the tools available.While there are many mods that are BAIN ready they are only out of simplicity and default. I'm surprised at the number of new mods that are not BAIN ready and could very easily be made so. Mod packaging is intimately entwined with mod installation. They are two sides of the same coin. To create a mod then package it in such a way as to necessitate the user repackaging it just to use the mod is asking for needless problem reports and posts. In the few years of posting on these forums I've seen a connection between the number of problem reports and how mods are packaged. This is not to say that all problems will go away with BAIN friendly packaging and in some cases there will be those who do not like it. The reports I've seen for BAIN installation of are usually brief and are not ongoing drudgery of the same issues over and over again.For simple packaging this will not matter as a simple BAIN ready package does not have multiple folders and sub-packages and looks indistinguishable. There are distinct advantages to releasing your mods BAIN ready and furthermore BAIN ready to the degree that it is a complex package. Doing this allows you to organize your mod in such a way that installation is also organized. This is especially true for mods that require the use of Wrye Bash and bashed patch, since that tool will be used anyway.FCOM is such an example. It is the ultimate WIP for Oblivion. Some salient points being that while two of the four main components (MMM and FCOM patches) have been regularly updated and the readme for those have also been updated the other components remain in inconsistent packaging. This is compounded by the fact that the main readme has not been updated to keep pace with the FCOM patches available. The result is that the FCOM thread consists of many posts about installation questions. This could be remedied by better packaging and distribution of the material. While the rest of this open letter will address FCOM as an example please consider how your mod may be made more user friendly by adopting BAIN ready packaging.Reasons for utilizing BAIN:
+This however really cannot work with multiple installs sharing the same BAIN archive or infinite Oblivions - so far. Perhaps with further ini settings or at least being able to locate the bash.ini in the local game directories this could then work for those cases too.
 
-The current installers are a pain (exe for OOO and FRANS).
-The diversity of and conflicting instructions provided.
-A lack of coherent install method for all portions involved.
-Requirement to look elsewhere for OMOD scripts for many Mods.
-Current installation methods do not promote use of Wrye Bash.
-Begs for more installation problem reports.
+As it is this only manages things correctly if the BAIN archive location is in the default location. It will work with MOM if MOM is set to copy the BAIN archive and has. The only advantage I see to this is having to update only one Mopy folder with each update of bash. Until more options are implemented I will not consider this viable.
+
+Tip for starting a new install...
+
+If you copy and paste over the Bash.ini and the Installers.dat, converters.dat, and table.dat to the new install you will find the installers tab already configured with all the installers in the order you had from the install you copied from markers and all. It will show all the packages that were installed in the other install as red - simply opt to uninstall all packages and you are good to go. Might be worth checking if other settings also got copied over or if you want them.
+
+This post will likely be edited further later on.
+
+An open letter appealing to the use of BAIN and Wrye Bash by mod makers
+
+Having used BAIN since it was created I realize that I've become very used to using it. Not that I consider myself a Wrye Bash aficionado as there is much about the program I definitely do not know how to use. Part of my goal for writing this thread was to introduce the idea that BAIN really is not that complicated. I suspect that my style of writing may not have been conducive to this goal though as I prefer prose writing to technical writing. I picked up BAIN pretty quickly and have found that most people do as well. I wrote the first thread [[http://forums.bethsoft.com/topic/957424-custom-bain-projects/ | Custom BAIN Projects]] only two months after the program feature was implemented and only after 6 months of really getting into modding oblivion. My point being that BAIN is not really this arcane and needlessly difficult utility and is actually intuitively easy to pick up.
+
+A few years ago mod cleaning was still pretty new and today it is now common practice by many modders to clean their mods prior to release. Mod packaging, however, has remained an area of mod making that has not taken advantage of the tools available.
+
+While there are many mods that are BAIN ready they are only out of simplicity and default. I'm surprised at the number of new mods that are not BAIN ready and could very easily be made so. Mod packaging is intimately entwined with mod installation. They are two sides of the same coin. To create a mod then package it in such a way as to necessitate the user repackaging it just to use the mod is asking for needless problem reports and posts. In the few years of posting on these forums I've seen a connection between the number of problem reports and how mods are packaged. This is not to say that all problems will go away with BAIN friendly packaging and in some cases there will be those who do not like it. The reports I've seen for BAIN installation of are usually brief and are not ongoing drudgery of the same issues over and over again.
+
+For simple packaging this will not matter as a simple BAIN ready package does not have multiple folders and sub-packages and looks indistinguishable. There are distinct advantages to releasing your mods BAIN ready and furthermore BAIN ready to the degree that it is a complex package. Doing this allows you to organize your mod in such a way that installation is also organized. This is especially true for mods that require the use of Wrye Bash and bashed patch, since that tool will be used anyway.
+
+FCOM is such an example. It is the ultimate WIP for Oblivion. Some salient points being that while two of the four main components (MMM and FCOM patches) have been regularly updated and the readme for those have also been updated the other components remain in inconsistent packaging. This is compounded by the fact that the main readme has not been updated to keep pace with the FCOM patches available. The result is that the FCOM thread consists of many posts about installation questions. This could be remedied by better packaging and distribution of the material. While the rest of this open letter will address FCOM as an example please consider how your mod may be made more user friendly by adopting BAIN ready packaging.
+
+Reasons for utilizing BAIN:
+
+* The current installers are a pain (exe for OOO and FRANS).
+* The diversity of and conflicting instructions provided.
+* A lack of coherent install method for all portions involved.
+* Requirement to look elsewhere for OMOD scripts for many Mods.
+* Current installation methods do not promote use of Wrye Bash.
+* Begs for more installation problem reports.
 
 To summarize the advantages of using BAIN packaging for your mods:
 
-Promotes users thinking about modding and manual installation.
-BAIN makes manual installing easier.
-Any BAIN ready mod can also concurrently be made OMOD compatible via OMOD scripting.
-BAIN encourages further use and integration of Wrye Bash.
-Bain now has Wizards that provide for scripted installs.
+* Promotes users thinking about modding and manual installation.
+* BAIN makes manual installing easier.
+* Any BAIN ready mod can also concurrently be made OMOD compatible via OMOD scripting.
+* BAIN encourages further use and integration of Wrye Bash.
+* Bain now has Wizards that provide for scripted installs.
 
-BAIN is not necessarily more complicated and the mods that are BAIN ready do not have their relz threads filled with endless questions about how to install them - whereas the FCOM oriented mods that are at best offered in exe format or with a third party OMOD script are overflowing with questions about how to install. FCOM which depends upon Wrye Bash to even function that having them BAIN ready would be beneficial and have the users first introduction to the use of Wrye Bash be the installer tab and not the creation of a bashed patch. Further, nothing in FCOM relies upon an ini or is OBSE dependent so there is no need for OMODs to configure anything and when it comes down to it and really it is about choosing plugins and bashing the patch.A big part of FCOM - the bashed patch (which is not a simple concept nor easy to pick up that well) is required and discussed in detail in the FCOM readme, but then it is recommended that one use a completely different installer utility for installing the mods than one that will use for making the bashed patch - when Wrye Bash can do it all. At times the message with FCOM is 'this is advanced and not for new users' but then when it comes to use with installers the more simple version is the recommended method. This seems strange. Finally, why not? Is there a better installer everyone is waiting for? Certainly it is worth noting that BAIN is still under active development and support from multiple individuals unlike OBMM which is considered a finished and for the most part un-supported installer. Until the time that the above is addressed expect others to provide their own solutions - why wouldn't they? It has been a year now that BAIN has been available in its current form. People are using it, many mods are now best installed with it, and adapting it for FCOM's primary means of installation would end many questions and remove the need for third party instructions. Further now there are two newer resources to send a person to if they do not understand BAIN.In conclusion I'd like to emphasize that I intend no bashing or flaming here. They are your mods, your creations. I'm merely attempting to get you to think about packaging as a tool to promote your product, make life easier, and reduce bug reports.Thank you for reading and considering the above.
+BAIN is not necessarily more complicated and the mods that are BAIN ready do not have their relz threads filled with endless questions about how to install them - whereas the FCOM oriented mods that are at best offered in exe format or with a third party OMOD script are overflowing with questions about how to install. FCOM which depends upon Wrye Bash to even function that having them BAIN ready would be beneficial and have the users first introduction to the use of Wrye Bash be the installer tab and not the creation of a bashed patch. Further, nothing in FCOM relies upon an ini or is OBSE dependent so there is no need for OMODs to configure anything and when it comes down to it and really it is about choosing plugins and bashing the patch.
 
+A big part of FCOM - the bashed patch (which is not a simple concept nor easy to pick up that well) is required and discussed in detail in the FCOM readme, but then it is recommended that one use a completely different installer utility for installing the mods than one that will use for making the bashed patch - when Wrye Bash can do it all. At times the message with FCOM is 'this is advanced and not for new users' but then when it comes to use with installers the more simple version is the recommended method. This seems strange.
 
-Edited by Psymon, 25 June 2011 - 02:25 PM.
+Finally, why not? Is there a better installer everyone is waiting for? Certainly it is worth noting that BAIN is still under active development and support from multiple individuals unlike OBMM which is considered a finished and for the most part un-supported installer. Until the time that the above is addressed expect others to provide their own solutions - why wouldn't they? It has been a year now that BAIN has been available in its current form. People are using it, many mods are now best installed with it, and adapting it for FCOM's primary means of installation would end many questions and remove the need for third party instructions. Further now there are two newer resources to send a person to if they do not understand BAIN.
 
+In conclusion I'd like to emphasize that I intend no bashing or flaming here. They are your mods, your creations. I'm merely attempting to get you to think about packaging as a tool to promote your product, make life easier, and reduce bug reports.
 
-Related Topics===========Why use a Bashed Patch?===========This was originally a post I made in a thread debating which is better to use a bashed patch or merged patch (created by FO3edit) with Fallout 3. Since then I've cited that post to people asking me why use a bashed patch. So in order to make it simpler to access and possibly save from forum pruning I'm copying it here and editing it:
-
-A bashed patch is a lot of things today. Originally it was a way of merging leveled lists. The issue being that multiple mods that alter or add to leveled lists and loaded into a more traditional load order would still be subject to the rule of one: that the last loaded mod would win the conflict.So having mod A that has leveled list encounters added - say ancient snow yeti of 5 variety then have mod B loaded after that adds purple ants. With that scenario (and if I understand correctly - always willing to be corrected I am) then the Yeti might not appear as the lists with ants would override the mod A list.To resolve that the tools for merging lists were created. With Morrowind I believe TESTool was implemented. With Oblivion Wrye Created Wrye Bash and it is still the most developed version of the Wrye tools. He then went back and created Wrye Mash for Morrowind. He announced that he would not create one for F3 as he planned not to play or mod it in favor of having a life (good for him). So it has been late in coming for F3. Elminster stepped up and implemented the most bare bones version in FO3edit called merged list plugin - which merged list doing the basic necessities so that lists do not block each other. It is cumbersome though by comparison to Wrye Bash and lacks many things that WB can do that no other program does.Here I detail to the best of my limited ability things that Wrye/Gary Bash can do in addition to just merging leveled lists. I quote: 1. Merged Mods - if a mod is in the load order that only changes existing records (of either the main esm or even other esp) then that entire mod can be merged into the bashed patch. It can then be left deactivated. This greatly reduces the number of esp you need active and makes it so that you can have well beyond the 254 limit of mods. My oblivion install is near 380 esm/esp. This is also internally consistent in that the order in which mods are merged is also a the order in which records are over and under written. So like all the merged mods are merged and then even in that there are conflict winners and losers.2. Bash tagging - with these tags (only viewable in Wrye/Gary Bash) you can tag a mod with specific tags so that the records indicated by these tags will carry forward and be merged/bashed patch winners even if they would normally be losers - this is great for when you need the merged mod to lose at some records but win at others. Another example of bash tag usage is that you could import records from a mod without ever even needing to activate or merge the mod. This is usually though for graphics mods like lighting or face data.3. Game Settings. Again like tags this is an area of growth with each new update. With these then you can have game settings like crime detection, Bounties, Length of time essential NPCs are unconscious and many other settings become settable with each new bash. So if you set essential NPCs to become unconscious for 10 seconds and then after playing find that is too short rebash and set for a minute.With Wrye Bash this is getting into some pretty arcane and cool things which is in turn out dating many other mods and thereby shrinking the the load order further. A well made and full bashed patch can almost constitute an overhaul in and of itself. I'd add to that even with all these settings bash will remember your last settings on each new bashed patch so that you don't start from scratch each time. So with these extra abilities then merging mods like Project Beauty in with the overhauls gets much easier. Of course a person can record by record, edit by edit create a merged patch with whatever of whichever mod winning at each occurrence of conflict. It can get that detailed and you can go there with edit, but most people do not want to go there and so when it comes to doing basic merges bash provides more that can be merged, greater ability to adjust now things are merged, the ability to save mod slots and so on.
-
-===========Other Bethesda Game Interests of Mine===========NehrimNehrim SureAI ForumNehrim Bethesda Forum ThreadThis led to my exploring how to run Nehrim and Oblivion at the same time and then how to mod Nehrim. This information is collected in the thread:Nehrim and Mods
+Thank you for reading and considering the above.
 
 
-Edited by Psymon, 10 August 2011 - 11:24 PM.
 
 
-Very informative post! I'll look through it all more carefully later. For now, I admit, I skipped to the BCF section since I'm the one most familiar with it.
+Related Topics
 
-BAIN conversion filesBAIN conversion files are instructions one can create to recombine already installed packages in new ways. These can be handy for making a set of instructions to combine several premade (but BAIN friendly) packages into a BAIN compilation.
+= Why use a Bashed Patch?
 
-The premade packages do not have to be BAIN friendly. In fact, the entire purpose of BCFs is to convert non-friendly packages into friendly packages in such a way that minimizes bandwidth and preserves author's rights.Without them, there are only two ways to distribute converted non-friendly packages:
+This was originally [[http://forums.bethsoft.com/topic/1117083-merged-patch-or-bashed-patch-or-both/page-2#entry16416804 | a post I made in a thread debating which is better to use a bashed patch or merged patch]] (created by FO3edit) with Fallout 3. Since then I've cited that post to people asking me why use a bashed patch. So in order to make it simpler to access and possibly save from forum pruning I'm copying it here and editing it:
 
-Convert the package manually, and upload the entire BAIN friendly package. Get yelled at by authors who don't want people altering & spreading their work without permission. Possibly consume large amounts of bandwidth if the package is of any decent size (uploading a repackage of QTP3 for instance). End user only has to download one thing and install.
-Convert the package manually, and post instructions on what was done (typically a checklist or similar). Low bandwidth (typically a few kilobytes, more if images are used), no intrusion against author's rights. Time consuming to install since the end user has to do exactly the same things someone else already did. End user has to download the original package(s) and the instructions for the conversion (the checklist).
+A bashed patch is a lot of things today. Originally it was a way of merging leveled lists. The issue being that multiple mods that alter or add to leveled lists and loaded into a more traditional load order would still be subject to the rule of one: that the last loaded mod would win the conflict.
 
-With BCFs, you have all the advantages of the checklist approach without the disadvantage:
+So having mod A that has leveled list encounters added - say ancient snow yeti of 5 variety then have mod B loaded after that adds purple ants. With that scenario (and if I understand correctly - always willing to be corrected I am) then the Yeti might not appear as the lists with ants would override the mod A list.
 
-Convert the package manually, and upload the BCF. Low bandwidth (typically a few kilobytes), no intrusion against author's rights (the BCF doesn't contain any of the authors original files). Quick to install; the end user can get exactly the same conversion in three mouse clicks. End user has to download the original package(s), and the instructions for the conversion (the BCF).
+To resolve that the tools for merging lists were created. With Morrowind I believe TESTool was implemented. With Oblivion Wrye Created Wrye Bash and it is still the most developed version of the Wrye tools. He then went back and created Wrye Mash for Morrowind. He announced that he would not create one for F3 as he planned not to play or mod it in favor of having a life (good for him). So it has been late in coming for F3. Elminster stepped up and implemented the most bare bones version in FO3edit called merged list plugin - which merged list doing the basic necessities so that lists do not block each other. It is cumbersome though by comparison to Wrye Bash and lacks many things that WB can do that no other program does.
 
-BCF's also have a couple extra advantages:
+Here I detail to the best of my limited ability things that Wrye/Gary Bash can do in addition to just merging leveled lists. I quote: 
 
-The person who originally created the conversion can include custom BAIN readme's, patches, etc without a separate install file.
-The converted file has all the options set that the BCF author chose. Whether the converted package uses solid or non-solid compression, Has Extra Directories, Comments, selected sub-packages, etc can all be pre-filled in.
+1. Merged Mods - if a mod is in the load order that only changes existing records (of either the main esm or even other esp) then that entire mod can be merged into the bashed patch. It can then be left deactivated. This greatly reduces the number of esp you need active and makes it so that you can have well beyond the 254 limit of mods. My oblivion install is near 380 esm/esp. This is also internally consistent in that the order in which mods are merged is also a the order in which records are over and under written. So like all the merged mods are merged and then even in that there are conflict winners and losers.
 
+2. Bash tagging - with these tags (only viewable in Wrye/Gary Bash) you can tag a mod with specific tags so that the records indicated by these tags will carry forward and be merged/bashed patch winners even if they would normally be losers - this is great for when you need the merged mod to lose at some records but win at others. Another example of bash tag usage is that you could import records from a mod without ever even needing to activate or merge the mod. This is usually though for graphics mods like lighting or face data.
 
-I will be honest ... I do not see the value in this function and have only really encountered the above use of it. This could well be my own bias as I see BAIN as a tool for extending and assisting with manual installation and I do not see it as an automated tool that requires no thought by the user. This strikes me as an attempt to make BAIN more of an automated gizmo. What it will not do is the steps I consider necessary to installing mods which include cleaning esp, examining file structure for problems and conflicts, and other things such as optimizing meshes and renaming readmes.
+3. Game Settings. Again like tags this is an area of growth with each new update. With these then you can have game settings like crime detection, Bounties, Length of time essential NPCs are unconscious and many other settings become settable with each new bash. So if you set essential NPCs to become unconscious for 10 seconds and then after playing find that is too short rebash and set for a minute.
 
-Forgive me, but it seems you don't have the clearest picture of what BCFs do. A BCF is really not that different from a checklist. The main difference is that the BCF is read and used by the computer, whereas a checklist has to be read by a human. What they do is allow one person to do the work that you mention (cleaning, checking file structures, pyffi'ing, etc), and then package that work for other people to use. All a BCF contains is a set of instructions on how to rearrange the files, the settings you used, and any files that the BCF author added or changed. The only thing the BCF automates is all the work you previously did.
+With Wrye Bash this is getting into some pretty arcane and cool things which is in turn out dating many other mods and thereby shrinking the the load order further. A well made and full bashed patch can almost constitute an overhaul in and of itself. I'd add to that even with all these settings bash will remember your last settings on each new bashed patch so that you don't start from scratch each time.
 
-I'm sorry if I sound unfair and I am willing to change my mind with the right argument ... Having looked at it I'm certain that I could whip together a packaged mod compilation faster than I could make a BCF of the same archives. Better yet I could, hopefully, write a passage teaching you how to do it faster too and also encourage more manual installer or modder mentality as well!
+So with these extra abilities then merging mods like Project Beauty in with the overhauls gets much easier. Of course a person can record by record, edit by edit create a merged patch with whatever of whichever mod winning at each occurrence of conflict. It can get that detailed and you can go there with edit, but most people do not want to go there and so when it comes to doing basic merges bash provides more that can be merged, greater ability to adjust now things are merged, the ability to save mod slots and so on.
 
-You're right. You can make a packaged compilation faster than a BCF by definition since (just like a checklist) a BCF requires a packaged compilation before it can be created. I assure you that it is faster making the BCF than it is to write up a checklist. A BCF will normally take at a couple seconds for average sized mods, and possibly a minute or two for large (300MB+) mods. It takes a total of 6 mouse clicks to make a BCF, and most of the time is spent waiting for the BCF to actually be made. With a BCF, the end user can make the exact same mod compilation in a fraction of the time it took you, and with just 3 clicks after installing the BCF and original package(s). They still have to select which sub-packages to install. They just don't have to replicate the work you did.
+===========Other Bethesda Game Interests of Mine===========
+
+[[http://www.nehrim.de/ | Nehrim]]
+[[https://forum.sureai.net/viewforum.php?f=157 | Nehrim SureAI Forum]]
+[[http://forums.bethsoft.com/topic/1118493-release-nehrim-at-fates-edge-english-version/ | Nehrim Bethesda Forum Thread]]
+
+This led to my exploring how to run Nehrim and Oblivion at the same time and then how to mod Nehrim. This information is collected in the thread:
+[[http://forums.bethsoft.com/topic/1159104-nehrim-and-mods-ii/ | Nehrim and Mods]]
