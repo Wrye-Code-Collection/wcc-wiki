@@ -212,6 +212,14 @@ def htmlToWtxt(srcFile, outFile=None):
     #    out.write(line)
     #out.close()
 
+#--- things to strip
+# 1---
+# <br \/> and <br \/>\n
+# (<em.*>)(.*)(<\/em>) and <br \/>\n
+# (<a href=')(http:.*)('\sclass='.*')(\stitle='.*')(\srel='.*')?(\srel='.*')?(>)(.*)()(<\/a>) and [[\2 \| \8]]<br \/>\n
+# (<a href=')(http:.*)('\sclass='.*')(\stitle='.*')?(\srel='.*')?(>)(.*)(<\/a>) and [[\2 \| \7]]<br \/>\n
+# (<a href=')(http:.*)('\sclass='.*')(\stitle='.*')(\srel='.*')(>)(<span.*'>)?(.*)<\/span>?(<\/a>) and [[\2 \| \7]]<br \/>\n
+# (<a href=')(http:.*)('\sclass='.*')(\stitle='.*')(\srel='.*')?(\srel='.*')?(>)(.*)(<\/a>) and [[\2 \| \9]]<br \/>\n
 
 @mainFunction
 def genHtml(fileName, outFile=None):
