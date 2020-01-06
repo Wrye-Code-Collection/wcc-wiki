@@ -2,6 +2,7 @@
 
 Comprehensive instructions for people who like to read
 
+{{CONTENTS=2}}
 
 Mod Installing and Mod Management
 Why this thread?
@@ -554,7 +555,15 @@ Read the Readme!! and Use [[https://github.com/boss-developers/boss/releases/tag
 
 Install Order:
 
-Install order is an important part of planning a modded game of Oblivion. Install order is different from what is commonly called load order because it deals with the entire mod including any replacer files (which could include meshes , textures, and sounds) or extra files (added meshes , textures, sounds, or any other number of files). Load order is about how the game reads the instructions from the esm and esp to run the game engine; whereas, install order is about what files are in place to be referenced by the game engine.There are several factors to consider. Many mods may attempt to replace the same files or even add variants of the same extra file. It is important to remain aware of this and it is especially salient with meshes and textures as they can have a symbiotic relationship (certain meshes require certain textures). Another important variant of this is LandscapeLOD meshes and textures. Another common consideration is that there are often base replacers which you want in place but that are OK to overwrite by other replacers or the base replacers may contain more files while the other replacer only handles a few variants. From this then a logic about install orders has been promoted. Some of the mods though are considered essential (and that is often debatable as well), and some of the mods are considered elective. This concern for maintaining install order integrity takes on varying levels of difficulty depending upon the method of installation. Basically better tools give better ease. With manual install it is you that will have to track everything. With OBMM then it is you who will have to track everything, but OBMM automates a lot of the work. BAIN offers dynamic, in the moment, conflict reports and the ability to move BAIN packages around in the install order much like esm and esp are shifted around in the load order. If we look at BOSS master list we also see several categories categories for load ordering which I've reduced down to this more general list:
+Install order is an important part of planning a modded game of Oblivion. Install order is different from what is commonly called load order because it deals with the entire mod including any replacer files (which could include meshes , textures, and sounds) or extra files (added meshes , textures, sounds, or any other number of files). Load order is about how the game reads the instructions from the esm and esp to run the game engine; whereas, install order is about what files are in place to be referenced by the game engine.
+
+There are several factors to consider. Many mods may attempt to replace the same files or even add variants of the same extra file. It is important to remain aware of this and it is especially salient with meshes and textures as they can have a symbiotic relationship (certain meshes require certain textures). Another important variant of this is LandscapeLOD meshes and textures. Another common consideration is that there are often base replacers which you want in place but that are OK to overwrite by other replacers or the base replacers may contain more files while the other replacer only handles a few variants. From this then a logic about install orders has been promoted. Some of the mods though are considered essential (and that is often debatable as well), and some of the mods are considered elective. 
+
+This concern for maintaining install order integrity takes on varying levels of difficulty depending upon the method of installation. Basically better tools give better ease. With manual install it is you that will have to track everything. With OBMM then it is you who will have to track everything, but OBMM automates a lot of the work. BAIN offers dynamic, in the moment, conflict reports and the ability to move BAIN packages around in the install order much like esm and esp are shifted around in the load order.
+
+If we look at BOSS master list we also see several categories categories for load ordering which I've reduced down to this more general list:
+
+<pre>
 Earliest mods
 NPC face mods
 UOP & Vanilla fixes
@@ -567,7 +576,7 @@ Lighting
 General Base Mods
 Map marker Tweaks
 Hotkeys
-DLC group
+DLC group 
 Body replacers
 Items (armor and weapons)
 Body Replacer Armour & Clothing
@@ -576,7 +585,7 @@ Overhauls - Main FCOM, WAC, TIE files.
 Tamriel Travellers
 Overhaul compatibility
 Post Overhaul
-Quests and Locations
+Quests and Locations 
 Unique Landscapes
 City overhauls
 Overrides
@@ -591,12 +600,18 @@ Combat
 Skills, Attributes and Leveling
 Pose and Animation Mods
 Semi-final overrides
-Beauty Packs
+Beauty Packs 
 Race Changes\Addons
 Companions
 Respawn & day length overrides
 Shader mods
-Since mod makers often take into account this evolving load order logic, an argument could be made that often even the replacers they use would account for this as well. There are many many exceptions to this ordering and so again the best place to refer to is the readme of each mod, BOSS, and general advice given in threads.From my own installers list I've culled a similar install order which I present as my general recommendation for install ordering (Remember though every rule has an exception).
+</pre>
+
+Since mod makers often take into account this evolving load order logic, an argument could be made that often even the replacers they use would account for this as well. There are many many exceptions to this ordering and so again the best place to refer to is the readme of each mod, BOSS, and general advice given in threads.
+
+From my own installers list I've culled a similar install order which I present as my general recommendation for install ordering (Remember though every rule has an exception).
+
+<pre>
 DCL
 Unofficial Patches
 DarN
@@ -624,9 +639,25 @@ Scaling and leveling
 errata
 newly acquired and testing mods
 my own projects
-====
+<code>====</code>
 Unused Mods
-These lists are not meant to be exhaustive and really are used for determining load order of plugins rather than to be considered for install orders. I'm certainly not as familiar with Morrowind and what may be the best install order, but plan to research than and will revise this post when I do. The same goes for Fallout3.The organization of installed packages can itself become a necessity as the list continues to grow. The following are suggestions for bringing order to the installed packages via naming and other methods.Naming Conventions:Even with combining replacers and mods into complex packages and mashing as many errata files into other archives power mod users are likely to have an installer tab that is filled with many mods that can become confusing to navigate. This is where naming conventions can come in handy.The common suffix for BAIN packages is simply the -BAIN at the end of the package. Although not necessary it does serve the purpose of letting one know that the package in question is supposed to be BAIN ready. Prefixes for packages have not been more fully thought out and this is an area where more tags could be used to notify the user of information. When a package is put in the installer directory and after BAIN scans the package the package is assigned a number that relates to its install order. Because of this there is more freedom in naming the packages than there is with naming the sub-packages of a complex package. Prefixes can therefore be used to further tag a package with information that relates to common install orders or types of packages. Some examples might include:
+</pre>
+
+These lists are not meant to be exhaustive and really are used for determining load order of plugins rather than to be considered for install orders. 
+
+I'm certainly not as familiar with Morrowind and what may be the best install order, but plan to research than and will revise this post when I do. The same goes for Fallout3.
+
+The organization of installed packages can itself become a necessity as the list continues to grow. The following are suggestions for bringing order to the installed packages via naming and other methods.
+
+Naming Conventions:
+
+Even with combining replacers and mods into complex packages and mashing as many errata files into other archives power mod users are likely to have an installer tab that is filled with many mods that can become confusing to navigate. This is where naming conventions can come in handy.
+
+The common suffix for BAIN packages is simply the -BAIN at the end of the package. Although not necessary it does serve the purpose of letting one know that the package in question is supposed to be BAIN ready. Prefixes for packages have not been more fully thought out and this is an area where more tags could be used to notify the user of information. 
+
+When a package is put in the installer directory and after BAIN scans the package the package is assigned a number that relates to its install order. Because of this there is more freedom in naming the packages than there is with naming the sub-packages of a complex package. Prefixes can therefore be used to further tag a package with information that relates to common install orders or types of packages. Some examples might include:
+
+<pre>
 REPLACER-World Textures-QTPIII-BAIN
 REPLACER-Sky Textures Compilation-BAIN
 OVERHAUL-Warcry-BAIN
@@ -641,18 +672,43 @@ NEW LANDS-Tamriel Heightmaps-BAIN
 NEW LANDS-Elsweyr-BAIN
 SETTINGS-Leveling and Skills-BAIN
 SETTINGS-Vanilla fixes-BAIN
-These could also be abbreviated to one or two letters (I don't recommend numbers). And I'd think it not necessary to add them to every package as even a peppering of them would help the eye train in on what is essential. I've started using these tags with Fallout 3 and when peppered like that they are helping me see what is what faster. Spoiler of that installer list. Another method is to create Markers to better organize the BAIN archive. They will show up as grey and look like the one that is automatically included named ==last== by doing this one could create dividers for the various packages along the lines of:
+</pre>
+
+These could also be abbreviated to one or two letters (I don't recommend numbers). And I'd think it not necessary to add them to every package as even a peppering of them would help the eye train in on what is essential. I've started using these tags with Fallout 3 and when peppered like that they are helping me see what is what faster. Spoiler of that installer list. 
+
+Another method is to create Markers to better organize the BAIN archive. They will show up as grey and look like the one that is automatically included named ==last== by doing this one could create dividers for the various packages along the lines of:
+
+<pre>
 ==Environment==
 ==Overhauls==
 ==Quests== ... and so on.
-Using this as section headings you could create a very orderly looking BAIN archive that is easy to navigate and catalog. Sub-packages must be alpha-numeric in their naming in order to determine install order and override logic. Of course the conventions mentioned above do not have to be used. You could number every sub-package the same or different as long as the install order is as you want it and you know how to read it.A few conventions have been promoted by myself and others:
+</pre>
 
-If two sub-packages have competing data and only one should be installed then often they are named or numbered the same.
-If mods are packed together and there are several main or core mods then the main mod often gets the numbering that starts a small series (i.e. 10) and each addition to it would complete that series (i.e. 11, 12 ... 16, 17, etc). With the next main mod starting the next series (i.e. 20).
-The core of a mod that is essential is often packed at the lowest number (00 Core Mod).
-Recently the idea of seperating docs into an extra core core package has been promoted (00 Core Mod docs).
+Using this as section headings you could create a very orderly looking BAIN archive that is easy to navigate and catalog. Sub-packages must be alpha-numeric in their naming in order to determine install order and override logic. Of course the conventions mentioned above do not have to be used. You could number every sub-package the same or different as long as the install order is as you want it and you know how to read it.
 
-The numbering does not have to stop at 99 either. you could number packages 110 ... 120, 125 ... 130, 131,132 ... 140 or as high and complicated as you like. Just remember then that lower number must contain as many digits as the higher numbers so 3 digits would need leading zeroes.Alphanumeric ordering can be useful too. If all the mods in a package compilation are of the same type or named similarly and/or there is no need for install ordering (between sub-packages) then there is no harm in them having the same prefix designation. Such as the following:Companion - BaddyCompanion - EyjaCompanion - Neeshkaor you could provide the mod authors name as a prefix if they have several of a type mods like Umpa - PoseUmpa - Martial ArtsAnother method of bringing order to sub-packages is like the dummy archives above wherein one could create dummy sub-packages. One could make dummy esp (that should never be installed) or better yet rename a small texture into something that would never be accessed by a mod and place into an innocuous texture folder and it will install but not be used. (This is necessary as empty sub-packages will not appear as options in the sub-packages folder.) examples may include:
+A few conventions have been promoted by myself and others:
+
+* If two sub-packages have competing data and only one should be installed then often they are named or numbered the same.
+* If mods are packed together and there are several main or core mods then the main mod often gets the numbering that starts a small series (i.e. 10) and each addition to it would complete that series (i.e. 11, 12 ... 16, 17, etc). With the next main mod starting the next series (i.e. 20).
+* The core of a mod that is essential is often packed at the lowest number (00 Core Mod).
+* Recently the idea of seperating docs into an extra core core package has been promoted (00 Core Mod docs).
+
+The numbering does not have to stop at 99 either. you could number packages 110 ... 120, 125 ... 130, 131,132 ... 140 or as high and complicated as you like. Just remember then that lower number must contain as many digits as the higher numbers so 3 digits would need leading zeroes.
+
+Alphanumeric ordering can be useful too. If all the mods in a package compilation are of the same type or named similarly and/or there is no need for install ordering (between sub-packages) then there is no harm in them having the same prefix designation. Such as the following:
+
+<pre>
+Companion - Baddy
+Companion - Eyja
+Companion - Neeshka
+or you could provide the mod authors name as a prefix if they have several of a type mods like
+Umpa - Pose
+Umpa - Martial Arts
+</pre>
+
+Another method of bringing order to sub-packages is like the dummy archives above wherein one could create dummy sub-packages. One could make dummy esp (that should never be installed) or better yet rename a small texture into something that would never be accessed by a mod and place into an innocuous texture folder and it will install but not be used. (This is necessary as empty sub-packages will not appear as options in the sub-packages folder.) examples may include:
+
+<pre>
 100 ==Animation mods==
 110 Animation Mod A
 120 Animation Mod B, etc
@@ -662,66 +718,345 @@ The numbering does not have to stop at 99 either. you could number packages 110 
 300 ==Pose Mods==
 310 Pose Mod A
 320 Pose Mod B ... and so on.
-Also using leading dashes '-' will work the same as the equal '=' sign.Updating best practices:The most important thing to remember is: Renaming packages means reinstalling it. Sad but true. Unfortunately if in updating a package you misname it or name it differently than what is currently installed then to BAIN it is a new package. You will have to install the package again which may mean reordering plugins and other annoyances.One method of avoiding this mistake is possible - if you have the disc space for it - is to keep your mod catalog as a directory (preferably on another drive) with all the sub-packages prenamed, organized and ready to be zipped again at any time. What this, in essence, means is having two catalogs - one in the installers directory full of archives (packages) and the other in another directory unzipped yet containing both the downloaded original archives and the unzipped and organized archives. a lot, I know. Really it all about how much you want to get involved in this. External drives and other back up media could be very useful (but not burning one-off kindWhen using 7zip to create an archive you will find that by selecting folders to include as sub-packages to an archive that 7zip will automatically name the archive after whatever the directory is one level above the folders selected if they are all from the same directory (you of course can change the name). So if you name that upper/top directory after the name of the future package then that future package is automatically named for you.Here is the protocol I use for updating:
+</pre>
 
-Download your updated or original archive you want to include in an package compilation.
-Extract the mod from a downloaded archive into a directory that is laid out like the future sub-packages under the directory named as the archive you want to create (or recreate).
-Remove the downloaded archive and either store it or delete it.
-Do the maintenance required (clean esp, redate esp, edit esp, optimize meshes, rename readme, etc).
-Using 7zip select all the directories you want as sub-packages and click add (green plus sign).
+Also using leading dashes '-' will work the same as the equal '=' sign.
 
-create the archive and it will be named the same as the top directory.What I do is also have another folder under each package directory called '___source' it contains the original archives (that I save). I've made enough mistakes in packaging that I've learned to save most things because I do not want to re-download repeatedly. the underscore is just a visual clue for me not to include it in the final product.So here is the Et in Arkay-BAIN directory prior to archiving and installing:
+Updating best practices:
+
+The most important thing to remember is: Renaming packages means reinstalling it. Sad but true. Unfortunately if in updating a package you misname it or name it differently than what is currently installed then to BAIN it is a new package. You will have to install the package again which may mean reordering plugins and other annoyances.
+
+One method of avoiding this mistake is possible - if you have the disc space for it - is to keep your mod catalog as a directory (preferably on another drive) with all the sub-packages prenamed, organized and ready to be zipped again at any time. What this, in essence, means is having two catalogs - one in the installers directory full of archives (packages) and the other in another directory unzipped yet containing both the downloaded original archives and the unzipped and organized archives. a lot, I know. Really it all about how much you want to get involved in this. External drives and other back up media could be very useful (but not burning one-off kind)
+
+When using 7zip to create an archive you will find that by selecting folders to include as sub-packages to an archive that 7zip will automatically name the archive after whatever the directory is one level above the folders selected if they are all from the same directory (you of course can change the name). So if you name that upper/top directory after the name of the future package then that future package is automatically named for you.
+
+Here is the protocol I use for updating:
+
+* Download your updated or original archive you want to include in an package compilation.
+* Extract the mod from a downloaded archive into a directory that is laid out like the future sub-packages under the directory named as the archive you want to create (or recreate).
+* Remove the downloaded archive and either store it or delete it.
+* Do the maintenance required (clean esp, redate esp, edit esp, optimize meshes, rename readme, etc).
+* Using 7zip select all the directories you want as sub-packages and click add (green plus sign).
+
+create the archive and it will be named the same as the top directory.
+
+What I do is also have another folder under each package directory called <code>___source___</code> it contains the original archives (that I save). I've made enough mistakes in packaging that I've learned to save most things because I do not want to re-download repeatedly. the underscore is just a visual clue for me not to include it in the final product.
+
+So here is the Et in Arkay-BAIN directory prior to archiving and installing:
+
+<pre>
 Mod Catalog\Custom Bain Projects\quests\Et in Arkay Ego-BAIN
-|
-+[00 Et in Arkay Ego Core]
-+[10 Spiritus Version]
-+[20 Shivering Isles Patch]
-+[25 Choices and Consequences Patch]
-+[30 EiA Patch]
-+[30 KotN Patch]
-+[35 TOTF Patch]
-+[50 UL Patch]
-+[50 UL Patches Merged]
-+___Source <- this folder contains the original archives - not included when zipping.
-+ Et in Arkay Ego-BAIN.7z <- the final package to be placed in the installers folder.
-Notice the directories above ending in the folder named like the archive created. I keep the extacted folders categorized and cataloged for convenience. Again I admit this is costly to disk space so use your discretion about what is best.Another tip for speeding up both the compression process and speed up the scanning of new or updated packages is to use very light compression that is preferably non-solid. In the 7zip splash screen you will find Compression level (choose fastest) and further down Solid Block size (chose non-solid). This is again about a trade off as low compression means bigger packages and that means more disc space used. With less disc space you may need to choose high compression and that means a slower opening of the installers tab.If you are updating a package that is named the same then prior to opening the installers tab remove the old package from the installers directory and replace with the new package (or overwrite). Then when the installers tab is opened it will scan and recognize the changes and give warning in the sub-tabs and in the colors of the packages. Simply make sure that all the options you want are chosen then right click on the package and click anneal. You may need to anneal other packages too and may further need to adjust load order of plugins or bash patch again or related activities.If you are adding a package that has the same content as another package (such as BAIN ready mods being updated by the authors) and BAIN sees them as discreet and separate packages then it is best to move the newer package to prior to the older package in the install order, install the same options, then uninstall first and then delete the older and later install ordered package.If you like the file trees I've been using and will continue to use in future posts and want to make them too the tool to use is called FileFolderTree which will create these trees after choosing a directory to scan. Surazal created a Word 2007 Macro enabled document that will take the readouts generated and further reduce them to give only the sub-packages listed provided the sub-packages use numeric and not alphanumeric naming. This is available here as a miscellaneous file. Much thanks to Surazal for showing me this tool and creating the macro. A macro that you can import into Word 2007 is available in this post. Surazal also provided many suggestions utilized in this selection. And one step further he created a Word Macro Enabled document to update the BOSS master list with your own updates called BOSS Master List Manager (the main download).
+   │
+   ├[00 Et in Arkay Ego Core]
+   ├[10 Spiritus Version]
+   ├[20 Shivering Isles Patch]
+   ├[25 Choices and Consequences Patch]
+   ├[30 EiA Patch]
+   ├[30 KotN Patch]
+   ├[35 TOTF Patch]
+   ├[50 UL Patch]
+   ├[50 UL Patches Merged]
+   ├___Source <- this folder contains the original archives - not included when zipping.
+   └ Et in Arkay Ego-BAIN.7z <- the final package to be placed in the installers folder.
+</pre>
+
+Notice the directories above ending in the folder named like the archive created. I keep the extacted folders categorized and cataloged for convenience. Again I admit this is costly to disk space so use your discretion about what is best.
+
+Another tip for speeding up both the compression process and speed up the scanning of new or updated packages is to use very light compression that is preferably non-solid. In the 7zip splash screen you will find Compression level (choose fastest) and further down Solid Block size (chose non-solid). This is again about a trade off as low compression means bigger packages and that means more disc space used. With less disc space you may need to choose high compression and that means a slower opening of the installers tab.
+
+If you are updating a package that is named the same then prior to opening the installers tab remove the old package from the installers directory and replace with the new package (or overwrite). Then when the installers tab is opened it will scan and recognize the changes and give warning in the sub-tabs and in the colors of the packages. Simply make sure that all the options you want are chosen then right click on the package and click anneal. You may need to anneal other packages too and may further need to adjust load order of plugins or bash patch again or related activities.
+
+If you are adding a package that has the same content as another package (such as BAIN ready mods being updated by the authors) and BAIN sees them as discreet and separate packages then it is best to move the newer package to prior to the older package in the install order, install the same options, then uninstall first and then delete the older and later install ordered package.
+
+If you like the file trees I've been using and will continue to use in future posts and want to make them too the tool to use is called [[https://www.softpedia.com/dyn-postdownload.php/0a82bbbc275d9fc8f27916d638ba578a/5e12a5ff/1a4e5/4/1 | FileFolderTree]] which will create these trees after choosing a directory to scan. Surazal created a Word 2007 Macro enabled document that will take the readouts generated and further reduce them to give only the sub-packages listed provided the sub-packages use numeric and not alphanumeric naming. This is available [[https://www.nexusmods.com/oblivion/mods/29790 | here]] as a miscellaneous file. 
+
+Much thanks to Surazal for showing me this tool and creating the macro. A macro that you can import into Word 2007 is available [[http://forums.bethsoft.com/topic/957424-custom-bain-projects/?p=13906262 |in this post]]. Surazal also provided many suggestions utilized in this selection. And one step further he created a Word Macro Enabled document to update the BOSS master list with your own updates called [[https://www.nexusmods.com/oblivion/mods/29790 | BOSS Master List Manager]] (the main download).
+
+= Creating Your Own Complex BAIN Packages
+
+Planning Your Mod Archive
+
+After becoming familiar with BAIN packaging and repackaging you may want to give some consideration to how you will make BAIN ready the rest of your install and new mods that you come by.
+
+https://sites.google.com/site/asyronline/the-elder-scrolls-iv-oblivion
+
+https://sites.google.com/site/oblivionpoinfo
+
+Tomlong75210 provides a very persuasive argument that repackaging mods into complex packages is not ideal. As outlined above BAIN has the feature to open the download page of the mod if the package has the file extension that matches. That is great for checking for updates. Further there is the preference of sorting through simple packages in the installer tab rather than sub-packages through the sub-package filter. Doing this would render better conflict reports via the info-tabs. Tomlong's entire BAIN package (No updated Link) list illustrates how to organize such an enormous amount of packages.
+
+To review the pros and cons I'd advise looking at what you want to accomplish. If you want to only use mods and delve into splitting replacers or doing cleaning and optimization of files and prefer easy access to Nexus and more comprehensive conflict reports then I'd advise Tomlong's method of keeping the packaging simple and originally named. If, on the other hand, you know how mods will conflict because you have reviewed that stuff to no end, you want to clean, optimize, break apart and/or combine salient mods together because you 'know' what you are doing then I'd recommend the very complex packages I will describe below.
+
+Of course there is nothing preventing the use of both methods or the creation of your own. As I've learned more of Tomlong's method I would likely do it more that way if I were to reinstall all BAIN packages. That would take several weeks work to do and so not likely to happen. I see the advantages but believe that cleaning mods prior to packaging is the best option, even so in hindsight one could repackage as simple archives and append the file extension. Tomlong's package list comes out to 733 while mine comes out to 211 with each package containing further sub-packages. So whichever method you use (even both) is up to you.
+
+Rationale for Complex Custom Packages
+
+Doubtless as one goes along in collecting and playing with mods there will come a point where they will want to combine mods in a variety of ways. This could be especially true when dealing with replacers like textures replacers and LOD. Often these two types of replacers can contribute greatly to performance lag and so many find that they have to test various different versions of a repalcer or remove aspects of a texture overhaul. Conversely others with a more powerful system may find that they can not only handle their favorite replacers but will want to add even more on top of those replacers. This will be trend as more powerful PC hardware is made available. This balancing act is part of creating a well modded Oblivion experience. 
+
+This section will deal with repackaging replacers into BAIN ready archives so that they are both broken down into component pieces and so that they could then be combined together with other replacers.There is no best practices for repackaging large, extravagant replacers but there are a few things to keep in mind. For one the conflict detection that BAIN offers between packages does not exist within packages and between sub-packages. So with this area of repackaging one will have to be much more conscious of what is being packaged and whether there are inherent conflicts. Doing this can take some time so that is something to consider.
+
+The advantages to repackaging in this manner is really more about preference and control. Preference in that if you only liked certain aspects of a texture replacer, such as the clutter or architecture, and preferred the landscape and plant textures of another replacer set then breaking down the packages could be very worthwhile. Preference also in that this gives further ability to test performance and customize your install to fit the best performance models. Control in that if after building up what you think is a great combination and later find that maybe you need to tone down an aspect this provides a means of doing that be giving the option to remove certain portions.
+
+There are a few different approaches to this. In my older thread I presented a model where I put Everything related to a texture overhaul in one giant archive This, however, has become very cumbersome and not an ideal approach. Primarily I wanted to see if I could do this and having done it the current size of that archive is 7 gigs. In fact so big that it is my intention to break this thing apart and start over. The internal structure though can provide a map for the individual packages.
+
+When examining comprehensive texture replacers one may note that they cover many things from ground and road, to walls and ceilings ... from plants and trees to coins, cups, and furniture. These provide divisions in the texture replacer overhauls that we can use to create packages and sub-packages. When thinking about performance and due to the nature of the game it is easy to see that the game engine is not placed under as much stress when your character is in interiors as when outside and the game is rendering much more information. My own game has rarely ever crashed when my characters have been in interiors. this provides another reason and rationale for breaking apart texture replacer overhauls and packs.
+
+So taking Qarls Texture Pack III into consideration here is a list of the main types of replacers it provides:
+
+<pre>
+Architecture contains architecture folder, Qarl (Chorrol door?) and Wood (as it mostly was worked) textures.
+Clutter contains only clutter textures.
+Landscape contains landscape folder, Sky (only Snow), Plants (Butterflys?) textures
+Rocks Contain only those meshes and textures
+Dungeon Base contains Fort Ruins, Misc, Chargen (prisons) meshes and textures [I found no retextures of fort ruins?]
+Ayleid Ruins contains only those meshes and textures
+Caves Contain only those meshes and textures.
+Sewers contain only those meshes and textures.
+</pre>
+
+With these divisions it is easy to see that Architecture and Clutter can be found in interiors and exteriors. While Landscape and Rocks are most often used in exteriors and the rest are various replacers mainly seen in interiors (their interiors). This is not an exact division. Cave textures of course will include the entrances that are in the exterior world as do Sewers and especially Ayleid Ruins, and dungeons (forts). This may concern some but having a forest full of hi resolution trees will have a much greater impact upon performance than one hi resolution fort exterior. I'm certain that these exteriors could be further separated out if one wanted to research what is the exact pieces that are in the exterior. Thematically mixing and matching of textures could also be a factor and although you may squeeze minimal performance out of doing this it may not look great. Again that is a matter of preference.
+
+With the above type of replacers we could then start to create packages in any number of combinations including:
+1. Repackage a specific replacer but have the various types of textures further sub-divided as sub-packages.
+2. Create solitary replacer packages of both a type and brand (i.e. QTPIII Architecture only).
+3. Create combination packages of a type with several brands (i.e Architecture from 5 texture packs each sub-divided into sub-packages).
+
+With thought-out naming and numbering conventions one could even do all three at once.
+
+Taking Architecture as an example for choice 1 above one could create sub-packages for a texture replacer out of each folder within the Architecture folder.
+
+<pre>
+├[anvil]
+│ └[anvilinterior]
+├[arena]
+├[basementsections]
+├[bravil]
+├[bruma]
+│ ├[brumawallset]
+│ └[interioronly]
+├[castle]
+│ ├[anvil]
+│ └[cheydinhal]
+├[castleinterior]
+│ ├[narrowhalls]
+│ └[towers]
+├[cathedral]
+├[cemetery]
+├[cheydinhal]
+│ └[interior]
+├[chorrol]
+│ └[interior]
+├[daedricstatues]
+├[doorstones]
+├[farmhouse]
+├[godstatues]
+├[imperialcity]
+│ ├[icbasementset]
+│ └[icinterior]
+├[leyawiin]
+│ └[interior]
+├[lowerclass]
+│ └[lowinterior]
+├[priory]
+├[ships]
+├[sidewalk]
+├[skingrad]
+├[statue]
+│ ├[bravil]
+│ └[kvatchstatue]
+├[stonewall]
+│ └[bravil]
+└[tents]
+</pre>
+
+This would be a very complex task especially if you were to then combine with other texture replacers so that only one option of each is installed. Option 1 above gives a lot of organization over a specific replacer set while Option 2 provides the most control with relation to other replacer sets. Option 3 probably has the main advantage of an economical replacer package in terms of managing your installers tab, but again using naming conventions could again make this redundant.
+
+Of a cautionary note when having textures packs that may lay over the top (be lower in the install order) of other texture replaces it is important to note which versions may also have normal maps and or even meshes.
+
+The main thing you want to avoid is having a texture replacer that also replaces meshes installing prior to a texture replacer that does not. The result could be that the meshes are looking for specific textures and those added by another replacer set may not be what is required even if named the same. The result could be graphic anomalies or performance issues. Of less of a concern is some textures have specific normal maps (texture add ons that give the appearance of a physical surface texture that provides more depth to the appearance of textures in game). More about understanding texture replacers at the Total Oblivion texture Overhaul (no optional link found except [[thishttps://www.yumpu.com/user/devnull.sweetdanger.net | ]] and it didn't help much) site.
+
+The advice is to make sure to package meshes and normal maps with the textures that they support and then to make those textures reside in either/or decision tree sub-packages so that other textures are not accidentally mixed in.
+
+Examples of Very Complex Custom BAIN Packages:
+
+These examples illustrate both the breaking apart of mods into component parts and the recombination of them with other mods that are also broken apart. The following examples of LOD and Sky Textures illustrate how one could mix and match component parts of mods with greater ease by having them repackages in this manner.
+
+LOD Compilation
+
+This BAIN project combines most of the LOD variants available today. The package is divided up into five distinct sets of sub-packages or directories. The Core files are optional to use, Border regions are next, then the normal maps, color maps, and finally the optimized land meshes. Further the Shivering Isles maps are separated out for further customization. The purpose of this is to be able to have a BAIN archive that allows for easy switching between these mods in order to test mixing and matching, stability, and when what your looking at bores you. Most of these mods came as is and only cover the either normal or color maps. Zacherots, and Xerus had combined maps which I extracted and separated.
+
+<pre>
+LOD Compilation-BAIN
+│
+├[00 [[https://www.nexusmods.com/oblivion/mods/5127 | LOD NormalMap Fix MipMap Fix]] ]
+├[10 [[https://www.nexusmods.com/oblivion/mods/27023 | Border Regions Color -pk- 512]] ]
+├[10 [[https://www.nexusmods.com/oblivion/mods/5147 | Border Regions Color Blade -pk- 1024]] ]
+├[10 [[https://www.nexusmods.com/oblivion/mods/5147 | Border Regions Color Blade9722 2048]] ]
+├[10 [[https://www.nexusmods.com/oblivion/mods/2182 | Border Regions Color Shaja 2048]] ]
+├[20 [[https://www.nexusmods.com/oblivion/mods/27046 | Normal Maps -pk- 256]] ]
+├[20 Normal Maps -pk- 512]
+├[20 [[https://www.nexusmods.com/oblivion/mods/18677 | Normal Maps CorePC Vibrant]] ]
+├[20 [[https://www.nexusmods.com/oblivion/mods/26911 | Normal Maps Deathb0rn 512]] ]
+├[20 Normal Maps Deathb0rn Vanilla]
+├[20 [[https://www.nexusmods.com/oblivion/mods/11441 Normal Maps Qarl 1024 Reduced]] ]
+├[20 Normal Maps Qarl 2048 Reduced]
+├[20 [[https://www.nexusmods.com/oblivion/mods/18497/ | Normal Maps Qarl 4096 Compressed]] ]
+├[20 Normal Maps Qarl 512 Better Looking]
+├[20 Normal Maps Qarl 512 Reduced]
+├[20 [[https://www.nexusmods.com/oblivion/mods/17300 | Normal Maps Xerus 512]] ]
+├[21 [[https://www.nexusmods.com/oblivion/mods/17300 | SI Normal Maps Xerus 512]] ]
+├[25 [[https://www.nexusmods.com/oblivion/mods/27023 | Color Maps Main Landscape -pk- 1024]] ]
+├[25 Color Maps Main Landscape -pk- 2048]
+├[25 Color Maps Main Landscape -pk- 4096]
+├[25 Color Maps Main Landscape -pk- 512]
+├[26 Color Maps Important Landscapes -pk- 1024]
+├[26 Color Maps Important Landscapes -pk- 2048]
+├[26 Color Maps Important Landscapes -pk- 4096]
+├[26 Color Maps Important Landscapes -pk- 512]
+├[27 Color Maps Less Important Landscapes -pk- 1024]
+├[27 Color Maps Less Important Landscapes -pk- 2048]
+├[27 Color Maps Less Important Landscapes -pk- 4096]
+├[27 Color Maps Less Important Landscapes -pk- 512]
+├[30 [[https://www.nexusmods.com/oblivion/mods/5146 | Color Maps Blade9722 2048]] ]
+├[30 [[https://www.nexusmods.com/oblivion/mods/5220 |  Color Maps Blade9722 4096]] ]
+├[30 [[https://www.nexusmods.com/oblivion/mods/18677 | Color Maps CorePC 1024]] ]
+├[30 Color Maps CorePC 2048]
+├[30 [[https://www.nexusmods.com/oblivion/mods/9277 | Color Maps Diverse Grasses 2048]] ]
+├[30 [[https://www.nexusmods.com/oblivion/mods/9279 | Color Maps Diverse Grasses 4096]] ]
+├[30 [[https://www.nexusmods.com/oblivion/mods/11441 | Color Maps Qarl Better Tiling 1024]] ]
+├[30 Color Maps Qarl Better Tiling 2048]
+├[30 Color Maps Qarl Better Tiling 4096]
+├[30 Color Maps Qarl Better Tiling 512]
+├[30 [[https://www.nexusmods.com/oblivion/mods/2182 | Color Maps Shaja 2048]] ]
+├[30 [[https://www.nexusmods.com/oblivion/mods/17300 | Color Maps Xerus 1024]] ]
+├[30 Color Maps Zacherot 4096]
+├[35 [[https://www.nexusmods.com/oblivion/mods/18677 | SI Color Maps CorePC 1024]] ]
+├[35 SI Color Maps CorePC 2048]
+├[35 SI Color Maps Xerus 1024]
+├[40 [[https://www.nexusmods.com/oblivion/mods/9949 | Noise Replacer - CorePC]] ]
+├[40 Noise Replacer - HTF 1]
+├[40 Noise Replacer - HTF 2]
+├[40 Noise Replacer - HTF 3]
+├[40 [[https://www.nexusmods.com/oblivion/mods/9952 | Noise Replacer - Koldorn Light]] ]
+├[40 Noise Replacer - Koldorn Medium]
+├[40 Noise Replacer - Koldorn Strong]
+├[40 [[https://www.nexusmods.com/oblivion/mods/17300 | Noise Replacer - Xerus] ] Again if the terms are unfamiliar please read over the Texture Overhaul page for more information. This package zipped in a non solid format comes to about 1 gig in size.
+</pre>
 
 
-Edited by Psymon, 30 May 2011 - 02:39 AM.
+Sky Replacers CompilationThis compilation focuses on making the sun, moons, stars, and nebula more interesting. It falls short of [[https://www.nexusmods.com/oblivion/mods/21945/ | Cosmic Sky Cycling]] because it does not cycle. But, then again one less thing running in the back ground. Actually I went through many of the images with Cosmic Night sky and only liked a handful. Many merely had nebula that invaded the entire sky and drowned out stars or mismatched very badly with existing star mods. Plus, there are many great crafted stars included below. Of the nasa images only nebula that was clear, not glaring, and meshed well with star packs got my inclusion.
 
-
-Creating Your Own Complex BAIN PackagesPlanning Your Mod ArchiveAfter becoming familiar with BAIN packaging and repackaging you may want to give some consideration to how you will make BAIN ready the rest of your install and new mods that you come by.Tomlong75210 provides a very persuasive argument that repackaging mods into complex packages is not ideal. As outlined above BAIN has the feature to open the download page of the mod if the package has the file extension that matches. That is great for checking for updates. Further there is the preference of sorting through simple packages in the installer tab rather than sub-packages through the sub-package filter. Doing this would render better conflict reports via the info-tabs. Tomlong's entire BAIN package list illustrates how to organize such an enormous amount of packages.To review the pros and cons I'd advise looking at what you want to accomplish. If you want to only use mods and delve into splitting replacers or doing cleaning and optimization of files and prefer easy access to Nexus and more comprehensive conflict reports then I'd advise Tomlong's method of keeping the packaging simple and originally named. If, on the other hand, you know how mods will conflict because you have reviewed that stuff to no end, you want to clean, optimize, break apart and/or combine salient mods together because you 'know' what you are doing then I'd recommend the very complex packages I will describe below.Of course there is nothing preventing the use of both methods or the creation of your own. As I've learned more of Tomlong's method I would likely do it more that way if I were to reinstall all BAIN packages. That would take several weeks work to do and so not likely to happen. I see the advantages but believe that cleaning mods prior to packaging is the best option, even so in hindsight one could repackage as simple archives and append the file extension. Tomlong's package list comes out to 733 while mine comes out to 211 with each package containing further sub-packages. So whichever method you use (even both) is up to you.Rationale for Complex Custom PackagesDoubtless as one goes along in collecting and playing with mods there will come a point where they will want to combine mods in a variety of ways. This could be especially true when dealing with replacers like textures replacers and LOD. Often these two types of replacers can contribute greatly to performance lag and so many find that they have to test various different versions of a repalcer or remove aspects of a texture overhaul. Conversely others with a more powerful system may find that they can not only handle their favorite replacers but will want to add even more on top of those replacers. This will be trend as more powerful PC hardware is made available. This balancing act is part of creating a well modded Oblivion experience. This section will deal with repackaging replacers into BAIN ready archives so that they are both broken down into component pieces and so that they could then be combined together with other replacers.There is no best practices for repackaging large, extravagant replacers but there are a few things to keep in mind. For one the conflict detection that BAIN offers between packages does not exist within packages and between sub-packages. So with this area of repackaging one will have to be much more conscious of what is being packaged and whether there are inherent conflicts. Doing this can take some time so that is something to consider.The advantages to repackaging in this manner is really more about preference and control. Preference in that if you only liked certain aspects of a texture replacer, such as the clutter or architecture, and preferred the landscape and plant textures of another replacer set then breaking down the packages could be very worthwhile. Preference also in that this gives further ability to test performance and customize your install to fit the best performance models. Control in that if after building up what you think is a great combination and later find that maybe you need to tone down an aspect this provides a means of doing that be giving the option to remove certain portions.There are a few different approaches to this. In my older thread I presented a model where I put Everything related to a texture overhaul in one giant archive This, however, has become very cumbersome and not an ideal approach. Primarily I wanted to see if I could do this and having done it the current size of that archive is 7 gigs. In fact so big that it is my intention to break this thing apart and start over. The internal structure though can provide a map for the individual packages.When examining comprehensive texture replacers one may note that they cover many things from ground and road, to walls and ceilings ... from plants and trees to coins, cups, and furniture. These provide divisions in the texture replacer overhauls that we can use to create packages and sub-packages. When thinking about performance and due to the nature of the game it is easy to see that the game engine is not placed under as much stress when your character is in interiors as when outside and the game is rendering much more information. My own game has rarely ever crashed when my characters have been in interiors. this provides another reason and rationale for breaking apart texture replacer overhauls and packs.So taking Qarls Texture Pack III into consideration here is a list of the main types of replacers it provides:
-
-Architecture contains architecture folder, Qarl (Chorrol door?) and Wood (as it mostly was worked) textures.Clutter contains only clutter textures.Landscape contains landscape folder, Sky (only Snow), Plants (Butterflys?) texturesRocks Contain only those meshes and texturesDungeon Base contains Fort Ruins, Misc, Chargen (prisons) meshes and textures [I found no retextures of fort ruins?]Ayleid Ruins contains only those meshes and texturesCaves Contain only those meshes and textures.Sewers contain only those meshes and textures.
-
-With these divisions it is easy to see that Architecture and Clutter can be found in interiors and exteriors. While Landscape and Rocks are most often used in exteriors and the rest are various replacers mainly seen in interiors (their interiors). This is not an exact division. Cave textures of course will include the entrances that are in the exterior world as do Sewers and especially Ayleid Ruins, and dungeons (forts). This may concern some but having a forest full of hi resolution trees will have a much greater impact upon performance than one hi resolution fort exterior. I'm certain that these exteriors could be further separated out if one wanted to research what is the exact pieces that are in the exterior. Thematically mixing and matching of textures could also be a factor and although you may squeeze minimal performance out of doing this it may not look great. Again that is a matter of preference.With the above type of replacers we could then start to create packages in any number of combinations including:1. Repackage a specific replacer but have the various types of textures further sub-divided as sub-packages.2. Create solitary replacer packages of both a type and brand (i.e. QTPIII Architecture only).3. Create combination packages of a type with several brands (i.e Architecture from 5 texture packs each sub-divided into sub-packages).With thought-out naming and numbering conventions one could even do all three at once.Taking Architecture as an example for choice 1 above one could create sub-packages for a texture replacer out of each folder within the Architecture folder.
-
-Spoiler
-
-+[anvil] | +[anvilinterior] +[arena] +[basementsections] +[bravil] +[bruma] | +[brumawallset] | +[interioronly] +[castle] | +[anvil] | +[cheydinhal] +[castleinterior] | +[narrowhalls] | +[towers] +[cathedral] +[cemetery] +[cheydinhal] | +[interior] +[chorrol] | +[interior] +[daedricstatues] +[doorstones] +[farmhouse] +[godstatues] +[imperialcity] | +[icbasementset] | +[icinterior] +[leyawiin] | +[interior] +[lowerclass] | +[lowinterior] +[priory] +[ships] +[sidewalk] +[skingrad] +[statue] | +[bravil] | +[kvatchstatue] +[stonewall] | +[bravil] +[tents]
-
-
-This would be a very complex task especially if you were to then combine with other texture replacers so that only one option of each is installed. Option 1 above gives a lot of organization over a specific replacer set while Option 2 provides the most control with relation to other replacer sets. Option 3 probably has the main advantage of an economical replacer package in terms of managing your installers tab, but again using naming conventions could again make this redundant.Of a cautionary note when having textures packs that may lay over the top (be lower in the install order) of other texture replaces it is important to note which versions may also have normal maps and or even meshes.The main thing you want to avoid is having a texture replacer that also replaces meshes installing prior to a texture replacer that does not. The result could be that the meshes are looking for specific textures and those added by another replacer set may not be what is required even if named the same. The result could be graphic anomalies or performance issues. Of less of a concern is some textures have specific normal maps (texture add ons that give the appearance of a physical surface texture that provides more depth to the appearance of textures in game). More about understanding texture replacers at the Total Oblivion texture Overhaul site. The advice is to make sure to package meshes and normal maps with the textures that they support and then to make those textures reside in either/or decision tree sub-packages so that other textures are not accidentally mixed in.Examples of Very Complex Custom BAIN Packages:These examples illustrate both the breaking apart of mods into component parts and the recombination of them with other mods that are also broken apart. The following examples of LOD and Sky Textures illustrate how one could mix and match component parts of mods with greater ease by having them repackages in this manner.LOD CompilationThis BAIN project combines most of the LOD variants available today. The package is divided up into five distinct sets of sub-packages or directories. The Core files are optional to use, Border regions are next, then the normal maps, color maps, and finally the optimized land meshes. Further the Shivering Isles maps are separated out for further customization. The purpose of this is to be able to have a BAIN archive that allows for easy switching between these mods in order to test mixing and matching, stability, and when what your looking at bores you. Most of these mods came as is and only cover the either normal or color maps. Zacherots, and Xerus had combined maps which I extracted and separated.
-
-Spoiler
-
-LOD Compilation-BAIN | +[00 LOD NormalMap Fix MipMap Fix] +[10 Border Regions Color -pk- 512] +[10 Border Regions Color Blade -pk- 1024] +[10 Border Regions Color Blade9722 2048] +[10 Border Regions Color Shaja 2048] +[20 Normal Maps -pk- 256] +[20 Normal Maps -pk- 512] +[20 Normal Maps CorePC Vibrant] +[20 Normal Maps Deathb0rn 512] +[20 Normal Maps Deathb0rn Vanilla] +[20 Normal Maps Qarl 1024 Reduced] +[20 Normal Maps Qarl 2048 Reduced] +[20 Normal Maps Qarl 4096 Compressed] +[20 Normal Maps Qarl 512 Better Looking] +[20 Normal Maps Qarl 512 Reduced] +[20 Normal Maps Xerus 512] +[21 SI Normal Maps Xerus 512] +[25 Color Maps Main Landscape -pk- 1024] +[25 Color Maps Main Landscape -pk- 2048] +[25 Color Maps Main Landscape -pk- 4096] +[25 Color Maps Main Landscape -pk- 512] +[26 Color Maps Important Landscapes -pk- 1024] +[26 Color Maps Important Landscapes -pk- 2048] +[26 Color Maps Important Landscapes -pk- 4096] +[26 Color Maps Important Landscapes -pk- 512] +[27 Color Maps Less Important Landscapes -pk- 1024] +[27 Color Maps Less Important Landscapes -pk- 2048] +[27 Color Maps Less Important Landscapes -pk- 4096] +[27 Color Maps Less Important Landscapes -pk- 512] +[30 Color Maps Blade9722 2048] +[30 Color Maps Blade9722 4096] +[30 Color Maps CorePC 1024] +[30 Color Maps CorePC 2048] +[30 Color Maps Diverse Grasses 2048] +[30 Color Maps Diverse Grasses 4096] +[30 Color Maps Qarl Better Tiling 1024] +[30 Color Maps Qarl Better Tiling 2048] +[30 Color Maps Qarl Better Tiling 4096] +[30 Color Maps Qarl Better Tiling 512] +[30 Color Maps Shaja 2048] +[30 Color Maps Xerus 1024] +[30 Color Maps Zacherot 4096] +[35 SI Color Maps CorePC 1024] +[35 SI Color Maps CorePC 2048] +[35 SI Color Maps Xerus 1024] +[40 Noise Replacer - CorePC] +[40 Noise Replacer - HTF 1] +[40 Noise Replacer - HTF 2] +[40 Noise Replacer - HTF 3] +[40 Noise Replacer - Koldorn Light] +[40 Noise Replacer - Koldorn Medium] +[40 Noise Replacer - Koldorn Strong] +[40 Noise Replacer - Xerus] Again if the terms are unfamiliar please read over the Texture Overhaul page for more information. This package zipped in a non solid format comes to about 1 gig in size.
-
-
-Sky Replacers CompilationThis compilation focuses on making the sun, moons, stars, and nebula more interesting. It falls short of Cosmic Sky Cycling because it does not cycle. But, then again one less thing running in the back ground. Actually I went through many of the images with Cosmic Night sky and only liked a handful. Many merely had nebula that invaded the entire sky and drowned out stars or mismatched very badly with existing star mods. Plus, there are many great crafted stars included below. Of the nasa images only nebula that was clear, not glaring, and meshed well with star packs got my inclusion.
-
-Spoiler
-
-Sky Climates-BAIN | +[00 Sky Core] +[10 Sun - Beaming Sunglare] +[10 Sun - Brumbeck Sky Pack] +[10 Sun - Natural Environments] +[10 Sun - Subtle Sunshine[/url] +[10 Sun - Vibrant Sun] +[20 Stars - Beautiful Stars] +[20 Stars - Brumbeck Sky Pack] +[20 Stars - Fire & Ice 2] +[20 Stars - Fire & Ice 3 - version 1] +[20 Stars - Fire & Ice 3 - version 2] +[20 Stars - Natural Environments] +[20 Stars - Vibrant Stars] +[20 Stars - Wolfen] +[21 Stars 0 - Beautiful Stars] +[21 Stars 0 - Brumbeck Sky Pack] +[21 Stars 0 - Fire & Ice 2] +[21 Stars 0 - Fire & Ice 3 - version 1] +[21 Stars 0 - Fire & Ice 3 - version 2] +[21 Stars 0 - Natural Environments] +[21 Stars 0 - Real Night Sky] +[21 Stars 0 - Vibrant Stars] +[21 Stars 0 - Wolfen] +[22 Stars 1 - Beautiful Stars] +[22 Stars 1 - Brumbeck Sky Pack] +[22 Stars 1 - Fire & Ice 2] +[22 Stars 1 - Fire & Ice 3 - version 1] +[22 Stars 1 - Fire & Ice 3 - version 2] +[22 Stars 1 - Natural Environments] +[22 Stars 1 - Real Night Sky] +[22 Stars 1 - Vibrant Stars] +[23 Stars 2 - Beautiful Stars] +[23 Stars 2 - Brumbeck Sky Pack] +[23 Stars 2 - Fire & Ice 2] +[23 Stars 2 - Fire & Ice 3 - version 1] +[23 Stars 2 - Fire & Ice 3 - version 2] +[23 Stars 2 - Natural Environments] +[23 Stars 2 - Real Night Sky] +[23 Stars 2 - Vibrant Stars] +[30 Moons - Masser - ANB No Masser] +[30 Moons - Masser - Better Nightsky 1] +[30 Moons - Masser - Better Nightsky 2] +[30 Moons - Masser - Better Nightsky Enhanced] +[30 Moons - Masser - Brumbeck Sky Pack] +[30 Moons - Masser - Dione] +[30 Moons - Masser - Earth Image] +[30 Moons - Masser - Far&Away3D] +[30 Moons - Masser - Fire & Ice 2 - Blue] +[30 Moons - Masser - Fire & Ice 2 - Green] +[30 Moons - Masser - Fire & Ice 2 - Red] +[30 Moons - Masser - Fire & Ice 3 - Dark Red] +[30 Moons - Masser - Hi Rez] +[30 Moons - Masser - Io] +[30 Moons - Masser - Krensadas] +[30 Moons - Masser - Loch Hi Rez] +[30 Moons - Masser - Natural Environments] +[30 Moons - Masser - Rhea] +[40 Moons - Secunda - ANB Earth Moon] +[40 Moons - Secunda - ANB Hunters Moon] +[40 Moons - Secunda - Better Nightsky 1] +[40 Moons - Secunda - Better Nightsky 2] +[40 Moons - Secunda - Better Nightsky Enhanced] +[40 Moons - Secunda - Brumbeck Sky Pack] +[40 Moons - Secunda - Earth Moon Image] +[40 Moons - Secunda - Europa] +[40 Moons - Secunda - Far&Away3D] +[40 Moons - Secunda - Fire & Ice 2] +[40 Moons - Secunda - Ganymede] +[40 Moons - Secunda - Krensadas] +[40 Moons - Secunda - Loch Hi Rez] +[40 Moons - Secunda - Natural Environments] +[50 Nebula - Better NightSky Enhanced] +[50 Nebula - Brombeck SkyPack] +[50 Nebula - Celestial - Carina] +[50 Nebula - Celestial - Horse Head] +[50 Nebula - Cloud Nebula] +[50 Nebula - Cloud Nebula with star flares] +[50 Nebula - CSC AntennaeGalaxies] +[50 Nebula - CSC Bubble] +[50 Nebula - CSC HorseHeadNGC3576] +[50 Nebula - CSC Lagoon1] +[50 Nebula - CSC LMCmosaic] +[50 Nebula - CSC MilkyWayEarthView] +[50 Nebula - CSC NGC 6188] +[50 Nebula - CSC NGC1333 Reflection Nebula] +[50 Nebula - CSC ngc2207collision] +[50 Nebula - CSC NGC4526] +[50 Nebula - CSC OrionNebula] +[50 Nebula - CSC VeilNebula] +[50 Nebula - Fire & Ice 2 - Blue] +[50 Nebula - Fire & Ice 2 - Red] +[50 Nebula - Fire & Ice 3 - version 1] +[50 Nebula - Fire & Ice 3 - version 2] +[50 Nebula - Fire & Ice 3 - version 3] +[50 Nebula - Natural Environments] +[50 Nebula - New Nebular 1 - High_2048x1024] +[50 Nebula - New Nebular 1 - Ultra_4096x2048] +[50 Nebula - New Nebular 2 High_2048x1024] +[50 Nebula - New Nebular 2 Ultra_4096x2048] +[50 Nebula - Real Night Sky] +[50 Nebula CSC NGC 1365 Island Universe] +[50 Nebula CSC NGC1333 Reflection Nebula] Sorry I'm not going to include links as it would be a mountain of work to get them all checked and in place. The old thread had a bunch of links, but it also only contained a lighter version of this. That said this package is only 90 mb that is really light considering the amount of diversity it gives to the game. Searching under the names sky, stars, moons, and sun and you will find them.
-
+<pre>
+Sky Climates-BAIN
+│
+├[00 Sky Core]
+├[10 Sun - Beaming Sunglare]
+├[10 Sun - Brumbeck Sky Pack]
+├[10 Sun - Natural Environments]
+├[10 Sun - Subtle Sunshine[/url]
+├[10 Sun - Vibrant Sun]
+├[20 Stars - Beautiful Stars]
+├[20 Stars - Brumbeck Sky Pack]
+├[20 Stars - Fire & Ice 2]
+├[20 Stars - Fire & Ice 3 - version 1]
+├[20 Stars - Fire & Ice 3 - version 2]
+├[20 Stars - Natural Environments]
+├[20 Stars - Vibrant Stars]
+├[20 Stars - Wolfen]
+├[21 Stars 0 - Beautiful Stars]
+├[21 Stars 0 - Brumbeck Sky Pack]
+├[21 Stars 0 - Fire & Ice 2]
+├[21 Stars 0 - Fire & Ice 3 - version 1]
+├[21 Stars 0 - Fire & Ice 3 - version 2]
+├[21 Stars 0 - Natural Environments]
+├[21 Stars 0 - Real Night Sky]
+├[21 Stars 0 - Vibrant Stars]
+├[21 Stars 0 - Wolfen]
+├[22 Stars 1 - Beautiful Stars]
+├[22 Stars 1 - Brumbeck Sky Pack]
+├[22 Stars 1 - Fire & Ice 2]
+├[22 Stars 1 - Fire & Ice 3 - version 1]
+├[22 Stars 1 - Fire & Ice 3 - version 2]
+├[22 Stars 1 - Natural Environments]
+├[22 Stars 1 - Real Night Sky]
+├[22 Stars 1 - Vibrant Stars]
+├[23 Stars 2 - Beautiful Stars]
+├[23 Stars 2 - Brumbeck Sky Pack]
+├[23 Stars 2 - Fire & Ice 2]
+├[23 Stars 2 - Fire & Ice 3 - version 1]
+├[23 Stars 2 - Fire & Ice 3 - version 2]
+├[23 Stars 2 - Natural Environments]
+├[23 Stars 2 - Real Night Sky]
+├[23 Stars 2 - Vibrant Stars]
+├[30 Moons - Masser - ANB No Masser]
+├[30 Moons - Masser - Better Nightsky 1]
+├[30 Moons - Masser - Better Nightsky 2]
+├[30 Moons - Masser - Better Nightsky Enhanced]
+├[30 Moons - Masser - Brumbeck Sky Pack]
+├[30 Moons - Masser - Dione]
+├[30 Moons - Masser - Earth Image]
+├[30 Moons - Masser - Far&Away3D]
+├[30 Moons - Masser - Fire & Ice 2 - Blue]
+├[30 Moons - Masser - Fire & Ice 2 - Green]
+├[30 Moons - Masser - Fire & Ice 2 - Red]
+├[30 Moons - Masser - Fire & Ice 3 - Dark Red]
+├[30 Moons - Masser - Hi Rez]
+├[30 Moons - Masser - Io]
+├[30 Moons - Masser - Krensadas]
+├[30 Moons - Masser - Loch Hi Rez]
+├[30 Moons - Masser - Natural Environments]
+├[30 Moons - Masser - Rhea]
+├[40 Moons - Secunda - ANB Earth Moon]
+├[40 Moons - Secunda - ANB Hunters Moon]
+├[40 Moons - Secunda - Better Nightsky 1]
+├[40 Moons - Secunda - Better Nightsky 2]
+├[40 Moons - Secunda - Better Nightsky Enhanced]
+├[40 Moons - Secunda - Brumbeck Sky Pack]
+├[40 Moons - Secunda - Earth Moon Image]
+├[40 Moons - Secunda - Europa]
+├[40 Moons - Secunda - Far&Away3D]
+├[40 Moons - Secunda - Fire & Ice 2]
+├[40 Moons - Secunda - Ganymede]
+├[40 Moons - Secunda - Krensadas]
+├[40 Moons - Secunda - Loch Hi Rez]
+├[40 Moons - Secunda - Natural Environments]
+├[50 Nebula - Better NightSky Enhanced]
+├[50 Nebula - Brombeck SkyPack]
+├[50 Nebula - Celestial - Carina]
+├[50 Nebula - Celestial - Horse Head]
+├[50 Nebula - Cloud Nebula]
+├[50 Nebula - Cloud Nebula with star flares]
+├[50 Nebula - CSC AntennaeGalaxies]
+├[50 Nebula - CSC Bubble]
+├[50 Nebula - CSC HorseHeadNGC3576]
+├[50 Nebula - CSC Lagoon1]
+├[50 Nebula - CSC LMCmosaic]
+├[50 Nebula - CSC MilkyWayEarthView]
+├[50 Nebula - CSC NGC 6188]
+├[50 Nebula - CSC NGC1333 Reflection Nebula]
+├[50 Nebula - CSC ngc2207collision]
+├[50 Nebula - CSC NGC4526]
+├[50 Nebula - CSC OrionNebula]
+├[50 Nebula - CSC VeilNebula]
+├[50 Nebula - Fire & Ice 2 - Blue]
+├[50 Nebula - Fire & Ice 2 - Red]
+├[50 Nebula - Fire & Ice 3 - version 1]
+├[50 Nebula - Fire & Ice 3 - version 2]
+├[50 Nebula - Fire & Ice 3 - version 3]
+├[50 Nebula - Natural Environments]
+├[50 Nebula - New Nebular 1 - High_2048x1024]
+├[50 Nebula - New Nebular 1 - Ultra_4096x2048]
+├[50 Nebula - New Nebular 2 High_2048x1024]
+├[50 Nebula - New Nebular 2 Ultra_4096x2048]
+├[50 Nebula - Real Night Sky]
+├[50 Nebula CSC NGC 1365 Island Universe]
+├[50 Nebula CSC NGC1333 Reflection Nebula] Sorry I'm not going to include links as it would be a mountain of work to get them all checked and in place. The old thread had a bunch of links, but it also only contained a lighter version of this. That said this package is only 90 mb that is really light considering the amount of diversity it gives to the game. Searching under the names sky, stars, moons, and sun and you will find them. 
+</pre>
 
 I may later add other example packages later.
 
+= BAIN Wizards
 
-Edited by Psymon, 30 May 2011 - 02:44 AM.
-
-
-BAIN WizardsMany familiar with Oblivion Mod Manager had lamented that BAIN lacked the ability to provide scripted installations of mods that OBMM provided. OBMM is able to modify the Oblivion ini, Mod ini files, rename plugins, arrange package contents and other related goodies that have made it so popular over the years.In response developers of BAIN have been laboring to create scripted installs with BAIN packages. For a while the most one could have hoped for is what was called triple packaging which meant BAIN ready, OMOD scripted, and packaged for manual installation ease (if that makes sense).But now BAIN scripted installs are here and they are called BAIN wizards. As this thread is mostly directed at mod users the inner workings of how to create BAIN wizards or edit them is beyond the scope of this thread (and my ability to describe). One of the main developers of Wrye Bash, Lojack, has his own thread for BAIN wizards. If you have questions about current wizards or feature requests that is the place to take them.Metallicow has created WizBAIN a utility to help in the creation of BAIN wizards ... and other things? Forum ThreadMalonn is also collecting together BAIN wizard scripts and script ideas: BAIN Wizard Installation ProjectI will say that I've been very impressed with the progress with this feature. There are several very well put together mods that make use of BAIN wizards and here is a list of some of the best:Animated Windows Lighting systemReally AEVWDAll NAturalBetter CitiesLush and Gaudy landscapes and Grass and Tree ModWith Wrye Bash 292+ Archives that have a BAIN wizard will show up in the BAIN tab as having a magic wand superimposed over them. To begin the Wizard you right click on the package in question and scroll down to where it says wizard and click. This should prompt the wizard to start. At this point the wizard will prompt you for options based on your load order and preferences. It will not install the mod for you just help you choose what packages to install and you must then install the package as normal.==================================================BAIN Reading OMOD conversion filesDevelopment on Wrye bash being able to read OMOD conversion files and therefore install OMODs (archives specifically for Oblivion Mod Manager) is happening! Stay tuned as this may be incorporated into the next version of bash (292)!==================================================BAIN conversion filesBAIN conversion files are encoded instructions one can create for use with Wrye Bash/BAIN that recombine already existing packages in new ways. These can be handy for making a set of instructions to combine several premade packages into a BAIN compilation.There is a set of instructions on the Wrye Bash readme for both creation and use of them. What is required is that a user download the archives, add them to their installers directory. With this in mind then it does require quite a bit of work to get them operational with the advantage that one does not need to offer or upload the mods that are going to be combined (although links might help).Waruddar writes:
+Many familiar with Oblivion Mod Manager had lamented that BAIN lacked the ability to provide scripted installations of mods that OBMM provided. OBMM is able to modify the Oblivion ini, Mod ini files, rename plugins, arrange package contents and other related goodies that have made it so popular over the years.In response developers of BAIN have been laboring to create scripted installs with BAIN packages. For a while the most one could have hoped for is what was called triple packaging which meant BAIN ready, OMOD scripted, and packaged for manual installation ease (if that makes sense).But now BAIN scripted installs are here and they are called BAIN wizards. As this thread is mostly directed at mod users the inner workings of how to create BAIN wizards or edit them is beyond the scope of this thread (and my ability to describe). One of the main developers of Wrye Bash, Lojack, has his own thread for BAIN wizards. If you have questions about current wizards or feature requests that is the place to take them.Metallicow has created WizBAIN a utility to help in the creation of BAIN wizards ... and other things? Forum ThreadMalonn is also collecting together BAIN wizard scripts and script ideas: BAIN Wizard Installation ProjectI will say that I've been very impressed with the progress with this feature. There are several very well put together mods that make use of BAIN wizards and here is a list of some of the best:Animated Windows Lighting systemReally AEVWDAll NAturalBetter CitiesLush and Gaudy landscapes and Grass and Tree ModWith Wrye Bash 292+ Archives that have a BAIN wizard will show up in the BAIN tab as having a magic wand superimposed over them. To begin the Wizard you right click on the package in question and scroll down to where it says wizard and click. This should prompt the wizard to start. At this point the wizard will prompt you for options based on your load order and preferences. It will not install the mod for you just help you choose what packages to install and you must then install the package as normal.==================================================BAIN Reading OMOD conversion filesDevelopment on Wrye bash being able to read OMOD conversion files and therefore install OMODs (archives specifically for Oblivion Mod Manager) is happening! Stay tuned as this may be incorporated into the next version of bash (292)!==================================================BAIN conversion filesBAIN conversion files are encoded instructions one can create for use with Wrye Bash/BAIN that recombine already existing packages in new ways. These can be handy for making a set of instructions to combine several premade packages into a BAIN compilation.There is a set of instructions on the Wrye Bash readme for both creation and use of them. What is required is that a user download the archives, add them to their installers directory. With this in mind then it does require quite a bit of work to get them operational with the advantage that one does not need to offer or upload the mods that are going to be combined (although links might help).Waruddar writes:
 
 The premade packages do not have to be BAIN friendly. In fact, the entire purpose of BCFs is to convert non-friendly packages into friendly packages in such a way that minimizes bandwidth and preserves author's rights.Without them, there are only two ways to distribute converted non-friendly packages:
 
