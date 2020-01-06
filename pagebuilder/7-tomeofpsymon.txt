@@ -134,7 +134,7 @@ I'm often told that I'm too wordy, so if you prefer pictures then check out:
 Perhaps someday these two guides can be merged!
 
 Many a great resource and more Wrye Bash instructions for the mod user:
-TESCosi by Tomlong
+[[http://tesivpositive.animolious.com/ | TESCosi by Tomlong]]<font =red>NOTE: Asks to install a firefox extension.</font>
 ... soon to be available in Wiki format. [[http://forums.bethsoft.com/topic/1094618-tesivpositive-site-redesign/ | Current forum thread]].
 
 [[https://www.nexusmods.com/oblivion/mods/22368 | Wrye Bash Main download]]
@@ -377,19 +377,19 @@ This was the option I chose for my oblivion install and it consumed enormous amo
 
 What follows are links I'd highly recommend reading if you are thinking of a complete reinstall and transition to BAIN:
 
-Tomlong75210's helpful site TESIV: POSItive this site is growing with good information.
-There is a section on BAIN Installation of Modded Oblivion that promises to be very helpful.
-UESP Tech Support
-50_Steps To CTD (Almost) Free FCOM+++ Game (good advice even if not installing FCOM)
-Windows Vista Performance Guide For those installing on a Windows7 or Vista Platform and have UAC concerns: The basic instructions are to install these games outside of default locations and thereby circumventing the need for elevated privileges.
-The Oblivion Performance Project (some outdated information use with caution, but some gold too).
-PyFFI and other optimizations and A new PyFFI tool by Ulrim.
+Tomlong75210's helpful site ([[http://tesivpositive.animolious.com/ | TESCosi by Tomlong]]<font =red>NOTE: Asks to install a firefox extension)</font> this site is growing with good information.
+There is a section on [[http://tesivpositive.animolious.com/?page=bain_installation | BAIN Installation of Modded Oblivion]]<font red>NOTE: Same warning</font> that promises to be very helpful.
+[[https://en.uesp.net/wiki/Oblivion:Technical_Support | UESP Tech Support]]
+[[http://forums.bethsoft.com/topic/1119325-50steps-to-stable-fcom/ | 50_Steps To CTD (Almost) Free FCOM+++ Game]] (good advice even if not installing FCOM)
+[[http://forums.bethsoft.com/topic/762701-windows-vista-performance-guide/ | Windows Vista Performance Guide]] For those installing on a Windows7 or Vista Platform and have UAC concerns: The basic instructions are to install these games outside of default locations and thereby circumventing the need for elevated privileges.
+[[http://forums.bethsoft.com/topic/881204-the-oblivion-performance-project-topp/ | The Oblivion Performance Project]] (some outdated information use with caution, but some gold too).
+[[http://forums.bethsoft.com/topic/1172342-relzwipzpyffi-python-file-format-interface/ | PyFFI and other optimizations]] and [[http://forums.bethsoft.com/topic/1172029-relz-oblivion-pyffi-optimization-kit/ | A new PyFFI tool]] by Ulrim.
 
-For more information about mod conflicts please read this pinned thread: Compatibility and you
+For more information about mod conflicts please read this pinned thread: [[http://forums.bethsoft.com/topic/775917-compatibility-and-you/ | Compatibility and you]]
 
-Examples that Wrye made to illustrate how to package mods in order to be BAIN friendly: BAIN Mods and again in his BAIN for Wrye Mash thread he gives a lot of advice on best practices. The BAIN CS Wiki page was also largely written by Wrye.
+Examples that Wrye made to illustrate how to package mods in order to be BAIN friendly: [https://www.nexusmods.com/oblivion/mods/22170 | BAIN Mods]] and again in his [[http://forums.bethsoft.com/topic/952489-relz-bain-for-mash/ | BAIN for Wrye Mash thread]] he gives a lot of advice on best practices. The [[https://cs.elderscrolls.com/index.php?title=Bain | BAIN CS Wiki]] page was also largely written by Wrye.
 
-The best advice managing install orders: Read the Readme!! Next, Use BOSS - both of these overlooked approaches can also give information on how to organize packages.
+The best advice managing install orders: Read the Readme!! Next, Use [[https://github.com/boss-developers/boss/releases/tag/v2.3.0 | BOSS]] - both of these overlooked approaches can also give information on how to organize packages.
 
 = Complex BAIN archives 
 Approaching the ability to make ... Custom BAIN Projects.
