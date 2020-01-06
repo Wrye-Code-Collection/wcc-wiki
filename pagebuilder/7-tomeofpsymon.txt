@@ -394,134 +394,167 @@ The best advice managing install orders: Read the Readme!! Next, Use [[https://g
 = Complex BAIN archives 
 Approaching the ability to make ... Custom BAIN Projects.
 
-By now one should be familiar with the game directory pattern, how mods are often packaged and how to examine mod packaging, What installers do and in particular how the Wrye Bash installers tab operates. Spend some time getting familiar with these ideas and steps and before you know it you will be skipping over the first two posts annoyed by the noobish instructions in no time. This post is really what most of this thread was all about.Examining BAIN archivesBAIN has a feature that really expands upon what an installer does and what the currently available versions of OBMM cannot do. This is the ability to combine packages (of mods) together in novel combinations. With this feature one could then combine mods together in such a way as to make each addition an option that can be installed or not. Really the only thing limiting the combinations is that the packages are read in a hierarchical manner and one's own imagination about how to combine or break apart archives into sub-packages. Since BAIN (like OBMM) can read one layer further into a packages directory to find the recognized structure of the data directory one can then add other directories that have the similar structure.Taking our Mod of Awesomeness example above one could then assign an alpha-numeric prefix to each sub-package then as long as each new sub-package has such a prefix then it will be recognized by BAIN and the alpha-numeric ordering will then be the order by which these packages will be installed. The reason for Alpha-Numeric is explained by PacificMorrowind:
+By now one should be familiar with the game directory pattern, how mods are often packaged and how to examine mod packaging, What installers do and in particular how the Wrye Bash installers tab operates. Spend some time getting familiar with these ideas and steps and before you know it you will be skipping over the first two posts annoyed by the noobish instructions in no time. This post is really what most of [[http://forums.bethsoft.com/topic/957424-custom-bain-projects/ | this thread]] was all about.
 
+Examining BAIN archives
+
+BAIN has a feature that really expands upon what an installer does and what the currently available versions of OBMM cannot do. This is the ability to combine packages (of mods) together in novel combinations. With this feature one could then combine mods together in such a way as to make each addition an option that can be installed or not. Really the only thing limiting the combinations is that the packages are read in a hierarchical manner and one's own imagination about how to combine or break apart archives into sub-packages. Since BAIN (like OBMM) can read one layer further into a packages directory to find the recognized structure of the data directory one can then add other directories that have the similar structure.Taking our Mod of Awesomeness example above one could then assign an alpha-numeric prefix to each sub-package then as long as each new sub-package has such a prefix then it will be recognized by BAIN and the alpha-numeric ordering will then be the order by which these packages will be installed. The reason for Alpha-Numeric is explained by PacificMorrowind:
+
+<pre>
 the reason is that in computers (at least generally and is certainly the standard in UIs) numbers are sorted before letters... same as underscores etc. (ie like in Windows Explore defaults sort is )
+</pre>
 
 So, with the lower numbers/letters being installed first (being higher in the install order) and the higher number/letters being installed last (being lower in the install order). This basically allows for micro install order options to be embedded in larger packages.
+
+<pre>
 Mods of Awesomeness-BAIN
-+[00 Mod of Awesomeness Core]
-| +[Docs]
-| | +[Quests]
-| | +MoA_Readme
-| +[Meshes]
-| +[Music]
-| +[Sound]
-| +[Textures]
-| +Mod of Awesomeness.esm
-| +Mod of Awesomeness.esp
-+[10 Mod of Awesomeness Part 2]
-| +[Docs]
-| | +[Quests]
-| | + MoA-2_Readme
-| +[Meshes]
-| +[Music]
-| +[Sound]
-| +[Textures]
-| +Mod of Awesomeness part 2.esp
+   ├[00 Mod of Awesomeness Core]
+   │   ├[Docs]
+   │   │   └[Quests]
+   │   │       └MoA_Readme
+   │   ├[Meshes]
+   │   ├[Music]
+   │   ├[Sound]
+   │   ├[Textures]
+   │   └Mod of Awesomeness.esm
+   │   └Mod of Awesomeness.esp
+   ├[10 Mod of Awesomeness Part 2]
+   │   ├[Docs]
+   │   │   └[Quests]
+   │   │       └ MoA-2_Readme 
+   │   ├[Meshes]
+   │   ├[Music]
+   │   ├[Sound]
+   │   ├[Textures]
+   │   └Mod of Awesomeness part 2.esp
+</pre>
 
-The adding of the BAIN suffix is not really necessary it is one method by which you can track what packages you create as opposed to the ones made by others or it can be used to signify that the package is BAIN ready. Notice I make further directories for the readme which makes them much easier to find. MoA part 2 could easily be an alternate version and so if the esp are named the same then the second loading version would win the conflict and if all the replacer meshes and textures are identical then there would be no need to package them twice and the second sub package could contain only what is different from the core package. These sub-packages will show up in the sub-packages filter and you then have them as options to install. Pros and cons of combining mods into complex archive packagesThe advantages to this are numerous. The primary advantage that it provides is that you can reduce the amount of packages in the installers directory and this makes viewing and organizing then easier. Other advantages include:
+The adding of the BAIN suffix is not really necessary it is one method by which you can track what packages you create as opposed to the ones made by others or it can be used to signify that the package is BAIN ready. Notice I make further directories for the readme which makes them much easier to find. MoA part 2 could easily be an alternate version and so if the esp are named the same then the second loading version would win the conflict and if all the replacer meshes and textures are identical then there would be no need to package them twice and the second sub package could contain only what is different from the core package. These sub-packages will show up in the sub-packages filter and you then have them as options to install. 
 
-Combine similar mod archives together for central access.
-Combine related mod archives together for central access.
-Combine many disparate yet miniscule mods together instead of having your install order cluttered by packages as simple as a set of three replacers for repair hammers.
-Combine variations on mods in such a way that one could have the core aspects available and many other versions available with the ability to have immediate implementation.
-Combine whatever you like.
+Pros and cons of combining mods into complex archive packages
+
+The advantages to this are numerous. The primary advantage that it provides is that you can reduce the amount of packages in the installers directory and this makes viewing and organizing then easier. Other advantages include:
+
+* Combine similar mod archives together for central access.
+* Combine related mod archives together for central access.
+* Combine many disparate yet miniscule mods together instead of having your install order cluttered by packages as simple as a set of three replacers for repair hammers.
+* Combine variations on mods in such a way that one could have the core aspects available and many other versions available with the ability to have immediate implementation.
+* Combine whatever you like.
 
 Disadvantages include:
 
-The sub-tabs that keep track of various installed yet separate packages will not read the differences between sub-packages of the same package. It will see all the data contained as one package. The good news is that when comparing to other packages it will only take into account what is installed from each package.
-It is up to the user to make sure that the packages are packed rightly and that they do not inherently conflict in a manner not intended or wanted.
-If updating any portion is necessary then rezipping/repackaging the entire package is also necessary.
-Perhaps forgetting what you packaged?
+* The sub-tabs that keep track of various installed yet separate packages will not read the differences between sub-packages of the same package. It will see all the data contained as one package. The good news is that when comparing to other packages it will only take into account what is installed from each package.
+* It is up to the user to make sure that the packages are packed rightly and that they do not inherently conflict in a manner not intended or wanted.
+* If updating any portion is necessary then rezipping/repackaging the entire package is also necessary.
+* Perhaps forgetting what you packaged?
 
-For myself the advantages far outweigh the disadvantages. Taking a real world example of the available weather overhaul called All Natural (note it currently has a fix file available but usually not and it is closing to a more complete version one). Extracting the package we see that it is a complex BAIN package:
+For myself the advantages far outweigh the disadvantages. 
+
+Taking a real world example of the available weather overhaul called All Natural (note it currently has a fix file available but usually not and it is closing to a more complete version one). Extracting the package we see that it is a complex BAIN package:
+
+<pre>
 All Natural-18305.7z
-+ -- Screenshots
-+[00 Core]
-+[01 Real Lights]
-+[02 Bash Filter For Various Mods]
-+[03 Nascosto Isles Weather Patch]
-+[04 Kvatch Rebuilt Patch]
-+[05 Oblivifall - Losing My Religion Patch]
-+[06 MMM Patch]
-+omod conversion data
-+All Natural Readme.rtf
-+Wizard.txt
-Upon further examination we can see that the individual packages are laid out following commonly adopted rules of BAIN packaging. The mandatory files are in the 00 sub-package. The optional files are in subsequent packages. Also the authors have included extra content of a Wrye Bash filter for use in importing weather sounds to mod added interiors and patches for the mods Nascosto Isles and Kvatch Rebuilt. This is great as it cuts down on other packages just for those patches and extra content. Also of note is the fact that this mod is actually packaged as a triple compliant BAIN package - notice that there is a folder called omod conversion data. What this means is that the package is also ready to be converted into an OMOD for use with OBMM. This means that the OMOD script will seek out the data from the given folders for installing based upon the choices given in the OMOD installation. This is one of the very advanced BAIN ready mods available (and the best weather mod imo). Also note that the twoo hash marks in front of the screenshots folder mean that this sub-package folder will not even be seen by BAIN so you don't have to worry about your data folder being cluttered with screenshots on a mod you already decided was cool.Repackaging a complex archive exampleTaking the above information and considerations we could do this ourselves with existing mods. To illustrate this I will share my repackaging of the quest mod Et in Arkay in Ego I repackaged the mod and combined it with various available patches like so:
+   ├ -- Screenshots
+   ├[00 Core]
+   ├[01 Real Lights]
+   ├[02 Bash Filter For Various Mods]
+   ├[03 Nascosto Isles Weather Patch]
+   ├[04 Kvatch Rebuilt Patch]
+   ├[05 Oblivifall - Losing My Religion Patch]
+   ├[06 MMM Patch]
+   ├omod conversion data
+   ├All Natural Readme.rtf
+   ├Wizard.txt
+</pre>
+
+Upon further examination we can see that the individual packages are laid out following commonly adopted rules of BAIN packaging. The mandatory files are in the 00 sub-package. The optional files are in subsequent packages. Also the authors have included extra content of a Wrye Bash filter for use in importing weather sounds to mod added interiors and patches for the mods Nascosto Isles and Kvatch Rebuilt. This is great as it cuts down on other packages just for those patches and extra content. Also of note is the fact that this mod is actually packaged as a [[https://cs.elderscrolls.com/index.php?title=Bain#Triple_.28Bain.2FOBMM.2FManual.29_Archives | triple compliant BAIN package]] - notice that there is a folder called omod conversion data. What this means is that the package is also ready to be converted into an OMOD for use with OBMM. This means that the OMOD script will seek out the data from the given folders for installing based upon the choices given in the OMOD installation. This is one of the very advanced BAIN ready mods available (and the best weather mod imo). Also note that the twoo hash marks in front of the screenshots folder mean that this sub-package folder will not even be seen by BAIN so you don't have to worry about your data folder being cluttered with screenshots on a mod you already decided was cool.
+
+Repackaging a complex archive exampleTaking the above information and considerations we could do this ourselves with existing mods. To illustrate this I will share my repackaging of the quest mod [[https://www.nexusmods.com/oblivion/mods/21816 | Et in Arkay in Ego]] I repackaged the mod and combined it with various available patches like so:
+
+<pre>
 Et in Arkay Ego-BAIN
-+[00 Et in Arkay Ego Core]
-| +[Docs]
-| | +[Quests]
-| | +EiAmod V1-1_Readme
-| +[Meshes]
-| +[Music]
-| +[Sound]
-| +[Textures]
-| +EiAmod.esp
-+[10 Spiritus Version] - contains only the portions necessary for this au natural version
-| +[Docs]
-| | +[Quests]
-| | +EiAmod V1-1 (spiritus)_Readme
-| +[Meshes]
-| +[Textures]
-| +EiAmod.esp
-| +MaleBodyReplacerV3.esp
-| +TFF_FantasyFigures_Base.esp
-+[20 Shivering Isles Patch]
-| +[Docs]
-| | +[Quests]
-| | +EiAmod_ShiveringIsles_Readme
-| +EiAmod_ShiveringIsles
-+[25 Choices and Consequences Patch]
-| +[Docs]
-| | +[Quests]
-| | +EiAmod_ChoicesandConsequences_Readme
-| +EiAmod_ChoicesandConsequences.esp
-+[30 [EiA delayer] - this is an alternate delayer found here: http://www.tesnexus.com/downloads/file.php?id=25859
-| +[Docs]
-| | +[Quests]
-| | +EiAmod_Knights_readme
-| +EiAmod_Knights.esp
-+[30 KotN Patch] - this original delays the mod till after the completion of KoN available only from authors.
-| +[Docs]
-| | +[Quests]
-| | +EiAmod_Knights_readme
-| +EiAmod_Knights.esp
-+[35 [TOTF Patch]: http://www.tesnexus.com/downloads/file.php?id=24624
-| +[Docs]
-| | +[Quests]
-| | +EiA+TOTF Patch_readme
-| +TOTF-EiAE Patch.esp
-+[50 [UL Patches]: http://www.tesnexus.com/downloads/file.php?id=13834
-| +[Docs]
-| | +[Unique Landscapes]
-| | +EtinArkay-UniqueLandscapes patches Readme
-| +EtInArkay-BravilBarrowfields patch.esp
-| +EtInArkay-CheydinhalFalls patch.esp
-| +EtInArkay-ColovianHighlands patch.esp
-+[50 UL Patches Merged] - made by myself using the above as sources.
-| +[Docs]
-| | +[Unique Landscapes]
-| | +EtinArkay-UniqueLandscapes patches Readme
-| +EtInArkay-UniqueLandscapes Merged patch.esp
-With this all in one package you will see several features. The core package number 00 to make sure it is always at the top contains all the main replacers needed. The next sub=package contains an esp that would overwrite the esp in the core sub-package if chosen. It also contains supplementary body replacer material for use with that version (although probably best to use other updated body replacers and only the esp here). The next two subpackages are available at the main download page and are to be used only if SI or C&C are also loaded. There are two numbered 30 sub-packages this is a method of saying that the choice is either/or and that one should not install both. The first one is part of another package of quest delayers made by statttis and the second one is (or was) available only by request from the authors. Since I would not want both installed they got the same number sub-package. The next package is another patch made by somebodys_kid for the mod Tears of the Fiend. The next sub-package is a the collected Unique Landscapes patches made by Vorians. And the final sub-package was a merger of the UL patches that is packaged with the other UL patches. It is likewise number the same as the UL patches to indicate that it should not be installed along with the normal UL patches. Notice also, as above, I took renaming the readme into my own hands and added further directories to the docs folder to better organize the ever growing library of readmes (you know ... those things we read after all else fails ) This package therefore contains several examples of the benefits and some of the rules necessary for constructing complex BAIN packages/projects. Later in other posts I will illustrate much more elaborate combinations of mods.
+   ├[00 Et in Arkay Ego Core]
+   │   ├[Docs]
+   │   │   └[Quests]
+   │   │       └EiAmod V1-1_Readme
+   │   ├[Meshes]
+   │   ├[Music]
+   │   ├[Sound]
+   │   ├[Textures]
+   │   └EiAmod.esp
+   ├[10 Spiritus Version] - contains only the portions necessary for this au natural version
+   │   ├[Docs]
+   │   │   └[Quests]
+   │   │       └EiAmod V1-1 (spiritus)_Readme
+   │   ├[Meshes]
+   │   ├[Textures]
+   │   ├EiAmod.esp
+   │   ├MaleBodyReplacerV3.esp
+   │   └TFF_FantasyFigures_Base.esp
+   ├[20 Shivering Isles Patch]
+   │   ├[Docs]
+   │   │   └[Quests]
+   │   │       └EiAmod_ShiveringIsles_Readme
+   │   └EiAmod_ShiveringIsles
+   ├[25 Choices and Consequences Patch]
+   │   ├[Docs]
+   │   │   └[Quests]
+   │   │       └EiAmod_ChoicesandConsequences_Readme
+   │   └EiAmod_ChoicesandConsequences.esp
+   ├[30 [EiA delayer] -  this is an alternate delayer found here: http://www.tesnexus.com/downloads/file.php?id=25859
+   │   ├[Docs]
+   │   │   └[Quests]
+   │   │       └EiAmod_Knights_readme
+   │   └EiAmod_Knights.esp
+   ├[30 KotN Patch] -  this original delays the mod till after the completion of KoN available only from authors.
+   │   ├[Docs]
+   │   │   └[Quests]
+   │   │       └EiAmod_Knights_readme
+   │   └EiAmod_Knights.esp
+   ├[35 [TOTF Patch]: http://www.tesnexus.com/downloads/file.php?id=24624
+   │   ├[Docs]
+   │   │   └[Quests]
+   │   │       └EiA+TOTF Patch_readme
+   │   └TOTF-EiAE Patch.esp
+   ├[50 [UL Patches]: http://www.tesnexus.com/downloads/file.php?id=13834
+   │   ├[Docs]
+   │   │   └[Unique Landscapes]
+   │   │       └EtinArkay-UniqueLandscapes patches Readme
+   │   ├EtInArkay-BravilBarrowfields patch.esp
+   │   ├EtInArkay-CheydinhalFalls patch.esp
+   │   └EtInArkay-ColovianHighlands patch.esp
+   ├[50 UL Patches Merged] - made by myself using the above as sources.
+   │   ├[Docs]
+   │   │   └[Unique Landscapes]
+   │   │       └EtinArkay-UniqueLandscapes patches Readme
+   │   └EtInArkay-UniqueLandscapes Merged patch.esp
+</pre>
+
+With this all in one package you will see several features. The core package number 00 to make sure it is always at the top contains all the main replacers needed. The next sub=package contains an esp that would overwrite the esp in the core sub-package if chosen. It also contains supplementary body replacer material for use with that version (although probably best to use other updated body replacers and only the esp here). The next two subpackages are available at the main download page and are to be used only if SI or C&C are also loaded. There are two numbered 30 sub-packages this is a method of saying that the choice is either/or and that one should not install both. The first one is part of another package of quest delayers made by statttis and the second one is (or was) available only by request from the authors. Since I would not want both installed they got the same number sub-package. The next package is another patch made by somebodys_kid for the mod Tears of the Fiend. The next sub-package is a the collected Unique Landscapes patches made by Vorians. And the final sub-package was a merger of the UL patches that is packaged with the other UL patches. It is likewise number the same as the UL patches to indicate that it should not be installed along with the normal UL patches. Notice also, as above, I took renaming the readme into my own hands and added further directories to the docs folder to better organize the ever growing library of readmes (you know ... those things we read after all else fails 
+
+This package therefore contains several examples of the benefits and some of the rules necessary for constructing complex BAIN packages/projects. Later in other posts I will illustrate much more elaborate combinations of mods.
 
 You will find as you go on that there are certain files that BAIN will not install:
 
-It will not install exe files.
-It will not install archives in a further embedded, zipped/compressed state.
-It will not install or more importantly merge and manage Shader files.
+* It will not install exe files.
+* It will not install archives in a further embedded, zipped/compressed state.
+* It will not install or more importantly merge and manage Shader files.
 
 ... this is where OBMM performs very well.
 
-If the package contains all the normal types of files that are found in 95% of all mods then there should be no issue as long as it is formatted appropriately. Sometimes, though, a package or mod will require a unique folder to be installed under the data directory folder and it will appear that BAIN is refusing to install it. this is most likely remedied though the installer context menu. Find the problem package and right click on it a context menu will appear and then choose the option 'has extra directories.' In most cases this should resolve the issue.The context menu has other options as well. Please read the Wrye Bash readme (the most current version packaged with the latest Wrye Bash and accessed with ? button on bottom toolbar of Wrye Bash) for more information. Remember that each package has a context window and the top bar if the package window has a different bar with some global options available for further filtering and package control: The single most important thing to learn is package colors which indicate the health and status of a package and thereby queue one to read the sub-tabs for more information. After adding and moving packages the most common command you will use is anneal to correct the install of various data files. Just moving packages around in the install order will not automatically remove or add data files one must use the anneal command for that to happen. There is a global auto-anneal feature on the top context menu, but I've still seen examples where it did not kick in and so recommend annealing individual packages anytime you see yellow, red, or orange. These colors may not go away as one package may override due to being at a lower position, but there may be parts that should still be annealed and can be annealed.Read the Readme!! and Use BOSS - both of the overlooked approaches can also give information on how to organize packages and sub-packages.
+If the package contains all the normal types of files that are found in 95% of all mods then there should be no issue as long as it is formatted appropriately. Sometimes, though, a package or mod will require a unique folder to be installed under the data directory folder and it will appear that BAIN is refusing to install it. this is most likely remedied though the installer context menu. Find the problem package and right click on it a context menu will appear and then choose the option 'has extra directories.' In most cases this should resolve the issue.
 
+The context menu has other options as well. Please read the [[http://wryemusings.com/Wrye%20Bash.html#Overview | Wrye Bash readme]] (the most current version packaged with the latest Wrye Bash and accessed with ? button on bottom toolbar of Wrye Bash) for more information. Remember that each package has a context window and the top bar if the package window has a different bar with some global options available for further filtering and package control:
 
-Edited by Psymon, 30 May 2011 - 01:45 AM.
+The single most important thing to learn is package colors which indicate the health and status of a package and thereby queue one to read the sub-tabs for more information. After adding and moving packages the most common command you will use is anneal to correct the install of various data files. Just moving packages around in the install order will not automatically remove or add data files one must use the anneal command for that to happen. There is a global auto-anneal feature on the top context menu, but I've still seen examples where it did not kick in and so recommend annealing individual packages anytime you see yellow, red, or orange. These colors may not go away as one package may override due to being at a lower position, but there may be parts that should still be annealed and can be annealed.
 
+Read the Readme!! and Use [[https://github.com/boss-developers/boss/releases/tag/v2.3.0 | BOSS]] - both of the overlooked approaches can also give information on how to organize packages and sub-packages.
 
-Managing Installer PackagesInstall Order:Install order is an important part of planning a modded game of Oblivion. Install order is different from what is commonly called load order because it deals with the entire mod including any replacer files (which could include meshes , textures, and sounds) or extra files (added meshes , textures, sounds, or any other number of files). Load order is about how the game reads the instructions from the esm and esp to run the game engine; whereas, install order is about what files are in place to be referenced by the game engine.There are several factors to consider. Many mods may attempt to replace the same files or even add variants of the same extra file. It is important to remain aware of this and it is especially salient with meshes and textures as they can have a symbiotic relationship (certain meshes require certain textures). Another important variant of this is LandscapeLOD meshes and textures. Another common consideration is that there are often base replacers which you want in place but that are OK to overwrite by other replacers or the base replacers may contain more files while the other replacer only handles a few variants. From this then a logic about install orders has been promoted. Some of the mods though are considered essential (and that is often debatable as well), and some of the mods are considered elective. This concern for maintaining install order integrity takes on varying levels of difficulty depending upon the method of installation. Basically better tools give better ease. With manual install it is you that will have to track everything. With OBMM then it is you who will have to track everything, but OBMM automates a lot of the work. BAIN offers dynamic, in the moment, conflict reports and the ability to move BAIN packages around in the install order much like esm and esp are shifted around in the load order. If we look at BOSS master list we also see several categories categories for load ordering which I've reduced down to this more general list:
+= Managing Installer Packages
+
+Install Order:
+
+Install order is an important part of planning a modded game of Oblivion. Install order is different from what is commonly called load order because it deals with the entire mod including any replacer files (which could include meshes , textures, and sounds) or extra files (added meshes , textures, sounds, or any other number of files). Load order is about how the game reads the instructions from the esm and esp to run the game engine; whereas, install order is about what files are in place to be referenced by the game engine.There are several factors to consider. Many mods may attempt to replace the same files or even add variants of the same extra file. It is important to remain aware of this and it is especially salient with meshes and textures as they can have a symbiotic relationship (certain meshes require certain textures). Another important variant of this is LandscapeLOD meshes and textures. Another common consideration is that there are often base replacers which you want in place but that are OK to overwrite by other replacers or the base replacers may contain more files while the other replacer only handles a few variants. From this then a logic about install orders has been promoted. Some of the mods though are considered essential (and that is often debatable as well), and some of the mods are considered elective. This concern for maintaining install order integrity takes on varying levels of difficulty depending upon the method of installation. Basically better tools give better ease. With manual install it is you that will have to track everything. With OBMM then it is you who will have to track everything, but OBMM automates a lot of the work. BAIN offers dynamic, in the moment, conflict reports and the ability to move BAIN packages around in the install order much like esm and esp are shifted around in the load order. If we look at BOSS master list we also see several categories categories for load ordering which I've reduced down to this more general list:
 Earliest mods
 NPC face mods
 UOP & Vanilla fixes
