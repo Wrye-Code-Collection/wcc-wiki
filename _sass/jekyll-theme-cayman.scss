@@ -88,6 +88,27 @@ a {
     text-decoration: underline;
   }
 }
+a.blue {
+  color: var(--Nehrim-Blue);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+a.green {
+  color: var(--Nehrim-Green);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+a.orange {
+  color: var(--Nehrim-Orange);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 .btn {
   display: inline-block;
@@ -538,6 +559,15 @@ input[id^="spoiler"]:checked + label + .spoiler{
 
 font.redfont {
   color: var(--warning-text-red);
+}
+font.bluefont {
+  color: var(--Nehrim-Blue);
+}
+font.greenfont {
+  color: var(--Nehrim-Green);
+}
+font.orangefont {
+  color: var(--Nehrim-Orange);
 }
 
 .main-content {

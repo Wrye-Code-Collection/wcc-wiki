@@ -472,14 +472,36 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     rePar = re.compile(r'^([a-zA-Z]|\*\*|~~|__)')
     reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}$)')
 
+    def check_color(text):
+        fontClass = ''
+        if '{{a:green}}' in text:
+            fontClass = 'class="green"'
+        if '{{a:blue}}' in text:
+            fontClass = 'class="blue"'
+        if '{{a:orange}}' in text:
+            fontClass = 'class="orange"'
+        return fontClass
+
+    def strip_color(text):
+        temp = text
+        if '{{a:green}}' in text:
+            temp = re.sub('{{a:green}}', '', text)
+        if '{{a:blue}}' in text:
+            temp = re.sub('{{a:blue}}', '', text)
+        if '{{a:orange}}' in text:
+            temp = re.sub('{{a:orange}}', '', text)
+        return temp
+
     def linkReplace(maObject):
+        fontClass = check_color(maObject.string)
         address = text = maObject.group(1).strip()
         if '|' in text:
             (address, text) = [chunk.strip() for chunk in text.split('|', 1)]
             if address == '#': address += reWd.sub('', text)
         if not reFullLink.search(address):
             address = address + '.html'
-        return '<a href="%s">%s</a>' % (address, text)
+        text = strip_color(text)
+        return '<a {} href="{}">{}</a>'.format(fontClass, address, text)
 
     # --Tags
     reAnchorTag = re.compile('{{A:(.+?)}}')

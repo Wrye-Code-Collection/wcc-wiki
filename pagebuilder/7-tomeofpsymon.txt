@@ -1145,7 +1145,7 @@ For those that prefer the Mod Manager approach there is a decent port of it here
 
 There are so many Morrowind Tutorials and mod use instructions pages. Here are only a few:
 [[http://forums.bethsoft.com/topic/1060141-mod-recommendations-for-new-players/ | Mod Recommendations for New Players]]
-M[[https://www.mwmythicmods.com/ | orrowind Mythic Mods]] -has many tutorials for the utilities.
+[[https://www.mwmythicmods.com/ | Morrowind Mythic Mods]] has many tutorials for the utilities.
 [[https://www.mwmythicmods.com/Gluby/Gluby_Main.htm | Gluby's Guide to a Modded Morrowind]] - great if new to Morrowind.
 
 = Managing BAIN with Multiple Installs
@@ -1655,23 +1655,23 @@ This may not matter for badly ported mods that still reference or duplicate the 
 This could potentially turn into a very long post and I make no commitments to long term tending to this list. I will start it though and update it sporadically as people post success and news.
 
 I will borrow from Running4Covers list in using colors to code what kind of mod a plugin is.
-* Green means the mod will work with Nehrim and was designed for Nehrim.
-* Blue means the mod will work with Nehrim because it has no master and could work with Nehrim or Oblivion.
-* Orange means that the mod will work with Nehrim after reassigning the master as described in post two.
+* <font class="greenfont">Green</font> means the mod will work with Nehrim and was designed for Nehrim.
+* <font class="bluefont">Blue</font> means the mod will work with Nehrim because it has no master and could work with Nehrim or Oblivion.
+* <font class="orangefont">Orange</font> means that the mod will work with Nehrim after reassigning the master as described in post two.
 
 At this point I'm not interested in posting about mods that only partially work or mostly don't work. Of course there may be parts of the orange listed mods above that don't fully work but the requirement I have is that they mostly work.
 
-Nehrim English fixes and Improvements:
-[[https://www.nexusmods.com/oblivion/mods/39736 | Nehrim English Supplemental]] The most comprehensive Unofficial English translation update.
+== Nehrim English fixes and Improvements:
+[[https://www.nexusmods.com/oblivion/mods/39736 | Nehrim English Supplemental{{a:green}}]] The most comprehensive Unofficial English translation update.
 
-Leveling:
+== Leveling:
 [[https://forum.sureai.net/viewtopic.php?t=3061 | Skill-Independent Attributes]]- a leveling mod for Nehrim.
 NEEDS LINK | Intelligent Learning
 [[https://www.nexusmods.com/oblivion/mods/38189 | Progress Nehrim]]
 [[https://www.nexusmods.com/oblivion/mods/37547 | Exponential Levelling Nehrim]] (version for use with Progress [[https://www.nexusmods.com/oblivion/mods/38191 | here]])
 [[https://www.nexusmods.com/oblivion/mods/9914 | SPAM]] is purported to work.
 
-Menu Management:
+== Menu Management:
 [[https://www.nexusmods.com/oblivion/mods/23404 | QZ Easy Menus]]
 [[https://www.nexusmods.com/oblivion/mods/12859 | Toggleable Quantity Prompt]]
 [[https://www.nexusmods.com/oblivion/mods/31855 | Display Stats]]
@@ -1679,18 +1679,18 @@ Menu Management:
 
 DarUI will conflict with NIE above plus you will lose some of the cool things about Nehrim Menus and interface. I would imagine that a version that only effects inventory and other parts of menues and character sheet would be very popular - more so if combined with NIE.
 
-HUD:
+== HUD:
 [[https://www.nexusmods.com/oblivion/mods/40228 | Nehrim Experience Progress Bar]]
 [[https://www.nexusmods.com/oblivion/mods/34890 | Nehrim Colored Map Markers]]
 [[https://www.nexusmods.com/oblivion/mods/34905 | HUD status bars]] - may need a lot of work!!
 
-Hotkeys:
+== Hotkeys:
 [[https://www.nexusmods.com/oblivion/mods/34613 | Fast Equipping Nehrim]]
 [[https://www.nexusmods.com/oblivion/mods/34735 | Enhanced Hotkeys]] - amazing mod, recommended
 [[https://www.nexusmods.com/oblivion/mods/30673 | STHotkeys]]
 [[https://www.nexusmods.com/oblivion/mods/34644 | ROM Drop Lit Torches]]
 
-Annoyance Removers:
+== Annoyance Removers:
 [[https://www.nexusmods.com/oblivion/mods/40045 | Creature Idles]] -  fixes creature animations when they get knocked down.
 [[https://forum.sureai.net/viewtopic.php?t=3186 | Donkey Flute]]
 [[https://forum.sureai.net/viewtopic.php?t=3141 | Initial Glow mods]] both armor and weapon and only armor variants
@@ -1703,7 +1703,7 @@ Annoyance Removers:
 [[https://www.nexusmods.com/oblivion/mods/9333 | Denock Arrows]]
 [[https://www.nexusmods.com/oblivion/mods/17894 | Zumbs Lockpicking Mod OBSE]]
 
-Combat:
+== Combat:
 [[https://www.nexusmods.com/oblivion/mods/37943 | Nehrim Weapon Rebalance English Version]]
 [[http://modsreloaded.com/deadly-reflexes | Deadly Reflex 5 replacement plugins]]
 [[https://www.nexusmods.com/oblivion/mods/34887 | Hand-to-Hand for Nehrim]]
@@ -1713,15 +1713,15 @@ Combat:
 [[https://www.nexusmods.com/oblivion/mods/32651 | Phitt's Phighting Phixes]]
 
 
-Stealth:
+== Stealth:
 [[https://www.nexusmods.com/oblivion/mods/34773 | Nehrim Sneak Fix]] - may be outdated with 1.0.8.0 patch.
 [[https://www.nexusmods.com/oblivion/mods/6359 | StealhOverhaul_Nehrim]]
 [[https://www.nexusmods.com/oblivion/mods/34675 | Realistic Sneak for NPCs]]
 
-Companions:
+== Companions:
 [[https://www.nexusmods.com/oblivion/mods/29652 | Companion Master]]
 
-Immersion-Realism:
+== Immersion-Realism:
 [[https://www.nexusmods.com/oblivion/mods/37088 | Basic Primary Needs -Nehrim- ]] - Status compatible. Designed to work with Nehrim
 [[https://www.nexusmods.com/oblivion/mods/35702 | Nehrim Improvment]]
 [[https://www.nexusmods.com/oblivion/mods/35848 | Nehrim Bedrolls]]
@@ -1729,24 +1729,24 @@ Immersion-Realism:
 [[https://www.nexusmods.com/oblivion/mods/21721 | Kuertee Inventory is a backpack]] - not 100% sure but reported that it works.
 [[https://www.nexusmods.com/oblivion/mods/38266 | Real Sleep Extended Nehrim]]
 
-Graphic Improvements:
+== Graphic Improvements:
 [[https://www.nexusmods.com/oblivion/mods/38301 | Nehrim Landscape LOD Textures]] by Xerus - finally better land LOD.
 [[https://www.nexusmods.com/oblivion/mods/36437 | Robert Male Body V5 for Nehrim]]
 
-Environments/Weather:
+== Environments/Weather:
 [[https://www.nexusmods.com/oblivion/mods/40130 | All Natural Nehrim]] by AN team.
 
-Homes:
+== Homes:
 [[https://www.nexusmods.com/oblivion/mods/34838 | Nehrim - The Cloud Tower]]
 [[https://www.nexusmods.com/oblivion/mods/35101 | Nehrim Edelweiss Haus]]
 [[https://www.nexusmods.com/oblivion/mods/38959 | Andrews Terminus System]] -  both a home and new travel system more immersive than fast travel being activated.
 
-Other:
+== Other:
 [[https://www.nexusmods.com/oblivion/mods/32324 | Ring of Console Nehrim]]
 [[https://www.nexusmods.com/oblivion/mods/36325 | Nehrim Fast Travel]]
 
 
-OBSE Plugins that so far work:
+== OBSE Plugins that so far work:
 [[https://www.nexusmods.com/oblivion/mods/23208 | Oblivion Stutter Remover]]
 [[https://www.nexusmods.com/oblivion/mods/32200 | Menu Que]]
 [[http://zenthought.org/content/project/refstuff | Ref Stuff]]
@@ -1754,14 +1754,14 @@ OBSE Plugins that so far work:
 [[http://forums.bethsoft.com/topic/1116792-rel-inizer | INIzer]]
 [[https://www.nexusmods.com/oblivion/mods/30054 | OBGEv3]]
 
-Replacers-Textures:
+== Replacers-Textures:
 [[http://evercharmer.blogspot.com/2012/05/nehrim-sound-and-graphics-mods.html | Evercharmer's Nehrim Mod list]] - a list of replacers recommended to work with Nehrim.
 As far as replacers go this is an area that is large and I'm not going to link everything that can be replaced. You can figure it out. Body mods are generally good and realizing that the Aeterna use mystic Elves resources makes finding replacers for them easier.
 
 (NEEDS LINK | Flora/Landscape retexture) - Vurt has relased landscape textures specifically with Nehrim in mind. Check back for more updates!
 [[https://www.nexusmods.com/oblivion/mods/35454 | QTP3 Dark Cave Textures for Nehrim]] ... and see above the new LOD textures and also by Xerus [[https://www.nexusmods.com/oblivion/mods/38081 | Nehrim HiRes Palm Tree Retexture]]
 
-The Bashed Patch:
+== The Bashed Patch:
 Very few of the settings in the bashed patch will work. But it can still be used for camera tweaks, and clothing tweaks for certain. Perhaps more - I've just not tested. You can also merge bashable mods with it. I've not seen anything level list related at all.
 
 To use the bashed patch you want to first rename the master to Nehrim.esm then bash the patch and even though it is not referenced (that I can see) it will add Oblivion.esm as a master - delete that as all the tweaks will work on the Nehrim.esm.
