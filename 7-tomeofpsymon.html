@@ -39,6 +39,9 @@ title: Wrye Mash Usage
 <p class="list-1">&bull;&nbsp; <a href="#CreatingYourOwnComplexBAINPackages">Creating Your Own Complex BAIN Packages</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#BAINWizards">BAIN Wizards</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#WhyuseaBashedPatch">Why use a Bashed Patch?</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#NehrimandMods">Nehrim and Mods</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#PortingmodsfromObliviontoNehrim">Porting mods from Oblivion to Nehrim</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#ModsforNehrim">Mods for Nehrim</a></p>
 <p class=empty>&nbsp;</p>
 <p>Mod Installing and Mod Management</p>
 Why this thread?
@@ -538,7 +541,7 @@ Et in Arkay Ego-BAIN
    │   │   └[Quests]
    │   │       └EiAmod_ChoicesandConsequences_Readme
    │   └EiAmod_ChoicesandConsequences.esp
-   ├[30 [EiA delayer] -  this is an alternate delayer found here: http://www.tesnexus.com/downloads/file.php?id=25859
+   ├[30 [EiA delayer] -  this is an alternate delayer found here: https://www.nexusmods.com/oblivion/mods/25859
    │   ├[Docs]
    │   │   └[Quests]
    │   │       └EiAmod_Knights_readme
@@ -548,12 +551,12 @@ Et in Arkay Ego-BAIN
    │   │   └[Quests]
    │   │       └EiAmod_Knights_readme
    │   └EiAmod_Knights.esp
-   ├[35 [TOTF Patch]: http://www.tesnexus.com/downloads/file.php?id=24624
+   ├[35 [TOTF Patch]: https://www.nexusmods.com/oblivion/mods/24624
    │   ├[Docs]
    │   │   └[Quests]
    │   │       └EiA+TOTF Patch_readme
    │   └TOTF-EiAE Patch.esp
-   ├[50 [UL Patches]: http://www.tesnexus.com/downloads/file.php?id=13834
+   ├[50 [UL Patches]: https://www.nexusmods.com/oblivion/mods/13834
    │   ├[Docs]
    │   │   └[Unique Landscapes]
    │   │       └EtinArkay-UniqueLandscapes patches Readme
@@ -1437,9 +1440,6 @@ bUseMyGamesDirectory=0
 <p class=empty>&nbsp;</p>
 <p>Thank you for reading and considering the above.</p>
 <p class=empty>&nbsp;</p>
-<p class=empty>&nbsp;</p>
-<p class=empty>&nbsp;</p>
-<p class=empty>&nbsp;</p>
 <p>Related Topics</p>
 <p class=empty>&nbsp;</p>
 <h1 class="header1" id="WhyuseaBashedPatch">Why use a Bashed Patch?</h1>
@@ -1471,5 +1471,387 @@ bUseMyGamesDirectory=0
 <a href="http://forums.bethsoft.com/topic/1118493-release-nehrim-at-fates-edge-english-version/">Nehrim Bethesda Forum Thread</a>
 <p class=empty>&nbsp;</p>
 <p>This led to my exploring how to run Nehrim and Oblivion at the same time and then how to mod Nehrim. This information is collected in the thread:</p>
-<a href="http://forums.bethsoft.com/topic/1159104-nehrim-and-mods-ii/">Nehrim and Mods</a></div>
+<a href="http://forums.bethsoft.com/topic/1159104-nehrim-and-mods-ii/">Nehrim and Mods</a>
+<p class=empty>&nbsp;</p>
+<p class=empty>&nbsp;</p>
+<h1 id="NehrimandMods">Nehrim and Mods</h1>
+<p class=empty>&nbsp;</p>
+<p>How to install and manage mods with Nehrim</p>
+<p class=empty>&nbsp;</p>
+<p>Problems and solutions for managing two installs</p>
+<p class=empty>&nbsp;</p>
+<p>Informative threads:</p>
+<a href="http://forums.bethsoft.com/topic/1132338-boss-for-nehrim/">BOSS for Nehrim</a>
+<a href="http://forums.bethsoft.com/topic/1116000-mods-that-work-with-nehrim/">Mods that work with Nehrim</a>
+<a href="http://forums.bethsoft.com/topic/1115780-how-to-make-a-mod-for-nehrim/">How to Mod Nehrim</a>
+<p class=empty>&nbsp;</p>
+<p>Nerhim is a total conversion of the Oblivion game that includes an entirely new world space, plot, quests and can basically be thought of as a new game. Since it is a modified version of the Oblivion game it uses most of the resources, models, meshes, textures, and so on from Oblivion. further, while many things about game play and mechanics have been altered there are still many areas that are not altered and play much like the vanilla Oblivion game. For some this is a call for mods. others may just want to mod the new facets of Nehrim. The purpose of this thread is to provide a forum for both how to add mods to Nehrim and use the mod tools with Nehrim, specifically the English version of Nehrim.</p>
+<p class=empty>&nbsp;</p>
+<p>A few things first ... This is not the official Nehrim thread and is meant to give a forum for those who want to mod Nehrim so that they do not clutter the official thread with questions and requests. Please direct all questions about Nehrim that do not have to do with mods to <a href="http://forums.bethsoft.com/topic/1118493-release-nehrim-at-fates-edge-english-version/">the official Nehrim thread</a>, which last I checked was locked but there is also their official forum <a href="https://forum.sureai.net/viewforum.php?f=156">a forum section of SureAI for the English version</a>. It is no more complicated than signing up here.</p>
+<p class=empty>&nbsp;</p>
+<p>This first post will be about the problems with using Mod managing tools with Nehrim, the second post will concern itself with how to port mods from oblivion to Nehrim, the third post will be describe mods that are Nehrim ready and other resources.</p>
+<p class=empty>&nbsp;</p>
+<p>Install Choices</p>
+<p class=empty>&nbsp;</p>
+<p>The main choice with reading this thread is whether to set Nehrim up a a stand alone game that overrides Oblivion or as a parallel game that does not interfere with Oblivion. In other words if you want to mod Nehrim then first decide if you want both a Nehrim and Oblivion game playable - if yes then investigate the tool <a href="http://forums.bethsoft.com/topic/1142151-rel-mtes4-manager/">mTES4 Manager</a> or <a href="http://forums.bethsoft.com/topic/1221695-relz-mom-multiple-oblivion-manager/">Multiple Oblivion Manager.</a></p>
+(set it up first) If you don't and only want Nehrim then install Oblivion then immediately Install Nehrim. Doing this will clarify most things as you will see it will create a different install path.and data folder. If you later get nostalgic for Oblivion and want to play it again you can still use mTES4 Manager later - it is just easier to set all up prior to adding mods to either game.
+<p class=empty>&nbsp;</p>
+<p>Nehrim Game Contents</p>
+<p class=empty>&nbsp;</p>
+<p>If one follows the Nehrim installers recommendations and creates an entirely new game directory then the installer will extract the resources it needs from your Oblivion directory and copy them the new Nehrim directory. These include the Oblivion.exe and the BSA files, but not the Oblivion plugins (it uses none of them). Nehrim will then have its own directory and data folder that is separate from the oblivion directory and data folder. This means that mods can be added manually much like with Oblivion. This is the good news.</p>
+<p class=empty>&nbsp;</p>
+<p>The not so great news is that the Nehrim game wants to use the same Oblivion.ini and the save game folder, and the same Plugins.txt file (found in %appdata%\Local\Oblivion\Plugins.txt) which tells the launcher or other mod manager what plugins are active) with Oblivion. This has been the central hitch to being able to run both games concurently. A primary reason for this is that the Nehrim Launcher (once you run the settings tab) will reformat the Oblivion.ini which can make issues for the normal Oblivion game just as using the normal Oblivion.ini will make issues for Nehrim. Likewise having both games share the same save game folder can lead to problems as the last save game has an interaction with the current mods active. Another issue is that Nehrim does not make use of the Oblivion.esm and so some utilities have issues with that esm missing.</p>
+<p class=empty>&nbsp;</p>
+<p>More about these below, but first some basics that do work well. These first three topics for those not so concerned with consecutively running Oblivion and just want to mod Nehrim.</p>
+<p class=empty>&nbsp;</p>
+<p>Archive Invalidation</p>
+<p class=empty>&nbsp;</p>
+<p>Nehrim makes use of a now antiquated method of applying its modifications with the use of an archive invalidation.txt that serves to tell the game which files are to overwrite the files included in the BSA archives. More about this can be found ( NEEDS LINK | here). If one just wanted to add replacement textures and meshes then a more universally useful way of being able to put the files in the Nehrim data folder and play is to use <a href="https://www.nexusmods.com/oblivion/mods/10724">Archive Invalidation Invalidated</a>. This is a BSA that redirects the engine to use loose files to overide BSA files. You simply put it in the data folder and then add it to the Oblivion.ini as per the readme. Wrye Bash has this as an option and OBMM also has this function integrated.</p>
+<p class=empty>&nbsp;</p>
+<a href="https://www.nexusmods.com/oblivion/mods/2097">Oblivion Mod Manager</a>:
+<p class=empty>&nbsp;</p>
+<p>This has been the premier mod manager for Oblivion and the good news is that installing this into the Nehrim folder as you would into the Oblvion folder will give you the Nehrim Mod Manager (well you might have to rename it yourself). It will not interact with the regular Oblivion Mod Manager and you can set it to store it OMODs in a different directory closer to your Nehrim Directory. It is not finicky with the Oblivion.esm missing and so it is the most friendly tool to port over to Nerhim. The only file that OBMM needs to run that is not in the Nehrim folder is the Oblivion&gt;default.ini, which you can copy over to the Nehrim folder. Nehrim will not access this default ini so it will not disturb Nehrim. The one function I could not get to work was the launch the game function. OBMM also has a function similar to Archive Invalidation Invalidated called BSA redirection. If you use OBMM with this set you do not need Archive Invalidation Invalidated. <a href="https://www.nexusmods.com/oblivion/mods/32277">Here is the extended version for more tools</a></p>
+<p class=empty>&nbsp;</p>
+<a href="http://obse.silverlock.org/">Oblivion Script Extender</a>:
+<p class=empty>&nbsp;</p>
+<p>Much like the mod manager OBSE can be installed as you would in the Oblivion directory. And likewise you can create a shorcut for the OBSE launcher called 'Nehrim' or whatever. The question then remains whether mods that use OBSE can be ported over to Nehrim. It is my belief that it mostly works with Nehrim. <a href="http://forums.bethsoft.com/topic/1113709-relz-oblivion-script-extender-obse-0018/page-5#entry16404075">Here is a question</a> I asked and the answer I recieved regarding OBSE and Nehrim:</p>
+<p class=empty>&nbsp;</p>
+<pre>
+Some of us have been attempting to port OBSE mods over and focusing on mods that are scripted and therefore do not rely much on the Oblivion.esm. What we are noticing is that some features of these mods work and some do not. Some initialize and some do not.
+
+I suppose one track could be to mod directly for nehrim but was wondering if perhaps it is something that could be handled with OBSE more directly. Perhaps there are entries that are needed from the Oblivion.esm or some other arcane thing I may not understand that is missing when trying to use OBSE with Nehrim. Maybe it needs a tweak or two so that these mods do initialize in this TC.
+
+</pre>
+<p class=empty>&nbsp;</p>
+<a href="http://forums.bethsoft.com/topic/1113709-relz-oblivion-script-extender-obse-0018/page-5#entry16411260">The Answer</a>:
+<p class=empty>&nbsp;</p>
+<pre>
+If OBSE is successfully loading and running the game then the .exe hasn't been modified. OBSE itself doesn't depend on anything in the .ini to the best of my knowledge. There may be a handful of commands that expect certain default objects to be present (I'm thinking things like Gold001, magic effects, skills, and game settings); if those objects are removed then some commands may fail to execute correctly. As you're probably finding, most mods are dependent on some of the data defined in Oblivion.esm as well, which will cause problems with or without OBSE.
+</pre>
+<p class=empty>&nbsp;</p>
+<p>Conclusion: Porting mods (described in the second post) that are primarly OBSE/Script driven and do not reference the Oblivion.esm are the best candidates. Mods that do reference entries in the Oblivion.esm may have certain functions that are not working or working properly.</p>
+<p class=empty>&nbsp;</p>
+<p>The next set are more specifically about porting mods over to Nehrim</p>
+<p class=empty>&nbsp;</p>
+<p class=empty>&nbsp;</p>
+<a href="https://www.nexusmods.com/oblivion/mods/8665">TES4Gecko</a>:
+<p class=empty>&nbsp;</p>
+<p>Can be used normally and you can direct it look anywhere on your computer you like for plugins. This is the best tool for reassigning masters (see post two).</p>
+<p class=empty>&nbsp;</p>
+<a href="https://www.nexusmods.com/oblivion/mods/11536">TES4Edit</a>:
+<p class=empty>&nbsp;</p>
+<p>The most current and up to date version for Fallout 3 and Oblivion found being discussed <a href="http://forums.bethsoft.com/topic/1047128-is-masterupdate-still-necessary/#entry15191175">here</a> and found <a href="https://www.nexusmods.com/fallout3/mods/1925">here</a>.</p>
+<p class=empty>&nbsp;</p>
+<p>There are two ways to use Tes4edit. You can leave it as it is working with the Oblivion directory and move Nehrim mods over to the Oblivion data directory for cleaning and examining, or you can change the directory it examines with Tes4Gecko as described <a href="http://forums.bethsoft.com/topic/1116000-mods-that-work-with-nehrim/page-6#entry16422983">here</a>.</p>
+<p class=empty>&nbsp;</p>
+<pre>
+I've just figured out a bit of a hack to make TES4Edit work with Nehrim, the only problem being that you can't use TES4Edit to work with mods in Oblivion's and Nehrim's data directories at the same time.
+
+First, you need TES4Gecko installed and working. Then again, if you're porting mods from Oblivion to Nehrim, you should probably already have it since TES4Gecko, IMHO, is the safest way of changing the master list of a plugin.
+Next, open TES4Gecko then click on the button that says "Set Directory". You will then get the option of choosing a new data directory, navigate to Nehrim's "Data" folder and make that the new directory. Once that is done, TES4Edit should show you a list of mods in Nehrim's directory instead of Oblivion's. Once you are finished, open TES4Gecko again and change the Data folder back to Oblivion's one.
+</pre>
+<p class=empty>&nbsp;</p>
+<a href="https://www.nexusmods.com/oblivion/mods/11367">Construction Set</a>
+<p class=empty>&nbsp;</p>
+<p>As <a href="https://forum.sureai.net/viewtopic.php?t=3453">described here</a> the CS can work with Nehrim:</p>
+<p class=empty>&nbsp;</p>
+<pre>
+Many try to open the Nehrim Files with the TES-CS from the Oblivion-Directory. But this is false!
+The two files NehrimData.esp + Nehrim.esm are just placeholders with zero content. You have to proceed differently to modding Nehrim.
+
+You need these two files from your Oblivion-Directory (I'm assuming, that you have the latest "TES-CS_vers.1.2.404" installed):
+TESConstructionSet.exe
+ssce5432.dll
+
+Copy this into the Nehrim Directory:
+Nehrim\TESConstructionSet.exe
+Nehrim\ssce5432.dll
+
+Now you can modding Nehrim with the TESConstructionSet.exe from the Nehrim-Directory.
+Attention! The file NehrimData.esp should not to be loaded. It is not needed for modding and may later cause unnecessary troubles. Please only upload Nehrim.esm!
+</pre>
+<p class=empty>&nbsp;</p>
+<a href="https://www.nexusmods.com/oblivion/mods/20516">BOSS</a>
+<p>BOSS version 1.60+ is nerhim compatible and it will download the Nehrim Masterlist when you run the BOSS update. This masterlist is a separate list from Oblivion.</p>
+<a href="http://forums.bethsoft.com/topic/1132338-boss-for-nehrim/">BOSS for Nehrim thread</a> - please take questions and topics about BOSS and Nehrim to that thread.
+<p class=empty>&nbsp;</p>
+<p>The more complex issues</p>
+<p class=empty>&nbsp;</p>
+<p>Here things become much more complex and if any section is going to be updated it is likely this one either because I got something wrong or there is an update. I'm not perfect and I do make mistakes and certainly this has stretched my understanding of the game, so just let me know what I did wrong.</p>
+<p class=empty>&nbsp;</p>
+<p>To return to the issues above regarding Nehrim wanting to share the games folder under my documents. I've found that trying to load Oblivion with the Nehrim altered version of the Oblivion.ini or trying to load Nehrim with the normal Oblivion.ini that neither game will work. To resolve this manually I initially made temporary folders for each ini and swapped them out depending upon which game I was going to load.</p>
+<p class=empty>&nbsp;</p>
+<p>Another issue is save game folder sharing. By default the save games are found in the oblivion folder under documents/my games/Oblivion (where the ini also is). if one does not use a save game manager or swap save folders manually the save games from each game will be in the same folder. Wrye Bash offers save game profile options to create multiple save game folders. If one does not want to use Wrye Bash then there are a few other save game managers. I use LazyMonk's <a href="https://www.nexusmods.com/fallout3/mods/8678">The Simple Manager</a> which can also handle Fallout 3 and can do more than just manage save profiles - it can list masters for saves and renumber saves.</p>
+<p class=empty>&nbsp;</p>
+<p>In a sometimes hidden folder (located in %appdata%\Local\Oblivion\Plugins.txt) is the Plugins.txt - this is a list that the Oblivion launcher, Nehrim Launcher, Oblivion Mod Manager, or Wrye Bash reads as the active plugins. If one switches between utilities like the launchers to OBMM to the Nehrim ported Mod Manager and especially Wrye Bash then they will become (anthropomorphically) confused about what is loaded.</p>
+<p class=empty>&nbsp;</p>
+<p>The manual work around I've been doing is to finish whatever I'm doing in Wrye Bash and close it or the normal Oblivion Mod Manager prior to opening the Nehrim ported Mod Manager. This way I can reactivate the mods for Nehrim and the normal utiities will not undo this process. If these are opened again then they will deactivate most of the nehrim plugins.</p>
+<p class=empty>&nbsp;</p>
+<a href="http://forums.bethsoft.com/topic/1116792-rel-inizer/">The INIzer</a> is an OBSE plugin that ShadeME designed to address this issue. It can be used with either Oblivion or Nehrim to reassign the Oblivion.ini and the plugins.txt
+<p class=empty>&nbsp;</p>
+<p>With this then whenever you want to switch games you will just have to make sure you have the right save game profile as the active one and make sure that you close the utilities of the game you don't want to play first then open the utlilities of the game you do want to play to make sure all the plugins are active then launch that game. If you open the utilities of the other game (that you don't want to play) then it might override the settings and active plugins. This is completely unnecessary and unneeded if using mTS4 Manager.</p>
+<p class=empty>&nbsp;</p>
+<a href="https://www.nexusmods.com/oblivion/mods/22368">Wrye Bash</a>:
+<p class=empty>&nbsp;</p>
+<p>Wrye Bash unfortunately is not designed to support multiple installs. It creates settings and folders in several locations and evn if you install it in the Nehrim directory it will impact the normal Wrye Bash settings and vice versa. It also requires the Oblivion.esm in the data folder to even start.</p>
+<p class=empty>&nbsp;</p>
+<p>roxahris has been working with Pacific Morrowind and as of version 290+ Wrye Bash will work with Nehrim installed and does not need Oblivion.esm!! More work in this area may be forthcoming for having bash work with the Nehrim.esm.</p>
+<p class=empty>&nbsp;</p>
+<p>The next big step:</p>
+<a href="http://forums.bethsoft.com/topic/1142151-rel-mtes4-manager">mTES4 Manager</a>
+<a href="http://forums.bethsoft.com/topic/1119357-wipz-mtes4-manager/">mTES4 Manager</a> - Old thread
+<p>or (don't use both)</p>
+<a href="http://forums.bethsoft.com/topic/1221695-relz-mom-multiple-oblivion-manager/">Multiple Oblivion Manager</a>
+<p class=empty>&nbsp;</p>
+<p>From all the issues discussed here and for reasons of inspiration all his own fellow forum goer Gaticus has created the tool to manage all tools. With this tool one resolves all the issues with managing multiple installs on the same operating system. What this simple tool does is add small ini files to the Oblivion, game profile, and associated app data folder. From there one can then clone these folders with unique names and with a few clicks you will be switching entire game installs before you know it.</p>
+<p class=empty>&nbsp;</p>
+<p>Warning: Unless you want to clone your entire modded game as it is - it is recommended that you clone a fresh install. The thread details how to do that.</p>
+<p class=empty>&nbsp;</p>
+<p>It resolves all the above issues because with each swap there is a new Oblivon directory and associated folders. The caveate being that one would have to also install the modding tools and mods for each new clone. This means that even the INIzer is not needed.</p>
+<p class=empty>&nbsp;</p>
+<p>The one area where there is issue is in the fact that the way that Wrye Bash is currently formatted the BAIN folder (bash installers) is shared between the clones when using Wrye Bash default settings. Using he Bash.ini one can repath this directory and for each bash have a seperate BAIN archive. This does eat a lot of disk space and the great news is that the Wrye Bash team is already working on removing this issue by having the location of what BAIN packages are installed stored within the game profiles folder.</p>
+<p class=empty>&nbsp;</p>
+<p>I highly recommend the use of this tool which I've found very useful in testing tool and mods as well as now having three fully modded Oblivion games that I can swap between with ease.</p>
+<p class=empty>&nbsp;</p>
+<p>Resources:</p>
+The <a href="https://forum.sureai.net/viewforum.php?f=156">SureAI English forum</a>
+with <a href="http://sureai.de/forum/viewforum.php?f=86">a subforum for modding Nehrim</a>
+<p class=empty>&nbsp;</p>
+<p>NEEDS LINK | Nehrim thread at TESAlliance</p>
+<p class=empty>&nbsp;</p>
+<h1 id="PortingmodsfromObliviontoNehrim">Porting mods from Oblivion to Nehrim</h1>
+<p class=empty>&nbsp;</p>
+<p>Many mods are easy to port to Nehrim while others are cumbersome and will never work unless modified.</p>
+<p class=empty>&nbsp;</p>
+<p>Relacers:</p>
+<p class=empty>&nbsp;</p>
+<p>Considering that Nehrim uses the Oblivion BSA archives most replacer files for Meshes, Textures, Sounds, etc that are meant to override these BSAs should work fine and it is just a matter of installing them in the right file path. I've not explored the Nehrim exclusive BSA archives but the process should be the same. If replacing the music then remember to back up the files as these are not in a BSA and replacing them will mean losing them. The same with menus.</p>
+<p class=empty>&nbsp;</p>
+<p>There are reports of success in porting body mods such as Roberts and HGEC on the <a href="https://forum.sureai.net/viewtopic.php?t=1543">Sure AI forums</a>.</p>
+<p class=empty>&nbsp;</p>
+<p>Plugins:</p>
+<p class=empty>&nbsp;</p>
+<p>The best candidates for an easy port to Nehrim are Plugins that do not reference the Oblivion.esm. While most mods that have Oblivion.esm as a master that does not mean that this master is always necessary. The quickest way to see this is to open the plugin in tes4edit and look at what records are overwritten by the plugin. If no records are touched then the plugin has the master of Oblivion.esm in name only and that can be changed.</p>
+<p class=empty>&nbsp;</p>
+<p>The easiest way to change the name of the master is to use tes4Gecko and edit the master reassigning the master to Nehrim.esm (I keep a copy of the Nehrim.esm in my Oblivion data folder just for this purpose and hide it with Wrye Bash before playing Oblivion). This could also be done with the Construction Set (but don't ask me how) and with Wrye Bash (but that may effect similarly named esp in the Oblivion data folder).</p>
+<p class=empty>&nbsp;</p>
+<p>Some Plugins have no master and they should automatically work with Nehrim. These are often game mechanic and script driven plugins.</p>
+<p class=empty>&nbsp;</p>
+<p>What will not work is plugins that reference the Oblivion.esm, as well as, other esm or esp not in the Nehrim data folder. So while you may be able to change the master over to Nehrim.esm the plugin will still need to reference entries in the Oblivion.esm and unable to do so could mean that those parts of the plugin will not work up to and including the plugin not working at all and even ctds.</p>
+<p class=empty>&nbsp;</p>
+<p>Many esp minimally reference the Oblivion.esm and it may be possible that adjsuting scripts or pointing the plugin to reference something similar in the Nehrim.esm may work to port the plugin. If anyone wants to write tips on how to do that then let me know and I'll add it here or use the <a href="http://forums.bethsoft.com/topic/1115780-how-to-make-a-mod-for-nehrim/">How to Make mods for Nehrim thread</a>.</p>
+<p class=empty>&nbsp;</p>
+<p>The following is a cut and paste of <a href="http://forums.bethsoft.com/topic/1118767-nehrim-and-mods/?p=16491055">a post by Rylasasin</a> regarding mod conversions:</p>
+<p class=empty>&nbsp;</p>
+<pre>
+A few notes i've found Shivering Isles compatibilty.
+
+Some mods will require shivering isles. Conversion of some (but not all) of these mods IS possible. But first you need to find out to what extent you use shivering isles.
+
+IF THE MOD ONLY USES SHIVERING ISLES MODELS/SOUNDS/TEXTURES AND NOT RECORDS: Here is the procedure to get those to work: Simply copy over the shivering isles bsa's (they start with DLCShiveringisles and end with .Bsa) as well as the DLCShiveringisles.esp over to your nehrim data folder. Using either wrye bash, TES4edit, or TESGecko (my preference for Nehrim dependance changing.), change the DLCShiveringisles.esp's reliance on Oblivion.esm to Nehrim.esm, and make sure you activate it in your Nehrim load list. That's it, nothing else needs to be done.
+Truthfully, the DLCShiveringisles.esp really doesn't do anything other than load the BSA files. It has no scripts, no quests, no records of any sort. Any Shivering Isles Records are actually loaded into the Oblivion.esm upon installing it. Though speaking of which:
+
+IF THE MOD IN QUESTION USES ANY SIMPLE RECORDS: (In other words: not shivering scripts, not shivering quests, not shivering exteriors or interiors. This includes but isn't limited to: NPCs (not refs), Weapons, armors, ingredients, statics etc.)
+This is a tad trickier. Obviously nehrim.esm does not have shivering isles records in it. So you will have to put these into the mod you wish to convert yourself. There are two ways you can do this and the choice is yours.
+First, you could use the TESCS to manually recreate the missing records. However, this is rather tedious.
+Secondly, you could open up Oblivion.esm and (insert mod here) in TES4edit (note: make sure if your running TES4edit in the oblivion folder to copy over nehrim.esm, or if in the nehrim data folder to copy over the oblivion.esm to your nehrim data folder).
+Make sure you've already changed the mod's reliance from Oblivion.esm to Nehrim.esm, and Find out which records you will need, and use TES4edit to copy them from the oblivion.esm directly into the mod you are trying to convert. Note that you want to Copy as new record, NOT copy as override. When it asks for prefexes and such, ignore it. If it says that the mod will have to add oblivion.esm as a master, don't worry, just go to the file header for the mod and get rid of the oblivion.esm entry.
+Also note you may have to do this for some normal oblivion mods too, especially ones that rely on records like "NPCHumangrunt" or other records that most oblivion modders take for granted.
+IF A MOD REQUIRES/MODIFIES AN OBLIVION/SHIVERING ISLES CELL
+Note by this I'm refering to something that significantly alters a shivering isles/oblivion exterior, such as a house mod, not for something simple like an armor or note found in (insert dungeon here). In the case of the former, this one is quite a bit tricker but it CAN be done.
+First and foremost, you must do this BEFORE you change the mod's esm reliance.
+1.Open the mod in TESCS (yes, you're working with cells now, you can't use TES4Edit for this unless your really good with maths.) Create a new cell (interior, even if what your taking it from is an Exterior.)
+2. Find the exterior[s] in question, and the objects in question (Example: lets say a mod that adds a shack to an island north of new sheoth... the object of interest here is the shack. Any vegitation or landscaping surrounding it is to be ignored.)
+3. Cut and paste the objects in question from the exterior to your temporary cell you created.
+4. Save your mod, close it in TESCS (your done with that for the moment) and open the mod in TES4edit.
+5. Remove all vanilla cell/exterior overrides from the mod. DONT delete any custom interiors though (in other words, the interior of the shack.)
+6. NOW change the reliance on oblivion.esm to Nehrim.esm (preferably using TES4edit since you should still have it open.)
+7. Take note of any Shivering objects/missing oblivion objects the interior might have, and as with the simple records above, copy them over to your mod via the method described.
+8. save and close the mod in TES4edit and reopen it in TESCS (we're doing cell/exterior editing again.)
+9. Check both the temporary and interior cells of your mod to make sure everything shows up. if there are any missing meshs or objects, make note of what these are, open it in TES4edit again and go back to step 7. Otherwise, move on to the next step.
+10. Find a suitable location in Nehrim to put your house (or whatever it is).
+11. Cut and paste your house from the temporary interior to your chosen location. Note that you may need to do some landscaping/exterior decorating. Also check the exterior and interior doors to make sure they point to the right place.
+11. Delete the temporary interior and save.
+
+you should be good to go now.
+with simpler things, such as putting a set of armor someplace where the player can pick it up, this step is FAR easier: You simply need to delete the cell overrides and manually use the CS to put it someplace else in nehrim.
+
+IF A MOD IS RELIANT ON CHANGING OBLIVION/SHIVERING SCRIPTS (ie integration the stranded light, choices and consequences, etc.)
+Forget it. It's not going to happen.
+
+
+OTHER OBLIVION/SHIVERING NOTES:
+scripts and editiorIDs
+One thing to remember is that Nehrim runs off the german oblivion.esm, which means german editiorIDS. for things like interiors and cells, this is self-correcting. For scripts however, it is not. This is EXACTLY why duke patricks won't work for example: a script in DP CA references the object "Apple", whereas in nehrim the object is "Afel" (the german word for apple).
+What I would recommend is if a mod has scripts, that you check them using the CS. Just use the arrow keys to skim through the scripts (most modders like to use a prefix for their scripts so it shouldn't be hard.) If a script asks you to save, it means something is wrong. Hit "yes" when this happens and it will give you an error telling you what is wrong (usually along the lines of "Error on line 123: Record "Apple" not found.") you will need to either fix this error or blank out the trouble spot if you can. It's usually either one of two things:
+1. A record that is actually in nehrim, but the script doesn't reconize it cause it's looking for the english version of the editorID (example: if it references daedra hearts, the nehrim equivilent is "herz", or "Heart" in english.) Use TES4edit to find these equivilents.
+2. A record in the oblivion.esm that isn't in nehrim at all (IE certain sounds... most common i found was NPCHUMANGRUNT or something like this.) in this case, follow the above procedure to manually insert that record into the mod.
+
+These are the observations I was able to make before my computer broke down, so now i'm getting it fixed, so I might not remember everything I learned 100%. Nevertheless, I hope this helps your Nehrim modding/converting adventures some.
+</pre>
+<p>and <a href="http://forums.bethsoft.com/topic/1118767-nehrim-and-mods/?p=16500972">an idea</a>:</p>
+<p class=empty>&nbsp;</p>
+<pre>
+In fact, I had an idea for a Nehrim modders resource someone could make if they're interested. (I would do this myself, but I'm still waiting for my PC to be fixed... if you do it though before I get to it at least give me credit for the idea)
+It's called the "Oblivion/Shivering Records Resource"
+WHAT IT DOES: essentially its a large collection of oblivion/Oblivion & Shivering isles (seperate mod for shivering isles mode) of all the non-overlapping simple records (IE ingredients, statics, NPCs, the three shivering races, etc. You might be able to get away with/have to add the generic dialogue quests as well, but none others.) so that nehrim modders don't need to copy these records over manually (as described above)
+
+WHAT IT WOULD DO:
+Give modders/converters access to the oblivion & shivering isles editor records that are not overlapping with nehrim.esm
+What qualifies: Ingredients that don't overlap (deadra hearts, apple, etc for example DONT qualify, since these are already in nehrim.esm under a different name.), statics, NPCS, misc objects, books, the three added shivering isles races (goldensaints, sheogorath, and darkseducer races), effects, sounds, spells/abilities, enchantments, etc.
+What does NOT qualify: complex records like cells, exteriors, quests, scripts, etc. Also I would personally stay away from Magic effects and birthsigns (though their ability effects are just fine to copy over), etc. classes are okay though if there's no overlap, they aren't used by the player anyway.)
+
+
+What it would NOT do:
+Give players a free copy of shivering isles (You still need the BSAs to make it work)
+give players a way to play both oblivion and nehrim at once. it only gives modders access to the simple records they'd need to convert/make their mods.
+
+anyone willing to make this idea happen? Like I said I'd be willing to do this myself, but for the moment my pc is being repaired.
+</pre>
+<p class=empty>&nbsp;</p>
+<p>Resources:</p>
+<a href="https://forum.sureai.net/viewtopic.php?t=3012">Guide To Converting Oblivion-Mods to Nehrim</a>
+<p class=empty>&nbsp;</p>
+<p>Considerations:</p>
+<p class=empty>&nbsp;</p>
+<p>As with Oblivion it is a good idea to add mods very slowly and to test each mod you add. It is also a good idea to know what you are changing, just because there is now a growing list is not a prescription to dump them all in and press play. This can be as involved as modding Oblivion and so take your time. I've only averaged one mod every 2-3 days. Some of the changes to Nehrim are subtle and are not easily seen it is a good idea to play a while to get a feel for what is new and what is plain old vanilla. My bias is that I played vanilla and so when I want a new game I don't want vanilla in a new world space, so I focus on changing those vanilla aspects that I find annoying and then add tweaks from there.</p>
+<p class=empty>&nbsp;</p>
+<p>A lot of the most dramatic changes to game play can be seen in the character development area. Leveling is based on experience points and not skill ups, so most leveling mods will not work. Magic is also altered and rebalanced with a pretty dramatic pacing put in place regarding the way spells are attained. In short play the game then decide what you want to tackle, assuming you know what to change before checking if it already is changed could get you in trouble.</p>
+<p class=empty>&nbsp;</p>
+<p>Optimizations:</p>
+These optimization methods for Oblivion should port over just fine into Nehrim. Optimizing is often another form of modding.
+<p class=empty>&nbsp;</p>
+<a href="http://forums.bethsoft.com/topic/1118450-oblivion-and-memory-usage/">PyFFI</a>
+<p>The meshes that come with Nehrim are not optimized and really benefit from optimizing - as does the original meshes for Oblivion. The linked thread is a comprehensive guide to this process.</p>
+<p class=empty>&nbsp;</p>
+<a href="https://www.nexusmods.com/oblivion/mods/23208">Oblivion Stutter Remover</a>
+<p>By having OBSE working for Nehrim this is easy to install and use.</p>
+<p class=empty>&nbsp;</p>
+<a href="http://forums.bethsoft.com/topic/1118450-oblivion-and-memory-usage/">Large Address Aware flag for the Oblivion.exe</a>
+<p>I know this works with Nehrim because when Nehrim installed it pulled this version of the exe out of my Oblivion folder. This is for operating systems that can handle more memory.</p>
+<p class=empty>&nbsp;</p>
+<p>Clean your mods</p>
+<a href="https://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide a thorough guide">https://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide a thorough guide</a>
+<a href="https://www.uesp.net/wiki/Tes4Mod:Tes4Edit#Cleaning_a_Dirty_Plugin">a simple walkthrough</a>
+<p class=empty>&nbsp;</p>
+<p>This may not matter for badly ported mods that still reference or duplicate the Oblivion.esm, but in exploring mods Nehrim I've found that there are edits that are duplicates and I've no doubt that as more dungeon and quest mods come out that deletions of the Nehrim.esm will come with them.</p>
+<p class=empty>&nbsp;</p>
+<h1 id="ModsforNehrim">Mods for Nehrim</h1>
+<p class=empty>&nbsp;</p>
+<p>This could potentially turn into a very long post and I make no commitments to long term tending to this list. I will start it though and update it sporadically as people post success and news.</p>
+<p class=empty>&nbsp;</p>
+<p>I will borrow from Running4Covers list in using colors to code what kind of mod a plugin is.</p>
+<p class="list-1">&bull;&nbsp; Green means the mod will work with Nehrim and was designed for Nehrim.</p>
+<p class="list-1">&bull;&nbsp; Blue means the mod will work with Nehrim because it has no master and could work with Nehrim or Oblivion.</p>
+<p class="list-1">&bull;&nbsp; Orange means that the mod will work with Nehrim after reassigning the master as described in post two.</p>
+<p class=empty>&nbsp;</p>
+<p>At this point I'm not interested in posting about mods that only partially work or mostly don't work. Of course there may be parts of the orange listed mods above that don't fully work but the requirement I have is that they mostly work.</p>
+<p class=empty>&nbsp;</p>
+<p>Nehrim English fixes and Improvements:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/39736">Nehrim English Supplemental</a> The most comprehensive Unofficial English translation update.
+<p class=empty>&nbsp;</p>
+<p>Leveling:</p>
+<a href="https://forum.sureai.net/viewtopic.php?t=3061">Skill-Independent Attributes</a>- a leveling mod for Nehrim.
+<p>NEEDS LINK | Intelligent Learning</p>
+<a href="https://www.nexusmods.com/oblivion/mods/38189">Progress Nehrim</a>
+<a href="https://www.nexusmods.com/oblivion/mods/37547">Exponential Levelling Nehrim</a> (version for use with Progress <a href="https://www.nexusmods.com/oblivion/mods/38191">here</a>)
+<a href="https://www.nexusmods.com/oblivion/mods/9914">SPAM</a> is purported to work.
+<p class=empty>&nbsp;</p>
+<p>Menu Management:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/23404">QZ Easy Menus</a>
+<a href="https://www.nexusmods.com/oblivion/mods/12859">Toggleable Quantity Prompt</a>
+<a href="https://www.nexusmods.com/oblivion/mods/31855">Display Stats</a>
+<a href="https://forum.sureai.net/viewtopic.php?t=3057">Nehrim Interface Extension</a> - integrates the journal with the interface (will conflict with DarnUI)
+<p class=empty>&nbsp;</p>
+<p>DarUI will conflict with NIE above plus you will lose some of the cool things about Nehrim Menus and interface. I would imagine that a version that only effects inventory and other parts of menues and character sheet would be very popular - more so if combined with NIE.</p>
+<p class=empty>&nbsp;</p>
+<p>HUD:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/40228">Nehrim Experience Progress Bar</a>
+<a href="https://www.nexusmods.com/oblivion/mods/34890">Nehrim Colored Map Markers</a>
+<a href="https://www.nexusmods.com/oblivion/mods/34905">HUD status bars</a> - may need a lot of work!!
+<p class=empty>&nbsp;</p>
+<p>Hotkeys:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/34613">Fast Equipping Nehrim</a>
+<a href="https://www.nexusmods.com/oblivion/mods/34735">Enhanced Hotkeys</a> - amazing mod, recommended
+<a href="https://www.nexusmods.com/oblivion/mods/30673">STHotkeys</a>
+<a href="https://www.nexusmods.com/oblivion/mods/34644">ROM Drop Lit Torches</a>
+<p class=empty>&nbsp;</p>
+<p>Annoyance Removers:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/40045">Creature Idles</a> -  fixes creature animations when they get knocked down.
+<a href="https://forum.sureai.net/viewtopic.php?t=3186">Donkey Flute</a>
+<a href="https://forum.sureai.net/viewtopic.php?t=3141">Initial Glow mods</a> both armor and weapon and only armor variants
+<a href="https://www.nexusmods.com/oblivion/mods/37365">Brighter Torches for Nehrim</a>
+<a href="https://www.nexusmods.com/oblivion/mods/40558">Harvest Flora for Nehrim</a>
+<a href="https://www.nexusmods.com/oblivion/mods/32299">Nehrim Camera Mod</a>
+<a href="https://www.nexusmods.com/oblivion/mods/32656">Nehrim Refractionless Chameleon</a>
+<a href="https://www.nexusmods.com/oblivion/mods/34894">Nehrim - Fast Roasting</a>
+<a href="https://www.nexusmods.com/oblivion/mods/32411">No Spiders</a> - German mod but it shouldn't matter. There are a lot of spiders.
+<a href="https://www.nexusmods.com/oblivion/mods/9333">Denock Arrows</a>
+<a href="https://www.nexusmods.com/oblivion/mods/17894">Zumbs Lockpicking Mod OBSE</a>
+<p class=empty>&nbsp;</p>
+<p>Combat:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/37943">Nehrim Weapon Rebalance English Version</a>
+<a href="http://modsreloaded.com/deadly-reflexes">Deadly Reflex 5 replacement plugins</a>
+<a href="https://www.nexusmods.com/oblivion/mods/34887">Hand-to-Hand for Nehrim</a>
+<a href="https://www.nexusmods.com/oblivion/mods/23062">Attribute-based and skill-based damage modifiers</a>
+<a href="https://www.nexusmods.com/oblivion/mods/25533">Marksman's Challenge</a>
+<a href="https://www.nexusmods.com/oblivion/mods/27947">Better Blocking</a>
+<a href="https://www.nexusmods.com/oblivion/mods/32651">Phitt's Phighting Phixes</a>
+<p class=empty>&nbsp;</p>
+<p class=empty>&nbsp;</p>
+<p>Stealth:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/34773">Nehrim Sneak Fix</a> - may be outdated with 1.0.8.0 patch.
+<a href="https://www.nexusmods.com/oblivion/mods/6359">StealhOverhaul_Nehrim</a>
+<a href="https://www.nexusmods.com/oblivion/mods/34675">Realistic Sneak for NPCs</a>
+<p class=empty>&nbsp;</p>
+<p>Companions:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/29652">Companion Master</a>
+<p class=empty>&nbsp;</p>
+<p>Immersion-Realism:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/37088">Basic Primary Needs -Nehrim-</a> - Status compatible. Designed to work with Nehrim
+<a href="https://www.nexusmods.com/oblivion/mods/35702">Nehrim Improvment</a>
+<a href="https://www.nexusmods.com/oblivion/mods/35848">Nehrim Bedrolls</a>
+<a href="https://www.nexusmods.com/oblivion/mods/12074">SM Encumbrance and Fatigue</a>
+<a href="https://www.nexusmods.com/oblivion/mods/21721">Kuertee Inventory is a backpack</a> - not 100% sure but reported that it works.
+<a href="https://www.nexusmods.com/oblivion/mods/38266">Real Sleep Extended Nehrim</a>
+<p class=empty>&nbsp;</p>
+<p>Graphic Improvements:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/38301">Nehrim Landscape LOD Textures</a> by Xerus - finally better land LOD.
+<a href="https://www.nexusmods.com/oblivion/mods/36437">Robert Male Body V5 for Nehrim</a>
+<p class=empty>&nbsp;</p>
+<p>Environments/Weather:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/40130">All Natural Nehrim</a> by AN team.
+<p class=empty>&nbsp;</p>
+<p>Homes:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/34838">Nehrim - The Cloud Tower</a>
+<a href="https://www.nexusmods.com/oblivion/mods/35101">Nehrim Edelweiss Haus</a>
+<a href="https://www.nexusmods.com/oblivion/mods/38959">Andrews Terminus System</a> -  both a home and new travel system more immersive than fast travel being activated.
+<p class=empty>&nbsp;</p>
+<p>Other:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/32324">Ring of Console Nehrim</a>
+<a href="https://www.nexusmods.com/oblivion/mods/36325">Nehrim Fast Travel</a>
+<p class=empty>&nbsp;</p>
+<p class=empty>&nbsp;</p>
+<p>OBSE Plugins that so far work:</p>
+<a href="https://www.nexusmods.com/oblivion/mods/23208">Oblivion Stutter Remover</a>
+<a href="https://www.nexusmods.com/oblivion/mods/32200">Menu Que</a>
+<a href="http://zenthought.org/content/project/refstuff">Ref Stuff</a>
+<a href="https://www.nexusmods.com/oblivion/mods/26510">ConScribe</a>
+<a href="http://forums.bethsoft.com/topic/1116792-rel-inizer">INIzer</a>
+<a href="https://www.nexusmods.com/oblivion/mods/30054">OBGEv3</a>
+<p class=empty>&nbsp;</p>
+<p>Replacers-Textures:</p>
+<a href="http://evercharmer.blogspot.com/2012/05/nehrim-sound-and-graphics-mods.html">Evercharmer's Nehrim Mod list</a> - a list of replacers recommended to work with Nehrim.
+<p>As far as replacers go this is an area that is large and I'm not going to link everything that can be replaced. You can figure it out. Body mods are generally good and realizing that the Aeterna use mystic Elves resources makes finding replacers for them easier.</p>
+<p class=empty>&nbsp;</p>
+(NEEDS LINK | Flora/Landscape retexture) - Vurt has relased landscape textures specifically with Nehrim in mind. Check back for more updates!
+<a href="https://www.nexusmods.com/oblivion/mods/35454">QTP3 Dark Cave Textures for Nehrim</a> ... and see above the new LOD textures and also by Xerus <a href="https://www.nexusmods.com/oblivion/mods/38081">Nehrim HiRes Palm Tree Retexture</a>
+<p class=empty>&nbsp;</p>
+<p>The Bashed Patch:</p>
+Very few of the settings in the bashed patch will work. But it can still be used for camera tweaks, and clothing tweaks for certain. Perhaps more - I've just not tested. You can also merge bashable mods with it. I've not seen anything level list related at all.
+<p class=empty>&nbsp;</p>
+<p>To use the bashed patch you want to first rename the master to Nehrim.esm then bash the patch and even though it is not referenced (that I can see) it will add Oblivion.esm as a master - delete that as all the tweaks will work on the Nehrim.esm.</p>
+<p class=empty>&nbsp;</p>
+<p>And again great place to search for more is in the SureAI mod forum and Nexus</p>
+</div>
 </section>
