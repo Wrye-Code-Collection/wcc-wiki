@@ -76,8 +76,8 @@ body {
     left: 10px;
     height: auto;
     width: auto;
-    background: invert(var(--old-href-text));
-    outline: thick solid invert(var(--old-href-text));
+    background: invert(var(var(--cayman-body-href)));
+    outline: thick solid invert(var(var(--cayman-body-href)));
   }
 }
 
@@ -206,10 +206,10 @@ a.orange {
 }
 
 .page-header {
-  color: var(--old-header-heading);
+  color: var(var(--cayman-header-heading));
   text-align: center;
-  background-color: var(--old-header-background);
-  background-image: linear-gradient(120deg, var(--old-header-background-secondary), var(--old-header-background));
+  background-color: var(var(--cayman-header-background));
+  background-image: linear-gradient(120deg, var(var(--cayman-header-background)-secondary), var(var(--cayman-header-background)));
   @include full {
     padding: 3rem 4rem;
   }
@@ -666,5 +666,5 @@ font.orangefont {
 }
 
 .site-footer-credits {
-  color: var(--old-blockquote-text);
+  color: var(--cayman-blockquote-text);
 }
