@@ -341,8 +341,8 @@ This was the option I chose for my oblivion install and it consumed enormous amo
 
 What follows are links I'd highly recommend reading if you are thinking of a complete reinstall and transition to BAIN:
 
-Tomlong75210's helpful site ([[http://tesivpositive.animolious.com/ | TESCosi by Tomlong]]<font class="red">NOTE: Asks to install a firefox extension)</font> this site is growing with good information.
-There is a section on [[http://tesivpositive.animolious.com/?page=bain_installation | BAIN Installation of Modded Oblivion]]<font class="red">NOTE: Same warning</font> that promises to be very helpful.
+Tomlong75210's helpful site ([[http://tesivpositive.animolious.com/ | TESCosi by Tomlong]]<font class="red">NOTE: Asks to install a firefox extension</font> this site is growing with good information.
+There is a section on [[http://tesivpositive.animolious.com/?page=bain_installation | BAIN Installation of Modded Oblivion]]<font class="red">NOTE: Asks to install a firefox extension</font> that promises to be very helpful.
 [[https://en.uesp.net/wiki/Oblivion:Technical_Support | UESP Tech Support]]
 [[http://forums.bethsoft.com/topic/1119325-50steps-to-stable-fcom/ | 50_Steps To CTD (Almost) Free FCOM+++ Game]] (good advice even if not installing FCOM)
 [[http://forums.bethsoft.com/topic/762701-windows-vista-performance-guide/ | Windows Vista Performance Guide]] For those installing on a Windows7 or Vista Platform and have UAC concerns: The basic instructions are to install these games outside of default locations and thereby circumventing the need for elevated privileges.
