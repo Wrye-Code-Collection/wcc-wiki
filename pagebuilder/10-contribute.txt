@@ -105,6 +105,28 @@ o Alternate bullet char
   * All section headers can be linked to by compressing the text of the header together (i.e., by stripping out all non alphabetical characters).
   * If you use the second form the link is automatically generated from the text of the link.
 
+===Text Colors
+* <font class="blackfont">This is font.blackfont</font>
+* <font class="bluefont">This is font.bluefont</font>
+* <font class="brownfont">This is font.brownfont</font>
+* <font class="cyanfont">This is font.cyanfont</font>
+* <font class="dkgrayfont">This is font.dkgrayfont</font>
+* <font class="grayfont">This is font.grayfont</font>
+* <font class="greenfont">This is font.greenfont</font>
+* <font class="ltbluefont">This is font.ltbluefont</font>
+* <font class="ltgrayfont">This is font.ltgrayfont</font>
+* <font class="ltgreenfont">This is font.ltgreenfont</font>
+* <font class="orangefont">This is font.orangefont</font>
+* <font class="pinkfont">This is font.pinkfont</font>
+* <font class="purplefont">This is font.purplefont</font>
+* <font class="redfont">This is font.redfont</font> <- this is really a different value
+* <font class="warningred">This is warning red font.warningred</font> <- this is really a different value
+* <font class="darkredfont">This is darkredfont red font.darkredfont</font> <- this is really a different value
+* <font class="ltredfont">This is ltredfont red font.ltredfont</font> <- this is really a different value
+* <font class="tanfont">This is font.tanfont</font>
+* <font class="whitefont">This is font.whitefont</font>
+* <font class="yellowfont">This is font.yellowfont</font>
+
 === Html
 * <i>Html tags work fine</i>
 * <code>code tag has special formatting</code> 

@@ -82,7 +82,7 @@ body {
 }
 
 a {
-  color: var(--href-text);
+  color: var(--blue-text);
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -557,17 +557,65 @@ input[id^="spoiler"]:checked + label + .spoiler{
   }
 }
 
-font.redfont {
-  color: var(--warning-text-red);
+font.blackfont {
+  color: var(--black-text);
 }
 font.bluefont {
-  color: var(--Nehrim-Blue);
+  color: var(--blue-text);
+}
+font.brownfont {
+  color: var(--brown-text);
+}
+font.cyanfont {
+  color: var(--cyan-text);
+}
+font.dkgrayfont {
+  color: var(--dkgray-text);
+}
+font.grayfont {
+  color: var(--gray-text);
 }
 font.greenfont {
-  color: var(--Nehrim-Green);
+  color: var(--green-text);
+}
+font.ltbluefont {
+  color: var(--ltblue-text);
+}
+font.ltgrayfont {
+  color: var(--ltgray-text);
+}
+font.ltgreenfont {
+  color: var(--ltgreen-text);
 }
 font.orangefont {
-  color: var(--Nehrim-Orange);
+  color: var(--orange-text);
+}
+font.pinkfont {
+  color: var(--pink-text);
+}
+font.purplefont {
+  color: var(--purple-text);
+}
+font.darkredfont {
+  color: var(--darkred-text);
+}
+font.ltredfont {
+  color: var(--ltred-text);
+}
+font.redfont {
+  color: var(--red-text);
+}
+font.warningred {
+  color: var(--warning-text-red);
+}
+font.tanfont {
+  color: var(--tan-text);
+}
+font.whitefont {
+  color: var(--white-text);
+}
+font.yellowfont {
+  color: var(--yellow-text);
 }
 
 .main-content {
