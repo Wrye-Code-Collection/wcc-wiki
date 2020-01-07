@@ -396,6 +396,7 @@ title: Wrye Mash Usage
             <li><a href="9-morrowindutilities.html">9. Morrowind Utilities</a></li>
             <li><a href="10-contribute.html">10. Generating Wiki pages from Text Files</a></li>
             <li><a href="11-tutorial_Links.html">11. Tutorial Links</a></li>
+            <li><a href="12-12-other_tools_and_extras.html">12. Other Tools And Extras</a></li>
         </ul>
     </div>
 </div>
