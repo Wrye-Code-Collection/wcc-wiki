@@ -7,58 +7,58 @@
 
      . __[[https://www.nexusmods.com/fallout4/mods/78/? | B.A.E. - Bethesda Archive Extractor]]__
           * **Author:** jonwd7
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * An extractor for the new BA2 format (extracts BSAs too!)
 
      . __[[https://www.youtube.com/watch?v=hw8PFGjgxYc | BAE: Bethesda Archive Extractor: .bsa & .ba2]]__
           * **Author:** GamerPoets
-          * <font color="green"> ~~Beginner~~ </font>
+          * <font class="green"> ~~Beginner~~ </font>
           * Easy. Interactive. Step-by-step. B.A.E. Bethesda Archive Extractor : .bsa & .ba2
 
      . __[[https://www.youtube.com/watch?v=IL0_PLOWnho | Skyrim Special Edition Modding Guide Ep11 - Converting Mods: NIF Optimizer & BAE]]__
           * **Author:** Dirty Weasel Media
-          * <font color="blue"> ~~Intermediate~~ </font>
+          * <font class="blue"> ~~Intermediate~~ </font>
           * Episode 11 of the Skyrim Special Edition Modding Guide continues with more mod conversions. Now we will incorporate two of the tools we discussed in Episode 9: NIF Optimizer and the Bethesda Archive Extractor. I'll cover their use and show examples converting primarily armor and weapon mods, with a few exceptions.
 
      . __[[https://www.youtube.com/watch?v=gRK6uLH8gB8 | 4 - Bethesda Archive Extraction]]__
           * **Author:** Brain Poof
-          * <font color="grey"> ~~Possibly Outdated~~ </font>
+          * <font class="grey"> ~~Possibly Outdated~~ </font>
           * Installation and use of Bethesda Archive Extractor (BAE)
 
 ==  BethINI ================================================================
 
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/4875 | BethINI]]__
           * **Author:** DoubleYou
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * Bethesda's INI configuration files are a mess. BethINI optimizes the game for increased graphical fidelity and performance.
 
      . __[[https://www.youtube.com/watch?v=NI8ezwpZQFw | The BEST INI GRAPHICS Settings - BethINI Skyrim Special Edition 2019 Fast Tutorial]]__
           * **Author:** Ai Elias
-          * <font color="green"> ~~Beginner~~ </font>
+          * <font class="green"> ~~Beginner~~ </font>
           * INI file tweaking in Skyrim Legendary and Special Editions can be a daunting task but with a tool called BethINI it doesn't have to be. BethINI automatically optimizes your INI values to be set to the ones yield you the best performance and overall graphical fidelity, while also organizing them in a way to make manual tweaking less of a sight for sore eyes. On top of that it also crushes certain bugs all so you can get back to your sweet sweet immersion.
 
      . __[[https://www.youtube.com/watch?v=ECDgl5xfMKc | Skyrim Special Edition Modding Guide Ep3 - Tweaking Your INIs with BethINI]]__
           * **Author:** Dirty Weasel Media
-          * <font color="green"> ~~Beginner~~ </font>
+          * <font class="green"> ~~Beginner~~ </font>
           * Tweaking your configuration files ( .ini files ) is a basic for anyone modding Bethesda games. We'll give you the basics and provide resources on what they all mean using some S.T.E.P. Guides. Then I show you a tool developed by STEP member Double You, called BethINI, that will help you make tweaks to those files.
 
 ==  Blender ================================================================
 
      . __[[https://www.blender.org/ | Blender]]__
           * **Author:** Blender Foundation
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * Blender is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline—modeling, rigging, animation, simulation, rendering, compositing and motion tracking, video editing and 2D animation pipeline.
 
 ==  Cathedral Assets Optimizer ================================================================
 
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/23316 | Cathedral Assets Optimizer]]__
           * **Author:** G_k
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * An automation tool used to optimize BSAs, meshes, textures and animations. It allows quickly porting an Oldrim mod to Skyrim Special Edition, and can optimize assets for many Bethesda games.
 
      . __[[https://discord.gg/mraruus | Modding Tools Discord]]__
           * **Author:** G_k, Mator
-          * <font color="orange"> ~~Official Support Forum~~ </font>
+          * <font class="orange"> ~~Official Support Forum~~ </font>
           * Discord Server for Mator's Mods and CAO support
           . Discord Server and Forum Support Standard Disclaimer:
           * Discord servers and Forum Support are a great way to get in contact directly with tool and mod developers, HOWEVER, they are real people with real lives, not bots placed to do your bidding. Before posting questions and asking for advice, utilize the many resources available as referenced by this link compendium. If you still have questions or concerns make sure you are respectful and polite. Don't be an entitled, pushy nub, no one owes you anything.
@@ -67,14 +67,14 @@
 
      . __[[https://gpuopen.com/archive/gamescgi/cubemapgen/ | CubeMapGen]]__
           * **Author:** AMD
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * CubeMapGen is a tool for importing, filtering, visualizing, and exporting cubemaps.
 
 ==  DynDOLOD ================================================================
 
      . __[[https://forum.step-project.com/forum/101-shesons-dyndolod-support/ | DynDOLOD]]__
           * **Author:** sheson
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * Generate tree, static and dynamic distant object LOD for Skyrim with DynDOLOD.
 
      . __[[https:// | tutorial name]]__
@@ -106,7 +106,7 @@
 
      . __[[https://www.gimp.org/ | GIMP]]__
           * **Author:** The GIMP Team
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * GIMP is a cross-platform image editor available for GNU/Linux, OS X, Windows and more operating systems. It is free software, you can change its source code and distribute your changes.
           * Whether you are a graphic designer, photographer, illustrator, or scientist, GIMP provides you with sophisticated tools to get your job done. You can further enhance your productivity with GIMP thanks to many customization options and 3rd party plugins.
 
@@ -115,7 +115,7 @@
 
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/1918 | LOOT - Load Order Optimisation Tool]]__
           * **Author:** wrinklyninja
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * Setting the right load order for your mods is a crucial step to enjoying a stable modded game. The Load Order Optimisation Tool (LOOT) can help with that, by providing automated load order sorting that's simple to use and fully customisable. See also: [[https://loot.github.io/ | Official LOOT site]]
 
      . __[[https:// | tutorial name]]__
@@ -152,7 +152,7 @@
 
      . __[[https://www.nexusmods.com/skyrim/mods/90987 | Mator Smash]]__
           * **Author:** Mator
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * Mator Smash is a tool that generates conflict resolution patches, similar to Wrye Bash's Bashed Patch. 
           * Smash is capable of handling conflicts in all record types.
 
@@ -175,7 +175,7 @@
 
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/4089 | SSE Nif Optimizer]]__
           * **Author:** ousnius
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * A tool for mod authors that optimizes your SK NIF files for the (actual) new SSE format and fixes issues. Can also scan textures for compatibility.
 
      . __[[https:// | tutorial name]]__
@@ -192,7 +192,7 @@
 
      . __[[https://www.nexusmods.com/skyrim/mods/75916/? | NifScan]]__
           * **Author:** zilav
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * A simple command line utility to quickly scan nifs for common errors
 
      . __[[https:// | tutorial name]]__
@@ -209,7 +209,7 @@
 
      . __[[https://github.com/jonwd7/nifskope/releases | NifSkope]]__
           * **Author:** jonwd7
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * A tool for opening and editing Model Files, also known as the NetImmerse File Format, meshes or .nifs
 
      . __[[https:// | tutorial name]]__
@@ -241,14 +241,14 @@
 
      . __[[https://www.nexusmods.com/skyrim/mods/40494/ | NPC Nif Merge]]__
           * **Author:** Turulo
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * Small application to merge NPC's FaceGen NIF files
 
 ==  Paint.net ================================================================
 
      . __[[https://www.getpaint.net/index.html | Paint.net]]__
           * **Author:** Rick Brewster
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * Paint.NET is image and photo editing software for PCs that run Windows. It features an intuitive and innovative   user interface with support for layers, unlimited undo, special effects, and a wide variety of useful and powerful   tools. An active and growing online community provides friendly help, tutorials, and plugins.
           * This site has its own collection of tutorials and forums for the self-learner
 
@@ -266,14 +266,14 @@
 
      . __[[https:// | tool name]]__
           * **Author:** 
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * Descrip of official tool
 
 ==  zEdit ================================================================
 
      . __[[https:// | tool name]]__
           * **Author:** 
-          * <font color="red"> ~~TOOL~~ </font>
+          * <font class="red"> ~~TOOL~~ </font>
           * Descrip of official tool
 
 =  Random Tutorials and Fun Stuff ================================================================
@@ -284,23 +284,23 @@ __A collection of tutorials and links to fun stuff that don't necessarily fit an
 
      . __[[https://wiki.nexusmods.com/index.php/Using_a_face_made_with_RaceMenu_on_an_NPC_for_Skyrim | Using a face made with RaceMenu on an NPC for Skyrim]]__
           * **Author:** Nexus Wiki Team
-          * <font color="blue"> ~~Intermediate~~ </font>
+          * <font class="blue"> ~~Intermediate~~ </font>
           * This tutorial shows how to give an NPC a face you've created using This tutorial shows how to give an NPC a face you've created using [[http://www.nexusmods.com/skyrim/mods/29624/ | Expired's RaceMenu]]. 
           * For using a face created only with the vanilla Skyrim sliders, check the following: [[https://wiki.nexusmods.com/index.php/Adding_a_Follower_NPC_to_Skyrim#Use_the_face_of_your_player_character_for_the_NPC | Use the face of your player character for the NPC]].
 
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/30041 | How to edit NPCs without Nifmerge]]__
           * **Author:** Kalilies
-          * <font color="blue"> ~~Intermediate~~ </font>
+          * <font class="blue"> ~~Intermediate~~ </font>
           * A step-by-step tutorial on how make your RaceMenu exported character an NPC without having to use Oldrim or Nifmerge.
 
      . __[[https://wiki.nexusmods.com/index.php/Creating_cubemaps_for_Skyrim | Creating Cubemaps for Skyrim]]__
           * **Author:** Nexus Wiki Team
-          * <font color="purple"> ~~Advanced~~ </font>
+          * <font class="purple"> ~~Advanced~~ </font>
           * This tutorial shows all the main steps you need to follow to create a cubemap for Skyrim (the cubemap you create here may be used in other games, too).
 
      . __[[https://wiki.nexusmods.com/index.php/Importing_custom_videos_into_FNV/F3/Skyrim/Oblivion | Improting Custom Videos into FNV/F3/Skyrim/Oblivion]]__
           * **Author:** Martin Purvis
-          * <font color="blue"> ~~Intermediate~~ </font>
+          * <font class="blue"> ~~Intermediate~~ </font>
           * This basic tutorial shows how you can import your own custom videos into Fallout: New Vegas, Fallout 3, Skyrim and Oblivion. I haven't seen any tutorials on getting this to work, I worked out how to do it by spending a bit of time experimenting. You can watch the Video tutorial below or if you prefer I have written a text version. This particular tutorial will be Fallout New Vegas
 
 
@@ -315,36 +315,36 @@ Some may decide that they really have no interest in learning the ins and outs o
 
      . __[[https://wiki.nexusmods.com/index.php/User:Darkladylexy/Lexys_LOTD_SE | Lexy's Legacy of the Dragonborn Special Edition: A Skyrim: SE Mod Guide]]__
           * **Author:** DarkladyLexy and Darth_mathias
-          * <font color="purple"> ~~GUIDE~~ </font>
+          * <font class="purple"> ~~GUIDE~~ </font>
           * This guide is designed for experienced modders. If you are new to the Skyrim Modding Experience, it is highly suggested you watch videos, read forums posts, and other such activities to ensure you are familiarized with all of the tools used in this mod build.
 
      . __[[https://discord.gg/xj7JcZ7 | Lexy's: Legacy of the Dragonborn Discord]]__
           * **Author:** DarkladyLexy
-          * <font color="orange"> ~~Forum~~ </font>
+          * <font class="orange"> ~~Forum~~ </font>
           * Discord forum for the Lexy's LOTD guide.
 
 ===  The Phoenix Flavour
 
     . __[[https://www.nexusmods.com/skyrimspecialedition/mods/14223 | The Phoenix Flavor - A Modular Modding Guide]]__
           * **Author:** Phoenix
-          * <font color="purple"> ~~GUIDE~~ </font>
+          * <font class="purple"> ~~GUIDE~~ </font>
           * Modular Mod Guide for SSE.
 
      . __[[https://discordapp.com/invite/SV5N6n7/ | The Phoenix Flavour Discord]]__
           * **Author:** Phoenix
-          * <font color="orange"> ~~Forum~~ </font>
+          * <font class="orange"> ~~Forum~~ </font>
           * This is the official Discord server for The Phoenix Flavour, a modding guide for Skyrim Special Edition.
 
 ===  TucoGuide
 
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/10694 | TUCOGUIDE - Modlist Guide and Tutorial for Mod Organizer 2]]__
           * **Author:** OutdatedTV (Ponurymazepa) and TUCO Modding Team
-          * <font color="purple"> ~~GUIDE~~ </font>
+          * <font class="purple"> ~~GUIDE~~ </font>
           * TUCOGUIDE - The compact modlist aimed for learning and promoting good modding practices and properly using Mod Organizer 2. Aimed to be a backbone for eventually installing further mods on top of it if you desire.
 
      . __[[https://discord.gg/tvjWjCr | Outdated TV Main Discord]]__
           * **Author:** OutdatedTV
-          * <font color="orange"> ~~Forum~~ </font>
+          * <font class="orange"> ~~Forum~~ </font>
           * Discord server for Outdated TV projects including the TUCOGUIDE
 
 ===  SkyRem Guide
@@ -352,27 +352,27 @@ Some may decide that they really have no interest in learning the ins and outs o
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/26789 | SkyREM Guide]]__
      * __[[https://wiki.step-project.com/User:DrPharmDawg/SkyRem_Guide_Home | Official SkyREM Guide]]__
           * **Author:** DrPharmDawg
-          * <font color="purple"> ~~GUIDE~~ </font>
+          * <font class="purple"> ~~GUIDE~~ </font>
           * Skyrim Roleplay Enhancement Mod Guide. Patches and files needed for the guide will be available here on the Nexus. 
 	  * SkyRem Concept: Add to the Skyrim experience by incorporating elements of strategic roleplay that focus on character creation, growth, and development that works seamlessly with the base (vanilla) game. While this began with the desire to tweak character creation, it has since grown into two (currently) series of mods and now a guide as I work to put it all together.
 
      . __[[https://discord.gg/4VT6ZK9 | SkyRem Discord]]__
           * **Author:** DrPharmDawg
-          * <font color="orange"> ~~Forum~~ </font>
+          * <font class="orange"> ~~Forum~~ </font>
           * Welcome to the SkyRem Discord! This server is for all things SkyRem related - Guide and Mods.
 
 ===  YASHed Guide
 
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/23894 | Yashed Guide]]__
           * **Author:** mnikjom
-          * <font color="purple"> ~~GUIDE~~ </font>
+          * <font class="purple"> ~~GUIDE~~ </font>
           * Guide made specifically for people that are just starting their adventure with Skyrim modding.
           * Best graphics! Balanced and consistent gameplay!
           * Mod Organizer 2 support only.
 
      . __[[https://discord.gg/fuhsnph | Rare Papug Association Discord]]__
           * **Author:** mnikjom
-          * <font color="orange"> ~~Forum~~ </font>
+          * <font class="orange"> ~~Forum~~ </font>
           * Discord server for mnikjom's projects including the Yashed Guide. 
 
 

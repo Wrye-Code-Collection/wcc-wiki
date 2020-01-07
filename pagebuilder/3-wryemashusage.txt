@@ -174,7 +174,7 @@ You can download a standalone EXE that doesn't require Python to be installed.
 
 === Starting Wrye Mash
 * **Double click** the "Wrye Mash.exe" in the Mopy directory.
-* If this doesn't work, see [[#|Non-Standard Morrowind/Python Directories]] or <font class="redfont">**[[#|If Mash Won't Start]]**</font>.
+* If this doesn't work, see [[#|Non-Standard Morrowind/Python Directories]] or <font class="red">**[[#|If Mash Won't Start]]**</font>.
 
 === Non-Standard Morrowind/Python Directories
 * **Do this if either Morrowind or Python is in a non-standard directory.**
@@ -188,7 +188,7 @@ You can download a standalone EXE that doesn't require Python to be installed.
 * If **Python** is in a non-standard place. then edit the __Target__ field to be:
   . <code>"[PythonPath]" mash.py</code> **(e.g.** <code>"C:\Python24\pythonw.exe" mash.py</code> **)**
 
-=== <font class="redfont">If Mash Won't Start</font>
+=== <font class="red">If Mash Won't Start</font>
 * **If Mash refuses to start, or quits after quickly flashing up a window...**
 * __Check your Mash Shortcut__
   * Most users who have problems with Mash simply need to tweak the __Start In__ and/or __Target__ fields of the shortcut. (See [[#|Non-Standard Morrowind/Python Directories]] for more info.)

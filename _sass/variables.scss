@@ -57,27 +57,29 @@ $body-link-color: rgb(30, 107, 184);
 
   --toc-header-text: rgb(21,153,87);
 
-  // 16 basic site friendly colors
+  // 17 basic site friendly colors
   --black-text: rgb(0, 0, 0);
   --blue-text: rgb(33,136,255);
   --brown-text: rgb(152, 112, 16);
   --cyan-text: rgb(41, 208, 208);
-  --dkgray-text: rgb(87, 87, 87);
+  --ltgray-text: rgb(209, 210, 212);
   --gray-text: rgb(181,181,181);
+  --dkgray-text: rgb(87, 87, 87);
   --green-text: rgb(21,153,87);
   --ltblue-text: rgb(157, 175, 255);
-  --ltgray-text: rgb(209, 210, 212);
   --ltgreen-text: rgb(129, 197, 122);
   --orange-text: rgb(218,119,62);
   --pink-text: rgb(255, 205, 243);
   --purple-text: rgb(209, 188, 249);
-  --red-text: rgb(224,88,88);
-  --darkred-text: rgb(214, 24, 0);
-  --ltred-text: rgb(211, 47, 47);
-  --warning-text-red: rgb(207,52,50);
+  --red-text: rgb(207,52,50); // was warning-red
   --tan-text: rgb(233, 222, 187);
   --white-text: rgb(255, 255, 255);
   --yellow-text: rgb(244, 203, 53);
+  
+  // save
+  --old-red-text: rgb(224,88,88);
+  --darkred-text: rgb(214, 24, 0);
+  --ltred-text: rgb(211, 47, 47);
 
   --color-new: #{$green};
   --color-deleted: #{$red};

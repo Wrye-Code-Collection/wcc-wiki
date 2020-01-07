@@ -2,7 +2,7 @@
 == Intent:
 * Do you have Wrye Bash related material that you would like to submit to this site? Are HTML and css style sheets over your head? If you can install Python, run a python script from a command line, and edit a text file then you can generate a page ready for use with this Wiki.
 * Wrye has said in some of his Wrye Mash files that he built all of his pages using this system. I would presume that [[http://wryemusings.com/ | Wrye Musings]] was done this way as well. On this page you will be shown the Wrye Text format and given a download of a python script to run and convert your Wrye Text files to HTML that can be used on this site.
-* <font class="redfont">NOTE: You do not need to know Python to do this.</font> All Python scripts will be provided. You only need to follow these instructions and some basic computer knowledge.
+* <font class="red">NOTE: You do not need to know Python to do this.</font> All Python scripts will be provided. You only need to follow these instructions and some basic computer knowledge.
 
 == Content:
 * Content should be Wrye related and related to Wrye Mash, and Wrye Bash programs. This can include BAIN installers for mods that do not currently have any or any other content that users could benefit from when using Wrye Bash.
@@ -107,26 +107,24 @@ o Alternate bullet char
 
 {{CONTENTS=3}}
 ===Text Colors
-* <font class="blackfont">This is font.blackfont</font>
-* <font class="bluefont">This is font.bluefont</font>
-* <font class="brownfont">This is font.brownfont</font>
-* <font class="cyanfont">This is font.cyanfont</font>
-* <font class="dkgrayfont">This is font.dkgrayfont</font>
-* <font class="grayfont">This is font.grayfont</font>
-* <font class="greenfont">This is font.greenfont</font>
-* <font class="ltbluefont">This is font.ltbluefont</font>
-* <font class="ltgrayfont">This is font.ltgrayfont</font>
-* <font class="ltgreenfont">This is font.ltgreenfont</font>
-* <font class="orangefont">This is font.orangefont</font>
-* <font class="pinkfont">This is font.pinkfont</font>
-* <font class="purplefont">This is font.purplefont</font>
-* <font class="redfont">This is font.redfont</font> <- this is really a different value
-* <font class="warningred">This is warning red font.warningred</font> <- this is really a different value
-* <font class="darkredfont">This is darkredfont red font.darkredfont</font> <- this is really a different value
-* <font class="ltredfont">This is ltredfont red font.ltredfont</font> <- this is really a different value
-* <font class="tanfont">This is font.tanfont</font>
-* <font class="whitefont">This is font.whitefont</font>
-* <font class="yellowfont">This is font.yellowfont</font>
+{{CONTENTS=0}}
+* <font class="black">This is font.black</font>
+* <font class="blue">This is font.blue</font>
+* <font class="brown">This is font.brown</font>
+* <font class="cyan">This is font.cyan</font>
+* <font class="dkgray">This is font.dkgray</font>
+* <font class="gray">This is font.gray</font>
+* <font class="green">This is font.green</font>
+* <font class="ltblue">This is font.ltblue</font>
+* <font class="ltgray">This is font.ltgray</font>
+* <font class="ltgreen">This is font.ltgreen</font>
+* <font class="orange">This is font.orange</font>
+* <font class="pink">This is font.pink</font>
+* <font class="purple">This is font.purple</font>
+* <font class="red">This is red red font.red</font> <- this is really a different value
+* <font class="tan">This is font.tan</font>
+* <font class="white">This is font.white</font>
+* <font class="yellow">This is font.yellow</font>
 
 {{CONTENTS=2}}
 === Html

@@ -81,35 +81,6 @@ body {
   }
 }
 
-a {
-  color: var(--blue-text);
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-a.blue {
-  color: var(--Nehrim-Blue);
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-a.green {
-  color: var(--Nehrim-Green);
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-a.orange {
-  color: var(--Nehrim-Orange);
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
@@ -557,64 +528,80 @@ input[id^="spoiler"]:checked + label + .spoiler{
   }
 }
 
-font.blackfont {
+a {
+  color: var(--blue-text);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+font.black,
+a.black {
   color: var(--black-text);
 }
-font.bluefont {
+font.blue,
+a.blue {
   color: var(--blue-text);
 }
-font.brownfont {
+font.brown,
+a.brown {
   color: var(--brown-text);
 }
-font.cyanfont {
+font.cyan,
+a.cyan {
   color: var(--cyan-text);
 }
-font.dkgrayfont {
+font.dkgray,
+a.dkgray {
   color: var(--dkgray-text);
 }
-font.grayfont {
+font.gray,
+a.gray {
   color: var(--gray-text);
 }
-font.greenfont {
+font.green,
+a.green {
   color: var(--green-text);
 }
-font.ltbluefont {
+font.ltblue,
+a.ltblue {
   color: var(--ltblue-text);
 }
-font.ltgrayfont {
+font.ltgray,
+a.ltgray {
   color: var(--ltgray-text);
 }
-font.ltgreenfont {
+font.ltgreen,
+a.ltgreen {
   color: var(--ltgreen-text);
 }
-font.orangefont {
+font.orange,
+a.orange {
   color: var(--orange-text);
 }
-font.pinkfont {
+font.pink,
+a.pink {
   color: var(--pink-text);
 }
-font.purplefont {
+font.purple,
+a.purple {
   color: var(--purple-text);
 }
-font.darkredfont {
-  color: var(--darkred-text);
-}
-font.ltredfont {
-  color: var(--ltred-text);
-}
-font.redfont {
+font.red,
+a.red {
   color: var(--red-text);
 }
-font.warningred {
-  color: var(--warning-text-red);
-}
-font.tanfont {
+font.tan,
+a.tan {
   color: var(--tan-text);
 }
-font.whitefont {
+font.white,
+a.white {
   color: var(--white-text);
 }
-font.yellowfont {
+font.yellow,
+a.yellow {
   color: var(--yellow-text);
 }
 
