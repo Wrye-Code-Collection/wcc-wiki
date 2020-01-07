@@ -1,5 +1,3 @@
-@import 'src/support/variables/color-system.scss';
-
 // Breakpoints
 // 1920px
 $full-breakpoint: 1900px !default;
@@ -36,13 +34,11 @@ $hr-border-color: #eff0f1 !default;
 //
 // This files contains CSS variables accessible to all selectors
 :root {
-  --color-new: #{$green};
-  --color-deleted: #{$red};
-  --color-modified: #{$yellow-700};
-  --color-renamed: #{$blue};
-  --color-conflicted: #{$orange};
-  
-  --warning-text-red: #CF3432;
+  --red: 255;
+  --green: 255;
+  --blue: 255;
+
+  --warning-text-red: rgb(rgb(207,52,50);
   --href-text: #{$blue-400};
 
   --Nehrim-Green: #159957;
