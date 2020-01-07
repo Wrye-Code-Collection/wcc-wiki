@@ -36,11 +36,17 @@ $small-breakpoint: 560px !default;
   // Sharlikran Colors
   //
 
+  --color-new: #{$green};
+  --color-deleted: #{$red};
+  --color-modified: #{$yellow-700};
+  --color-renamed: #{$blue};
+  --color-conflicted: #{$orange};
+  
   --red: 255;
   --green: 255;
   --blue: 255;
 
-  --warning-text-red: rgb(rgb(207,52,50);
+  --warning-text-red: rgb(207,52,50);
   --href-text: rgb(33,136,255);
 
   --Nehrim-Green: rgb(21,153,87);
