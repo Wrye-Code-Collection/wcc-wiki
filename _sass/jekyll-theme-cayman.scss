@@ -76,8 +76,8 @@ body {
     left: 10px;
     height: auto;
     width: auto;
-    background: invert(var(var(--cayman-body-href)));
-    outline: thick solid invert(var(var(--cayman-body-href)));
+    background: invert((var(--cayman-body-href)));
+    outline: thick solid invert((var(--cayman-body-href)));
   }
 }
 
@@ -206,10 +206,10 @@ a.orange {
 }
 
 .page-header {
-  color: var(var(--cayman-header-heading));
+  color: (var(--cayman-header-heading));
   text-align: center;
-  background-color: var(var(--cayman-header-background));
-  background-image: linear-gradient(120deg, var(var(--cayman-header-background)-secondary), var(var(--cayman-header-background)));
+  background-color: (var(--cayman-header-background));
+  background-image: linear-gradient(120deg, (var(--cayman-header-background)-secondary), (var(--cayman-header-background)));
   @include full {
     padding: 3rem 4rem;
   }
