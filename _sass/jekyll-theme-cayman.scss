@@ -209,7 +209,7 @@ a.orange {
   color: var(--cayman-header-heading);
   text-align: center;
   background-color: var(--cayman-header-background);
-  background-image: linear-gradient(120deg, var(--cayman-header-background-secondary), var(--cayman-header-background);
+  background-image: linear-gradient(120deg, var(--cayman-header-background-secondary), var(--cayman-header-background));
   @include full {
     padding: 3rem 4rem;
   }
