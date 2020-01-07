@@ -105,6 +105,7 @@ o Alternate bullet char
   * All section headers can be linked to by compressing the text of the header together (i.e., by stripping out all non alphabetical characters).
   * If you use the second form the link is automatically generated from the text of the link.
 
+{{CONTENTS=3}}
 ===Text Colors
 * <font class="blackfont">This is font.blackfont</font>
 * <font class="bluefont">This is font.bluefont</font>
@@ -127,6 +128,7 @@ o Alternate bullet char
 * <font class="whitefont">This is font.whitefont</font>
 * <font class="yellowfont">This is font.yellowfont</font>
 
+{{CONTENTS=2}}
 === Html
 * <i>Html tags work fine</i>
 * <code>code tag has special formatting</code> 
