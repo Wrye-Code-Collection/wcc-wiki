@@ -76,8 +76,8 @@ body {
     left: 10px;
     height: auto;
     width: auto;
-    background: invert($body-link-color);
-    outline: thick solid invert($body-link-color);
+    background: invert(var(--old-href-text));
+    outline: thick solid invert(var(--old-href-text));
   }
 }
 
@@ -206,10 +206,10 @@ a.orange {
 }
 
 .page-header {
-  color: $header-heading-color;
+  color: var(--old-header-heading);
   text-align: center;
-  background-color: $header-bg-color;
-  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+  background-color: var(--old-header-background);
+  background-image: linear-gradient(120deg, var(--old-header-background-secondary), var(--old-header-background));
   @include full {
     padding: 3rem 4rem;
   }
@@ -385,7 +385,7 @@ a.orange {
     color: var(--syntax-variable-color);
     background: var(--header3-background);
     word-wrap: normal;
-    border: solid 1px $border-color;
+    border: solid 1px var(--cayman-border);
     border-radius: 0.3rem;
     >code {
       padding: 0;
@@ -439,7 +439,7 @@ a.orange {
     margin-left: 0;
     color: var(--syntax-variable-color);
     background: var(--header3-background);
-    border-left: 0.3rem solid $border-color;
+    border-left: 0.3rem solid var(--cayman-border);
     > :first-child {
       margin-top: 0;
     }
@@ -481,7 +481,7 @@ a.orange {
     height: 2px;
     padding: 0;
     margin: 1rem 0;
-    background-color: $hr-border-color;
+    background-color: var(--cayman-hr-border);
     border: 0;
   }
 }
@@ -642,7 +642,7 @@ font.orangefont {
 .site-footer {
   padding-top: 2rem;
   margin-top: 2rem;
-  border-top: solid 1px $hr-border-color;
+  border-top: solid 1px var(--cayman-hr-border);
   @include full {
     font-size: 1rem;
   }
@@ -666,5 +666,5 @@ font.orangefont {
 }
 
 .site-footer-credits {
-  color: $blockquote-text-color;
+  color: var(--old-blockquote-text);
 }

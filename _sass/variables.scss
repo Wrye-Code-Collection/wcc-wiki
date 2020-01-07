@@ -10,58 +10,59 @@ $medium-breakpoint: 780px !default;
 // 580px or Phone
 $small-breakpoint: 560px !default;
 
-// Headers
-$header-heading-color: #fff !default;
-$header-bg-color: #159957 !default;
-$header-bg-color-secondary: #155799 !default;
-
-// Text 
-$section-headings-color: #159957 !default;
-$body-text-color: #606c71 !default;
-$body-link-color: #1e6bb8 !default;
-$blockquote-text-color: #819198 !default;
-
-// Code
-$code-bg-color: #f3f6fa !default;
-$code-text-color: #567482 !default;
-
-// Borders
-$border-color: #dce6f0 !default;
-$table-border-color: #e9ebec !default;
-$hr-border-color: #eff0f1 !default;
-
 // Color Variables
 //
 // This files contains CSS variables accessible to all selectors
 :root {
+  // Cayman colors
+  //
+  // Headers
+  --cayman-header-heading: rgb(255, 255, 255);
+  --cayman-header-background: rgb(21, 153, 87);
+  --cayman-header-background-secondary: rgb(21, 87, 153);
+  // Text 
+  --cayman-section-headings: rgb(21, 153, 87);
+  --cayman-body-text: rgb(96, 108, 113);
+  --cayman-body-href: rgb(30, 107, 184);
+  --cayman-blockquote-text: rgb(129, 145, 152);
+  // Code
+  --cayman-code-background: rgb(243, 246, 250);
+  --cayman-code-text: rgb(86, 116, 130);
+  // Borders
+  --cayman-border: rgb(220, 230, 240);
+  --cayman-table-border-color: rgb(233, 235, 236);
+  --cayman-hr-border: rgb(239, 240, 241);
+  // Sharlikran Colors
+  //
+
   --red: 255;
   --green: 255;
   --blue: 255;
 
   --warning-text-red: rgb(rgb(207,52,50);
-  --href-text: #{$blue-400};
+  --href-text: rgb(33,136,255);
 
-  --Nehrim-Green: #159957;
-  --Nehrim-Blue: #{$blue-400};
-  --Nehrim-Orange: #DA773E;
+  --Nehrim-Green: rgb(21,153,87);
+  --Nehrim-Blue: rgb(33,136,255);
+  --Nehrim-Orange: rgb(218,119,62);
   
-  --header1-text: #{lighten($gray-300, 5%)};
-  --header1-background: #{darken($gray-600, 3%)};
-  --header1-border: #{lighten($gray-600, 5%)};
+  --header1-text: #{lighten(rgb(209,213,218), 5%)};
+  --header1-background: #{darken(rgb(88,96,105), 3%)};
+  --header1-border: #{lighten(rgb(88,96,105), 5%)};
 
-  --header2-text: #{$gray-200};
-  --header2-background: #{darken($gray-700, 3%)};
-  --header2-border: #{lighten($gray-700, 5%)};
+  --header2-text: #{rgb(225,228,232)};
+  --header2-background: #{darken(rgb(68,77,86), 3%)};
+  --header2-border: #{lighten(rgb(68,77,86), 5%)};
 
-  --header3-text: #{$gray-300};
-  --header3-background: #{darken($gray-900, 3%)};
-  --header3-border: #{lighten($gray-900, 5%)};
+  --header3-text: #{rgb(209,213,218)};
+  --header3-background: #{darken(rgb(36,41,46), 3%)};
+  --header3-border: #{lighten(rgb(36,41,46), 5%)};
 
   --header4-text: #{darken($gray-200, 3%)};
-  --header4-background: #{darken($gray-800, 3%)};
-  --header4-border: #{lighten($gray-800, 5%)};
+  --header4-background: #{darken(rgb(47,54,61), 3%)};
+  --header4-border: #{lighten(rgb(47,54,61), 5%)};
 
-  --toc-header-text: #159957;
+  --toc-header-text: rgb(21,153,87);
 
   --body-text: #{$gray-300};
   --body-text-secondary: #{$gray-400};
