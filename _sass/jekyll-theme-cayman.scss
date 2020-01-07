@@ -76,8 +76,8 @@ body {
     left: 10px;
     height: auto;
     width: auto;
-    background: invert(var(--cayman-body-href));
-    outline: thick solid invert(var(--cayman-body-href));
+    background: invert($body-link-color);
+    outline: thick solid invert($body-link-color);
   }
 }
 
