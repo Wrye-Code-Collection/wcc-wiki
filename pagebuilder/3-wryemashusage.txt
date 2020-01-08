@@ -1,3 +1,4 @@
+{{PAGETITLE="Wrye Mash Usage"}}
 = Wrye Mash =====================================================
 * Latest Version: [[https://github.com/Wrye-Bashers/Wrye-Mash/releases | Wrye Mash]]
 * Discussion: [[https://www.afkmods.com/index.php?/topic/5068-wipz-wrye-mash/ | AFK Mods Forums]]
