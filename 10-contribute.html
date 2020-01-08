@@ -23,7 +23,7 @@ title: Contributing
         </ul>
     </div>
 </div>
-<section>
+<div>
 <h2 class="header2" id="Intent">Intent:</h2>
 <p class="list-1">&bull;&nbsp; Do you have Wrye Bash related material that you would like to submit to this site? Are HTML and css style sheets over your head? The files and options provided will allow you to edit a simple text file that I will convert into content for the Wiki.</p>
 <p class=empty>&nbsp;</p>
@@ -49,6 +49,7 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#TableofContents">Table of Contents</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Bullets">Bullets</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Styles">Styles</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#HeaderRule">Header Rule</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Links">Links</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#TextColors">Text Colors</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#LinkColors">Link Colors</a></p>
@@ -74,22 +75,22 @@ title: Contributing
 <p class="list-1">&bull;&nbsp; <a  href="pagebuilder_v1.zip">pagebuilder_v1 Download Link.zip</a></p>
 <p class=empty>&nbsp;</p>
 <h2 id="ExampleTemplate">Example Template</h2>
-<p>As part of the pagebuilder archive you have <code>Mash Readme Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.</p>
+<p>As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.</p>
 <p class=empty>&nbsp;</p>
 <h2 class="header2" id="Syntax">Syntax</h2>
 <h3 class="header3" id="YourPagesTitle">Your Pages Title</h3>
 <p class=empty>&nbsp;</p>
-<p>Your page title will become the file line on the page and will be assigned as the first header. To indicate this text use the following Wrye Tag.</p>
-When you add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with opening and ending double curly brackets. The text in quotes will become the title of your page as shown below.
+<p>Your page title will become the first line on the page and will be assigned as the first header. To indicate this text use the following Wrye Tag.</p>
+Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with opening and ending double curly brackets. The text in quotes will become the title of your page as shown below.
 <p class=empty>&nbsp;</p>
 <h1 class="header1" id="YourPageTitle">Your Page Title</h1>
 <p class=empty>&nbsp;</p>
 <hr>
 <h3 class="header3" id="HeadingStyle1">Heading Style 1</h3>
 <p class=empty>&nbsp;</p>
-<p class="list-1">&bull;&nbsp; There are 4 defined headings with different sizes of text and backgrounds.</p>
-<p class="list-1">&bull;&nbsp; The level of heading is determined by number of leading '='s. Trailing equal signs are ignored.</p>
-<p class="list-1">&bull;&nbsp; These heading will have some shade of grey bar that extends the width of the page.</p>
+<p class="list-1">&bull;&nbsp; There are 4 levels of headings defined with different sizes of text and backgrounds.</p>
+<p class="list-1">&bull;&nbsp; The level of the heading is determined by number of leading '='s. Trailing equal signs are ignored.</p>
+<p class="list-1">&bull;&nbsp; These headings will have some shade of grey bar that extends the width of the page.</p>
 <p class=empty>&nbsp;</p>
 <h1 class="header1" id="Heading1">Heading 1</h1>
 <h2 class="header2" id="Heading2">Heading 2</h2>
@@ -99,7 +100,7 @@ When you add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> w
 <hr>
 <h3 class="header3" id="HeadingStyle2">Heading Style 2</h3>
 <p class=empty>&nbsp;</p>
-<p class="list-1">&bull;&nbsp; Like the previous heading the amount of leading '#'s changes the size of the heading.</p>
+<p class="list-1">&bull;&nbsp; Like the previous heading the amount of leading '#'s determines the level of the heading.</p>
 <p class="list-1">&bull;&nbsp; These headings will not have a bar as a background and will have green text</p>
 <p class=empty>&nbsp;</p>
 <h1 id="Heading11">Heading 1</h1>
@@ -109,9 +110,9 @@ When you add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> w
 <p class=empty>&nbsp;</p>
 <h3 class="header3" id="TableofContents">Table of Contents</h3>
 <p class=empty>&nbsp;</p>
-<p>A table of contents is automatically generated from the headers in the document. It is best to place the tag after a header with the Contents name. The number indicates which header level will be used.</p>
+<p>A table of contents is automatically generated from the headers in the document. It is best to place the first where you want the table of contents to be, and after a header named Contents. The number indicates which header level will be used.</p>
 <p class=empty>&nbsp;</p>
-<p>The syntax is as follows: {% raw %}<code>{{CONTENTS=2}}</code>{% endraw %} or {% raw %}<code>{{CONTENTS=0}}</code>{% endraw %} to pause using headers in the table of contents.</p>
+<p>The syntax is as follows: <code>{% raw %}{{CONTENTS=2}}{% endraw %}</code> or <code>{% raw %}{{CONTENTS=0}}{% endraw %}</code> to pause using headers in the table of contents.</p>
 <p class=empty>&nbsp;</p>
 <p>You can also disable using headers in the table of contents by using a value of <code>0</code>. The headers will not be recorded until there is another contents tag with a value greater thean 0.</p>
 <p class=empty>&nbsp;</p>
@@ -119,25 +120,28 @@ When you add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> w
 <p class=empty>&nbsp;</p>
 <hr>
 <h3 class="header3" id="Bullets">Bullets</h3>
-<p class="list-1">&bull;&nbsp; Bullets1</p>
-  <p class="list-2">&bull;&nbsp; Bullets 2</p>
-    <p class="list-3">&bull;&nbsp; Bullets 3</p>
-      <p class="list-4">&bull;&nbsp; Bullets 4</p>
-<p class="list-1">+&nbsp; Alternate bullet char</p>
+<p class="list-1">&bull;&nbsp; Bullets1 - an asterisk <code>*</code> and a space would precede the text</p>
+  <p class="list-2">&bull;&nbsp; Bullets 2 - an asterisk <code>*</code> and two spaces would precede the text</p>
+    <p class="list-3">&bull;&nbsp; Bullets 3 - an asterisk <code>*</code> and four spaces would precede the text</p>
+      <p class="list-4">&bull;&nbsp; Bullets 4 - an asterisk <code>*</code> and six spaces would precede the text</p>
+<p class="list-1">+&nbsp; Alternate bullet char - a plus and a space <code>+ </code> would precede the text</p>
 <p class="list-1">o&nbsp; Alternate bullet char</p>
-<p class="list-1">&nbsp;&nbsp; For an invisible bullet char you would use a period '.' at the beginning of the line.</p>
+<p class="list-1">&nbsp;&nbsp; For an invisible bullet char you would use a period <code>.</code> at the beginning of the line.</p>
 <p class=empty>&nbsp;</p>
 <hr>
 <h3 class="header3" id="Styles">Styles</h3>
-<p class="list-1">&bull;&nbsp; <I>Italic</I></p>
-<p class="list-1">&bull;&nbsp; <B>Bold</B></p>
-<p class="list-1">&bull;&nbsp; <B><I>BoldItalic</I></B></p>
+<p class="list-1">&bull;&nbsp; <I>Italic</I> - You would surround the text using two tilde <code>~</code> symbols</p>
+<p class="list-1">&bull;&nbsp; <B>Bold</B> - You would surround the text using two underscore <code>_</code> symbols</p>
+<p class="list-1">&bull;&nbsp; <B><I>BoldItalic</I></B> - You would surround the text using two asterisk <code>*</code> symbols</p>
 <p class=empty>&nbsp;</p>
 <hr>
+<h3 class="header3" id="HeaderRule">Header Rule</h3>
+<p>You can add a visible divider to seperate information with the traditional HTML hr tag surrounded by <code><></code> symbols</p>
+<hr>
 <h3 class="header3" id="Links">Links</h3>
-<p>The link syntax can not be shown very well because it will be translated into a link. For that I will use only one brace. <font class="orange">NOTE:</font> you will need two braces for a valid link.</p>
+<p>The link syntax can not be shown very well because it will be translated into a link. For this reason I will use only one brace. <font class="orange">NOTE:</font> you will need two braces for a valid link.</p>
 <p class=empty>&nbsp;</p>
-<p>Below there is an example for an Internal link. What that means is a link to another part of the document. For example you might want to link to how to install python. <a  href="#PythonInstallation">Python Installation</a></p>
+<p>Below there is an example for an Internal link. An internal link is used to navagate to another section of the document. For example you might want to link to how to install python. <a  href="#PythonInstallation">Python Installation</a></p>
 <p class=empty>&nbsp;</p>
 <font class="yellow">NOTE:</font> Wrye Text now recognizes duplicate header names such as "Contents" and "Contents". If you must duplicate a header name for clarity then you will need to examine the HTML and look for the ID produced by the Python code for the HTML.
 <p class=empty>&nbsp;</p>
@@ -146,12 +150,14 @@ When you add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> w
 <p class="list-1">&bull;&nbsp; External Link: [http://wrye.ufrealms.net] or [http://wrye.ufrealms.net | Wrye Musings]</p>
 <p class="list-1">&bull;&nbsp; Internal Link: [#PythonInstallation | Python Installation] or [#| Reuse and Credits].</p>
   <p class="list-2">&bull;&nbsp; All section headers can be linked to by compressing the text of the header together (i.e., by stripping out all non alphabetical characters).</p>
-  <p class="list-2">&bull;&nbsp; If you use the second form the link is automatically generated from the text of the link.</p>
+  <p class="list-2">&bull;&nbsp; If you use the second method, the link is automatically generated from the text of the link.</p>
+  <p class="list-2">&bull;&nbsp; <font class="green">NOTE:</font> Any duplication of a header will cause the python script to append a number after the link identifier. This numeric identifier will not be sequential. Therefore you can not guess that it will be "Contents1" and "Contents2". You will need to examine the output of the HTML file.</p>
   <p class=empty>&nbsp;</p>
 <hr>
 <h3 class="header3" id="TextColors">Text Colors</h3>
   <p class=empty>&nbsp;</p>
-<p>There are 16 dark themed colors for you to choose from so they are not (at least to the best of my abilities) as blinding as their regular values. To use these colors you need to use and outdated <code><font class"color"></font></code> tag. The class should be the name of the color.</p>
+<p>There are 16 dark themed colors (17 if you count black) for you to choose from so they are not (at least to the best of my abilities) as blinding as their regular values. To use these colors you need to use the outdated HTML tag <code>font</code>. The tag needs to have the proper open and closing tag, and the name of the color will be assigned to the word class within quotes.</p>
+<img src="img/font_tag.jpg" alt="font_tag.jpg">
   <p class=empty>&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="black">This is black</font></p>
 <p class="list-1">&bull;&nbsp; <font class="blue">This is blue</font></p>
@@ -171,16 +177,16 @@ When you add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> w
 <p class="list-1">&bull;&nbsp; <font class="white">This is white</font></p>
 <p class="list-1">&bull;&nbsp; <font class="yellow">This is yellow</font></p>
 <p class=empty>&nbsp;</p>
-<p>Obviously some colors will not look against this dark background but would look much better against a lighter background.</p>
+<p>Obviously some colors will not contrast that well against this dark background but would look much better against a lighter background.</p>
 <p class=empty>&nbsp;</p>
 <hr>
 <h3 class="header3" id="LinkColors">Link Colors</h3>
 <p class=empty>&nbsp;</p>
-<p>You may be contributing a guide that has people download a mod and you wish to color code them to indicate a special purpose. Maybe the file needs to be converted from Skyrim to Skyrim SE or maybe the mod has special install procedures that make it complicated for new users. Whatever the case may be there is a tag for that you can use to indicate the link color.</p>
+<p>You may be contributing a guide that has people download a mod and you wish to color code them to indicate a special purpose. Maybe the file needs to be converted from Skyrim to Skyrim SE or maybe the mod has special install procedures that make it complicated for new users. Whatever the case may be there is a tag that you may use to indicate the link color.</p>
 <p class=empty>&nbsp;</p>
-{% raw %}<code>{{a.green}}</code>{% endraw %} in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the name or it will be ignored.
+<code>{% raw %}{{a.green}}{% endraw %}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.
 <p class=empty>&nbsp;</p>
-{% raw %}<code>[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}]</code>{% endraw %} <a class="orange" href="https://sharlikran.github.io/">This Link Text is Orange</a>
+<code>{% raw %}[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}] <a class="orange" href="https://sharlikran.github.io/">This Link Text is Orange</a>{% endraw %}</code>
 <p class=empty>&nbsp;</p>
 <font class="yellow">Reminder:</font> Only one brace is used so you can see the syntax. The link in your text document requires two braces at the begining and the end of the link.
 <p class=empty>&nbsp;</p>
@@ -196,7 +202,7 @@ short counter
 end
 </pre>
 <p class=empty>&nbsp;</p>
-<p>Refrain from using too many HTML tags if you know the language well. If special styining is needed I can look into a way to privide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.</p>
+<p>Refrain from using too many HTML tags if you know the language well. If special styling is needed I can look into a way to privide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.</p>
 <p class=empty>&nbsp;</p>
 <hr>
 <h3 class="header3" id="ContinuedText">Continued Text</h3>
@@ -240,7 +246,6 @@ html.
 <p class="list-1">&bull;&nbsp; Right click in an empty space and, choose Paste.</p>
 <img class="thumbnail-large" src="img/choosepaste.jpg" alt="choosepaste.jpg">
 <h2 class="header2" id="Versions">Versions</h2>
-<p><I>Version notes go here.</I></p>
 <p class=empty>&nbsp;</p>
 <h3 class="header3" id="100Update172020">1.00 Update [1/7/2020]</h3>
 <p class="list-1">&bull;&nbsp; released pagebuilder_v1.zip version 1</p>
@@ -258,6 +263,3 @@ html.
 <h3 class="header3" id="Credits">Credits</h3>
 <p class="list-1">&bull;&nbsp; <B><I>Wrye</I></B>, for creating this markdown language</p>
 </div>
-</section>
-</BODY>
-</HTML>

@@ -24,13 +24,13 @@
 * [[pagebuilder_v1.zip | pagebuilder_v1 Download Link.zip]]
 
 ## Example Template
-As part of the pagebuilder archive you have <code>Mash Readme Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.
+As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.
 
 == Syntax =====================================================================
 === Your Pages Title
 
-Your page title will become the file line on the page and will be assigned as the first header. To indicate this text use the following Wrye Tag.
-When you add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with opening and ending double curly brackets. The text in quotes will become the title of your page as shown below.
+Your page title will become the first line on the page and will be assigned as the first header. To indicate this text use the following Wrye Tag.
+Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with opening and ending double curly brackets. The text in quotes will become the title of your page as shown below.
 
 {{CONTENTS=0}}
 = Your Page Title
@@ -39,9 +39,9 @@ When you add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> w
 <hr>
 === Heading Style 1
 
-* There are 4 defined headings with different sizes of text and backgrounds.
-* The level of heading is determined by number of leading '='s. Trailing equal signs are ignored.
-* These heading will have some shade of grey bar that extends the width of the page.
+* There are 4 levels of headings defined with different sizes of text and backgrounds.
+* The level of the heading is determined by number of leading '='s. Trailing equal signs are ignored.
+* These headings will have some shade of grey bar that extends the width of the page.
 
 {{CONTENTS=0}}
 = Heading 1
@@ -53,7 +53,7 @@ When you add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> w
 <hr>
 === Heading Style 2
 
-* Like the previous heading the amount of leading '#'s changes the size of the heading.
+* Like the previous heading the amount of leading '#'s determines the level of the heading.
 * These headings will not have a bar as a background and will have green text
 
 {{CONTENTS=0}}
@@ -65,9 +65,9 @@ When you add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> w
 
 === Table of Contents
 
-A table of contents is automatically generated from the headers in the document. It is best to place the tag after a header with the Contents name. The number indicates which header level will be used.
+A table of contents is automatically generated from the headers in the document. It is best to place the first where you want the table of contents to be, and after a header named Contents. The number indicates which header level will be used.
 
-The syntax is as follows: {% raw %}<code>{{CONTENTS=2}}</code>{% endraw %} or {% raw %}<code>{{CONTENTS=0}}</code>{% endraw %} to pause using headers in the table of contents.
+The syntax is as follows: <code>{% raw %}{{CONTENTS=2}}{% endraw %}</code> or <code>{% raw %}{{CONTENTS=0}}{% endraw %}</code> to pause using headers in the table of contents.
 
 You can also disable using headers in the table of contents by using a value of <code>0</code>. The headers will not be recorded until there is another contents tag with a value greater thean 0.
 
@@ -75,25 +75,28 @@ You can also disable using headers in the table of contents by using a value of 
 
 <hr>
 === Bullets
-* Bullets1
-  * Bullets 2
-    * Bullets 3
-      * Bullets 4
-+ Alternate bullet char
+* Bullets1 - an asterisk <code>*</code> and a space would precede the text
+  * Bullets 2 - an asterisk <code>*</code> and two spaces would precede the text
+    * Bullets 3 - an asterisk <code>*</code> and four spaces would precede the text
+      * Bullets 4 - an asterisk <code>*</code> and six spaces would precede the text
++ Alternate bullet char - a plus and a space <code>+ </code> would precede the text
 o Alternate bullet char
-. For an invisible bullet char you would use a period '.' at the beginning of the line.
+. For an invisible bullet char you would use a period <code>.</code> at the beginning of the line.
 
 <hr>
 === Styles
-* ~~Italic~~
-* __Bold__
-* **BoldItalic**
+* ~~Italic~~ - You would surround the text using two tilde <code>~</code> symbols
+* __Bold__ - You would surround the text using two underscore <code>_</code> symbols
+* **BoldItalic** - You would surround the text using two asterisk <code>*</code> symbols
 
 <hr>
+===Header Rule
+You can add a visible divider to seperate information with the traditional HTML hr tag surrounded by <code><></code> symbols
+<hr>
 ===Links
-The link syntax can not be shown very well because it will be translated into a link. For that I will use only one brace. <font class="orange">NOTE:</font> you will need two braces for a valid link.
+The link syntax can not be shown very well because it will be translated into a link. For this reason I will use only one brace. <font class="orange">NOTE:</font> you will need two braces for a valid link.
 
-Below there is an example for an Internal link. What that means is a link to another part of the document. For example you might want to link to how to install python. [[#PythonInstallation | Python Installation]]
+Below there is an example for an Internal link. An internal link is used to navagate to another section of the document. For example you might want to link to how to install python. [[#PythonInstallation | Python Installation]]
 
 <font class="yellow">NOTE:</font> Wrye Text now recognizes duplicate header names such as "Contents" and "Contents". If you must duplicate a header name for clarity then you will need to examine the HTML and look for the ID produced by the Python code for the HTML.
 
@@ -102,12 +105,14 @@ You need to seperate the link address and the link name with a pipe <code>|</cod
 * External Link: [http://wrye.ufrealms.net] or [http://wrye.ufrealms.net | Wrye Musings]
 * Internal Link: [#PythonInstallation | Python Installation] or [#| Reuse and Credits].
   * All section headers can be linked to by compressing the text of the header together (i.e., by stripping out all non alphabetical characters).
-  * If you use the second form the link is automatically generated from the text of the link.
+  * If you use the second method, the link is automatically generated from the text of the link.
+  * <font class="green">NOTE:</font> Any duplication of a header will cause the python script to append a number after the link identifier. This numeric identifier will not be sequential. Therefore you can not guess that it will be "Contents1" and "Contents2". You will need to examine the output of the HTML file.
 
 <hr>
 ===Text Colors
 
-There are 16 dark themed colors for you to choose from so they are not (at least to the best of my abilities) as blinding as their regular values. To use these colors you need to use and outdated <code><font class"color"></font></code> tag. The class should be the name of the color.
+There are 16 dark themed colors (17 if you count black) for you to choose from so they are not (at least to the best of my abilities) as blinding as their regular values. To use these colors you need to use the outdated HTML tag <code>font</code>. The tag needs to have the proper open and closing tag, and the name of the color will be assigned to the word class within quotes.
+<img src="img/font_tag.jpg" alt="font_tag.jpg">
 
 * <font class="black">This is black</font>
 * <font class="blue">This is blue</font>
@@ -127,16 +132,16 @@ There are 16 dark themed colors for you to choose from so they are not (at least
 * <font class="white">This is white</font>
 * <font class="yellow">This is yellow</font>
 
-Obviously some colors will not look against this dark background but would look much better against a lighter background.
+Obviously some colors will not contrast that well against this dark background but would look much better against a lighter background.
 
 <hr>
 ===Link Colors
 
-You may be contributing a guide that has people download a mod and you wish to color code them to indicate a special purpose. Maybe the file needs to be converted from Skyrim to Skyrim SE or maybe the mod has special install procedures that make it complicated for new users. Whatever the case may be there is a tag for that you can use to indicate the link color.
+You may be contributing a guide that has people download a mod and you wish to color code them to indicate a special purpose. Maybe the file needs to be converted from Skyrim to Skyrim SE or maybe the mod has special install procedures that make it complicated for new users. Whatever the case may be there is a tag that you may use to indicate the link color.
 
-{% raw %}<code>{{a.green}}</code>{% endraw %} in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the name or it will be ignored.
+<code>{% raw %}{{a.green}}{% endraw %}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.
 
-{% raw %}<code>[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}]</code>{% endraw %} [[https://sharlikran.github.io/ | This Link Text is Orange{{a:orange}}]]
+<code>{% raw %}[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}] [[https://sharlikran.github.io/ | This Link Text is Orange{{a:orange}}]]{% endraw %}</code>
 
 <font class="yellow">Reminder:</font> Only one brace is used so you can see the syntax. The link in your text document requires two braces at the begining and the end of the link.
 
@@ -152,7 +157,7 @@ short counter
 end
 </pre>
 
-Refrain from using too many HTML tags if you know the language well. If special styining is needed I can look into a way to privide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.
+Refrain from using too many HTML tags if you know the language well. If special styling is needed I can look into a way to privide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.
 
 <hr>
 === Continued Text
@@ -196,7 +201,6 @@ Blank lines can be used as spacers:
 * Right click in an empty space and, choose Paste.
 <img class="thumbnail-large" src="img/choosepaste.jpg" alt="choosepaste.jpg">
 == Versions ===================================================================
-~~Version notes go here.~~
 
 === 1.00 Update [1/7/2020]
 * released pagebuilder_v1.zip version 1
