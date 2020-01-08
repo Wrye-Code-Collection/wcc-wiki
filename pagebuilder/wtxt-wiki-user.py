@@ -115,226 +115,6 @@ def mainFunction(func):
     return func
 
 
-# ETXT =========================================================================
-"""This section of the module provides a single function for converting
-wtxt text files to html files."""
-etxtHeader = """
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<HTML>
-<HEAD>
-<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
-<TITLE>%s</TITLE>
-<STYLE>
-H2 { margin-top: 0in; margin-bottom: 0in; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in; background: #c6c63c; font-family: "Arial", serif; font-size: 12pt; page-break-before: auto; page-break-after: auto }
-H3 { margin-top: 0in; margin-bottom: 0in; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in; background: #e6e64c; font-family: "Arial", serif; font-size: 10pt; page-break-before: auto; page-break-after: auto }
-H4 { margin-top: 0in; margin-bottom: 0in; font-family: "Arial", serif; font-size: 10pt; font-style: normal; page-break-before: auto; page-break-after: auto }
-H5 { margin-top: 0in; margin-bottom: 0in; font-family: "Arial", serif; font-style: italic; page-break-before: auto; page-break-after: auto }
-P { margin-top: 0.01in; margin-bottom: 0.01in; font-family: "Arial", serif; font-size: 10pt; page-break-before: auto; page-break-after: auto }
-P.list-1 { margin-left: 0.15in; text-indent: -0.15in }
-P.list-2 { margin-left: 0.3in; text-indent: -0.15in }
-P.list-3 { margin-left: 0.45in; text-indent: -0.15in }
-P.list-4 { margin-left: 0.6in; text-indent: -0.15in }
-P.list-5 { margin-left: 0.75in; text-indent: -0.15in }
-P.list-6 { margin-left: 1.00in; text-indent: -0.15in }
-.date0 { background-color: #FFAAAA }
-.date1 { background-color: #ffc0b3 }
-.date2 { background-color: #ffd5bb }
-.date3 { background-color: #ffeac4 }
-</STYLE>
-</HEAD>
-<BODY BGCOLOR='#ffffcc'>
-"""
-
-
-@mainFunction
-def etxtToHtml(inFileName):
-    import time
-    """Generates an html file from an etxt file."""
-    # --Re's
-    reHead2 = re.compile(r'## *([^=]*) ?=*')
-    reHead3 = re.compile(r'# *([^=]*) ?=*')
-    reHead4 = re.compile(r'@ *(.*)\s+')
-    reHead5 = re.compile(r'% *(.*)\s+')
-    reList = re.compile(r'( *)([-!?\.\+\*o]) (.*)')
-    reBlank = re.compile(r'\s+$')
-    reMDash = re.compile(r'--')
-    reBoldEsc = re.compile(r'\_')
-    reBoldOpen = re.compile(r' _')
-    reBoldClose = re.compile(r'(?<!\\)_( |$)')
-    reItalicOpen = re.compile(r' ~')
-    reItalicClose = re.compile(r'~( |$)')
-    reBoldicOpen = re.compile(r' \*')
-    reBoldicClose = re.compile(r'\*( |$)')
-    reBold = re.compile(r'\*\*([^\*]+)\*\*')
-    reItalic = re.compile(r'\*([^\*]+)\*')
-    reLink = re.compile(r'\[\[(.*?)\]\]')
-    reHttp = re.compile(r' (http://[_~a-zA-Z0-9\./%-]+)')
-    reWww = re.compile(r' (www\.[_~a-zA-Z0-9\./%-]+)')
-    reDate = re.compile(r'\[([0-9]+/[0-9]+/[0-9]+)\]')
-    reContents = re.compile(r'\[CONTENTS=?(\d+)\]\s*$')
-    reWd = re.compile(r'\W\d*')
-    rePar = re.compile(r'\^(.*)')
-    reFullLink = re.compile(r'(:|#|\.[a-zA-Z]{3,4}$)')
-    # --Date styling (Replacement function used with reDate.)
-    dateNow = time.time()
-
-    def dateReplace(maDate):
-        date = time.mktime(
-            time.strptime(maDate.group(1), '%m/%d/%Y'))  # [1/25/2005]
-        age = int((dateNow - date) / (7 * 24 * 3600))
-        if age < 0: age = 0
-        if age > 3: age = 3
-        return '<span class=date%d>%s</span>' % (age, maDate.group(1))
-
-    def linkReplace(maLink):
-        address = text = maLink.group(1).strip()
-        if '|' in text:
-            (address, text) = [chunk.strip() for chunk in text.split('|', 1)]
-        if not reFullLink.search(address):
-            address = address + '.html'
-        return '<a href="%s">%s</a>' % (address, text)
-
-    # --Defaults
-    title = ''
-    level = 1
-    spaces = ''
-    headForm = "<h%d><a name='%s'>%s</a></h%d>\n"
-    # --Open files
-    inFileRoot = re.sub('\.[a-zA-Z]+$', '', inFileName)
-    inFile = open(inFileName)
-    # --Init
-    outLines = []
-    contents = []
-    addContents = 0
-    # --Read through inFile
-    for line in inFile.readlines():
-        maHead2 = reHead2.match(line)
-        maHead3 = reHead3.match(line)
-        maHead4 = reHead4.match(line)
-        maHead5 = reHead5.match(line)
-        maPar = rePar.match(line)
-        maList = reList.match(line)
-        maBlank = reBlank.match(line)
-        maContents = reContents.match(line)
-        # --Contents
-        if maContents:
-            if maContents.group(1):
-                addContents = int(maContents.group(1))
-            else:
-                addContents = 100
-        # --Header 2?
-        if maHead2:
-            text = maHead2.group(1)
-            name = reWd.sub('', text)
-            line = headForm % (2, name, text, 3)
-            if addContents: contents.append((2, name, text))
-            # --Title?
-            if not title: title = text
-        # --Header 3?
-        elif maHead3:
-            text = maHead3.group(1)
-            name = reWd.sub('', text)
-            line = headForm % (3, name, text, 3)
-            if addContents: contents.append((3, name, text))
-            # --Title?
-            if not title: title = text
-        # --Header 4?
-        elif maHead4:
-            text = maHead4.group(1)
-            name = reWd.sub('', text)
-            line = headForm % (4, name, text, 4)
-            if addContents: contents.append((4, name, text))
-        # --Header 5?
-        elif maHead5:
-            text = maHead5.group(1)
-            name = reWd.sub('', text)
-            line = headForm % (5, name, text, 5)
-            if addContents: contents.append((5, name, text))
-        # --List item
-        elif maList:
-            spaces = maList.group(1)
-            bullet = maList.group(2)
-            text = maList.group(3)
-            if bullet == '.':
-                bullet = '&nbsp;'
-            elif bullet == '*':
-                bullet = '&bull;'
-            level = len(spaces) / 2 + 1
-            line = spaces + '<p class=list-' + `level` + '>' + bullet + '&nbsp; '
-            line = line + text + '\n'
-        # --Paragraph
-        elif maPar:
-            line = '<p>' + maPar.group(1)
-        # --Blank line
-        elif maBlank:
-            line = spaces + '<p class=list' + `level` + '>&nbsp;</p>'
-        # --Misc. Text changes
-        line = reMDash.sub('&#150', line)
-        line = reMDash.sub('&#150', line)
-        # --New bold/italic subs
-        line = reBoldOpen.sub(' <B>', line)
-        line = reItalicOpen.sub(' <I>', line)
-        line = reBoldicOpen.sub(' <I><B>', line)
-        line = reBoldClose.sub('</B> ', line)
-        line = reBoldEsc.sub('_', line)
-        line = reItalicClose.sub('</I> ', line)
-        line = reBoldicClose.sub('</B></I> ', line)
-        # --Old style bold/italic subs
-        line = reBold.sub(r'<B><I>\1</I></B>', line)
-        line = reItalic.sub(r'<I>\1</I>', line)
-        # --Date
-        line = reDate.sub(dateReplace, line)
-        # --Local links
-        line = reLink.sub(linkReplace, line)
-        # --Hyperlink
-        line = reHttp.sub(r' <a href="\1">\1</a>', line)
-        line = reWww.sub(r' <a href="http://\1">\1</a>', line)
-        # --Write it
-        # print line
-        outLines.append(line)
-    inFile.close()
-    # --Output file
-    outFile = open(inFileRoot + '.html', 'w')
-    outFile.write(etxtHeader % (title,))
-    didContents = False
-    for line in outLines:
-        if reContents.match(line):
-            if not didContents:
-                baseLevel = min([level for (level, name, text) in contents])
-                for (level, name, text) in contents:
-                    level = level - baseLevel + 1
-                    if level <= addContents:
-                        outFile.write(
-                            '<p class=list-%d>&bull;&nbsp; <a href="#%s">%s</a></p>\n' % (
-                            level, name, text))
-                didContents = True
-        else:
-            outFile.write(line)
-    outFile.write('</body>\n</html>\n')
-    outFile.close()
-    # --Done
-
-@mainFunction
-def etxtToWtxt(fileName=None):
-    """TextMunch: Converts etxt files to wtxt formatting."""
-    if fileName:
-        ins = open(fileName)
-    else:
-        import sys
-        ins = sys.stdin
-    for line in ins:
-        line = re.sub(r'^\^ ?', '', line)
-        line = re.sub(r'^## ([^=]+) =', r'= \1 ==', line)
-        line = re.sub(r'^# ([^=]+) =', r'== \1 ', line)
-        line = re.sub(r'^@ ', r'=== ', line)
-        line = re.sub(r'^% ', r'==== ', line)
-        line = re.sub(r'\[CONTENTS=(\d+)\]', r'{{CONTENTS=\1}}', line)
-        line = re.sub(r'~([^ ].+?)~', r'~~\1~~', line)
-        line = re.sub(r'_([^ ].+?)_', r'__\1__', line)
-        line = re.sub(r'\*([^ ].+?)\*', r'**\1**', line)
-        print line,
-
-
 # Wrye Text ===================================================================
 """This section of the module provides a single function for converting
 wtxt text files to html files.
@@ -384,23 +164,157 @@ htmlHead = """
 <STYLE>%s</STYLE>
 </HEAD>
 <BODY>
+<BODY>
+    <section class="page-header">
+      <h1 class="project-name">Wrye-Code-Collection Wiki</h1>
+      <h2 class="project-tagline">Collection of Wrye Bash history and information</h2>
+    </section>
+<SECTION  class="main-content">
+<DIV>
 """
 defaultCss = """
-H1 { margin-top: 0in; margin-bottom: 0in; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in; background: #c6c63c; font-family: "Arial", serif; font-size: 12pt; page-break-before: auto; page-break-after: auto }
-H2 { margin-top: 0in; margin-bottom: 0in; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in; background: #e6e64c; font-family: "Arial", serif; font-size: 10pt; page-break-before: auto; page-break-after: auto }
-H3 { margin-top: 0in; margin-bottom: 0in; font-family: "Arial", serif; font-size: 10pt; font-style: normal; page-break-before: auto; page-break-after: auto }
-H4 { margin-top: 0in; margin-bottom: 0in; font-family: "Arial", serif; font-style: italic; page-break-before: auto; page-break-after: auto }
-P { margin-top: 0.01in; margin-bottom: 0.01in; font-family: "Arial", serif; font-size: 10pt; page-break-before: auto; page-break-after: auto }
-P.empty {}
-P.list-1 { margin-left: 0.15in; text-indent: -0.15in }
-P.list-2 { margin-left: 0.3in; text-indent: -0.15in }
-P.list-3 { margin-left: 0.45in; text-indent: -0.15in }
-P.list-4 { margin-left: 0.6in; text-indent: -0.15in }
-P.list-5 { margin-left: 0.75in; text-indent: -0.15in }
-P.list-6 { margin-left: 1.00in; text-indent: -0.15in }
-PRE { border: 1px solid; background: #FDF5E6; padding: 0.5em; margin-top: 0in; margin-bottom: 0in; margin-left: 0.25in}
-CODE { background-color: #FDF5E6;}
-BODY { background-color: #ffffcc; }
+
+
+:root {
+  --cayman-header-heading: rgb(255, 255, 255);
+  --cayman-header-background: rgb(21, 153, 87);
+  --cayman-header-background-secondary: rgb(21, 87, 153);
+  --cayman-section-headings: rgb(21, 153, 87);
+  --cayman-body-text: rgb(96, 108, 113);
+  --cayman-body-href: rgb(30, 107, 184);
+  --cayman-blockquote-text: rgb(129, 145, 152);
+  --cayman-code-background: rgb(243, 246, 250);
+  --cayman-code-text: rgb(86, 116, 130);
+  --cayman-border: rgb(220, 230, 240);
+  --cayman-table-border-color: rgb(233, 235, 236);
+  --cayman-hr-border: rgb(239, 240, 241);
+  --header1-text: rgb(223, 226, 229);
+  --header1-background: rgb(81, 88, 97);
+  --header1-border: rgb(100, 109, 119);
+  --header2-text: rgb(225, 228, 232);
+  --header2-background: rgb(61, 69, 77);
+  --header2-border: rgb(79, 90, 100);
+  --header3-text: rgb(209, 213, 218);
+  --header3-background: rgb(29, 33, 37);
+  --header3-border: rgb(47, 54, 60);
+  --header4-text: rgb(216, 220, 225);
+  --header4-background: rgb(40, 46, 52);
+  --header4-border: rgb(58, 67, 75);
+  --toc-header-text: rgb(21, 153, 87);
+  --black-text: rgb(0, 0, 0);
+  --blue-text: rgb(33, 136, 255);
+  --brown-text: rgb(152, 112, 16);
+  --cyan-text: rgb(41, 208, 208);
+  --ltgray-text: rgb(209, 210, 212);
+  --gray-text: rgb(181, 181, 181);
+  --dkgray-text: rgb(87, 87, 87);
+  --green-text: rgb(21, 153, 87);
+  --ltblue-text: rgb(157, 175, 255);
+  --ltgreen-text: rgb(129, 197, 122);
+  --orange-text: rgb(218, 119, 62);
+  --pink-text: rgb(255, 205, 243);
+  --purple-text: rgb(209, 188, 249);
+  --red-text: rgb(207, 52, 50);
+  --tan-text: rgb(233, 222, 187);
+  --white-text: rgb(255, 255, 255);
+  --yellow-text: rgb(244, 203, 53);
+  --old-red-text: rgb(224, 88, 88);
+  --darkred-text: rgb(214, 24, 0);
+  --ltred-text: rgb(211, 47, 47);
+  --body-text: rgb(209, 213, 218);
+  --body-text-secondary: rgb(149, 157, 165);
+  --body-background: rgb(36, 41, 46);
+  --diff-hunk-background-color: rgb(29, 33, 37);
+}
+html {
+    font-size: 16px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--body-text-secondary);
+  background: var(--body-background);
+}
+
+.page-header {
+  color: var(--white-text);
+  text-align: center;
+  background-color: var(--cayman-header-background);
+  background-image: linear-gradient(120deg, var(--cayman-header-background-secondary), var(--cayman-header-background));
+  padding: 3rem 4rem;
+}
+
+.main-content { word-wrap: break-word; }
+.main-content :first-child { margin-top: 0; }
+
+.main-content code { padding: 2px 4px; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; color: var(--purple-text); background: var(--header3-background); border-radius: 0.3rem; }
+.main-content pre { padding: 0.8rem; margin-top: 0; margin-bottom: 1rem; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; color: var(--purple-text); background: var(--header3-background); word-wrap: normal; border: solid 2px var(--ltgray-text); border-radius: 0.3rem; }
+.main-content pre > code { padding: 0; margin: 0; font-size: 0.9rem; color: var(--purple-text); word-break: normal; white-space: pre; background: transparent; border: 0; }
+.main-content .highlight { margin-bottom: 1rem; }
+.main-content .highlight pre { margin-bottom: 0; word-break: normal; }
+.main-content .highlight pre, .main-content pre { padding: 0.8rem; overflow: auto; font-size: 0.9rem; line-height: 1.45; border-radius: 0.3rem; -webkit-overflow-scrolling: touch; }
+.main-content pre code, .main-content pre tt { display: inline; max-width: initial; padding: 0; margin: 0; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; }
+.main-content pre code:before, .main-content pre code:after, .main-content pre tt:before, .main-content pre tt:after { content: normal; }
+
+.main-content ul, .main-content ol { margin-top: 0; }
+
+.main-content blockquote { padding: 0 1rem; margin-left: 0; color: var(--purple-text); background: var(--header3-background); border-left: 0.3rem solid var(--ltgray-text); }
+.main-content blockquote > :first-child { margin-top: 0; }
+.main-content blockquote > :last-child { margin-bottom: 0; }
+
+.main-content table { display: block; width: 100%; overflow: auto; word-break: normal; word-break: keep-all; -webkit-overflow-scrolling: touch; }
+.main-content table th { font-weight: bold; background-color: var(--header1-border); }
+.main-content table th, .main-content table td { padding: 0.5rem 1rem; border: 1px solid var(--header1-border); }
+
+.main-content dl { padding: 0; }
+.main-content dl dt { padding: 0; margin-top: 1rem; font-size: 1rem; font-weight: bold; }
+.main-content dl dd { padding: 0; margin-bottom: 1rem; }
+
+.main-content hr { height: 2px; padding: 0; margin: 1rem 0; background-color: var(--white-text); border: 0; }
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin-top: 2rem; margin-bottom: 1rem; font-weight: normal; color: var(--toc-header-text); }
+.main-content h1.header1 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header1-text); background: var(--header1-background); border-color: var(--header1-border); display: block; }
+.main-content h2.header2 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header2-text); background: var(--header2-background); border-color: var(--header2-border); display: block; }
+.main-content h3.header3 { font-style: normal; color: var(--header3-text); background: var(--header3-background); border-color: var(--header3-border); display: block; }
+.main-content h4.header4 { font-style: italic; color: var(--header4-text); background: var(--header4-background); border-color: var(--header4-border); display: block; }
+
+a { color: var(--blue-text); text-decoration: none; }
+font.black, a.black { color: var(--black-text); }
+font.blue, a.blue { color: var(--blue-text); }
+font.brown, a.brown { color: var(--brown-text); }
+font.cyan, a.cyan { color: var(--cyan-text); }
+font.dkgray, a.dkgray { color: var(--dkgray-text); }
+font.gray, a.gray { color: var(--gray-text); }
+font.green, a.green { color: var(--green-text); }
+font.ltblue, a.ltblue { color: var(--ltblue-text); }
+font.ltgray, a.ltgray { color: var(--ltgray-text); }
+font.ltgreen, a.ltgreen { color: var(--ltgreen-text); }
+font.orange, a.orange { color: var(--orange-text); }
+font.pink, a.pink { color: var(--pink-text); }
+font.purple, a.purple { color: var(--purple-text); }
+font.red, a.red { color: var(--red-text); }
+font.tan, a.tan { color: var(--tan-text); }
+font.white, a.white { color: var(--white-text); }
+font.yellow, a.yellow { color: var(--yellow-text); }
+
+.main-content p { margin-top: 0.1rem; margin-bottom: 0.1rem; color: var(--body-text-secondary); }
+.main-content p.empty { margin-top: 0.1rem; margin-bottom: 0.1rem; }
+.main-content p.list-1 { margin-left: 0.15in; text-indent: -0.15in; }
+.main-content p.list-2 { margin-left: 0.3in; text-indent: -0.15in; }
+.main-content p.list-3 { margin-left: 0.45in; text-indent: -0.15in; }
+.main-content p.list-4 { margin-left: 0.6in; text-indent: -0.15in; }
+.main-content p.list-5 { margin-left: 0.75in; text-indent: -0.15in; }
+.main-content p.list-6 { margin-left: 1.00in; text-indent: -0.15in; }
 """
 
 # Conversion ------------------------------------------------------------------
@@ -456,14 +370,92 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     rePar = re.compile(r'^([a-zA-Z]|\*\*|~~|__)')
     reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}$)')
 
+    def check_color(text):
+        fontClass = ''
+        if '{{a:black}}' in text:
+            fontClass = 'class="black"'
+        if '{{a:blue}}' in text:
+            fontClass = 'class="blue"'
+        if '{{a:brown}}' in text:
+            fontClass = 'class="brown"'
+        if '{{a:cyan}}' in text:
+            fontClass = 'class="cyan"'
+        if '{{a:dkgray}}' in text:
+            fontClass = 'class="dkgray"'
+        if '{{a:gray}}' in text:
+            fontClass = 'class="gray"'
+        if '{{a:green}}' in text:
+            fontClass = 'class="green"'
+        if '{{a:ltblue}}' in text:
+            fontClass = 'class="ltblue"'
+        if '{{a:ltgray}}' in text:
+            fontClass = 'class="ltgray"'
+        if '{{a:ltgreen}}' in text:
+            fontClass = 'class="ltgreen"'
+        if '{{a:orange}}' in text:
+            fontClass = 'class="orange"'
+        if '{{a:pink}}' in text:
+            fontClass = 'class="pink"'
+        if '{{a:purple}}' in text:
+            fontClass = 'class="purple"'
+        if '{{a:red}}' in text:
+            fontClass = 'class="red"'
+        if '{{a:tan}}' in text:
+            fontClass = 'class="tan"'
+        if '{{a:white}}' in text:
+            fontClass = 'class="white"'
+        if '{{a:yellow}}' in text:
+            fontClass = 'class="yellow"'
+        return fontClass
+
+    def strip_color(text):
+        temp = text
+        if '{{a:black}}' in text:
+            temp = re.sub('{{a:black}}', '', text)
+        if '{{a:blue}}' in text:
+            temp = re.sub('{{a:blue}}', '', text)
+        if '{{a:brown}}' in text:
+            temp = re.sub('{{a:brown}}', '', text)
+        if '{{a:cyan}}' in text:
+            temp = re.sub('{{a:cyan}}', '', text)
+        if '{{a:dkgray}}' in text:
+            temp = re.sub('{{a:dkgray}}', '', text)
+        if '{{a:gray}}' in text:
+            temp = re.sub('{{a:gray}}', '', text)
+        if '{{a:green}}' in text:
+            temp = re.sub('{{a:green}}', '', text)
+        if '{{a:ltblue}}' in text:
+            temp = re.sub('{{a:ltblue}}', '', text)
+        if '{{a:ltgray}}' in text:
+            temp = re.sub('{{a:ltgray}}', '', text)
+        if '{{a:ltgreen}}' in text:
+            temp = re.sub('{{a:ltgreen}}', '', text)
+        if '{{a:orange}}' in text:
+            temp = re.sub('{{a:orange}}', '', text)
+        if '{{a:pink}}' in text:
+            temp = re.sub('{{a:pink}}', '', text)
+        if '{{a:purple}}' in text:
+            temp = re.sub('{{a:purple}}', '', text)
+        if '{{a:red}}' in text:
+            temp = re.sub('{{a:red}}', '', text)
+        if '{{a:tan}}' in text:
+            temp = re.sub('{{a:tan}}', '', text)
+        if '{{a:white}}' in text:
+            temp = re.sub('{{a:white}}', '', text)
+        if '{{a:yellow}}' in text:
+            temp = re.sub('{{a:yellow}}', '', text)
+        return temp
+
     def linkReplace(maObject):
+        fontClass = check_color(maObject.string)
         address = text = maObject.group(1).strip()
         if '|' in text:
             (address, text) = [chunk.strip() for chunk in text.split('|', 1)]
             if address == '#': address += reWd.sub('', text)
         if not reFullLink.search(address):
             address = address + '.html'
-        return '<a href="%s">%s</a>' % (address, text)
+        text = strip_color(text)
+        return '<a {} href="{}">{}</a>'.format(fontClass, address, text)
 
     # --Tags
     reAnchorTag = re.compile('{{A:(.+?)}}')
@@ -623,7 +615,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
                 didContents = True
         else:
             out.write(line)
-    out.write('</div>\n</section>\n')
+    out.write('</div>\n</section>\n</BODY>\n</HTML>\n')
     out.close()
 	
 
@@ -631,9 +623,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
 def genHtml(fileName, outFile=None, cssDir=''):
     """Generate html from old style etxt file or from new style wtxt file."""
     ext = os.path.splitext(fileName)[1].lower()
-    if ext == '.etxt':
-        etxtToHtml(fileName)
-    elif ext == '.txt':
+    if ext == '.txt':
         wtxtToHtml(fileName, outFile=None, cssDir='')
         # docsDir = r'c:\program files\bethesda softworks\morrowind\data files\docs'
         # wtxt.genHtml(fileName, cssDir=docsDir)
