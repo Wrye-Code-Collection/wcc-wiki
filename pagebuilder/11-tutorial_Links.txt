@@ -12,43 +12,43 @@ __A collection of tutorials and information to help the novice modder begin addi
 
 ==  General Beginner's Modding Information ================================================================
 
-     .  __[[https://www.youtube.com/watch?v=difNdvVpHys | 5 Modding Tips Beginners Need]]__ 
+     .  __[[https://www.youtube.com/watch?v=difNdvVpHys | 5 Modding Tips Beginners Need]]__
           * **Author:** GamerPoets
           * ~~Intermediate~~
           * A "How to Mod" quick guide
 
      . __[[https://www.youtube.com/watch?v=4FEc2DUIWQU | How to Safely Move Steam Games & Libraries]]__
           * **Author:** GamerPoets
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * How-to and why
 
      . __[[https://www.youtube.com/watch?v=vts7qk4xDvQ&list=PLiPgFWIHsr8XqNHK68227pu_P9yJg5emw&index=2&t=0s | Creation Kit SE Tutorial (Sorting Masters]]__
           * **Author:** Darkfox127
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * This tutorial will cover the steps needed to sort out your load order, as well as your master file load order for the Creation Kit 64bit. By default, the masters are not in the correct order so you have to adjust it yourself. This can be done using a tool called LOOT which I'm sure many are already familiar with. This tutorial also covers an alternate, more manual method, if LOOT fails to sort the masters in the new version of the game. I will also be covering how to use xEDIT to make changes to existing esp files so that your masters are in the correct order.
 
      . __[[https://www.youtube.com/watch?v=u5EmFVRRAzk&list=PLiPgFWIHsr8XqNHK68227pu_P9yJg5emw&index=3&t=0s | Creation Kit SE Tutorial (Custom icon & Splash Screen]]__
           * **Author:** Darkfox127
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * This is a short video on how to change the Skyrim Creation Kit 64bit icon, given that Bethesda opted to use the same icon across four separate Creation Kit programs. This is done by using a small tool called Resource Hacker as shown in the video and you can download my custom logo and splash screen over on my website.
 
      . __[[https://www.youtube.com/watch?v=J-Sea_pAxlo&list=PLiPgFWIHsr8XqNHK68227pu_P9yJg5emw&index=4&t=0s | Creation Kit SE Tutorial (Installation)]]__
           * **Author:** Darkfox127
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * This is a quick tutorial on how to install the new Creation kit for Skyrim Special Edition. It includes loading the Bethesda.net launcher, installing the Creation kit and then setting up the ini files to allow you to load multiple master files, as well as the DLCs for the game.
 
      . __[[https://www.youtube.com/watch?v=iOmMIr9ngTs&list=PLiPgFWIHsr8XqNHK68227pu_P9yJg5emw&index=5&t=0s | Creation Kit SE Tutorial (Convert Mods to SSE]]__
           * **Author:** Darkfox127
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * A video fully explaining how to convert your old mods for Skyrim to special edition. This video includes most of the common issues you're going to face when dealing with converting your mods. This includes scripting, meshes, textures and some other stuff you might run into.
 
      . __[[https://www.youtube.com/watch?v=Ncv_FWQUw0k&list=PLlN8weLk86Xi1s9UklgzsLl3sbLYKHBH7&index=2&t=0s | Modding 101 - Load Order - A to ESL - Elder Scrolls & Fallout]]__
           * **Author:** GamerPoets
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * Background information on Load Ordering, how Modules Load, etc.. with some information about LOOT at the end
 
      . __[[https://bethesda.net/community/topic/5795/how-to-load-order?language%5B%5D=en | How To: Load Order]]__
-          * **Author:** LukeKB 
+          * **Author:** LukeKB
           * ~~Intermediate~~
           * Skyrim SE has brought the unfathomable power of mods to consoles, and players couldn't be more thrilled. However, many console players have extremely little experience (or none at all) when it comes to downloading mods.
           * This being the case, a plethora of players who are (relatively) new to downloading mods have encountered bugs, errors, glitches, and crashes that may be caused by a poor and unorganized mod load-order... and if you're reading this "how to" then there is a high likelihood that you are one of those players. BUT HAVE NO FEAR, in this thread I will be giving a quick explanation of what a load order is, how it works, and a general/optimal way to organize your load order.
@@ -62,27 +62,27 @@ __A collection of tutorials and information to help the novice modder begin addi
 
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/6194 | Mod Organizer 2]]__
           * **Author:** Tannin and MO2 Team
-          * ~~TOOL~~ 
+          * ~~TOOL~~
           * Mod Organizer 2 (MO2) is a tool for managing mod collections of arbitrary size. It is specifically designed for people who like to experiment with mods and thus need an easy and reliable way to install and uninstall them.
 
      . __[[https://www.youtube.com/watch?v=ruq6hQIAvB8 | Mod Organizer 2 - Installation & Setup - Tutorial Tuesday]]__
           * **Author:** GamerPoets
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * Install and set-up process for MO2
 
      . __[[https://www.youtube.com/watch?v=CBurE8aLTxE | How to Install MO2 Properly]]__
           * **Author:** zDas
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * Quick tutorial on how to install MO2 2.1.4 Dev Build 3
 
      . __[[https://www.youtube.com/watch?v=7v0wWVuOagA | Mod Organizer 2 - Mod Installation - Tutorial Tuesday]]__
           * **Author:** GamerPoets
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * Installing mods using MO2, some general troubleshooting during the process, and finishing with activating the mods.
 
      . __[[https://www.youtube.com/watch?v=mqjzxQ7D-ZQ | Mod Organizer 2 - Profiles & Apps - 3 of 5]]__
           * **Author:** GamerPoets
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * Profiles, .inis, adding and using third party apps
 
      . __[[https://www.youtube.com/watch?v=qOCAo5RTgso | Mod Organizer 2 - Toolbar & Customization - 4 of 5]]__
@@ -92,34 +92,34 @@ __A collection of tutorials and information to help the novice modder begin addi
 
      . __[[https://forums.nexusmods.com/index.php?/topic/3726710-question-regarding-matching-the-left-panel-with-the-right-panel-aka-loot-with-mod-organizer/ | Organizing Left and Right Panels of MO2 - Nexus Forums Post]]__
           * **Author:** Xoriendruid and IsharaMeradin
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * Descrip of tutorial
 
      . __[[https://www.youtube.com/watch?v=d15ZP880uGQ | .ini Files SE - What & Where - Tutorial Tuesday]]__
           * **Author:** GamerPoets
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * inifile What & Where is a How To Mod guide for SkyrimSpecialEdition as well as for ModOrganizer and Vortex. I show where they are located and give you some basic info about them to understand more going forward.
 
      . __[[https://www.youtube.com/watch?v=lKmSSpod69w | SKSE64 - Vortex & MO2 - Tutorial Tuesday]]__
           * **Author:** GamerPoets
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * How to Install SKSE64 is a How To Mod guide for SkyrimSpecialEdition as well as for ModOrganizer and Vortex.
 
 ==  Vortex  ================================================================
 
      . __[[https:// | tool name]]__
-          * **Author:** 
-          * ~~TOOL~~ 
+          * **Author:**
+          * ~~TOOL~~
           * Descrip of official tool
 
      . __[[https://www.youtube.com/watch?v=4NlSuXy_SFU | Vortex Mod Manager - Installation & Setup - Tutorial Tuesday]]__
           * **Author:** GamerPoets
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * Install and set-up process for Vortex, the official mod manager of Nexus Mods
 
      . __[[https://www.youtube.com/watch?v=d15ZP880uGQ | .ini Files SE - What & Where - Tutorial Tuesday]]__
           * **Author:** GamerPoets
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * inifile What & Where is a How To Mod guide for SkyrimSpecialEdition as well as for ModOrganizer and Vortex. I show where they are located and give you some basic info about them to understand more going forward.
 
      . __[[https://www.youtube.com/watch?v=lKmSSpod69w | SKSE64 - Vortex & MO2 - Tutorial Tuesday]]__
@@ -130,18 +130,18 @@ __A collection of tutorials and information to help the novice modder begin addi
 ==  Wrye Bash  ================================================================
 
      . __[[https:// | tool name]]__
-          * **Author:** 
+          * **Author:**
           * ~~TOOL~~
           * Descrip of official tool
 
      . __[[https://www.youtube.com/watch?v=uYAEFk5QmLQ | Wyre Bash - Installation - Tutorial Tuesday]]__
           * **Author:** GamerPoets
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * How to Install and set-up Wrye Bash as a mod organizer as well as how to import WB into MO2 and Vortex as a tool
 
      . __[[https://www.youtube.com/watch?v=O6e03XoIh_Y | Wrye Bash - Mod Installation - Tutorial Tuesday]]__
           * **Author:** GamerPoets
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * How to Install and Uninstall Mods using Wrye Bash
 
 =  Popular Modding Tools Tutorials  ================================================================
@@ -150,10 +150,10 @@ __A collection of tutorials and information to help the novice modder begin addi
 
      . __[[https://www.creationkit.com/index.php?title=Landing_page | Creation Kit Wiki]]__
           * **Author:** various
-          * ~~Beginner to Advanced Tutorials~~ 
+          * ~~Beginner to Advanced Tutorials~~
           * Welcome to the Creation Kit Wiki. This Wiki is a community-run site that is a living help file where you'll find everything you need to use the Creation Kit and make mods for The Elder Scrolls V: Skyrim. This Wiki is publicly editable... all you need to do is create an account to start contributing. There are currently 3,230 articles and we continue to grow. Check out the Welcome to the Wiki guide for a quick introduction to what this wiki is about and to learn how you can help.
 
-===  Getting Started: The Very Basics 
+===  Getting Started: The Very Basics
 
      . __[[https://www.creationkit.com/index.php?title=Category:Getting_Started | Basics Series - Chapter 1]]__
           * **Author:** Creation Kit Wiki Team
@@ -162,22 +162,22 @@ __A collection of tutorials and information to help the novice modder begin addi
 
      . __[[https://www.youtube.com/watch?v=Dq1F62MOviY | Creation Kit SE - - Installation & Setup - - Tutorial Tuesday]]__
           * **Author:** GamerPoets
-          * ~~Intermediate~~ 
-          * CreationKit Installation & Setup is a How To Mod guide for SkyrimSpecialEdition. I show how to Download, Install, Save the windows, and fix the Single Master error. 
+          * ~~Intermediate~~
+          * CreationKit Installation & Setup is a How To Mod guide for SkyrimSpecialEdition. I show how to Download, Install, Save the windows, and fix the Single Master error.
 
      . __[[https://www.youtube.com/watch?v=tfTsyOZnDSI&list=PLiPgFWIHsr8VhZDV9DzJRqwg_Y2qV9Sby&index=2&t=0s | Creation Kit Tutorial (Installation Process)]]__
           * **Author:** Darkfox127
-          * ~~Intermediate~~  
+          * ~~Intermediate~~
           * Welcome to a new tutorial video for installing the Skyrim Creation Kit. I felt it was important to re-cover this topic after a lot of recent changes to the Creation Kit and due to a number of things that modders may run into later on down the line which can be tricky to fix. I cover the basic installation and also how to load multiple master files up in the kit, along with the official Skyrim DLCs. This is something that you cannot do by default and you need to make some small adjustments yourself. The other two topics covered in this video are the time stamps for DLC esm files and the fact that script compiling may not work unless you do some messing around in the Data folder.
 
      . __[[https://www.youtube.com/watch?v=S85Q7Iun28w&list=PLiPgFWIHsr8VhZDV9DzJRqwg_Y2qV9Sby&index=5&t=0s | Creation Kit (Loading DLC]]__
           * **Author:** Darkfox 127
-          * ~~Intermediate~~  
+          * ~~Intermediate~~
           * In this video, I will cover how to get the Skyrim Creation Kit to load up any of the Skyrim DLCs so that you can mod them. This tutorial will also allow you to load all of the DLCs at the same time to take full advantage of all of the resources.
 
      . __[[https://www.youtube.com/watch?v=LWq003uZxrg&list=PLiPgFWIHsr8VhZDV9DzJRqwg_Y2qV9Sby&index=8&t=0s | Creation Kit (User Interface]]__
           * **Author:** Darkfox127
-          * ~~Intermediate~~  
+          * ~~Intermediate~~
           * In this video, I will cover the basics of loading the Creation Kit and opening esm & esp files. As you can see by the title, you learn all about the user interface and how to navigate it.
 
      . __[[https://www.youtube.com/watch?v=_AaPqZVVQMQ&feature=youtu.be&hd=1 | Skyrim Creation Kit Tutorial: The Basics]]__
@@ -188,7 +188,7 @@ __A collection of tutorials and information to help the novice modder begin addi
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Creation_Kit_Interface | Basics Series - Chapter 2]]__
      * __[[https://www.youtube.com/watch?v=gDKivlGmia4&feature=youtu.be&hd=1 | Basics Series - Chapter 2 - Companion Video Tutorial]]__
           * **Author:** Official CK Wiki Team and Bethesda Studios
-          * ~~Intermediate~~  
+          * ~~Intermediate~~
           * This chapter of the official tutorial series will guide new users through their first experience with the Creation Kit, and give experienced modders a refresher on the interface.
           . __Users can expect to learn:__
           * The basic components of the Creation Kit interface
@@ -196,12 +196,12 @@ __A collection of tutorials and information to help the novice modder begin addi
 
      . __[[https://www.creationkit.com/index.php?title=What%27s_New%3F | What's New - New and Expanded features of Creation Kit]]__
           * **Author:** Official CK Wiki Team
-          * ~~Intermediate~~  
+          * ~~Intermediate~~
           * This page attempts to catalog some of the new and expanded features of the Creation Kit, and will hopefully be of use to those with some experience using our tools.
 
      . __[[https://www.youtube.com/watch?v=KYfSEhphHHQ&list=PLiPgFWIHsr8VhZDV9DzJRqwg_Y2qV9Sby&index=6&t=0s | Creation Kit (Creating & Editing Cells]]__
           * **Author:** Darkfox127
-          * ~~Intermediate~~  
+          * ~~Intermediate~~
           * In this video, we will see how you can create and edit existing cells in the game, as well as cover a lot of the options available to you.
 
      . __[[https://www.youtube.com/watch?v=sDVtBzkjjxs&list=PLiPgFWIHsr8VhZDV9DzJRqwg_Y2qV9Sby&index=7&t=0s | Creation Kit (Render Window]]__
@@ -211,33 +211,33 @@ __A collection of tutorials and information to help the novice modder begin addi
 
      . __[[https://www.creationkit.com/index.php?title=Uploading_To_Steam_Workshop | Uploading to Steam Workshop]]__
           * **Author:** Official CK Wiki Team
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * Bethesda Game Studios and Valve have partnered to bring Skyrim mods to the Steam Workshop. The Elder Scrolls and Fallout modding communities have been a great testament to the ingenuity and creativity of our PC gamers for years, and we're excited to help bring your mods to a larger audience than ever before.
           * The Creation Kit offers new functionality to creators to make distributing and updating mods as seamless as possible.
 
      . __[[https://www.youtube.com/watch?v=i3Yr3WSRz18&list=PLiPgFWIHsr8VhZDV9DzJRqwg_Y2qV9Sby&index=3&t=0s | Creation Kit Tutorial (Uploading to Steam]]__
           * **Author:** Darkfox127
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * In this tutorial I show how to upload your mods to the Steam Workshop. Now this process is far from perfect and it's become very bugged for many people in past months. I won't be replying to comments asking for help on Steam errors as it seems they appear whenever they feel like it. Sometimes you need to get lucky with this. I mention a few things which may help and I cover creating a manual bsa which has a number of advantages.
 
      . __[[https://www.youtube.com/watch?v=589FPBKM0XU&list=PLiPgFWIHsr8VhZDV9DzJRqwg_Y2qV9Sby&index=4&t=0s | Uploading to the Skyrim Nexus]]__
           * **Author:** Darkfox127
-          * ~~Intermediate~~  
+          * ~~Intermediate~~
           * This video will show you how to upload your mods to the Skyrim Nexus in brief detail. I won't go through the process of publishing a mod and doing a description but I will guide you through how to package up your files into a zip folder ready for upload to the Nexus.
 
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/27189 | Beginner's Guide - Using CK to Upload SSE mods to Bethesda.net]]__
           * **Author:** patternboy
-          * ~~Intermediate~~  
+          * ~~Intermediate~~
           * After a frustrating time uploading a mod (and hoping to port it to XboxOne) via Creation Kit, I decided to make a quick beginner's tutorial on how to upload a simple texture replacer mod, from start to finish, for Skyrim SE using Creation Kit 2.0.
 
-===  Level Design 
+===  Level Design
 
-====  Layout Essentials 
+====  Layout Essentials
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Layout_Part_1 | Layout Essentials]]__
      * __[[https://www.youtube.com/watch?v=SO-OMWk0mQs&feature=youtu.be&hd=1 | Layout Essentials - Companion Video Tutorial]]__
           * **Author:** Official CK Wiki Team and Bethesda Studios
-          * ~~Intermediate~~ 
+          * ~~Intermediate~~
           * This chapter will guide you through the basics of creating a layout for an interior space using the "Ancient Nord Ruin" art.
           . __The reader will learn:__
           * What "kits" are and how to use them
@@ -246,7 +246,7 @@ __A collection of tutorials and information to help the novice modder begin addi
           * How to place and fit kit pieces together
           * How to test a custom dungeon in game
 
-====  Intermediate Layout 
+====  Intermediate Layout
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Layout_Part_2 | Intermediate Layout]]__
      * __[[https://www.youtube.com/watch?v=p1Twdld0tLc&feature=youtu.be&hd=1 | Intermediate Layout - Companion Video Tutorial]]__
@@ -272,7 +272,7 @@ __A collection of tutorials and information to help the novice modder begin addi
      . __[[https://www.youtube.com/watch?v=T-OscsDQyAw | Creating Cave Systems]]__
           * **Author:** BestInSlot
           * ~~Intermediate~~
-          * Developing a dungeon a little further, and allowing you to be a bit more creative, via the introduction of an organic and free-flowing cave system. Caves work on different principles than dungeons, so keep up, and by the time the next video rolls around we'll have a fully cluttered dungeon with its own cave system! 
+          * Developing a dungeon a little further, and allowing you to be a bit more creative, via the introduction of an organic and free-flowing cave system. Caves work on different principles than dungeons, so keep up, and by the time the next video rolls around we'll have a fully cluttered dungeon with its own cave system!
 
      . __[[https://wiki.nexusmods.com/index.php/Creating_an_Exterior_Worldspace | Creating an Exterior Worldspace]]__
           * **Author:** Nexus Mods Wiki Team
@@ -280,7 +280,7 @@ __A collection of tutorials and information to help the novice modder begin addi
           * This Tutorial covers the creation of a new worldspace and the basic functions of editing a worldspace. It is not a fully comprehensive creating/editing outdoor spaces guide and is meant for beginners.
           * Creating an exterior cell is different than creating an interior cell, especially at the beginning of the process. This tutorial will explain how to create a new exterior world from scratch. It will cover what some of the options are, how to build landmass, how to add grasses and textures to your landmass, and how to test it in game.
 
-====  Clutter, Containers, Doors, and Furniture 
+====  Clutter, Containers, Doors, and Furniture
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Clutter | Clutter, Containers, Doors, and Furniture]]__
      * __[[https://www.youtube.com/watch?v=6RzxXWiqb8M&feature=youtu.be&hd=1 | Clutter, Containers, Doors, and Furniture - Companion Video Tutorial]]__
@@ -296,7 +296,7 @@ __A collection of tutorials and information to help the novice modder begin addi
      . __[[https://www.youtube.com/watch?v=sCKVOQKoB-4 | Adding Clutter to Dungeons]]__
           * **Author:** BestInSlot
           * ~~Intermediate~~
-          * Adding clutter to dungeons, including slightly more advanced ideas such as levelled items, dummy items, locked containers and more. Note; when you load up an already made dungeon (Even if it's one you made) make sure you set it as the "Active File". 
+          * Adding clutter to dungeons, including slightly more advanced ideas such as levelled items, dummy items, locked containers and more. Note; when you load up an already made dungeon (Even if it's one you made) make sure you set it as the "Active File".
 
      . __[[https://www.youtube.com/watch?v=SPZy_WMxL0k&feature=youtu.be&hd=1 | Skyrim Creation Kit Tutorial: Interior Decorating]]__
           * **Author:** Bottled Zebra
@@ -339,7 +339,7 @@ __A collection of tutorials and information to help the novice modder begin addi
           * How to work with the advanced features of the OPAL system.
           * Where you can download some sample OPAL collections.
 
-====  Navmesh 
+====  Navmesh
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Navmesh | Navmesh]]__
           * __[[https://www.youtube.com/watch?v=raM9TBZZyQY&feature=youtu.be&hd=1 | Navmesh - Companion Video Tutorial]]__
@@ -347,7 +347,7 @@ __A collection of tutorials and information to help the novice modder begin addi
           * ~~Beginner~~
           * In this chapter we will go over creating a navmesh both manually and with automatic generation.
           . __The reader will learn:__
-          * What **Navmesh** is, and why it's important
+          * What **Navmesh** is, and why it's important
           * How to auto generate a navmesh using Recast Based generation
           * How to edit navmesh by hand
           * Fixing navmesh warnings
@@ -361,7 +361,7 @@ __A collection of tutorials and information to help the novice modder begin addi
      . __[[https://www.youtube.com/watch?v=lKfQ44iIejw | Making Navmesh]]__
           * **Author:** BestInSlot
           * ~~Intermediate~~
-          * How to navmesh your dungeon in order to make it fully functional for NPC's of all kinds. I'll show you how to automatically generate navmesh, as well as tidy it all up, deal with pesky staircases and also do pathing tests. 
+          * How to navmesh your dungeon in order to make it fully functional for NPC's of all kinds. I'll show you how to automatically generate navmesh, as well as tidy it all up, deal with pesky staircases and also do pathing tests.
 
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/23771 | Fixing Deleted NavMeshes]]__
           * **Author:** mnikjom
@@ -378,7 +378,7 @@ __A collection of tutorials and information to help the novice modder begin addi
           * ~~Intermediate~~
           * This tutorial is the fourth of a six part series of videos on creating a house in The Elder Scrolls Skyrim, in this tutorial you will learn how to build a basic cottage and place items within it as well as how to do lighting and setting it up to support an NPC. I will also go through packages in the end tutorial videos to get your NPC to have a daily routine rather than stay at home al day. This video covers how to Navmesh your house so that your NPC will appear inside and use all the items within it. The video will also cover how to link your home to the world so that your NPC can travel outside and come back.
 
-====  Basic Encounters 
+====  Basic Encounters
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Encounters | Basic Encounters]]__
           * __[[https://www.youtube.com/watch?v=TAih_jr233I&feature=youtu.be&hd=1 | Basic Encounters - Companion Video Tutorial]]__
@@ -394,9 +394,9 @@ __A collection of tutorials and information to help the novice modder begin addi
      . __[[https://www.youtube.com/watch?v=9FkfB4F3ZCQ | Enemy Encounters]]__
           * **Author:** BestInSlot
           * ~~Intermediate~~
-          * Adding NPC Enemies to the game, giving them tasks to perform and patrols to follow, as well as setting their difficulty level. 
+          * Adding NPC Enemies to the game, giving them tasks to perform and patrols to follow, as well as setting their difficulty level.
 
-====  Traps, Ambushes, and Prefabs 
+====  Traps, Ambushes, and Prefabs
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Traps_and_Prefabs | Traps, Ambushes, and Prefabs]]__
           * __[[https://www.youtube.com/watch?v=PN5vCtlxvwk&feature=youtu.be&hd=1 | Traps, Ambushes, and Prefabs - Companion Video Tutorial]]__
@@ -414,42 +414,42 @@ __A collection of tutorials and information to help the novice modder begin addi
           * ~~Intermediate~~
           * This tutorial, originally part of the Lokir's Tomb Tutorial Series, covers how to set up a simple Spear Trap. The completed trap can be seen in the example plugin. Users are expected to understand basic object manipulation and object linking.
 
-====  Rooms, Portals, and Optimization 
+====  Rooms, Portals, and Optimization
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Optimization | Rooms, Portals, and Optimization]]__
           * __[[https://www.youtube.com/watch?v=acfuZiQh83Y | Rooms, Portals, and Optimization - Companion Video Tutorial]]__
           * **Author:** Official CK Wiki Team and Bethesda Studio
           * ~~Beginner~~
-          * This chapter will guide you through optimizing a dungeon to enhance performance. 
+          * This chapter will guide you through optimizing a dungeon to enhance performance.
           . __The reader will learn:__
           * Tips for the best possible performance
           * The tools available for optimization
           * How to place room markers and portals
 
-====  Lights and FX 
+====  Lights and FX
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Lights_and_FX | Lights and FX]]__
           * __[[https://www.youtube.com/watch?v=5fZoIpKcJ6I&feature=youtu.be&hd=1 | Lights and FX - Companion Video Tutorial]]__
           * **Author:** Official CK Wiki Team and Bethesda Studios
           * ~~Beginner~~
-          * This chapter will guide you through the basics of lighting and FX placement in a dungeon. 
+          * This chapter will guide you through the basics of lighting and FX placement in a dungeon.
           . __The Reader will learn:__
           * The types of light-casting objects available
           * How to manipulate shadow and non-shadow casting lights
-          * Achieving ambiance with FX and ImageSpace
+          * Achieving ambiance with FX and ImageSpace
           * Use of External Emittance to inherit time-of-day light coloring
 
      . __[[https://www.youtube.com/watch?v=sVfkKISOPqA | Lighting and FX]]__
           * **Author:** BestInSlot
           * ~~Intermediate~~
-          * Lighting in its many forms, setting overall tones, and adding FX such as water and mist to create a lot of lovely atmosphere. 
+          * Lighting in its many forms, setting overall tones, and adding FX such as water and mist to create a lot of lovely atmosphere.
 
      . __[[https://www.youtube.com/watch?v=zyrCl3Ec6aA&feature=youtu.be&hd=1 | Creation Kit House Creation Series Part 2 (Items and Lighting]]__
           * **Author:** Darkfox127
           * ~~Intermediate~~
           * This tutorial is the second of a six part series of videos on creating a house in The Elder Scrolls Skyrim, in this tutorial you will learn how to build a basic cottage and place items within it as well as how to do lighting and setting it up to support an NPC. I will also go through packages in the end tutorial videos to get your NPC to have a daily routine rather than stay at home al day. In this tutorial you will learn how to place items within your house or dungeon and also how you to add lighting effects to add a more authentic feeling to your created content.
 
-====  Connecting to the World 
+====  Connecting to the World
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_World_Hookup | Connecting to the World]]__
           * __[[https://www.youtube.com/watch?v=kTSQaUx5eKY&feature=youtu.be&hd=1 | Connecting to the World - Companion Video Tutorial]]__
@@ -464,29 +464,29 @@ __A collection of tutorials and information to help the novice modder begin addi
      . __[[https://www.youtube.com/watch?v=hIstYb2Q2hY | Connecting Dungeons to the World]]__
           * **Author:** BestInSlot
           * ~~Intermediate~~
-          * After much baiting, we finally connect Naax's Tomb to the outside world with an external entrance! Nice and simple this one, though I will have to dig out the reason for the disappearing walls bug. We also deal with map markers, teleporting doors and fast travel. As always, hope it helps and I welcome all comments. 
+          * After much baiting, we finally connect Naax's Tomb to the outside world with an external entrance! Nice and simple this one, though I will have to dig out the reason for the disappearing walls bug. We also deal with map markers, teleporting doors and fast travel. As always, hope it helps and I welcome all comments.
 
      . __[[https://www.youtube.com/watch?v=KRQgqg-7BX8&feature=youtu.be&hd=1 | Creation Kit House Creation Series Part 3 (Link to the World]]__
           * **Author:** Darkfox127
           * ~~Intermediate~~
           * This tutorial is the thrid of a six part series of videos on creating a house in The Elder Scrolls Skyrim, in this tutorial you will learn how to build a basic cottage and place items within it as well as how to do lighting and setting it up to support an NPC. I will also go through packages in the end tutorial videos to get your NPC to have a daily routine rather than stay at home al day. In this tutorial I will cover how to link your Skyrim House or Dungeon to the outside world which will allow your follower or NPC to enter and leave at will.
 
-====  Radiant Quest Ready 
+====  Radiant Quest Ready
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Dungeon_Wrapup | Radiant Quest Ready]]__
           * **Author:** Official CK Wiki Team
           * ~~Beginner~~
           * This chapter will show how to make an area ready to be used by radiant quests and to scale properly to the player's level.
-          . __The Reader will Learn:__ 
-          * What is a Location Reference Type?
-          * How can Radiant Story use our dungeon?
-          * How to create and assign a Location to a Cell
-          * Creating and configuring an Encounter Zone
+          . __The Reader will Learn:__
+          * What is a Location Reference Type?
+          * How can Radiant Story use our dungeon?
+          * How to create and assign a Location to a Cell
+          * Creating and configuring an Encounter Zone
           * Setting the Music and audio space for a cell
 
-===  Quest Design - Fundamentals 
+===  Quest Design - Fundamentals
 
-====  Planning the Quest 
+====  Planning the Quest
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Planning_the_Quest | Planning the Quest]]__
           * **Author:** Official CK Wiki Team
@@ -497,7 +497,7 @@ __A collection of tutorials and information to help the novice modder begin addi
           * How to make a completely new quest
           * What "quest stages" are and how to create them
 
-====  Creating an NPC 
+====  Creating an NPC
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Creating_an_Actor | Creating an NPC]]__
           * **Author:** Official CK Wiki Team
@@ -510,7 +510,7 @@ __A collection of tutorials and information to help the novice modder begin addi
      . __[[https://www.youtube.com/watch?v=DZxuVY4dQ74 | Creating and Adding NPCs]]__
           * **Author:** BestInSlot
           * ~~Intermediate~~
-          * How to create an individual, unique NPC with his/her own voice and armour set, and then add them to the game at a location of your choosing. 
+          * How to create an individual, unique NPC with his/her own voice and armour set, and then add them to the game at a location of your choosing.
 
      . __[[https://www.creationkit.com/index.php?title=Creating_a_Merchant | Creating a Merchant]]__
           * **Author:** Official CK Wiki Team
@@ -520,7 +520,7 @@ __A collection of tutorials and information to help the novice modder begin addi
      . __[[https://www.youtube.com/watch?v=Hh8NFbigVTQ | Creating a Merchant]]__
           * **Author:** BestInSlot
           * ~~Intermediate~~
-          * How to make a fully functioning merchant with their own container/inventory and specific items they choose to buy/sell. 
+          * How to make a fully functioning merchant with their own container/inventory and specific items they choose to buy/sell.
 
      . __[[https://www.youtube.com/watch?v=EUcb7SJuctY&list=PLiPgFWIHsr8WfQPFGvPmhcbpbr44ZCr_b&index=20&t=0s | Creation Kit Tutorial Create a Merchant (Revisited]]__
           * **Author:** Darkfox127
@@ -570,7 +570,7 @@ __A collection of tutorials and information to help the novice modder begin addi
      . __[[https://www.creationkit.com/index.php?title=Using_the_Vanilla_Courier | Using the Vanilla Courier]]__
           * **Author:** Official CK Wiki Team
           * ~~Intermediate~~
-          * This tutorial presents an alternative to Creating Custom Couriers and Simple custom courier. For most modders' purposes, it is sufficient to utilize the vanilla courier the same way Bethesda's own quests make use of him, with all of his generic dialogue intact, which is accomplished with no more than a single script command.
+          * This tutorial presents an alternative to Creating Custom Couriers and Simple custom courier. For most modders' purposes, it is sufficient to utilize the vanilla courier the same way Bethesda's own quests make use of him, with all of his generic dialogue intact, which is accomplished with no more than a single script command.
 
      . __[[https://www.youtube.com/watch?v=iustaHoHnEE&feature=youtu.be&hd=1 | Skyrim Creation Kit Tutorial 05: A Courier Quest]]__
           * **Author:** doughamil
@@ -593,10 +593,10 @@ __A collection of tutorials and information to help the novice modder begin addi
           * **Author:** Official CK Wiki Team
           * ~~Intermediate~~
           * Sometimes, you may want to create a custom race, usually for visual reasons. Maybe you have a four-eyed Khajiit model, or a variation of a High Elf who has no magical talents. A player might want a race that looks unique, or has different stats and racial abilities that we wouldn't want to add to the original races of Skyrim.
-          * This page covers the process of creating a playable humanoid race in the Creation Kit. Actual creation of art is not covered, this guide will use stock Skyrim art in the examples. 
-          * You may want to check out the __[[https://www.creationkit.com/index.php?title=Race | Race]]__ page for a description of fields not covered here.
+          * This page covers the process of creating a playable humanoid race in the Creation Kit. Actual creation of art is not covered, this guide will use stock Skyrim art in the examples.
+          * You may want to check out the __[[https://www.creationkit.com/index.php?title=Race | Race]]__ page for a description of fields not covered here.
 
-====  Dialogue 
+====  Dialogue
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Dialogue | Dialogue]]__
           * **Author:** Official CK Wiki Team
@@ -606,7 +606,7 @@ __A collection of tutorials and information to help the novice modder begin addi
           * How dialogue for Skyrim is authored in the Creation Kit.
           * How to script events based on the player's dialogue choices.
 
-====  Creating an Item 
+====  Creating an Item
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Creating_an_Item | Creating an Item]]__
           * **Author:** Official CK Wiki Team
@@ -616,7 +616,7 @@ __A collection of tutorials and information to help the novice modder begin addi
           * How to create a new item
           * How to add that item to an actor's inventory
 
-====  Scripting 
+====  Scripting
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Basic_Quest_Scripting | Scripting]]__
           * **Author:** Official CK Wiki Team
@@ -625,20 +625,20 @@ __A collection of tutorials and information to help the novice modder begin addi
 The reader will learn:
 * The basic framework of how scripts work and attach to objects in the Creation Engine
 * How to respond to events in the new scripting language
-  * (For an even simpler introduction to scripting, see the __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Papyrus_Hello_World | "Hello, World" tutorial]]__.)
+  * (For an even simpler introduction to scripting, see the __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Papyrus_Hello_World | "Hello, World" tutorial]]__.)
 
      . __[[https://www.youtube.com/watch?v=mVwHq3UilMg | Quest Scripting]]__
-          * **Author:** BestInSlot 
+          * **Author:** BestInSlot
           * ~~Intermediate~~
           * Continuing with quest building, today we script the actor and ring involved so that they link to the quest. By the end of this tutorial, the quest will be fully playable and able to be completed.
           . __Dialogue Script -__
           * ~~GetOwningQuest().SetStage(40)~~
-          . __Thief Script -__ 
+          . __Thief Script -__
           * ~~Event OnDeath(Actor killer)~~
           * ~~NewQuestThiefProperty.SetObjectiveDisplayed(20)~~
           * ~~NewQuestThiefProperty.SetStage(20)~~
           * ~~EndEvent~~
-          . __Ring Script -__ 
+          . __Ring Script -__
           * ~~Event OnContainerChanged(ObjectReference newContainer, ObjectReference oldContainer)~~
           * ~~if (newContainer == Game.GetPlayer())~~
           * ~~NewQuestRingProperty.SetObjectivedisplayed(30)~~
@@ -651,7 +651,7 @@ The reader will learn:
           * ~~Intermediate~~
           * Sometimes in Skyrim, there are NPCs who offer the player some kind of reward or quest shortcut if you have a high enough Speechcraft skill (or money, in the case of a bribe). You knew that already. But how do we go about implementing this using the Creation Kit's dialogue system? Let's find out.
 
-====  Objectives 
+====  Objectives
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Quest_Objectives | Objective]]__
           * **Author:** Official CK Wiki Team
@@ -666,8 +666,8 @@ The reader will learn:
      . __[[https://www.youtube.com/watch?v=tfKlPw20OVw | Quest Objectives]]__
           * **Author:** BestInSlot
           * ~~Intermediate~~
-          * Neatening up the quest building a bit, we add some objectives and try to show some tangible progress from one stage of the quest to the next. 
-          . __Scripts used -__ 
+          * Neatening up the quest building a bit, we add some objectives and try to show some tangible progress from one stage of the quest to the next.
+          . __Scripts used -__
           * ~~SetObjectiveDisplayed(10)~~
           * ~~SetObjectiveCompleted(10)~~
           * ~~SetObjectiveDisplayed(20)~~
@@ -675,7 +675,7 @@ The reader will learn:
           * ~~SetObjectiveDisplayed(30)~~
           * ~~SetObjectiveCompleted(30)~~
 
-====  Loose Ends 
+====  Loose Ends
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Quest_Loose_Ends | Loose Ends]]__
           * **Author:** Official CK Wiki Team
@@ -686,16 +686,16 @@ The reader will learn:
           * What we've done wrong.
           * How to fix it.
 
-===  Quest Design - Intermediate 
+===  Quest Design - Intermediate
 
-====  Packages 
+====  Packages
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Packages | Packages]]__
           * **Author:** Official CK Wiki Team
           * ~~Beginner~~
-          * This tutorial will show the reader how to set up packages (the data structures that control actor behavior) on an actor to get him moving around the world.
+          * This tutorial will show the reader how to set up packages (the data structures that control actor behavior) on an actor to get him moving around the world.
           . __The reader will learn:__
-          * How package stacks work
+          * How package stacks work
           * How to create a simple daily schedule for an NPC
           * How to create a new package
 
@@ -717,14 +717,14 @@ The reader will learn:
      . __[[https://www.creationkit.com/index.php?title=Hold_Position_Packages | HoldPosition (Package Template)]]__
           * **Author:** Official CK Wiki Team
           * ~~Intermediate~~
-          * Hold Position Packages allow you to restrain a character's combat movement to a radius around a location.
+          * Hold Position Packages allow you to restrain a character's combat movement to a radius around a location.
 
      . __[[https://www.youtube.com/watch?v=rter3FIzvZs&feature=youtu.be&hd=1 | Skyrim Creation Kit Tutorial 03: Forcing the Player to Act]]__
           * **Author:** doughamil
           * ~~Possibly Outdated~~
-          * In this Skyrim Creation Kit tutorial we cover how to take control of the player's character with AI packages. Knowing this, you will be able to control the player just like you would any other actor. The scenario for this tutorial: While wandering through Whiterun you are approached by a beggar who asks you for gold. Before you can reply you hear a voice in your head telling you to kill the beggar. Suddenly you pull out your ax and approach the beggar. With one slash the beggar collapses on the ground. The voice in your head congratulates you. When you regain control of your body you are standing over the corpse of the beggar with a bloodied ax in hand. 
+          * In this Skyrim Creation Kit tutorial we cover how to take control of the player's character with AI packages. Knowing this, you will be able to control the player just like you would any other actor. The scenario for this tutorial: While wandering through Whiterun you are approached by a beggar who asks you for gold. Before you can reply you hear a voice in your head telling you to kill the beggar. Suddenly you pull out your ax and approach the beggar. With one slash the beggar collapses on the ground. The voice in your head congratulates you. When you regain control of your body you are standing over the corpse of the beggar with a bloodied ax in hand.
 
-====  Aliases 
+====  Aliases
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Quest_Aliases | Aliases]]__
           * **Author:** Official CK Wiki Team
@@ -740,7 +740,7 @@ The reader will learn:
           * There are times that we may want to dynamically attach scripts to objects and actors. This could be because we don't want to alter the vanilla records, or because we think it's going to be too much work to edit every single vanilla record, or because we want our mod to work on objects added by other mods.
 There are many ways to do this, and this tutorial will only cover two of them. The first method is to attach magic effect scripts to actors, and the second is to attach reference alias scripts to objects.
 
-====  Advanced Dialogue 
+====  Advanced Dialogue
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Advanced_Dialogue | Advanced Dialogue]]__
           * **Author:** Official CK Wiki Team
@@ -755,7 +755,7 @@ There are many ways to do this, and this tutorial will only cover two of them. T
      . __[[https://www.youtube.com/watch?v=AMi_21Kt-lQ | Quest Dialogue]]__
           * **Author:** BestInSlot
           * ~~Intermediate~~
-          * In todays tutorial we're going to finally tackle quest building and dialogue. It's going to be a long tutorial guys, but stick with it and we'll make it through! We'll finish the quest in the next video. The script I use is as follows; 
+          * In todays tutorial we're going to finally tackle quest building and dialogue. It's going to be a long tutorial guys, but stick with it and we'll make it through! We'll finish the quest in the next video. The script I use is as follows;
           * ~~GetOwningQuest().SetObjectiveDisplayed(10)~~
           * ~~GetOwningQuest().SetStage(10)~~
           . __To quote Bethesda on the audio error;__
@@ -769,9 +769,9 @@ There are many ways to do this, and this tutorial will only cover two of them. T
      . __[[https://www.creationkit.com/index.php?title=Creating_a_Custom_Crime_Faction | Creating a Custom Crime Faction]]__
           * **Author:** Official CK Wiki Team
           * ~~Intermediate~~
-          *  This tutorial takes you through the work to get a jail set up, along with the crime faction that tracks the player’s bounty and (optionally) custom guard dialogue. 
+          *  This tutorial takes you through the work to get a jail set up, along with the crime faction that tracks the player's bounty and (optionally) custom guard dialogue.
 
-====  Scenes 
+====  Scenes
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Scenes | Scenes]]__
           * **Author:** Official CK Wiki Team
@@ -788,7 +788,7 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * The scripts for this tutorial are available: [[http://pastebin.com/FNJrTFkS | HERE]].
           * In this Skyrim Creation Kit tutorial, you will learn how to create a fun scene to start your quest: When you sit at the bar in Riften, a stranger sits next to you and gives you a note. What does the note contain?
 
-====  Radiance 
+====  Radiance
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Radiant_Quests | Radiance]]__
           * **Author:** Official CK Wiki Team
@@ -798,7 +798,7 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * How to fill an alias with conditions
           * How to dynamically fill an alias based on other data
 
-==== Story Manager 
+==== Story Manager
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Story_Manager | Story Manager]]__
           * **Author:** Official CK Wiki Team
@@ -820,9 +820,9 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * Scripts are available at [[http://pastebin.com/WNw4u1kg | HERE]].
           * In this Skyrim Creation Kit tutorial we cover how to create a quest that uses a few new features: custom AI procedures, changing an actor's race, and trigger regions. The story is: While adventuring outside of Whiterun, you encounter Balon Grey, who tells you he has lost his pet skeever. You tell him you'll help find the skeever and he gives you some cheese. You find the skeever in a nearby cabbage patch. Using the cheese, you lure the skeever back to Balon Grey. Then you learn something interesting about the skeever.
 
-===  Scripting with Papyrus 
+===  Scripting with Papyrus
 
-====  Basics of Papyrus 
+====  Basics of Papyrus
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Papyrus_Hello_World | Hello, World!]]__
           * **Author:** Official CK Wiki Team
@@ -835,26 +835,26 @@ There are many ways to do this, and this tutorial will only cover two of them. T
      . __[[https://www.youtube.com/watch?v=rB1V84kNOR8 | Basic Papyrus Scripting]]__
           * **Author:** BestInSlot
           * ~~Intermediate~~
-          * In todays tutorial we're going to deal with the basics of Papyrus Scripting. We're going to add an activator object, and make it spawn a text-box when we click it. As well as learning what all the little odd symbols mean and the simple bits of writing your very own script! 
+          * In todays tutorial we're going to deal with the basics of Papyrus Scripting. We're going to add an activator object, and make it spawn a text-box when we click it. As well as learning what all the little odd symbols mean and the simple bits of writing your very own script!
 
-====  Variables and Conditionals 
+====  Variables and Conditionals
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Papyrus_Variables_and_Conditionals | Variables and Conditionals]]__
           * **Author:** Official CK Wiki Team
           * ~~Beginner~~
-          * This tutorial assumes you have completed the Hello World Tutorial.
+          * This tutorial assumes you have completed the Hello World Tutorial.
           . __You will learn:__
           * How to create and use variables.
           * How to create a comment to add notes to your script for future reference
           * How to ask a script running in the game for the values of its variables
           * How to use a conditional if-then-else statement to add logic to your scripting
 
-====  Introduction to Properties and Functions 
+====  Introduction to Properties and Functions
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Papyrus_Introduction_to_Properties_and_Functions | Introduction to Properties and Functions]]__
-          * **Author:** Official CK Wiki Team 
+          * **Author:** Official CK Wiki Team
           * ~~Beginner~~
-          * This tutorial assumes you've already completed the Hello World Tutorial and the Variables and Conditionals Tutorial. This will be a longer tutorial than the first two, and introduce you to some more advanced topics. Hang in there!
+          * This tutorial assumes you've already completed the Hello World Tutorial and the Variables and Conditionals Tutorial. This will be a longer tutorial than the first two, and introduce you to some more advanced topics. Hang in there!
           . __You will learn:__
           * About things glossed over in previous tutorials:
           + The first line of a script, and what it means to "extend" a script
@@ -862,23 +862,23 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * How to use properties and hook them up in the editor
           * How to create and use a function
 
-====  Events and Properties 
+====  Events and Properties
 
      . __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Papyrus_Events_and_Properties | Events and Properties]]__
           * **Author:** Official CK Wiki Team
           * ~~Beginner~~
-          * This tutorial introduces Papyrus Events and Properties.
+          * This tutorial introduces Papyrus Events and Properties.
           . __You will learn:__
           * Basic information about Papyrus Events and how they are triggered.
           * Basic information about Papyrus Properties, and how to create, fill, and use them.
           * How the game interacts with Papyrus by communicating events.
           * How Papyrus interacts with the game by performing actions on properties.
-          . This tutorial builds on the events in Lokir's Tomb, the sample dungeon created in the __[[https://www.creationkit.com/index.php?title=Category:Bethesda_Level_Design_Tutorial_Series | Level Design Tutorials]]__.
-          * If you haven't completed that tutorial, you can __[[https://www.creationkit.com/images/2/21/LDWrapUpTutorialComplete.esp | download a plugin with the finished level]]__, but be aware that this tutorial assumes you are already familiar with the elements introduced there, including things like:
+          . This tutorial builds on the events in Lokir's Tomb, the sample dungeon created in the __[[https://www.creationkit.com/index.php?title=Category:Bethesda_Level_Design_Tutorial_Series | Level Design Tutorials]]__.
+          * If you haven't completed that tutorial, you can __[[https://www.creationkit.com/images/2/21/LDWrapUpTutorialComplete.esp | download a plugin with the finished level]]__, but be aware that this tutorial assumes you are already familiar with the elements introduced there, including things like:
           * __[[https://www.creationkit.com/index.php?title=Bethesda_Tutorial_Creation_Kit_Interface | Basic editor navigation]]__.
           * Concepts like Ambushes, Activation, and Activate Parents.
 
-====  More Scripting Tutorials 
+====  More Scripting Tutorials
 
      . __[[https://www.creationkit.com/index.php?title=Adding_Working_Scripts_to_Items | Adding Working Scripts to Items]]__
           * **Author:** Official CK Wiki Team
@@ -888,7 +888,7 @@ There are many ways to do this, and this tutorial will only cover two of them. T
      . __[[https://www.creationkit.com/index.php?title=Scripting_tutorial_lever | Lever Scripting Tutorial]]__
           * **Author:** Official CK Wiki Team
           * ~~Intermediate~~
-          * In this tutorial, we will be scripting a lever to open one of three doors. 
+          * In this tutorial, we will be scripting a lever to open one of three doors.
 
      . __[[https://www.creationkit.com/index.php?title=Creating_Multithreaded_Skyrim_Mods | Creating Multithreaded Skyrim Mods]]__
           * **Author:** Official CK Wiki Team
@@ -898,12 +898,12 @@ There are many ways to do this, and this tutorial will only cover two of them. T
      . __[[https://www.creationkit.com/index.php?title=Creating_Multithreaded_Skyrim_Mods_Part_2_-_Futures | Creating Multithreaded Mods 2 - Futures]]__
           * **Author:** Official CK Wiki Team
           * ~~Advanced~~
-          * This tutorial picks up where our introduction left off. We will be implementing a multithreaded version of our example mod (a Conjuration mod that spawns many actors) using the __Futures pattern__.
+          * This tutorial picks up where our introduction left off. We will be implementing a multithreaded version of our example mod (a Conjuration mod that spawns many actors) using the __Futures pattern__.
 
      . __[[https://www.creationkit.com/index.php?title=Creating_Multithreaded_Skyrim_Mods_Part_3_-_Callbacks | Creating Multithreaded Mods 3 - Callbacks]]__
           * **Author:** Official CK Wiki Team
           * ~~Advanced~~
-          * We will be implementing a multithreaded solution to our example problem (a Conjuration mod that spawns many actors) using the __Callback pattern__.
+          * We will be implementing a multithreaded solution to our example problem (a Conjuration mod that spawns many actors) using the __Callback pattern__.
 
      . __[[https://www.creationkit.com/index.php?title=Implementing_Linked_Lists | Implementing Linked Lists]]__
           * **Author:** Official CK Wiki Team
@@ -914,7 +914,7 @@ There are many ways to do this, and this tutorial will only cover two of them. T
      . __[[https://www.creationkit.com/index.php?title=Options_Menu | Options Menu]]__
           * **Author:** Official CK Wiki Team
           * ~~Advanced~~
-          * Using Show - Message, it is possible to make an options menu with any number of buttons and/or levels. This is enabling as one can maintain but a single plugin with an options menu offering multiple configuration setting rather than necessitating multiple versions. In these examples, we'll use apparel items and a book, but a menu can be prompted and managed in a number of ways. First, create a message(s) form(s) and add/fill the buttons with the options you'd like to offer. Note that no more than ten buttons can be in a message box and that the button indices are offset by one such that the first option's index is 0 and not 1. If offering a lot of options, it's best to think ahead regarding how you want to organize your options, making the message forms first, then plugging them into the script.
+          * Using Show - Message, it is possible to make an options menu with any number of buttons and/or levels. This is enabling as one can maintain but a single plugin with an options menu offering multiple configuration setting rather than necessitating multiple versions. In these examples, we'll use apparel items and a book, but a menu can be prompted and managed in a number of ways. First, create a message(s) form(s) and add/fill the buttons with the options you'd like to offer. Note that no more than ten buttons can be in a message box and that the button indices are offset by one such that the first option's index is 0 and not 1. If offering a lot of options, it's best to think ahead regarding how you want to organize your options, making the message forms first, then plugging them into the script.
 
      . __[[https://www.creationkit.com/index.php?title=Arrays_(Papyrus)#Multi-Dimensional_Arrays | Arrays (Papyrus)]]__
           * **Author:** Official CK Wiki Team
@@ -922,46 +922,46 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * A CK Wiki tutorial: For beginners who would like to gain a further understanding of arrays
 
      . __[[https://wiki.nexusmods.com/index.php/Nested_Arrays_with_Papyrus | Nested Arrays with Papyrus]]__
-          * **Author:** Nexus Wiki Team 
+          * **Author:** Nexus Wiki Team
           * ~~Advanced~~
-          * Before we talk about nested arrays, you will need a basic understand of what arrays are and how they work. The best information on this subject can be found in the __[[https://www.creationkit.com/index.php?title=Arrays_(Papyrus) | Creation Kit wiki]]__.
-          * With an array being a list of items stored in a single properly, a nest array is an ~~array of arrays~~. Which means each entry in the top level array is also an array.
+          * Before we talk about nested arrays, you will need a basic understand of what arrays are and how they work. The best information on this subject can be found in the __[[https://www.creationkit.com/index.php?title=Arrays_(Papyrus) | Creation Kit wiki]]__.
+          * With an array being a list of items stored in a single properly, a nest array is an ~~array of arrays~~. Which means each entry in the top level array is also an array.
 
-====  Complete Example Scripts 
+====  Complete Example Scripts
 
      . __[[https://www.creationkit.com/index.php?title=Complete_Example_Scripts | Complete Example Scripts]]__
           * **Author:** Official CK Wiki Team
           * ~~Beginner~~
-          * 1 Complete Example Scripts
-          * 1.1 Script Instantiation
-          * 1.2 Property Setting
-          * 1.3 Script Name
-          * 2 Creating a Simple Toggle
-          * 3 A Quest item you can drop and pick up again and set or reset objectives and Stages.
-          * 4 A Trigger That Detects When The Player Enters
-          * 5 Cycle Through a List of Objects and Perform an Action on Each Object(FormLists)
-          * 6 Cycle Through a List of Objects and Perform an Action on Each Object(Linked Ref Chain)
-          * 7 Move an Object to a Specific Location Without Fade
-          * 8 A Fully Functional Dwemer Button
-          * 9 Set Quest Stage When Picked Up By Player
-          * 10 Usage of Arrays to Make Scripts Compact
-          * 11 A helper script with functions to get the current moonphase, sync between the two moons and day of the week
-          * 12 Script to make an item cast a spell
-          * 13 Script for a quest with time limit
-          * 14 Making a Cool Cut-Scene
-          * 15 Script a container that only accepts certain types of items
-          * 16 Maintenance/update code which runs once per save load and shows a message when a mod is updated or first loaded
-          * 17 Summon Spell
-          * 18 Show Gift Inventory and Identify Items Given
-          * 19 Enable/Disable an object on a schedule
-          * 20 Enable/Disable Lock on object based on hours of day
-          * 21 Adding a spell when you shout
-          * 22 Enabling ReferenceAliases using an array
-          * 23 Resurrect an Enemy on Death Script
+          * 1 Complete Example Scripts
+          * 1.1 Script Instantiation
+          * 1.2 Property Setting
+          * 1.3 Script Name
+          * 2 Creating a Simple Toggle
+          * 3 A Quest item you can drop and pick up again and set or reset objectives and Stages.
+          * 4 A Trigger That Detects When The Player Enters
+          * 5 Cycle Through a List of Objects and Perform an Action on Each Object(FormLists)
+          * 6 Cycle Through a List of Objects and Perform an Action on Each Object(Linked Ref Chain)
+          * 7 Move an Object to a Specific Location Without Fade
+          * 8 A Fully Functional Dwemer Button
+          * 9 Set Quest Stage When Picked Up By Player
+          * 10 Usage of Arrays to Make Scripts Compact
+          * 11 A helper script with functions to get the current moonphase, sync between the two moons and day of the week
+          * 12 Script to make an item cast a spell
+          * 13 Script for a quest with time limit
+          * 14 Making a Cool Cut-Scene
+          * 15 Script a container that only accepts certain types of items
+          * 16 Maintenance/update code which runs once per save load and shows a message when a mod is updated or first loaded
+          * 17 Summon Spell
+          * 18 Show Gift Inventory and Identify Items Given
+          * 19 Enable/Disable an object on a schedule
+          * 20 Enable/Disable Lock on object based on hours of day
+          * 21 Adding a spell when you shout
+          * 22 Enabling ReferenceAliases using an array
+          * 23 Resurrect an Enemy on Death Script
 
-===  Miscellaneous 
+===  Miscellaneous
 
-====  Reference 
+====  Reference
 
      . __[[https://www.creationkit.com/index.php?title=Creation_Kit_Interface_Cheat_Sheet | CK Interface Cheat Sheet]]__
           * **Author:** Official CK Wiki Team
@@ -974,7 +974,7 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * Official CK Wiki Glossary
 
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/29133 | CK Info Spreadsheets]]__
-          * **Author:** skydoody44 
+          * **Author:** skydoody44
           * ~~Beginner~~
           * I was thinking about getting into modding for my own personal use and decided to compile some ck data into spreadsheets. I couldn't seem to find what I was looking for so I am not sure if this exists. It is not completed and anyone can use it for anything they want. I think it is was created with the Unofficial patches and the DLC's only hopefully I didn't accidentally check any mods while compiling it.
 
@@ -991,9 +991,9 @@ There are many ways to do this, and this tutorial will only cover two of them. T
      . __[[https://www.creationkit.com/index.php?title=Use_Report | Use Report]]__
           * **Author:** Official CK Wiki Team
           * ~~Intermediate~~
-          * You can get a Use Report on many things in the Creation Kit by right-clicking on an object in the Object Window and selecting Use Info. A Use Report window will pop up and list the objects that are using that object you got the use info on and which cells the object is being used.
+          * You can get a Use Report on many things in the Creation Kit by right-clicking on an object in the Object Window and selecting Use Info. A Use Report window will pop up and list the objects that are using that object you got the use info on and which cells the object is being used.
 
-====  LOD 
+====  LOD
 
      . __[[https://www.creationkit.com/index.php?title=Creating_a_Custom_Worldspace_with_LOD | Creating a Custom Worldspace with LOD]]__
           * **Author:** Official CK Wiki Team
@@ -1005,12 +1005,12 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * ~~Intermediate~~
           * An in-depth tutorial on how to generate full LOD for your custom worldspace from scratch.
 
-====  Spells 
+====  Spells
 
      . __[[https://www.creationkit.com/index.php?title=Creating_a_Disease_Spell | Creating a Disease Spell]]__
           * **Author:** Official CK Wiki Team
           * ~~Intermediate~~
-          * In this tutorial we are going to make a simple Disease Spell called hemorrhagic fever. This infection will slowly drain away the victim's heath until they either find a cure or die. The disease will be transmitted by contact with any Skeever Race creature during combat. Lets do this tutorial as a stand-alone mod.
+          * In this tutorial we are going to make a simple Disease Spell called hemorrhagic fever. This infection will slowly drain away the victim's heath until they either find a cure or die. The disease will be transmitted by contact with any Skeever Race creature during combat. Lets do this tutorial as a stand-alone mod.
 
      . __[[https://www.youtube.com/watch?v=E7ikxJJcVG4 | Creating New Spells]]__
           * **Author:** BestInSlot
@@ -1027,7 +1027,7 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * ~~Possibly Outdated~~
           * This is a basic tutorial on how to make a simple teleport spell. It mainly outlines the main change from the Construction Set to the Creation Kit, not being able to access world references from inside a script without defining them.
 
-====  Weapons and Armor 
+====  Weapons and Armor
 
      . __[[https://www.creationkit.com/index.php?title=Customizing_Weapons_%26_Armor | Customizing Weapons and Armor]]__
           * **Author:** Official CK Wiki Team
@@ -1056,19 +1056,19 @@ There are many ways to do this, and this tutorial will only cover two of them. T
      . __[[https://wiki.nexusmods.com/index.php/Creating_an_armour_for_Skyrim._Part_2 | Creating an Armour for Skyrim, Part 2]]__
           * **Author:** Nexus Wiki Team
           * ~~Intermediate~~
-          * This is the part 2 of the tutorial for creating an armour or outfit for Skyrim. You can find the first part of the tutorial here Creating an armour for Skyrim. Part 1
+          * This is the part 2 of the tutorial for creating an armour or outfit for Skyrim. You can find the first part of the tutorial here Creating an armour for Skyrim. Part 1
 
      . __[[https://www.youtube.com/watch?v=OmfP_2Rc-q8 | Creating and Adding Weapons and Armor]]__
           * **Author:** BestInSlot
           * ~~Intermediate~~
-          * How to create an unique weapon and add it to the game, as well as dealing with enchantments, smithing and tempering. Everything taught in this video applies to armour as well. 
+          * How to create an unique weapon and add it to the game, as well as dealing with enchantments, smithing and tempering. Everything taught in this video applies to armour as well.
 
      . __[[https://www.youtube.com/watch?v=bcYCSwtnHcI&feature=youtu.be&hd=1 | Creation Kit Tutorial (Create a Weapon) Full Upgradable]]__
           * **Author:** Darkfox127
           * ~~Intermediate~~
           * This tutorial will show you how to create your own modded version of an existing weapon in Skyrim, I will show you how to also make sure the weapon can be fully upgraded and even have an enchantment added to it later on rather than having to add one straight away.
 
-====  Voices 
+====  Voices
 
      . __[[https://www.creationkit.com/index.php?title=Adding_Voice_Intermediate_Tutorial | Adding Voices]]__
           * **Author:** Official CK Wiki Team
@@ -1086,7 +1086,7 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * ~~Intermediate~~
           * This guide is a complete tutorial on how to include Voice Acting into your Skyrim mods. It will assume that you already have recording equipment (at least a PC microphone for some basic recording) and knowledge with the Creation Kit dialogue system.
 
-====  Packaging Mods for Upload 
+====  Packaging Mods for Upload
 
      . __[[https://www.creationkit.com/index.php?title=Archive.exe | Archive.exe]]__
           * **Author:** Official CK Wiki Team
@@ -1095,14 +1095,14 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * There are issues with uploading mods to Steam Workshop. It seems that it will only accept mods that do not have .esm files, multiple .esp files, multiple text documents, or image files included. This means that many mods cannot be uploaded to Steam Workshop because of how the system is designed.
           * So because of these issues, it is good to be able to package your files using a different program. Archive.exe will work even if the CK is just giving out error messages. Archive.exe can help you package any mod, no matter how complicated it is and no matter how many pieces it comes in. So you could use it to pack up mods to upload to Steam Workshop as well as mods to upload to various Skyrim mod sites."
 
-====  Crafting 
+====  Crafting
 
      . __[[https://www.creationkit.com/index.php?title=Customizing_Crafting_Categories | Customizing Crafting Categories]]__
           * **Author:** Official CK Wiki Team
           * ~~Intermediate~~
           * Crafting categories, shown in-game when the player uses a crafting station such as a forge, are a way for the player to identify the material or type of item that will be crafted. Although some aspects of these categories are hard-coded, it is possible to customize them to a large degree.
 
-====  Retextures 
+====  Retextures
 
      . __[[https://www.creationkit.com/index.php?title=Retexture_Tutorial | Retexture Tutorial]]__
           * **Author:** Official CK Wiki Team
@@ -1145,7 +1145,7 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * ~~Possibly Outdated~~
           * Tutorial 6 of 6 - Cleaning up a few loose ends as they relate to texture sets and the picture frame assets and a few final thoughts.
 
-====  INIs 
+====  INIs
 
      . __[[https://www.youtube.com/watch?v=d15ZP880uGQ | .ini Files SE - What & Where - Tutorial Tuesday]]__
           * **Author:** GamerPoets
@@ -1156,7 +1156,7 @@ There are many ways to do this, and this tutorial will only cover two of them. T
 
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/164 | SSEEdit]]__
           * **Author:** ElminsterAU and xEdit team
-          * ~~TOOL~~ 
+          * ~~TOOL~~
           * SSEEdit is the Skyrim: Special Edition version of xEdit. xEdit is an advanced graphical module viewer/editor and conflict detector.
 
      . __[[https://tes5edit.github.io/docs/ | Tome of xEdit]]__
@@ -1166,14 +1166,14 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * This document is intended as a training manual for the xEdit tool created by ElminsterAU. This manual contains a tour of xEdit, a lengthy FAQ/Navigator and several Chapters of detailed instructions on how you can utilize the varied functions of xEdit successfully to improve your gaming experience.
           * The questions answered and processes described herein are intended to help both mod-users and mod-authors to improve the quality, standardization and conformity of Bethesda mods. If you utilize more than 25 mods in your game or if you write mods you can use xEdit to resolve potential conflicts, clean mods, and smoothen the loading process. With thousands of mods already created and thousands more on the way, it has become essential to standardize mod delivery and reduce conflicts where-ever possible.
 
-===  Install and Setup 
+===  Install and Setup
 
      . __[[https://www.youtube.com/watch?v=wA5IlESvtCM&list=PLlN8weLk86XiGXJI4DaRa1QIq1zhDpD8V&index=2&t=0s | xEdit - Installation & Setup - Tutorial Tuesday]]__
           * **Author:** GamerPoets
           * ~~Beginner~~
           * How to Install #xEdit is a How To Mod guide on xEdit Installation as well as how to import xEdit into #ModOrganizer and #Vortex.
 
-===  Cleaning Mods 
+===  Cleaning Mods
 
      . __[[https://www.youtube.com/watch?v=g_urrHrGQOY&t=12s | xEdit - How to Clean Mods & DLC (All Games)]]__
           * **Author:** GamerPoets
@@ -1185,7 +1185,7 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * ~~Beginner~~
           * Understanding LOOT messages and removing the records
 
-===  Basics of Editing 
+===  Basics of Editing
 
      . __[[https://www.youtube.com/watch?v=g_urrHrGQOY&list=PLlN8weLk86XiGXJI4DaRa1QIq1zhDpD8V&index=2 | xEdit - Load Order Space Saver - .esl & ESL]]__
           * **Author:** GamerPoets
@@ -1224,14 +1224,14 @@ There are many ways to do this, and this tutorial will only cover two of them. T
 
 =  Reuse and Credits  ==========================================================
 
-==  License: WML 1.0 Modify and Redistribute, Share Alike 
+==  License: WML 1.0 Modify and Redistribute, Share Alike
 
 * You are free to redistribute this work in unmodified form.
-* You are free to modify and re-distribute this work, so long as you: 
-     * 1) give the author(s) credit proportional to their contribution to the final work, 
-     * 2) distribute the final work under the same terms, and 
+* You are free to modify and re-distribute this work, so long as you:
+     * 1) give the author(s) credit proportional to their contribution to the final work,
+     * 2) distribute the final work under the same terms, and
      * 3) make artistic resources included with the final work available under the same terms.
 
-==  Credits 
+==  Credits
 
 * **A Filthy N'wah** and **Sharlikran** Thanks to the authors for providing this modder resource!
