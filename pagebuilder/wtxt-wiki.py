@@ -719,7 +719,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
                 didContents = True
         else:
             out.write(line)
-    out.write('</div>\n</section>\n')
+    out.write('</div>\n</section>\n</BODY>\n</HTML>\n')
     out.close()
 	
 
