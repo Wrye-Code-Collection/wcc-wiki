@@ -119,7 +119,7 @@ def mainFunction(func):
 """This section of the module provides a single function for converting
 wtxt text files to html files."""
 etxtHeader = """
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
@@ -398,7 +398,7 @@ htmlHead = """
         </ul>
     </div>
 </div>
-<section>
+<div>
 """
 defaultCss = """
 H1 { margin-top: 0in; margin-bottom: 0in; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in; background: #c6c63c; font-family: "Arial", serif; font-size: 12pt; page-break-before: auto; page-break-after: auto }
@@ -726,7 +726,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
                 didContents = True
         else:
             out.write(line)
-    out.write('</div>\n</section>\n</BODY>\n</HTML>\n')
+    out.write('</div>\n')
     out.close()
 	
 

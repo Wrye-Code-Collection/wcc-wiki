@@ -156,14 +156,13 @@ Contents
 """
 
 htmlHead = """
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!DOCTYPE html>
 <HTML>
 <HEAD>
 <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
 <TITLE>%s</TITLE>
 <STYLE>%s</STYLE>
 </HEAD>
-<BODY>
 <BODY>
     <section class="page-header">
       <h1 class="project-name">Wrye-Code-Collection Wiki</h1>
@@ -458,11 +457,12 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         return '<a {} href="{}">{}</a>'.format(fontClass, address, text)
 
     # --Tags
+    pageTitle = 'Your Content'
     reAnchorTag = re.compile('{{A:(.+?)}}')
     reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
     reCssTag = re.compile('\s*{{CSS:(.+?)}}\s*$')
+    reTitleTag = re.compile(r'({{PAGETITLE=")(.*)("}})$')
     # --Defaults ----------------------------------------------------------
-    title = ''
     level = 1
     spaces = ''
     cssFile = None
@@ -483,6 +483,10 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         # --Preformatted? -----------------------------
         maPreBegin = rePreBegin.search(line)
         maPreEnd = rePreEnd.search(line)
+        maTitleTag = reTitleTag.match(line)
+        if maTitleTag:
+            pageTitle = re.sub(r'({{PAGETITLE=")(.*)("}})(\n)?', r'\2', line)
+            line = '= ' + pageTitle
         if inPre or maPreBegin or maPreEnd:
             inPre = maPreBegin or (inPre and not maPreEnd)
             outLines.append(line)
@@ -523,7 +527,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             if addContents:
                 contents.append((level, anchor, text))
             # --Title?
-            if not title and level <= 2: title = text
+            if not pageTitle and level <= 2: pageTitle = text
         # --Green Header
         elif maHeadgreen:
             lead, text = maHeadgreen.group(1, 2)
@@ -540,7 +544,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             if addContents:
                 contents.append((level, anchor, text))
             # --Title?
-            if not title and level <= 2: title = text
+            if not pageTitle and level <= 2: pageTitle = text
         # --List item
         elif maList:
             spaces = maList.group(1)
@@ -600,7 +604,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             raise "Non css tag in css file: " + cssFile
     # --Write Output ------------------------------------------------------
     out = file(outFile, 'w')
-    out.write(htmlHead % (title, css))
+    out.write(htmlHead % (pageTitle, css))
     didContents = False
     for line in outLines:
         if reContentsTag.match(line):
