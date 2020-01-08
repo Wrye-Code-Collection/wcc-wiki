@@ -375,9 +375,7 @@ Contents
 2 for two levels, etc.).
 """
 
-htmlHead = """---
-layout: default
-title: Wrye Mash Usage
+htmlHead = """
 ---
 <h1 class="header1">{{ page.title }}</h1>
 <hr>
@@ -426,7 +424,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     """Generates an html file from a wtxt file. CssDir specifies a directory to search for css files."""
     if not outFile:
         import os
-        outFile = os.path.splitext(srcFile)[0] + '.html'
+        outFile = '..\\' +  os.path.splitext(srcFile)[0] + '.html'
     # Setup ---------------------------------------------------------
     # --Headers
     reHead = re.compile(r'(=+) *(.+)')
@@ -561,9 +559,11 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         return '<a {} href="{}">{}</a>'.format(fontClass, address, text)
 
     # --Tags
+    pageTitle = 'title: Your Content'
     reAnchorTag = re.compile('{{A:(.+?)}}')
     reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
     reCssTag = re.compile('\s*{{CSS:(.+?)}}\s*$')
+    reTitleTag = re.compile(r'({{PAGETITLE=")(.*)("}})$')
     # --Defaults ----------------------------------------------------------
     title = ''
     level = 1
@@ -586,6 +586,9 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         # --Preformatted? -----------------------------
         maPreBegin = rePreBegin.search(line)
         maPreEnd = rePreEnd.search(line)
+        maTitleTag = reTitleTag.match(line)
+        if maTitleTag:
+            pageTitle = re.sub(r'({{PAGETITLE=")(.*)("}})(\n)?', r'title: \2', line)
         if inPre or maPreBegin or maPreEnd:
             inPre = maPreBegin or (inPre and not maPreEnd)
             outLines.append(line)
@@ -681,7 +684,10 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         line = reWww.sub(r' <a href="http://\1">\1</a>', line)
         # --Save line ------------------
         # print line,
-        outLines.append(line)
+        if maTitleTag:
+            pass
+        else:
+            outLines.append(line)
     ins.close()
     # --Get Css -----------------------------------------------------------
     if not cssFile:
@@ -704,6 +710,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     # --Write Output ------------------------------------------------------
     out = file(outFile, 'w')
     # out.write(htmlHead % (title, css))
+    out.write('---\nlayout: default\n{}'.format(pageTitle))
     out.write(htmlHead)
     didContents = False
     for line in outLines:
