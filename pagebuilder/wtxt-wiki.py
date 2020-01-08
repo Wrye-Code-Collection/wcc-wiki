@@ -565,7 +565,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reCssTag = re.compile('\s*{{CSS:(.+?)}}\s*$')
     reTitleTag = re.compile(r'({{PAGETITLE=")(.*)("}})$')
     # --Defaults ----------------------------------------------------------
-    title = ''
     level = 1
     spaces = ''
     cssFile = None
@@ -629,7 +628,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             if addContents:
                 contents.append((level, anchor, text))
             # --Title?
-            if not title and level <= 2: title = text
         # --Green Header
         elif maHeadgreen:
             lead, text = maHeadgreen.group(1, 2)
@@ -646,7 +644,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             if addContents:
                 contents.append((level, anchor, text))
             # --Title?
-            if not title and level <= 2: title = text
         # --List item
         elif maList:
             spaces = maList.group(1)

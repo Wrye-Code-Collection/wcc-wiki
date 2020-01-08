@@ -527,7 +527,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             if addContents:
                 contents.append((level, anchor, text))
             # --Title?
-            if not pageTitle and level <= 2: pageTitle = text
         # --Green Header
         elif maHeadgreen:
             lead, text = maHeadgreen.group(1, 2)
@@ -544,7 +543,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             if addContents:
                 contents.append((level, anchor, text))
             # --Title?
-            if not pageTitle and level <= 2: pageTitle = text
         # --List item
         elif maList:
             spaces = maList.group(1)
