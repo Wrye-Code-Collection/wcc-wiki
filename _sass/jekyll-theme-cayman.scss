@@ -344,7 +344,7 @@ body {
     padding: 2px 4px;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 0.9rem;
-    color: var(--syntax-variable-color);
+    color: var(--purple-text);
     background: var(--header3-background);
     border-radius: 0.3rem;
   }
@@ -353,7 +353,7 @@ body {
     margin-top: 0;
     margin-bottom: 1rem;
     font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    color: var(--syntax-variable-color);
+    color: var(--purple-text);
     background: var(--header3-background);
     word-wrap: normal;
     border: solid 1px var(--cayman-border);
@@ -362,7 +362,7 @@ body {
       padding: 0;
       margin: 0;
       font-size: 0.9rem;
-      color: var(--syntax-variable-color);
+      color: var(--purple-text);
       word-break: normal;
       white-space: pre;
       background: transparent;
@@ -408,7 +408,7 @@ body {
   blockquote {
     padding: 0 1rem;
     margin-left: 0;
-    color: var(--syntax-variable-color);
+    color: var(--purple-text);
     background: var(--header3-background);
     border-left: 0.3rem solid var(--cayman-border);
     > :first-child {
