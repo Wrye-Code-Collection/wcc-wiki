@@ -39,23 +39,30 @@ $body-link-color: rgb(30, 107, 184);
   //
 
   // body	
-  --body-text: rgb(209, 213, 218);
-  --body-text-secondary: rgb(149, 157, 165);
+  --body-text: rgb(149, 157, 165);
   --body-background: rgb(36, 41, 46);
 
-  --header1-text: rgb(223, 226, 229);
-  --header1-background: rgb(81, 88, 97);
-  --header1-border: rgb(100, 109, 119);
-  --header2-text: rgb(225, 228, 232);
-  --header2-background: rgb(61, 69, 77);
-  --header2-border: rgb(79, 90, 100);
-  --header3-text: var(--body-text);
-  --header3-background: rgb(29, 33, 37);
-  --header3-border: rgb(47, 54, 60);
-  --header4-text: rgb(216, 220, 225);
-  --header4-background: rgb(40, 46, 52);
-  --header4-border: rgb(58, 67, 75);
-  --toc-header-text: rgb(21, 153, 87);
+  // code
+  --code-background: rgb(29, 33, 37);
+
+  // headers
+  --header1-text: rgb(225, 228, 232);
+  --header2-text: rgb(223, 226, 229);
+  --header3-text: rgb(216, 220, 225);
+  --header4-text: rgb(209, 213, 218);
+  --header5-text: rgb(202, 207, 211);
+  --header6-text: rgb(174, 182, 190);
+
+  --header-border: rgb(100, 109, 119);
+
+  --header1-background: rgb(79, 90, 100);
+  --header2-background: rgb(81, 88, 97);
+  --header3-background: rgb(61, 69, 77);
+  --header4-background: rgb(58, 67, 75);
+  --header5-background: rgb(47, 54, 60);
+  --header6-background: rgb(40, 46, 52);
+
+  --toc-header-text: var(--cayman-header-background);
   // 17 basic site friendly colors
   --black-text: rgb(0, 0, 0);
   --blue-text: rgb(33, 136, 255);

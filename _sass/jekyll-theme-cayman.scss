@@ -59,7 +59,7 @@ body {
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  color: var(--body-text-secondary);
+  color: var(--body-text);
   background: var(--body-background);
 }
 
@@ -338,14 +338,14 @@ body {
   p {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
-    color: var(--body-text-secondary);
+    color: var(--body-text);
   }
   code {
     padding: 2px 4px;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 0.9rem;
     color: var(--purple-text);
-    background: var(--header3-background);
+    background: var( --code-background);
     border-radius: 0.3rem;
   }
   pre {
@@ -354,7 +354,7 @@ body {
     margin-bottom: 1rem;
     font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
     color: var(--purple-text);
-    background: var(--header3-background);
+    background: var( --code-background);
     word-wrap: normal;
     border: solid 1px var(--cayman-border);
     border-radius: 0.3rem;
@@ -409,7 +409,7 @@ body {
     padding: 0 1rem;
     margin-left: 0;
     color: var(--purple-text);
-    background: var(--header3-background);
+    background: var( --code-background);
     border-left: 0.3rem solid var(--cayman-border);
     > :first-child {
       margin-top: 0;
@@ -501,7 +501,7 @@ input[id^="spoiler"]:checked + label + .spoiler{
     border-bottom: 2px solid;
     color: var(--header1-text);
     background: var(--header1-background);
-    border-color: var(--header1-border);
+    border-color: var(--header-border);
     display: block;
   }
   h2.header2 {
@@ -509,21 +509,39 @@ input[id^="spoiler"]:checked + label + .spoiler{
     border-bottom: 2px solid;
     color: var(--header2-text);
     background: var(--header2-background);
-    border-color: var(--header2-border);
+    border-color: var(--header-border);
     display: block;
   }
   h3.header3 {
-    font-style: normal;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
     color: var(--header3-text);
     background: var(--header3-background);
-    border-color: var(--header3-border);
+    border-color: var(--header-border);
     display: block;
   }
   h4.header4 {
-    font-style: italic;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
     color: var(--header4-text);
     background: var(--header4-background);
-    border-color: var(--header4-border);
+    border-color: var(--header-border);
+    display: block;
+  }
+  h5.header5 {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    color: var(--header5-text);
+    background: var(--header5-background);
+    border-color: var(--header-border);
+    display: block;
+  }
+  h6.header6 {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    color: var(--header6-text);
+    background: var(--header6-background);
+    border-color: var(--header-border);
     display: block;
   }
 }

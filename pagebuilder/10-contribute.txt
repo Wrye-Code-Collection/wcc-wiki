@@ -211,14 +211,14 @@ Blank lines can be used as spacers:
 . As shown type <code>cd c:\pagebuilder</code> and press <code>[ENTER]</code>
 <img class="thumbnail-large"  src="img/changedir.jpg" alt="changedir.jpg">
 . Now we will run the python script to to produce a sample HTML output so you can see a close version of what will be in the wiki.
-. Type: As shown type <code>c:\python27\python.exe wtxt-wiki-user.py genHtml "Wiki Page Template.txt"</code> and press <code>[ENTER]</code>
+. As shown type <code>c:\python27\python.exe wtxt-wiki-user.py genHtml "Wiki Page Template.txt"</code> and press <code>[ENTER]</code>
 <img class="thumbnail-large"  src="img/runpython.jpg" alt="runpython.jpg">
-. There were no errors and now <code>Wiki Page Template.html</code> now appears in the <code>pagebuilder</code> folder.
+. There were no errors and now <code>Wiki Page Template.html</code> appears in the <code>pagebuilder</code> folder.
 <img class="thumbnail-large"  src="img/outputhtml.jpg" alt="outputhtml.jpg">
 . Double click <code>Wiki Page Template.html</code> and you will see more or less what the page would look like.
-<img class="thumbnail-large"  src="img/outputhtml.jpg" alt="outputhtml.jpg">
+<img class="thumbnail-large"  src="img/examplehtml.jpg" alt="examplehtml.jpg">
 
-Add the content you wish to add, regenerating the HTML as you go and you are on your way to producing content for the wiki.
+Add the content you wish to add, regenerating the HTML as you go and, you are on your way to producing content for the wiki.
 
 == Versions ===================================================================
 
