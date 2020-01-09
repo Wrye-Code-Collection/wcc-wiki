@@ -1,0 +1,200 @@
+/*
+--------------------------------------------------
+* Vars
+*/
+
+/*
+* #px / 16 = #rem
+*/
+
+:root {
+	--sideMenu_OPVAR_TabCount: 2; /* Change as more tabs are added */
+	--sideMenuBorderStyle: solid;
+	--sideMenuBorderWidth: 2px;
+	--sideMenuBorderWidthArray: 0 var(--sideMenuBorderWidth) var(--sideMenuBorderWidth) 0;
+	--sideMenuContentPadding: 1rem;
+	--sideMenuMaxHeight: 99vh;
+	--sideMenuMaxInnerHeight: calc(var(--sideMenuMaxHeight) - var(--sideMenuBorderWidth));
+	--sideMenuMaxWidth: calc(99vw - var(--sideMenuTabWidth));
+	--sideMenuMinHeight: calc(var(--sideMenuTabHeight) * var(--sideMenu_OPVAR_TabCount));
+	--sideMenuPOSEdge: calc(var(--sideMenuWidth) * (-1));
+	--sideMenuPOSEdgeNoJS: calc((var(--sideMenuWidth) + var(--sideMenuTabWidth)) * (-1));
+	--sideMenuTabBorderWidthArray: 0 var(--sideMenuBorderWidth) var(--sideMenuBorderWidth) var(--sideMenuBorderWidth);
+	--sideMenuTabHeight: 2.5rem;
+	--sideMenuTabWidth: 1.25rem;
+	--sideMenuTabPOSEdge: calc(var(--sideMenuTabWidth) * (-1));
+	--sideMenuTab1POSTop: 0;
+	--sideMenuTab2POSTop: var(--sideMenuTabHeight);
+	--sideMenuTab3POSTop: calc(var(--sideMenuTab2POSTop) + var(--sideMenuTabHeight));
+	--sideMenuTab4POSTop: calc(var(--sideMenuTab3POSTop) + var(--sideMenuTabHeight));
+	--sideMenuTab5POSTop: calc(var(--sideMenuTab4POSTop) + var(--sideMenuTabHeight));
+	--sideMenuTransitionSpeed: 0.3s;
+	--sideMenuWidth: 40rem;
+	--sideMenuZIndex: 1000;
+	--sizeMenuZIndexActive: 1002;
+	--sideMenuZIndexInactive: 1001;
+	--fontSizeBase: 16px;
+	--fontSizeMod: 100;
+	--fontSizeModPreview: 100;
+	--fontSizeScale: calc(var(--fontSizeBase) * var(--fontSizeMod) * 0.01);
+	--fontSizeScalePreview: calc(var(--fontSizeBase) * var(--fontSizeModPreview) * 0.01);
+}
+
+/*
+--------------------------------------------------
+* Passive Menu Properties
+*/
+
+#sideMenuFrame,
+#sideMenuFrame * {
+	transition: background-color var(--sideMenuTransitionSpeed), filter var(--sideMenuTransitionSpeed), transform var(--sideMenuTransitionSpeed);
+}
+
+#sideMenuFrame,
+#sideMenuFrame .menuBox,
+#sideMenuFrame .menuContent {
+	max-width: var(--sideMenuMaxWidth);
+}
+
+#sideMenuFrame,
+#sideMenuFrame .menuTab {
+	border-color: var(--header-border);
+	border-style: var(--sideMenuBorderStyle);
+	position: absolute;
+}
+
+#sideMenuFrame .menuBox,
+#sideMenuFrame .menuContent {
+	max-height: var(--sideMenuMaxInnerHeight);
+	width: 100%;
+}
+
+#sideMenuFrame {
+	background-color: var(--code-background);
+	border-width: var(--sideMenuBorderWidthArray);
+	height: auto;
+	max-height: var(--sideMenuMaxHeight);
+	min-height: var(--sideMenuMinHeight);
+	transform: translate3d(var(--sideMenuPOSEdge), 0, 0);
+	width: var(--sideMenuWidth);
+	z-index: var(--sideMenuZIndex);
+}
+
+#sideMenuFrame::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+#sideMenuFrame .menuBox {
+	height: auto;
+	float: left;
+	margin-right: -100%;
+	pointer-events: none;
+}
+
+#sideMenuFrame .menuContent {
+	height: 0;
+	opacity: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: var(--sideMenuContentPadding);
+	pointer-events: none;
+	z-index: var(--sizeMenuZIndexInactive);
+}
+
+#sideMenuFrame .menuTab {
+	border-width: var(--sideMenuTabBorderWidthArray);
+	height: var(--sideMenuTabHeight);
+	pointer-events: auto;
+	right: var(--sideMenuTabPOSEdge);
+	transition: background-color var(--sideMenuTransitionSpeed), filter var(--sideMenuTransitionSpeed), transform 0s;
+	width: var(--sideMenuTabWidth);
+}
+
+#sideMenuFrame .menuTab:not(#colorMenuTab) {
+	background-color: var(--code-background);
+}
+
+#colorMenuTabBG {
+	background: red !important; /* For browsers that do not support gradients */
+	background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%) !important;
+	filter: brightness(50%);
+	height: 100%;
+	width: 100%;
+}
+
+#colorMenuTab {
+	/* top: var(--sideMenuTab1POSTop); */
+	transform: translate3d(0, var(--sideMenuTab1POSTop), 0);
+}
+
+#scaleMenuTab {
+	/* top: var(--sideMenuTab2POSTop); */
+	transform: translate3d(0, var(--sideMenuTab2POSTop), 0);
+}
+
+/* Prebuilt Tab Positions */
+#sideMenuTab3 {
+	/* top: var(--sideMenuTab3POSTop); */
+	transform: translate3d(0, var(--sideMenuTab3POSTop), 0);
+}
+
+#sideMenuTab4 {
+	/* top: var(--sideMenuTab4POSTop); */
+	transform: translate3d(0, var(--sideMenuTab4POSTop), 0);
+}
+
+#sideMenuTab5 {
+	/* top: var(--sideMenuTab5POSTop); */
+	transform: translate3d(0, var(--sideMenuTab5POSTop), 0);
+}
+
+/*
+--------------------------------------------------
+* Active Menu Properties
+*/
+
+.no-js #sideMenuFrame {
+	/* left: var(--sideMenuPOSEdgeNoJS); */
+	transform: translate3d(var(--sideMenuPOSEdgeNoJS), 0, 0);
+}
+
+#sideMenuFrame.active {
+	/* left: 0; */
+	transform: translate3d(0, 0, 0);
+}
+
+#sideMenuFrame .menuBox.active > .menuContent {
+	display: block;
+	height: auto;
+	opacity: 1;
+	pointer-events: auto;
+	z-index: var(--sizeMenuZIndexActive);
+}
+
+#sideMenuFrame .menuTab:not(#colorMenuTab):hover {
+	background-color: var(--body-background);
+}
+
+#sideMenuFrame .active > .menuTab:not(#colorMenuTab) {
+	background-color: var(--body-background);
+}
+
+#colorMenuTabBG:hover {
+	filter: brightness(75%);
+}
+
+.menuTab.active > #colorMenuTabBG {
+	filter: brightness(100%);
+}
+
+/*
+--------------------------------------------------
+* EXTRAS
+*/
+
+/* Replace the HTML declaration in the regular stylesheet with this */
+html {
+	font-size: var(--fontSizeScale) !important;
+}

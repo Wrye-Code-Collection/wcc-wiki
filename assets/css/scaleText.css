@@ -1,0 +1,4 @@
+#textScaleSlider::after {
+	counter-reset: textScaleValue var(--fontSizeModPreview);
+	content: counter(textScaleValue) "%";
+}
