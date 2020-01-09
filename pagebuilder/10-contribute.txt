@@ -139,7 +139,7 @@ Obviously some colors will not contrast that well against this dark background b
 
 You may be contributing a guide that has people download a mod and you wish to color code them to indicate a special purpose. Maybe the file needs to be converted from Skyrim to Skyrim SE or maybe the mod has special install procedures that make it complicated for new users. Whatever the case may be there is a tag that you may use to indicate the link color.
 
-<code>{% raw %}{{a.green}}{% endraw %}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.
+<code>{% raw %}{{a:green}}{% endraw %}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.
 
 <code>{% raw %}[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}] [[https://sharlikran.github.io/ | This Link Text is Orange{{a:orange}}]]{% endraw %}</code>
 
@@ -179,7 +179,7 @@ Blank lines can be used as spacers:
 == Python Installation ===============================================================
 ###  Where are the files I just downloaded?
 * The files usually end up in your windows Downloads folder as shown below.
-<img src="img/downloadedfiles.jpg" alt="downloadedfiles.jpg">
+<img class="thumbnail-large" src="img/downloadedfiles.jpg" alt="downloadedfiles.jpg">
 * Open your windows explorer and on the left navigate to your Downloads folder.
 * First you will install Python and then be shown where to put the Python scripts and example files.
 ###  Python Installation
@@ -206,13 +206,19 @@ Blank lines can be used as spacers:
 . Type <code>cmd</code> in the red box, and right click <code>cmd.exe</code> and choose "Run As Administrator" as shown in the green box.
 <img src="img/opencommand.jpg" alt="opencommand.jpg">
 . Which will look like this once it's open
-<img src="img/commandopen.jpg" alt="commandopen.jpg">
+<img class="thumbnail-large"  src="img/commandopen.jpg" alt="commandopen.jpg">
 . As mentioned we needed to put that folder somewhere so that there would be less typing.
 . As shown type <code>cd c:\pagebuilder</code> and press <code>[ENTER]</code>
-<img src="img/changedir.jpg" alt="changedir.jpg">
+<img class="thumbnail-large"  src="img/changedir.jpg" alt="changedir.jpg">
+. Now we will run the python script to to produce a sample HTML output so you can see a close version of what will be in the wiki.
+. Type: As shown type <code>c:\python27\python.exe wtxt-wiki-user.py genHtml "Wiki Page Template.txt"</code> and press <code>[ENTER]</code>
+<img class="thumbnail-large"  src="img/runpython.jpg" alt="runpython.jpg">
+. There were no errors and now <code>Wiki Page Template.html</code> now appears in the <code>pagebuilder</code> folder.
+<img class="thumbnail-large"  src="img/outputhtml.jpg" alt="outputhtml.jpg">
+. Double click <code>Wiki Page Template.html</code> and you will see more or less what the page would look like.
+<img class="thumbnail-large"  src="img/outputhtml.jpg" alt="outputhtml.jpg">
 
-c:\pagebuilder>c:\python27\python.exe wtxt-wiki-user.py genHtml "Wiki Page Templ
-ate.txt"
+Add the content you wish to add, regenerating the HTML as you go and you are on your way to producing content for the wiki.
 
 == Versions ===================================================================
 

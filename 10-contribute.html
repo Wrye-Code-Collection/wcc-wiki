@@ -184,7 +184,7 @@ Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with openi
 <p class=empty>&nbsp;</p>
 <p>You may be contributing a guide that has people download a mod and you wish to color code them to indicate a special purpose. Maybe the file needs to be converted from Skyrim to Skyrim SE or maybe the mod has special install procedures that make it complicated for new users. Whatever the case may be there is a tag that you may use to indicate the link color.</p>
 <p class=empty>&nbsp;</p>
-<code>{% raw %}{{a.green}}{% endraw %}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.
+<code>{% raw %}{{a:green}}{% endraw %}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.
 <p class=empty>&nbsp;</p>
 <code>{% raw %}[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}] <a class="orange" href="https://sharlikran.github.io/">This Link Text is Orange</a>{% endraw %}</code>
 <p class=empty>&nbsp;</p>
@@ -224,7 +224,7 @@ html.
 <h2 class="header2" id="PythonInstallation">Python Installation</h2>
 <h3 id="WherearethefilesIjustdownloaded">Where are the files I just downloaded?</h3>
 <p class="list-1">&bull;&nbsp; The files usually end up in your windows Downloads folder as shown below.</p>
-<img src="img/downloadedfiles.jpg" alt="downloadedfiles.jpg">
+<img class="thumbnail-large" src="img/downloadedfiles.jpg" alt="downloadedfiles.jpg">
 <p class="list-1">&bull;&nbsp; Open your windows explorer and on the left navigate to your Downloads folder.</p>
 <p class="list-1">&bull;&nbsp; First you will install Python and then be shown where to put the Python scripts and example files.</p>
 <h3 id="PythonInstallation5">Python Installation</h3>
@@ -251,10 +251,19 @@ html.
 <p class="list-1">&nbsp;&nbsp; Type <code>cmd</code> in the red box, and right click <code>cmd.exe</code> and choose "Run As Administrator" as shown in the green box.</p>
 <img src="img/opencommand.jpg" alt="opencommand.jpg">
 <p class="list-1">&nbsp;&nbsp; Which will look like this once it's open</p>
-<img src="img/commandopen.jpg" alt="commandopen.jpg">
+<img class="thumbnail-large"  src="img/commandopen.jpg" alt="commandopen.jpg">
 <p class="list-1">&nbsp;&nbsp; As mentioned we needed to put that folder somewhere so that there would be less typing.</p>
 <p class="list-1">&nbsp;&nbsp; As shown type <code>cd c:\pagebuilder</code> and press <code>[ENTER]</code></p>
-<img src="img/changedir.jpg" alt="changedir.jpg">
+<img class="thumbnail-large"  src="img/changedir.jpg" alt="changedir.jpg">
+<p class="list-1">&nbsp;&nbsp; Now we will run the python script to to produce a sample HTML output so you can see a close version of what will be in the wiki.</p>
+<p class="list-1">&nbsp;&nbsp; Type: As shown type <code>c:\python27\python.exe wtxt-wiki-user.py genHtml "Wiki Page Template.txt"</code> and press <code>[ENTER]</code></p>
+<img class="thumbnail-large"  src="img/runpython.jpg" alt="runpython.jpg">
+<p class="list-1">&nbsp;&nbsp; There were no errors and now <code>Wiki Page Template.html</code> now appears in the <code>pagebuilder</code> folder.</p>
+<img class="thumbnail-large"  src="img/outputhtml.jpg" alt="outputhtml.jpg">
+<p class="list-1">&nbsp;&nbsp; Double click <code>Wiki Page Template.html</code> and you will see more or less what the page would look like.</p>
+<img class="thumbnail-large"  src="img/outputhtml.jpg" alt="outputhtml.jpg">
+<p class=empty>&nbsp;</p>
+<p>Add the content you wish to add, regenerating the HTML as you go and you are on your way to producing content for the wiki.</p>
 <p class=empty>&nbsp;</p>
 <h2 class="header2" id="Versions">Versions</h2>
 <p class=empty>&nbsp;</p>
