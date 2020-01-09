@@ -548,13 +548,13 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         return temp
 
     def linkReplace(maObject):
-        fontClass = check_color(maObject.string)
         address = text = maObject.group(1).strip()
         if '|' in text:
             (address, text) = [chunk.strip() for chunk in text.split('|', 1)]
             if address == '#': address += reWd.sub('', text)
         if not reFullLink.search(address):
             address = address + '.html'
+        fontClass = check_color(text)
         text = strip_color(text)
         return '<a {} href="{}">{}</a>'.format(fontClass, address, text)
 
