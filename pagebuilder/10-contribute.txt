@@ -200,6 +200,14 @@ Blank lines can be used as spacers:
 <img class="thumbnail-large" src="img/gotocdrive.jpg" alt="gotocdrive.jpg">
 * Right click in an empty space and, choose Paste.
 <img class="thumbnail-large" src="img/choosepaste.jpg" alt="choosepaste.jpg">
+* Once copied to the C: drive double click the pagebuilder folder and you should see the example file and the Python script
+<img class="thumbnail-large" src="img/copiedforuse.jpg" alt="copiedforuse.jpg">
+* To run python and process the example file you need to open a command prompt since Python does not have it's own GUI interface.
+. Type <code>cmd</code> in the red box, and right click <code>cmd.exe</code> and choose "Run As Administrator" as shown in the green box.
+<img src="img/opencommand.jpg" alt="opencommand.jpg">
+. Which will look like this once it's open
+<img src="img/commandopen.jpg" alt="commandopen.jpg">
+
 == Versions ===================================================================
 
 === 1.00 Update [1/7/2020]
