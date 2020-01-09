@@ -207,6 +207,9 @@ Blank lines can be used as spacers:
 <img src="img/opencommand.jpg" alt="opencommand.jpg">
 . Which will look like this once it's open
 <img src="img/commandopen.jpg" alt="commandopen.jpg">
+. As mentioned we needed to put that folder somewhere so that there would be less typing.
+. As shown type <code>cd c:\pagebuilder</code> and press <code>[ENTER]</code>
+<img src="img/changedir.jpg" alt="changedir.jpg">
 
 == Versions ===================================================================
 
