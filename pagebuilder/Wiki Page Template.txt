@@ -36,7 +36,6 @@ To trigger Wrye Mash's autoconversion...
 Copy this template to <code>Morrowind\Data Files\Docs\My Readme Template.txt</code> and modify as desired. That will become your default template.
 
 === Css
-{{CSS:wtxt_teal.css}}
 The default styles can be replaced by specifying css file in a CSS tag. Note that:
 * Css file must be on a line by itself.
 * Css file is not linked to, but is instead included on compilation. 
