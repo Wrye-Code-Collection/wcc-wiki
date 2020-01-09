@@ -1,5 +1,4 @@
 {{PAGETITLE="Skyrim Special Edition Mod Tutorial Link Compendium"}}
-
 __A collection of Links sorted by subject to help the SSE modder, from beginner to advanced, in developing new skillsets.__
      * Discussion: TBD
 	 * I am adding something here to test if I am doing this right.
