@@ -318,7 +318,7 @@ font.yellow, a.yellow { color: var(--yellow-text); }
 
 # Conversion ------------------------------------------------------------------
 @mainFunction
-def wtxtToHtml(srcFile, outFile=None, cssDir=''):
+def wtxtToHtml(srcFile, outFile=None):
     """Generates an html file from a wtxt file. CssDir specifies a directory to search for css files."""
     if not outFile:
         import os
@@ -583,23 +583,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         outLines.append(line)
     ins.close()
     # --Get Css -----------------------------------------------------------
-    if not cssFile:
-        css = defaultCss
-    else:
-        cssBaseName = os.path.basename(cssFile)  # --Dir spec not allowed.
-        cssSrcFile = os.path.join(os.path.dirname(srcFile), cssBaseName)
-        cssDirFile = os.path.join(cssDir, cssBaseName)
-        if os.path.splitext(cssBaseName)[-1].lower() != '.css':
-            raise "Invalid Css file: " + cssFile
-        elif os.path.exists(cssSrcFile):
-            cssFile = cssSrcFile
-        elif os.path.exists(cssDirFile):
-            cssFile = cssDirFile
-        else:
-            raise 'Css file not found: ' + cssFile
-        css = ''.join(open(cssFile).readlines())
-        if '<' in css:
-            raise "Non css tag in css file: " + cssFile
+    css = defaultCss
     # --Write Output ------------------------------------------------------
     out = file(outFile, 'w')
     out.write(htmlHead % (pageTitle, css))
@@ -622,11 +606,11 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
 	
 
 @mainFunction
-def genHtml(fileName, outFile=None, cssDir=''):
+def genHtml(fileName, outFile=None):
     """Generate html from old style etxt file or from new style wtxt file."""
     ext = os.path.splitext(fileName)[1].lower()
     if ext == '.txt':
-        wtxtToHtml(fileName, outFile=None, cssDir='')
+        wtxtToHtml(fileName, outFile=None)
         # docsDir = r'c:\program files\bethesda softworks\morrowind\data files\docs'
         # wtxt.genHtml(fileName, cssDir=docsDir)
     else:
