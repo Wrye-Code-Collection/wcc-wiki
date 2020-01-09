@@ -211,6 +211,9 @@ Blank lines can be used as spacers:
 . As shown type <code>cd c:\pagebuilder</code> and press <code>[ENTER]</code>
 <img src="img/changedir.jpg" alt="changedir.jpg">
 
+c:\pagebuilder>c:\python27\python.exe wtxt-wiki-user.py genHtml "Wiki Page Templ
+ate.txt"
+
 == Versions ===================================================================
 
 === 1.00 Update [1/7/2020]
