@@ -38,7 +38,7 @@ title: Contributing
 <p class=empty>&nbsp;</p>
 <h2 class="header2" id="Contents">Contents</h2>
 <p class="list-1">&bull;&nbsp; <a href="#Requirement">Requirement:</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Downloadpagebuilder_v1zip">Download pagebuilder_v1.zip</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Downloadpagebuilder_v2zip">Download pagebuilder_v2.zip</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#ExampleTemplate">Example Template</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Syntax">Syntax</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#YourPagesTitle">Your Pages Title</a></p>
@@ -52,7 +52,7 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#TextColors">Text Colors</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#LinkColors">Link Colors</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Html">Html</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#ContinuedText">Continued Text</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#GeneralTextFormating">General Text Formating</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#OptionalRequirement">Optional Requirement:</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#PythonInstallation">Python Installation</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#WherearethefilesIjustdownloaded">Where are the files I just downloaded?</a></p>
@@ -68,7 +68,7 @@ title: Contributing
 <p class=empty>&nbsp;</p>
 <h2 class="header2" id="Requirement">Requirement:</h2>
 <p class="list-1">&bull;&nbsp; The <code>pagebuilder_v1.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.</p>
-<h3 id="Downloadpagebuilder_v1zip">Download pagebuilder_v1.zip</h3>
+<h3 id="Downloadpagebuilder_v2zip">Download pagebuilder_v2.zip</h3>
 <img src="img/pagebuilder.jpg" alt="pagebuilder.zip">
 <p class=empty>&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <a  href="pagebuilder_v2.zip">pagebuilder_v2 Download Link.zip</a></p>
@@ -120,9 +120,9 @@ Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with openi
 <hr>
 <h3 class="header3" id="Bullets">Bullets</h3>
 <p class="list-1">&bull;&nbsp; Bullets1 - an asterisk <code>*</code> and a space would precede the text</p>
-  <p class="list-2">&bull;&nbsp; Bullets 2 - an asterisk <code>*</code> and two spaces would precede the text</p>
-    <p class="list-3">&bull;&nbsp; Bullets 3 - an asterisk <code>*</code> and four spaces would precede the text</p>
-      <p class="list-4">&bull;&nbsp; Bullets 4 - an asterisk <code>*</code> and six spaces would precede the text</p>
+  <p class="list-2">&bull;&nbsp; Bullets 2 - two spaces and an asterisk <code>*</code> would precede the text</p>
+    <p class="list-3">&bull;&nbsp; Bullets 3 - four spaces and an asterisk <code>*</code> would precede the text</p>
+      <p class="list-4">&bull;&nbsp; Bullets 4 - six spaces and an asterisk <code>*</code> would precede the text</p>
 <p class="list-1">+&nbsp; Alternate bullet char - a plus and a space <code>+ </code> would precede the text</p>
 <p class="list-1">o&nbsp; Alternate bullet char</p>
 <p class="list-1">&nbsp;&nbsp; For an invisible bullet char you would use a period <code>.</code> at the beginning of the line.</p>
@@ -204,16 +204,9 @@ end
 <p>Refrain from using too many HTML tags if you know the language well. If special styling is needed I can look into a way to privide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.</p>
 <p class=empty>&nbsp;</p>
 <hr>
-<h3 class="header3" id="ContinuedText">Continued Text</h3>
-<p>These will form one</p>
-line in the compiled
-html.
-<p class=empty>&nbsp;</p>
-<p class="list-1">+&nbsp; This will form one continuous</p>
-  bullet item.
+<h3 class="header3" id="GeneralTextFormating">General Text Formating</h3>
 <p class=empty>&nbsp;</p>
 <p>Blank lines can be used as spacers:</p>
-<p class=empty>&nbsp;</p>
 <p class=empty>&nbsp;</p>
 <h2 class="header2" id="OptionalRequirement">Optional Requirement:</h2>
 <p class="list-1">&bull;&nbsp; To generate the HTML files you will need the latest python from Python.org. These files are written for 2.7.x and the current Python 2.7.17 will work just fine. The link is for the 32 bit version. Please download that because the setup will go smoother and add needed configurations to your computer to run the python scripts provided.</p>

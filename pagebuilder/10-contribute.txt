@@ -18,7 +18,7 @@
 
 == Requirement:
 * The <code>pagebuilder_v1.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.
-### Download pagebuilder_v1.zip
+### Download pagebuilder_v2.zip
 <img src="img/pagebuilder.jpg" alt="pagebuilder.zip">
 
 * [[pagebuilder_v2.zip | pagebuilder_v2 Download Link.zip]]
@@ -76,9 +76,9 @@ You can also disable using headers in the table of contents by using a value of 
 <hr>
 === Bullets
 * Bullets1 - an asterisk <code>*</code> and a space would precede the text
-  * Bullets 2 - an asterisk <code>*</code> and two spaces would precede the text
-    * Bullets 3 - an asterisk <code>*</code> and four spaces would precede the text
-      * Bullets 4 - an asterisk <code>*</code> and six spaces would precede the text
+  * Bullets 2 - two spaces and an asterisk <code>*</code> would precede the text
+    * Bullets 3 - four spaces and an asterisk <code>*</code> would precede the text
+      * Bullets 4 - six spaces and an asterisk <code>*</code> would precede the text
 + Alternate bullet char - a plus and a space <code>+ </code> would precede the text
 o Alternate bullet char
 . For an invisible bullet char you would use a period <code>.</code> at the beginning of the line.
@@ -98,7 +98,7 @@ The link syntax can not be shown very well because it will be translated into a 
 
 Below there is an example for an Internal link. An internal link is used to navagate to another section of the document. For example you might want to link to how to install python. [[#PythonInstallation | Python Installation]]
 
-<font class="yellow">NOTE:</font> Wrye Text now recognizes duplicate header names such as "Contents" and "Contents". If you must duplicate a header name for clarity then you will need to examine the HTML and look for the ID produced by the Python code for the HTML.
+<font class="yellow">NOTE:</font> Wrye Text recognizes duplicate header names such as "Contents" and "Contents". If you must duplicate a header name for clarity then you will need to examine the HTML and look for the ID produced by the Python code for the HTML.
 
 You need to seperate the link address and the link name with a pipe <code>|</code> symbol which you get by using <code>SHIFT + \</code>.
 
@@ -160,16 +160,9 @@ end
 Refrain from using too many HTML tags if you know the language well. If special styling is needed I can look into a way to privide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.
 
 <hr>
-=== Continued Text
-These will form one
-line in the compiled
-html.
-
-+ This will form one continuous
-  bullet item.
+=== General Text Formating
 
 Blank lines can be used as spacers:
-
 
 == Optional Requirement:
 * To generate the HTML files you will need the latest python from Python.org. These files are written for 2.7.x and the current Python 2.7.17 will work just fine. The link is for the 32 bit version. Please download that because the setup will go smoother and add needed configurations to your computer to run the python scripts provided.
