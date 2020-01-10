@@ -16,6 +16,8 @@ const
 	colorInputs = [].slice.call(colorMenuContent.querySelectorAll("input")),
 	scaleButton = [].slice.call(scaleMenuContent.querySelectorAll("button")),
 	scaleInput = [].slice.call(scaleMenuContent.querySelectorAll("input")),
+	
+	tocButton = document.getElementById("close_tab"),
 
 	transitionSpeed = 300
 	;
@@ -54,6 +56,15 @@ function sideMenuActiveTabSwap() {
 	Array.from(sideMenuTabs).forEach(function(el) {
 		el.classList.remove("active");
 	});
+}
+
+/*
+--------------------------------------------------
+* Close menu after clicking navagation link
+*/
+function tocButtonClose() {
+    sideMenuToggle();
+    setTimeout(sideMenuActiveBoxSwap, transitionSpeed);
 }
 
 /*
@@ -97,6 +108,7 @@ function sideMenuEnable() {
 	scaleButton.forEach(input => input.addEventListener("click", scaleHandleApply));
 	scaleInput.forEach(input => input.addEventListener("change", scaleHandleUpdate));
 	scaleInput.forEach(input => input.addEventListener("mousemove", scaleHandleUpdate));
+    tocButton.addEventListener("click", tocButtonClose);
 }
 
 sideMenuEnable();

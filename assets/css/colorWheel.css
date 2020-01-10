@@ -22,7 +22,7 @@ The challenge:
 	--border-threshold: 0.8;
 }
 
-.btn {
+.pickerbtn {
 	/* sets the background for the base class */
 	background: rgb(var(--red), var(--green), var(--blue));
 
@@ -87,7 +87,7 @@ The challenge:
 	margin-bottom: 0;
 }
 
-.btn {
+.pickerbtn {
 	padding: 1em;
 	font-size: 1.5rem;
 	border-radius: 0.2em;
