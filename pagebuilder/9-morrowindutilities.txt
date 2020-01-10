@@ -1,0 +1,31 @@
+{{PAGETITLE="Morrowind utilities"}}
+== Contents
+{{CONTENTS=2}}
+== Utilities by various authors:
+* [[http://mw.modhistory.com/download-95-5496 | BSA Browser]] It's a tool similar to the BSA Commander for Oblivion, but it has a lot of other features listed below.
+* [[http://mw.modhistory.com/download-95-5215 | bsapack]] It is what it is to pack mod files into a BSA.
+* [[http://mw.modhistory.com/download-95-5212 | BSAReg]] Register any BSA file that exist in the Data Files folder into GetMWRoot - Search in Windows register after the path for the latest installation of Morrowind.
+* [[http://code.google.com/p/mlox/wiki/Mlox | mlox]] Is similar to what BOSS is for Oblivion to sort your loadorder.
+* [[http://mw.yacoby.net/Mods/escog.htm | escog]] This tool is used when you want to get rid of both evil GMST's or harmless GMST's and it's recommended to remove GMST's, but always check the readme first because some mods is cleaned even with GMST's.
+* [[http://mw.modhistory.com/download-95-1662 | Enchanted Editor]] Is an advanced editor and has a lot of features that other tools doesn't have, but it's old and hard to understand how it works.
+* [[http://mw.modhistory.com/download--2316 | TESFaith]] It's a tool that you use for moving exterior cells from one cell to another cell.
+* [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/ | TESTool]] Is most basic tool there is and you must use TESTool to clean mods with merged objects, but remember sometimes TESTool can create more problems than fixing them so always backup your files.
+* [[http://mw.modhistory.com/download-95-5289 | The Elder Scrolls Advanced Mod Editor]] Is a powerful cleaning tool for modders similar to TES4Edit as a cleaning tool, who use TES Advanced Mod Editor before they release a mod or a patch.
+* [[http://www.elricm.com/nuke/html/modules.php?op=modload&name=Downloads&file=index&req=getit&lid=755 | TES Mod Utility]] is another tool similar to TESAME, but I don't know if anyone are actually using it.
+* [[http://morrowind.nexusmods.com/mods/3874 | TES Plugin Conflict Detector]] IIRC you can use TESPCD to clean mods, but it's an excellent tool for troubleshooting similar to what TES4Edit is for Oblivion.
+* [[http://mw.modhistory.com/download--5258 | TES Dependency Tool Kit]] You can use it if you need to either add or remove a dependency for a mod for example an [[http://forums.bethsoft.com/topic/1376740-relz-morrowind-comes-alive-70/ | updated patch]] between two [[http://forums.bethsoft.com/topic/1380688-relz-tamriel-rebuilt-sacred-east-10-2/ | mods]]
+* [[http://mw.modhistory.com/download-95-5265 | Morrowind Plugin Manager]] Is very easy to use for both installation/uninstallation of mods and it also support mp3 files, but it doesn't support .7z archives and Wrye Nash have support for both 7z, MP3-files (only the) [[http://forums.bethsoft.com/topic/1331996-yacobys-wrye-mash-fork/ | latest]]
+* [[http://mw.modhistory.com/download-95-5568 | Wrye Mash 84]] It's the last development of [[http://mw.modhistory.com/download-95-5565 | Wrye]] him self, but now has both [[http://mw.modhistory.com/download-95-5624 | Wrye Mash Stand Alone]], by [[http://forums.bethsoft.com/index.php?/topic/1106095-wrye-mash-stand-alone/ | Melchor]] and [[http://forums.bethsoft.com/topic/1331996-yacobys-wrye-mash-fork/ | Wrye Mash Stand Alone]], by [[http://mw.yacoby.net/ | Yacoby]] been released. Everything is now on [[http://mw.modhistory.com/search-p1-i25-srid2765 | MMH]] except for Yacoby's WMSA
+* [[http://forums.bethsoft.com/topic/1366245-relz-bsa-registration-utility/ | BSA Registration Utility]] It does the same thing like the old BSAReg, but KINGPIX has released the BSA Registration Utility with some interesting features. Please note that downloading requires registration (not on) [[http://download.fliggerty.com/download-58-633 | GHF]]. A couple of other tools can be found with the [[http://wayback.archive.org/web/ | Wayback Machine]] so please be patient. Here is a [[http://forums.bethsoft.com/topic/24-comprehensive-tutorial-and-useful-link-list/ | list]] of other useful tools.* [[http://abot-morrowind.tk/index.php?option=weblinks&catid=53&Itemid=2&-Morrowind-modding-tools | abot's list of tools]]
+* [[http://www.nexusmods.com/morrowind/mods/43907/? | Groundcover Generation Package]] by Noteless
+
+== Ghostwheel's Morrowind utilities and documents:
+* [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/TES3_BSA_File_Format.htm | TES3 BSA File Format Description]]
+* [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/bsapack.zip | BSAPACK Utility (with source code)]] – command line BSA archive packer/unpacker
+* [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/bsareg.zip | BSA Registration Utility]] provides automatic registration of the BSA archives (if you're too lazy to edit morrowind.ini)
+* [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/TESRename.zip | TES Rename 1.05]] powerful model/icon/texture file rename utility and more :)
+* [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/NIFDuplicator.zip | NIF Duplicator 1.0]] small helper utility for modders – can automatically duplicate given NIF for several texture files – just read documentation
+* [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/NIFColor.zip | NIF Color 1.0]] small helper utility that can quickly update ambient/diffuse/specular color light values for all materials in multiple NIF files
+* [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/TESTool.zip | TES Plugin Tool 1.3]] – ESM/ESP cleaning tool, leveled list merger, **object and dialog entry merger** and more. Documentation can be found [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/TESTool.htm | HERE]].
+
+All programs are ZIP archives with text/html file documentation included in the archive. **READ IT!**

@@ -1,0 +1,8 @@
+{{PAGETITLE="Tome of Alt3rn1ty"}}
+== Contents
+{{CONTENTS=2}}
+== Credits
+Taken from the [[https://www.nexusmods.com/oblivion/mods/35230 | Wrye Bash Pictorial Guide]]
+Permission from Alt3rn1ty to continue his work.
+
+<img src="img/alt3rn1ty_permisions.jpg">

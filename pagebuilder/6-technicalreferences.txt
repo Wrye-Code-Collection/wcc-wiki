@@ -1,0 +1,6 @@
+{{PAGETITLE="Technical Usage"}}
+== Contents
+{{CONTENTS=2}}
+== Official Technical Readme
+[[https://wrye-bash.github.io/docs/Wrye%20Bash%20Technical%20Readme.html | Technical Readme]]
+

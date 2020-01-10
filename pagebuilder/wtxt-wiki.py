@@ -379,26 +379,24 @@ htmlHead = """
 ---
 <h1 class="header1">{{ page.title }}</h1>
 <hr>
-<div>
-    <div>
-        <h2>Main Table of Contents</h2>
-        <ul>
-            <li><a href="index.html">1. Welcome</a></li>
-            <li><a href="2-wryebashfeatures.html">2. Wrye Bash Features</a></li>
-            <li><a href="3-wryemashusage.html">3. Wrye Mash Usage</a></li>
-            <li><a href="4-generalusage.html">4. General Usage</a></li>
-            <li><a href="5-advancedusage.html">5. Advanced Usage</a></li>
-            <li><a href="6-technicalreferences.html">6. Technical References</a></li>
-            <li><a href="7-tomeofpsymon.html">7. Tome of Psymon - BAIN Mod Installation Projects</a></li>
-            <li><a href="8-tomeofalt3rn1ty.html">8. Tome of Alt3rn1ty</a></li>
-            <li><a href="9-morrowindutilities.html">9. Morrowind Utilities</a></li>
-            <li><a href="10-contribute.html">10. Generating Wiki pages from Text Files</a></li>
-            <li><a href="11-tutorial_Links.html">11. Tutorial Links</a></li>
-            <li><a href="12-other_tools_and_extras.html">12. Other Tools And Extras</a></li>
-        </ul>
-    </div>
+<div id="tableOfContents">
+    <h2>Main Table of Contents</h2>
+    <ul>
+        <li><a href="index.html">1. Welcome</a></li>
+        <li><a href="2-wryebashfeatures.html">2. Wrye Bash Features</a></li>
+        <li><a href="3-wryemashusage.html">3. Wrye Mash Usage</a></li>
+        <li><a href="4-generalusage.html">4. General Usage</a></li>
+        <li><a href="5-advancedusage.html">5. Advanced Usage</a></li>
+        <li><a href="6-technicalreferences.html">6. Technical References</a></li>
+        <li><a href="7-tomeofpsymon.html">7. Tome of Psymon - BAIN Mod Installation Projects</a></li>
+        <li><a href="8-tomeofalt3rn1ty.html">8. Tome of Alt3rn1ty</a></li>
+        <li><a href="9-morrowindutilities.html">9. Morrowind Utilities</a></li>
+        <li><a href="10-contribute.html">10. Generating Wiki pages from Text Files</a></li>
+        <li><a href="11-tutorial_Links.html">11. Tutorial Links</a></li>
+        <li><a href="12-other_tools_and_extras.html">12. Other Tools And Extras</a></li>
+    </ul>
 </div>
-<div>
+<div> <!-- Needed, sets the top of the page just before the H1 Title -->
 """
 defaultCss = """
 H1 { margin-top: 0in; margin-bottom: 0in; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in; background: #c6c63c; font-family: "Arial", serif; font-size: 12pt; page-break-before: auto; page-break-after: auto }
