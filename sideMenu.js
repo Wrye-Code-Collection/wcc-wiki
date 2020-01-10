@@ -17,7 +17,8 @@ const
 	scaleButton = [].slice.call(scaleMenuContent.querySelectorAll("button")),
 	scaleInput = [].slice.call(scaleMenuContent.querySelectorAll("input")),
 	
-	tocButton = document.getElementById("close_tab"),
+    tocButton = document.getElementById("close_tab"),
+    fontSizeMod = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeMod'),
 
 	transitionSpeed = 300
 	;
@@ -84,7 +85,10 @@ function colorHandleUpdate(e) {
 */
 
 function scaleHandleApply(e) {
+    // existing code
     root.style.setProperty("--fontSizeMod", scaleInput[0].value);
+    // added code
+    SetCookie("fontSizeVar=", scaleInput[0].value, 30);
 }
 
 function scaleHandleUpdate(e) {
@@ -111,4 +115,29 @@ function sideMenuEnable() {
     tocButton.addEventListener("click", tocButtonClose);
 }
 
+function SetCookie(name,value,days) {
+    var now= new Date();
+    var expDate = new Date();
+    if (days==null || days==0) days=1;
+    //create date after no of "days" from now
+    expDate.setTime(now.getTime() + 3600000*24*days);
+ 
+    //create cookie with name, value and expire date
+    document.cookie = name + escape(value)+";expires="+expDate.toUTCString();
+}
+
+function ReadCookie(name) {
+    if (name == "") return "";
+    var strCookie =" " + document.cookie;
+    var idx = strCookie.indexOf(" " + name + "=");
+    if (idx == -1) idx = strCookie.indexOf(";" + name + "=");
+    if (idx == -1) return "";
+
+    var idx1 = strCookie.indexOf(";", idx+1);
+    if (idx1 == -1) idx1 = strCookie.length; 
+    return unescape(strCookie.substring(idx + name.length+2, idx1));
+}
+
 sideMenuEnable();
+
+window.addEventListener('load', () => document.documentElement.style.setProperty('--fontSizeMod', ReadCookie('fontSizeVar')));
