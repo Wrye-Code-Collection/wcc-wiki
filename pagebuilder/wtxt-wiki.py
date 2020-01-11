@@ -556,18 +556,24 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
 
     def linkReplace(maObject):
         address = text = maObject.group(1).strip()
+        skipStrip = False
         if '|' in text:
             (address, text) = [chunk.strip() for chunk in text.split('|', 1)]
-            if address == '#': address += reWd.sub('', text)
+            if address == '#':
+                fontClass = check_color(text)
+                text = strip_color(text)
+                address += reWd.sub('', text)
+                skipStrip = True
         if not reFullLink.search(address):
             address = address + '.html'
-        fontClass = check_color(text)
-        text = strip_color(text)
+        if not skipStrip:
+            fontClass = check_color(text)
+            text = strip_color(text)
         return '<a {} href="{}">{}</a>'.format(fontClass, address, text)
 
     # --Tags
     pageTitle = 'title: Your Content'
-    reAnchorTag = re.compile('{{A:(.+?)}}')
+    # reAnchorTag = re.compile('{{A:(.+?)}}')
     reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
     reCssTag = re.compile('\s*{{CSS:(.+?)}}\s*$')
     reTitleTag = re.compile(r'({{PAGETITLE=")(.*)("}})$')
@@ -710,7 +716,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         line = reItalic.sub(italicReplace, line)
         line = reBoldItalic.sub(boldItalicReplace, line)
         # --Wtxt Tags
-        line = reAnchorTag.sub(anchorReplace, line)
+        # line = reAnchorTag.sub(anchorReplace, line)
         # --Hyperlinks
         line = reLink.sub(linkReplace, line)
         line = reHttp.sub(r' <a href="\1">\1</a>', line)
