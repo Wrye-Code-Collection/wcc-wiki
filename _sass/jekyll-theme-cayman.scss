@@ -63,7 +63,6 @@ body {
   background: var(--body-background);
 }
 
-// Unused Currently
 #skip-to-content {
   height: 1px;
   width: 1px;
@@ -281,7 +280,7 @@ body {
 
 .main-content {
   word-wrap: break-word;
-   :first-child {
+  :first-child {
     margin-top: 0;
   }
   @include full {
@@ -306,6 +305,19 @@ body {
   @include small {
     padding: 2em;
     font-size: 0.85rem;
+  }
+  kbd {
+    background-color: #fafbfc;
+    border: 1px solid #c6cbd1;
+    border-bottom-color: #959da5;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #959da5;
+    color: #444d56;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 10px;
+    padding: 3px 5px;
+    vertical-align: middle;
   }
   img {
     @include full {
@@ -345,7 +357,7 @@ body {
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 0.9rem;
     color: var(--purple-text);
-    background: var( --code-background);
+    background-color: var( --code-background);
     border-radius: 0.3rem;
   }
   pre {
@@ -354,8 +366,8 @@ body {
     margin-bottom: 1rem;
     font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
     color: var(--purple-text);
-    background: var( --code-background);
     word-wrap: normal;
+    background-color: var( --code-background);
     border: solid 1px var(--cayman-border);
     border-radius: 0.3rem;
     >code {
@@ -409,7 +421,7 @@ body {
     padding: 0 1rem;
     margin-left: 0;
     color: var(--purple-text);
-    background: var( --code-background);
+    background-color: var( --code-background);
     border-left: 0.3rem solid var(--cayman-border);
     > :first-child {
       margin-top: 0;
@@ -457,10 +469,11 @@ body {
   }
 }
 
-input[id^="spoiler"]{
- display: none;
+input[id^="spoiler"] {
+  display: none;
 }
-input[id^="spoiler"] + label {
+
+input[id^="spoiler"]+label {
   display: block;
   width: 200px;
   margin: 0 auto;
@@ -473,23 +486,26 @@ input[id^="spoiler"] + label {
   cursor: pointer;
   transition: all .6s;
 }
-input[id^="spoiler"]:checked + label {
+
+input[id^="spoiler"]:checked+label {
   color: #333;
   background: #ccc;
 }
-input[id^="spoiler"] ~ .spoiler {
+
+input[id^="spoiler"]~.spoiler {
   width: 90%;
   height: 0;
   overflow: hidden;
   opacity: 0;
-  margin: 10px auto 0; 
-  padding: 10px; 
+  margin: 10px auto 0;
+  padding: 10px;
   background: #eee;
   border: 1px solid #ccc;
   border-radius: 8px;
   transition: all .6s;
 }
-input[id^="spoiler"]:checked + label + .spoiler{
+
+input[id^="spoiler"]:checked+label+.spoiler {
   height: auto;
   opacity: 1;
   padding: 10px;
@@ -558,66 +574,82 @@ font.black,
 a.black {
   color: var(--black-text);
 }
+
 font.blue,
 a.blue {
   color: var(--blue-text);
 }
+
 font.brown,
 a.brown {
   color: var(--brown-text);
 }
+
 font.cyan,
 a.cyan {
   color: var(--cyan-text);
 }
+
 font.dkgray,
 a.dkgray {
   color: var(--dkgray-text);
 }
+
 font.gray,
 a.gray {
   color: var(--gray-text);
 }
+
 font.green,
 a.green {
   color: var(--green-text);
 }
+
 font.ltblue,
 a.ltblue {
   color: var(--ltblue-text);
 }
+
 font.ltgray,
 a.ltgray {
   color: var(--ltgray-text);
 }
+
 font.ltgreen,
 a.ltgreen {
   color: var(--ltgreen-text);
 }
+
 font.orange,
 a.orange {
   color: var(--orange-text);
 }
+
 font.pink,
 a.pink {
   color: var(--pink-text);
 }
+
 font.purple,
 a.purple {
   color: var(--purple-text);
 }
+
 font.red,
 a.red {
   color: var(--red-text);
 }
+
 font.tan,
 a.tan {
   color: var(--tan-text);
 }
+
 font.white,
 a.white {
   color: var(--white-text);
 }
+
 font.yellow,
 a.yellow {
   color: var(--yellow-text);
@@ -627,27 +659,27 @@ a.yellow {
   img.thumbnail-large {
     @include full {
       max-width: 35%;
-	  padding: 10px;
+      padding: 10px;
     }
     @include huge {
       max-width: 40%;
-	  padding: 10px;
+      padding: 10px;
     }
     @include large {
       max-width: 45%;
-	  padding: 10px;
+      padding: 10px;
     }
     @include medium {
       max-width: 55%;
-	  padding: 10px;
+      padding: 10px;
     }
     @include small {
       max-width: 65%;
-	  padding: 10px;
+      padding: 10px;
     }
   }
 }
-			
+
 // Main content for Wrte Text Paragraphs
 .main-content {
   p.empty {
