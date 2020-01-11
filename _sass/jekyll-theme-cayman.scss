@@ -280,7 +280,7 @@ body {
 
 .main-content {
   word-wrap: break-word;
-  :first-child {
+   :first-child {
     margin-top: 0;
   }
   @include full {
@@ -469,17 +469,20 @@ body {
   }
 }
 
+// adding none to this hides the checkbox
 input[id^="spoiler"] {
   display: none;
 }
 
+// closed button
 input[id^="spoiler"]+label {
   display: block;
   width: 200px;
-  margin: 0 auto;
+  margin: 0;
   padding: 5px 20px;
-  background: #e1a;
-  color: #fff;
+  color: rgba(255, 255, 255, 1.0);
+  background-color: rgba(23, 130, 130, 0.9);
+  border-color: rgba(23, 130, 130, 0.2);
   text-align: center;
   font-size: 24px;
   border-radius: 8px;
@@ -487,24 +490,32 @@ input[id^="spoiler"]+label {
   transition: all .6s;
 }
 
+// button after opened
 input[id^="spoiler"]:checked+label {
-  color: #333;
-  background: #ccc;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
+// the spoiler tag text box
 input[id^="spoiler"]~.spoiler {
-  width: 90%;
+  width: auto;
   height: 0;
   overflow: hidden;
   opacity: 0;
-  margin: 10px auto 0;
+  margin: 0;
   padding: 10px;
-  background: #eee;
-  border: 1px solid #ccc;
+  color: var(--purple-text);
+  background-color: var( --code-background);
+  border: 1px solid white;
   border-radius: 8px;
   transition: all .6s;
+  p {
+    color: inherit;
+  }
 }
 
+//formatting for the text in the box such as padding
 input[id^="spoiler"]:checked+label+.spoiler {
   height: auto;
   opacity: 1;

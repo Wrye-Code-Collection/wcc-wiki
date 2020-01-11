@@ -17,11 +17,11 @@
 {{CONTENTS=3}}
 
 == Requirement:
-* The <code>pagebuilder_v1.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.
-### Download pagebuilder_v3.zip
+* The <code>pagebuilder_v4.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.
+### Download pagebuilder_v4.zip
 <img src="img/pagebuilder.jpg" alt="pagebuilder.zip">
 
-* [[pagebuilder_v3.zip | pagebuilder_v3 Download Link.zip]]
+* [[pagebuilder_v4.zip | pagebuilder_v4 Download Link.zip]]
 
 ## Example Template
 As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.
@@ -160,6 +160,20 @@ end
 Refrain from using too many HTML tags if you know the language well. If special styling is needed I can look into a way to privide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.
 
 <hr>
+=== Spoiler Tags
+
+To add a spoiler tag you will need to specify both an ID for the spoiler and the spoiler name separated with a pipe <code>|</code> symbol. This will connect the spoiler contents, name, and the button.
+
+{% raw %}<pre>
+[[sb:Spoiler1 | Spoiler Name]]
+Example of text in the spoiler tag
+[[se:]]
+</pre>{% endraw %}
+
+[[sb:spoiLer1 | Spoiler Name]]
+Example of text in the spoiler tag
+[[se:]]
+
 === Other Formating
 
 Blank lines can be used as spacers
@@ -180,7 +194,7 @@ OR
 {% raw %}<pre>
 /*
  comment goes here
- */
+*/
 </pre>{% endraw %}
 
 . <font class="yellow">NOTE:</font> Comments inside of <code>pre</code> or preformatted text elements will not be treated as a comment.
@@ -201,12 +215,16 @@ OR
 
 == Versions ===================================================================
 
+=== 4.00 Update [1/10/2020]
+* released pagebuilder_v4.zip version 4
+  * Added Spoiler Tags see [[#| SpoilerTags]]
+
 === 3.00 Update [1/10/2020]
-* released pagebuilder_v1.zip version 3
+* released pagebuilder_v3.zip version 3
   * Added C Language type comments see [[#| Comments]]
 
 === 2.00 Update [1/8/2020]
-* released pagebuilder_v1.zip version 2
+* released pagebuilder_v2.zip version 2
   * Only the site CSS will be used to illustrate what the finished HTML should look like. Removed the ability to use alternate CSS for end user.
 
 === 1.00 Update [1/7/2020]

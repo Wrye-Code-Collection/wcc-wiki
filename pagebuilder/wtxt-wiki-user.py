@@ -445,6 +445,15 @@ def wtxtToHtml(srcFile, outFile=None):
             temp = re.sub('{{a:yellow}}', '', text)
         return temp
 
+    def spoilerTag(line):
+        spoilerID = ''
+        spoilerText = ''
+        if '|' in line:
+            (spoilerID, spoilerText) = [chunk.strip() for chunk in line.split('|', 1)]
+        spoilerID = re.sub('\[\[', '', spoilerID)
+        spoilerText = re.sub('\]\]', '', spoilerText)
+        return (spoilerID, spoilerText)
+
     def linkReplace(maObject):
         address = text = maObject.group(1).strip()
         if '|' in text:
@@ -465,6 +474,8 @@ def wtxtToHtml(srcFile, outFile=None):
     reComment = re.compile(r'^\/\*.+\*\/')
     reCTypeBegin = re.compile(r'^\/\*')
     reCTypeEnd = re.compile('\*\/$')
+    reSpoilerBegin = re.compile(r'\[\[sb:(.*?)\]\]')
+    reSpoilerEnd = re.compile(r'\[\[se:\]\]')
     # --Defaults ----------------------------------------------------------
     level = 1
     spaces = ''
@@ -492,7 +503,7 @@ def wtxtToHtml(srcFile, outFile=None):
             outLines.append(line)
             continue
         maTitleTag = reTitleTag.match(line)
-        maCTypeBegin = reCTypeBegin.search(line)
+        maCTypeBegin = reCTypeBegin.match(line)
         maCTypeEnd = reCTypeEnd.search(line)
         maComment = reComment.match(line)
         if maComment:
@@ -512,6 +523,8 @@ def wtxtToHtml(srcFile, outFile=None):
         maPar = rePar.match(line)
         maHRule = reHRule.match(line)
         maEmpty = reEmpty.match(line)
+        maSpoilerBegin = reSpoilerBegin.match(line)
+        maSpoilerEnd = reSpoilerEnd.match(line)
         # --Contents ----------------------------------
         if maContents:
             if maContents.group(1):
@@ -577,6 +590,19 @@ def wtxtToHtml(srcFile, outFile=None):
         # --Empty line
         elif maEmpty:
             line = spaces + '<p class="empty">&nbsp;</p>\n'
+        elif maSpoilerBegin:
+            line = re.sub('sb:', '', line)
+            spoilerID, spoilerName = spoilerTag(line)
+            spoilerID = spoilerID.lower()
+            firstLine = '<input type="checkbox" id="{}" />\n'.format(spoilerID)
+            outLines.append(firstLine)
+            secondLine = '<label for="{}">{}</label>\n'.format(spoilerID, spoilerName)
+            outLines.append(secondLine)
+            thirdLine = '<div class="spoiler">\n'
+            outLines.append(thirdLine)
+            continue
+        elif maSpoilerEnd:
+            line = '</div>\n'
         # --Misc. Text changes --------------------
         line = reMDash.sub('&#150', line)
         line = reMDash.sub('&#150', line)

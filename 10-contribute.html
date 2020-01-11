@@ -38,7 +38,7 @@ title: Contributing
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Contents">Contents</h2>
 <p class="list-1">&bull;&nbsp; <a href="#Requirement">Requirement:</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Downloadpagebuilder_v3zip">Download pagebuilder_v3.zip</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Downloadpagebuilder_v4zip">Download pagebuilder_v4.zip</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#ExampleTemplate">Example Template</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Syntax">Syntax</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#YourPagesTitle">Your Pages Title</a></p>
@@ -52,11 +52,13 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#TextColors">Text Colors</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#LinkColors">Link Colors</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Html">Html</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#SpoilerTags">Spoiler Tags</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#OtherFormating">Other Formating</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Comments">Comments</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#AllowedSyntax">Allowed Syntax</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#InvalidSyntax">Invalid Syntax</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Versions">Versions</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#400Update1102020">4.00 Update [1/10/2020]</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#300Update1102020">3.00 Update [1/10/2020]</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#200Update182020">2.00 Update [1/8/2020]</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#100Update172020">1.00 Update [1/7/2020]</a></p>
@@ -71,11 +73,11 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#Credits">Credits</a></p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Requirement">Requirement:</h2>
-<p class="list-1">&bull;&nbsp; The <code>pagebuilder_v1.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.</p>
-<h3 id="Downloadpagebuilder_v3zip">Download pagebuilder_v3.zip</h3>
+<p class="list-1">&bull;&nbsp; The <code>pagebuilder_v4.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.</p>
+<h3 id="Downloadpagebuilder_v4zip">Download pagebuilder_v4.zip</h3>
 <img src="img/pagebuilder.jpg" alt="pagebuilder.zip">
 <p class="empty">&nbsp;</p>
-<p class="list-1">&bull;&nbsp; <a  href="pagebuilder_v3.zip">pagebuilder_v3 Download Link.zip</a></p>
+<p class="list-1">&bull;&nbsp; <a  href="pagebuilder_v4.zip">pagebuilder_v4 Download Link.zip</a></p>
 <p class="empty">&nbsp;</p>
 <h2 id="ExampleTemplate">Example Template</h2>
 <p>As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.</p>
@@ -208,6 +210,22 @@ end
 <p>Refrain from using too many HTML tags if you know the language well. If special styling is needed I can look into a way to privide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.</p>
 <p class="empty">&nbsp;</p>
 <hr>
+<h3 class="header3" id="SpoilerTags">Spoiler Tags</h3>
+<p class="empty">&nbsp;</p>
+<p>To add a spoiler tag you will need to specify both an ID for the spoiler and the spoiler name separated with a pipe <code>|</code> symbol. This will connect the spoiler contents, name, and the button.</p>
+<p class="empty">&nbsp;</p>
+{% raw %}<pre>
+[[sb:Spoiler1 | Spoiler Name]]
+Example of text in the spoiler tag
+[[se:]]
+</pre>{% endraw %}
+<p class="empty">&nbsp;</p>
+<input type="checkbox" id="spoiler1" />
+<label for="spoiler1">Spoiler Name</label>
+<div class="spoiler">
+<p>Example of text in the spoiler tag</p>
+</div>
+<p class="empty">&nbsp;</p>
 <h3 class="header3" id="OtherFormating">Other Formating</h3>
 <p class="empty">&nbsp;</p>
 <p>Blank lines can be used as spacers</p>
@@ -228,7 +246,7 @@ end
 {% raw %}<pre>
 /*
  comment goes here
- */
+*/
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
 <p class="list-1">&nbsp;&nbsp; <font class="yellow">NOTE:</font> Comments inside of <code>pre</code> or preformatted text elements will not be treated as a comment.</p>
@@ -249,12 +267,16 @@ end
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Versions">Versions</h2>
 <p class="empty">&nbsp;</p>
+<h3 class="header3" id="400Update1102020">4.00 Update [1/10/2020]</h3>
+<p class="list-1">&bull;&nbsp; released pagebuilder_v4.zip version 4</p>
+  <p class="list-2">&bull;&nbsp; Added Spoiler Tags see <a  href="#SpoilerTags">SpoilerTags</a></p>
+  <p class="empty">&nbsp;</p>
 <h3 class="header3" id="300Update1102020">3.00 Update [1/10/2020]</h3>
-<p class="list-1">&bull;&nbsp; released pagebuilder_v1.zip version 3</p>
+<p class="list-1">&bull;&nbsp; released pagebuilder_v3.zip version 3</p>
   <p class="list-2">&bull;&nbsp; Added C Language type comments see <a  href="#Comments">Comments</a></p>
   <p class="empty">&nbsp;</p>
 <h3 class="header3" id="200Update182020">2.00 Update [1/8/2020]</h3>
-<p class="list-1">&bull;&nbsp; released pagebuilder_v1.zip version 2</p>
+<p class="list-1">&bull;&nbsp; released pagebuilder_v2.zip version 2</p>
   <p class="list-2">&bull;&nbsp; Only the site CSS will be used to illustrate what the finished HTML should look like. Removed the ability to use alternate CSS for end user.</p>
   <p class="empty">&nbsp;</p>
 <h3 class="header3" id="100Update172020">1.00 Update [1/7/2020]</h3>
