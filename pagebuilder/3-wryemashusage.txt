@@ -9,6 +9,9 @@
 == Quick Start ================================================================
 **Do you find long docs scary?** Here's a quick guide to Mash's most popular features.
 
+== Alternate Icons for the Color Blind ========================================
+[[http://mw.modhistory.com/download-55-15458 | Wrye Mash Icons by Bruno13069]]
+
 === Maintain Your Load Order
 * You only have to do this once...
 * Go to Mods tab, right click on "File" column header and make sure that "Lock Times" is checked.
