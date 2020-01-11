@@ -54,6 +54,8 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#Html">Html</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#OtherFormating">Other Formating</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Comments">Comments</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#AllowedSyntax">Allowed Syntax</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#InvalidSyntax">Invalid Syntax</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Versions">Versions</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#300Update1102020">3.00 Update [1/10/2020]</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#200Update182020">2.00 Update [1/8/2020]</a></p>
@@ -213,21 +215,37 @@ end
 <hr>
 <h3 class="header3" id="Comments">Comments</h3>
 <p class="empty">&nbsp;</p>
-<p>Wrye Text will allow <a  href="https://www.techonthenet.com/c_language/comments.php">C Language type comments</a>.</p>
+<p>Wrye Text will allow a variation of C Language type comments. Comments will not be output to the final HTML file for the Wiki. Usefull for remembering information you don't need to end up in the Wiki itself.</p>
 <p class="empty">&nbsp;</p>
-<pre>
+<h4 class="header4" id="AllowedSyntax">Allowed Syntax</h4>
+<p class="empty">&nbsp;</p>
+{% raw %}<pre>
 /* comment goes here */
-</pre>
+</pre>{% endraw %}
 <p class="empty">&nbsp;</p>
 <p>OR</p>
 <p class="empty">&nbsp;</p>
-<pre>
+{% raw %}<pre>
 /*
  comment goes here
  */
-</pre>
+</pre>{% endraw %}
 <p class="empty">&nbsp;</p>
-<font class="yellow">NOTE:</font> Comments inside of <code>pre</code> or preformatted text elements will not be treated as a comment.
+<p class="list-1">&nbsp;&nbsp; <font class="yellow">NOTE:</font> Comments inside of <code>pre</code> or preformatted text elements will not be treated as a comment.</p>
+<p class="list-1">&nbsp;&nbsp; <font class="orange">NOTE:</font> For now both single and multi line comments require a trailing <code>*/</code>. If you do not end the comment then the HTML may not be generated past the invalid syntax.</p>
+<p class="empty">&nbsp;</p>
+<h4 class="header4" id="InvalidSyntax">Invalid Syntax</h4>
+<p class="empty">&nbsp;</p>
+{% raw %}<pre>
+// This is a single line comment
+</pre>{% endraw %}
+<p class="empty">&nbsp;</p>
+<p>OR</p>
+<p class="empty">&nbsp;</p>
+{% raw %}<pre>
+* This is a bullet of something
+* This is a link to a mod // This is a comment after the link
+</pre>{% endraw %}
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Versions">Versions</h2>
 <p class="empty">&nbsp;</p>

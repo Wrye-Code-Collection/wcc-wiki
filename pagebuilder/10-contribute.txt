@@ -167,21 +167,37 @@ Blank lines can be used as spacers
 <hr>
 === Comments
 
-Wrye Text will allow [[https://www.techonthenet.com/c_language/comments.php | C Language type comments]]. 
+Wrye Text will allow a variation of C Language type comments. Comments will not be output to the final HTML file for the Wiki. Usefull for remembering information you don't need to end up in the Wiki itself.
 
-<pre>
+==== Allowed Syntax
+
+{% raw %}<pre>
 /* comment goes here */
-</pre>
+</pre>{% endraw %}
 
 OR
 
-<pre>
+{% raw %}<pre>
 /*
  comment goes here
  */
-</pre>
+</pre>{% endraw %}
 
-<font class="yellow">NOTE:</font> Comments inside of <code>pre</code> or preformatted text elements will not be treated as a comment.
+. <font class="yellow">NOTE:</font> Comments inside of <code>pre</code> or preformatted text elements will not be treated as a comment.
+. <font class="orange">NOTE:</font> For now both single and multi line comments require a trailing <code>*/</code>. If you do not end the comment then the HTML may not be generated past the invalid syntax.
+
+==== Invalid Syntax
+
+{% raw %}<pre>
+// This is a single line comment
+</pre>{% endraw %}
+
+OR
+
+{% raw %}<pre>
+* This is a bullet of something
+* This is a link to a mod // This is a comment after the link
+</pre>{% endraw %}
 
 == Versions ===================================================================
 
