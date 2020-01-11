@@ -99,8 +99,7 @@ I'm often told that I'm too wordy, so if you prefer pictures then check out:
 Perhaps someday these two guides can be merged!
 
 Many a great resource and more Wrye Bash instructions for the mod user:
-[[http://tesivpositive.animolious.com/ | TESCosi by Tomlong]]<font class="red"> NOTE: Asks to install a firefox extension.</font>
-... soon to be available in Wiki format. [[http://forums.bethsoft.com/topic/1094618-tesivpositive-site-redesign/ | Current forum thread]].
+[[http://wiki.theassimilationlab.com/tescosi/Main_Page | TESCosi by Tomlong]] available in Wiki format. [[http://forums.bethsoft.com/topic/1094618-tesivpositive-site-redesign/ | Current forum thread]].
 
 [[https://www.nexusmods.com/oblivion/mods/22368 | Wrye Bash Main download]]
 [[http://wryemusings.com/Wrye%20Bash.html | Wrye Bash Manual]] very outdated compared to the readme included with the latest download.
@@ -342,8 +341,8 @@ This was the option I chose for my oblivion install and it consumed enormous amo
 
 What follows are links I'd highly recommend reading if you are thinking of a complete reinstall and transition to BAIN:
 
-Tomlong75210's helpful site ([[http://tesivpositive.animolious.com/ | TESCosi by Tomlong]]<font class="red">NOTE: Asks to install a firefox extension</font> this site is growing with good information.
-There is a section on [[http://tesivpositive.animolious.com/?page=bain_installation | BAIN Installation of Modded Oblivion]]<font class="red">NOTE: Asks to install a firefox extension</font> that promises to be very helpful.
+Tomlong75210's helpful site [[http://wiki.theassimilationlab.com/tescosi/Main_Page | TESCosi by Tomlong]] this site is growing with good information.
+There is a section on [[http://wiki.theassimilationlab.com/tescosi/Wrye_Bash#BAIN_Installation | BAIN Installation of Modded Oblivion]] that promises to be very helpful.
 [[https://en.uesp.net/wiki/Oblivion:Technical_Support | UESP Tech Support]]
 [[http://forums.bethsoft.com/topic/1119325-50steps-to-stable-fcom/ | 50_Steps To CTD (Almost) Free FCOM+++ Game]] (good advice even if not installing FCOM)
 [[http://forums.bethsoft.com/topic/762701-windows-vista-performance-guide/ | Windows Vista Performance Guide]] For those installing on a Windows7 or Vista Platform and have UAC concerns: The basic instructions are to install these games outside of default locations and thereby circumventing the need for elevated privileges.
