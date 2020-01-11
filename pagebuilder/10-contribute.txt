@@ -91,18 +91,18 @@ o Alternate bullet char
 
 <hr>
 ===Header Rule
-There are two ways to make a Header Rule to seperate content. The traditional HTML <code>hr</code> tag surrounded by <code><></code> symbols and by adding 4 or more dashes <code>-</code> at the begining of a line.
+There are two ways to make a Header Rule to separate content. The traditional HTML <code>hr</code> tag surrounded by <code><></code> symbols and by adding 4 or more dashes <code>-</code> at the beginning of a line.
 
 ----
 
 ===Links
 The link syntax can not be shown very well because it will be translated into a link. For this reason I will use only one brace. <font class="orange">NOTE:</font> you will need two braces for a valid link.
 
-Below there is an example for an Internal link. An internal link is used to navagate to another section of the document. For example you might want to link to how to install python. [[#PythonInstallation | Python Installation]]
+Below there is an example for an Internal link. An internal link is used to navigate to another section of the document. For example you might want to link to how to install python. [[#PythonInstallation | Python Installation]]
 
 <font class="yellow">NOTE:</font> Wrye Text recognizes duplicate header names such as "Contents" and "Contents". If you must duplicate a header name for clarity then you will need to examine the HTML and look for the ID produced by the Python code for the HTML.
 
-You need to seperate the link address and the link name with a pipe <code>|</code> symbol which you get by using <code>SHIFT + \</code>.
+You need to separate the link address and the link name with a pipe <code>|</code> symbol which you get by using <code>SHIFT + \</code>.
 
 * External Link: [http://wrye.ufrealms.net] or [http://wrye.ufrealms.net | Wrye Musings]
 * Internal Link: [#PythonInstallation | Python Installation] or [#| Reuse and Credits].
