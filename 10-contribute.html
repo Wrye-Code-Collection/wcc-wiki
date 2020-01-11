@@ -24,21 +24,21 @@ title: Contributing
 <div> <!-- Needed, sets the top of the page just before the H1 Title -->
 <h2 class="header2" id="Intent">Intent:</h2>
 <p class="list-1">&bull;&nbsp; Do you have Wrye Bash related material that you would like to submit to this site? Are HTML and css style sheets over your head? The files and options provided will allow you to edit a simple text file that I will convert into content for the Wiki.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; Optionally if you would like to see what your work will look like on-line I provide an optional Python script that will generate HTML and allow you to double click the file from the windows explorer and see a very close approximation of what it will look like.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; Wrye has said in some of his Wrye Mash files that he built all of his pages using this system. I would presume that <a  href="http://wryemusings.com/">Wrye Musings</a> was done this way as well. On this page you will be shown the Wrye Text format and given a download of a python script to run and convert your Wrye Text files to HTML that can be used on this site.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="red">REMEMBER:</font> You do not need to know Python or HTML to contribute. The syntax of the text file is explained below along with optional instructions on how to install Python to use the script provided.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <h2 class="header2" id="Whatcontentwouldbeaccepted">What content would be accepted?</h2>
 <p class="list-1">&bull;&nbsp; Content should be Wrye related and related to Wrye Mash, and Wrye Bash programs. This can include BAIN installers for mods that do not currently have any or any other content that users could benefit from when using Wrye Bash.</p>
 <p class="list-1">&bull;&nbsp; Mod lists and modding guides are also acceptable.</p>
 <p class="list-1">&bull;&nbsp; There are many mods that are a must have so guides will include most of these mods. Try not to duplicate other content when possible.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <h2 class="header2" id="Contents">Contents</h2>
 <p class="list-1">&bull;&nbsp; <a href="#Requirement">Requirement:</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Downloadpagebuilder_v2zip">Download pagebuilder_v2.zip</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Downloadpagebuilder_v3zip">Download pagebuilder_v3.zip</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#ExampleTemplate">Example Template</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Syntax">Syntax</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#YourPagesTitle">Your Pages Title</a></p>
@@ -52,71 +52,73 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#TextColors">Text Colors</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#LinkColors">Link Colors</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Html">Html</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#GeneralTextFormating">General Text Formating</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#OptionalRequirement">Optional Requirement:</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#PythonInstallation">Python Installation</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#WherearethefilesIjustdownloaded">Where are the files I just downloaded?</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#PythonInstallation5">Python Installation</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#InstallingPythonscriptforuse">Installing Python script for use</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#OtherFormating">Other Formating</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Comments">Comments</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Versions">Versions</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#300Update1102020">3.00 Update [1/10/2020]</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#200Update182020">2.00 Update [1/8/2020]</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#100Update172020">1.00 Update [1/7/2020]</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#000InitialRelease112020">0.00 Initial Release [1/1/2020]</a></p>
+<p class="list-1">&bull;&nbsp; <a href="#OptionalRequirement">Optional Requirement:</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#PythonInstallation">Python Installation</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#WherearethefilesIjustdownloaded">Where are the files I just downloaded?</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#PythonInstallation5">Python Installation</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#InstallingPythonscriptforuse">Installing Python script for use</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#ReuseandCredits">Reuse and Credits</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#LicenseWML10ModifyandRedistributeShareAlike">License: WML 1.0 Modify and Redistribute, Share Alike</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Credits">Credits</a></p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <h2 class="header2" id="Requirement">Requirement:</h2>
 <p class="list-1">&bull;&nbsp; The <code>pagebuilder_v1.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.</p>
-<h3 id="Downloadpagebuilder_v2zip">Download pagebuilder_v2.zip</h3>
+<h3 id="Downloadpagebuilder_v3zip">Download pagebuilder_v3.zip</h3>
 <img src="img/pagebuilder.jpg" alt="pagebuilder.zip">
-<p class=empty>&nbsp;</p>
-<p class="list-1">&bull;&nbsp; <a  href="pagebuilder_v2.zip">pagebuilder_v2 Download Link.zip</a></p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; <a  href="pagebuilder_v3.zip">pagebuilder_v3 Download Link.zip</a></p>
+<p class="empty">&nbsp;</p>
 <h2 id="ExampleTemplate">Example Template</h2>
 <p>As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <h2 class="header2" id="Syntax">Syntax</h2>
 <h3 class="header3" id="YourPagesTitle">Your Pages Title</h3>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p>Your page title will become the first line on the page and will be assigned as the first header. To indicate this text use the following Wrye Tag.</p>
 Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with opening and ending double curly brackets. The text in quotes will become the title of your page as shown below.
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <h1 class="header1" id="YourPageTitle">Your Page Title</h1>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="HeadingStyle1">Heading Style 1</h3>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; There are 4 levels of headings defined with different sizes of text and backgrounds.</p>
 <p class="list-1">&bull;&nbsp; The level of the heading is determined by number of leading '='s. Trailing equal signs are ignored.</p>
 <p class="list-1">&bull;&nbsp; These headings will have some shade of grey bar that extends the width of the page.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <h1 class="header1" id="Heading1">Heading 1</h1>
 <h2 class="header2" id="Heading2">Heading 2</h2>
 <h3 class="header3" id="Heading3">Heading 3</h3>
 <h4 class="header4" id="Heading4">Heading 4</h4>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="HeadingStyle2">Heading Style 2</h3>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; Like the previous heading the amount of leading '#'s determines the level of the heading.</p>
 <p class="list-1">&bull;&nbsp; These headings will not have a bar as a background and will have green text</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <h1 id="Heading11">Heading 1</h1>
 <h2 id="Heading22">Heading 2</h2>
 <h3 id="Heading33">Heading 3</h3>
 <h4 id="Heading44">Heading 4</h4>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <h3 class="header3" id="TableofContents">Table of Contents</h3>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p>A table of contents is automatically generated from the headers in the document. It is best to place the first content tag where you want the table of contents to be, and after a header named Contents. The number indicates which header level will be used.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p>The syntax is as follows: <code>{% raw %}{{CONTENTS=2}}{% endraw %}</code> or <code>{% raw %}{{CONTENTS=0}}{% endraw %}</code> to pause using headers in the table of contents.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p>You can also disable using headers in the table of contents by using a value of <code>0</code>. The headers will not be recorded until there is another contents tag with a value greater thean 0.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <font class="yellow">NOTE:</font> You can only use one value for the document. Meaning if you use the value of 2 you can not use 3 and later 4 and then later 2 again. Instead use headers in a meaningfull way or omit the header by using a 0 value contents tag.
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="Bullets">Bullets</h3>
 <p class="list-1">&bull;&nbsp; Bullets1 - an asterisk <code>*</code> and a space would precede the text</p>
@@ -126,38 +128,38 @@ Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with openi
 <p class="list-1">+&nbsp; Alternate bullet char - a plus and a space <code>+ </code> would precede the text</p>
 <p class="list-1">o&nbsp; Alternate bullet char</p>
 <p class="list-1">&nbsp;&nbsp; For an invisible bullet char you would use a period <code>.</code> at the beginning of the line.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="Styles">Styles</h3>
 <p class="list-1">&bull;&nbsp; <I>Italic</I> - You would surround the text using two tilde <code>~</code> symbols</p>
 <p class="list-1">&bull;&nbsp; <B>Bold</B> - You would surround the text using two underscore <code>_</code> symbols</p>
 <p class="list-1">&bull;&nbsp; <B><I>BoldItalic</I></B> - You would surround the text using two asterisk <code>*</code> symbols</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="HeaderRule">Header Rule</h3>
 <p>You can add a visible divider to seperate information with the traditional HTML hr tag surrounded by <code><></code> symbols</p>
 <hr>
 <h3 class="header3" id="Links">Links</h3>
 <p>The link syntax can not be shown very well because it will be translated into a link. For this reason I will use only one brace. <font class="orange">NOTE:</font> you will need two braces for a valid link.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p>Below there is an example for an Internal link. An internal link is used to navagate to another section of the document. For example you might want to link to how to install python. <a  href="#PythonInstallation">Python Installation</a></p>
-<p class=empty>&nbsp;</p>
-<font class="yellow">NOTE:</font> Wrye Text now recognizes duplicate header names such as "Contents" and "Contents". If you must duplicate a header name for clarity then you will need to examine the HTML and look for the ID produced by the Python code for the HTML.
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
+<font class="yellow">NOTE:</font> Wrye Text recognizes duplicate header names such as "Contents" and "Contents". If you must duplicate a header name for clarity then you will need to examine the HTML and look for the ID produced by the Python code for the HTML.
+<p class="empty">&nbsp;</p>
 <p>You need to seperate the link address and the link name with a pipe <code>|</code> symbol which you get by using <code>SHIFT + \</code>.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; External Link: [http://wrye.ufrealms.net] or [http://wrye.ufrealms.net | Wrye Musings]</p>
 <p class="list-1">&bull;&nbsp; Internal Link: [#PythonInstallation | Python Installation] or [#| Reuse and Credits].</p>
   <p class="list-2">&bull;&nbsp; All section headers can be linked to by compressing the text of the header together (i.e., by stripping out all non alphabetical characters).</p>
   <p class="list-2">&bull;&nbsp; If you use the second method, the link is automatically generated from the text of the link.</p>
   <p class="list-2">&bull;&nbsp; <font class="green">NOTE:</font> Any duplication of a header will cause the python script to append a number after the link identifier. This numeric identifier will not be sequential. Therefore you can not guess that it will be "Contents1" and "Contents2". You will need to examine the output of the HTML file.</p>
-  <p class=empty>&nbsp;</p>
+  <p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="TextColors">Text Colors</h3>
-  <p class=empty>&nbsp;</p>
+  <p class="empty">&nbsp;</p>
 <p>There are 16 dark themed colors (17 if you count black) for you to choose from so they are not (at least to the best of my abilities) as blinding as their regular values. To use these colors you need to use the outdated HTML tag <code>font</code>. The tag needs to have the proper open and closing tag, and the name of the color will be assigned to the word class within quotes.</p>
 <img src="img/font_tag.jpg" alt="font_tag.jpg">
-  <p class=empty>&nbsp;</p>
+  <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="black">This is black</font></p>
 <p class="list-1">&bull;&nbsp; <font class="blue">This is blue</font></p>
 <p class="list-1">&bull;&nbsp; <font class="brown">This is brown</font></p>
@@ -175,21 +177,21 @@ Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with openi
 <p class="list-1">&bull;&nbsp; <font class="tan">This is tan</font></p>
 <p class="list-1">&bull;&nbsp; <font class="white">This is white</font></p>
 <p class="list-1">&bull;&nbsp; <font class="yellow">This is yellow</font></p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p>Obviously some colors will not contrast that well against this dark background but would look much better against a lighter background.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="LinkColors">Link Colors</h3>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p>You may be contributing a guide that has people download a mod and you wish to color code them to indicate a special purpose. Maybe the file needs to be converted from Skyrim to Skyrim SE or maybe the mod has special install procedures that make it complicated for new users. Whatever the case may be there is a tag that you may use to indicate the link color.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <code>{% raw %}{{a:green}}{% endraw %}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <code>{% raw %}[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}] <a class="orange" href="https://sharlikran.github.io/">This Link Text is Orange</a>{% endraw %}</code>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <font class="yellow">Reminder:</font> Only one brace is used so you can see the syntax. The link in your text document requires two braces at the begining and the end of the link.
-<p class=empty>&nbsp;</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="Html">Html</h3>
 <p class="list-1">&bull;&nbsp; <i>Html tags work fine</i></p>
@@ -200,20 +202,56 @@ begin widgetScript
 short counter
 end
 </pre>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p>Refrain from using too many HTML tags if you know the language well. If special styling is needed I can look into a way to privide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <hr>
-<h3 class="header3" id="GeneralTextFormating">General Text Formating</h3>
-<p class=empty>&nbsp;</p>
-<p>Blank lines can be used as spacers:</p>
-<p class=empty>&nbsp;</p>
+<h3 class="header3" id="OtherFormating">Other Formating</h3>
+<p class="empty">&nbsp;</p>
+<p>Blank lines can be used as spacers</p>
+<p class="empty">&nbsp;</p>
+<hr>
+<h3 class="header3" id="Comments">Comments</h3>
+<p class="empty">&nbsp;</p>
+<p>Wrye Text will allow <a  href="https://www.techonthenet.com/c_language/comments.php">C Language type comments</a>.</p>
+<p class="empty">&nbsp;</p>
+<pre>
+/* comment goes here */
+</pre>
+<p class="empty">&nbsp;</p>
+<p>OR</p>
+<p class="empty">&nbsp;</p>
+<pre>
+/*
+ comment goes here
+ */
+</pre>
+<p class="empty">&nbsp;</p>
+<font class="yellow">NOTE:</font> Comments inside of <code>pre</code> or preformatted text elements will not be treated as a comment.
+<p class="empty">&nbsp;</p>
+<h2 class="header2" id="Versions">Versions</h2>
+<p class="empty">&nbsp;</p>
+<h3 class="header3" id="300Update1102020">3.00 Update [1/10/2020]</h3>
+<p class="list-1">&bull;&nbsp; released pagebuilder_v1.zip version 2</p>
+  <p class="list-2">&bull;&nbsp; Added C Language type comments see <a  href="#Comments">Comments</a></p>
+  <p class="empty">&nbsp;</p>
+<h3 class="header3" id="200Update182020">2.00 Update [1/8/2020]</h3>
+<p class="list-1">&bull;&nbsp; released pagebuilder_v1.zip version 2</p>
+  <p class="list-2">&bull;&nbsp; Only the site CSS will be used to illustrate what the finished HTML should look like. Removed the ability to use alternate CSS for end user.</p>
+  <p class="empty">&nbsp;</p>
+<h3 class="header3" id="100Update172020">1.00 Update [1/7/2020]</h3>
+<p class="list-1">&bull;&nbsp; released pagebuilder_v1.zip version 1</p>
+  <p class="list-2">&bull;&nbsp; This version has a new file in it <code>wtxt-wiki-user.py</code>. That is the file you will use if you want to see what your page will look like once converted to use on the website.</p>
+  <p class="empty">&nbsp;</p>
+<h3 class="header3" id="000InitialRelease112020">0.00 Initial Release [1/1/2020]</h3>
+<p class="list-1">&bull;&nbsp; released pagebuilder.zip version 0</p>
+<p class="empty">&nbsp;</p>
 <h2 class="header2" id="OptionalRequirement">Optional Requirement:</h2>
 <p class="list-1">&bull;&nbsp; To generate the HTML files you will need the latest python from Python.org. These files are written for 2.7.x and the current Python 2.7.17 will work just fine. The link is for the 32 bit version. Please download that because the setup will go smoother and add needed configurations to your computer to run the python scripts provided.</p>
 <p class="list-1">&bull;&nbsp; Below is a link to Python 2.7.17 and a link to the pagebuilder script and sample file you can generate right away to see it working.</p>
 <p class="list-1">&bull;&nbsp; <a  href="https://www.python.org/ftp/python/2.7.17/python-2.7.17.msi">Download Python 2.7.17</a></p>
-<p class=empty>&nbsp;</p>
-<h2 class="header2" id="PythonInstallation">Python Installation</h2>
+<p class="empty">&nbsp;</p>
+<h3 class="header3" id="PythonInstallation">Python Installation</h3>
 <h3 id="WherearethefilesIjustdownloaded">Where are the files I just downloaded?</h3>
 <p class="list-1">&bull;&nbsp; The files usually end up in your windows Downloads folder as shown below.</p>
 <img class="thumbnail-large" src="img/downloadedfiles.jpg" alt="downloadedfiles.jpg">
@@ -254,28 +292,15 @@ end
 <img class="thumbnail-large"  src="img/outputhtml.jpg" alt="outputhtml.jpg">
 <p class="list-1">&nbsp;&nbsp; Double click <code>Wiki Page Template.html</code> and you will see more or less what the page would look like.</p>
 <img class="thumbnail-large"  src="img/examplehtml.jpg" alt="examplehtml.jpg">
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <p>Add the content you wish to add, regenerating the HTML as you go and, you are on your way to producing content for the wiki.</p>
-<p class=empty>&nbsp;</p>
-<h2 class="header2" id="Versions">Versions</h2>
-<p class=empty>&nbsp;</p>
-<h3 class="header3" id="200Update182020">2.00 Update [1/8/2020]</h3>
-<p class="list-1">&bull;&nbsp; released pagebuilder_v1.zip version 2</p>
-  <p class="list-2">&bull;&nbsp; Only the site CSS will be used to illustrate what the finished HTML should look like. Removed the ability to use alternate CSS for end user.</p>
-  <p class=empty>&nbsp;</p>
-<h3 class="header3" id="100Update172020">1.00 Update [1/7/2020]</h3>
-<p class="list-1">&bull;&nbsp; released pagebuilder_v1.zip version 1</p>
-  <p class="list-2">&bull;&nbsp; This version has a new file in it <code>wtxt-wiki-user.py</code>. That is the file you will use if you want to see what your page will look like once converted to use on the website.</p>
-  <p class=empty>&nbsp;</p>
-<h3 class="header3" id="000InitialRelease112020">0.00 Initial Release [1/1/2020]</h3>
-<p class="list-1">&bull;&nbsp; released pagebuilder.zip version 0</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <h2 class="header2" id="ReuseandCredits">Reuse and Credits</h2>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <h3 class="header3" id="LicenseWML10ModifyandRedistributeShareAlike">License: WML 1.0 Modify and Redistribute, Share Alike</h3>
 <p class="list-1">&bull;&nbsp; You are free to redistribute this work in unmodified form.</p>
 <p class="list-1">&bull;&nbsp; You are free to modify and re-distribute this work, so long as you: 1) give the author(s) credit proportional to their contribution to the final work, 2) distribute the final work under the same terms, and 3) make artistic resources included with the final work available under these same terms.</p>
-<p class=empty>&nbsp;</p>
+<p class="empty">&nbsp;</p>
 <h3 class="header3" id="Credits">Credits</h3>
 <p class="list-1">&bull;&nbsp; <B><I>Wrye</I></B>, for creating this markdown language</p>
 </div>

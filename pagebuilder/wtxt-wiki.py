@@ -562,6 +562,9 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
     reCssTag = re.compile('\s*{{CSS:(.+?)}}\s*$')
     reTitleTag = re.compile(r'({{PAGETITLE=")(.*)("}})$')
+    reComment = re.compile(r'^\/\*.+\*\/')
+    reCTypeBegin = re.compile(r'^\/\*')
+    reCTypeEnd = re.compile('\*\/$')
     # --Defaults ----------------------------------------------------------
     level = 1
     spaces = ''
@@ -573,6 +576,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     contents = [] # The list variable for the Table of Contents
     addContents = 0 # When set to 0 headers are not added to the TOC
     inPre = False
+    inComment = False
     isInParagraph = False
     htmlIDSet = list()
     dupeEntryCount = 1
@@ -583,13 +587,21 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         # --Preformatted? -----------------------------
         maPreBegin = rePreBegin.search(line)
         maPreEnd = rePreEnd.search(line)
-        maTitleTag = reTitleTag.match(line)
-        if maTitleTag:
-            pageTitle = re.sub(r'({{PAGETITLE=")(.*)("}})(\n)?', r'title: \2', line)
         if inPre or maPreBegin or maPreEnd:
             inPre = maPreBegin or (inPre and not maPreEnd)
             outLines.append(line)
             continue
+        maTitleTag = reTitleTag.match(line)
+        maCTypeBegin = reCTypeBegin.search(line)
+        maCTypeEnd = reCTypeEnd.search(line)
+        maComment = reComment.match(line)
+        if maComment:
+            continue
+        if inComment or maCTypeBegin or maCTypeEnd or maComment:
+            inComment = maCTypeBegin or (inComment and not maCTypeEnd)
+            continue
+        if maTitleTag:
+            pageTitle = re.sub(r'({{PAGETITLE=")(.*)("}})(\n)?', r'title: \2', line)
         # --Re Matches -------------------------------
         maContents = reContentsTag.match(line)
         maCss = reCssTag.match(line)
@@ -663,7 +675,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             isInParagraph = True
         # --Empty line
         elif maEmpty:
-            line = spaces + '<p class=empty>&nbsp;</p>\n'
+            line = spaces + '<p class="empty">&nbsp;</p>\n'
         # --Misc. Text changes --------------------
         line = reMDash.sub('&#150', line)
         line = reMDash.sub('&#150', line)

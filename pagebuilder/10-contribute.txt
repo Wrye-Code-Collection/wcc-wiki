@@ -18,10 +18,10 @@
 
 == Requirement:
 * The <code>pagebuilder_v1.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.
-### Download pagebuilder_v2.zip
+### Download pagebuilder_v3.zip
 <img src="img/pagebuilder.jpg" alt="pagebuilder.zip">
 
-* [[pagebuilder_v2.zip | pagebuilder_v2 Download Link.zip]]
+* [[pagebuilder_v3.zip | pagebuilder_v3 Download Link.zip]]
 
 ## Example Template
 As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.
@@ -160,16 +160,52 @@ end
 Refrain from using too many HTML tags if you know the language well. If special styling is needed I can look into a way to privide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.
 
 <hr>
-=== General Text Formating
+=== Other Formating
 
-Blank lines can be used as spacers:
+Blank lines can be used as spacers
+
+<hr>
+=== Comments
+
+Wrye Text will allow [[https://www.techonthenet.com/c_language/comments.php | C Language type comments]]. 
+
+<pre>
+/* comment goes here */
+</pre>
+
+OR
+
+<pre>
+/*
+ comment goes here
+ */
+</pre>
+
+<font class="yellow">NOTE:</font> Comments inside of <code>pre</code> or preformatted text elements will not be treated as a comment.
+
+== Versions ===================================================================
+
+=== 3.00 Update [1/10/2020]
+* released pagebuilder_v1.zip version 2
+  * Added C Language type comments see [[#| Comments]]
+
+=== 2.00 Update [1/8/2020]
+* released pagebuilder_v1.zip version 2
+  * Only the site CSS will be used to illustrate what the finished HTML should look like. Removed the ability to use alternate CSS for end user.
+
+=== 1.00 Update [1/7/2020]
+* released pagebuilder_v1.zip version 1
+  * This version has a new file in it <code>wtxt-wiki-user.py</code>. That is the file you will use if you want to see what your page will look like once converted to use on the website.
+
+=== 0.00 Initial Release [1/1/2020]
+* released pagebuilder.zip version 0
 
 == Optional Requirement:
 * To generate the HTML files you will need the latest python from Python.org. These files are written for 2.7.x and the current Python 2.7.17 will work just fine. The link is for the 32 bit version. Please download that because the setup will go smoother and add needed configurations to your computer to run the python scripts provided.
 * Below is a link to Python 2.7.17 and a link to the pagebuilder script and sample file you can generate right away to see it working.
 * [[https://www.python.org/ftp/python/2.7.17/python-2.7.17.msi | Download Python 2.7.17]]
 
-== Python Installation ===============================================================
+=== Python Installation ===============================================================
 ###  Where are the files I just downloaded?
 * The files usually end up in your windows Downloads folder as shown below.
 <img class="thumbnail-large" src="img/downloadedfiles.jpg" alt="downloadedfiles.jpg">
@@ -212,19 +248,6 @@ Blank lines can be used as spacers:
 <img class="thumbnail-large"  src="img/examplehtml.jpg" alt="examplehtml.jpg">
 
 Add the content you wish to add, regenerating the HTML as you go and, you are on your way to producing content for the wiki.
-
-== Versions ===================================================================
-
-=== 2.00 Update [1/8/2020]
-* released pagebuilder_v1.zip version 2
-  * Only the site CSS will be used to illustrate what the finished HTML should look like. Removed the ability to use alternate CSS for end user.
-
-=== 1.00 Update [1/7/2020]
-* released pagebuilder_v1.zip version 1
-  * This version has a new file in it <code>wtxt-wiki-user.py</code>. That is the file you will use if you want to see what your page will look like once converted to use on the website.
-
-=== 0.00 Initial Release [1/1/2020]
-* released pagebuilder.zip version 0
 
 == Reuse and Credits ==========================================================
 
