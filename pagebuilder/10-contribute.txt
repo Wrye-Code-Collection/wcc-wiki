@@ -91,8 +91,10 @@ o Alternate bullet char
 
 <hr>
 ===Header Rule
-You can add a visible divider to seperate information with the traditional HTML hr tag surrounded by <code><></code> symbols
-<hr>
+There are two ways to make a Header Rule to seperate content. The traditional HTML <code>hr</code> tag surrounded by <code><></code> symbols and by adding 4 or more dashes <code>-</code> at the begining of a line.
+
+----
+
 ===Links
 The link syntax can not be shown very well because it will be translated into a link. For this reason I will use only one brace. <font class="orange">NOTE:</font> you will need two braces for a valid link.
 
