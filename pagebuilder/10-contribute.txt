@@ -227,7 +227,7 @@ OR
 <img class="thumbnail-large" src="img/downloadedfiles.jpg" alt="downloadedfiles.jpg">
 * Open your windows explorer and on the left navigate to your Downloads folder.
 * First you will install Python and then be shown where to put the Python scripts and example files.
-###  Python Installation
+### Installing Python
 * Your version of python will be different then show here. What is important is the install location. Leave it at the default settings so that you can follow the instructions for building HTML files with Python.
 <img src="img/pythoninstall.jpg" alt="pythoninstall.jpg">
 * The Python installation will be very simple, just click next and leave all the default settings.
