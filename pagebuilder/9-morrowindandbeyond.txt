@@ -4,6 +4,8 @@ When I looked for some old Morrowind mods it took me a bit to find them on alter
 In addition to that you will find some of the old Morrowind Modding tools if you need them.
 == Contents
 {{CONTENTS=2}}
+== Official Files
+[[https://www.nexusmods.com/morrowind/mods/42196 | TESCS Fix for Steam GotY edition]]
 == Modding Websites
 . [[http://www.theassimilationlab.com/forums/ | The Assimilation Lab]]
 . [[http://tesalliance.org/forums/ | TES Alliance]]
@@ -76,3 +78,38 @@ In addition to that you will find some of the old Morrowind Modding tools if you
 * [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/TESTool.zip | TES Plugin Tool 1.3]] – ESM/ESP cleaning tool, leveled list merger, **object and dialog entry merger** and more. Documentation can be found [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/TESTool.htm | HERE]].
 
 All programs are ZIP archives with text/html file documentation included in the archive. **READ IT!**
+
+== Modelling/Texturing tutorials
+. [[https://www.nexusmods.com/morrowind/mods/6847?tab=files | SriKandi's Skinning Tutorial]]
+. [[http://lovkullen.net/Emma/FACEMAKER.htm | Face Texturing for Morrowind - Human Faces - lochnarus]]
+. [[http://lovkullen.net/Emma/HAIRMAKER.htm | Creating Hair Textures From Scratch - lochnarus]]
+. [[https://www.calislahn.com/elder-scrolls/tutorials/texturing-for-dummies/ | Perceptual Motion - Texturing for Dummies]]
+. [[https://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro | Blender 3D: Noob to Pro]]
+. [[https://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/UV_Map_Basics | UV Map Basics]]
+. [[http://archive.gamedev.net/archive/reference/art/features/blender1/index.html | Modelling a sword in Blender]]
+
+== Landscape editor
+. placeholder for zip
+
+== General Construction Set tutorials 
+. [[https://www.calislahn.com/elder-scrolls/tutorials/ | Build a house tutorial - by Calislahn]]
+. [[http://lovkullen.net/Emma/edvardmd.htm | Morrowind Mod Makers manual]]
+
+==Dialog "How-To" tutorials
+. [[https://www.tamriel-rebuilt.org/files/tuts/dialoguetut.zip | Srikandi's dialogue tutorial]]
+. [[http://lovkullen.net/Emma/Comprehensive_Dialogue.htm | Comprehensive Dialogue for Morrowind - The "How-To, - from the old thread]]
+. [[http://www.calislahn.com/elder-scrolls/tutorials/ | Calislahn's Dialogue Basics tutorial]]
+. [[http://download.fliggerty.com/download--160 | Jac's dialogue tutorial]]
+
+== Quest tutorials
+. [[http://www.themcnews.com/morrowind.htm | Skydiver's basic quest tutorial]]
+
+== Tools
+. [[http://www.blender3d.org | Blender3d homepage]]
+. [[https://github.com/niftools/blender_nif_plugin/releases | blender_nif_plugin]] Blender3d .NIF Scripts
+. [[https://www.getpaint.net/index.html | paint.net]]
+
+== Credits
+Links are taken from the following posts.
+
+[[http://forums.bethsoft.com/topic/24-comprehensive-tutorial-and-useful-link-list/ | Comprehensive Tutorial and Useful Link List]]
