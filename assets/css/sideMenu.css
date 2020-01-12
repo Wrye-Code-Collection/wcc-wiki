@@ -125,20 +125,22 @@
 	width: 100%;
 }
 
+/*
 #colorMenuTab {
-	/* top: var(--sideMenuTab1POSTop); */
+	* top: var(--sideMenuTab1POSTop);
 	transform: translate3d(0, var(--sideMenuTab1POSTop), 0);
 }
+*/
 
 #scaleMenuTab {
 	/* top: var(--sideMenuTab2POSTop); */
-	transform: translate3d(0, var(--sideMenuTab2POSTop), 0);
+	transform: translate3d(0, var(--sideMenuTab1POSTop), 0);
 }
 
 /* Prebuilt Tab Positions */
 #navMenuTab {
 	/* top: var(--sideMenuTab3POSTop); */
-	transform: translate3d(0, var(--sideMenuTab3POSTop), 0);
+	transform: translate3d(0, var(--sideMenuTab2POSTop), 0);
 }
 
 #sideMenuTab4 {
