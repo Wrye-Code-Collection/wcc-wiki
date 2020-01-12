@@ -49,7 +49,7 @@ In addition to that you will find some of the old Morrowind Modding tools if you
   * [[http://mw.modhistory.com/download-95-5223 | TES Mod Utility TES Mod Utility 2.01]]
 * [[https://www.nexusmods.com/morrowind/mods/3874 | TES Plugin Conflict Detector]] IIRC you can use TESPCD to clean mods, but it's an excellent tool for troubleshooting similar to what TES4Edit is for Oblivion.
 * [[http://mw.modhistory.com/download--5258 | TES Dependency Tool Kit]] You can use it if you need to either add or remove a dependency for a mod for example an [[http://forums.bethsoft.com/topic/1376740-relz-morrowind-comes-alive-70/ | updated patch]] between two [[http://forums.bethsoft.com/topic/1380688-relz-tamriel-rebuilt-sacred-east-10-2/ | mods]]
-* [[http://mw.modhistory.com/download-95-5265 | Morrowind Plugin Manager]] Is very easy to use for both installation/uninstallation of mods and it also support mp3 files, but it doesn't support .7z archives and Wrye Nash have support for both 7z, MP3-files (only the) [[http://forums.bethsoft.com/topic/1331996-yacobys-wrye-mash-fork/ | latest]]
+* [[http://mw.modhistory.com/download-95-5265 | Morrowind Plugin Manager]] Is very easy to use for both installation/uninstallation of mods and it also supports mp3 files, but it doesn't support .7z archives and Wrye Mash has support for both 7z, MP3-files
 * Wrye Mash
   . [[https://github.com/Wrye-Code-Collection/Wrye-Mash/releases/tag/88 | Wrye Mash Stand Alone v88]], by [[https://sharlikran.github.io/ | Sharlikran]]
   . [[https://www.nexusmods.com/morrowind/mods/45439 | Wrye Mash - Polemos fork - 2019]], by [[https://github.com/polemion/Wrye-Mash-Polemos | Polemos]]
