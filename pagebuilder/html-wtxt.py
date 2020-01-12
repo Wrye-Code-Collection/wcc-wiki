@@ -117,8 +117,14 @@ def mainFunction(func):
 
 
 @mainFunction
-def getPosts(srcFile, outFile=None):
+def getPosts(srcFile, outFile=None, outtext=None):
     """TextMunch: Converts html files to wtxt formatting."""
+    if not outFile:
+        import os
+        outFile = 'out-' + os.path.splitext(srcFile)[0] + '.html'
+    if not outtext:
+        import os
+        outtext = os.path.splitext(srcFile)[0] + '.txt'
     post_list = []
     soup = BeautifulSoup(open(srcFile), features="html5lib")
     all_posts = soup.find("div", id="ips_Posts")
@@ -142,7 +148,7 @@ def getPosts(srcFile, outFile=None):
     for post in outPosts:
         out.write(post.encode('utf8'))
     out.close()
-    out = file('export.txt', 'w')
+    out = file(outtext, 'w')
     for post in outText:
         out.write(post.encode('utf8'))
     out.close()
@@ -222,11 +228,11 @@ def htmlToWtxt(srcFile, outFile=None):
 # (<a href=')(http:.*)('\sclass='.*')(\stitle='.*')(\srel='.*')?(\srel='.*')?(>)(.*)(<\/a>) and [[\2 \| \9]]<br \/>\n
 
 @mainFunction
-def genHtml(fileName, outFile=None):
+def genHtml(fileName, outFile=None, outtext=None):
     """Generate html from old style etxt file or from new style wtxt file."""
     ext = os.path.splitext(fileName)[1].lower()
-    if ext == '.html':
-        getPosts(fileName, outFile)
+    if ext == '.html' or ext == '.htm':
+        getPosts(fileName, outFile, outtext)
     else:
         raise "Unrecognized file type: " + ext
 
