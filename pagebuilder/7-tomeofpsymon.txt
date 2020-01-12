@@ -1529,9 +1529,15 @@ The one area where there is issue is in the fact that the way that Wrye Bash is 
 I highly recommend the use of this tool which I've found very useful in testing tool and mods as well as now having three fully modded Oblivion games that I can swap between with ease.
 
 ### Resources:
-The [[https://forum.sureai.net/viewforum.php?f=156 | SureAI English forum]]
-with [[http://sureai.de/forum/viewforum.php?f=86 | a subforum for modding Nehrim]]
-NEEDS LINK | Nehrim thread at TESAlliance
+#### Unconfirmed links
+. Old Link SureAI English forum: http://sureai.de/forum/viewforum.php?f=81
+. Old Link a subforum for modding Nehrim: http://sureai.de/forum/viewforum.php?f=86
+
+#### Confirmed it exists, but unsure if it's correct
+[[https://forum.sureai.net/viewforum.php?f=156 | Nehrim]]
+
+#### Confirmed link
+[[http://tesalliance.org/forums/index.php?/topic/3057-nehrim-total-conversion-english-version/ | Nehrim Total Conversion - English Version]]
 
 # Porting mods from Oblivion to Nehrim
 
