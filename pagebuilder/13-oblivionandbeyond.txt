@@ -1,0 +1,73 @@
+{{PAGETITLE="Mods And Beyond"}}
+The old Oblivion mod lists have some issues when it comes to links to other mod lists or links to other posts. Some have been purged and can no longer be accessed, while other are simply hard to fine or you can not generate a link not knowing the exact title. There are some of those lists with links verified as of the creation of this page.
+
+== Contents
+{{CONTENTS=3}}
+=== Cliffworms Mods
+Original Bethesda thread [[http://forums.bethsoft.com/topic/1010109-list-list-of-mod-lists/ | [LIST] List of Mod Lists]] by Cliffworms
+
+==== General Mod Lists
+. Lists containing mods from different themes that have been made by players.
+
+. [[http://forums.bethsoft.com/topic/1002940-wipzrelzpush-list-of-oblivion-mods/ | Push List of Oblivion Mods]]
+  . Pushtaku's list contains both the most popular mods and those which are less known.
+. [[http://forums.bethsoft.com/topic/1072579-the-any-mods-list-of-topics/ | Phoenix1213's "Any Mods?" list of topics]]
+  . When a user posts a new thread about mod suggestions, Phoenix pops in and tags the thread using "azerbagb". Now, using different tags starting with '"azer", Phoenix has made a list of every topic he has tagged, even categorizing them under certain themes.
+. [[http://forums.bethsoft.com/topic/881204-the-oblivion-performance-project-topp/ | The Oblivion Performance Project by BallofFire]]
+  . Various mods, tools and guided aimed for players with low or medium-end computers looking for a performance boost.
+. [[https://www.nexusmods.com/oblivion/mods/23585 | Apocalypse's List of Links to Useful Mods and Utilities]]
+  . Apocalypse's list offers a variety of mods and utilities that work well with each other, and with minimized conflicts.
+. [[http://forums.bethsoft.com/topic/790175-bgs-list-of-base-mods/ | Bg's List of Base Mods by bg2408]]
+  . A list of base mods focused on the areas where Oblivion mostly needs improvements.
+. [[https://sites.google.com/site/ballofflame/balloffire-s-oblivion-modlist | BallofFire's Oblivion Mod List]]
+  . BallofFire's personal recommendations for every mod categories.
+. [[https://sites.google.com/site/lonhammonds/listofmusthavemods | List of Must-Have Oblivion Mods by L. Hammonds]]
+  . Contains various mods from different categories for those who are not aiming to seek overhauls.
+. [[https://sites.google.com/site/fivefries/modlist | FiveFries' Oblivion Mod List]]
+  . FiveFries' personal recommendations for every mod categories.
+. [[http://forums.bethsoft.com/topic/699810-as-list-of-recommended-mods/ | A's List of Recommended Mods by Aelius]]
+  . Mod list containing most popular mods that were released during and before 2007.
+==== Themed And Specialty Mod Lists
+Specialized lists that offers mods in a specific area of interest
+
+. [[http://forums.bethsoft.com/topic/954258-underdog-mods-thread-2/ | Underdog Mods [Thread 2], By many people]]
+. [[http://forums.bethsoft.com/topic/960829-environment-mod-list/ | Environment Mod List by wrinklyninja]]
+. [[http://forums.bethsoft.com/topic/1069039-best-of-the-little-known-gems/ | Best of the little-known gems by many users]]
+. [[http://forums.bethsoft.com/topic/872035-running4covers-list-of-stealth-mods/ | Running4Cover's List of Stealth Mods]]
+. [[https://forums.nexusmods.com/index.php?/topic/34130-final-fantasy-mods-list/ | Final Fantasy Mods List by Povuholo]]
+. [[https://www.nexusmods.com/oblivion/mods/29243 | Viviolay's Robert Female Mod List]]
+. [[http://forums.bethsoft.com/topic/1035041-list-of-non-english-mods/ | List of non-English mods by XtremeRampage]]
+. [[http://forums.bethsoft.com/topic/976260-lets-talk-horses-lap-2/ | Let's Talk Horses by Blade of Mercy]]
+. [[https://www.bethsoft.com/bgsforums/index.php?showtopic=1053088&amp;hl= | Delte's Thread of Immersion Mods]]
+. [[http://forums.bethsoft.com/topic/1053088-deltes-thread-of-immersion-mods/ | Eshenaleros' Non-Sexy Armor List]]
+. [[http://forums.bethsoft.com/topic/931523-roleplay-replay-a-randomly-generated-job-mod-list/ | Roleplay, Replay, a Randomly Generated Job Mod List by Iansi]]
+. [[http://forums.bethsoft.com/topic/1004917-list-daggerfallesque-mod-list/ | Daggerfallesque Mod List by Cliffworms]]
+. [[http://forums.bethsoft.com/topic/1043692-the-demonic-list-of-leveled-list-mods/ | The Demonic List of Leveled List mods by demonsshade]]
+. [[http://forums.bethsoft.com/topic/825234-list-morrowind-and-older-tes-games-nostalgia-mods/ | Morrowind and older TES games nostalgia mods by Gez]]
+. [[http://forums.bethsoft.com/topic/814477-magic-overhaul-comparison/ | Magic Overhaul Comparison by bg2408]]
+. [[http://forums.bethsoft.com/topic/729907-sds-si-mod-list/ | Sds Shivering Isles Mod List by Smokindan]]
+. [[http://forums.bethsoft.com/topic/820948-scaling-overhaul-comparison/ | Scaling Overhaul Comparison by bg2408]]
+
+==== Modders'/Players' Resources And Utilities
+. Meshes, textures, objects, scripts and more!
+. [[http://forums.bethsoft.com/topic/948908-list-of-modders-resources/ | List of Modder's Resources by GooglePox]]
+  . Originally created by con-tu-reh, the ultimate list for a modder looking for a specific mesh, texture or object. Contains resources not found in WhoGuru's list.
+. [[http://tesalliance.org/forums/index.php?/topic/1182-list-of-modders-resources-resources-to-be-used-freely/ | List of Modder's Resources by WhoGuru]]
+  . The ultimate list for a modder looking for a specific mesh, texture or object. Contains resources not found in GooglePox's list.
+. [[https://www.bethsoft.com/bgsforums/index.php?showtopic=994917&amp;hl">List of Grid Maps by bg2408]]
+  . A useful reference for modders looking to edit exterior cells.
+. [[https://www.bethsoft.com/bgsforums/index.php?showtopic=1039029&amp;hl=List">Useful Modding Tools by InsanitySorrow]]
+  . Contains many tools for the various modding avenues you might want to undertake. Each tool is categorized by difficulty of learning/using.
+. [[http://tesalliance.org/forums/index.php?/topic/1756-list-tlm-useful-links/ | TLM Useful Links]]
+  . Links to various websites, forums resources and mod lists.
+. [[http://forums.bethsoft.com/topic/950703-list-of-obse-plugin-dlls/ | List of OBSE plugin DLLs by SkyRanger-1]] - Last updated August 28th 2009
+  . A list of every known DLLs used in OBSE plugins.
+
+===== Original Author Credits
+Thank you to the following people who helped with the list.
+  * First, the authors of the mod lists. Thank you for doing them!
+  * Then, those who helped me with lists I missed:
+  * Qawsed Asap
+  * Meek
+  * TheNiceOne
+  * Jenrai
