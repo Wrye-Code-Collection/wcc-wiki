@@ -54,6 +54,7 @@ In addition to that you will find some of the old Morrowind Modding tools if you
   . [[https://github.com/Wrye-Code-Collection/Wrye-Mash/releases/tag/88 | Wrye Mash Stand Alone v88]], by [[https://sharlikran.github.io/ | Sharlikran]]
   . [[https://www.nexusmods.com/morrowind/mods/45439 | Wrye Mash - Polemos fork - 2019]], by [[https://github.com/polemion/Wrye-Mash-Polemos | Polemos]]
 
+{% raw %}
 [[sb:spoiler1 | Old Wrye Mash]]
   . [[https://www.nexusmods.com/morrowind/mods/27588 | Wrye Mash 84]] Nexus
   . [[http://mw.modhistory.com/download-95-5568 | Wrye Mash 84]] MMH
@@ -61,6 +62,7 @@ In addition to that you will find some of the old Morrowind Modding tools if you
   . [[http://mw.modhistory.com/download-95-5624 | Wrye Mash Stand Alone v3]], by [[http://forums.bethsoft.com/index.php?/topic/1106095-wrye-mash-stand-alone/ | Melchor]]
   . [[http://forums.bethsoft.com/topic/1331996-yacobys-wrye-mash-fork/ | Wrye Mash Stand Alone]], by [[http://www.jacobessex.com/ | Yacoby]]
 [[se:]]
+{% endraw %}
 * A couple of other tools can be found with the [[http://wayback.archive.org/web/ | Wayback Machine]] so please be patient. Here is a [[http://forums.bethsoft.com/topic/24-comprehensive-tutorial-and-useful-link-list/ | list]] of other useful tools.
 * [[https://www.nexusmods.com/morrowind/mods/43907/ | Groundcover Generation Package]] by Noteless
 
