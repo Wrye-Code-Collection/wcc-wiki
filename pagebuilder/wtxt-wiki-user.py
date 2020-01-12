@@ -308,7 +308,7 @@ font.white, a.white { color: var(--white-text); }
 font.yellow, a.yellow { color: var(--yellow-text); }
 
 input[id^="spoiler"] { display: none; }
-input[id^="spoiler"] + label { display: block; width: 200px; margin: 0; padding: 5px 20px; color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); text-align: center; font-size: 24px; border-radius: 8px; cursor: pointer; transition: all .6s; }
+input[id^="spoiler"] + label { display: inline; margin: 10px 0px; padding: 2px 20px; color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); text-align: center; font-size: 24px; border-radius: 8px; cursor: pointer; transition: all .6s; }
 input[id^="spoiler"]:checked + label { color: rgba(255, 255, 255, 0.7); background-color: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); }
 input[id^="spoiler"] ~ .spoiler { width: auto; height: 0; overflow: hidden; opacity: 0; margin: 0; padding: 10px; color: var(--purple-text); background-color: var(--code-background); border: 1px solid white; border-radius: 8px; transition: all .6s; }
 input[id^="spoiler"] ~ .spoiler p { color: inherit; }

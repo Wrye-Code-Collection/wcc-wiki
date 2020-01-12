@@ -17,11 +17,11 @@
 {{CONTENTS=3}}
 
 == Requirement:
-* The <code>pagebuilder_v5.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.
-### Download pagebuilder_v5.zip
+* The <code>pagebuilder_v6.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.
+### Download pagebuilder_v6.zip
 <img src="img/pagebuilder.jpg" alt="pagebuilder.zip">
 
-* [[pagebuilder_v5.zip | pagebuilder_v5 Download Link.zip]]
+* [[pagebuilder_v6.zip | pagebuilder_v6 Download Link.zip]]
 
 ## Example Template
 As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.
@@ -216,6 +216,10 @@ OR
 </pre>{% endraw %}
 
 == Versions ===================================================================
+
+=== 6.00 Update [1/11/2020]
+* released pagebuilder_v5.zip version 5
+  * Alter spoiler button to expand its width when there is more text
 
 === 5.00 Update [1/11/2020]
 * released pagebuilder_v5.zip version 5
