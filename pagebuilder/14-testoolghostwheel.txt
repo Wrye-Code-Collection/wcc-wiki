@@ -1,3 +1,4 @@
+{{PAGETITLE="TES Plugin Tool (TESTool) 1.3 Documentation"}}
 = TES Plugin Tool (TESTool) 1.3
 ### March 4, 2004 by ghostwheel
 ----
