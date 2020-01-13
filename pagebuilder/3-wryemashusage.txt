@@ -1110,8 +1110,8 @@ The Mash distribution includes additional files that assist in its operation and
   * Usage: Copy these esps to your Data Files directory, set their dates as desired and then set the dates of your various mods so that they group as desired.
   * Note that ordering is important for many mods. Reversing the order of some mods may cause problems.
 
-{{CONTENTS=0}}
 == Versions ===================================================================
+{{CONTENTS=0}}
 === 88 [Minor Update]
 * When choosing Redate with the official files selected, Wrye Mash will set their BSA files to the same date.
 
