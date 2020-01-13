@@ -1,0 +1,172 @@
+= TES Plugin Tool (TESTool) 1.3
+### March 4, 2004 by ghostwheel
+----
+== Contents
+{{CONTENTS=2}}
+== Summary
+
+This is a helper utility for the The Elder Scrolls: Morrowind game. It can perform following functions:
+
+* Remove unnecessary data from ESM/ESP files (including GMST entries), significantly reducing number of conflicts between different mods.
+* Merge leveled lists for all active plugins, eliminating leveled list conflicts (this function was intended to replace Horatio's Leveled List Merger).
+* Merge changes done to the various TES objects and dialog entries.
+* Generate detailed conflict report for the given list of plugins.
+* Manage list of currently active plugins with possibility to update ESP file header (version and master file sizes) and to change plugin loading order.
+* One-click "JUST FIX IT!" button that automatically executes a set of tasks to reduce number of conflicts between active plugins as much as possible without any user interaction.
+
+Detailed description of all functions can be found below in the FUNCTION section.
+
+== Download and Contact
+
+Latest version of utility should be found at [[http://mw.modhistory.com/download-95-15255 |TESTool]]. If you will find any bugs with it, please PM ghostwheel on the official TES forums.
+
+== Hosting and bundling
+
+Feel free to host utility or to bundle it with your mods. I would appreciate if you will care enough to send me a PM on official TES forums about that, but it is not necessary.
+
+== Usage
+
+In order to use utility, just copy it anywhere and run it. It will try to find valid Morrowind installation and proceed from there. If you have multiple Morrowind installations, or automatic process failed to locate Morrowind, just copy utility to the folder with morrowind.ini in it and run it from there.
+
+In order to speed up cleaning process, utility will create ~6-8Mb auxiliary file TESTool.dat in the same folder where TESTool.exe is located. Also, all program settings are stored in the TESTool.ini file in the same folder. Finally, after every operation you can check file **TESTool.log** in the same folder. It will contain details about last performed function.
+
+Once you will see dialog box on the screen, select function you want to perform from the top list and press Execute. Check function descriptions below for the details.
+
+__Alternatively, if you don't have knowledge, time or desire to fix plugin conflicts yourself, you can press "JUST FIX IT!" button and let utility do all the work it can.__
+
+Utility supports original Morrowind installation and Tribunal/Bloodmoon expansions (none, one of them or both). It is important to note, that utility decides whether or not expansion is installed by checking that appropriate ESM file (tribunal.esm or bloodmoon.esm or both) is currently __enabled__ (made active) in the morrowind.ini file. So, if you have, e.g., both expansions installed but want to run cleaning only against morrowind.esm, uncheck tribunal.esm and bloodmoon.esm from the list of enabled plugins (Data Files menu item in the main Morrowind menu). Alternatively, you can use "Ignore tribunal.esm" / "Ignore bloodmoon.esm" options, described below.
+
+Finally there are several options, affecting various functions:
+
+* Don't change plugin names
+. If you enable this toggle, utility __will not__ add "Clean " prefix to the cleaned file names, overwriting existing file (unless you specified that cleaned files should go into the subfolder).
+* Retain file time, when cleaning
+. Enabling this toggle will force utility to make sure that cleaned file has exactly same date and time as original file.
+* Force save for clean plugins
+. Enabling this toggle will force utility to save plugins even if they were already clean.
+* Ignore tribunal.esm
+. This toggle will disable comparison vs tribunal.esm, even if you have it installed. __Only affects cleaning, not merging.__
+* Ignore bloodmoon.esm
+. This toggle will disable comparison vs bloodmoon.esm, even if you have it installed. __Only affects cleaning, not merging.__
+* Restricted dialog cleaning
+. Normally this toggle should remain disabled. If enabled, than utility will do strict comparison for INFO records (normally NNAM/PNAM fields are ignored), resulting in much more shallow dialog entry cleaning. Personally, I cannot imagine situation when this option should be enabled, except when plugin on purpose reshuffles __standard__ dialog entries.
+
+* Restricted cell cleaning
+. Normally this toggle should remain disabled. If enabled, utility will try to remove only STANDARD empty cells (ones that defined in the morrowind.esm, tribunal.esm or bloodmoon.esm). The only situation when I expect this option to be enabled is when original plugin uses some cell (most probably internal cell) that does not contain any settings or references, but itself referenced by some script. I have yet to see such mod.
+
+* Report LEVI/LEVC/LTEX conflicts
+. Enabling this toggle will force utility to report conflicts (while executing "generate detailed conflict report" function) for LEVI, LEVC and LTEX records. Normally, those conflicts are not shown, since LEVI/LEVC conflicts are eliminated by the "merge leveled lists" function and LTEX conflicts are not really conflicts at all.
+* Do not report mergeable conflicts
+. Enabling this toggle will force utility to skip reporting conflicts that can be eliminated by "Merge Objects" or "Merge Dialogs" functions. Please, not that currently not all mergeable conflicts are skipped – any conflicts in the fields that can be referenced multiple times (such as NPCO, NPCS, INDX, etc) will still be reported.
+* Merge unchanged objects
+. Enabling this toggle will force utility to save objects in the Merged_Objects.esp file during "Merge Objects" function even if merged object is identical to the object in the plugin with the latest date. In other words, if object is referenced in the log file, it will be found in the Merged_Objects.esp. This option can be useful when there is an intent to modify Merged_Objects.esp file after merging or when this operation is used to produce template for the compatibility plugin.
+
+== Compatibility issues
+
+Utility should be compatible with just about any mod out there. However, there are some issues you need to be aware about:
+
+* If you will see "missing cell reference" errors after cleaning ESP or ESM file, restore original version and try to clean it with __"Restricted cell cleaning"__ option enabled.
+* Some mods do mark leveled lists in a way that it returns several identical items. So if you see 10 identical ingredients in container it does not mean that "merge leveled lists" function worked incorrectly. Check appropriate plugins in the Construction Set and disable that option if you do not like it. Do not forget to re-merge leveled lists after that.
+* If plugin is bundled with extra files to provide compatibility with other plugins – use them. Don't rely on merging functions alone. Often mod author include extra modifications to provide true compatibility.
+* If you are a modder and use "merge objects" function to create compatibility ESP files, __please check__ that you have only appropriate files enabled in the "Data Files" window. Functions merges objects from __all__ active files and if you by mistake leave some extra plugins enabled, they will be merged too.
+* Utility __WILL NOT__ be a panacea from all mod conflicts. It just tries to eliminate several common issues. It will not eliminate any resource conflicts, script conflicts, landscape conflicts and so on and so forth.
+* If you're confident that you just found a bug in any function (please check that bug is actually caused by utility and is not just an error in the original mod), __please report it__. I cannot fix something that I am not aware of.
+
+== Functions
+
+=== Clean ESP/ESM files
+
+This is one of the main functions. It allows you to select __multiple__ ESP/ESM files and clean them. Cleaning process will do the following:
+
+* Remove any default GMST records (including "evil" 72 entries).
+* Remove any records that are identical to the records found in the morrowind.esm, tribunal.esm or bloodmoon.esm. There only two exceptions to this:
+. For INFO records NNAM/PNAM fields are ignored during comparison (unless restricted dialog cleaning has been enabled)
+. LTEX records (land textures) are not removed.
+* Remove any object references inside CELL records that are identical to the references in the default ESM files.
+* Remove AMBI(ambient light) and WGHT(water level) fields from the CELL records that are identical to the references in the default ESM files.
+* Remove empty CELL records that do not have any related LAND/PGRD records. If restricted cell cleaning is enabled, then only STANDARD empty cells will be removed.
+* Remove any DIAL (dialog) records that do not have associated INFO records, unless it is a journal dialog (type 4).
+* Remove any duplicate objects (two objects with same ID) if requested by users. Re-saving plugin in the TES Construction Set will also eliminate duplicate objects.
+* During save plugin will be automatically upgraded to the file format version 1.3
+
+When you execute this function you will be asked to select one or more files to clean. In order to clean multiple files, select ALL of them simultaneously (e.g. with the help of CTRL and SHIFT keys). Once files are selected, for each of them "Clean" version will be created  by prefixing file name with "Clean ". Old file will never be modified (unless you specified "don't change file names" option). After execution, carefully read both execution log in the dialog window (to see what files where cleaned) and **TESTool.log** file (to see details).
+
+=== Clean ESP/ESM files (save results in "Clean" folder)
+
+This function is identical to the previous one, but all modified files will be saved in the "Clean" subfolder of the original folder where plugins were selected. If subfolder does not exist, it will be created.
+
+=== Merge Leveled Lists for active plugins
+
+This function is very similar to the well known Horatio's utility "Leveled List Merger". This function __is not based__ on the Horatio's algorithm and performs merging somewhat differently and more correctly in my opinion. It also should fix "crates of 10" issue that can appear when using Horatio's Leveled List Merger 1.14.
+
+Leveled lists will be merged only for the __enabled__ ESP/ESM plugins  any non-active plugin in the "Data Files" folder will be ignored. Both leveled creature and leveled item lists are supported  and both are merged according to the same set of rules, described below. Resulting lists are saved in the file **"Merged_Leveled_Lists.esp"** in the "Data Files" folder. As usual, make sure that this file loaded after __all__ other plugins. Or just simply regenerate it each time you selected/deselected active plugins.
+
+Now, rules of merging:
+
+* If any of original leveled lists had "PC Level" toggle enabled, final list also will have it enabled.
+* If any of original lists had "Each item" toggle enabled, final list also will have it enabled.
+* "None chance" value will be set to the __minimum__ non-zero value out of all original lists. If ALL original lists had it at 0, final value also will be 0.
+* When merging list items, only __new__ items will be added. In other words merged list will contain absolute minimum amount of entries, necessary to ensure that each original list is a subset of merged list.
+
+Last point requires an example. Suppose current list has two "3, skeleton" items (both level and name identify unique item  "2, skeleton" is considered to be different from "1, skeleton"). If another plugin contains same list and it has only one or two "3, skeleton" entries  they will be ignored and not merged. If it has three "3, skeleton" entries, resulting list also will have three "3, skeleton" entries. So, basically, only new additional entries will be added during merging.
+
+=== Merge Objects for active plugins
+
+First a disclaimer – this function is considered EXPERIMENTAL and may not work as intended. Use at your own risk and always check log file!
+
+One of the most common conflicts between plugins is the case when two plugins update different fields for the same object. For example one plugin affects gameplay settings and modifies weapon statistics and another plugin provides new look for the weapon and updates only its model. Another case would be when two different plugins add different items to the same container or to the same NPC/creature. This function should identify and resolve majority of such conflicts.
+
+Objects will be merged only for the __enabled__ ESP/ESM plugins  any non-active plugin in the "Data Files" folder will be ignored. Generated objects are saved in the file **"Merged_Objects.esp"** in the "Data Files" folder. As usual, make sure that this file loaded after all other plugins. Or just simply regenerate it each time you selected/deselected active plugins.
+
+For now, only following object types will be merged using this function: CLAS (class), FACT (faction), SOUN (sound), SKIL (skill), MGEF (magic effect), REGN (region info), BSGN (birthsign), STAT (static), DOOR (door), MISC (miscellaneous object), WEAP (weapon), CONT (container), SPEL (spell), CREA (creature), BODY (body part), LIGH (light), ENCH (enchantment), NPC_ (NPC), ARMO (armor), CLOT (clothing), REPA (repair item), ACTI (activator), APPA (alchemy apparatus), LOCK (lockpick), PROB (security probe), INGR (alchemy ingredient), BOOK (book), ALCH (alchemy potion).
+
+Utility will identify objects defined in multiple plugins, identify what actual changes were made by each plugin (if object in question is defined in one of the standard ESMs) and merge those changes into the new object definition. In case if two or more plugins changed same object property, information from latest plugin (the one that with latest date) will be used.
+
+For many fields, comparison is done on the attribute level. For example if one plugin changes weapon weight and another changes weapon range, even though both those values are stored in the WPDT field, they will be recognized and merged.
+
+Currently, following fields will be merged on the attribute level: MGEF.MEDT, MISC.MCDT, WEAP.WPDT, SPEL.SPDT, CREA.AIDT, CREA.NPDT, LIGH.LHDT, ENCH.ENDT, NPC_.AIDT, NPC_.NPDT, ARMO.AODT, CLOT.CTDT, REPA.RIDT, APPA.AADT, LOCK.LKDT, PROB.PBDT, BOOK.BKDT, ALCH.ALDT.
+
+Please, note, that if utility will not merge weapon, armor or clothing objects if plugins defined them as different types (e.g. helm vs boots). Also, it is important to mention that only necessary objects will be saved in the "Merged_Objects.esp"  if merged object is identical to the object in the plugin with the latest date, it will not be saved, but you will find appropriate warning in the log file. This behavior can be overriden by using "Merge unchanged objects" option.
+
+=== Merge Dialogs for active plugins
+
+First a disclaimer – this function is considered BETA and may not work as intended. Use at your own risk and always check log file!
+
+This function will identify conflicts between dialog entries in active plugins and will merge them in the similar fashion as "Merge Objects" functions processes objects. It will also try to ensure correct order of the conflicting entries.
+
+Dialogs will be merged only for the __enabled__ ESP/ESM plugins  any non-active plugin in the "Data Files" folder will be ignored. Generated dialogs are saved in the file **"Merged_Dialogs.esp"** in the "Data Files" folder. As usual, make sure that this file loaded __after__ all other plugins. Or just simply regenerate it each time you selected/deselected active plugins.
+
+Due to the sheer number of dialog entries and necessity to analyze morrowind.esm in order to correctly order dialog entries this function performs much slower than "Merge Objects" function.
+
+=== Generate detailed conflict report
+
+This function will ask for the list of ESP/ESM files and will generate detailed conflict report for those files. Report is a plain text file and will be stored in the **TESTool.log** file. While an idea is very similar to the core functionality of the TES Plugin Conflict Detector utility, this report provides much more detailed information about the nature of conflict. For each conflicting records you will see what fields in these record have different values in different ESP/ESM files. Also, at the end of the report you will find list of non-conflicting plugins and compact cross-reference list of all conflicting plugins. It is __highly recommended__ to clean plugins before running a conflict report.
+
+Normally conflicts for the LEVI, LEVC and LTEX records are not reported, unless you enable this functionality in the Options dialog. Another option will allow to skip some conflicts that can be resolved by using merging functions.
+
+=== Manage active plugins
+
+This function will open another dialog window, very similar to the Morrowind's "Data Files" dialog window. It will allow you to select what plugins should be active (enabled) and will update morrowind.ini accordingly. Most importantly, it will provide two more functions, absent in the Morrowind's window. These functions are:
+
+* Plugin files can be sorted by load order (by date with ESM files at the top  use "Load Order" button), file name or file date (click on appropriate column) .
+* "Update time" button will change file date/time for selected plugins (multiple plugins can be selected) to ensure that selected plugins are loaded last. Utility will not just update file time for all selected plugins to current time, but will find time of the plugin that is loaded last and modify time for selected plugins, incrementing it by 1 minute between plugins. Selected plugins will end up in the end of loading sequence in exactly same order as they are seen on the screen.
+* "Update header" button will update file header for all selected plugins. This includes updating plugin file format to version 1.30 and updating file sizes for all master references. Use this function to get rid of "plugin is not up-to-date" error without re-saving it in the Construction Set.
+
+Also, when you close this window (either accepting or discarding changes), utility will check that master files for all active plugins are also activated. If not, appropriate warning message will appear and list of warnings will be displayed in the execution log box. This is important, since Morrowind will load all master files referenced by active plugins, even if those master files were not enabled directly in the morrowind.ini.
+
+=== "JUST FIX IT!" function
+
+This function is intended to be a one-click quick-fix solution. It is perfect for those who do not understand intricacies of plugin conflicts and would prefer utility to do all the guessing. This function will automatically perform following set of operations for all currently active plugins:
+
+* Update plugin file header (version and master file sizes) to eliminate "plugin is not up-to-date" warning.
+* Clean all currently active plugins as if user enabled "Restricted cell cleaning" option. Plugins will be cleaned in-place – without changing file name or time.
+* Generate Merged_Leveled_Lists.esp and enable it in morrowind.ini if necessary.
+* Generate Merged_Objects.esp and enable it in the morrowind.ini if necessary. "Merge unchanged objects" will be disabled during this operation.
+* Generate Merged_Dialogs.esp and enable it in the morrowind.ini if necessary.
+
+Please, note that merging algorithms are __dependent__ on the plugin loading order. Please re-run **"Just Fix It!"** function if you change date for any plugin.
+
+<hr>
+== Disclaimer
+
+While utility has been thoroughly tested on several hundred plugins, there is always possibility that some bugs were not uncovered yet. Therefore, always ensure that you have backups of your plugins before using this utility. Needless to say, I am not responsible for any damage to your hardware and / or software, done by this utility.
