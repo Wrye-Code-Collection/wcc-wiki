@@ -1,19 +1,21 @@
 {{PAGETITLE="Mods And Beyond"}}
-When I looked for some old Morrowind mods it took me a bit to find them on alternate sites. You will find a list of sites and some of the mods I it took me a whiFinding some of those oldEver wonder what else is out there? Are there other modding sites other then the Nexus?
+== Intent
+When I looked for some old Morrowind mods it took me a bit to find them on alternate sites. I have also found forum posts that provided users with usefull information. However, you will find that most of those posts were not maintained or the sites are no longer available. With none of the links really working the information isn't as usefull. All the links are from these older forum posts except that I have verified that they lead to the information indicated.
 
-In addition to that you will find some of the old Morrowind Modding tools if you need them.
+I also wondered are there any other sites other then the Nexus and the UESP Wiki for mods and other Morrowind utilities. As I continue to find other websites, tutorials and, Utilities I will list them here.
 == Contents
 {{CONTENTS=2}}
 == Official Files
 [[https://www.nexusmods.com/morrowind/mods/42196 | TESCS Fix for Steam GotY edition]]
 == Modding Websites
+. [[https://www.tamriel-rebuilt.org/ | Tamriel Rebuilt]]
 . [[http://www.theassimilationlab.com/forums/ | The Assimilation Lab]]
 . [[http://tesalliance.org/forums/ | TES Alliance]]
 . [[http://mw.modhistory.com/home | Morrowind Modding History]]
 . [[http://download.fliggerty.com/home | Great House of Fliggerty]]
 . [[http://www.wolflore.net/index.php | Wolflore]]
 . [[http://denina.fliggerty.com/forum/ | Fort Elder Scrolls]]
-* [[https://abitoftaste.altervista.org/morrowind/index.php?option=frontpage&Itemid=22 | Morrowind is Home]]
+. [[https://abitoftaste.altervista.org/morrowind/index.php?option=frontpage&Itemid=22 | Morrowind is Home]]
 == Morrowind Mods
 === CanadianIce
 . [[http://mw.modhistory.com/download-44-15071 | Ice's Hideaway & Buster]]
@@ -38,11 +40,18 @@ In addition to that you will find some of the old Morrowind Modding tools if you
   . [[http://download.fliggerty.com/download-58-633 | BSA Registration Utility]] GHF.
   . [[http://www.theassimilationlab.com/forums/files/file/1059-kingpixs-useful-tools/ | BSA Registration Utility]] TAL.
   . [[http://mw.modhistory.com/download-95-12389 | BSA Registration Utility]] MMH.
+* [[https://www.gamefront.com/games/elite-force-2/file/dds-converter-1#Download | DDS Converter]]
+* [[http://mw.modhistory.com/download-95-1662 | Enchanted Editor]] Is an advanced editor and has a lot of features that other tools doesn't have, but it's old and hard to understand how it works.
+* [[http://mw.yacoby.net/Mods/escog.htm | escog]] This tool is used when you want to get rid of both evil GMST's or harmless GMST's and it's recommended to remove GMST's, but always check the readme first because some mods is cleaned even with GMST's.
+* [[http://wryemusings.com/GMST%20Vaccine%200-02.zip | GMST Vaccine by Wrye]]
+* [[https://www.nexusmods.com/morrowind/mods/43907/ | Groundcover Generation Package]] by Noteless
 * [[https://github.com/loot/loot/releases | LOOT]] As of v14.6 LOOT Now supports Morrowind
 * [[http://code.google.com/p/mlox/wiki/Mlox | mlox]] Is similar to what BOSS is for Oblivion to sort your loadorder.
-* [[http://mw.yacoby.net/Mods/escog.htm | escog]] This tool is used when you want to get rid of both evil GMST's or harmless GMST's and it's recommended to remove GMST's, but always check the readme first because some mods is cleaned even with GMST's.
-* [[http://mw.modhistory.com/download-95-1662 | Enchanted Editor]] Is an advanced editor and has a lot of features that other tools doesn't have, but it's old and hard to understand how it works.
-* [[http://mw.modhistory.com/download--2316 | TESFaith]] It's a tool that you use for moving exterior cells from one cell to another cell.
+* [[http://mw.modhistory.com/download-95-5265 | Morrowind Plugin Manager]] Is very easy to use for both installation/uninstallation of mods and it also supports mp3 files, but it doesn't support .7z archives and Wrye Mash has support for both 7z, MP3-files
+* [[http://pmm.planetoblivion.de/Portal/index.php?option=com_content&task=view&id=263&Itemid=104 | NetImmerse Block Editor - NIBLE]]
+* TESFaith Is a tool that you use for moving exterior cells from one cell to another cell.
+  . [[http://mw.modhistory.com/download--2316 | TESFaith 0.95]] It's a tool that you use for moving exterior cells from one cell to another cell.
+  . [[http://mw.modhistory.com/download-95-14908 | TESFaith 0.97alpha]] It's a tool that you use for moving exterior cells from one cell to another cell.
 * [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/ | TESTool]] Is most basic tool there is and you must use TESTool to clean mods with merged objects, but remember sometimes TESTool can create more problems than fixing them so always backup your files.
 * [[http://mw.modhistory.com/download-95-5289 | The Elder Scrolls Advanced Mod Editor]] Is a powerful cleaning tool for modders similar to TES4Edit as a cleaning tool, who use TES Advanced Mod Editor before they release a mod or a patch.
 * TES Mod Utility is another tool similar to TESAME, but I don't know if anyone are actually using it.
@@ -51,7 +60,6 @@ In addition to that you will find some of the old Morrowind Modding tools if you
   * [[http://mw.modhistory.com/download-95-5223 | TES Mod Utility TES Mod Utility 2.01]]
 * [[https://www.nexusmods.com/morrowind/mods/3874 | TES Plugin Conflict Detector]] IIRC you can use TESPCD to clean mods, but it's an excellent tool for troubleshooting similar to what TES4Edit is for Oblivion.
 * [[http://mw.modhistory.com/download--5258 | TES Dependency Tool Kit]] You can use it if you need to either add or remove a dependency for a mod for example an [[http://forums.bethsoft.com/topic/1376740-relz-morrowind-comes-alive-70/ | updated patch]] between two [[http://forums.bethsoft.com/topic/1380688-relz-tamriel-rebuilt-sacred-east-10-2/ | mods]]
-* [[http://mw.modhistory.com/download-95-5265 | Morrowind Plugin Manager]] Is very easy to use for both installation/uninstallation of mods and it also supports mp3 files, but it doesn't support .7z archives and Wrye Mash has support for both 7z, MP3-files
 * Wrye Mash
   . [[https://github.com/Wrye-Code-Collection/Wrye-Mash/releases/tag/88 | Wrye Mash Stand Alone v88]], by [[https://sharlikran.github.io/ | Sharlikran]]
   . [[https://www.nexusmods.com/morrowind/mods/45439 | Wrye Mash - Polemos fork - 2019]], by [[https://github.com/polemion/Wrye-Mash-Polemos | Polemos]]
@@ -65,8 +73,8 @@ In addition to that you will find some of the old Morrowind Modding tools if you
   . [[http://forums.bethsoft.com/topic/1331996-yacobys-wrye-mash-fork/ | Wrye Mash Stand Alone]], by [[http://www.jacobessex.com/ | Yacoby]]
 [[se:]]
 {% endraw %}
+* [[ https://cs.elderscrolls.com/index.php?title=DDS_Tools | DDS Tools CS Wiki]]
 * A couple of other tools can be found with the [[http://wayback.archive.org/web/ | Wayback Machine]] so please be patient. Here is a [[http://forums.bethsoft.com/topic/24-comprehensive-tutorial-and-useful-link-list/ | list]] of other useful tools.
-* [[https://www.nexusmods.com/morrowind/mods/43907/ | Groundcover Generation Package]] by Noteless
 
 === Ghostwheel's Morrowind utilities and documents:
 * [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/TES3_BSA_File_Format.htm | TES3 BSA File Format Description]]
@@ -78,6 +86,12 @@ In addition to that you will find some of the old Morrowind Modding tools if you
 * [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/TESTool.zip | TES Plugin Tool 1.3]] – ESM/ESP cleaning tool, leveled list merger, **object and dialog entry merger** and more. Documentation can be found [[http://web.archive.org/web/20040428231923/http://www34.brinkster.com/ghostwheel/TESTool.htm | HERE]].
 
 All programs are ZIP archives with text/html file documentation included in the archive. **READ IT!**
+
+== Pages containing other tutorials, usefull information and/or utilities
+* [[http://niftools.sourceforge.net/wiki/NifTools | NifTools]]
+* [[http://www.designamatic.com/MW-Home.html | Klinn's Advice to New Morrowind Modders]]
+* [[https://www.tamriel-rebuilt.org/?p=modding_data/tutorials | Tamriel Rebuilt Tutorials]]
+* [[https://sites.google.com/site/redguardslayer/phijama%27swisdom | Summon Creation and Icon Creation tutorials by TumbleDumpling]]
 
 == Modelling/Texturing tutorials
 . [[https://www.nexusmods.com/morrowind/mods/6847?tab=files | SriKandi's Skinning Tutorial]]
@@ -103,6 +117,7 @@ All programs are ZIP archives with text/html file documentation included in the 
 
 == Quest tutorials
 . [[http://www.themcnews.com/morrowind.htm | Skydiver's basic quest tutorial]]
+. [[http://www.themcnews.com/Sample%20Quest.htm | Sample Quest Dialouge Tutorial by Darkness of Light]]
 
 == Tools
 . [[http://www.blender3d.org | Blender3d homepage]]
@@ -110,6 +125,6 @@ All programs are ZIP archives with text/html file documentation included in the 
 . [[https://www.getpaint.net/index.html | paint.net]]
 
 == Credits
-Links are taken from the following posts.
+Some links are taken from the following posts. Others are simply things I found hunting down the links
 
 [[http://forums.bethsoft.com/topic/24-comprehensive-tutorial-and-useful-link-list/ | Comprehensive Tutorial and Useful Link List]]
