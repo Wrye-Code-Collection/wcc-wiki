@@ -83,7 +83,7 @@ body {
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
-  // Preserve these colors the look goof on the header background
+  /* Preserve these colors the look goof on the header background */
   color: rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
@@ -435,7 +435,7 @@ body {
     width: 100%;
     overflow: auto;
     word-break: normal;
-    word-break: keep-all; // For Firefox to horizontally scroll wider tables.
+    word-break: keep-all; /* For Firefox to horizontally scroll wider tables. */
     -webkit-overflow-scrolling: touch;
     th {
       font-weight: bold;
@@ -469,12 +469,12 @@ body {
   }
 }
 
-// adding none to this hides the checkbox
+/* adding none to this hides the checkbox */
 input[id^="spoiler"] {
   display: none;
 }
 
-// closed button
+/* closed button */
 input[id^="spoiler"]+label {
   display: inline;
   margin: 10px 0px;
@@ -489,14 +489,14 @@ input[id^="spoiler"]+label {
   transition: all .6s;
 }
 
-// button after opened
+/* button after opened */
 input[id^="spoiler"]:checked+label {
   color: rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-// the spoiler tag text box
+/* the spoiler tag text box */
 input[id^="spoiler"]~.spoiler {
   width: auto;
   height: 0;
@@ -514,7 +514,7 @@ input[id^="spoiler"]~.spoiler {
   }
 }
 
-//formatting for the text in the box such as padding
+/* formatting for the text in the box such as padding */
 input[id^="spoiler"]:checked+label+.spoiler {
   height: auto;
   opacity: 1;
@@ -721,7 +721,7 @@ a.yellow {
   }
 }
 
-// Main content for Wrte Text Paragraphs
+/* Main content for Wrte Text Paragraphs */
 .main-content {
   p.empty {
     margin-top: 0.1rem;
@@ -750,6 +750,44 @@ a.yellow {
   p.list-6 {
     margin-left: 1.00in;
     text-indent: -0.15in
+  }
+}
+
+section.quote {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 1px 0px 1px 0px;
+
+  margin-bottom: 0.5rem;
+  color: rgba(150, 150, 150, 0.8);
+  background-color: rgba(150, 150, 150, 0.08);
+  border-color: rgba(150, 150, 150, 0.2);
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  box-shadow: 5px 3px 30px black;
+  p {
+    padding: 0.1rem 0.3rem;
+    line-height: 24px;
+  }
+  p.empty {
+    padding: 0px 0px 0px 0px;
+    line-height: 24px;
+  }
+  .attr {
+    padding-bottom: 0.1rem;
+    font: normal 400 1.5em/1.5em 'Montserrat', sans-serif;
+    background-color: rgba(150, 150, 150, 0.20);
+    letter-spacing: 0.04em;
+    text-align: left;
+    &:before {
+      content: " - ";
+    }
+    &:after {
+      content: " - ";
+    }
   }
 }
 

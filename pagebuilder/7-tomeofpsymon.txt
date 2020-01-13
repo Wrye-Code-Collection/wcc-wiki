@@ -49,7 +49,7 @@ My critique of the mod manager is not meant to be unfair to it and I will own th
 * The OBMM can crash and when it does it will lose records of all installed OMODS and require a reinstall of all of them. The unfortunate part of this is the more OMODS you have installed the more likely that this is to happen. This, ultimately, is what made me want to move onto another installer. After several crashes in a short span of time I was about ready to give up on a modded Oblivon.
 
 In concurrent development there was another utility for these games brought to us by Wrye. This was originally the Wrye Bash program for Oblivion but he also created a Wrye Mash program for Morrowind. Wrye Bash (sometimes shortened to WB) is a multipurpose tool with many many features for modders (mod users and mod makers alike). Here is a short and very incomplete summary of its features:
-
+[[bb:Quote]]
 * An advanced load order tool (adjust and manage load ordering of mods).
 * A save game managing tool (create profiles, remove same game bloat, etc).
 * Allow automating of INI edits.
@@ -60,25 +60,29 @@ In concurrent development there was another utility for these games brought to u
 * Further merge mods and reduce active mods thereby increasing max mods useable.
 * Import only specific records within mods and further control load order via Bash Tags.
 * Library of game settings that can be adjusted with each bashed patch building.
-
+[[be:]]
 The last portion of Wrye Bash that Wrye worked on before passing the project on to others to manage in his absence is what is known as BAIN which is short for BAsh INstaller. The BAIN component aptly handles the shortcomings of the Oblivion Mod Manager and in my opinion offers features that greatly expand upon the functions of mod installer programs to date. The features that I'd like to point out are:
 
+[[bb:Quote]]
 * BAIN encourages thinking about what a manual install is and how things work 'under the hood.'
 * BAIN offers minute control of files and gives sensible conflict reports and control options of resolving those conflicts.
 * BAIN gives us the ability to manage install order - a term analogous to load order with regard to esm/esp files.
 * BAIN Provides detailed reports of what it installs and can tell you if what was installed has changed, been overwritten, is missing, or even if a file was not installed.
 * BAIN requires no special OMOD files and can work with 7zip, rar and other common archiving methods (7zip being the recommended though), as well as, regular file folders (projects).
 * BAIN offers the ability to create your own packages that can include any number of mods with the limit being only what you can manage to create with file directory juggling.
+[[be:]]
 
 Most of what this thread will be about is the general uses of the BAIN tab, formatting of BAIN ready packages, and the creation of custom BAIN packages.
 
 Many took my last thread as if I were bashing on OBMM. Not true and the point is that really they each have their strengths. There are things that OBMM can do that Wrye Bash cannot. Some of these include:
 
+[[bb:Quote]]
 * The installation and merging of Shaders. installation of shaders is possible with Bash 291, but not shader merging or editing.
 * OBMM Will install anything you put into an OMOD and create any directory you create as well. Including other archives and executable files.
 * Scripted installs that edit the ini automatically and change the name of plugins on install. There are plans to create scripted BAIN wizards - keep checking new bash versions.
 * BSA management including extraction and the packaging of BSA files.
 * OBMM handles foriegn language characters on file names (unicode) much better than BAIN can.
+[[be:]]
 
 [[https://en.uesp.net/wiki/Tes4Mod:Bash_vs._OBMM | More about comparing BAIN and OBMM]] (though a bit outdated).
 
@@ -149,7 +153,7 @@ Upon opening the tab one is confronted with 5 panels. Along the entire left side
 Much was made previous to BAIN about the importance of install orders and what mods and their attendant replacers should be installed before (or after) any number of other mods. These concerns are no as of longer of great import with the inherent functionality of BAIN. The install order can now be adjusted without necessarily uninstalling or reinstalling as the management of all files will be handled by BAIN.
 
 Key functions of the installers tab are found with the info-tabs (sub-tabs to the main tab which is the installers tab) that are found at upper right side of the installers tab these include:
-
+[[bb:Quote]]
 * General info-tab: The ability to view the contents of a package prior to installing.
 * Matched info-tab: The ability to see what in the packages matches what is already installed in the data folder. If two files share the same name but different sizes then that is not a match.
 * Missing info-tab: The ability to view if anything that was installed from the package has since gone missing.
@@ -157,12 +161,13 @@ Key functions of the installers tab are found with the info-tabs (sub-tabs to th
 * Conflicts info-tab: will tell you what other packages are either overwriting the contents of the current package or what packages the current package is overwriting. This is reflected in the designation of higher and lower. If conflicting with manual or OBMM installation then no info is given here, but most likely is given in the other sub-tabs. This tab provides a meaningful conflict detector for replacers that can give valuable information about what your install order should be.
 * Underridden info-tab: Shows packages which should be overridden, but are not, due to install order errors. This will often give reports after the install order of packages is changed.
 * Skipped info-tab: will tell you what was not installed. This is likely because it is a file or directory type that is not recognized by BAIN.
-
+[[be:]]
 
 The next two panels are located below these sub-tabs and are content filters:
-
+[[bb:Quote]]
 * A filter for sub-packages: Shows which of the sub-packages are installed (explained later).
 * A filter for esm/esp: Shows which of the esm or esp are installed and the area where you also decide which (if any) of the plugins or master files you want installed.
+[[be:]]
 
 The final pane is a comments pane and it allows you to input comments about each package. Contrary to hopeful thinking it does not present the readme for the package. You ca, however, copy and paste a readme or two into this pane. I use it to write myself little notes like 'Load this package after package so and so.'
 
@@ -785,6 +790,7 @@ With thought-out naming and numbering conventions one could even do all three at
 
 Taking Architecture as an example for choice 1 above one could create sub-packages for a texture replacer out of each folder within the Architecture folder.
 
+[[sb:spoiler1 | Spoiler]]
 <pre>
 ├[anvil]
 │ └[anvilinterior]
@@ -828,7 +834,7 @@ Taking Architecture as an example for choice 1 above one could create sub-packag
 │ └[bravil]
 └[tents]
 </pre>
-
+[[se:]]
 This would be a very complex task especially if you were to then combine with other texture replacers so that only one option of each is installed. Option 1 above gives a lot of organization over a specific replacer set while Option 2 provides the most control with relation to other replacer sets. Option 3 probably has the main advantage of an economical replacer package in terms of managing your installers tab, but again using naming conventions could again make this redundant.
 
 Of a cautionary note when having textures packs that may lay over the top (be lower in the install order) of other texture replaces it is important to note which versions may also have normal maps and or even meshes.
@@ -845,6 +851,7 @@ These examples illustrate both the breaking apart of mods into component parts a
 
 This BAIN project combines most of the LOD variants available today. The package is divided up into five distinct sets of sub-packages or directories. The Core files are optional to use, Border regions are next, then the normal maps, color maps, and finally the optimized land meshes. Further the Shivering Isles maps are separated out for further customization. The purpose of this is to be able to have a BAIN archive that allows for easy switching between these mods in order to test mixing and matching, stability, and when what your looking at bores you. Most of these mods came as is and only cover the either normal or color maps. Zacherots, and Xerus had combined maps which I extracted and separated.
 
+[[sb:spoiler2 | Spoiler]]
 <pre>
 LOD Compilation-BAIN
 │
@@ -902,12 +909,13 @@ LOD Compilation-BAIN
 ├[40 Noise Replacer - Koldorn Strong]
 ├[40 [[https://www.nexusmods.com/oblivion/mods/17300 | Noise Replacer - Xerus] ] Again if the terms are unfamiliar please read over the Texture Overhaul page for more information. This package zipped in a non solid format comes to about 1 gig in size.
 </pre>
-
+[[se:]]
 
 == Sky Replacers Compilation
 
 This compilation focuses on making the sun, moons, stars, and nebula more interesting. It falls short of [[https://www.nexusmods.com/oblivion/mods/21945/ | Cosmic Sky Cycling]] because it does not cycle. But, then again one less thing running in the back ground. Actually I went through many of the images with Cosmic Night sky and only liked a handful. Many merely had nebula that invaded the entire sky and drowned out stars or mismatched very badly with existing star mods. Plus, there are many great crafted stars included below. Of the nasa images only nebula that was clear, not glaring, and meshed well with star packs got my inclusion.
 
+[[sb:spoiler3 | Spoiler]]
 <pre>
 Sky Climates-BAIN
 │
@@ -1014,7 +1022,7 @@ Sky Climates-BAIN
 ├[50 Nebula CSC NGC 1365 Island Universe]
 ├[50 Nebula CSC NGC1333 Reflection Nebula] Sorry I'm not going to include links as it would be a mountain of work to get them all checked and in place. The old thread had a bunch of links, but it also only contained a lighter version of this. That said this package is only 90 mb that is really light considering the amount of diversity it gives to the game. Searching under the names sky, stars, moons, and sun and you will find them. 
 </pre>
-
+[[se:]]
 = BAIN Wizards, OMODS, and BAIN Conversion Files
 
 Many familiar with Oblivion Mod Manager had lamented that BAIN lacked the ability to provide scripted installations of mods that OBMM provided. OBMM is able to modify the Oblivion ini, Mod ini files, rename plugins, arrange package contents and other related goodies that have made it so popular over the years.

@@ -588,6 +588,8 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reCTypeEnd = re.compile('\*\/$')
     reSpoilerBegin = re.compile(r'\[\[sb:(.*?)\]\]')
     reSpoilerEnd = re.compile(r'\[\[se:\]\]')
+    reBlockquoteBegin = re.compile(r'\[\[bb:(.*?)\]\]')
+    reBlockquoteBEnd = re.compile(r'\[\[be:\]\]')
     # --Defaults ----------------------------------------------------------
     level = 1
     spaces = ''
@@ -605,6 +607,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     dupeEntryCount = 1
     # --Read source file --------------------------------------------------
     ins = file(srcFile)
+    blockAuthor = "Unknown"
     for line in ins:
         isInParagraph, wasInParagraph = False, isInParagraph
         # --Preformatted? -----------------------------
@@ -636,6 +639,8 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         maEmpty = reEmpty.match(line)
         maSpoilerBegin = reSpoilerBegin.match(line)
         maSpoilerEnd = reSpoilerEnd.match(line)
+        maBlockquoteBegin = reBlockquoteBegin.match(line)
+        maBlockquoteEnd = reBlockquoteBEnd.match(line)
         # --Contents ----------------------------------
         if maContents:
             if maContents.group(1):
@@ -701,6 +706,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         # --Empty line
         elif maEmpty:
             line = spaces + '<p class="empty">&nbsp;</p>\n'
+        # --Spoiler Tag ---------------------------
         elif maSpoilerBegin:
             line = re.sub('sb:', '', line)
             spoilerID, spoilerName = spoilerTag(line)
@@ -714,6 +720,26 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             continue
         elif maSpoilerEnd:
             line = '</div>\n'
+        # --Blockquote ---------------------------
+        elif maBlockquoteBegin:
+            firstLine = '<section class="quote">\n'
+            outLines.append(firstLine)
+            author = re.sub(r'\[\[bb:(.*?)\]\]\n', r'\1', line)
+            if len(author) < 1:
+                author = blockAuthor
+            authorLine = '<p class="attr">{}</p>\n'.format(author)
+            outLines.append(authorLine)
+            # secondLine = '<div class="quote">\n'
+            # outLines.append(secondLine)
+            # openQuote = '<p class="quotetext">\n'
+            # outLines.append(openQuote)
+            continue
+        elif maBlockquoteEnd:
+            # closingQuote = '</p>\n'
+            # outLines.append(closingQuote)
+            # closingDiv = '</div>\n'
+            # outLines.append(closingDiv)
+            line = '</section>\n'
         # --Misc. Text changes --------------------
         line = reMDash.sub('&#150', line)
         line = reMDash.sub('&#150', line)
