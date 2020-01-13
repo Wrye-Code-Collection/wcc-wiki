@@ -524,35 +524,31 @@ input[id^="spoiler"]:checked+label+.spoiler {
 .main-content {
   h1.grhead1 {
 	font-size: 1.40rem;
-	margin-left: 0.15in; 
-	text-indent: -0.15in;
-    margin-top: 0.09rem; 
-    margin-bottom: 0.09rem;
+    margin: 1px 0px 1px 0px;
     color: var(--toc-header-text);
+	padding: 0px 0px 0px 0px;
+    line-height: 24px;
   }
   h2.grhead2 {
 	font-size: 1.30rem;
-	margin-left: 0.3in; 
-	text-indent: -0.15in;
-    margin-top: 0.09rem; 
-    margin-bottom: 0.09rem;
+    margin: 1px 0px 1px 25px;
     color: var(--toc-header-text);
+	padding: 0px 0px 0px 0px;
+    line-height: 24px;
   }
   h3.grhead3 {
 	font-size: 1.20rem;
-	margin-left: 0.45in; 
-	text-indent: -0.15in;
-    margin-top: 0.09rem; 
-    margin-bottom: 0.09rem;
+    margin: 1px 0px 1px 50px;
     color: var(--toc-header-text);
+	padding: 0px 0px 0px 0px;
+    line-height: 24px;
   }
   h4.grhead4 {
 	font-size: 1.10rem;
-	margin-left: 0.6in; 
-	text-indent: -0.15in;
-    margin-top: 0.09rem; 
-    margin-bottom: 0.09rem;
+    margin: 1px 0px 1px 75px;
     color: var(--toc-header-text);
+	padding: 0px 0px 0px 0px;
+    line-height: 24px;
   }
 }
 
