@@ -1,10 +1,18 @@
-<section class="page-header">
-    <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-    <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-    {% include image-nourl.html max-width="130px" file="img/Wrye Mash_128_transparency.png"
-    alt="Wrye Avatar" caption="" %}
+<section class="grid-header">
+    <div class="gridhead1"></div>
+    <div class="gridhead2">
+        {% include image-nourl.html max-width="130px" file="img/Wrye Mash_128_transparency.png"
+        alt="Wrye Avatar" caption="" %}
+    </div>
+    <div class="gridhead3">
+        <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+        <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+    </div>
+    <div class="gridhead4"></div>
+    <div class="gridhead5">
     <a href="https://sharlikran.github.io/" class="btn">Sharlikran</a>
     <a href="https://wrye-code-collection.github.io/" class="btn">wrye-code-collection</a>
     <a href="https://wrye-code-collection.github.io/wcc-wiki/" class="btn">Wrye-Code-Collection Wiki</a>
     <a href="https://www.afkmods.com/index.php?/topic/5578-wrye-bash-wiki-discussion-thread/" class="btn">Wiki Discussion Thread</a>
+	</div>
 </section>

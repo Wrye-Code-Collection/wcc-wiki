@@ -175,28 +175,6 @@ body {
   }
 }
 
-.page-header {
-  color: var(--cayman-header-heading);
-  text-align: center;
-  background-color: var(--cayman-header-background);
-  background-image: linear-gradient(120deg, var(--cayman-header-background-secondary), var(--cayman-header-background));
-  @include full {
-    padding: 3rem 4rem;
-  }
-  @include huge {
-    padding: 2rem 3rem;
-  }
-  @include large {
-    padding: 1rem 2rem;
-  }
-  @include medium {
-    padding: 0.9rem 1.50rem;
-  }
-  @include small {
-    padding: 0.9rem 1.25rem;
-  }
-}
-
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;
@@ -236,6 +214,82 @@ body {
   @include small {
     font-size: 1rem;
   }
+}
+
+.gridhead1 { grid-area: padding1; }
+.gridhead2 { grid-area: image; }
+.gridhead3 { grid-area: header; }
+.gridhead4 { grid-area: padding2; }
+.gridhead5 { grid-area: buttons; }
+
+.toc1 { grid-area: lefttoc; }
+.toc2 { grid-area: righttoc; }
+
+.grid-header {
+  display: grid;
+  color: var(--cayman-header-heading);
+  background-color: var(--cayman-header-background);
+  background-image: linear-gradient(120deg, var(--cayman-header-background-secondary), var(--cayman-header-background));
+  div.gridhead2 {
+    text-align: right;
+  }
+  div.gridhead3 {
+    text-align: left;
+  }
+  div.gridhead5 {
+    text-align: center;
+  }
+  @include full {
+    grid-template-areas: 'padding1 image header padding2' 'buttons buttons buttons buttons';
+  }
+  @include huge {
+    grid-template-areas: 'padding1 image header padding2' 'buttons buttons buttons buttons';
+  }
+  @include large {
+    grid-template-areas: 'padding1 image header padding2' 'buttons buttons buttons buttons';
+  }
+  @include medium {
+    grid-template-areas: 'padding1 image header padding2' 'buttons buttons buttons buttons';
+  }
+  @include small {
+    grid-template-areas: 'padding1' 'image' 'header' 'padding2' 'buttons';
+    div.gridhead2 {
+      text-align: center;
+    }
+    div.gridhead3 {
+      text-align: center;
+    }
+    div.gridhead5 {
+      text-align: center;
+    }
+  }
+}
+
+.grid-toc {
+  display: grid;
+  @include full {
+  grid-template-areas:
+    'lefttoc righttoc';
+  }
+  @include huge {
+  grid-template-areas:
+    'lefttoc righttoc';
+  }
+  @include large {
+  grid-template-areas:
+    'lefttoc righttoc';
+  }
+  @include medium {
+  grid-template-areas:
+    'lefttoc righttoc';
+  }
+  @include small {
+  grid-template-areas:
+    'lefttoc' 'righttoc';
+  }
+}
+.grid-toc div {
+  background: var(--body-background);
 }
 
 .scriptTable {
