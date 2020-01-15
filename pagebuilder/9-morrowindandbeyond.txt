@@ -5,7 +5,7 @@ When I looked for some old Morrowind mods it took me a bit to find them on alter
 I also wondered are there any other sites other then the Nexus and the UESP Wiki for mods and other Morrowind utilities. As I continue to find other websites, tutorials and, Utilities I will list them here.
 == Contents
 {{CONTENTS=2}}
-== Official Files
+== Unofficial CS Fix
 [[https://www.nexusmods.com/morrowind/mods/42196 | TESCS Fix for Steam GotY edition]]
 == Modding Websites
 . [[https://www.tamriel-rebuilt.org/ | Tamriel Rebuilt]]
@@ -16,8 +16,10 @@ I also wondered are there any other sites other then the Nexus and the UESP Wiki
 . [[http://www.wolflore.net/index.php | Wolflore]]
 . [[http://denina.fliggerty.com/forum/ | Fort Elder Scrolls]]
 . [[https://abitoftaste.altervista.org/morrowind/index.php?option=frontpage&Itemid=22 | Morrowind is Home]]
+. [[http://lovkullen.net/Emma/index.htm | Emma's Elder Scrolls Site]]
 == Morrowind Mods
 === CanadianIce
+* [[http://canadianice.moddersrealm.com/index.html | moddersrealm.com]] Home of CanadianIce & Howndog
 . [[http://mw.modhistory.com/download-44-15071 | Ice's Hideaway & Buster]]
 . [[http://mw.modhistory.com/download-21-4714 | MQBInstaller 3.1]]
 . [[http://mw.modhistory.com/download-80-14859 | Metal Queen Boutique v3.1]]
