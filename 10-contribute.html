@@ -98,8 +98,7 @@ title: Contributing
 <h2 class="header2" id="Syntax">Syntax</h2>
 <h3 class="header3" id="YourPagesTitle">Your Pages Title</h3>
 <p class="empty">&nbsp;</p>
-<p>Your page title will become the first line on the page and will be assigned as the first header. To indicate this text use the following Wrye Tag.</p>
-Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with opening and ending double curly brackets. The text in quotes will become the title of your page as shown below.
+<p>Your page title will become the first line on the page and will be assigned as the first header. To indicate this text use the following Wrye Tag. Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with opening and ending double curly brackets. The text in quotes will become the title of your page as shown below.</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="YourPageTitle">Your Page Title</h1>
 <p class="empty">&nbsp;</p>
@@ -120,12 +119,12 @@ Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with openi
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; Like the previous heading the amount of leading '#'s determines the level of the heading.</p>
 <p class="list-1">&bull;&nbsp; These headings will not have a bar as a background and will have green text</p>
-<p class="empty">&nbsp;</p>
 <h1 id="Heading11">Heading 1</h1>
 <h2 id="Heading22">Heading 2</h2>
 <h3 id="Heading33">Heading 3</h3>
 <h4 id="Heading44">Heading 4</h4>
 <p class="empty">&nbsp;</p>
+<hr>
 <h3 class="header3" id="TableofContents">Table of Contents</h3>
 <p class="empty">&nbsp;</p>
 <p>A table of contents is automatically generated from the headers in the document. It is best to place the first content tag where you want the table of contents to be, and after a header named Contents. The number indicates which header level will be used.</p>
@@ -134,7 +133,7 @@ Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with openi
 <p class="empty">&nbsp;</p>
 <p>You can also disable using headers in the table of contents by using a value of <code>0</code>. The headers will not be recorded until there is another contents tag with a value greater thean 0.</p>
 <p class="empty">&nbsp;</p>
-<font class="yellow">NOTE:</font> You can only use one value for the document. Meaning if you use the value of 2 you can not use 3 and later 4 and then later 2 again. Instead use headers in a meaningfull way or omit the header by using a 0 value contents tag.
+<p><font class="yellow">NOTE:</font> You can only use one value for the document. Meaning if you use the value of 2 you can not use 3 and later 4 and then later 2 again. Instead use headers in a meaningfull way or omit the header by using a 0 value contents tag.</p>
 <p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="Bullets">Bullets</h3>
@@ -142,6 +141,8 @@ Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with openi
   <p class="list-2">&bull;&nbsp; Bullets 2 - two spaces and an asterisk <code>*</code> would precede the text</p>
     <p class="list-3">&bull;&nbsp; Bullets 3 - four spaces and an asterisk <code>*</code> would precede the text</p>
       <p class="list-4">&bull;&nbsp; Bullets 4 - six spaces and an asterisk <code>*</code> would precede the text</p>
+        <p class="list-5">&bull;&nbsp; Bullets 5 - six spaces and an asterisk <code>*</code> would precede the text</p>
+          <p class="list-6">&bull;&nbsp; Bullets 6 - six spaces and an asterisk <code>*</code> would precede the text</p>
 <p class="list-1">+&nbsp; Alternate bullet char - a plus and a space <code>+ </code> would precede the text</p>
 <p class="list-1">o&nbsp; Alternate bullet char</p>
 <p class="list-1">&nbsp;&nbsp; For an invisible bullet char you would use a period <code>.</code> at the beginning of the line.</p>
@@ -157,13 +158,12 @@ Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with openi
 <p>There are two ways to make a Header Rule to separate content. The traditional HTML <code>hr</code> tag surrounded by <code><></code> symbols and by adding 4 or more dashes <code>-</code> at the beginning of a line.</p>
 <p class="empty">&nbsp;</p>
 <hr>
-<p class="empty">&nbsp;</p>
 <h3 class="header3" id="Links">Links</h3>
 <p>The link syntax can not be shown very well because it will be translated into a link. For this reason I will use only one brace. <font class="orange">NOTE:</font> you will need two braces for a valid link.</p>
 <p class="empty">&nbsp;</p>
 <p>Below there is an example for an Internal link. An internal link is used to navigate to another section of the document. For example you might want to link to how to install python. <a  href="#PythonInstallation">Python Installation</a></p>
 <p class="empty">&nbsp;</p>
-<font class="yellow">NOTE:</font> Wrye Text recognizes duplicate header names such as "Contents" and "Contents". If you must duplicate a header name for clarity then you will need to examine the HTML and look for the ID produced by the Python code for the HTML.
+<p><font class="yellow">NOTE:</font> Wrye Text recognizes duplicate header names such as "Contents" and "Contents". If you must duplicate a header name for clarity then you will need to examine the HTML and look for the ID produced by the Python code for the HTML.</p>
 <p class="empty">&nbsp;</p>
 <p>You need to separate the link address and the link name with a pipe <code>|</code> symbol which you get by using <code>SHIFT + \</code>.</p>
 <p class="empty">&nbsp;</p>
@@ -204,12 +204,9 @@ Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with openi
 <p class="empty">&nbsp;</p>
 <p>You may be contributing a guide that has people download a mod and you wish to color code them to indicate a special purpose. Maybe the file needs to be converted from Skyrim to Skyrim SE or maybe the mod has special install procedures that make it complicated for new users. Whatever the case may be there is a tag that you may use to indicate the link color.</p>
 <p class="empty">&nbsp;</p>
-<code>{% raw %}{{a:green}}{% endraw %}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.
-<p class="empty">&nbsp;</p>
-<code>{% raw %}[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}] <a class="orange" href="https://sharlikran.github.io/">This Link Text is Orange</a>{% endraw %}</code>
-<p class="empty">&nbsp;</p>
-<font class="yellow">Reminder:</font> Only one brace is used so you can see the syntax. The link in your text document requires two braces at the begining and the end of the link.
-<p class="empty">&nbsp;</p>
+<p><code>{% raw %}{{a:green}}{% endraw %}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.</p>
+<p><code>{% raw %}[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}] <a class="orange" href="https://sharlikran.github.io/">This Link Text is Orange</a>{% endraw %}</code></p>
+<p><font class="yellow">Reminder:</font> Only one brace is used so you can see the syntax. The link in your text document requires two braces at the begining and the end of the link.</p>
 <p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="Html">Html</h3>
@@ -264,8 +261,7 @@ Example of text in the spoiler tag
 */
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
-<p class="list-1">&nbsp;&nbsp; <font class="yellow">NOTE:</font> Comments inside of <code>pre</code> or preformatted text elements will not be treated as a comment.</p>
-<p class="list-1">&nbsp;&nbsp; <font class="orange">NOTE:</font> For now both single and multi line comments require a trailing <code>*/</code>. If you do not end the comment then the HTML may not be generated past the invalid syntax.</p>
+<p><font class="yellow">NOTE:</font> Comments inside of <code>pre</code> or preformatted text elements will not be treated as a comment. <font class="orange">NOTE:</font> For now both single and multi line comments require a trailing <code>*/</code>. If you do not end the comment then the HTML may not be generated past the invalid syntax.</p>
 <p class="empty">&nbsp;</p>
 <h4 class="header4" id="InvalidSyntax">Invalid Syntax</h4>
 <p class="empty">&nbsp;</p>

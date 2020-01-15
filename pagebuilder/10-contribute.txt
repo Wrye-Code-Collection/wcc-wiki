@@ -29,8 +29,7 @@ As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>.
 == Syntax =====================================================================
 === Your Pages Title
 
-Your page title will become the first line on the page and will be assigned as the first header. To indicate this text use the following Wrye Tag.
-Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with opening and ending double curly brackets. The text in quotes will become the title of your page as shown below.
+Your page title will become the first line on the page and will be assigned as the first header. To indicate this text use the following Wrye Tag. Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with opening and ending double curly brackets. The text in quotes will become the title of your page as shown below.
 
 {{CONTENTS=0}}
 = Your Page Title
@@ -55,7 +54,6 @@ Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with openi
 
 * Like the previous heading the amount of leading '#'s determines the level of the heading.
 * These headings will not have a bar as a background and will have green text
-
 {{CONTENTS=0}}
 # Heading 1
 ## Heading 2
@@ -63,6 +61,7 @@ Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with openi
 #### Heading 4
 {{CONTENTS=3}}
 
+<hr>
 === Table of Contents
 
 A table of contents is automatically generated from the headers in the document. It is best to place the first content tag where you want the table of contents to be, and after a header named Contents. The number indicates which header level will be used.
@@ -79,6 +78,8 @@ You can also disable using headers in the table of contents by using a value of 
   * Bullets 2 - two spaces and an asterisk <code>*</code> would precede the text
     * Bullets 3 - four spaces and an asterisk <code>*</code> would precede the text
       * Bullets 4 - six spaces and an asterisk <code>*</code> would precede the text
+        * Bullets 5 - six spaces and an asterisk <code>*</code> would precede the text
+          * Bullets 6 - six spaces and an asterisk <code>*</code> would precede the text
 + Alternate bullet char - a plus and a space <code>+ </code> would precede the text
 o Alternate bullet char
 . For an invisible bullet char you would use a period <code>.</code> at the beginning of the line.
@@ -94,7 +95,6 @@ o Alternate bullet char
 There are two ways to make a Header Rule to separate content. The traditional HTML <code>hr</code> tag surrounded by <code><></code> symbols and by adding 4 or more dashes <code>-</code> at the beginning of a line.
 
 ----
-
 ===Links
 The link syntax can not be shown very well because it will be translated into a link. For this reason I will use only one brace. <font class="orange">NOTE:</font> you will need two braces for a valid link.
 
@@ -142,11 +142,8 @@ Obviously some colors will not contrast that well against this dark background b
 You may be contributing a guide that has people download a mod and you wish to color code them to indicate a special purpose. Maybe the file needs to be converted from Skyrim to Skyrim SE or maybe the mod has special install procedures that make it complicated for new users. Whatever the case may be there is a tag that you may use to indicate the link color.
 
 <code>{% raw %}{{a:green}}{% endraw %}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.
-
 <code>{% raw %}[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}] [[https://sharlikran.github.io/ | This Link Text is Orange{{a:orange}}]]{% endraw %}</code>
-
 <font class="yellow">Reminder:</font> Only one brace is used so you can see the syntax. The link in your text document requires two braces at the begining and the end of the link.
-
 
 <hr>
 === Html
@@ -199,8 +196,7 @@ OR
 */
 </pre>{% endraw %}
 
-. <font class="yellow">NOTE:</font> Comments inside of <code>pre</code> or preformatted text elements will not be treated as a comment.
-. <font class="orange">NOTE:</font> For now both single and multi line comments require a trailing <code>*/</code>. If you do not end the comment then the HTML may not be generated past the invalid syntax.
+<font class="yellow">NOTE:</font> Comments inside of <code>pre</code> or preformatted text elements will not be treated as a comment. <font class="orange">NOTE:</font> For now both single and multi line comments require a trailing <code>*/</code>. If you do not end the comment then the HTML may not be generated past the invalid syntax.
 
 ==== Invalid Syntax
 

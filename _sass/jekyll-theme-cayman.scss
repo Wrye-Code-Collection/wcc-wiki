@@ -81,7 +81,7 @@ body {
 
 .btn {
   display: inline-block;
-  margin-bottom: 1rem;
+  margin: 0.25rem;
   /* Preserve these colors the look goof on the header background */
   color: rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.08);
@@ -91,28 +91,25 @@ body {
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   &:hover {
-    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
     background-color: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.3);
   }
-  +.btn {
-    margin-left: 1rem;
-  }
   @include full {
-    padding: 1.1rem;
+    padding: 0.9rem;
     font-size: 1.3rem;
   }
   @include huge {
-    padding: 1rem;
+    padding: 0.9rem;
     font-size: 1.2rem;
   }
   @include large {
-    padding: 0.90rem;
+    padding: 0.8rem;
     font-size: 1.1rem;
   }
   @include medium {
-    padding: 0.80rem;
+    padding: 0.7rem;
     font-size: 1rem;
   }
   @include small {
@@ -120,16 +117,13 @@ body {
     width: 100%;
     padding: 0.70rem;
     font-size: 0.9rem;
-    +.btn {
-      margin-top: 1rem;
-      margin-left: 0;
-    }
   }
 }
 
 .drkbtn {
   display: inline-block;
-  margin-bottom: 1rem;
+  margin: 0.25rem;
+  /* Preserve these colors the look goof on the header background */
   color: rgba(255, 255, 255, 1.0);
   background-color: rgba(23, 130, 130, 0.9);
   border-color: rgba(23, 130, 130, 0.2);
@@ -143,23 +137,20 @@ body {
     background-color: rgba(34, 195, 195, 0.7);
     border-color: rgba(255, 255, 255, 0.3)
   }
-  +.drkbtn {
-    margin-left: 1rem;
-  }
   @include full {
-    padding: 1.1rem;
+    padding: 0.9rem;
     font-size: 1.3rem;
   }
   @include huge {
-    padding: 1rem;
+    padding: 0.9rem;
     font-size: 1.2rem;
   }
   @include large {
-    padding: 0.90rem;
+    padding: 0.8rem;
     font-size: 1.1rem;
   }
   @include medium {
-    padding: 0.80rem;
+    padding: 0.7rem;
     font-size: 1rem;
   }
   @include small {
@@ -167,10 +158,6 @@ body {
     width: 100%;
     padding: 0.70rem;
     font-size: 0.9rem;
-    +.drkbtn {
-      margin-top: 1rem;
-      margin-left: 0;
-    }
   }
 }
 
@@ -337,26 +324,23 @@ body {
     margin-top: 0;
   }
   @include full {
-    padding: 2em;
-    margin: 0 auto;
+    padding: 0.5rem;
     font-size: 1.1rem;
   }
   @include huge {
-    padding: 2em;
-    margin: 0 auto;
+    padding: 0.5rem;
     font-size: 1.1rem;
   }
   @include large {
-    padding: 2em;
-    margin: 0 auto;
+    padding: 0.5rem;
     font-size: 1rem;
   }
   @include medium {
-    padding: 2em;
+    padding: 0.5rem;
     font-size: 0.9rem;
   }
   @include small {
-    padding: 2em;
+    padding: 0.5rem;
     font-size: 0.85rem;
   }
   kbd {
@@ -395,14 +379,16 @@ body {
   h4,
   h5,
   h6 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem;
+    padding-left: 0.5rem;
     font-weight: normal;
     color: var(--toc-header-text);
   }
+  font::first-child {
+    margin: 0 0 0 1rem;
+  }
   p {
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
+	margin: 0 0 0 1rem;
     color: var(--body-text);
   }
   code {
@@ -415,8 +401,7 @@ body {
   }
   pre {
     padding: 0.8rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
+    margin: 0.25rem 1rem 0.25rem 1rem;
     font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
     color: var(--purple-text);
     word-wrap: normal;
@@ -530,23 +515,23 @@ input[id^="spoiler"] {
 /* closed button */
 input[id^="spoiler"]+label {
   display: inline;
-  margin: 10px 0px;
-  padding: 2px 20px;
+  margin: 0.25rem;
+  padding: 0.25rem;
   color: rgba(255, 255, 255, 1.0);
   background-color: rgba(23, 130, 130, 0.9);
   border-color: rgba(23, 130, 130, 0.2);
   text-align: center;
-  font-size: 24px;
-  border-radius: 8px;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: all .6s;
 }
 
 /* button after opened */
 input[id^="spoiler"]:checked+label {
-  color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--purple-text);
+  background-color: var(--code-background);
+  outline-style: hidden ;
 }
 
 /* the spoiler tag text box */
@@ -555,11 +540,13 @@ input[id^="spoiler"]~.spoiler {
   height: 0;
   overflow: hidden;
   opacity: 0;
-  margin: 0;
-  padding: 10px;
+  margin: 0.25rem;
+  padding: 0.25rem;
   color: var(--purple-text);
-  background-color: var( --code-background);
-  border: 1px solid white;
+  background-color: var(--code-background);
+  border: 2px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   transition: all .6s;
   p {
@@ -613,6 +600,7 @@ input[id^="spoiler"]:checked+label+.spoiler {
     background: var(--header1-background);
     border-color: var(--header-border);
     display: block;
+    padding-left: 0.5rem;
   }
   h2.header2 {
     border-top: 2px solid;
@@ -621,6 +609,7 @@ input[id^="spoiler"]:checked+label+.spoiler {
     background: var(--header2-background);
     border-color: var(--header-border);
     display: block;
+    padding-left: 0.5rem;
   }
   h3.header3 {
     border-top: 2px solid;
@@ -629,6 +618,7 @@ input[id^="spoiler"]:checked+label+.spoiler {
     background: var(--header3-background);
     border-color: var(--header-border);
     display: block;
+    padding-left: 0.5rem;
   }
   h4.header4 {
     border-top: 2px solid;
@@ -637,6 +627,7 @@ input[id^="spoiler"]:checked+label+.spoiler {
     background: var(--header4-background);
     border-color: var(--header-border);
     display: block;
+    padding-left: 0.5rem;
   }
   h5.header5 {
     border-top: 2px solid;
@@ -645,6 +636,7 @@ input[id^="spoiler"]:checked+label+.spoiler {
     background: var(--header5-background);
     border-color: var(--header-border);
     display: block;
+    padding-left: 0.5rem;
   }
   h6.header6 {
     border-top: 2px solid;
@@ -653,6 +645,7 @@ input[id^="spoiler"]:checked+label+.spoiler {
     background: var(--header6-background);
     border-color: var(--header-border);
     display: block;
+    padding-left: 0.5rem;
   }
 }
 
@@ -777,32 +770,24 @@ a.yellow {
 /* Main content for Wrte Text Paragraphs */
 .main-content {
   p.empty {
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
   }
   p.list-1 {
-    margin-left: 0.15in;
-    text-indent: -0.15in
+    margin-left: 0.9rem;
   }
   p.list-2 {
-    margin-left: 0.3in;
-    text-indent: -0.15in
+    margin-left: 1.50rem;
   }
   p.list-3 {
-    margin-left: 0.45in;
-    text-indent: -0.15in
+    margin-left: 2.10rem;
   }
   p.list-4 {
-    margin-left: 0.6in;
-    text-indent: -0.15in
+    margin-left: 2.75rem;
   }
   p.list-5 {
-    margin-left: 0.75in;
-    text-indent: -0.15in
+    margin-left: 3.4rem;
   }
   p.list-6 {
-    margin-left: 1.00in;
-    text-indent: -0.15in
+    margin-left: 4rem;
   }
 }
 
