@@ -448,6 +448,8 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reMDash = re.compile(r'--')
     rePreBegin = re.compile('<pre>', re.I)
     rePreEnd = re.compile('</pre>', re.I)
+    reParagraph = re.compile('<pre>', re.I)
+    reCloseParagraph = re.compile('</pre>', re.I)
 
     def anchorReplace(maObject):
         text = maObject.group(1)
@@ -595,6 +597,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reSpoilerEnd = re.compile(r'\[\[se:\]\]')
     reBlockquoteBegin = re.compile(r'\[\[bb:(.*?)\]\]')
     reBlockquoteBEnd = re.compile(r'\[\[be:\]\]')
+    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)')
     # --Defaults ----------------------------------------------------------
     level = 1
     spaces = ''
@@ -758,6 +761,16 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         line = reLink.sub(linkReplace, line)
         line = reHttp.sub(r' <a href="\1">\1</a>', line)
         line = reWww.sub(r' <a href="http://\1">\1</a>', line)
+        # --HTML Font or Code tag first of Line ------------------
+        maHtmlBegin = reHtmlBegin.match(line)
+        if maHtmlBegin:
+            maParagraph = reParagraph.match(line)
+            maCloseParagraph = reCloseParagraph.search(line)
+            if not maParagraph:
+                line = '<p>' + line
+            if not maCloseParagraph:
+                line = re.sub(r'(\n)?$', '', line)
+                line = line + '</p>\n'
         # --Save line ------------------
         # print line,
         if maTitleTag:

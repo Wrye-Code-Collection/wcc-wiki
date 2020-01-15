@@ -322,6 +322,13 @@ input[id^="spoiler"]:checked + label + .spoiler { height: auto; opacity: 1; padd
 .main-content p.list-4 { margin-left: 0.6in; text-indent: -0.15in; }
 .main-content p.list-5 { margin-left: 0.75in; text-indent: -0.15in; }
 .main-content p.list-6 { margin-left: 1.00in; text-indent: -0.15in; }
+
+section.quote { display: block; justify-content: center; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem; color: rgba(150, 150, 150, 0.8); background-color: rgba(150, 150, 150, 0.08); border-color: rgba(150, 150, 150, 0.2); border-style: solid; border-width: 3px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; box-shadow: 5px 3px 30px black; }
+section.quote p { margin: 0; padding: 0; line-height: 24px; }
+section.quote p.empty { margin: 0; padding: 0; line-height: 24px; }
+section.quote .attr { margin: 0; padding: 0 0 0.1rem 0.5rem; font: normal 400 1.5em/1.5em 'Montserrat', sans-serif; background-color: rgba(150, 150, 150, 0.2); letter-spacing: 0.04em; text-align: left; }
+section.quote .attr:before { content: " - "; }
+section.quote .attr:after { content: " - "; }
 """
 
 # Conversion ------------------------------------------------------------------
@@ -345,6 +352,8 @@ def wtxtToHtml(srcFile, outFile=None):
     reMDash = re.compile(r'--')
     rePreBegin = re.compile('<pre>', re.I)
     rePreEnd = re.compile('</pre>', re.I)
+    reParagraph = re.compile('<pre>', re.I)
+    reCloseParagraph = re.compile('</pre>', re.I)
 
     def anchorReplace(maObject):
         text = maObject.group(1)
@@ -490,6 +499,9 @@ def wtxtToHtml(srcFile, outFile=None):
     reCTypeEnd = re.compile('\*\/$')
     reSpoilerBegin = re.compile(r'\[\[sb:(.*?)\]\]')
     reSpoilerEnd = re.compile(r'\[\[se:\]\]')
+    reBlockquoteBegin = re.compile(r'\[\[bb:(.*?)\]\]')
+    reBlockquoteBEnd = re.compile(r'\[\[be:\]\]')
+    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)')
     # --Defaults ----------------------------------------------------------
     level = 1
     spaces = ''
@@ -507,6 +519,7 @@ def wtxtToHtml(srcFile, outFile=None):
     dupeEntryCount = 1
     # --Read source file --------------------------------------------------
     ins = file(srcFile)
+    blockAuthor = "Unknown"
     for line in ins:
         isInParagraph, wasInParagraph = False, isInParagraph
         # --Liquid ------------------------------------
@@ -542,6 +555,8 @@ def wtxtToHtml(srcFile, outFile=None):
         maEmpty = reEmpty.match(line)
         maSpoilerBegin = reSpoilerBegin.match(line)
         maSpoilerEnd = reSpoilerEnd.match(line)
+        maBlockquoteBegin = reBlockquoteBegin.match(line)
+        maBlockquoteEnd = reBlockquoteBEnd.match(line)
         # --Contents ----------------------------------
         if maContents:
             if maContents.group(1):
@@ -607,6 +622,7 @@ def wtxtToHtml(srcFile, outFile=None):
         # --Empty line
         elif maEmpty:
             line = spaces + '<p class="empty">&nbsp;</p>\n'
+        # --Spoiler Tag ---------------------------
         elif maSpoilerBegin:
             line = re.sub('sb:', '', line)
             spoilerID, spoilerName = spoilerTag(line)
@@ -620,6 +636,26 @@ def wtxtToHtml(srcFile, outFile=None):
             continue
         elif maSpoilerEnd:
             line = '</div>\n'
+        # --Blockquote ---------------------------
+        elif maBlockquoteBegin:
+            firstLine = '<section class="quote">\n'
+            outLines.append(firstLine)
+            author = re.sub(r'\[\[bb:(.*?)\]\]\n', r'\1', line)
+            if len(author) < 1:
+                author = blockAuthor
+            authorLine = '<p class="attr">{}</p>\n'.format(author)
+            outLines.append(authorLine)
+            # secondLine = '<div class="quote">\n'
+            # outLines.append(secondLine)
+            # openQuote = '<p class="quotetext">\n'
+            # outLines.append(openQuote)
+            continue
+        elif maBlockquoteEnd:
+            # closingQuote = '</p>\n'
+            # outLines.append(closingQuote)
+            # closingDiv = '</div>\n'
+            # outLines.append(closingDiv)
+            line = '</section>\n'
         # --Misc. Text changes --------------------
         line = reMDash.sub('&#150', line)
         line = reMDash.sub('&#150', line)
@@ -633,6 +669,16 @@ def wtxtToHtml(srcFile, outFile=None):
         line = reLink.sub(linkReplace, line)
         line = reHttp.sub(r' <a href="\1">\1</a>', line)
         line = reWww.sub(r' <a href="http://\1">\1</a>', line)
+        # --HTML Font or Code tag first of Line ------------------
+        maHtmlBegin = reHtmlBegin.match(line)
+        if maHtmlBegin:
+            maParagraph = reParagraph.match(line)
+            maCloseParagraph = reCloseParagraph.search(line)
+            if not maParagraph:
+                line = '<p>' + line
+            if not maCloseParagraph:
+                line = re.sub(r'(\n)?$', '', line)
+                line = line + '</p>\n'
         # --Save line ------------------
         # print line,
         outLines.append(line)
