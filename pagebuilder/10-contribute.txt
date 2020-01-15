@@ -234,6 +234,7 @@ OR
 === 7.00 Update [1/10/2020]
 * released pagebuilder_v7.zip version 7
   * Added a Blockquote Tag see [[#| Blockquote]]
+  * Font and Code tags at the start of a line were not assigned a paragraph marker and thus not indenting.
 
 === 6.00 Update [1/11/2020]
 * released pagebuilder_v6.zip version 5
