@@ -860,10 +860,10 @@ figure.image-caption {
     opacity: 0;
     transition: opacity .5s;
   }
-  &:hover figcaption {
+  /* &:hover figcaption {
     transition: opacity .5s;
     opacity: 1;
-  }
+  } */
   figurl {
     position: relative;
     background: var(--body-background);
@@ -873,10 +873,10 @@ figure.image-caption {
     opacity: 0;
     transition: opacity .5s;
   }
-  &:hover a {
+  /* &:hover a {
     transition: opacity .5s;
     opacity: 1;
-  }
+  } */
 }
 
 .short-column {
