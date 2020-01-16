@@ -434,53 +434,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     if not outFile:
         import os
         outFile = '..\\' +  os.path.splitext(srcFile)[0] + '.html'
-    # Setup ---------------------------------------------------------
-    # --Headers
-    reHead = re.compile(r'(=+) *(.+)')
-    reHeadGreen = re.compile(r'(#+) *(.+)')
-    headFormat = '<h%d class="header%d" id="%s">%s</h%d>\n'
-    headFormatGreen = '<h%d id="%s">%s</h%d>\n'
-    # --List
-    reList = re.compile(r'( *)([-!?\.\+\*o]) (.*)')
-    # --Misc. text
-    reHRule = re.compile(r'^\s*-{4,}\s*$')
-    reEmpty = re.compile(r'\s+$')
-    reMDash = re.compile(r'--')
-    rePreBegin = re.compile('<pre>', re.I)
-    rePreEnd = re.compile('</pre>', re.I)
-    reParagraph = re.compile('<pre>', re.I)
-    reCloseParagraph = re.compile('</pre>', re.I)
-    # --Bold, Italic, BoldItalic
-    reBold = re.compile(r'__')
-    reItalic = re.compile(r'~~')
-    reBoldItalic = re.compile(r'\*\*')
-    states = {'bold': False, 'italic': False, 'boldItalic': False}
-    # --Links
-    reLink = re.compile(r'\[\[(.*?)\]\]')
-    reHttp = re.compile(r' (http://[_~a-zA-Z0-9\./%-]+)')
-    reWww = re.compile(r' (www\.[_~a-zA-Z0-9\./%-]+)')
-    reWd = re.compile(r'(<[^>]+>|\[[^\]]+\]|\W+)')
-    rePar = re.compile(r'^([a-zA-Z]|\*\*|~~|__)')
-    reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}$)')
-    # --Tags
-    pageTitle = 'title: Your Content'
-    reAnchorTag = re.compile('{{a:(.+?)}}')
-    reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
-    reCssTag = re.compile('\s*{{CSS:(.+?)}}\s*$')
-    reTitleTag = re.compile(r'({{PAGETITLE=")(.*)("}})$')
-    reComment = re.compile(r'^\/\*.+\*\/')
-    reCTypeBegin = re.compile(r'^\/\*')
-    reCTypeEnd = re.compile('\*\/$')
-    reSpoilerBegin = re.compile(r'\[\[sb:(.*?)\]\]')
-    reSpoilerEnd = re.compile(r'\[\[se:\]\]')
-    reBlockquoteBegin = re.compile(r'\[\[bb:(.*?)\]\]')
-    reBlockquoteBEnd = re.compile(r'\[\[be:\]\]')
-    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<img\s{1,3}src.+?\>)')
-    # --Open files
-    inFileRoot = re.sub('\.[a-zA-Z]+$', '', srcFile)
-    # --TextColors
-    reTextColor = re.compile(r'({{a:(.+?)}})')
-
+    # RegEx Independent Routines ------------------------------------
     def anchorReplace(maObject):
         text = maObject.group(1)
         anchor = reWd.sub('', text)
@@ -573,6 +527,53 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         if '{{a:yellow}}' in text:
             temp = re.sub('{{a:yellow}}', '', text)
         return temp
+
+    # RegEx ---------------------------------------------------------
+    # --Headers
+    reHead = re.compile(r'(=+) *(.+)')
+    reHeadGreen = re.compile(r'(#+) *(.+)')
+    headFormat = '<h%d class="header%d" id="%s">%s</h%d>\n'
+    headFormatGreen = '<h%d id="%s">%s</h%d>\n'
+    # --List
+    reList = re.compile(r'( *)([-!?\.\+\*o]) (.*)')
+    # --Misc. text
+    reHRule = re.compile(r'^\s*-{4,}\s*$')
+    reEmpty = re.compile(r'\s+$')
+    reMDash = re.compile(r'--')
+    rePreBegin = re.compile('<pre>', re.I)
+    rePreEnd = re.compile('</pre>', re.I)
+    reParagraph = re.compile('<pre>', re.I)
+    reCloseParagraph = re.compile('</pre>', re.I)
+    # --Bold, Italic, BoldItalic
+    reBold = re.compile(r'__')
+    reItalic = re.compile(r'~~')
+    reBoldItalic = re.compile(r'\*\*')
+    states = {'bold': False, 'italic': False, 'boldItalic': False}
+    # --Links
+    reLink = re.compile(r'\[\[(.*?)\]\]')
+    reHttp = re.compile(r' (http://[_~a-zA-Z0-9\./%-]+)')
+    reWww = re.compile(r' (www\.[_~a-zA-Z0-9\./%-]+)')
+    reWd = re.compile(r'(<[^>]+>|\[[^\]]+\]|\W+)')
+    rePar = re.compile(r'^([a-zA-Z]|\*\*|~~|__)')
+    reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}$)')
+    # --Tags
+    pageTitle = 'title: Your Content'
+    reAnchorTag = re.compile('{{a:(.+?)}}')
+    reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
+    reCssTag = re.compile('\s*{{CSS:(.+?)}}\s*$')
+    reTitleTag = re.compile(r'({{PAGETITLE=")(.*)("}})$')
+    reComment = re.compile(r'^\/\*.+\*\/')
+    reCTypeBegin = re.compile(r'^\/\*')
+    reCTypeEnd = re.compile('\*\/$')
+    reSpoilerBegin = re.compile(r'\[\[sb:(.*?)\]\]')
+    reSpoilerEnd = re.compile(r'\[\[se:\]\]')
+    reBlockquoteBegin = re.compile(r'\[\[bb:(.*?)\]\]')
+    reBlockquoteBEnd = re.compile(r'\[\[be:\]\]')
+    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<img\s{1,3}src.+?\>)')
+    # --Open files
+    inFileRoot = re.sub('\.[a-zA-Z]+$', '', srcFile)
+    # --TextColors
+    reTextColor = re.compile(r'({{a:(.+?)}})')
 
     def spoilerTag(line):
         spoilerID = ''
