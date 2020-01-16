@@ -450,17 +450,41 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     rePreEnd = re.compile('</pre>', re.I)
     reParagraph = re.compile('<pre>', re.I)
     reCloseParagraph = re.compile('</pre>', re.I)
-
-    def anchorReplace(maObject):
-        text = maObject.group(1)
-        anchor = reWd.sub('', text)
-        return "<a name='%s'>%s</a>" % (anchor, text)
-
     # --Bold, Italic, BoldItalic
     reBold = re.compile(r'__')
     reItalic = re.compile(r'~~')
     reBoldItalic = re.compile(r'\*\*')
     states = {'bold': False, 'italic': False, 'boldItalic': False}
+    # --Links
+    reLink = re.compile(r'\[\[(.*?)\]\]')
+    reHttp = re.compile(r' (http://[_~a-zA-Z0-9\./%-]+)')
+    reWww = re.compile(r' (www\.[_~a-zA-Z0-9\./%-]+)')
+    reWd = re.compile(r'(<[^>]+>|\[[^\]]+\]|\W+)')
+    rePar = re.compile(r'^([a-zA-Z]|\*\*|~~|__)')
+    reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}$)')
+    # --Tags
+    pageTitle = 'title: Your Content'
+    reAnchorTag = re.compile('{{a:(.+?)}}')
+    reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
+    reCssTag = re.compile('\s*{{CSS:(.+?)}}\s*$')
+    reTitleTag = re.compile(r'({{PAGETITLE=")(.*)("}})$')
+    reComment = re.compile(r'^\/\*.+\*\/')
+    reCTypeBegin = re.compile(r'^\/\*')
+    reCTypeEnd = re.compile('\*\/$')
+    reSpoilerBegin = re.compile(r'\[\[sb:(.*?)\]\]')
+    reSpoilerEnd = re.compile(r'\[\[se:\]\]')
+    reBlockquoteBegin = re.compile(r'\[\[bb:(.*?)\]\]')
+    reBlockquoteBEnd = re.compile(r'\[\[be:\]\]')
+    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<img\s{1,3}src.+?\>)')
+    # --Open files
+    inFileRoot = re.sub('\.[a-zA-Z]+$', '', srcFile)
+    # --TextColors
+    reTextColor = re.compile(r'({{a:(.+?)}})')
+
+    def anchorReplace(maObject):
+        text = maObject.group(1)
+        anchor = reWd.sub('', text)
+        return "<a name='%s'>%s</a>" % (anchor, text)
 
     def boldReplace(maObject):
         state = states['bold'] = not states['bold']
@@ -473,14 +497,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     def boldItalicReplace(maObject):
         state = states['boldItalic'] = not states['boldItalic']
         return ('</I></B>', '<B><I>')[state]
-
-    # --Links
-    reLink = re.compile(r'\[\[(.*?)\]\]')
-    reHttp = re.compile(r' (http://[_~a-zA-Z0-9\./%-]+)')
-    reWww = re.compile(r' (www\.[_~a-zA-Z0-9\./%-]+)')
-    reWd = re.compile(r'(<[^>]+>|\[[^\]]+\]|\W+)')
-    rePar = re.compile(r'^([a-zA-Z]|\*\*|~~|__)')
-    reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}$)')
 
     def check_color(text):
         fontClass = ''
@@ -584,26 +600,10 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             text = strip_color(text)
         return '<a {} href="{}">{}</a>'.format(fontClass, address, text)
 
-    # --Tags
-    pageTitle = 'title: Your Content'
-    # reAnchorTag = re.compile('{{A:(.+?)}}')
-    reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
-    reCssTag = re.compile('\s*{{CSS:(.+?)}}\s*$')
-    reTitleTag = re.compile(r'({{PAGETITLE=")(.*)("}})$')
-    reComment = re.compile(r'^\/\*.+\*\/')
-    reCTypeBegin = re.compile(r'^\/\*')
-    reCTypeEnd = re.compile('\*\/$')
-    reSpoilerBegin = re.compile(r'\[\[sb:(.*?)\]\]')
-    reSpoilerEnd = re.compile(r'\[\[se:\]\]')
-    reBlockquoteBegin = re.compile(r'\[\[bb:(.*?)\]\]')
-    reBlockquoteBEnd = re.compile(r'\[\[be:\]\]')
-    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<img\s{1,3}src.+?\>)')
     # --Defaults ----------------------------------------------------------
     level = 1
     spaces = ''
     cssFile = None
-    # --Open files
-    inFileRoot = re.sub('\.[a-zA-Z]+$', '', srcFile)
     # --Init
     outLines = []
     contents = [] # The list variable for the Table of Contents
@@ -613,9 +613,9 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     isInParagraph = False
     htmlIDSet = list()
     dupeEntryCount = 1
+    blockAuthor = "Unknown"
     # --Read source file --------------------------------------------------
     ins = file(srcFile)
-    blockAuthor = "Unknown"
     for line in ins:
         isInParagraph, wasInParagraph = False, isInParagraph
         # --Preformatted? -----------------------------
