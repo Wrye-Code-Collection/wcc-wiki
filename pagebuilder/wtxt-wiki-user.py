@@ -165,15 +165,13 @@ htmlHead = """
 </HEAD>
 <BODY>
     <section class="page-header">
-      <h1 class="project-name">Wrye-Code-Collection Wiki</h1>
+      <h1 class="project-name">%s</h1>
       <h2 class="project-tagline">Collection of Wrye Bash history and information</h2>
     </section>
 <SECTION  class="main-content">
 <DIV>
 """
 defaultCss = """
-
-
 :root {
   --cayman-header-heading: rgb(255, 255, 255);
   --cayman-header-background: rgb(21, 153, 87);
@@ -204,6 +202,7 @@ defaultCss = """
   --header5-background: rgb(47, 54, 60);
   --header6-background: rgb(40, 46, 52);
   --toc-header-text: var(--cayman-header-background);
+  --blockquote-grey: rgb(33, 33, 33);
   --black-text: rgb(0, 0, 0);
   --blue-text: rgb(33, 136, 255);
   --brown-text: rgb(152, 112, 16);
@@ -225,18 +224,6 @@ defaultCss = """
   --darkred-text: rgb(214, 24, 0);
   --ltred-text: rgb(211, 47, 47);
 }
-html {
-    font-size: 16px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body { padding: 0; margin: 0; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.5; color: var(--body-text); background: var(--body-background); }
 
 .page-header {
   color: var(--white-text);
@@ -245,6 +232,45 @@ body { padding: 0; margin: 0; font-family: "Open Sans", "Helvetica Neue", Helvet
   background-image: linear-gradient(120deg, var(--cayman-header-background-secondary), var(--cayman-header-background));
   padding: 3rem 4rem;
 }
+
+.gridhead1 { grid-area: padding1; }
+.gridhead2 { grid-area: image; }
+.gridhead3 { grid-area: header; }
+.gridhead4 { grid-area: padding2; }
+.gridhead5 { grid-area: buttons; }
+.toc1 { grid-area: lefttoc; }
+.toc2 { grid-area: righttoc; }
+.grid-header { display: grid; color: var(--cayman-header-heading); background-color: var(--cayman-header-background); background-image: linear-gradient(120deg, var(--cayman-header-background-secondary), var(--cayman-header-background)); }
+.grid-header div.gridhead2 { text-align: right; }
+.grid-header div.gridhead3 { text-align: left; }
+.grid-header div.gridhead5 { text-align: center; }
+@media screen and (min-width: 1900px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'buttons buttons buttons buttons'; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'buttons buttons buttons buttons'; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'buttons buttons buttons buttons'; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'buttons buttons buttons buttons'; } }
+@media screen and (max-width: 780px) { .grid-header { grid-template-areas: 'padding1' 'image' 'header' 'padding2' 'buttons'; }
+  .grid-header div.gridhead2 { text-align: center; }
+  .grid-header div.gridhead3 { text-align: center; }
+  .grid-header div.gridhead5 { text-align: center; } }
+.grid-toc { display: grid; }
+@media screen and (min-width: 1900px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
+@media screen and (max-width: 780px) { .grid-toc { grid-template-areas: 'lefttoc' 'righttoc'; } }
+.grid-toc div { background: var(--body-background); }
+
+.project-tagline { margin-bottom: 2rem; font-weight: normal; opacity: 0.7; }
+.project-name { margin-top: 0; margin-bottom: 0.1rem; }
+html * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+tr:nth-child(odd) { background: var(--header1-background); }
+tr:nth-child(even) { background: var(--header2-background); }
+tr:hover { background-color: var(--code-background); }
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+body { padding: 0; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.5; color: var(--body-text); background: var(--body-background); }
+
 h1 { font-size: 2.0rem; margin: 1em 0; }
 h2 { font-size: 1.75rem; margin: 1em 0; }
 h3 { font-size: 1.5rem; margin: 1em 0; }
@@ -255,37 +281,41 @@ h6 { font-size: 0.75rem; margin: 1em 0; }
 .main-content { word-wrap: break-word; }
 .main-content :first-child { margin-top: 0; }
 
-.main-content code { padding: 2px 4px; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; color: var(--purple-text); background-color: var(--code-background); border-radius: 0.3rem; }
-.main-content pre { padding: 0.8rem; margin-top: 0; margin-bottom: 1rem; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; color: var(--purple-text); word-wrap: normal; background-color: var(--code-background); border: solid 1px var(--cayman-border); border-radius: 0.3rem; }
+.main-content code { padding: 0.13rem 0.25rem; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; color: var(--purple-text); background-color: var(--code-background); border-radius: 0.3rem; }
+.main-content pre { padding: 0.8rem; margin: 0.25rem 0.75rem 0.25rem 0.75rem; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; color: var(--purple-text); word-wrap: normal; background-color: var(--code-background); border: solid 1px var(--cayman-border); border-radius: 0.3rem; }
 .main-content pre > code { padding: 0; margin: 0; font-size: 0.9rem; color: var(--purple-text); word-break: normal; white-space: pre; background: transparent; border: 0; }
-.main-content .highlight { margin-bottom: 1rem; }
+.main-content .highlight { margin-bottom: 0.75rem; }
 .main-content .highlight pre { margin-bottom: 0; word-break: normal; }
-.main-content .highlight pre, .main-content pre { padding: 0.8rem; overflow: auto; font-size: 0.9rem; line-height: 1.45; border-radius: 0.3rem; -webkit-overflow-scrolling: touch; }
+.main-content .highlight pre, .main-content pre { padding: 0.75rem; overflow: auto; font-size: 0.9rem; line-height: 1.45; border-radius: 0.3rem; -webkit-overflow-scrolling: touch; }
 .main-content pre code, .main-content pre tt { display: inline; max-width: initial; padding: 0; margin: 0; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; }
 .main-content pre code:before, .main-content pre code:after, .main-content pre tt:before, .main-content pre tt:after { content: normal; }
 .main-content ul, .main-content ol { margin-top: 0; }
 
-.main-content blockquote { padding: 0 1rem; margin-left: 0; color: var(--purple-text); background: var(--header3-background); border-left: 0.3rem solid var(--ltgray-text); }
-.main-content blockquote > :first-child { margin-top: 0; }
-.main-content blockquote > :last-child { margin-bottom: 0; }
+.main-content table { display: block; width: 100%; overflow: auto; word-break: normal; word-break: keep-all; -webkit-overflow-scrolling: touch; }
+.main-content table th { font-weight: bold; background-color: var(--header1-border); }
+.main-content table th, .main-content table td { padding: 0.25rem 0.75rem; border: 1px solid var(--header1-border); }
 
 .main-content table { display: block; width: 100%; overflow: auto; word-break: normal; word-break: keep-all; -webkit-overflow-scrolling: touch; }
 .main-content table th { font-weight: bold; background-color: var(--header1-border); }
 .main-content table th, .main-content table td { padding: 0.5rem 1rem; border: 1px solid var(--header1-border); }
 
 .main-content dl { padding: 0; }
-.main-content dl dt { padding: 0; margin-top: 1rem; font-size: 1rem; font-weight: bold; }
-.main-content dl dd { padding: 0; margin-bottom: 1rem; }
+.main-content dl dt { padding: 0; margin-top: 0.75rem; font-size: 1rem; font-weight: bold; }
+.main-content dl dd { padding: 0; margin-bottom: 0.75rem; }
 
-.main-content hr { height: 2px; padding: 0; margin: 1rem 0; background-color: var(--white-text); border: 0; }
+.main-content hr { height: 0.13; padding: 0; margin: 0.75rem 0; background-color: var(--cayman-hr-border); border: 0; }
 
-.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin-top: 2rem; margin-bottom: 1rem; font-weight: normal; color: var(--toc-header-text); }
-.main-content h1.header1 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header1-text); background: var(--header1-background); border-color: var(--header-border); display: block; }
-.main-content h2.header2 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header2-text); background: var(--header2-background); border-color: var(--header-border); display: block; }
-.main-content h3.header3 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header3-text); background: var(--header3-background); border-color: var(--header-border); display: block; }
-.main-content h4.header4 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header4-text); background: var(--header4-background); border-color: var(--header-border); display: block; }
-.main-content h5.header5 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header5-text); background: var(--header5-background); border-color: var(--header-border); display: block; }
-.main-content h6.header6 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header6-text); background: var(--header6-background); border-color: var(--header-border); display: block; }
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin: 0.75rem; padding-left: 0.24rem; font-weight: normal; color: var(--toc-header-text); }
+.main-content h1.grhead1 { font-size: 1.40rem; margin: 0.13rem 0 0.13rem 0.9rem; color: var(--toc-header-text); padding: 0px 0px 0px 0px; line-height: 24px; }
+.main-content h2.grhead2 { font-size: 1.30rem; margin: 0.13rem 0 0.13rem 1.50rem; color: var(--toc-header-text); padding: 0px 0px 0px 0px; line-height: 24px; }
+.main-content h3.grhead3 { font-size: 1.20rem; margin: 0.13rem 0 0.13rem 2.10rem; color: var(--toc-header-text); padding: 0px 0px 0px 0px; line-height: 24px; }
+.main-content h4.grhead4 { font-size: 1.10rem; margin: 0.13rem 0 0.13rem 2.75rem; color: var(--toc-header-text); padding: 0px 0px 0px 0px; line-height: 24px; }
+.main-content h1.header1 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header1-text); background: var(--header1-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h2.header2 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header2-text); background: var(--header2-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h3.header3 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header3-text); background: var(--header3-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h4.header4 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header4-text); background: var(--header4-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h5.header5 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header5-text); background: var(--header5-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h6.header6 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header6-text); background: var(--header6-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
 
 a { color: var(--blue-text); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -308,20 +338,20 @@ font.white, a.white { color: var(--white-text); }
 font.yellow, a.yellow { color: var(--yellow-text); }
 
 input[id^="spoiler"] { display: none; }
-input[id^="spoiler"] + label { display: inline; margin: 10px 0px; padding: 2px 20px; color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); text-align: center; font-size: 24px; border-radius: 8px; cursor: pointer; transition: all .6s; }
-input[id^="spoiler"]:checked + label { color: rgba(255, 255, 255, 0.7); background-color: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); }
-input[id^="spoiler"] ~ .spoiler { width: auto; height: 0; overflow: hidden; opacity: 0; margin: 0; padding: 10px; color: var(--purple-text); background-color: var(--code-background); border: 1px solid white; border-radius: 8px; transition: all .6s; }
+input[id^="spoiler"] + label { display: inline; margin: 0.25rem; padding: 0.25rem; color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); text-align: center; font-size: 1.25rem; border-radius: 0.5rem; cursor: pointer; transition: all .6s; }
+input[id^="spoiler"]:checked + label { color: var(--purple-text); background-color: var(--code-background); outline-style: hidden; }
+input[id^="spoiler"] ~ .spoiler { width: auto; height: 0; overflow: hidden; opacity: 0; margin: 0.25rem; padding: 0.25rem; color: var(--purple-text); background-color: var(--code-background); border: 2px; border-style: solid; border-color: rgba(255, 255, 255, 0.8); border-radius: 8px; transition: all .6s; }
 input[id^="spoiler"] ~ .spoiler p { color: inherit; }
 input[id^="spoiler"]:checked + label + .spoiler { height: auto; opacity: 1; padding: 10px; }
 
-.main-content p { margin-top: 0.1rem; margin-bottom: 0.1rem; color: var(--body-text); }
+.main-content p { margin: 0 0 0 0.75rem; color: var(--body-text); }
 .main-content p.empty { margin-top: 0.1rem; margin-bottom: 0.1rem; }
-.main-content p.list-1 { margin-left: 0.15in; text-indent: -0.15in; }
-.main-content p.list-2 { margin-left: 0.3in; text-indent: -0.15in; }
-.main-content p.list-3 { margin-left: 0.45in; text-indent: -0.15in; }
-.main-content p.list-4 { margin-left: 0.6in; text-indent: -0.15in; }
-.main-content p.list-5 { margin-left: 0.75in; text-indent: -0.15in; }
-.main-content p.list-6 { margin-left: 1.00in; text-indent: -0.15in; }
+.main-content p.list-1 { margin-left: 0.9rem; }
+.main-content p.list-2 { margin-left: 1.50rem; }
+.main-content p.list-3 { margin-left: 2.10rem; }
+.main-content p.list-4 { margin-left: 2.75rem; }
+.main-content p.list-5 { margin-left: 3.4rem; }
+.main-content p.list-6 { margin-left: 4rem; }
 
 section.quote { display: block; justify-content: center; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem; color: rgba(150, 150, 150, 0.8); background-color: rgba(150, 150, 150, 0.08); border-color: rgba(150, 150, 150, 0.2); border-style: solid; border-width: 3px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; box-shadow: 5px 3px 30px black; }
 section.quote p { margin: 0; padding: 0; line-height: 24px; }
@@ -501,7 +531,7 @@ def wtxtToHtml(srcFile, outFile=None):
     reSpoilerEnd = re.compile(r'\[\[se:\]\]')
     reBlockquoteBegin = re.compile(r'\[\[bb:(.*?)\]\]')
     reBlockquoteBEnd = re.compile(r'\[\[be:\]\]')
-    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)')
+    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<img\s{1,3}src.+?\>)')
     # --Defaults ----------------------------------------------------------
     level = 1
     spaces = ''
@@ -687,7 +717,7 @@ def wtxtToHtml(srcFile, outFile=None):
     css = defaultCss
     # --Write Output ------------------------------------------------------
     out = file(outFile, 'w')
-    out.write(htmlHead % (pageTitle, css))
+    out.write(htmlHead % (pageTitle, css, pageTitle))
     didContents = False
     for line in outLines:
         if reContentsTag.match(line):

@@ -1,38 +1,207 @@
----
-layout: default
-title: Contributing
----
-<h1 class="header1">{{ page.title }}</h1>
-<hr>
-<h1 class="grhead1">Main Table of Contents</h1>
-<div class="grid-toc">
-    <div class="toc1">
-        <h2 class="grhead2">General</h2>
-        <h3 class="grhead3"><a href="index.html">Welcome</a></h3>
-        <h3 class="grhead3"><a href="10-contribute.html">Contribute: Generate Wiki pages from Text Files</a></h3>
-        <h2 class="grhead2">Wrye Bash Related</h2>
-        <h3 class="grhead3"><a href="2-wryebashfeatures.html">Wrye Bash Features</a></h3>
-        <h3 class="grhead3"><a href="3-wryemashusage.html">Wrye Mash Usage</a></h3>
-        <h3 class="grhead3"><a href="4-generalusage.html">General Usage</a></h3>
-        <h3 class="grhead3"><a href="5-advancedusage.html">Advanced Usage</a></h3>
-        <h3 class="grhead3"><a href="6-technicalreferences.html">Technical References</a></h3>
-        <h3 class="grhead3"><a href="8-tomeofalt3rn1ty.html">Tome of Alt3rn1ty</a></h3>
-    </div>
-    <div class="toc2">
-        <h2 class="grhead2">Morrowind Related</h2>
-        <h3 class="grhead3"><a href="9-morrowindandbeyond.html">Morrowind And Beyond</a></h3>
-        <h3 class="grhead3"><a href="14-testoolghostwheel.html">TES Plugin Tool (TESTool) 1.3 Docs</a></h3>
-        <h2 class="grhead2">Oblivion Related</h2>
-        <h3 class="grhead3"><a href="7-tomeofpsymon.html">Tome of Psymon - BAIN Mod Installation Projects</a></h3>
-        <h3 class="grhead3"><a href="13-oblivionandbeyond.html">Oblivion And Beyond</a></h3>
-        <h2 class="grhead2">Skyrim Related</h2>
-        <h3 class="grhead3"><a href="11-tutorial_Links.html">Skyrim Special Edition Mod Tutorial Link Compendium</a></h3>
-        <h3 class="grhead3"><a href="12-other_tools_and_extras.html">Popular Modding Tools Tutorials</a></h3>
-    </div>
-</div>
-<p class="empty">&nbsp;</p>
-<div>
-<!-- Needed, sets the top of the page just before the H1 Title -->
+
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>Contributing</TITLE>
+<STYLE>
+:root {
+  --cayman-header-heading: rgb(255, 255, 255);
+  --cayman-header-background: rgb(21, 153, 87);
+  --cayman-header-background-secondary: rgb(21, 87, 153);
+  --cayman-section-headings: rgb(21, 153, 87);
+  --cayman-body-text: rgb(96, 108, 113);
+  --cayman-body-href: rgb(30, 107, 184);
+  --cayman-blockquote-text: rgb(129, 145, 152);
+  --cayman-code-background: rgb(243, 246, 250);
+  --cayman-code-text: rgb(86, 116, 130);
+  --cayman-border: rgb(220, 230, 240);
+  --cayman-table-border-color: rgb(233, 235, 236);
+  --cayman-hr-border: rgb(239, 240, 241);
+  --body-text: rgb(149, 157, 165);
+  --body-background: rgb(36, 41, 46);
+  --code-background: rgb(29, 33, 37);
+  --header1-text: rgb(225, 228, 232);
+  --header2-text: rgb(223, 226, 229);
+  --header3-text: rgb(216, 220, 225);
+  --header4-text: rgb(209, 213, 218);
+  --header5-text: rgb(202, 207, 211);
+  --header6-text: rgb(174, 182, 190);
+  --header-border: rgb(100, 109, 119);
+  --header1-background: rgb(79, 90, 100);
+  --header2-background: rgb(81, 88, 97);
+  --header3-background: rgb(61, 69, 77);
+  --header4-background: rgb(58, 67, 75);
+  --header5-background: rgb(47, 54, 60);
+  --header6-background: rgb(40, 46, 52);
+  --toc-header-text: var(--cayman-header-background);
+  --blockquote-grey: rgb(33, 33, 33);
+  --black-text: rgb(0, 0, 0);
+  --blue-text: rgb(33, 136, 255);
+  --brown-text: rgb(152, 112, 16);
+  --cyan-text: rgb(41, 208, 208);
+  --ltgray-text: rgb(209, 210, 212);
+  --gray-text: rgb(181, 181, 181);
+  --dkgray-text: rgb(87, 87, 87);
+  --green-text: rgb(21, 153, 87);
+  --ltblue-text: rgb(157, 175, 255);
+  --ltgreen-text: rgb(129, 197, 122);
+  --orange-text: rgb(218, 119, 62);
+  --pink-text: rgb(255, 205, 243);
+  --purple-text: rgb(209, 188, 249);
+  --red-text: rgb(207, 52, 50);
+  --tan-text: rgb(233, 222, 187);
+  --white-text: rgb(255, 255, 255);
+  --yellow-text: rgb(244, 203, 53);
+  --old-red-text: rgb(224, 88, 88);
+  --darkred-text: rgb(214, 24, 0);
+  --ltred-text: rgb(211, 47, 47);
+}
+
+.page-header {
+  color: var(--white-text);
+  text-align: center;
+  background-color: var(--cayman-header-background);
+  background-image: linear-gradient(120deg, var(--cayman-header-background-secondary), var(--cayman-header-background));
+  padding: 3rem 4rem;
+}
+
+.gridhead1 { grid-area: padding1; }
+.gridhead2 { grid-area: image; }
+.gridhead3 { grid-area: header; }
+.gridhead4 { grid-area: padding2; }
+.gridhead5 { grid-area: buttons; }
+.toc1 { grid-area: lefttoc; }
+.toc2 { grid-area: righttoc; }
+.grid-header { display: grid; color: var(--cayman-header-heading); background-color: var(--cayman-header-background); background-image: linear-gradient(120deg, var(--cayman-header-background-secondary), var(--cayman-header-background)); }
+.grid-header div.gridhead2 { text-align: right; }
+.grid-header div.gridhead3 { text-align: left; }
+.grid-header div.gridhead5 { text-align: center; }
+@media screen and (min-width: 1900px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'buttons buttons buttons buttons'; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'buttons buttons buttons buttons'; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'buttons buttons buttons buttons'; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-header { grid-template-areas: 'padding1 image header padding2' 'buttons buttons buttons buttons'; } }
+@media screen and (max-width: 780px) { .grid-header { grid-template-areas: 'padding1' 'image' 'header' 'padding2' 'buttons'; }
+  .grid-header div.gridhead2 { text-align: center; }
+  .grid-header div.gridhead3 { text-align: center; }
+  .grid-header div.gridhead5 { text-align: center; } }
+.grid-toc { display: grid; }
+@media screen and (min-width: 1900px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
+@media screen and (min-width: 1580px) and (max-width: 1900px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
+@media screen and (min-width: 1260px) and (max-width: 1580px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
+@media screen and (min-width: 780px) and (max-width: 1260px) { .grid-toc { grid-template-areas: 'lefttoc righttoc'; } }
+@media screen and (max-width: 780px) { .grid-toc { grid-template-areas: 'lefttoc' 'righttoc'; } }
+.grid-toc div { background: var(--body-background); }
+
+.project-tagline { margin-bottom: 2rem; font-weight: normal; opacity: 0.7; }
+.project-name { margin-top: 0; margin-bottom: 0.1rem; }
+html * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+tr:nth-child(odd) { background: var(--header1-background); }
+tr:nth-child(even) { background: var(--header2-background); }
+tr:hover { background-color: var(--code-background); }
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+body { padding: 0; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.5; color: var(--body-text); background: var(--body-background); }
+
+h1 { font-size: 2.0rem; margin: 1em 0; }
+h2 { font-size: 1.75rem; margin: 1em 0; }
+h3 { font-size: 1.5rem; margin: 1em 0; }
+h4 { font-size: 1.25rem; margin: 1em 0; }
+h5 { font-size: 1.0rem; margin: 1em 0; }
+h6 { font-size: 0.75rem; margin: 1em 0; }
+
+.main-content { word-wrap: break-word; }
+.main-content :first-child { margin-top: 0; }
+
+.main-content code { padding: 0.13rem 0.25rem; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; color: var(--purple-text); background-color: var(--code-background); border-radius: 0.3rem; }
+.main-content pre { padding: 0.8rem; margin: 0.25rem 0.75rem 0.25rem 0.75rem; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; color: var(--purple-text); word-wrap: normal; background-color: var(--code-background); border: solid 1px var(--cayman-border); border-radius: 0.3rem; }
+.main-content pre > code { padding: 0; margin: 0; font-size: 0.9rem; color: var(--purple-text); word-break: normal; white-space: pre; background: transparent; border: 0; }
+.main-content .highlight { margin-bottom: 0.75rem; }
+.main-content .highlight pre { margin-bottom: 0; word-break: normal; }
+.main-content .highlight pre, .main-content pre { padding: 0.75rem; overflow: auto; font-size: 0.9rem; line-height: 1.45; border-radius: 0.3rem; -webkit-overflow-scrolling: touch; }
+.main-content pre code, .main-content pre tt { display: inline; max-width: initial; padding: 0; margin: 0; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; }
+.main-content pre code:before, .main-content pre code:after, .main-content pre tt:before, .main-content pre tt:after { content: normal; }
+.main-content ul, .main-content ol { margin-top: 0; }
+
+.main-content table { display: block; width: 100%; overflow: auto; word-break: normal; word-break: keep-all; -webkit-overflow-scrolling: touch; }
+.main-content table th { font-weight: bold; background-color: var(--header1-border); }
+.main-content table th, .main-content table td { padding: 0.25rem 0.75rem; border: 1px solid var(--header1-border); }
+
+.main-content table { display: block; width: 100%; overflow: auto; word-break: normal; word-break: keep-all; -webkit-overflow-scrolling: touch; }
+.main-content table th { font-weight: bold; background-color: var(--header1-border); }
+.main-content table th, .main-content table td { padding: 0.5rem 1rem; border: 1px solid var(--header1-border); }
+
+.main-content dl { padding: 0; }
+.main-content dl dt { padding: 0; margin-top: 0.75rem; font-size: 1rem; font-weight: bold; }
+.main-content dl dd { padding: 0; margin-bottom: 0.75rem; }
+
+.main-content hr { height: 0.13; padding: 0; margin: 0.75rem 0; background-color: var(--cayman-hr-border); border: 0; }
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin: 0.75rem; padding-left: 0.24rem; font-weight: normal; color: var(--toc-header-text); }
+.main-content h1.grhead1 { font-size: 1.40rem; margin: 0.13rem 0 0.13rem 0.9rem; color: var(--toc-header-text); padding: 0px 0px 0px 0px; line-height: 24px; }
+.main-content h2.grhead2 { font-size: 1.30rem; margin: 0.13rem 0 0.13rem 1.50rem; color: var(--toc-header-text); padding: 0px 0px 0px 0px; line-height: 24px; }
+.main-content h3.grhead3 { font-size: 1.20rem; margin: 0.13rem 0 0.13rem 2.10rem; color: var(--toc-header-text); padding: 0px 0px 0px 0px; line-height: 24px; }
+.main-content h4.grhead4 { font-size: 1.10rem; margin: 0.13rem 0 0.13rem 2.75rem; color: var(--toc-header-text); padding: 0px 0px 0px 0px; line-height: 24px; }
+.main-content h1.header1 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header1-text); background: var(--header1-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h2.header2 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header2-text); background: var(--header2-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h3.header3 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header3-text); background: var(--header3-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h4.header4 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header4-text); background: var(--header4-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h5.header5 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header5-text); background: var(--header5-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+.main-content h6.header6 { border-top: 2px solid; border-bottom: 2px solid; color: var(--header6-text); background: var(--header6-background); border-color: var(--header-border); display: block; padding-left: 0.5rem; }
+
+a { color: var(--blue-text); text-decoration: none; }
+a:hover { text-decoration: underline; }
+font.black, a.black { color: var(--black-text); }
+font.blue, a.blue { color: var(--blue-text); }
+font.brown, a.brown { color: var(--brown-text); }
+font.cyan, a.cyan { color: var(--cyan-text); }
+font.dkgray, a.dkgray { color: var(--dkgray-text); }
+font.gray, a.gray { color: var(--gray-text); }
+font.green, a.green { color: var(--green-text); }
+font.ltblue, a.ltblue { color: var(--ltblue-text); }
+font.ltgray, a.ltgray { color: var(--ltgray-text); }
+font.ltgreen, a.ltgreen { color: var(--ltgreen-text); }
+font.orange, a.orange { color: var(--orange-text); }
+font.pink, a.pink { color: var(--pink-text); }
+font.purple, a.purple { color: var(--purple-text); }
+font.red, a.red { color: var(--red-text); }
+font.tan, a.tan { color: var(--tan-text); }
+font.white, a.white { color: var(--white-text); }
+font.yellow, a.yellow { color: var(--yellow-text); }
+
+input[id^="spoiler"] { display: none; }
+input[id^="spoiler"] + label { display: inline; margin: 0.25rem; padding: 0.25rem; color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); text-align: center; font-size: 1.25rem; border-radius: 0.5rem; cursor: pointer; transition: all .6s; }
+input[id^="spoiler"]:checked + label { color: var(--purple-text); background-color: var(--code-background); outline-style: hidden; }
+input[id^="spoiler"] ~ .spoiler { width: auto; height: 0; overflow: hidden; opacity: 0; margin: 0.25rem; padding: 0.25rem; color: var(--purple-text); background-color: var(--code-background); border: 2px; border-style: solid; border-color: rgba(255, 255, 255, 0.8); border-radius: 8px; transition: all .6s; }
+input[id^="spoiler"] ~ .spoiler p { color: inherit; }
+input[id^="spoiler"]:checked + label + .spoiler { height: auto; opacity: 1; padding: 10px; }
+
+.main-content p { margin: 0 0 0 0.75rem; color: var(--body-text); }
+.main-content p.empty { margin-top: 0.1rem; margin-bottom: 0.1rem; }
+.main-content p.list-1 { margin-left: 0.9rem; }
+.main-content p.list-2 { margin-left: 1.50rem; }
+.main-content p.list-3 { margin-left: 2.10rem; }
+.main-content p.list-4 { margin-left: 2.75rem; }
+.main-content p.list-5 { margin-left: 3.4rem; }
+.main-content p.list-6 { margin-left: 4rem; }
+
+section.quote { display: block; justify-content: center; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem; color: rgba(150, 150, 150, 0.8); background-color: rgba(150, 150, 150, 0.08); border-color: rgba(150, 150, 150, 0.2); border-style: solid; border-width: 3px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; box-shadow: 5px 3px 30px black; }
+section.quote p { margin: 0; padding: 0; line-height: 24px; }
+section.quote p.empty { margin: 0; padding: 0; line-height: 24px; }
+section.quote .attr { margin: 0; padding: 0 0 0.1rem 0.5rem; font: normal 400 1.5em/1.5em 'Montserrat', sans-serif; background-color: rgba(150, 150, 150, 0.2); letter-spacing: 0.04em; text-align: left; }
+section.quote .attr:before { content: " - "; }
+section.quote .attr:after { content: " - "; }
+</STYLE>
+</HEAD>
+<BODY>
+    <section class="page-header">
+      <h1 class="project-name">Contributing</h1>
+      <h2 class="project-tagline">Collection of Wrye Bash history and information</h2>
+    </section>
+<SECTION  class="main-content">
+<DIV>
+<h1 class="header1" id="Contributing">Contributing</h1>
 <h2 class="header2" id="Intent">Intent:</h2>
 <p class="list-1">&bull;&nbsp; Do you have Wrye Bash related material that you would like to submit to this site? Are HTML and css style sheets over your head? The files and options provided will allow you to edit a simple text file that I will convert into content for the Wiki.</p>
 <p class="empty">&nbsp;</p>
@@ -100,7 +269,7 @@ title: Contributing
 <h2 class="header2" id="Syntax">Syntax</h2>
 <h3 class="header3" id="YourPagesTitle">Your Pages Title</h3>
 <p class="empty">&nbsp;</p>
-<p>Your page title will become the first line on the page and will be assigned as the first header. To indicate this text use the following Wrye Tag. Add <code>{% raw %}{{PAGETITLE="Your Page Title"}}{% endraw %}</code> with opening and ending double curly brackets. The text in quotes will become the title of your page as shown below.</p>
+<p>Your page title will become the first line on the page and will be assigned as the first header. To indicate this text use the following Wrye Tag. Add <code>{{PAGETITLE="Your Page Title"}}</code> with opening and ending double curly brackets. The text in quotes will become the title of your page as shown below.</p>
 <p class="empty">&nbsp;</p>
 <h1 class="header1" id="YourPageTitle">Your Page Title</h1>
 <p class="empty">&nbsp;</p>
@@ -131,7 +300,7 @@ title: Contributing
 <p class="empty">&nbsp;</p>
 <p>A table of contents is automatically generated from the headers in the document. It is best to place the first content tag where you want the table of contents to be, and after a header named Contents. The number indicates which header level will be used.</p>
 <p class="empty">&nbsp;</p>
-<p>The syntax is as follows: <code>{% raw %}{{CONTENTS=2}}{% endraw %}</code> or <code>{% raw %}{{CONTENTS=0}}{% endraw %}</code> to pause using headers in the table of contents.</p>
+<p>The syntax is as follows: <code>{{CONTENTS=2}}</code> or <code>{{CONTENTS=0}}</code> to pause using headers in the table of contents.</p>
 <p class="empty">&nbsp;</p>
 <p>You can also disable using headers in the table of contents by using a value of <code>0</code>. The headers will not be recorded until there is another contents tag with a value greater thean 0.</p>
 <p class="empty">&nbsp;</p>
@@ -206,8 +375,8 @@ title: Contributing
 <p class="empty">&nbsp;</p>
 <p>You may be contributing a guide that has people download a mod and you wish to color code them to indicate a special purpose. Maybe the file needs to be converted from Skyrim to Skyrim SE or maybe the mod has special install procedures that make it complicated for new users. Whatever the case may be there is a tag that you may use to indicate the link color.</p>
 <p class="empty">&nbsp;</p>
-<p><code>{% raw %}{{a:green}}{% endraw %}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.</p>
-<p><code>{% raw %}[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}] <a class="orange" href="https://sharlikran.github.io/">This Link Text is Orange</a>{% endraw %}</code></p>
+<p><code>{{a:green}}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.</p>
+<p><code>[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}] <a class="orange" href="https://sharlikran.github.io/">This Link Text is Orange</a></code></p>
 <p><font class="yellow">Reminder:</font> Only one brace is used so you can see the syntax. The link in your text document requires two braces at the begining and the end of the link.</p>
 <p class="empty">&nbsp;</p>
 <hr>
@@ -227,13 +396,13 @@ end
 <h3 class="header3" id="Blockquote">Blockquote</h3>
 <p>To add a blockquote tag you will need to specify an author for the blockquote. To do so simply add the author name after the colon <code>:</code> symbol. This will be converted into the authors name and placed at the top of the blockquote.</p>
 <p class="empty">&nbsp;</p>
-{% raw %}
+<p class="empty">&nbsp;</p>
 <pre>
 [[bb:Quote]]
 Example of text in a blockquote
 [[be:]]
 </pre>
-{% endraw %}
+<p class="empty">&nbsp;</p>
 <p class="empty">&nbsp;</p>
 <section class="quote">
 <p class="attr">Quote</p>
@@ -247,11 +416,11 @@ Example of text in a blockquote
 <p class="empty">&nbsp;</p>
 <p>To add a spoiler tag you will need to specify both an ID for the spoiler and the spoiler name separated with a pipe <code>|</code> symbol. This will connect the spoiler contents, name, and the button.</p>
 <p class="empty">&nbsp;</p>
-{% raw %}<pre>
+<pre>
 [[sb:Spoiler1 | Spoiler Name]]
 Example of text in the spoiler tag
 [[se:]]
-</pre>{% endraw %}
+</pre>
 <p class="empty">&nbsp;</p>
 <input type="checkbox" id="spoiler1" />
 <label for="spoiler1">Spoiler Name</label>
@@ -270,32 +439,32 @@ Example of text in the spoiler tag
 <p class="empty">&nbsp;</p>
 <h4 class="header4" id="AllowedSyntax">Allowed Syntax</h4>
 <p class="empty">&nbsp;</p>
-{% raw %}<pre>
+<pre>
 /* comment goes here */
-</pre>{% endraw %}
+</pre>
 <p class="empty">&nbsp;</p>
 <p>OR</p>
 <p class="empty">&nbsp;</p>
-{% raw %}<pre>
+<pre>
 /*
  comment goes here
 */
-</pre>{% endraw %}
+</pre>
 <p class="empty">&nbsp;</p>
 <p><font class="yellow">NOTE:</font> Comments inside of <code>pre</code> or preformatted text elements will not be treated as a comment. <font class="orange">NOTE:</font> For now both single and multi line comments require a trailing <code>*/</code>. If you do not end the comment then the HTML may not be generated past the invalid syntax.</p>
 <p class="empty">&nbsp;</p>
 <h4 class="header4" id="InvalidSyntax">Invalid Syntax</h4>
 <p class="empty">&nbsp;</p>
-{% raw %}<pre>
+<pre>
 // This is a single line comment
-</pre>{% endraw %}
+</pre>
 <p class="empty">&nbsp;</p>
 <p>OR</p>
 <p class="empty">&nbsp;</p>
-{% raw %}<pre>
+<pre>
 * This is a bullet of something
 * This is a link to a mod // This is a comment after the link
-</pre>{% endraw %}
+</pre>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Versions">Versions</h2>
 <p class="empty">&nbsp;</p>
@@ -389,3 +558,6 @@ Example of text in the spoiler tag
 <h3 class="header3" id="Credits">Credits</h3>
 <p class="list-1">&bull;&nbsp; <B><I>Wrye</I></B>, for creating this markdown language</p>
 </div>
+</section>
+</BODY>
+</HTML>
