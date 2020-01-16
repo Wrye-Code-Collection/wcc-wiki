@@ -5,7 +5,7 @@ When I looked for some old Morrowind mods it took me a bit to find them on alter
 I also wondered are there any other sites other then the Nexus and the UESP Wiki for mods and other Morrowind utilities. As I continue to find other websites, tutorials and, Utilities I will list them here.
 == Contents
 {{CONTENTS=2}}
-== Unofficial CS Fix
+== Community Creation Set Fix
 [[https://www.nexusmods.com/morrowind/mods/42196 | TESCS Fix for Steam GotY edition]]
 == Modding Websites
 . [[https://www.tamriel-rebuilt.org/ | Tamriel Rebuilt]]
