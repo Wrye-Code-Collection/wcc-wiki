@@ -17,11 +17,11 @@
 {{CONTENTS=3}}
 
 == Requirement:
-* The <code>pagebuilder_v7.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.
-### Download pagebuilder_v7.zip
+* The <code>pagebuilder_v8.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.
+### Download pagebuilder_v8.zip
 <img src="img/pagebuilder.jpg" alt="pagebuilder.zip">
 
-* [[pagebuilder_v7.zip | pagebuilder_v7 Download Link.zip]]
+* [[pagebuilder_v8.zip | pagebuilder_v8 Download Link.zip]]
 
 ## Example Template
 As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.
@@ -231,13 +231,18 @@ OR
 
 == Versions ===================================================================
 
-=== 7.00 Update [1/10/2020]
+=== 8.00 Update [1/15/2020]
+* released pagebuilder_v8.zip version 8
+  * Updated CSS to reflect changes
+  * Added Pagetitle to Psuedo Page Header
+
+=== 7.00 Update [1/15/2020]
 * released pagebuilder_v7.zip version 7
   * Added a Blockquote Tag see [[#| Blockquote]]
   * Font and Code tags at the start of a line were not assigned a paragraph marker and thus not indenting.
 
 === 6.00 Update [1/11/2020]
-* released pagebuilder_v6.zip version 5
+* released pagebuilder_v6.zip version 6
   * Alter spoiler button to expand its width when there is more text
 
 === 5.00 Update [1/11/2020]
