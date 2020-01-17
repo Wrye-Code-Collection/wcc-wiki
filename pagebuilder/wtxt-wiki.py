@@ -569,11 +569,48 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reSpoilerEnd = re.compile(r'\[\[se:\]\]')
     reBlockquoteBegin = re.compile(r'\[\[bb:(.*?)\]\]')
     reBlockquoteBEnd = re.compile(r'\[\[be:\]\]')
-    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<img\s{1,3}src.+?\>)')
+    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<img\s{1,3}src.+?\>)|(^{% include image-inline.html)')
     # --Open files
     inFileRoot = re.sub('\.[a-zA-Z]+$', '', srcFile)
     # --TextColors
     reTextColor = re.compile(r'({{a:(.+?)}})')
+    # --TextColors
+    reImageInline = re.compile(r'{{inline:.+?}}')
+    reImageOnly = re.compile(r'{{image:.+?}}')
+    reImageCaption = re.compile(r'({{image-caption:(.+?)}})')
+    reImageCaptionUrl = re.compile(r'({{image-cap-url:(.+?)}})')
+
+    def imageInline(maObject):
+        var1 = maObject.group(0).strip()
+        var1 = re.sub(r'{{inline:(.+?)}}', r'\1', var1)
+        var1 = re.sub(r'\n', r'', var1)
+        if '|' in var1:
+            (max_width, file_name, alt_text) = [chunk.strip() for chunk in var1.split('|', 2)]
+        return '{{% include image-inline.html max-width="{}" file="img/{}" alt="{}" %}}\n'.format(max_width, file_name, alt_text)
+
+    def imageInclude(maObject):
+        var1 = maObject.group(0).strip()
+        var1 = re.sub(r'{{image:(.+?)}}', r'\1', var1)
+        var1 = re.sub(r'\n', r'', var1)
+        if '|' in var1:
+            (max_width, file_name, alt_text) = [chunk.strip() for chunk in var1.split('|', 2)]
+        return '{{% include image.html max-width="{}" file="img/{}" alt="{}" %}}\n'.format(max_width, file_name, alt_text)
+
+    def imageCaption(maObject):
+        var1 = maObject.group(0).strip()
+        var1 = re.sub(r'{{image-caption:(.+?)}}', r'\1', var1)
+        var1 = re.sub(r'\n', r'', var1)
+        if '|' in var1:
+            (max_width, file_name, alt_text, caption) = [chunk.strip() for chunk in var1.split('|', 3)]
+        return '{{% include image-caption.html max-width="{}" file="img/{}" alt="{}" caption="{}" %}}\n'.format(max_width, file_name, alt_text, caption)
+
+    def imageCaptionUrl(maObject):
+        var1 = maObject.group(0).strip()
+        var1 = re.sub(r'{{image-cap-url:(.+?)}}', r'\1', var1)
+        var1 = re.sub(r'\n', r'', var1)
+        if '|' in var1:
+            (max_width, file_name, alt_text, caption, url, urlname) = [chunk.strip() for chunk in var1.split('|', 5)]
+        return '{{% include image-caption-url.html max-width="{}" file="img/{}" alt="{}" caption="{}" url="{}" urlname="{}" %}}\n'.format(max_width, file_name, alt_text, caption, url, urlname)
 
     def spoilerTag(line):
         spoilerID = ''
@@ -758,6 +795,11 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         line = reBoldItalic.sub(boldItalicReplace, line)
         # --Wtxt Tags
         # line = reAnchorTag.sub(anchorReplace, line)
+        # --Images
+        line = reImageInline.sub(imageInline, line)
+        line = reImageOnly.sub(imageInclude, line)
+        line = reImageCaption.sub(imageCaption, line)
+        line = reImageCaptionUrl.sub(imageCaptionUrl, line)
         # --Hyperlinks
         line = reLink.sub(linkReplace, line)
         line = reHttp.sub(r' <a href="\1">\1</a>', line)

@@ -49,7 +49,7 @@ title: Contributing
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Contents">Contents</h2>
 <p class="list-1">&bull;&nbsp; <a href="#Requirement">Requirement:</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Downloadpagebuilder_v8zip">Download pagebuilder_v8.zip</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Downloadpagebuilder_v9zip">Download pagebuilder_v9.zip</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#ExampleTemplate">Example Template</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Syntax">Syntax</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#YourPagesTitle">Your Pages Title</a></p>
@@ -69,7 +69,10 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#Comments">Comments</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#AllowedSyntax">Allowed Syntax</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#InvalidSyntax">Invalid Syntax</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Images">Images</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#AddinganImageonly">Adding an Image only</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Versions">Versions</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#900Update1162020">9.00 Update [1/16/2020]</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#800Update1152020">8.00 Update [1/15/2020]</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#700Update1152020">7.00 Update [1/15/2020]</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#600Update1112020">6.00 Update [1/11/2020]</a></p>
@@ -89,11 +92,12 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#Credits">Credits</a></p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Requirement">Requirement:</h2>
-<p class="list-1">&bull;&nbsp; The <code>pagebuilder_v8.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.</p>
-<h3 id="Downloadpagebuilder_v8zip">Download pagebuilder_v8.zip</h3>
-<p><img src="img/pagebuilder.jpg" alt="pagebuilder.zip"></p>
+<p class="list-1">&bull;&nbsp; The <code>pagebuilder_v9.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.</p>
+<h3 id="Downloadpagebuilder_v9zip">Download pagebuilder_v9.zip</h3>
+{% include image.html max-width="765px" file="img/pagebuilder.jpg" alt="Page Builder Zipfile" %}
+
 <p class="empty">&nbsp;</p>
-<p class="list-1">&bull;&nbsp; <a  href="pagebuilder_v8.zip">pagebuilder_v8 Download Link.zip</a></p>
+<p class="list-1">&bull;&nbsp; <a  href="pagebuilder_v9.zip">pagebuilder_v9 Download Link.zip</a></p>
 <p class="empty">&nbsp;</p>
 <h2 id="ExampleTemplate">Example Template</h2>
 <p>As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.</p>
@@ -298,12 +302,68 @@ Example of text in the spoiler tag
 * This is a link to a mod // This is a comment after the link
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
+<h3 class="header3" id="Images">Images</h3>
+<p>I apologize for the rather cryptic way of doing this. I needed something easy to work with that didn't require a ridiculous amount of code.</p>
+<h4 class="header4" id="AddinganImageonly">Adding an Image only</h4>
+<p>The syntax for an image requires the width of the image in pixels, the name of the file, and alternate text if the image is not showing. These three elements will be used to display the image properly.</p>
+<p class="empty">&nbsp;</p>
+<h5 id="Examplesyntaxforanimageonly">Example syntax for an image only:</h5>
+{% raw %}<pre>
+{{image:765px | pagebuilder.jpg | Page Builder}}
+</pre>{% endraw %}
+<p class="empty">&nbsp;</p>
+<h5 id="Exampleofonlyanimage">Example of only an image:</h5>
+{% include image.html max-width="765px" file="img/pagebuilder.jpg" alt="Page Builder" %}
+
+<hr>
+<h5 id="Examplesyntaxforanimagewithacaption">Example syntax for an image with a caption:</h5>
+<p>The syntax for an image with a caption requires the width of the image in pixles, the name of the file, alternate text, and a caption. These four elements will be used to display the image properly and add a caption underneath. The box for the caption will be the width of the image and will wordwrap.</p>
+{% raw %}<pre>
+{{image-caption:765px | pagebuilder.jpg | pagebuilder.jpg | This is what the zip looks like}}
+</pre>{% endraw %}
+<p class="empty">&nbsp;</p>
+<h5 id="Exampleofanimagewithacaption">Example of an image with a caption:</h5>
+{% include image-caption.html max-width="765px" file="img/pagebuilder.jpg" alt="pagebuilder.jpg" caption="This is what the zip looks like" %}
+
+<hr>
+<h5 id="Examplesyntaxforanimagewithacaptionandahyperlink">Example syntax for an image with a caption and a hyperlink:</h5>
+<p>The syntax for an image with a caption and a hyperlink will require six elements. The width of the image in pixels, the name of the file, alternate text, and a caption. In addition to that you need two elements for the hyperlink, the hyperlink itself and a name for the link. These elements will be used to display the image properly and add a caption underneath. The box for the caption will be the width of the image and will wordwrap. The link will appear under the caption and will not be the width of the image.</p>
+{% raw %}<pre>
+{{image-cap-url:765px | pagebuilder.jpg | pagebuilder.jpg | This is what the zip looks like | pagebuilder_v9.zip | Page Builder Zip}}
+</pre>{% endraw %}
+<p class="empty">&nbsp;</p>
+<h5 id="ExampleofanimagewithacaptionandaHyperlink">Example of an image with a caption and a Hyperlink:</h5>
+{% include image-caption-url.html max-width="765px" file="img/pagebuilder.jpg" alt="pagebuilder.jpg" caption="This is what the zip looks like" url="pagebuilder_v9.zip" urlname="Page Builder Zip" %}
+
+<hr>
+<h5 id="Examplesyntaxforaninlineimage">Example syntax for an inline image:</h5>
+{% raw %}<pre>
+{{inline:96px | wrye_monkey_96.png | Page Builder}}
+</pre>{% endraw %}
+<p class="empty">&nbsp;</p>
+<h5 id="Exampleofaninlineimage">Example of an inline image:</h5>
+<p>{% include image-inline.html max-width="96px" file="img/wrye_monkey_96.png" alt="Wrye Avatar" %}</p>
+<p class="empty">&nbsp;</p>
+<p>You can use small inline images between {% include image-inline.html max-width="20px" file="img/Sqinter.png" alt="Wrye Avatar" %}
+ text.</p>
+<p class="empty">&nbsp;</p>
+<p>{% include image-inline.html max-width="20px" file="img/Sqdiscus.png" alt="Sqdiscus" %}
+ You can also use a small icon at the beginning of a sentence using the inline image Wrye Tag.</p>
+<p class="empty">&nbsp;</p>
+<p>Keep in mind you would want to use small images about 24 to 36 pixels or less. Using large inline {% include image-inline.html max-width="96px" file="img/wrye_monkey_96.png" alt="Wrye Avatar" %}
+ images will look silly.</p>
+<hr>
 <h2 class="header2" id="Versions">Versions</h2>
 <p class="empty">&nbsp;</p>
+<h3 class="header3" id="900Update1162020">9.00 Update [1/16/2020]</h3>
+<p class="list-1">&bull;&nbsp; released pagebuilder_v9.zip version 9</p>
+  <p class="list-2">&bull;&nbsp; Updated CSS to reflect changes</p>
+  <p class="list-2">&bull;&nbsp; Added Pagetitle to Pseudo Page Header</p>
+  <p class="empty">&nbsp;</p>
 <h3 class="header3" id="800Update1152020">8.00 Update [1/15/2020]</h3>
 <p class="list-1">&bull;&nbsp; released pagebuilder_v8.zip version 8</p>
   <p class="list-2">&bull;&nbsp; Updated CSS to reflect changes</p>
-  <p class="list-2">&bull;&nbsp; Added Pagetitle to Psuedo Page Header</p>
+  <p class="list-2">&bull;&nbsp; Added Pagetitle to Pseudo Page Header</p>
   <p class="empty">&nbsp;</p>
 <h3 class="header3" id="700Update1152020">7.00 Update [1/15/2020]</h3>
 <p class="list-1">&bull;&nbsp; released pagebuilder_v7.zip version 7</p>
