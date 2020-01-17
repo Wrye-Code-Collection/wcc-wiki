@@ -225,7 +225,7 @@ body {
   display: grid;
   color: var(--cayman-header-heading);
   background-color: var(--cayman-header-background);
-  background-image: linear-gradient(120deg, var(--cayman-header-background-secondary), var(--cayman-header-background));
+  background-image: linear-gradient(120deg, rgb(15, 64, 112), rgb(22, 89, 157), rgb(15, 112, 64), rgb(22, 157, 89));
   div.gridhead2 {
     text-align: right;
   }
