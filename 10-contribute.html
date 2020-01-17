@@ -50,7 +50,7 @@ title: Contributing
 <h2 class="header2" id="Contents">Contents</h2>
 <p class="list-1">&bull;&nbsp; <a href="#Requirement">Requirement:</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Downloadpagebuilder_v9zip">Download pagebuilder_v9.zip</a></p>
-<p class="list-1">&bull;&nbsp; <a href="#ExampleTemplate">Example Template</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#ExampleTemplate">Example Template</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Syntax">Syntax</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#YourPagesTitle">Your Pages Title</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#HeadingStyle1">Heading Style 1</a></p>
@@ -70,18 +70,12 @@ title: Contributing
 <p class="list-3">&bull;&nbsp; <a href="#AllowedSyntax">Allowed Syntax</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#InvalidSyntax">Invalid Syntax</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Images">Images</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#AddinganImageonly">Adding an Image only</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#AddinganImage">Adding an Image</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#AddinganImagewithaCaption">Adding an Image with a Caption</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#AddinganImagewithCaptionandHyperlink">Adding an Image with Caption and Hyperlink</a></p>
+<p class="list-3">&bull;&nbsp; <a href="#AddinganinlineImage">Adding an inline Image</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Versions">Versions</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#900Update1162020">9.00 Update [1/16/2020]</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#800Update1152020">8.00 Update [1/15/2020]</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#700Update1152020">7.00 Update [1/15/2020]</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#600Update1112020">6.00 Update [1/11/2020]</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#500Update1112020">5.00 Update [1/11/2020]</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#400Update1102020">4.00 Update [1/10/2020]</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#300Update1102020">3.00 Update [1/10/2020]</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#200Update182020">2.00 Update [1/8/2020]</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#100Update172020">1.00 Update [1/7/2020]</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#000InitialRelease112020">0.00 Initial Release [1/1/2020]</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#OptionalRequirement">Optional Requirement:</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#PythonInstallation">Python Installation</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#WherearethefilesIjustdownloaded">Where are the files I just downloaded?</a></p>
@@ -99,7 +93,7 @@ title: Contributing
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <a  href="pagebuilder_v9.zip">pagebuilder_v9 Download Link.zip</a></p>
 <p class="empty">&nbsp;</p>
-<h2 id="ExampleTemplate">Example Template</h2>
+<h3 id="ExampleTemplate">Example Template</h3>
 <p>As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.</p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Syntax">Syntax</h2>
@@ -304,46 +298,43 @@ Example of text in the spoiler tag
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="Images">Images</h3>
 <p>I apologize for the rather cryptic way of doing this. I needed something easy to work with that didn't require a ridiculous amount of code.</p>
-<h4 class="header4" id="AddinganImageonly">Adding an Image only</h4>
+<h4 class="header4" id="AddinganImage">Adding an Image</h4>
 <p>The syntax for an image requires the width of the image in pixels, the name of the file, and alternate text if the image is not showing. These three elements will be used to display the image properly.</p>
 <p class="empty">&nbsp;</p>
-<h5 id="Examplesyntaxforanimageonly">Example syntax for an image only:</h5>
+<h5 id="ExamplesyntaxforanImage">Example syntax for an Image:</h5>
 {% raw %}<pre>
 {{image:765px | pagebuilder.jpg | Page Builder}}
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
-<h5 id="Exampleofonlyanimage">Example of only an image:</h5>
+<h5 id="ExampleofanImage">Example of an Image:</h5>
 {% include image.html max-width="765px" file="img/pagebuilder.jpg" alt="Page Builder" %}
 
 <hr>
-<h5 id="Examplesyntaxforanimagewithacaption">Example syntax for an image with a caption:</h5>
+<h4 class="header4" id="AddinganImagewithaCaption">Adding an Image with a Caption</h4>
 <p>The syntax for an image with a caption requires the width of the image in pixles, the name of the file, alternate text, and a caption. These four elements will be used to display the image properly and add a caption underneath. The box for the caption will be the width of the image and will wordwrap.</p>
+<p class="empty">&nbsp;</p>
+<h5 id="ExamplesyntaxforanImagewithCaption">Example syntax for an Image with Caption:</h5>
 {% raw %}<pre>
 {{image-caption:765px | pagebuilder.jpg | pagebuilder.jpg | This is what the zip looks like}}
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
-<h5 id="Exampleofanimagewithacaption">Example of an image with a caption:</h5>
+<h5 id="ExampleImagewithaCaption">Example Image with a Caption:</h5>
 {% include image-caption.html max-width="765px" file="img/pagebuilder.jpg" alt="pagebuilder.jpg" caption="This is what the zip looks like" %}
 
 <hr>
-<h5 id="Examplesyntaxforanimagewithacaptionandahyperlink">Example syntax for an image with a caption and a hyperlink:</h5>
+<h4 class="header4" id="AddinganImagewithCaptionandHyperlink">Adding an Image with Caption and Hyperlink</h4>
 <p>The syntax for an image with a caption and a hyperlink will require six elements. The width of the image in pixels, the name of the file, alternate text, and a caption. In addition to that you need two elements for the hyperlink, the hyperlink itself and a name for the link. These elements will be used to display the image properly and add a caption underneath. The box for the caption will be the width of the image and will wordwrap. The link will appear under the caption and will not be the width of the image.</p>
+<p class="empty">&nbsp;</p>
+<h5 id="ExamplesyntaxImagewithaCaptionandHyperlink">Example syntax Image with a Caption and Hyperlink:</h5>
 {% raw %}<pre>
 {{image-cap-url:765px | pagebuilder.jpg | pagebuilder.jpg | This is what the zip looks like | pagebuilder_v9.zip | Page Builder Zip}}
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
-<h5 id="ExampleofanimagewithacaptionandaHyperlink">Example of an image with a caption and a Hyperlink:</h5>
+<h5 id="ExampleImagewithCaptionandHyperlink">Example Image with Caption and Hyperlink:</h5>
 {% include image-caption-url.html max-width="765px" file="img/pagebuilder.jpg" alt="pagebuilder.jpg" caption="This is what the zip looks like" url="pagebuilder_v9.zip" urlname="Page Builder Zip" %}
 
 <hr>
-<h5 id="Examplesyntaxforaninlineimage">Example syntax for an inline image:</h5>
-{% raw %}<pre>
-{{inline:96px | wrye_monkey_96.png | Page Builder}}
-</pre>{% endraw %}
-<p class="empty">&nbsp;</p>
-<h5 id="Exampleofaninlineimage">Example of an inline image:</h5>
-<p>{% include image-inline.html max-width="96px" file="img/wrye_monkey_96.png" alt="Wrye Avatar" %}</p>
-<p class="empty">&nbsp;</p>
+<h4 class="header4" id="AddinganinlineImage">Adding an inline Image</h4>
 <p>You can use small inline images between {% include image-inline.html max-width="20px" file="img/Sqinter.png" alt="Wrye Avatar" %}
  text.</p>
 <p class="empty">&nbsp;</p>
@@ -352,6 +343,15 @@ Example of text in the spoiler tag
 <p class="empty">&nbsp;</p>
 <p>Keep in mind you would want to use small images about 24 to 36 pixels or less. Using large inline {% include image-inline.html max-width="96px" file="img/wrye_monkey_96.png" alt="Wrye Avatar" %}
  images will look silly.</p>
+<p class="empty">&nbsp;</p>
+<h5 id="Examplesyntaxforaninlineimage">Example syntax for an inline image:</h5>
+{% raw %}<pre>
+{{inline:96px | wrye_monkey_96.png | Page Builder}}
+</pre>{% endraw %}
+<p class="empty">&nbsp;</p>
+<h5 id="Exampleofaninlineimage">Example of an inline image:</h5>
+<p>{% include image-inline.html max-width="96px" file="img/wrye_monkey_96.png" alt="Wrye Avatar" %}
+ Wrye's Avatar</p>
 <hr>
 <h2 class="header2" id="Versions">Versions</h2>
 <p class="empty">&nbsp;</p>
@@ -359,7 +359,6 @@ Example of text in the spoiler tag
 <p class="list-1">&bull;&nbsp; released pagebuilder_v9.zip version 9</p>
   <p class="list-2">&bull;&nbsp; Updated CSS to reflect changes</p>
   <p class="list-2">&bull;&nbsp; Added Pagetitle to Pseudo Page Header</p>
-  <p class="empty">&nbsp;</p>
 <h3 class="header3" id="800Update1152020">8.00 Update [1/15/2020]</h3>
 <p class="list-1">&bull;&nbsp; released pagebuilder_v8.zip version 8</p>
   <p class="list-2">&bull;&nbsp; Updated CSS to reflect changes</p>
@@ -396,7 +395,6 @@ Example of text in the spoiler tag
   <p class="empty">&nbsp;</p>
 <h3 class="header3" id="000InitialRelease112020">0.00 Initial Release [1/1/2020]</h3>
 <p class="list-1">&bull;&nbsp; released pagebuilder.zip version 0</p>
-<p class="empty">&nbsp;</p>
 <h2 class="header2" id="OptionalRequirement">Optional Requirement:</h2>
 <p class="list-1">&bull;&nbsp; To generate the HTML files you will need the latest python from Python.org. These files are written for 2.7.x and the current Python 2.7.17 will work just fine. The link is for the 32 bit version. Please download that because the setup will go smoother and add needed configurations to your computer to run the python scripts provided.</p>
 <p class="list-1">&bull;&nbsp; Below is a link to Python 2.7.17 and a link to the pagebuilder script and sample file you can generate right away to see it working.</p>
