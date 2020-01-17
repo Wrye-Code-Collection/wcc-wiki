@@ -17,9 +17,11 @@ const
 	scaleButton = [].slice.call(scaleMenuContent.querySelectorAll("button")),
 	scaleInput = [].slice.call(scaleMenuContent.querySelectorAll("input")),
 	
-    tocButton = document.getElementById("close_tab"),
     fontSizeMod = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeMod'),
 
+    navMenuContent = document.getElementById("navMenuContent"),
+    navLinks = [].slice.call(navMenuContent.querySelectorAll("a")),
+	
 	transitionSpeed = 300
 	;
 
@@ -112,7 +114,7 @@ function sideMenuEnable() {
 	scaleButton.forEach(input => input.addEventListener("click", scaleHandleApply));
 	scaleInput.forEach(input => input.addEventListener("change", scaleHandleUpdate));
 	scaleInput.forEach(input => input.addEventListener("mousemove", scaleHandleUpdate));
-    tocButton.addEventListener("click", tocButtonClose);
+	navLinks.forEach(input => input.addEventListener("click", tocButtonClose));
 }
 
 function SetCookie(name,value,days) {

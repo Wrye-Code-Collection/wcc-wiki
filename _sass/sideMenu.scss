@@ -6,39 +6,11 @@
 /*
 * #px / 16 = #rem
 */
-
+/*
+* Moved root to variables.scss
 :root {
-	--sideMenu_OPVAR_TabCount: 2; /* Change as more tabs are added */
-	--sideMenuBorderStyle: solid;
-	--sideMenuBorderWidth: 2px;
-	--sideMenuBorderWidthArray: 0 var(--sideMenuBorderWidth) var(--sideMenuBorderWidth) 0;
-	--sideMenuContentPadding: 1rem;
-	--sideMenuMaxHeight: 99vh;
-	--sideMenuMaxInnerHeight: calc(var(--sideMenuMaxHeight) - var(--sideMenuBorderWidth));
-	--sideMenuMaxWidth: calc(99vw - var(--sideMenuTabWidth));
-	--sideMenuMinHeight: calc(var(--sideMenuTabHeight) * var(--sideMenu_OPVAR_TabCount));
-	--sideMenuPOSEdge: calc(var(--sideMenuWidth) * (-1));
-	--sideMenuPOSEdgeNoJS: calc((var(--sideMenuWidth) + var(--sideMenuTabWidth)) * (-1));
-	--sideMenuTabBorderWidthArray: 0 var(--sideMenuBorderWidth) var(--sideMenuBorderWidth) var(--sideMenuBorderWidth);
-	--sideMenuTabHeight: 2.5rem;
-	--sideMenuTabWidth: 1.25rem;
-	--sideMenuTabPOSEdge: calc(var(--sideMenuTabWidth) * (-1));
-	--sideMenuTab1POSTop: 0;
-	--sideMenuTab2POSTop: var(--sideMenuTabHeight);
-	--sideMenuTab3POSTop: calc(var(--sideMenuTab2POSTop) + var(--sideMenuTabHeight));
-	--sideMenuTab4POSTop: calc(var(--sideMenuTab3POSTop) + var(--sideMenuTabHeight));
-	--sideMenuTab5POSTop: calc(var(--sideMenuTab4POSTop) + var(--sideMenuTabHeight));
-	--sideMenuTransitionSpeed: 0.3s;
-	--sideMenuWidth: 40rem;
-	--sideMenuZIndex: 1000;
-	--sizeMenuZIndexActive: 1002;
-	--sideMenuZIndexInactive: 1001;
-	--fontSizeBase: 16px;
-	--fontSizeMod: 100;
-	--fontSizeModPreview: 100;
-	--fontSizeScale: calc(var(--fontSizeBase) * var(--fontSizeMod) * 0.01);
-	--fontSizeScalePreview: calc(var(--fontSizeBase) * var(--fontSizeModPreview) * 0.01);
 }
+*/
 
 /*
 --------------------------------------------------
@@ -71,7 +43,7 @@
 }
 
 #sideMenuFrame {
-	background-color: var(--code-background);
+	background-image: linear-gradient(120deg, var(--cayman-header-background-secondary), var(--cayman-header-background));
 	border-width: var(--sideMenuBorderWidthArray);
 	height: auto;
 	max-height: var(--sideMenuMaxHeight);
@@ -181,7 +153,7 @@
 }
 
 #sideMenuFrame .active > .menuTab:not(#colorMenuTab) {
-	background-color: var(--header-border);
+	background-image: linear-gradient(120deg, var(--cayman-header-background-secondary), var(--cayman-header-background));
 }
 
 #sideMenuFrame .menuTab:not(#navMenuTab):hover {
@@ -189,7 +161,7 @@
 }
 
 #sideMenuFrame .active > .menuTab:not(#navMenuTab) {
-	background-color: var(--header-border);
+	background-image: linear-gradient(120deg, var(--cayman-header-background-secondary), var(--cayman-header-background));
 }
 
 #colorMenuTabBG:hover {
@@ -208,4 +180,56 @@
 /* Replace the HTML declaration in the regular stylesheet with this */
 html {
 	font-size: var(--fontSizeScale) !important;
+}
+
+/*
+--------------------------------------------------
+* Sharlikran's Style Overrides
+*/
+#sideMenuFrame .menuContent {
+  h1 {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    font-weight: normal;
+  }
+  h2 {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    font-weight: normal;
+  }
+}
+
+.menubtn {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-width: 0.13rem;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  text-align: center;
+  font-size: 1.5rem;
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  +.menubtn {
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+}
+a.menulink {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }

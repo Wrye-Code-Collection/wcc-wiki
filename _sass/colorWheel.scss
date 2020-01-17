@@ -55,7 +55,7 @@ The challenge:
 	border-color: rgba(calc(var(--red) - 50), calc(var(--green) - 50), calc(var(--blue) - 50), var(--border-alpha));
 }
 
-.btn--w3c {
+.pickerbtn--w3c {
 	/* Alternative calc using the
   W3C luma method
   lightness = (red * 0.299 + green * 0.587 + blue * 0.114) / 255
@@ -65,34 +65,42 @@ The challenge:
 	--b: calc(var(--blue) * 0.114);
 }
 
-.btn--secondary {
+.pickerbtn--secondary {
 	/* 3) sets the background color as a 60º rotated hue */
 	filter: hue-rotate(60deg);
 }
 
 .sliders {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-	grid-gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+	grid-gap: 1rem;
 }
 
 .buttons {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	grid-gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+	grid-gap: 0.13rem;
 }
 
 .buttons h2 {
 	grid-column: 1 / -1;
-	margin-bottom: 0;
+	margin-bottom: 0.13rem;
 }
 
 .pickerbtn {
-	padding: 1em;
-	font-size: 1.5rem;
-	border-radius: 0.2em;
-	box-sizing: border-box;
-	flex: 1;
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
+  border-style: solid;
+  border-width: 0.13rem;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  text-align: center;
+  font-size: 1.5rem;
+  +.menubtn {
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
 }
 
 input[type=range] {
