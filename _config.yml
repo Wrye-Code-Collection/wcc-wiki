@@ -5,6 +5,7 @@ exclude: [
   'pagebuilder/',
   '_sass/src/',
   '_sass/Old CSS/',
+  'idea/',
 ]
 # show_downloads: true
 theme: jekyll-theme-cayman
