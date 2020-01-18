@@ -49,7 +49,7 @@ title: Contributing
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Contents">Contents</h2>
 <p class="list-1">&bull;&nbsp; <a href="#Requirement">Requirement:</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Downloadpagebuilder_v9zip">Download pagebuilder_v9.zip</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Downloadpagebuilder_v10zip">Download pagebuilder_v10.zip</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#ExampleTemplate">Example Template</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Syntax">Syntax</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#YourPagesTitle">Your Pages Title</a></p>
@@ -75,6 +75,7 @@ title: Contributing
 <p class="list-3">&bull;&nbsp; <a href="#AddinganImagewithCaptionandHyperlink">Adding an Image with Caption and Hyperlink</a></p>
 <p class="list-3">&bull;&nbsp; <a href="#AddinganinlineImage">Adding an inline Image</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Versions">Versions</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#1000Update1172020">10.00 Update [1/17/2020]</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#900Update1162020">9.00 Update [1/16/2020]</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#OptionalRequirement">Optional Requirement:</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#PythonInstallation">Python Installation</a></p>
@@ -86,12 +87,12 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#Credits">Credits</a></p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Requirement">Requirement:</h2>
-<p class="list-1">&bull;&nbsp; The <code>pagebuilder_v9.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.</p>
-<h3 id="Downloadpagebuilder_v9zip">Download pagebuilder_v9.zip</h3>
-{% include image.html max-width="765px" file="img/pagebuilder.jpg" alt="Page Builder Zipfile" %}
+<p class="list-1">&bull;&nbsp; The <code>pagebuilder_v10.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.</p>
+<h3 id="Downloadpagebuilder_v10zip">Download pagebuilder_v10.zip</h3>
+{% include image.html file="img/pagebuilder.jpg" alt="Page Builder Zipfile" %}
 
 <p class="empty">&nbsp;</p>
-<p class="list-1">&bull;&nbsp; <a  href="pagebuilder_v9.zip">pagebuilder_v9 Download Link.zip</a></p>
+<p class="list-1">&bull;&nbsp; <a  href="pagebuilder_v10.zip">pagebuilder_v10 Download Link.zip</a></p>
 <p class="empty">&nbsp;</p>
 <h3 id="ExampleTemplate">Example Template</h3>
 <p>As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.</p>
@@ -178,7 +179,7 @@ title: Contributing
 <h3 class="header3" id="TextColors">Text Colors</h3>
   <p class="empty">&nbsp;</p>
 <p>There are 16 dark themed colors (17 if you count black) for you to choose from so they are not (at least to the best of my abilities) as blinding as their regular values. To use these colors you need to use the outdated HTML tag <code>font</code>. The tag needs to have the proper open and closing tag, and the name of the color will be assigned to the word class within quotes.</p>
-<p><img src="img/font_tag.jpg" alt="font_tag.jpg"></p>
+<p>{% include image-inline.html max-width="300px" file="img/font_tag.jpg" alt="Font Tag" %}</p>
   <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; <font class="black">This is black</font></p>
 <p class="list-1">&bull;&nbsp; <font class="blue">This is blue</font></p>
@@ -299,15 +300,15 @@ Example of text in the spoiler tag
 <h3 class="header3" id="Images">Images</h3>
 <p>I apologize for the rather cryptic way of doing this. I needed something easy to work with that didn't require a ridiculous amount of code.</p>
 <h4 class="header4" id="AddinganImage">Adding an Image</h4>
-<p>The syntax for an image requires the width of the image in pixels, the name of the file, and alternate text if the image is not showing. These three elements will be used to display the image properly.</p>
+<p>The syntax for an image requires the name of the file and alternate text if the image is not showing. These elements will be used to display the image properly.</p>
 <p class="empty">&nbsp;</p>
 <h5 id="ExamplesyntaxforanImage">Example syntax for an Image:</h5>
 {% raw %}<pre>
-{{image:765px | pagebuilder.jpg | Page Builder}}
+{{image:pagebuilder.jpg | Page Builder Image}}
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
 <h5 id="ExampleofanImage">Example of an Image:</h5>
-{% include image.html max-width="765px" file="img/pagebuilder.jpg" alt="Page Builder" %}
+{% include image.html file="img/pagebuilder.jpg" alt="Page Builder Image" %}
 
 <hr>
 <h4 class="header4" id="AddinganImagewithaCaption">Adding an Image with a Caption</h4>
@@ -315,11 +316,11 @@ Example of text in the spoiler tag
 <p class="empty">&nbsp;</p>
 <h5 id="ExamplesyntaxforanImagewithCaption">Example syntax for an Image with Caption:</h5>
 {% raw %}<pre>
-{{image-caption:765px | pagebuilder.jpg | pagebuilder.jpg | This is what the zip looks like}}
+{{image-caption:pagebuilder.jpg | Page Builder Image | This is what the zip looks like}}
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
 <h5 id="ExampleImagewithaCaption">Example Image with a Caption:</h5>
-{% include image-caption.html max-width="765px" file="img/pagebuilder.jpg" alt="pagebuilder.jpg" caption="This is what the zip looks like" %}
+{% include image-caption.html file="img/pagebuilder.jpg" alt="Page Builder Image" caption="This is what the zip looks like" %}
 
 <hr>
 <h4 class="header4" id="AddinganImagewithCaptionandHyperlink">Adding an Image with Caption and Hyperlink</h4>
@@ -327,11 +328,11 @@ Example of text in the spoiler tag
 <p class="empty">&nbsp;</p>
 <h5 id="ExamplesyntaxImagewithaCaptionandHyperlink">Example syntax Image with a Caption and Hyperlink:</h5>
 {% raw %}<pre>
-{{image-cap-url:765px | pagebuilder.jpg | pagebuilder.jpg | This is what the zip looks like | pagebuilder_v9.zip | Page Builder Zip}}
+{{image-cap-url:pagebuilder.jpg | Page Builder Image | This is what the zip looks like | pagebuilder_v10.zip | Page Builder Zip}}
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
 <h5 id="ExampleImagewithCaptionandHyperlink">Example Image with Caption and Hyperlink:</h5>
-{% include image-caption-url.html max-width="765px" file="img/pagebuilder.jpg" alt="pagebuilder.jpg" caption="This is what the zip looks like" url="pagebuilder_v9.zip" urlname="Page Builder Zip" %}
+{% include image-caption-url.html file="img/pagebuilder.jpg" alt="Page Builder Image" caption="This is what the zip looks like" url="pagebuilder_v10.zip" urlname="Page Builder Zip" %}
 
 <hr>
 <h4 class="header4" id="AddinganinlineImage">Adding an inline Image</h4>
@@ -355,10 +356,13 @@ Example of text in the spoiler tag
 <hr>
 <h2 class="header2" id="Versions">Versions</h2>
 <p class="empty">&nbsp;</p>
+<h3 class="header3" id="1000Update1172020">10.00 Update [1/17/2020]</h3>
+<p class="list-1">&bull;&nbsp; released pagebuilder_v9.zip version 10</p>
+  <p class="list-2">&bull;&nbsp; Removed max width from images except inline images</p>
 <h3 class="header3" id="900Update1162020">9.00 Update [1/16/2020]</h3>
 <p class="list-1">&bull;&nbsp; released pagebuilder_v9.zip version 9</p>
-  <p class="list-2">&bull;&nbsp; Updated CSS to reflect changes</p>
-  <p class="list-2">&bull;&nbsp; Added Pagetitle to Pseudo Page Header</p>
+  <p class="list-2">&bull;&nbsp; Added image Wrye Tags see <a  href="#Images">Images</a></p>
+  <p class="list-2">&bull;&nbsp; Updated CSS for user page builder</p>
 <h3 class="header3" id="800Update1152020">8.00 Update [1/15/2020]</h3>
 <p class="list-1">&bull;&nbsp; released pagebuilder_v8.zip version 8</p>
   <p class="list-2">&bull;&nbsp; Updated CSS to reflect changes</p>
@@ -403,44 +407,58 @@ Example of text in the spoiler tag
 <h3 class="header3" id="PythonInstallation">Python Installation</h3>
 <h3 id="WherearethefilesIjustdownloaded">Where are the files I just downloaded?</h3>
 <p class="list-1">&bull;&nbsp; The files usually end up in your windows Downloads folder as shown below.</p>
-<img class="thumbnail-large" src="img/downloadedfiles.jpg" alt="downloadedfiles.jpg">
+{% include image.html file="img/downloadedfiles.jpg" alt="Downloaded Files" %}
+
 <p class="list-1">&bull;&nbsp; Open your windows explorer and on the left navigate to your Downloads folder.</p>
 <p class="list-1">&bull;&nbsp; First you will install Python and then be shown where to put the Python scripts and example files.</p>
 <h3 id="InstallingPython">Installing Python</h3>
 <p class="list-1">&bull;&nbsp; Your version of python will be different then show here. What is important is the install location. Leave it at the default settings so that you can follow the instructions for building HTML files with Python.</p>
-<p><img src="img/pythoninstall.jpg" alt="pythoninstall.jpg"></p>
+{% include image.html file="img/pythoninstall.jpg" alt="Python Install" %}
+
 <p class="list-1">&bull;&nbsp; The Python installation will be very simple, just click next and leave all the default settings.</p>
 <h3 id="InstallingPythonscriptforuse">Installing Python script for use</h3>
 <p class="list-1">&bull;&nbsp; Once installed Python you will need to unzip the python script and sample text file used to build the html file.</p>
 <p class="list-1">&bull;&nbsp; These are really not installed on your system automatically so we will be copying them. </p>
 <p class="list-1">&bull;&nbsp; Windows should have a way to open this type of zip file itself but if needed you can download 7zip from <a  href="https://www.7-zip.org/">7-zip.org</a>. It is safe, free and, easy to use.</p>
-<img class="thumbnail-large" src="img/unzipfiles.jpg" alt="unzipfiles.jpg">
+{% include image.html file="img/unzipfiles.jpg" alt="Unzip Files" %}
+
 <p class="list-1">&bull;&nbsp; To unzip file files simply right click on them and choose <code>Extract to "pagebuilder\"</code></p>
-<img class="thumbnail-large" src="img/copyfolder.jpg" alt="copyfolder.jpg">
+{% include image.html file="img/copyfolder.jpg" alt="Copy Folder" %}
+
 <p class="list-1">&bull;&nbsp; Now we will be copying the files to a more convenient location to run them easily. If left in the Downloads folder or copied onto the Desktop to run the script means you will have to type in command similar to this. <code>C:\Python27\python.exe C:\Users\[username]\Downloads\pagebuilder\wtxt-wiki-user.py genHtml "Wiki Page Template.txt"</code>. While not difficult we will simplify that some to make it easier.</p>
 <p class="list-1">&bull;&nbsp; Right click the <code>pagebuilder</code> folder and, choose Copy</p>
-<img class="thumbnail-large" src="img/choosecopy.jpg" alt="choosecopy.jpg">
+{% include image.html file="img/choosecopy.jpg" alt="Choose Copy" %}
+
 <p class="list-1">&bull;&nbsp; Navigate to the C Drive</p>
-<img class="thumbnail-large" src="img/gotocdrive.jpg" alt="gotocdrive.jpg">
+{% include image.html file="img/gotocdrive.jpg" alt="Choose C Drive" %}
+
 <p class="list-1">&bull;&nbsp; Right click in an empty space and, choose Paste.</p>
-<img class="thumbnail-large" src="img/choosepaste.jpg" alt="choosepaste.jpg">
+{% include image.html file="img/choosepaste.jpg" alt="Choose Paste" %}
+
 <p class="list-1">&bull;&nbsp; Once copied to the C: drive double click the pagebuilder folder and you should see the example file and the Python script</p>
-<img class="thumbnail-large" src="img/copiedforuse.jpg" alt="copiedforuse.jpg">
+{% include image.html file="img/copiedforuse.jpg" alt="Pagebuilder Copied" %}
+
 <p class="list-1">&bull;&nbsp; To run python and process the example file you need to open a command prompt since Python does not have it's own GUI interface.</p>
 <p class="list-1">&nbsp;&nbsp; Type <code>cmd</code> in the red box, and right click <code>cmd.exe</code> and choose "Run As Administrator" as shown in the green box.</p>
-<p><img src="img/opencommand.jpg" alt="opencommand.jpg"></p>
+{% include image.html file="img/opencommand.jpg" alt="Open CMD Prompt" %}
+
 <p class="list-1">&nbsp;&nbsp; Which will look like this once it's open</p>
-<img class="thumbnail-large"  src="img/commandopen.jpg" alt="commandopen.jpg">
+{% include image.html file="img/commandopen.jpg" alt="CMD Prompt Open" %}
+
 <p class="list-1">&nbsp;&nbsp; As mentioned we needed to put that folder somewhere so that there would be less typing.</p>
 <p class="list-1">&nbsp;&nbsp; As shown type <code>cd c:\pagebuilder</code> and press <code>[ENTER]</code></p>
-<img class="thumbnail-large"  src="img/changedir.jpg" alt="changedir.jpg">
+{% include image.html file="img/changedir.jpg" alt="Change Directory" %}
+
 <p class="list-1">&nbsp;&nbsp; Now we will run the python script to to produce a sample HTML output so you can see a close version of what will be in the wiki.</p>
 <p class="list-1">&nbsp;&nbsp; As shown type <code>c:\python27\python.exe wtxt-wiki-user.py genHtml "Wiki Page Template.txt"</code> and press <code>[ENTER]</code></p>
-<img class="thumbnail-large"  src="img/runpython.jpg" alt="runpython.jpg">
+{% include image.html file="img/runpython.jpg" alt="Run Python" %}
+
 <p class="list-1">&nbsp;&nbsp; There were no errors and now <code>Wiki Page Template.html</code> appears in the <code>pagebuilder</code> folder.</p>
-<img class="thumbnail-large"  src="img/outputhtml.jpg" alt="outputhtml.jpg">
+{% include image.html file="img/outputhtml.jpg" alt="Output HTML" %}
+
 <p class="list-1">&nbsp;&nbsp; Double click <code>Wiki Page Template.html</code> and you will see more or less what the page would look like.</p>
-<img class="thumbnail-large"  src="img/examplehtml.jpg" alt="examplehtml.jpg">
+{% include image.html file="img/examplehtml.jpg" alt="Example HTML" %}
+
 <p class="empty">&nbsp;</p>
 <p>Add the content you wish to add, regenerating the HTML as you go and, you are on your way to producing content for the wiki.</p>
 <p class="empty">&nbsp;</p>

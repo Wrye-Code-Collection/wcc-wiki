@@ -593,24 +593,24 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         var1 = re.sub(r'{{image:(.+?)}}', r'\1', var1)
         var1 = re.sub(r'\n', r'', var1)
         if '|' in var1:
-            (max_width, file_name, alt_text) = [chunk.strip() for chunk in var1.split('|', 2)]
-        return '{{% include image.html max-width="{}" file="img/{}" alt="{}" %}}\n'.format(max_width, file_name, alt_text)
+            (file_name, alt_text) = [chunk.strip() for chunk in var1.split('|', 1)]
+        return '{{% include image.html file="img/{}" alt="{}" %}}\n'.format(file_name, alt_text)
 
     def imageCaption(maObject):
         var1 = maObject.group(0).strip()
         var1 = re.sub(r'{{image-caption:(.+?)}}', r'\1', var1)
         var1 = re.sub(r'\n', r'', var1)
         if '|' in var1:
-            (max_width, file_name, alt_text, caption) = [chunk.strip() for chunk in var1.split('|', 3)]
-        return '{{% include image-caption.html max-width="{}" file="img/{}" alt="{}" caption="{}" %}}\n'.format(max_width, file_name, alt_text, caption)
+            (file_name, alt_text, caption) = [chunk.strip() for chunk in var1.split('|', 2)]
+        return '{{% include image-caption.html file="img/{}" alt="{}" caption="{}" %}}\n'.format(file_name, alt_text, caption)
 
     def imageCaptionUrl(maObject):
         var1 = maObject.group(0).strip()
         var1 = re.sub(r'{{image-cap-url:(.+?)}}', r'\1', var1)
         var1 = re.sub(r'\n', r'', var1)
         if '|' in var1:
-            (max_width, file_name, alt_text, caption, url, urlname) = [chunk.strip() for chunk in var1.split('|', 5)]
-        return '{{% include image-caption-url.html max-width="{}" file="img/{}" alt="{}" caption="{}" url="{}" urlname="{}" %}}\n'.format(max_width, file_name, alt_text, caption, url, urlname)
+            (file_name, alt_text, caption, url, urlname) = [chunk.strip() for chunk in var1.split('|', 4)]
+        return '{{% include image-caption-url.html file="img/{}" alt="{}" caption="{}" url="{}" urlname="{}" %}}\n'.format(file_name, alt_text, caption, url, urlname)
 
     def spoilerTag(line):
         spoilerID = ''

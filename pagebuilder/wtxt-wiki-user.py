@@ -527,27 +527,27 @@ def wtxtToHtml(srcFile, outFile=None):
         var1 = re.sub(r'{{image:(.+?)}}', r'\1', var1)
         var1 = re.sub(r'\n', r'', var1)
         if '|' in var1:
-            (max_width, file_name, alt_text) = [chunk.strip() for chunk in var1.split('|', 2)]
-        return '<figure class="image-caption" style="max-width: {};"> <img src="img\{}" style="max-width: {};" alt="{}"/></figure>'.format(
-            max_width, file_name, max_width, alt_text)
+            (file_name, alt_text) = [chunk.strip() for chunk in var1.split('|', 1)]
+        return '<figure class="image-caption">\n<img src="img\{}" alt="{}"/>\n</figure>\n'.format(
+            file_name, alt_text)
 
     def imageCaption(maObject):
         var1 = maObject.group(0).strip()
         var1 = re.sub(r'{{image-caption:(.+?)}}', r'\1', var1)
         var1 = re.sub(r'\n', r'', var1)
         if '|' in var1:
-            (max_width, file_name, alt_text, caption) = [chunk.strip() for chunk in var1.split('|', 3)]
-        return '<figure class="image-caption" style="max-width: {};"> <img src="img\{}" style="max-width: {};" alt="{}"/><figcaption>{}</figcaption></figure>'.format(
-            max_width, file_name, max_width, alt_text, caption)
+            (file_name, alt_text, caption) = [chunk.strip() for chunk in var1.split('|', 2)]
+        return '<figure class="image-caption">\n<img src="img\{}" alt="{}"/>\n<figcaption>{}</figcaption>\n</figure>\n'.format(
+            file_name, alt_text, caption)
 
     def imageCaptionUrl(maObject):
         var1 = maObject.group(0).strip()
         var1 = re.sub(r'{{image-cap-url:(.+?)}}', r'\1', var1)
         var1 = re.sub(r'\n', r'', var1)
         if '|' in var1:
-            (max_width, file_name, alt_text, caption, url, urlname) = [chunk.strip() for chunk in var1.split('|', 5)]
-        return '<figure class="image-caption" style="max-width: {};"> <img src="img\{}" style="max-width: {};" alt="{}"/><figcaption>{}</figcaption><a href="{}">{}</a></figure>'.format(
-            max_width, file_name, max_width, alt_text, caption, url, urlname)
+            (file_name, alt_text, caption, url, urlname) = [chunk.strip() for chunk in var1.split('|', 4)]
+        return '<figure class="image-caption">\n<img src="img\{}" alt="{}"/>\n<figcaption>{}</figcaption>\n<a href="{}">{}</a>\n</figure>\n'.format(
+            file_name, alt_text, caption, url, urlname)
 
     def spoilerTag(line):
         spoilerID = ''

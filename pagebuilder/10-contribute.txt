@@ -17,11 +17,11 @@
 {{CONTENTS=3}}
 
 == Requirement:
-* The <code>pagebuilder_v9.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.
-### Download pagebuilder_v9.zip
-{{image:765px | pagebuilder.jpg | Page Builder Zipfile}}
+* The <code>pagebuilder_v10.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.
+### Download pagebuilder_v10.zip
+{{image:pagebuilder.jpg | Page Builder Zipfile}}
 
-* [[pagebuilder_v9.zip | pagebuilder_v9 Download Link.zip]]
+* [[pagebuilder_v10.zip | pagebuilder_v10 Download Link.zip]]
 
 ### Example Template
 As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.
@@ -114,7 +114,7 @@ You need to separate the link address and the link name with a pipe <code>|</cod
 === Text Colors
 
 There are 16 dark themed colors (17 if you count black) for you to choose from so they are not (at least to the best of my abilities) as blinding as their regular values. To use these colors you need to use the outdated HTML tag <code>font</code>. The tag needs to have the proper open and closing tag, and the name of the color will be assigned to the word class within quotes.
-<img src="img/font_tag.jpg" alt="font_tag.jpg">
+{{inline:300px | font_tag.jpg | Font Tag}}
 
 * <font class="black">This is black</font>
 * <font class="blue">This is blue</font>
@@ -232,37 +232,37 @@ OR
 === Images
 I apologize for the rather cryptic way of doing this. I needed something easy to work with that didn't require a ridiculous amount of code.
 ==== Adding an Image
-The syntax for an image requires the width of the image in pixels, the name of the file, and alternate text if the image is not showing. These three elements will be used to display the image properly.
+The syntax for an image requires the name of the file and alternate text if the image is not showing. These elements will be used to display the image properly.
 
 ##### Example syntax for an Image:
 {% raw %}<pre>
-{{image:765px | pagebuilder.jpg | Page Builder}}
+{{image:pagebuilder.jpg | Page Builder Image}}
 </pre>{% endraw %}
 
 ##### Example of an Image:
-{{image:765px | pagebuilder.jpg | Page Builder}}
+{{image:pagebuilder.jpg | Page Builder Image}}
 <hr>
 ==== Adding an Image with a Caption
 The syntax for an image with a caption requires the width of the image in pixles, the name of the file, alternate text, and a caption. These four elements will be used to display the image properly and add a caption underneath. The box for the caption will be the width of the image and will wordwrap.
 
 ##### Example syntax for an Image with Caption:
 {% raw %}<pre>
-{{image-caption:765px | pagebuilder.jpg | pagebuilder.jpg | This is what the zip looks like}}
+{{image-caption:pagebuilder.jpg | Page Builder Image | This is what the zip looks like}}
 </pre>{% endraw %}
 
 ##### Example Image with a Caption:
-{{image-caption:765px | pagebuilder.jpg | pagebuilder.jpg | This is what the zip looks like}}
+{{image-caption:pagebuilder.jpg | Page Builder Image | This is what the zip looks like}}
 <hr>
 ==== Adding an Image with Caption and Hyperlink
 The syntax for an image with a caption and a hyperlink will require six elements. The width of the image in pixels, the name of the file, alternate text, and a caption. In addition to that you need two elements for the hyperlink, the hyperlink itself and a name for the link. These elements will be used to display the image properly and add a caption underneath. The box for the caption will be the width of the image and will wordwrap. The link will appear under the caption and will not be the width of the image.
 
 ##### Example syntax Image with a Caption and Hyperlink:
 {% raw %}<pre>
-{{image-cap-url:765px | pagebuilder.jpg | pagebuilder.jpg | This is what the zip looks like | pagebuilder_v9.zip | Page Builder Zip}}
+{{image-cap-url:pagebuilder.jpg | Page Builder Image | This is what the zip looks like | pagebuilder_v10.zip | Page Builder Zip}}
 </pre>{% endraw %}
 
 ##### Example Image with Caption and Hyperlink:
-{{image-cap-url:765px | pagebuilder.jpg | pagebuilder.jpg | This is what the zip looks like | pagebuilder_v9.zip | Page Builder Zip}}
+{{image-cap-url:pagebuilder.jpg | Page Builder Image | This is what the zip looks like | pagebuilder_v10.zip | Page Builder Zip}}
 <hr>
 ==== Adding an inline Image
 You can use small inline images between {{inline:20px | Sqinter.png | Wrye Avatar}} text.
@@ -281,10 +281,13 @@ Keep in mind you would want to use small images about 24 to 36 pixels or less. U
 <hr>
 == Versions ===================================================================
 
+=== 10.00 Update [1/17/2020]
+* released pagebuilder_v9.zip version 10
+  * Removed max width from images except inline images
 === 9.00 Update [1/16/2020]
 * released pagebuilder_v9.zip version 9
-  * Updated CSS to reflect changes
-  * Added Pagetitle to Pseudo Page Header
+  * Added image Wrye Tags see [[#| Images]]
+  * Updated CSS for user page builder
 {{CONTENTS=0}}
 === 8.00 Update [1/15/2020]
 * released pagebuilder_v8.zip version 8
@@ -331,44 +334,44 @@ Keep in mind you would want to use small images about 24 to 36 pixels or less. U
 === Python Installation ===============================================================
 ###  Where are the files I just downloaded?
 * The files usually end up in your windows Downloads folder as shown below.
-<img class="thumbnail-large" src="img/downloadedfiles.jpg" alt="downloadedfiles.jpg">
+{{image:downloadedfiles.jpg | Downloaded Files}}
 * Open your windows explorer and on the left navigate to your Downloads folder.
 * First you will install Python and then be shown where to put the Python scripts and example files.
 ### Installing Python
 * Your version of python will be different then show here. What is important is the install location. Leave it at the default settings so that you can follow the instructions for building HTML files with Python.
-<img src="img/pythoninstall.jpg" alt="pythoninstall.jpg">
+{{image:pythoninstall.jpg | Python Install}}
 * The Python installation will be very simple, just click next and leave all the default settings.
 ### Installing Python script for use
 * Once installed Python you will need to unzip the python script and sample text file used to build the html file.
 * These are really not installed on your system automatically so we will be copying them. 
 * Windows should have a way to open this type of zip file itself but if needed you can download 7zip from [[https://www.7-zip.org/ | 7-zip.org]]. It is safe, free and, easy to use.
-<img class="thumbnail-large" src="img/unzipfiles.jpg" alt="unzipfiles.jpg">
+{{image:unzipfiles.jpg | Unzip Files}}
 * To unzip file files simply right click on them and choose <code>Extract to "pagebuilder\"</code>
-<img class="thumbnail-large" src="img/copyfolder.jpg" alt="copyfolder.jpg">
+{{image:copyfolder.jpg | Copy Folder}}
 * Now we will be copying the files to a more convenient location to run them easily. If left in the Downloads folder or copied onto the Desktop to run the script means you will have to type in command similar to this. <code>C:\Python27\python.exe C:\Users\[username]\Downloads\pagebuilder\wtxt-wiki-user.py genHtml "Wiki Page Template.txt"</code>. While not difficult we will simplify that some to make it easier.
 * Right click the <code>pagebuilder</code> folder and, choose Copy
-<img class="thumbnail-large" src="img/choosecopy.jpg" alt="choosecopy.jpg">
+{{image:choosecopy.jpg | Choose Copy}}
 * Navigate to the C Drive
-<img class="thumbnail-large" src="img/gotocdrive.jpg" alt="gotocdrive.jpg">
+{{image:gotocdrive.jpg | Choose C Drive}}
 * Right click in an empty space and, choose Paste.
-<img class="thumbnail-large" src="img/choosepaste.jpg" alt="choosepaste.jpg">
+{{image:choosepaste.jpg | Choose Paste}}
 * Once copied to the C: drive double click the pagebuilder folder and you should see the example file and the Python script
-<img class="thumbnail-large" src="img/copiedforuse.jpg" alt="copiedforuse.jpg">
+{{image:copiedforuse.jpg | Pagebuilder Copied}}
 * To run python and process the example file you need to open a command prompt since Python does not have it's own GUI interface.
 . Type <code>cmd</code> in the red box, and right click <code>cmd.exe</code> and choose "Run As Administrator" as shown in the green box.
-<img src="img/opencommand.jpg" alt="opencommand.jpg">
+{{image:opencommand.jpg | Open CMD Prompt}}
 . Which will look like this once it's open
-<img class="thumbnail-large"  src="img/commandopen.jpg" alt="commandopen.jpg">
+{{image:commandopen.jpg | CMD Prompt Open}}
 . As mentioned we needed to put that folder somewhere so that there would be less typing.
 . As shown type <code>cd c:\pagebuilder</code> and press <code>[ENTER]</code>
-<img class="thumbnail-large"  src="img/changedir.jpg" alt="changedir.jpg">
+{{image:changedir.jpg | Change Directory}}
 . Now we will run the python script to to produce a sample HTML output so you can see a close version of what will be in the wiki.
 . As shown type <code>c:\python27\python.exe wtxt-wiki-user.py genHtml "Wiki Page Template.txt"</code> and press <code>[ENTER]</code>
-<img class="thumbnail-large"  src="img/runpython.jpg" alt="runpython.jpg">
+{{image:runpython.jpg | Run Python}}
 . There were no errors and now <code>Wiki Page Template.html</code> appears in the <code>pagebuilder</code> folder.
-<img class="thumbnail-large"  src="img/outputhtml.jpg" alt="outputhtml.jpg">
+{{image:outputhtml.jpg | Output HTML}}
 . Double click <code>Wiki Page Template.html</code> and you will see more or less what the page would look like.
-<img class="thumbnail-large"  src="img/examplehtml.jpg" alt="examplehtml.jpg">
+{{image:examplehtml.jpg | Example HTML}}
 
 Add the content you wish to add, regenerating the HTML as you go and, you are on your way to producing content for the wiki.
 
