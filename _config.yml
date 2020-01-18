@@ -1,16 +1,12 @@
 title: Wrye-Code-Collection Wiki
 description: Collection of Wrye Bash history and information
-google_analytics:
 exclude: [
   'pagebuilder/',
   '_sass/src/',
   '_sass/Old CSS/',
-  'idea/',
+  '.idea/',
 ]
-# show_downloads: true
 theme: jekyll-theme-cayman
-
-
 gems:
   - jekyll-mentions
 plugins:
