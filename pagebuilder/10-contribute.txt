@@ -106,7 +106,7 @@ If you need to link to another part of a page or a different page then you can i
 </pre>
 {% endraw %}
 
-Once you add the navigation link you will need to make a link for users to click on to navagate to the anchor. To do so you need the link to stary with  <code>#</code> Simply add that somewhere in the document above where you want the anchor 
+Once you add the navigation link you will need to make a link for users to click on to navagate to the anchor. To do so you need the link to start with  <code>#</code> Simply add that somewhere in the document above where you want the anchor 
 
 <font class="yellow">NOTE:</font> The link to the anchor __must__ start with a <code>#</code>.
 
@@ -307,7 +307,7 @@ Keep in mind you would want to use small images about 24 to 36 pixels or less. U
 
 === 11.00 Update [1/18/2020]
 * released pagebuilder_v11.zip version 11
-  * Added navigation anchor see [[#|ExtraNavagation]]
+  * Added navigation anchor see [[#|ExtraNavigation]]
 
 === 10.00 Update [1/18/2020]
 * released pagebuilder_v10.zip version 10
