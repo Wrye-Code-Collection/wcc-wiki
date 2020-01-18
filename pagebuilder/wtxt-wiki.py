@@ -438,7 +438,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     def anchorReplace(maObject):
         text = maObject.group(1)
         anchor = reWd.sub('', text)
-        return "<a name='%s'>%s</a>" % (anchor, text)
+        return '<div id="{}"/>'.format(text)
 
     def boldReplace(maObject):
         state = states['bold'] = not states['bold']
@@ -558,7 +558,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}$)')
     # --Tags
     pageTitle = 'title: Your Content'
-    reAnchorTag = re.compile('{{a:(.+?)}}')
+    reAnchorTag = re.compile('{{nav:(.+?)}}')
     reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
     reCssTag = re.compile('\s*{{CSS:(.+?)}}\s*$')
     reTitleTag = re.compile(r'({{PAGETITLE=")(.*)("}})$')
@@ -569,7 +569,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reSpoilerEnd = re.compile(r'\[\[se:\]\]')
     reBlockquoteBegin = re.compile(r'\[\[bb:(.*?)\]\]')
     reBlockquoteBEnd = re.compile(r'\[\[be:\]\]')
-    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<img\s{1,3}src.+?\>)|(^{% include image-inline.html)')
+    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<img\s{1,3}src.+?\>)|(^{% include image-inline.html)|^\u00A9')
     # --Open files
     inFileRoot = re.sub('\.[a-zA-Z]+$', '', srcFile)
     # --TextColors
@@ -794,7 +794,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         line = reItalic.sub(italicReplace, line)
         line = reBoldItalic.sub(boldItalicReplace, line)
         # --Wtxt Tags
-        # line = reAnchorTag.sub(anchorReplace, line)
+        line = reAnchorTag.sub(anchorReplace, line)
         # --Images
         line = reImageInline.sub(imageInline, line)
         line = reImageOnly.sub(imageInclude, line)
