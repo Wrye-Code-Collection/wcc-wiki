@@ -255,7 +255,7 @@ OR
 === Images
 I apologize for the rather cryptic way of doing this. I needed something easy to work with that didn't require a ridiculous amount of code.
 ==== Adding an Image
-The syntax for an image requires the name of the file and alternate text if the image is not showing. These elements will be used to display the image properly.
+The syntax for an image requires the name of the file and alternate text if the image is not showing.
 
 ##### Example syntax for an Image:
 {% raw %}<pre>
@@ -266,7 +266,7 @@ The syntax for an image requires the name of the file and alternate text if the 
 {{image:pagebuilder.jpg | Page Builder Image}}
 <hr>
 ==== Adding an Image with a Caption
-The syntax for an image with a caption requires the width of the image in pixles, the name of the file, alternate text, and a caption. These four elements will be used to display the image properly and add a caption underneath. The box for the caption will be the width of the image and will wordwrap.
+The syntax for an image with a caption requires the name of the file, alternate text, and a caption. The box for the caption will be the width of the image and will wordwrap.
 
 ##### Example syntax for an Image with Caption:
 {% raw %}<pre>
@@ -277,7 +277,7 @@ The syntax for an image with a caption requires the width of the image in pixles
 {{image-caption:pagebuilder.jpg | Page Builder Image | This is what the zip looks like}}
 <hr>
 ==== Adding an Image with Caption and Hyperlink
-The syntax for an image with a caption and a hyperlink will require six elements. The width of the image in pixels, the name of the file, alternate text, and a caption. In addition to that you need two elements for the hyperlink, the hyperlink itself and a name for the link. These elements will be used to display the image properly and add a caption underneath. The box for the caption will be the width of the image and will wordwrap. The link will appear under the caption and will not be the width of the image.
+The syntax for an image with a caption and a hyperlink will require five elements. The name of the file, alternate text, and a caption. In addition to that you need two elements for the hyperlink, the hyperlink itself and a name for the link. The box for the caption will be the width of the image and will wordwrap. The link will appear under the caption and will not be the width of the image.
 
 ##### Example syntax Image with a Caption and Hyperlink:
 {% raw %}<pre>
