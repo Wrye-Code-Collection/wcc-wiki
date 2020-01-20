@@ -132,7 +132,11 @@ body {
 
 .drkbtn {
   display: inline-block;
-  margin: 0.25rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.90rem;
+  @include small {
+    margin-left: 0;
+  }
   /* Preserve these colors the look goof on the header background */
   color: rgba(255, 255, 255, 1.0);
   background-color: rgba(23, 130, 130, 0.9);
@@ -146,6 +150,9 @@ body {
     color: rgba(255, 255, 255, 0.8);
     background-color: rgba(34, 195, 195, 0.7);
     border-color: rgba(255, 255, 255, 0.3)
+  }
+  +.drkbtn {
+    margin-left: 0.50rem;
   }
   @include full {
     padding: 0.9rem;
@@ -166,8 +173,12 @@ body {
   @include small {
     display: block;
     width: 100%;
-    padding: 0.70rem;
+    padding: 0.60rem;
     font-size: 0.9rem;
+    +.drkbtn {
+      margin-top: 0.5rem;
+      margin-left: 0;
+    }
   }
 }
 
@@ -431,6 +442,9 @@ body {
     padding-left: 0.25rem;
     font-weight: normal;
     color: var(--toc-header-text);
+  }
+  iframe {
+	margin: 0.38rem 0 0.38rem 0.95rem;
   }
   p {
 	margin: 0 0 0 0.95rem;
