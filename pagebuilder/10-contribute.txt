@@ -64,21 +64,21 @@ Your page title will become the first line on the page and will be assigned as t
 <hr>
 === Table of Contents
 
-A table of contents is automatically generated from the headers in the document. It is best to place the first content tag where you want the table of contents to be, and after a header named Contents. The number indicates the maximum depth. You should not use H1 excapt at the begining of your page. Considering that the following would then be true.
+A table of contents is automatically generated from the headers in the document. It is best to place the first content tag where you want the table of contents to be, and after a header named Contents. The number indicates the maximum depth. You should not use H1 except at the beginning of your page. Considering that the following would then be true.
 
-A value of one would producve the following:
+A value of one would produce the following:
 
 * H2 Heading
 * H2 Heading
 * H2 Heading
 
-A value of two would producve the following:
+A value of two would produce the following:
 
 * H2 Heading
   * H3 Heading
 * H2 Heading
 
-A value of three would producve the following:
+A value of three would produce the following:
 
 * H2 Heading
   * H3 Heading
@@ -87,9 +87,9 @@ A value of three would producve the following:
 
 The syntax is as follows: <code>{% raw %}{{CONTENTS=2}}{% endraw %}</code> or <code>{% raw %}{{CONTENTS=0}}{% endraw %}</code> to pause using headers in the table of contents.
 
-You can also disable using headers in the table of contents by using a value of <code>0</code>. The headers will not be recorded until there is another contents tag with a value greater thean 0.
+You can also disable using headers in the table of contents by using a value of <code>0</code>. The headers will not be recorded until there is another contents tag with a value greater than 0.
 
-<font class="yellow">NOTE:</font> You can only use one value for the document. Meaning if you use the value of 2 you can not use 3 and later 4 and then later 2 again. Instead use headers in a meaningfull way or omit the header by using a 0 value contents tag.
+<font class="yellow">NOTE:</font> You can only use one value for the document. Meaning if you use the value of 2 you can not use 3 and later 4 and then later 2 again. Instead use headers in a meaningful way or omit the header by using a 0 value contents tag.
 
 <hr>
 === Bullets
@@ -125,7 +125,7 @@ If you need to link to another part of a page or a different page then you can i
 </pre>
 {% endraw %}
 
-Once you add the navigation link you will need to make a link for users to click on to navagate to the anchor. To do so you need the link to start with  <code>#</code> Simply add that somewhere in the document above where you want the anchor 
+Once you add the navigation link you will need to make a link for users to click on to navigate to the anchor. To do so you need the link to start with  <code>#</code> Simply add that somewhere in the document above where you want the anchor 
 
 <font class="yellow">NOTE:</font> The link to the anchor __must__ start with a <code>#</code>.
 
@@ -185,7 +185,7 @@ You may be contributing a guide that has people download a mod and you wish to c
 
 <code>{% raw %}{{a:green}}{% endraw %}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.
 <code>{% raw %}[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}] [[https://sharlikran.github.io/ | This Link Text is Orange{{a:orange}}]]{% endraw %}</code>
-<font class="yellow">Reminder:</font> Only one brace is used so you can see the syntax. The link in your text document requires two braces at the begining and the end of the link.
+<font class="yellow">Reminder:</font> Only one brace is used so you can see the syntax. The link in your text document requires two braces at the beginning and the end of the link.
 
 <hr>
 === Html
@@ -198,7 +198,7 @@ short counter
 end
 </pre>
 
-Refrain from using too many HTML tags if you know the language well. If special styling is needed I can look into a way to privide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.
+Refrain from using too many HTML tags if you know the language well. If special styling is needed I can look into a way to provide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.
 
 <hr>
 === Blockquote
@@ -233,14 +233,14 @@ Example of text in the spoiler tag
 Example of text in the spoiler tag
 [[se:]]
 
-=== Other Formating
+=== Other Formatting
 
 Blank lines can be used as spacers
 
 <hr>
 === Comments
 
-Wrye Text will allow a variation of C Language type comments. Comments will not be output to the final HTML file for the Wiki. Usefull for remembering information you don't need to end up in the Wiki itself.
+Wrye Text will allow a variation of C Language type comments. Comments will not be output to the final HTML file for the Wiki. Useful for remembering information you don't need to end up in the Wiki itself.
 
 ==== Allowed Syntax
 
@@ -405,7 +405,7 @@ Keep in mind you would want to use small images about 24 to 36 pixels or less. U
 {{image:choosepaste.jpg | Choose Paste}}
 * Once copied to the C: drive double click the pagebuilder folder and you should see the example file and the Python script
 {{image:copiedforuse.jpg | Pagebuilder Copied}}
-* To run python and process the example file you need to open a command prompt since Python does not have it's own GUI interface.
+* To run python and process the example file you need to open a command prompt since Python does not have its own GUI interface.
 . Type <code>cmd</code> in the red box, and right click <code>cmd.exe</code> and choose "Run As Administrator" as shown in the green box.
 {{image:opencommand.jpg | Open CMD Prompt}}
 . Which will look like this once it's open
@@ -413,7 +413,7 @@ Keep in mind you would want to use small images about 24 to 36 pixels or less. U
 . As mentioned we needed to put that folder somewhere so that there would be less typing.
 . As shown type <code>cd c:\pagebuilder</code> and press <code>[ENTER]</code>
 {{image:changedir.jpg | Change Directory}}
-. Now we will run the python script to to produce a sample HTML output so you can see a close version of what will be in the wiki.
+. Now we will run the python script to produce a sample HTML output so you can see a close version of what will be in the wiki.
 . As shown type <code>c:\python27\python.exe wtxt-wiki-user.py genHtml "Wiki Page Template.txt"</code> and press <code>[ENTER]</code>
 {{image:runpython.jpg | Run Python}}
 . There were no errors and now <code>Wiki Page Template.html</code> appears in the <code>pagebuilder</code> folder.

@@ -66,7 +66,7 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#Html">Html</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Blockquote">Blockquote</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#SpoilerTags">Spoiler Tags</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#OtherFormating">Other Formating</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#OtherFormatting">Other Formatting</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Comments">Comments</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Images">Images</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#AddinganImage">Adding an Image</a></p>
@@ -129,21 +129,21 @@ title: Contributing
 <hr>
 <h3 class="header3" id="TableofContents">Table of Contents</h3>
 <p class="empty">&nbsp;</p>
-<p>A table of contents is automatically generated from the headers in the document. It is best to place the first content tag where you want the table of contents to be, and after a header named Contents. The number indicates the maximum depth. You should not use H1 excapt at the begining of your page. Considering that the following would then be true.</p>
+<p>A table of contents is automatically generated from the headers in the document. It is best to place the first content tag where you want the table of contents to be, and after a header named Contents. The number indicates the maximum depth. You should not use H1 except at the beginning of your page. Considering that the following would then be true.</p>
 <p class="empty">&nbsp;</p>
-<p>A value of one would producve the following:</p>
+<p>A value of one would produce the following:</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; H2 Heading</p>
 <p class="list-1">&bull;&nbsp; H2 Heading</p>
 <p class="list-1">&bull;&nbsp; H2 Heading</p>
 <p class="empty">&nbsp;</p>
-<p>A value of two would producve the following:</p>
+<p>A value of two would produce the following:</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; H2 Heading</p>
   <p class="list-2">&bull;&nbsp; H3 Heading</p>
 <p class="list-1">&bull;&nbsp; H2 Heading</p>
 <p class="empty">&nbsp;</p>
-<p>A value of three would producve the following:</p>
+<p>A value of three would produce the following:</p>
 <p class="empty">&nbsp;</p>
 <p class="list-1">&bull;&nbsp; H2 Heading</p>
   <p class="list-2">&bull;&nbsp; H3 Heading</p>
@@ -152,9 +152,9 @@ title: Contributing
 <p class="empty">&nbsp;</p>
 <p>The syntax is as follows: <code>{% raw %}{{CONTENTS=2}}{% endraw %}</code> or <code>{% raw %}{{CONTENTS=0}}{% endraw %}</code> to pause using headers in the table of contents.</p>
 <p class="empty">&nbsp;</p>
-<p>You can also disable using headers in the table of contents by using a value of <code>0</code>. The headers will not be recorded until there is another contents tag with a value greater thean 0.</p>
+<p>You can also disable using headers in the table of contents by using a value of <code>0</code>. The headers will not be recorded until there is another contents tag with a value greater than 0.</p>
 <p class="empty">&nbsp;</p>
-<p><font class="yellow">NOTE:</font> You can only use one value for the document. Meaning if you use the value of 2 you can not use 3 and later 4 and then later 2 again. Instead use headers in a meaningfull way or omit the header by using a 0 value contents tag.</p>
+<p><font class="yellow">NOTE:</font> You can only use one value for the document. Meaning if you use the value of 2 you can not use 3 and later 4 and then later 2 again. Instead use headers in a meaningful way or omit the header by using a 0 value contents tag.</p>
 <p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="Bullets">Bullets</h3>
@@ -190,7 +190,7 @@ title: Contributing
 </pre>
 {% endraw %}
 <p class="empty">&nbsp;</p>
-<p>Once you add the navigation link you will need to make a link for users to click on to navagate to the anchor. To do so you need the link to start with  <code>#</code> Simply add that somewhere in the document above where you want the anchor</p>
+<p>Once you add the navigation link you will need to make a link for users to click on to navigate to the anchor. To do so you need the link to start with  <code>#</code> Simply add that somewhere in the document above where you want the anchor</p>
 <p class="empty">&nbsp;</p>
 <p><font class="yellow">NOTE:</font> The link to the anchor <B>must</B> start with a <code>#</code>.</p>
 <p class="empty">&nbsp;</p>
@@ -250,7 +250,7 @@ title: Contributing
 <p class="empty">&nbsp;</p>
 <p><code>{% raw %}{{a:green}}{% endraw %}</code> in the link's name field will be used to color the link green. <font class="pink">NOTE:</font> As shown below the tag must be with the link name or it will be ignored.</p>
 <p><code>{% raw %}[https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}] <a class="orange" href="https://sharlikran.github.io/">This Link Text is Orange</a>{% endraw %}</code></p>
-<p><font class="yellow">Reminder:</font> Only one brace is used so you can see the syntax. The link in your text document requires two braces at the begining and the end of the link.</p>
+<p><font class="yellow">Reminder:</font> Only one brace is used so you can see the syntax. The link in your text document requires two braces at the beginning and the end of the link.</p>
 <p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="Html">Html</h3>
@@ -263,7 +263,7 @@ short counter
 end
 </pre>
 <p class="empty">&nbsp;</p>
-<p>Refrain from using too many HTML tags if you know the language well. If special styling is needed I can look into a way to privide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.</p>
+<p>Refrain from using too many HTML tags if you know the language well. If special styling is needed I can look into a way to provide additional options. However, I would like to keep this custom markdown language as simple as possible so it doesn't become another type of HTML.</p>
 <p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="Blockquote">Blockquote</h3>
@@ -301,14 +301,14 @@ Example of text in the spoiler tag
 <p>Example of text in the spoiler tag</p>
 </div>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="OtherFormating">Other Formating</h3>
+<h3 class="header3" id="OtherFormatting">Other Formatting</h3>
 <p class="empty">&nbsp;</p>
 <p>Blank lines can be used as spacers</p>
 <p class="empty">&nbsp;</p>
 <hr>
 <h3 class="header3" id="Comments">Comments</h3>
 <p class="empty">&nbsp;</p>
-<p>Wrye Text will allow a variation of C Language type comments. Comments will not be output to the final HTML file for the Wiki. Usefull for remembering information you don't need to end up in the Wiki itself.</p>
+<p>Wrye Text will allow a variation of C Language type comments. Comments will not be output to the final HTML file for the Wiki. Useful for remembering information you don't need to end up in the Wiki itself.</p>
 <p class="empty">&nbsp;</p>
 <h4 class="header4" id="AllowedSyntax">Allowed Syntax</h4>
 <p class="empty">&nbsp;</p>
@@ -486,7 +486,7 @@ Example of text in the spoiler tag
 <p class="list-1">&bull;&nbsp; Once copied to the C: drive double click the pagebuilder folder and you should see the example file and the Python script</p>
 {% include image.html file="img/copiedforuse.jpg" alt="Pagebuilder Copied" %}
 
-<p class="list-1">&bull;&nbsp; To run python and process the example file you need to open a command prompt since Python does not have it's own GUI interface.</p>
+<p class="list-1">&bull;&nbsp; To run python and process the example file you need to open a command prompt since Python does not have its own GUI interface.</p>
 <p class="list-1">&nbsp;&nbsp; Type <code>cmd</code> in the red box, and right click <code>cmd.exe</code> and choose "Run As Administrator" as shown in the green box.</p>
 {% include image.html file="img/opencommand.jpg" alt="Open CMD Prompt" %}
 
@@ -497,7 +497,7 @@ Example of text in the spoiler tag
 <p class="list-1">&nbsp;&nbsp; As shown type <code>cd c:\pagebuilder</code> and press <code>[ENTER]</code></p>
 {% include image.html file="img/changedir.jpg" alt="Change Directory" %}
 
-<p class="list-1">&nbsp;&nbsp; Now we will run the python script to to produce a sample HTML output so you can see a close version of what will be in the wiki.</p>
+<p class="list-1">&nbsp;&nbsp; Now we will run the python script to produce a sample HTML output so you can see a close version of what will be in the wiki.</p>
 <p class="list-1">&nbsp;&nbsp; As shown type <code>c:\python27\python.exe wtxt-wiki-user.py genHtml "Wiki Page Template.txt"</code> and press <code>[ENTER]</code></p>
 {% include image.html file="img/runpython.jpg" alt="Run Python" %}
 
