@@ -884,7 +884,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
                         for i in range(1, count):
                             number += '.' + str(countlist[i])
                     if level <= addContents:
-                        out.write('<p class="list-{}">&bull;&nbsp; <a href="#{}">{}</a></p>\n'.format(level, heading[1], heading[2]))
+                        out.write('<p class="list-{}">&bull;&nbsp; <a href="#{}">{}</a></p>\n'.format(heading[0], heading[1], heading[2]))
                     previousLevel = heading[0]
                 didContents = True
         else:
