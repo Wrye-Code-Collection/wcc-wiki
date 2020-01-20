@@ -438,7 +438,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     def anchorReplace(maObject):
         text = maObject.group(1)
         anchor = reWd.sub('', text)
-        return '<div id="{}"/>'.format(text)
+        return '<div id="{}"></div>'.format(text)
 
     def boldReplace(maObject):
         state = states['bold'] = not states['bold']
