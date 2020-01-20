@@ -845,16 +845,47 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     out.write('---\nlayout: default\n{}'.format(pageTitle))
     out.write(htmlHead)
     didContents = False
+    countlist = [0, 0, 0, 0, 0, 0]
     for line in outLines:
         if reContentsTag.match(line):
             if not didContents:
                 baseLevel = min([level for (level, name, text) in contents])
-                for (level, name, text) in contents:
-                    level = level - baseLevel + 1
+                previousLevel = baseLevel
+                for heading in contents:
+                    level = heading[0] - baseLevel + 1
+                    if heading[0] > previousLevel:
+                        countlist[level-1] += 1
+                        number = str(countlist[0])
+                        if level == 1:
+                            count = level + 1
+                        else:
+                            count = level
+                        for i in range(1, count):
+                            number += '.' + str(countlist[i])
+                    if heading[0] < previousLevel:
+                        # Zero out everything not a duplicate
+                        for i in range(level, 6):
+                            countlist[i] = 0
+                        countlist[level-1] += 1
+                        number = str(countlist[0])
+                        if level == 1:
+                            count = level + 1
+                        else:
+                            count = level
+                        for i in range(1, count):
+                            number += '.' + str(countlist[i])
+                    if heading[0] == previousLevel:
+                        countlist[level-1] += 1
+                        number = str(countlist[0])
+                        if level == 1:
+                            count = level + 1
+                        else:
+                            count = level
+                        for i in range(1, count):
+                            number += '.' + str(countlist[i])
                     if level <= addContents:
-                        out.write(
-                            '<p class="list-%d">&bull;&nbsp; <a href="#%s">%s</a></p>\n' % (
-                            level, name, text))
+                        out.write('<p class="list-{}">&bull;&nbsp; <a href="#{}">{}</a></p>\n'.format(level, heading[1], heading[2]))
+                    previousLevel = heading[0]
                 didContents = True
         else:
             out.write(line)
