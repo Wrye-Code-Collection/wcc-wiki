@@ -68,13 +68,11 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#SpoilerTags">Spoiler Tags</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#OtherFormating">Other Formating</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Comments">Comments</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#AllowedSyntax">Allowed Syntax</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#InvalidSyntax">Invalid Syntax</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Images">Images</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#AddinganImage">Adding an Image</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#AddinganImagewithaCaption">Adding an Image with a Caption</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#AddinganImagewithCaptionandHyperlink">Adding an Image with Caption and Hyperlink</a></p>
-<p class="list-3">&bull;&nbsp; <a href="#AddinganinlineImage">Adding an inline Image</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#AddinganImage">Adding an Image</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#AddinganImagewithaCaption">Adding an Image with a Caption</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#AddinganImagewithCaptionandHyperlink">Adding an Image with Caption and Hyperlink</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#AddinganinlineImage">Adding an inline Image</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Versions">Versions</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#1100Update1182020">11.00 Update [1/18/2020]</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#1000Update1182020">10.00 Update [1/18/2020]</a></p>
@@ -131,7 +129,26 @@ title: Contributing
 <hr>
 <h3 class="header3" id="TableofContents">Table of Contents</h3>
 <p class="empty">&nbsp;</p>
-<p>A table of contents is automatically generated from the headers in the document. It is best to place the first content tag where you want the table of contents to be, and after a header named Contents. The number indicates which header level will be used.</p>
+<p>A table of contents is automatically generated from the headers in the document. It is best to place the first content tag where you want the table of contents to be, and after a header named Contents. The number indicates the maximum depth. You should not use H1 excapt at the begining of your page. Considering that the following would then be true.</p>
+<p class="empty">&nbsp;</p>
+<p>A value of one would producve the following:</p>
+<p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; H2 Heading</p>
+<p class="list-1">&bull;&nbsp; H2 Heading</p>
+<p class="list-1">&bull;&nbsp; H2 Heading</p>
+<p class="empty">&nbsp;</p>
+<p>A value of two would producve the following:</p>
+<p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; H2 Heading</p>
+  <p class="list-2">&bull;&nbsp; H3 Heading</p>
+<p class="list-1">&bull;&nbsp; H2 Heading</p>
+<p class="empty">&nbsp;</p>
+<p>A value of three would producve the following:</p>
+<p class="empty">&nbsp;</p>
+<p class="list-1">&bull;&nbsp; H2 Heading</p>
+  <p class="list-2">&bull;&nbsp; H3 Heading</p>
+    <p class="list-3">&bull;&nbsp; H4 Heading</p>
+<p class="list-1">&bull;&nbsp; H2 Heading</p>
 <p class="empty">&nbsp;</p>
 <p>The syntax is as follows: <code>{% raw %}{{CONTENTS=2}}{% endraw %}</code> or <code>{% raw %}{{CONTENTS=0}}{% endraw %}</code> to pause using headers in the table of contents.</p>
 <p class="empty">&nbsp;</p>
@@ -324,43 +341,43 @@ Example of text in the spoiler tag
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="Images">Images</h3>
 <p>I apologize for the rather cryptic way of doing this. I needed something easy to work with that didn't require a ridiculous amount of code.</p>
-<h4 class="header4" id="AddinganImage">Adding an Image</h4>
+<h3 class="header3" id="AddinganImage">Adding an Image</h3>
 <p>The syntax for an image requires the name of the file and alternate text if the image is not showing.</p>
 <p class="empty">&nbsp;</p>
-<h5 id="ExamplesyntaxforanImage">Example syntax for an Image:</h5>
+<h4 id="ExamplesyntaxforanImage">Example syntax for an Image:</h4>
 {% raw %}<pre>
 {{image:pagebuilder.jpg | Page Builder Image}}
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
-<h5 id="ExampleofanImage">Example of an Image:</h5>
+<h4 id="ExampleofanImage">Example of an Image:</h4>
 {% include image.html file="img/pagebuilder.jpg" alt="Page Builder Image" %}
 
 <hr>
-<h4 class="header4" id="AddinganImagewithaCaption">Adding an Image with a Caption</h4>
+<h3 class="header3" id="AddinganImagewithaCaption">Adding an Image with a Caption</h3>
 <p>The syntax for an image with a caption requires the name of the file, alternate text, and a caption. The box for the caption will be the width of the image and will wordwrap.</p>
 <p class="empty">&nbsp;</p>
-<h5 id="ExamplesyntaxforanImagewithCaption">Example syntax for an Image with Caption:</h5>
+<h4 id="ExamplesyntaxforanImagewithCaption">Example syntax for an Image with Caption:</h4>
 {% raw %}<pre>
 {{image-caption:pagebuilder.jpg | Page Builder Image | This is what the zip looks like}}
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
-<h5 id="ExampleImagewithaCaption">Example Image with a Caption:</h5>
+<h4 id="ExampleImagewithaCaption">Example Image with a Caption:</h4>
 {% include image-caption.html file="img/pagebuilder.jpg" alt="Page Builder Image" caption="This is what the zip looks like" %}
 
 <hr>
-<h4 class="header4" id="AddinganImagewithCaptionandHyperlink">Adding an Image with Caption and Hyperlink</h4>
+<h3 class="header3" id="AddinganImagewithCaptionandHyperlink">Adding an Image with Caption and Hyperlink</h3>
 <p>The syntax for an image with a caption and a hyperlink will require five elements. The name of the file, alternate text, and a caption. In addition to that you need two elements for the hyperlink, the hyperlink itself and a name for the link. The box for the caption will be the width of the image and will wordwrap. The link will appear under the caption and will not be the width of the image.</p>
 <p class="empty">&nbsp;</p>
-<h5 id="ExamplesyntaxImagewithaCaptionandHyperlink">Example syntax Image with a Caption and Hyperlink:</h5>
+<h4 id="ExamplesyntaxImagewithaCaptionandHyperlink">Example syntax Image with a Caption and Hyperlink:</h4>
 {% raw %}<pre>
 {{image-cap-url:pagebuilder.jpg | Page Builder Image | This is what the zip looks like | pagebuilder_v11.zip | Page Builder Zip}}
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
-<h5 id="ExampleImagewithCaptionandHyperlink">Example Image with Caption and Hyperlink:</h5>
+<h4 id="ExampleImagewithCaptionandHyperlink">Example Image with Caption and Hyperlink:</h4>
 {% include image-caption-url.html file="img/pagebuilder.jpg" alt="Page Builder Image" caption="This is what the zip looks like" url="pagebuilder_v11.zip" urlname="Page Builder Zip" %}
 
 <hr>
-<h4 class="header4" id="AddinganinlineImage">Adding an inline Image</h4>
+<h3 class="header3" id="AddinganinlineImage">Adding an inline Image</h3>
 <p>You can use small inline images between {% include image-inline.html max-width="20px" file="img/Sqinter.png" alt="Wrye Avatar" %}
  text.</p>
 <p class="empty">&nbsp;</p>
@@ -370,16 +387,16 @@ Example of text in the spoiler tag
 <p>Keep in mind you would want to use small images about 24 to 36 pixels or less. Using large inline {% include image-inline.html max-width="96px" file="img/wrye_monkey_96.png" alt="Wrye Avatar" %}
  images will look silly.</p>
 <p class="empty">&nbsp;</p>
-<h5 id="Examplesyntaxforaninlineimage">Example syntax for an inline image:</h5>
+<h4 id="Examplesyntaxforaninlineimage">Example syntax for an inline image:</h4>
 {% raw %}<pre>
 {{inline:96px | wrye_monkey_96.png | Page Builder}}
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
-<h5 id="Exampleofaninlineimage">Example of an inline image:</h5>
+<h4 id="Exampleofaninlineimage">Example of an inline image:</h4>
 <p>{% include image-inline.html max-width="96px" file="img/wrye_monkey_96.png" alt="Wrye Avatar" %}
  Wrye's Avatar</p>
 <hr>
-<div id="thislink"/>
+<div id="thislink"></div>
 <h2 class="header2" id="Versions">Versions</h2>
 <p class="empty">&nbsp;</p>
 <h3 class="header3" id="1100Update1182020">11.00 Update [1/18/2020]</h3>
