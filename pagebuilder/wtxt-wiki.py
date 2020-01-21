@@ -666,6 +666,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     # --Init
     outLines = []
     contents = [] # The list variable for the Table of Contents
+    header_match = [] # A duplicate list of the Table of Contents with numbers
     addContents = 0 # When set to 0 headers are not added to the TOC
     inPre = False
     inComment = False
@@ -907,10 +908,19 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
                         for i in range(1, count):
                             number += '.' + str(countlist[i])
                     if heading[0] <= addContents:
-                        out.write('<p class="list-{}">&bull;&nbsp; <a href="#{}">{}</a></p>\n'.format(level, heading[1], heading[2]))
+                        out.write('<p class="list-{}">&bull;&nbsp; <a href="#{}">{} {}</a></p>\n'.format(level, heading[1], number, heading[2]))
+                        header_match.append((heading[1], number, heading[2]))
                     previousLevel = heading[0]
                 didContents = True
         else:
+            maIsHeader = re.match(r'^<h\d\s{1,3}(class.+?>.+?)<\/h\d>', line)
+            if maIsHeader:
+                text_search = re.sub(r'(<h\d *class.+?id=")(.+?)(">.+?<\/h\d>)', r'\2', line).rstrip('\n')
+                for header_to_match in header_match:
+                    if header_to_match[0] == text_search:
+                        text_replace = '{} - {}'.format(header_to_match[1], header_to_match[2])
+                        line = re.sub(r'(<h\d *class.+?>).+?(<\/h\d>)', r'\g<1>'+text_replace+'\g<2>', line)
+                        break
             out.write(line)
     out.write('</div>\n')
     out.close()
