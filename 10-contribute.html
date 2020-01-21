@@ -59,6 +59,7 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#Bullets">Bullets</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Styles">Styles</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#HeaderRule">Header Rule</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#NavigationButtons">Navigation Buttons</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#ExtraNavigation">Extra Navigation</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#Links">Links</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#TextColors">Text Colors</a></p>
@@ -180,6 +181,28 @@ title: Contributing
 <p>There are two ways to make a Header Rule to separate content. The traditional HTML <code>hr</code> tag surrounded by <code><></code> symbols and by adding 4 or more dashes <code>-</code> at the beginning of a line.</p>
 <p class="empty">&nbsp;</p>
 <hr>
+<h3 class="header3" id="NavigationButtons">Navigation Buttons</h3>
+{% raw %}
+<pre>
+{{nbb}}
+    [[https://wrye-code-collection.github.io/wcc-wiki/index.html | wcc-wiki]]
+    [[https://sharlikran.github.io/ | Sharlikran]]
+{{nbe}}
+</pre>
+{% endraw %}
+<p class="empty">&nbsp;</p>
+<p>Will produce dark teal buttons like this:</p>
+<p class="empty">&nbsp;</p>
+<div>
+    <a  href="#Versions" class="drkbtn">Versions</a>
+    <a  href="#Contents" class="drkbtn">Contents</a>
+</div>
+<p class="empty">&nbsp;</p>
+<p>All Wrye Text link syntax is vallid.</p>
+<p class="empty">&nbsp;</p>
+<div>
+    <a  href="#Links" class="drkbtn">See Links</a>
+</div>
 <h3 class="header3" id="ExtraNavigation">Extra Navigation</h3>
 <p>If you need to link to another part of a page or a different page then you can insert a navigation anchor. The anchor should be placed above the text you want to link to. That way once you click the link the page will move to the anchor and text (where you placed the anchor) will be positioned at the top of the browser.</p>
 <p class="empty">&nbsp;</p>
