@@ -2,7 +2,7 @@
 The old Oblivion mod lists have some issues when it comes to links to other mod lists or links to other posts. Some have been purged and can no longer be accessed, while other are simply hard to fine or you can not generate a link not knowing the exact title. There are some of those lists with links verified as of the creation of this page.
 
 == Contents
-{{CONTENTS=3}}
+{{CONTENTS=4}}
 === Cliffworms Mods
 Original Bethesda thread [[http://forums.bethsoft.com/topic/1010109-list-list-of-mod-lists/ | [LIST] List of Mod Lists]] by Cliffworms
 

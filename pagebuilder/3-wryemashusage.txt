@@ -4,7 +4,7 @@
 * Discussion: [[https://www.afkmods.com/index.php?/topic/5068-wipz-wrye-mash/ | AFK Mods Forums]]
 
 == Contents ===================================================================
-{{CONTENTS=2}}
+{{CONTENTS=3}}
 
 == Quick Start ================================================================
 **Do you find long docs scary?** Here's a quick guide to Mash's most popular features.
@@ -1671,7 +1671,7 @@ The Mash distribution includes additional files that assist in its operation and
 
 === 0.23 First release with docs!
 
-{{CONTENTS=2}}
+{{CONTENTS=3}}
 == Reuse and Credits ==========================================================
 === License
 * None! Feel free to use/abuse the content as you like.
