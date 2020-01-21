@@ -359,6 +359,11 @@ section.quote p.empty { margin: 0; padding: 0; line-height: 24px; }
 section.quote .attr { margin: 0; padding: 0 0 0.1rem 0.5rem; font: normal 400 1.5em/1.5em 'Montserrat', sans-serif; background-color: rgba(150, 150, 150, 0.2); letter-spacing: 0.04em; text-align: left; }
 section.quote .attr:before { content: " - "; }
 section.quote .attr:after { content: " - "; }
+
+.drkbtn {  padding: 0.9rem; font-size: 1.2rem; display: inline-block; margin-bottom: 0.5rem; margin-left: 0.90rem; /* Preserve these colors the look goof on the header background */ color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); border-style: solid; border-width: 1px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
+.drkbtn:hover { text-decoration: none; color: rgba(255, 255, 255, 0.8); background-color: rgba(34, 195, 195, 0.7); border-color: rgba(255, 255, 255, 0.3); }
+.drkbtn + .drkbtn { margin-left: 0.50rem; }
+.drkbtn + .drkbtn { margin-top: 0.5rem; margin-left: 0; } }
 """
 
 # Conversion ------------------------------------------------------------------
@@ -476,8 +481,8 @@ def wtxtToHtml(srcFile, outFile=None):
     reMDash = re.compile(r'--')
     rePreBegin = re.compile('<pre>', re.I)
     rePreEnd = re.compile('</pre>', re.I)
-    reParagraph = re.compile('<pre>', re.I)
-    reCloseParagraph = re.compile('</pre>', re.I)
+    reParagraph = re.compile('<p ?(>)?>', re.I)
+    reCloseParagraph = re.compile('</p>', re.I)
     # --Bold, Italic, BoldItalic
     reBold = re.compile(r'__')
     reItalic = re.compile(r'~~')
@@ -485,11 +490,11 @@ def wtxtToHtml(srcFile, outFile=None):
     states = {'bold': False, 'italic': False, 'boldItalic': False}
     # --Links
     reLink = re.compile(r'\[\[(.*?)\]\]')
-    reHttp = re.compile(r' (http://[_~a-zA-Z0-9\./%-]+)')
-    reWww = re.compile(r' (www\.[_~a-zA-Z0-9\./%-]+)')
+    reHttp = re.compile(r' (http:\/\/[\?=_~a-zA-Z0-9\.\/%-]+)')
+    reWww = re.compile(r' (www\.[\?=_~a-zA-Z0-9\./%-]+)')
     reWd = re.compile(r'(<[^>]+>|\[[^\]]+\]|\W+)')
     rePar = re.compile(r'^([a-zA-Z]|\*\*|~~|__)')
-    reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}$)')
+    reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}(\/)?$)')
     # --Tags
     pageTitle = 'title: Your Content'
     reAnchorTag = re.compile('{{nav:(.+?)}}')
@@ -503,12 +508,14 @@ def wtxtToHtml(srcFile, outFile=None):
     reSpoilerEnd = re.compile(r'\[\[se:\]\]')
     reBlockquoteBegin = re.compile(r'\[\[bb:(.*?)\]\]')
     reBlockquoteBEnd = re.compile(r'\[\[be:\]\]')
-    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<img\s{1,3}src.+?\>)|^\u00A9')
+    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<img\s{1,3}src.+?\>)|^\u00A9|^\<strong|^\<[bB]\>')
+    reNavigationButtonBegin = re.compile(r'{{nbb}}')
+    reNavigationButtonEnd = re.compile(r'{{nbe}}')
     # --Open files
     inFileRoot = re.sub('\.[a-zA-Z]+$', '', srcFile)
     # --TextColors
     reTextColor = re.compile(r'({{a:(.+?)}})')
-    # --TextColors
+    # --Images
     reImageInline = re.compile(r'{{inline:.+?}}')
     reImageOnly = re.compile(r'{{image:.+?}}')
     reImageCaption = re.compile(r'({{image-caption:(.+?)}})')
@@ -558,6 +565,22 @@ def wtxtToHtml(srcFile, outFile=None):
         spoilerText = re.sub('\]\]', '', spoilerText)
         return (spoilerID, spoilerText)
 
+    def httpReplace(line):
+        temp_text = line
+        if inNavigationButtons:
+            temp_line = reHttp.sub(r' <a href="\1" class="drkbtn">\1</a>', temp_text)
+        else:
+            temp_line = reHttp.sub(r' <a href="\1">\1</a>', temp_text)
+        return temp_line
+
+    def wwwReplace(line):
+        temp_text = line
+        if inNavigationButtons:
+            temp_line = reWww.sub(r' <a href="http://\1" class="drkbtn">\1</a>', temp_text)
+        else:
+            temp_line = reWww.sub(r' <a href="http://\1">\1</a>', temp_text)
+        return temp_line
+
     def linkReplace(maObject):
         address = text = maObject.group(1).strip()
         skipStrip = False
@@ -573,7 +596,10 @@ def wtxtToHtml(srcFile, outFile=None):
         if not skipStrip:
             fontClass = check_color(text)
             text = strip_color(text)
-        return '<a {} href="{}">{}</a>'.format(fontClass, address, text)
+        if inNavigationButtons:
+            return '<a {} href="{}" class="drkbtn">{}</a>'.format(fontClass, address, text)
+        else:
+            return '<a {} href="{}">{}</a>'.format(fontClass, address, text)
 
     # --Defaults ----------------------------------------------------------
     level = 1
@@ -591,6 +617,7 @@ def wtxtToHtml(srcFile, outFile=None):
     htmlIDSet = list()
     dupeEntryCount = 1
     blockAuthor = "Unknown"
+    inNavigationButtons = False
     # --Read source file --------------------------------------------------
     ins = file(srcFile)
     for line in ins:
@@ -630,6 +657,15 @@ def wtxtToHtml(srcFile, outFile=None):
         maSpoilerEnd = reSpoilerEnd.match(line)
         maBlockquoteBegin = reBlockquoteBegin.match(line)
         maBlockquoteEnd = reBlockquoteBEnd.match(line)
+        maNavigationButtonBegin = reNavigationButtonBegin.match(line)
+        maNavigationButtonEnd = reNavigationButtonEnd.match(line)
+        # --Navigation Buttons ----------------------------------
+        if maNavigationButtonBegin:
+            line = '<div>\n'
+            inNavigationButtons = True
+        if maNavigationButtonEnd:
+            line = '</div>\n'
+            inNavigationButtons = False
         # --Contents ----------------------------------
         if maContents:
             if maContents.group(1):
@@ -644,7 +680,7 @@ def wtxtToHtml(srcFile, outFile=None):
         # --Headers
         elif maHead:
             lead, text = maHead.group(1, 2)
-            text = re.sub(' *=*#?$', '', text.strip())
+            text = re.sub(' *=*$', '', text.strip())
             anchor = reWd.sub('', text)
             level = len(lead)
             if not htmlIDSet.count(anchor):
@@ -660,7 +696,7 @@ def wtxtToHtml(srcFile, outFile=None):
         # --Green Header
         elif maHeadgreen:
             lead, text = maHeadgreen.group(1, 2)
-            text = re.sub(' *\#*#?$', '', text.strip())
+            text = re.sub(' *\#*$', '', text.strip())
             anchor = reWd.sub('', text)
             level = len(lead)
             if not htmlIDSet.count(anchor):
@@ -683,8 +719,8 @@ def wtxtToHtml(srcFile, outFile=None):
             elif bullet == '*':
                 bullet = '&bull;'
             level = len(spaces) / 2 + 1
-            line = spaces + '<p class="list-' + `level` + '">' + bullet + '&nbsp; '
-            line = line + text + '</p>\n'
+            line = '{}<p class="list-{}">{}&nbsp; '.format(spaces, level, bullet)
+            line = '{}{}</p>\n'.format(line, text)
         # --HRule
         elif maHRule:
             line = '<hr>\n'
@@ -718,16 +754,8 @@ def wtxtToHtml(srcFile, outFile=None):
                 author = blockAuthor
             authorLine = '<p class="attr">{}</p>\n'.format(author)
             outLines.append(authorLine)
-            # secondLine = '<div class="quote">\n'
-            # outLines.append(secondLine)
-            # openQuote = '<p class="quotetext">\n'
-            # outLines.append(openQuote)
             continue
         elif maBlockquoteEnd:
-            # closingQuote = '</p>\n'
-            # outLines.append(closingQuote)
-            # closingDiv = '</div>\n'
-            # outLines.append(closingDiv)
             line = '</section>\n'
         # --Misc. Text changes --------------------
         line = reMDash.sub('&#150', line)
@@ -745,8 +773,8 @@ def wtxtToHtml(srcFile, outFile=None):
         line = reImageCaptionUrl.sub(imageCaptionUrl, line)
         # --Hyperlinks
         line = reLink.sub(linkReplace, line)
-        line = reHttp.sub(r' <a href="\1">\1</a>', line)
-        line = reWww.sub(r' <a href="http://\1">\1</a>', line)
+        line = httpReplace(line)
+        line = wwwReplace(line)
         # --HTML Font or Code tag first of Line ------------------
         maHtmlBegin = reHtmlBegin.match(line)
         if maHtmlBegin:
@@ -805,7 +833,7 @@ def wtxtToHtml(srcFile, outFile=None):
                             count = level
                         for i in range(1, count):
                             number += '.' + str(countlist[i])
-                    if level <= addContents:
+                    if heading[0] <= addContents:
                         out.write('<p class="list-{}">&bull;&nbsp; <a href="#{}">{}</a></p>\n'.format(level, heading[1], heading[2]))
                     previousLevel = heading[0]
                 didContents = True
