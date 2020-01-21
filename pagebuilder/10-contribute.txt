@@ -14,7 +14,7 @@
 * There are many mods that are a must have so guides will include most of these mods. Try not to duplicate other content when possible.
 
 == Contents ===================================================================
-{{CONTENTS=2}}
+{{CONTENTS=3}}
 
 == Requirement:
 * The <code>pagebuilder_v12.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.
@@ -33,7 +33,7 @@ Your page title will become the first line on the page and will be assigned as t
 
 {{CONTENTS=0}}
 = Your Page Title
-{{CONTENTS=2}}
+{{CONTENTS=3}}
 
 <hr>
 === Heading Style 1
@@ -47,7 +47,7 @@ Your page title will become the first line on the page and will be assigned as t
 == Heading 2
 === Heading 3
 ==== Heading 4
-{{CONTENTS=2}}
+{{CONTENTS=3}}
 
 <hr>
 === Heading Style 2
@@ -59,7 +59,7 @@ Your page title will become the first line on the page and will be assigned as t
 ## Heading 2
 ### Heading 3
 #### Heading 4
-{{CONTENTS=2}}
+{{CONTENTS=3}}
 
 <hr>
 === Table of Contents
@@ -377,7 +377,7 @@ Keep in mind you would want to use small images about 24 to 36 pixels or less. U
 
 === 0.00 Initial Release [1/1/2020]
 * released pagebuilder.zip version 0
-{{CONTENTS=2}}
+{{CONTENTS=3}}
 == Optional Requirement:
 * To generate the HTML files you will need the latest python from Python.org. These files are written for 2.7.x and the current Python 2.7.17 will work just fine. The link is for the 32 bit version. Please download that because the setup will go smoother and add needed configurations to your computer to run the python scripts provided.
 * Below is a link to Python 2.7.17 and a link to the pagebuilder script and sample file you can generate right away to see it working.
