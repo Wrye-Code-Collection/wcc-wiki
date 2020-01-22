@@ -1,7 +1,21 @@
 {{PAGETITLE="Skyrim Special Edition Mod Tutorial Link Compendium"}}
-__A collection of Links sorted by subject to help the SSE modder, from beginner to advanced, in developing new skillsets.__
-     * Discussion: TBD
-	 * I am adding something here to test if I am doing this right.
+
+= The Goal ========================================================================================
+
+. The **SSE TLC** is a comprehensive collection of tutorial links from all corners of the internet, sorted by subject, to help modders in developing new skillsets. I felt this material would be better found and utilized, especially by those with no technical background, by hosting a list of available links in one place. Many SSE tools are interconnected and users should have basic understanding in many to become proficient modders able to make their own stable playlists of mods.  
+
+. I try to objectively identify each tutorial as being beginner, intermediate, or advanced if the author has not already identified it as such. Following each tutorial title and link is brief informational content with the author's name, summary, and date of creation. I do not currently post links to explicitly pay-to-access material, though several of the sites linked to offer subscriptions for reduced ads or host authors who have private Patreon accounts.
+
+# Contribute:
+
+. __[[https://wrye-code-collection.github.io/wcc-wiki/10-contribute.html | Contributing]]__ ~~by Sharlikran~~
+
+     * If you are interested in helping out with the TLC or have suggestions for the Wiki pages, please read the **Contribute Wiki** to learn about the Wrye Mash syntax used in building this site. 
+     * Any Wiki-related questions or suggestions should be posted in the AFK Mods Wiki discussion thread above and directed @Sharlikran specifically.
+	 
+. __[[https://www.afkmods.com/index.php?/topic/5578-wrye-bash-wiki-discussion-thread/ | Wrye Bash Wiki Discussion Thread]]__ ~~by Sharlikran~~
+
+     * For feedback and discussion about the **Wrye Bash Wiki** host site. 
 
 ==  Contents  ================================================================
 {{CONTENTS=4}}
@@ -1222,16 +1236,23 @@ There are many ways to do this, and this tutorial will only cover two of them. T
           * ~~Beginner~~
           * Descrip:
 
-=  Reuse and Credits  ==========================================================
+= Reuse and Credits  ==============================================================================
 
-==  License: WML 1.0 Modify and Redistribute, Share Alike
+#### License: WML 1.0 Modify and Redistribute, Share Alike
 
 * You are free to redistribute this work in unmodified form.
 * You are free to modify and re-distribute this work, so long as you:
-     * 1) give the author(s) credit proportional to their contribution to the final work,
-     * 2) distribute the final work under the same terms, and
-     * 3) make artistic resources included with the final work available under the same terms.
+     . 1) give the author(s) credit proportional to their contribution to the final work,
+     . 2) distribute the final work under the same terms, and
+     . 3) make artistic resources included with the final work available under the same terms.
 
-==  Credits
+#### Credits
 
-* **A Filthy N'wah** and **Sharlikran** Thanks to the authors for providing this modder resource!
+. **A Filthy N'wah** 
+     * Link hoarder and author of this modding resource. 
+	 
+. **Sharlikran** 
+     * Thanks for developing the site, and providing essential support and guidance.  	 
+
+. To all the tool developers and tutorial authors who have made their work available to the public; 
+**THANK YOU!**
