@@ -373,6 +373,11 @@ def wtxtToHtml(srcFile, outFile=None):
     if not outFile:
         import os
         outFile = os.path.splitext(srcFile)[0] + '.html'
+    if srcFile:
+        if srcFile == 'index.txt':
+            page_number = 1
+        else:
+            page_number = int(srcFile.split('-', 1)[0])
     # RegEx Independent Routines ------------------------------------
     def anchorReplace(maObject):
         text = maObject.group(1)
@@ -796,57 +801,52 @@ def wtxtToHtml(srcFile, outFile=None):
     out = file(outFile, 'w')
     out.write(htmlHead % (pageTitle, css, pageTitle))
     didContents = False
-    countlist = [0, 0, 0, 0, 0, 0]
+    countlist = [page_number, 0, 0, 0, 0, 0, 0]
     for line in outLines:
         if reContentsTag.match(line):
             if not didContents:
                 baseLevel = min([level for (level, name, text) in contents])
                 previousLevel = baseLevel
                 for heading in contents:
+                    number = ''
                     level = heading[0] - baseLevel + 1
                     if heading[0] > previousLevel:
-                        countlist[level-1] += 1
-                        number = str(countlist[0])
-                        if level == 1:
-                            count = level + 1
-                        else:
-                            count = level
-                        for i in range(1, count):
-                            number += '.' + str(countlist[i])
+                        countlist[level] += 1
+                        for i in range(level+1):
+                            if i == 0:
+                                number += str(countlist[i])
+                            else:
+                                number += '.' + str(countlist[i])
                     if heading[0] < previousLevel:
                         # Zero out everything not a duplicate
-                        for i in range(level, 6):
+                        for i in range(level+1, 7):
                             countlist[i] = 0
-                        countlist[level-1] += 1
-                        number = str(countlist[0])
-                        if level == 1:
-                            count = level + 1
-                        else:
-                            count = level
-                        for i in range(1, count):
-                            number += '.' + str(countlist[i])
+                        countlist[level] += 1
+                        for i in range(level+1):
+                            if i == 0:
+                                number += str(countlist[i])
+                            else:
+                                number += '.' + str(countlist[i])
                     if heading[0] == previousLevel:
-                        countlist[level-1] += 1
-                        number = str(countlist[0])
-                        if level == 1:
-                            count = level + 1
-                        else:
-                            count = level
-                        for i in range(1, count):
-                            number += '.' + str(countlist[i])
+                        countlist[level] += 1
+                        for i in range(level+1):
+                            if i == 0:
+                                number += str(countlist[i])
+                            else:
+                                number += '.' + str(countlist[i])
                     if heading[0] <= addContents:
                         out.write('<p class="list-{}">&bull;&nbsp; <a href="#{}">{} {}</a></p>\n'.format(level, heading[1], number, heading[2]))
                         header_match.append((heading[1], number, heading[2]))
                     previousLevel = heading[0]
                 didContents = True
         else:
-            maIsHeader = re.match(r'^<h\d\s{1,3}(class.+?>.+?)<\/h\d>', line)
+            maIsHeader = re.search(r'<\/h\d>$', line)
             if maIsHeader:
-                text_search = re.sub(r'(<h\d *class.+?id=")(.+?)(">.+?<\/h\d>)', r'\2', line).rstrip('\n')
+                text_search = re.sub(r'^<h.*id="(.*)">.*<\/h\d>', r'\1', line).rstrip('\n')
                 for header_to_match in header_match:
                     if header_to_match[0] == text_search:
                         text_replace = '{} - {}'.format(header_to_match[1], header_to_match[2])
-                        line = re.sub(r'(<h\d *class.+?>).+?(<\/h\d>)', r'\g<1>'+text_replace+'\g<2>', line)
+                        line = re.sub(r'(<h.*>)(.*)(<\/h\d>)', r'\g<1>'+text_replace+'\g<3>', line)
                         break
             out.write(line)
     out.write('</div>\n</section>\n</BODY>\n</HTML>\n')
