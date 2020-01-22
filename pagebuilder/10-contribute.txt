@@ -149,7 +149,7 @@ If you need to link to another part of a page or a different page then you can i
 </pre>
 {% endraw %}
 
-Once you add the navigation link you will need to make a link for users to click on to navigate to the anchor. To do so you need the link to start with  <code>#</code> Simply add that somewhere in the document above where you want the anchor 
+Once you add the navigation link you will need to make a link for users to click on to navigate to the anchor. To do so you need the link to start with  <code>#</code> Simply add that somewhere in the document above where you want the anchor
 
 <font class="yellow">NOTE:</font> The link to the anchor __must__ start with a <code>#</code>.
 
@@ -214,7 +214,7 @@ You may be contributing a guide that has people download a mod and you wish to c
 <hr>
 === Html
 * <i>Html tags work fine</i>
-* <code>code tag has special formatting</code> 
+* <code>code tag has special formatting</code>
 * **pre** tag is useful for code
 <pre>
 begin widgetScript
@@ -237,8 +237,8 @@ Example of text in a blockquote
 {% endraw %}
 
 [[bb:Quote]]
-. This is quoted text from another author. 
-. You can also put a blockquote around text for other reasons. 
+. This is quoted text from another author.
+. You can also put a blockquote around text for other reasons.
 . The title of the blockquote can be assigned the author of the quote or even just the word Quote.
 [[be:]]
 
@@ -433,7 +433,7 @@ Keep in mind you would want to use small images about 24 to 36 pixels or less. U
 * The Python installation will be very simple, just click next and leave all the default settings.
 ### Installing Python script for use
 * Once installed Python you will need to unzip the python script and sample text file used to build the html file.
-* These are really not installed on your system automatically so we will be copying them. 
+* These are really not installed on your system automatically so we will be copying them.
 * Windows should have a way to open this type of zip file itself but if needed you can download 7zip from [[https://www.7-zip.org/ | 7-zip.org]]. It is safe, free and, easy to use.
 {{image:unzipfiles.jpg | Unzip Files}}
 * To unzip file files simply right click on them and choose <code>Extract to "pagebuilder\"</code>

@@ -118,7 +118,7 @@
           * **Author:** LOOT Team
           * ~~DISCORD~~
           . Discord Server Standard Disclaimer:
-          * Discord servers are a great way to get in contact directly with tool and mod developers, HOWEVER, they are real people with real lives, not bots placed to do your bidding. Before posting questions and asking for advice, utilize the many resources available as referenced by this link compendium. If you still have questions or concerns make sure you are respectful and polite. Don't be an entitled, pushy nub, no one owes you anything. 
+          * Discord servers are a great way to get in contact directly with tool and mod developers, HOWEVER, they are real people with real lives, not bots placed to do your bidding. Before posting questions and asking for advice, utilize the many resources available as referenced by this link compendium. If you still have questions or concerns make sure you are respectful and polite. Don't be an entitled, pushy nub, no one owes you anything.
 
      . __[[https://www.youtube.com/watch?v=Ncv_FWQUw0k&list=PLlN8weLk86Xi1s9UklgzsLl3sbLYKHBH7&index=2&t=0s | Modding 101 - Load Order - A to ESL - Elder Scrolls & Fallout]]__
           * **Author:** GamerPoets
@@ -133,7 +133,7 @@
      . __[[https://www.youtube.com/watch?v=lSh35PUZKlQ | Fix 90pct of Mod Conflicts EASILY - LOOT Mod Organizer 2 Skyrim SE Guide]]__
           * **Author:** Ai Cave
           * ~~Tutorial Link Type~~
-          * This video is an introduction to load order and its management through the Load Order Optimization Tool (LOOT). 
+          * This video is an introduction to load order and its management through the Load Order Optimization Tool (LOOT).
 
      . __[[https://www.youtube.com/watch?v=sTiqtVczZFs | A Beginner's Guide to Using LOOT to Organize your Mods (Fallout/Elder Scrolls) Tutorial]]__
           * **Author:** ^ChrisZPR
@@ -143,21 +143,21 @@
      . __[[https://www.youtube.com/watch?v=iOzY2SZ26LQ | Skyrim SE: LOOT Mod Organizer 2 Tutorial]]__
           * **Author:** Tonyo Allie
           * ~~Intermediate~~
-          * Hey everyone. I wanted to give you an indepth tutorial about Loot and load order for Mod Organizer 2 for Skyrim Special Edition. I know it's a pretty basic tool, but I felt this tutorial need to be stretched out a bit. Especially, with load order involved and how important it really is with your mods. Please make sure you endorse the mod author of loot and let him know we appreciate all his hard work. 
+          * Hey everyone. I wanted to give you an indepth tutorial about Loot and load order for Mod Organizer 2 for Skyrim Special Edition. I know it's a pretty basic tool, but I felt this tutorial need to be stretched out a bit. Especially, with load order involved and how important it really is with your mods. Please make sure you endorse the mod author of loot and let him know we appreciate all his hard work.
 
 ==  Mator Smash ================================================================
 
      . __[[https://www.nexusmods.com/skyrim/mods/90987 | Mator Smash]]__
           * **Author:** Mator
           * ~~TOOL~~
-          * Mator Smash is a tool that generates conflict resolution patches, similar to Wrye Bash's Bashed Patch. 
+          * Mator Smash is a tool that generates conflict resolution patches, similar to Wrye Bash's Bashed Patch.
           * Smash is capable of handling conflicts in all record types.
 
      . __[[https://discord.gg/mraruus | Modding Tools Discord]]__
           * **Author:** Mator
           * ~~Discord~~
           . Discord Server and Forum Support Standard Disclaimer:
-          * Discord servers and Forum Support are a great way to get in contact directly with tool and mod developers, HOWEVER, they are real people with real lives, not bots placed to do your bidding. Before posting questions and asking for advice, utilize the many resources available as referenced by this link compendium. If you still have questions or concerns make sure you are respectful and polite. Don't be an entitled, pushy nub, no one owes you anything. 
+          * Discord servers and Forum Support are a great way to get in contact directly with tool and mod developers, HOWEVER, they are real people with real lives, not bots placed to do your bidding. Before posting questions and asking for advice, utilize the many resources available as referenced by this link compendium. If you still have questions or concerns make sure you are respectful and polite. Don't be an entitled, pushy nub, no one owes you anything.
 
      . __[[https://www.youtube.com/watch?v=l39VMssZmjE | Mator Smash: Installation & General Use]]__
           * **Author:** GamerPoets
@@ -167,7 +167,7 @@
      . __[[https://www.youtube.com/watch?v=2e-0mc8wmDs | Skyrim SE: Mator Smash Mod Organizer 2 Updated Tutorial]]__
           * **Author:** Tonyo Allie
           * ~~Intermediate~~
-          * Hey everyone. I've gone ahead and updated Mator Smash installation tutorial for Mod Organizer 2 for Skyrim Special Edition. I hope this helps everyone with their game and really breaks down how a Smash Patch work and how it can make your game a very stable and enjoyable experience. 
+          * Hey everyone. I've gone ahead and updated Mator Smash installation tutorial for Mod Organizer 2 for Skyrim Special Edition. I hope this helps everyone with their game and really breaks down how a Smash Patch work and how it can make your game a very stable and enjoyable experience.
 
 ==  Nif Optimizer ================================================================
 
@@ -201,7 +201,7 @@
           * Descrip of tutorial
 
      . __[[https:// | tutorial name]]__
-          * **Author:** 
+          * **Author:**
           * ~~Tutorial Link Type~~
           * Goal: scan mesh files (nif) to ensure compatibility with Skyrim Special Edition and update unsupported meshes.
           * This tutorial is aimed at the beginner using __[[http://www.nexusmods.com/skyrim/mods/39718/? | “Blades Hakama” by atomec]]__ as an example, and assumes familiarity working with folders and files. I do not cover HDT outfits here.
@@ -275,14 +275,14 @@
 ==  xLODGen ================================================================
 
      . __[[https:// | tool name]]__
-          * **Author:** 
+          * **Author:**
           * ~~TOOL~~
           * Descrip of official tool
 
 ==  zEdit ================================================================
 
      . __[[https:// | tool name]]__
-          * **Author:** 
+          * **Author:**
           * ~~TOOL~~
           * Descrip of official tool
 
@@ -295,7 +295,7 @@ __A collection of tutorials and links to fun stuff that don't necessarily fit an
      . __[[https://wiki.nexusmods.com/index.php/Using_a_face_made_with_RaceMenu_on_an_NPC_for_Skyrim | Using a face made with RaceMenu on an NPC for Skyrim]]__
           * **Author:** Nexus Wiki Team
           * ~~Intermediate~~
-          * This tutorial shows how to give an NPC a face you've created using This tutorial shows how to give an NPC a face you've created using [[http://www.nexusmods.com/skyrim/mods/29624/ | Expired's RaceMenu]]. 
+          * This tutorial shows how to give an NPC a face you've created using This tutorial shows how to give an NPC a face you've created using [[http://www.nexusmods.com/skyrim/mods/29624/ | Expired's RaceMenu]].
           * For using a face created only with the vanilla Skyrim sliders, check the following: [[https://wiki.nexusmods.com/index.php/Adding_a_Follower_NPC_to_Skyrim#Use_the_face_of_your_player_character_for_the_NPC | Use the face of your player character for the NPC]].
 
      . __[[https://www.nexusmods.com/skyrimspecialedition/mods/30041 | How to edit NPCs without Nifmerge]]__
@@ -383,7 +383,7 @@ Some may decide that they really have no interest in learning the ins and outs o
      . __[[https://discord.gg/fuhsnph | Rare Papug Association Discord]]__
           * **Author:** mnikjom
           * ~~Forum~~
-          * Discord server for mnikjom's projects including the Yashed Guide. 
+          * Discord server for mnikjom's projects including the Yashed Guide.
 
 
 =  Reuse and Credits ==========================================================
@@ -391,9 +391,9 @@ Some may decide that they really have no interest in learning the ins and outs o
 ==  License: WML 1.0 Modify and Redistribute, Share Alike
 
 * You are free to redistribute this work in unmodified form.
-* You are free to modify and re-distribute this work, so long as you: 
-     * 1) give the author(s) credit proportional to their contribution to the final work, 
-     * 2) distribute the final work under the same terms, and 
+* You are free to modify and re-distribute this work, so long as you:
+     * 1) give the author(s) credit proportional to their contribution to the final work,
+     * 2) distribute the final work under the same terms, and
      * 3) make artistic resources included with the final work available under the same terms.
 
 ==  Credits
