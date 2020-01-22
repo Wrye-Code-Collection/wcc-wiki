@@ -10,10 +10,11 @@
 
 . __[[https://wrye-code-collection.github.io/wcc-wiki/10-contribute.html | Contributing]]__ ~~by Sharlikran~~
 
-     * If you are interested in helping out with the TLC or have suggestions for the Wiki pages, please read the **Contribute Wiki** to learn about the Wrye Mash syntax used in building this site. 
-     * Any Wiki-related questions or suggestions should be posted in the AFK Mods Wiki discussion thread above and directed @Sharlikran specifically.
+     * If you are interested in helping out with the TLC or have suggestions for the Wiki pages, please read the **Contribute Wiki** to learn about the Wrye Text syntax used in building this site. 
+     * Any Wiki-related questions or suggestions should be posted in the AFK Mods Wiki discussion thread above. and directed to Sharlikran.
+     * If you have any feedback for me on this guide, feel free to mention it in the discussion thread.
 	 
-. __[[https://www.afkmods.com/index.php?/topic/5578-wrye-bash-wiki-discussion-thread/ | Wrye Bash Wiki Discussion Thread]]__ ~~by Sharlikran~~
+. __[[https://www.afkmods.com/index.php?/topic/5578-wrye-bash-wiki-discussion-thread/ | Wrye Bash Wiki Discussion Thread]]__
 
      * For feedback and discussion about the **Wrye Bash Wiki** host site. 
 
