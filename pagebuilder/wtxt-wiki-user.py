@@ -376,7 +376,10 @@ def wtxtToHtml(srcFile, outFile=None):
         if srcFile == 'index.txt':
             page_number = 1
         else:
-            page_number = int(srcFile.split('-', 1)[0])
+            if '-' in srcFile:
+                page_number = int(srcFile.split('-', 1)[0])
+            else:
+                page_number = 0
     # RegEx Independent Routines ------------------------------------
     def anchorReplace(maObject):
         text = maObject.group(1)
