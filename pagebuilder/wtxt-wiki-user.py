@@ -25,7 +25,6 @@
 import re
 import string
 import sys
-import types
 import os
 
 # ------------------------------------------------------------------------------
@@ -58,7 +57,7 @@ class Callables:
     # --Help
     def printHelp(self, callKey):
         """Print help for specified callKey."""
-        print help(self.callObjs[callKey])
+        print(help(self.callObjs[callKey]))
 
     # --Main
     def main(self):
@@ -73,11 +72,11 @@ class Callables:
             return
         # --Not have key?
         if callKey not in callObjs:
-            print "Unknown function/object:", callKey
+            print("Unknown function/object: {}".format(callKey))
             return
         # --Callable
         callObj = callObjs[callKey]
-        if type(callObj) == types.StringType:
+        if isinstance(callObj, str):
             callObj = eval(callObj)
         if callTail:
             callObj = eval('callObj.' + callTail)
@@ -102,7 +101,7 @@ class Callables:
             else:
                 argDex = argDex + 1
         # --Apply
-        apply(callObj, args, keywords)
+        callObj(*args, **keywords)
 
 
 # --Callables Singleton
@@ -625,7 +624,7 @@ def wtxtToHtml(srcFile, outFile=None):
     blockAuthor = "Unknown"
     inNavigationButtons = False
     # --Read source file --------------------------------------------------
-    ins = file(srcFile)
+    ins = open(srcFile, 'r')
     for line in ins:
         isInParagraph, wasInParagraph = False, isInParagraph
         # --Liquid ------------------------------------
@@ -798,7 +797,7 @@ def wtxtToHtml(srcFile, outFile=None):
     # --Get Css -----------------------------------------------------------
     css = defaultCss
     # --Write Output ------------------------------------------------------
-    out = file(outFile, 'w')
+    out = open(outFile, 'w')
     out.write(htmlHead % (pageTitle, css, pageTitle))
     didContents = False
     countlist = [page_number, 0, 0, 0, 0, 0, 0]

@@ -25,7 +25,6 @@
 import re
 import string
 import sys
-import types
 import os
 
 # ------------------------------------------------------------------------------
@@ -58,7 +57,7 @@ class Callables:
     # --Help
     def printHelp(self, callKey):
         """Print help for specified callKey."""
-        print help(self.callObjs[callKey])
+        print(help(self.callObjs[callKey]))
 
     # --Main
     def main(self):
@@ -73,11 +72,11 @@ class Callables:
             return
         # --Not have key?
         if callKey not in callObjs:
-            print "Unknown function/object:", callKey
+            print("Unknown function/object: {}".format(callKey))
             return
         # --Callable
         callObj = callObjs[callKey]
-        if type(callObj) == types.StringType:
+        if isinstance(callObj, str):
             callObj = eval(callObj)
         if callTail:
             callObj = eval('callObj.' + callTail)
@@ -102,7 +101,7 @@ class Callables:
             else:
                 argDex = argDex + 1
         # --Apply
-        apply(callObj, args, keywords)
+        callObj(*args, **keywords)
 
 
 # --Callables Singleton
@@ -260,14 +259,14 @@ def etxtToHtml(inFileName):
             elif bullet == '*':
                 bullet = '&bull;'
             level = len(spaces) / 2 + 1
-            line = spaces + '<p class=list-' + `level` + '>' + bullet + '&nbsp; '
+            line = '{}<p class="list-{}>{}&nbsp; '.format(spaces, level, bullet)
             line = line + text + '\n'
         # --Paragraph
         elif maPar:
             line = '<p>' + maPar.group(1)
         # --Blank line
         elif maBlank:
-            line = spaces + '<p class=list' + `level` + '>&nbsp;</p>'
+            line = '{}<p class="list-{}">&nbsp;</p>'.format(spaces, level)
         # --Misc. Text changes
         line = reMDash.sub('&#150', line)
         line = reMDash.sub('&#150', line)
@@ -332,7 +331,7 @@ def etxtToWtxt(fileName=None):
         line = re.sub(r'~([^ ].+?)~', r'~~\1~~', line)
         line = re.sub(r'_([^ ].+?)_', r'__\1__', line)
         line = re.sub(r'\*([^ ].+?)\*', r'**\1**', line)
-        print line,
+        print(line)
 
 
 # Wrye Text ===================================================================
@@ -681,7 +680,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     blockAuthor = "Unknown"
     inNavigationButtons = False
     # --Read source file --------------------------------------------------
-    ins = file(srcFile)
+    ins = open(srcFile, 'r')
     for line in ins:
         isInParagraph, wasInParagraph = False, isInParagraph
         # --Preformatted? -----------------------------
@@ -869,7 +868,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         if '<' in css:
             raise "Non css tag in css file: " + cssFile
     # --Write Output ------------------------------------------------------
-    out = file(outFile, 'w')
+    out = open(outFile, 'w')
     # out.write(htmlHead % (title, css))
     out.write('---\nlayout: default\n{}'.format(pageTitle))
     out.write(htmlHead)
