@@ -4,7 +4,7 @@ exclude: [
   'pagebuilder/',
   '_sass/src/',
   '_sass/Old CSS/',
-  '.idea/',
+  '.idea/**',
 ]
 theme: jekyll-theme-cayman
 gems:
