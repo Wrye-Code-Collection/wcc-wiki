@@ -564,7 +564,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     rePar = re.compile(r'^([a-zA-Z]|\*\*|~~|__)')
     reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}(\/)?$)')
     # --Tags
-    pageTitle = 'title: Your Content'
     reAnchorTag = re.compile('{{nav:(.+?)}}')
     reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
     reCssTag = re.compile('\s*{{CSS:(.+?)}}\s*$')
@@ -682,6 +681,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     dupeEntryCount = 1
     blockAuthor = "Unknown"
     inNavigationButtons = False
+    pageTitle = 'title: Your Content'
     # --Read source file --------------------------------------------------
     ins = open(srcFile, 'r')
     for line in ins:
@@ -846,7 +846,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
                 line = re.sub(r'(\n)?$', '', line)
                 line = line + '</p>\n'
         # --Save line ------------------
-        # print line,
         if maTitleTag:
             pass
         else:
