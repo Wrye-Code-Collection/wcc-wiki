@@ -5,5 +5,10 @@ At this point I don't know exactly what content I want for this site however, I 
 == Wrye Musings
 [[https://wryemusings.com/ | Wrye Musings]]
 
-<img src="img/permission_musings.jpg">
+{{image:permission_musings.jpg | permission musings}}
 I am particularity interested in hosting the wrye musings information as I hold it very dear. I would not want it to be lost. I have a backup of the site as much as I can and will host it at some point. For now though I am respecting Wrye's wishes while Wrye Musings is still on-line
+
+== Paid vs Unpaid modding content
+
+In order to be fully transparent there will be an indication as to whether or not links lead to sites offering paid content. While linking to free content is prefered, please understand some sites may offer both types of content. If a request is made to link to paid only content and if granted, that information will be disclosed as well.
+{{image:oceanic_version.png | oceanic_version}}
