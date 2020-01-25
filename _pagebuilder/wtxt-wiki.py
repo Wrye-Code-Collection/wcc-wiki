@@ -511,7 +511,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reSpoilerEnd = re.compile(r'\[\[se:\]\]')
     reBlockquoteBegin = re.compile(r'\[\[bb:(.*?)\]\]')
     reBlockquoteBEnd = re.compile(r'\[\[be:\]\]')
-    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<img\s{1,3}src.+?\>)|^\u00A9|^\<strong|^\<[bB]\>|(^{% include image-inline.html)')
+    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<a\s{1,3}(class=".+?)?href.+?\>)|(^\<img\s{1,3}src.+?\>)|^\u00A9|^\<strong|^\<[bB]\>|(^{% include image-inline.html)')
     reNavigationButtonBegin = re.compile(r'{{nbb}}')
     reNavigationButtonEnd = re.compile(r'{{nbe}}')
     # --Open files
