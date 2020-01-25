@@ -63,9 +63,12 @@ class Callables:
     def main(self):
         callObjs = self.callObjs
         # --Call key, tail
-        callParts = string.split(sys.argv[1], '.', 1)
-        callKey = callParts[0]
-        callTail = (len(callParts) > 1 and callParts[1])
+        # This makes no sense since if there was a dot it would be in the filename
+        # callParts = string.split(sys.argv[1], '.', 1)
+        callKey = sys.argv[1]
+        # This makes no sense because it doesn't seem to capture what is after genHtml
+        # The intent here is to use callObj.__name__ but there isn't a tail
+        # callTail = (len(callParts) > 1 and callParts[1])
         # --Help request?
         if callKey == '-h':
             self.printHelp(self)
@@ -78,8 +81,9 @@ class Callables:
         callObj = callObjs[callKey]
         if isinstance(callObj, str):
             callObj = eval(callObj)
-        if callTail:
-            callObj = eval('callObj.' + callTail)
+        # The intent here is to use callObj.__name__ but there isn't a tail
+        # if callTail:
+        #    callObj = eval('callObj.' + callTail)
         # --Args
         args = sys.argv[2:]
         # --Keywords?
@@ -712,7 +716,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
                 bullet = '&nbsp;'
             elif bullet == '*':
                 bullet = '&bull;'
-            level = len(spaces) / 2 + 1
+            level = int(len(spaces) / 2 + 1)
             line = '{}<p class="list-{}">{}&nbsp; '.format(spaces, level, bullet)
             line = '{}{}</p>\n'.format(line, text)
         # --HRule
