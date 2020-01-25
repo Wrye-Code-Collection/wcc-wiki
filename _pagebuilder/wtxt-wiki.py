@@ -243,9 +243,11 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
 
     def strip_color(text):
         if reTextColor.search(text):
-            text_clolor = re.sub('(.*){{a:(.*)}}(.*)', r'\2', text)
+            temp = reTextColor.search(text)
+            text_clolor = temp.group(1)
+            strip_color = temp.group(0)
             fontClass = 'class="{}"'.format(text_clolor)
-            out_text = re.sub('{{{{a:{}}}}}'.format(text_clolor), '', text)
+            out_text = re.sub(strip_color, '', text)
         else:
             fontClass = ''
             out_text = text
@@ -280,7 +282,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     rePar = re.compile(r'^([a-zA-Z\d]|\*\*|~~|__|^\.{1,}|^\*{1,}|^\"{1,})')
     reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}(\/)?$)')
     # --TextColors
-    reTextColor = re.compile(r'({{a:(.+?)}})')
+    reTextColor = re.compile(r'{{a:(.*)}}')
     # --Tags
     reAnchorTag = re.compile('{{nav:(.+?)}}')
     reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
