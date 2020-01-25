@@ -23,9 +23,8 @@
 # Imports ----------------------------------------------------------------------
 #--Standard
 import re
-import string
-import sys
 import os
+import sys
 
 # ------------------------------------------------------------------------------
 class Callables:
@@ -116,226 +115,6 @@ def mainFunction(func):
     """A function for adding functions to callables."""
     callables.add(func)
     return func
-
-
-# ETXT =========================================================================
-"""This section of the module provides a single function for converting
-wtxt text files to html files."""
-etxtHeader = """
-<!DOCTYPE html>
-<HTML>
-<HEAD>
-<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
-<TITLE>%s</TITLE>
-<STYLE>
-H2 { margin-top: 0in; margin-bottom: 0in; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in; background: #c6c63c; font-family: "Arial", serif; font-size: 12pt; page-break-before: auto; page-break-after: auto }
-H3 { margin-top: 0in; margin-bottom: 0in; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0.02in 0in; background: #e6e64c; font-family: "Arial", serif; font-size: 10pt; page-break-before: auto; page-break-after: auto }
-H4 { margin-top: 0in; margin-bottom: 0in; font-family: "Arial", serif; font-size: 10pt; font-style: normal; page-break-before: auto; page-break-after: auto }
-H5 { margin-top: 0in; margin-bottom: 0in; font-family: "Arial", serif; font-style: italic; page-break-before: auto; page-break-after: auto }
-P { margin-top: 0.01in; margin-bottom: 0.01in; font-family: "Arial", serif; font-size: 10pt; page-break-before: auto; page-break-after: auto }
-P.list-1 { margin-left: 0.15in; text-indent: -0.15in }
-P.list-2 { margin-left: 0.3in; text-indent: -0.15in }
-P.list-3 { margin-left: 0.45in; text-indent: -0.15in }
-P.list-4 { margin-left: 0.6in; text-indent: -0.15in }
-P.list-5 { margin-left: 0.75in; text-indent: -0.15in }
-P.list-6 { margin-left: 1.00in; text-indent: -0.15in }
-.date0 { background-color: #FFAAAA }
-.date1 { background-color: #ffc0b3 }
-.date2 { background-color: #ffd5bb }
-.date3 { background-color: #ffeac4 }
-</STYLE>
-</HEAD>
-<BODY BGCOLOR='#ffffcc'>
-"""
-
-
-@mainFunction
-def etxtToHtml(inFileName):
-    import time
-    """Generates an html file from an etxt file."""
-    # --Re's
-    reHead2 = re.compile(r'## *([^=]*) ?=*')
-    reHead3 = re.compile(r'# *([^=]*) ?=*')
-    reHead4 = re.compile(r'@ *(.*)\s+')
-    reHead5 = re.compile(r'% *(.*)\s+')
-    reList = re.compile(r'( *)([-!?\.\+\*o]) (.*)')
-    reBlank = re.compile(r'\s+$')
-    reMDash = re.compile(r'--')
-    reBoldEsc = re.compile(r'\_')
-    reBoldOpen = re.compile(r' _')
-    reBoldClose = re.compile(r'(?<!\\)_( |$)')
-    reItalicOpen = re.compile(r' ~')
-    reItalicClose = re.compile(r'~( |$)')
-    reBoldicOpen = re.compile(r' \*')
-    reBoldicClose = re.compile(r'\*( |$)')
-    reBold = re.compile(r'\*\*([^\*]+)\*\*')
-    reItalic = re.compile(r'\*([^\*]+)\*')
-    reLink = re.compile(r'\[\[(.*?)\]\]')
-    reHttp = re.compile(r' (http://[_~a-zA-Z0-9\./%-]+)')
-    reWww = re.compile(r' (www\.[_~a-zA-Z0-9\./%-]+)')
-    reDate = re.compile(r'\[([0-9]+/[0-9]+/[0-9]+)\]')
-    reContents = re.compile(r'\[CONTENTS=?(\d+)\]\s*$')
-    reWd = re.compile(r'\W\d*')
-    rePar = re.compile(r'\^(.*)')
-    reFullLink = re.compile(r'(:|#|\.[a-zA-Z]{3,4}$)')
-    # --Date styling (Replacement function used with reDate.)
-    dateNow = time.time()
-
-    def dateReplace(maDate):
-        date = time.mktime(
-            time.strptime(maDate.group(1), '%m/%d/%Y'))  # [1/25/2005]
-        age = int((dateNow - date) / (7 * 24 * 3600))
-        if age < 0: age = 0
-        if age > 3: age = 3
-        return '<span class=date%d>%s</span>' % (age, maDate.group(1))
-
-    def linkReplace(maLink):
-        address = text = maLink.group(1).strip()
-        if '|' in text:
-            (address, text) = [chunk.strip() for chunk in text.split('|', 1)]
-        if not reFullLink.search(address):
-            address = address + '.html'
-        return '<a href="%s">%s</a>' % (address, text)
-
-    # --Defaults
-    title = ''
-    level = 1
-    spaces = ''
-    headForm = "<h%d><a name='%s'>%s</a></h%d>\n"
-    # --Open files
-    inFileRoot = re.sub('\.[a-zA-Z]+$', '', inFileName)
-    inFile = open(inFileName)
-    # --Init
-    outLines = []
-    contents = []
-    addContents = 0
-    # --Read through inFile
-    for line in inFile.readlines():
-        maHead2 = reHead2.match(line)
-        maHead3 = reHead3.match(line)
-        maHead4 = reHead4.match(line)
-        maHead5 = reHead5.match(line)
-        maPar = rePar.match(line)
-        maList = reList.match(line)
-        maBlank = reBlank.match(line)
-        maContents = reContents.match(line)
-        # --Contents
-        if maContents:
-            if maContents.group(1):
-                addContents = int(maContents.group(1))
-            else:
-                addContents = 100
-        # --Header 2?
-        if maHead2:
-            text = maHead2.group(1)
-            name = reWd.sub('', text)
-            line = headForm % (2, name, text, 3)
-            if addContents: contents.append((2, name, text))
-            # --Title?
-            if not title: title = text
-        # --Header 3?
-        elif maHead3:
-            text = maHead3.group(1)
-            name = reWd.sub('', text)
-            line = headForm % (3, name, text, 3)
-            if addContents: contents.append((3, name, text))
-            # --Title?
-            if not title: title = text
-        # --Header 4?
-        elif maHead4:
-            text = maHead4.group(1)
-            name = reWd.sub('', text)
-            line = headForm % (4, name, text, 4)
-            if addContents: contents.append((4, name, text))
-        # --Header 5?
-        elif maHead5:
-            text = maHead5.group(1)
-            name = reWd.sub('', text)
-            line = headForm % (5, name, text, 5)
-            if addContents: contents.append((5, name, text))
-        # --List item
-        elif maList:
-            spaces = maList.group(1)
-            bullet = maList.group(2)
-            text = maList.group(3)
-            if bullet == '.':
-                bullet = '&nbsp;'
-            elif bullet == '*':
-                bullet = '&bull;'
-            level = len(spaces) / 2 + 1
-            line = '{}<p class="list-{}>{}&nbsp; '.format(spaces, level, bullet)
-            line = line + text + '\n'
-        # --Paragraph
-        elif maPar:
-            line = '<p>' + maPar.group(1)
-        # --Blank line
-        elif maBlank:
-            line = '{}<p class="list-{}">&nbsp;</p>'.format(spaces, level)
-        # --Misc. Text changes
-        line = reMDash.sub('&#150', line)
-        line = reMDash.sub('&#150', line)
-        # --New bold/italic subs
-        line = reBoldOpen.sub(' <B>', line)
-        line = reItalicOpen.sub(' <I>', line)
-        line = reBoldicOpen.sub(' <I><B>', line)
-        line = reBoldClose.sub('</B> ', line)
-        line = reBoldEsc.sub('_', line)
-        line = reItalicClose.sub('</I> ', line)
-        line = reBoldicClose.sub('</B></I> ', line)
-        # --Old style bold/italic subs
-        line = reBold.sub(r'<B><I>\1</I></B>', line)
-        line = reItalic.sub(r'<I>\1</I>', line)
-        # --Date
-        line = reDate.sub(dateReplace, line)
-        # --Local links
-        line = reLink.sub(linkReplace, line)
-        # --Hyperlink
-        line = reHttp.sub(r' <a href="\1">\1</a>', line)
-        line = reWww.sub(r' <a href="http://\1">\1</a>', line)
-        # --Write it
-        # print line
-        outLines.append(line)
-    inFile.close()
-    # --Output file
-    outFile = open(inFileRoot + '.html', 'w')
-    outFile.write(etxtHeader % (title,))
-    didContents = False
-    for line in outLines:
-        if reContents.match(line):
-            if not didContents:
-                baseLevel = min([level for (level, name, text) in contents])
-                for (level, name, text) in contents:
-                    level = level - baseLevel + 1
-                    if level <= addContents:
-                        outFile.write(
-                            '<p class=list-%d>&bull;&nbsp; <a href="#%s">%s</a></p>\n' % (
-                            level, name, text))
-                didContents = True
-        else:
-            outFile.write(line)
-    outFile.write('</body>\n</html>\n')
-    outFile.close()
-    # --Done
-
-@mainFunction
-def etxtToWtxt(fileName=None):
-    """TextMunch: Converts etxt files to wtxt formatting."""
-    if fileName:
-        ins = open(fileName)
-    else:
-        import sys
-        ins = sys.stdin
-    for line in ins:
-        line = re.sub(r'^\^ ?', '', line)
-        line = re.sub(r'^## ([^=]+) =', r'= \1 ==', line)
-        line = re.sub(r'^# ([^=]+) =', r'== \1 ', line)
-        line = re.sub(r'^@ ', r'=== ', line)
-        line = re.sub(r'^% ', r'==== ', line)
-        line = re.sub(r'\[CONTENTS=(\d+)\]', r'{{CONTENTS=\1}}', line)
-        line = re.sub(r'~([^ ].+?)~', r'~~\1~~', line)
-        line = re.sub(r'_([^ ].+?)_', r'__\1__', line)
-        line = re.sub(r'\*([^ ].+?)\*', r'**\1**', line)
-        print(line)
 
 
 # Wrye Text ===================================================================
@@ -435,7 +214,6 @@ BODY { background-color: #ffffcc; }
 def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     """Generates an html file from a wtxt file. CssDir specifies a directory to search for css files."""
     if not outFile:
-        import os
         outFile = '..\\' +  os.path.splitext(srcFile)[0] + '.html'
     if srcFile:
         if srcFile == 'index.txt':
@@ -612,7 +390,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     addContents = 0 # When set to 0 headers are not added to the TOC
     inPre = False
     inComment = False
-    isInParagraph = False
     htmlIDSet = list()
     dupeEntryCount = 1
     blockAuthor = "Unknown"
@@ -870,9 +647,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
 def genHtml(fileName, outFile=None, cssDir=''):
     """Generate html from old style etxt file or from new style wtxt file."""
     ext = os.path.splitext(fileName)[1].lower()
-    if ext == '.etxt':
-        etxtToHtml(fileName)
-    elif ext == '.txt':
+    if ext == '.txt':
         wtxtToHtml(fileName, outFile=None, cssDir='')
         # docsDir = r'c:\program files\bethesda softworks\morrowind\data files\docs'
         # wtxt.genHtml(fileName, cssDir=docsDir)
