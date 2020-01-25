@@ -459,81 +459,15 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         state = states['boldItalic'] = not states['boldItalic']
         return ('</I></B>', '<B><I>')[state]
 
-    def check_color(text):
-        fontClass = ''
-        if '{{a:black}}' in text:
-            fontClass = 'class="black"'
-        if '{{a:blue}}' in text:
-            fontClass = 'class="blue"'
-        if '{{a:brown}}' in text:
-            fontClass = 'class="brown"'
-        if '{{a:cyan}}' in text:
-            fontClass = 'class="cyan"'
-        if '{{a:dkgray}}' in text:
-            fontClass = 'class="dkgray"'
-        if '{{a:gray}}' in text:
-            fontClass = 'class="gray"'
-        if '{{a:green}}' in text:
-            fontClass = 'class="green"'
-        if '{{a:ltblue}}' in text:
-            fontClass = 'class="ltblue"'
-        if '{{a:ltgray}}' in text:
-            fontClass = 'class="ltgray"'
-        if '{{a:ltgreen}}' in text:
-            fontClass = 'class="ltgreen"'
-        if '{{a:orange}}' in text:
-            fontClass = 'class="orange"'
-        if '{{a:pink}}' in text:
-            fontClass = 'class="pink"'
-        if '{{a:purple}}' in text:
-            fontClass = 'class="purple"'
-        if '{{a:red}}' in text:
-            fontClass = 'class="red"'
-        if '{{a:tan}}' in text:
-            fontClass = 'class="tan"'
-        if '{{a:white}}' in text:
-            fontClass = 'class="white"'
-        if '{{a:yellow}}' in text:
-            fontClass = 'class="yellow"'
-        return fontClass
-
     def strip_color(text):
-        temp = text
-        if '{{a:black}}' in text:
-            temp = re.sub('{{a:black}}', '', text)
-        if '{{a:blue}}' in text:
-            temp = re.sub('{{a:blue}}', '', text)
-        if '{{a:brown}}' in text:
-            temp = re.sub('{{a:brown}}', '', text)
-        if '{{a:cyan}}' in text:
-            temp = re.sub('{{a:cyan}}', '', text)
-        if '{{a:dkgray}}' in text:
-            temp = re.sub('{{a:dkgray}}', '', text)
-        if '{{a:gray}}' in text:
-            temp = re.sub('{{a:gray}}', '', text)
-        if '{{a:green}}' in text:
-            temp = re.sub('{{a:green}}', '', text)
-        if '{{a:ltblue}}' in text:
-            temp = re.sub('{{a:ltblue}}', '', text)
-        if '{{a:ltgray}}' in text:
-            temp = re.sub('{{a:ltgray}}', '', text)
-        if '{{a:ltgreen}}' in text:
-            temp = re.sub('{{a:ltgreen}}', '', text)
-        if '{{a:orange}}' in text:
-            temp = re.sub('{{a:orange}}', '', text)
-        if '{{a:pink}}' in text:
-            temp = re.sub('{{a:pink}}', '', text)
-        if '{{a:purple}}' in text:
-            temp = re.sub('{{a:purple}}', '', text)
-        if '{{a:red}}' in text:
-            temp = re.sub('{{a:red}}', '', text)
-        if '{{a:tan}}' in text:
-            temp = re.sub('{{a:tan}}', '', text)
-        if '{{a:white}}' in text:
-            temp = re.sub('{{a:white}}', '', text)
-        if '{{a:yellow}}' in text:
-            temp = re.sub('{{a:yellow}}', '', text)
-        return temp
+        if reTextColor.search(text):
+            text_clolor = re.sub('(.*){{a:(.*)}}(.*)', r'\2', text)
+            fontClass = 'class="{}"'.format(text_clolor)
+            out_text = re.sub('{{{{a:{}}}}}'.format(text_clolor), '', text)
+        else:
+            fontClass = ''
+            out_text = text
+        return fontClass, out_text
 
     # RegEx ---------------------------------------------------------
     # --Headers
@@ -549,7 +483,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reMDash = re.compile(r'--')
     rePreBegin = re.compile('<pre>', re.I)
     rePreEnd = re.compile('</pre>', re.I)
-    reParagraph = re.compile('<p ?(>)?>', re.I)
+    reParagraph = re.compile('<p\s+|<p>', re.I)
     reCloseParagraph = re.compile('</p>', re.I)
     # --Bold, Italic, BoldItalic
     reBold = re.compile(r'__')
@@ -563,6 +497,8 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reWd = re.compile(r'(<[^>]+>|\[[^\]]+\]|\W+)')
     rePar = re.compile(r'^([a-zA-Z]|\*\*|~~|__)')
     reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}(\/)?$)')
+    # --TextColors
+    reTextColor = re.compile(r'({{a:(.+?)}})')
     # --Tags
     reAnchorTag = re.compile('{{nav:(.+?)}}')
     reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
@@ -580,8 +516,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reNavigationButtonEnd = re.compile(r'{{nbe}}')
     # --Open files
     inFileRoot = re.sub('\.[a-zA-Z]+$', '', srcFile)
-    # --TextColors
-    reTextColor = re.compile(r'({{a:(.+?)}})')
     # --Images
     reImageInline = re.compile(r'{{inline:.+?}}')
     reImageOnly = re.compile(r'{{image:.+?}}')
@@ -647,19 +581,17 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
 
     def linkReplace(maObject):
         address = text = maObject.group(1).strip()
-        skipStrip = False
+        skipColorStrip = False
         if '|' in text:
             (address, text) = [chunk.strip() for chunk in text.split('|', 1)]
             if address == '#':
-                fontClass = check_color(text)
-                text = strip_color(text)
+                fontClass, text = strip_color(text)
                 address += reWd.sub('', text)
-                skipStrip = True
+                skipColorStrip = True
         if not reFullLink.search(address):
             address = address + '.html'
-        if not skipStrip:
-            fontClass = check_color(text)
-            text = strip_color(text)
+        if not skipColorStrip:
+            fontClass, text = strip_color(text)
         if inNavigationButtons:
             return '<a {} href="{}" class="drkbtn">{}</a>'.format(fontClass, address, text)
         else:
@@ -685,14 +617,18 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     # --Read source file --------------------------------------------------
     ins = open(srcFile, 'r')
     for line in ins:
-        isInParagraph, wasInParagraph = False, isInParagraph
+        # Keep this because it was used to allowed multiple lines to be one paragraph
+        # This reset things after writing out "line"
+        # isInParagraph, wasInParagraph = False, isInParagraph
         # --Preformatted? -----------------------------
         maPreBegin = rePreBegin.search(line)
         maPreEnd = rePreEnd.search(line)
-        if inPre or maPreBegin or maPreEnd:
-            inPre = maPreBegin or (inPre and not maPreEnd)
+        if (inPre and not maPreEnd) or maPreBegin:
+            inPre = True
             outLines.append(line)
             continue
+        if maPreEnd:
+            inPre = False
         maTitleTag = reTitleTag.match(line)
         maCTypeBegin = reCTypeBegin.match(line)
         maCTypeEnd = reCTypeEnd.search(line)
@@ -732,7 +668,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
                 addContents = int(maContents.group(1))
             else:
                 addContents = 100
-            inPar = False
         # --CSS
         elif maCss:
             cssFile = maCss.group(1).strip()
@@ -786,8 +721,10 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             line = '<hr>\n'
         # --Paragraph
         elif maPar:
-            if not wasInParagraph: line = '<p>' + line.rstrip() + '</p>\n'
-            isInParagraph = True
+            # Keep this because it was used to allowed multiple lines to be one paragraph
+            # if not wasInParagraph: line = '<p>' + line.rstrip() + '</p>\n'
+            # isInParagraph = True
+            line = '<p>' + line.rstrip() + '</p>\n'
         # --Empty line
         elif maEmpty:
             line = spaces + '<p class="empty">&nbsp;</p>\n'
