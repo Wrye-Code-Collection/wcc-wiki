@@ -495,7 +495,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reHttp = re.compile(r' (http:\/\/[\?=_~a-zA-Z0-9\.\/%-]+)')
     reWww = re.compile(r' (www\.[\?=_~a-zA-Z0-9\./%-]+)')
     reWd = re.compile(r'(<[^>]+>|\[[^\]]+\]|\W+)')
-    rePar = re.compile(r'^([a-zA-Z]|\*\*|~~|__)')
+    rePar = re.compile(r'^([a-zA-Z\d]|\*\*|~~|__|^\.{1,}|^\*{1,}|^\"{1,})')
     reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}(\/)?$)')
     # --TextColors
     reTextColor = re.compile(r'({{a:(.+?)}})')
@@ -617,9 +617,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     # --Read source file --------------------------------------------------
     ins = open(srcFile, 'r')
     for line in ins:
-        # Keep this because it was used to allowed multiple lines to be one paragraph
-        # This reset things after writing out "line"
-        # isInParagraph, wasInParagraph = False, isInParagraph
         # --Preformatted? -----------------------------
         maPreBegin = rePreBegin.search(line)
         maPreEnd = rePreEnd.search(line)
@@ -629,6 +626,8 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             continue
         if maPreEnd:
             inPre = False
+            outLines.append(line)
+            continue
         maTitleTag = reTitleTag.match(line)
         maCTypeBegin = reCTypeBegin.match(line)
         maCTypeEnd = reCTypeEnd.search(line)
@@ -721,9 +720,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             line = '<hr>\n'
         # --Paragraph
         elif maPar:
-            # Keep this because it was used to allowed multiple lines to be one paragraph
-            # if not wasInParagraph: line = '<p>' + line.rstrip() + '</p>\n'
-            # isInParagraph = True
             line = '<p>' + line.rstrip() + '</p>\n'
         # --Empty line
         elif maEmpty:
@@ -808,7 +804,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             raise "Non css tag in css file: " + cssFile
     # --Write Output ------------------------------------------------------
     out = open(outFile, 'w')
-    # out.write(htmlHead % (title, css))
     out.write('---\nlayout: default\n{}'.format(pageTitle))
     out.write(htmlHead)
     didContents = False
@@ -816,7 +811,10 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     for line in outLines:
         if reContentsTag.match(line):
             if not didContents:
-                baseLevel = min([level for (level, name, text) in contents])
+                if len(contents) > 0:
+                    baseLevel = min([level for (level, name, text) in contents])
+                else:
+                    baseLevel = 1
                 previousLevel = baseLevel
                 for heading in contents:
                     number = ''
@@ -853,11 +851,11 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         else:
             maIsHeader = re.search(r'<\/h\d>$', line)
             if maIsHeader:
-                text_search = re.sub(r'^<h.*id="(.*)">.*<\/h\d>', r'\1', line).rstrip('\n')
+                text_search = re.sub(r'^<h.*id="(.*)">(.*)<\/h\d>', r'\1', line).rstrip('\n')
                 for header_to_match in header_match:
                     if header_to_match[0] == text_search:
                         text_replace = '{} - {}'.format(header_to_match[1], header_to_match[2])
-                        line = re.sub(r'(<h.*>)(.*)(<\/h\d>)', r'\g<1>'+text_replace+'\g<3>', line)
+                        line = re.sub(r'(<h\d>|<h.*">)(.*)(<\/h\d>)', r'\g<1>'+text_replace+'\g<3>', line)
                         break
             out.write(line)
     out.write('</div>\n')

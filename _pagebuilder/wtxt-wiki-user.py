@@ -488,7 +488,7 @@ def wtxtToHtml(srcFile, outFile=None):
     reMDash = re.compile(r'--')
     rePreBegin = re.compile('<pre>', re.I)
     rePreEnd = re.compile('</pre>', re.I)
-    reParagraph = re.compile('<p ?(>)?>', re.I)
+    reParagraph = re.compile('<p\s+|<p>', re.I)
     reCloseParagraph = re.compile('</p>', re.I)
     # --Bold, Italic, BoldItalic
     reBold = re.compile(r'__')
@@ -500,8 +500,10 @@ def wtxtToHtml(srcFile, outFile=None):
     reHttp = re.compile(r' (http:\/\/[\?=_~a-zA-Z0-9\.\/%-]+)')
     reWww = re.compile(r' (www\.[\?=_~a-zA-Z0-9\./%-]+)')
     reWd = re.compile(r'(<[^>]+>|\[[^\]]+\]|\W+)')
-    rePar = re.compile(r'^([a-zA-Z]|\*\*|~~|__)')
+    rePar = re.compile(r'^([a-zA-Z\d]|\*\*|~~|__|^\.{1,}|^\*{1,}|^\"{1,})')
     reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}(\/)?$)')
+    # --TextColors
+    reTextColor = re.compile(r'({{a:(.+?)}})')
     # --Tags
     pageTitle = 'title: Your Content'
     reAnchorTag = re.compile('{{nav:(.+?)}}')
@@ -520,8 +522,6 @@ def wtxtToHtml(srcFile, outFile=None):
     reNavigationButtonEnd = re.compile(r'{{nbe}}')
     # --Open files
     inFileRoot = re.sub('\.[a-zA-Z]+$', '', srcFile)
-    # --TextColors
-    reTextColor = re.compile(r'({{a:(.+?)}})')
     # --Images
     reImageInline = re.compile(r'{{inline:.+?}}')
     reImageOnly = re.compile(r'{{image:.+?}}')
@@ -590,19 +590,17 @@ def wtxtToHtml(srcFile, outFile=None):
 
     def linkReplace(maObject):
         address = text = maObject.group(1).strip()
-        skipStrip = False
+        skipColorStrip = False
         if '|' in text:
             (address, text) = [chunk.strip() for chunk in text.split('|', 1)]
             if address == '#':
-                fontClass = check_color(text)
-                text = strip_color(text)
+                fontClass, text = strip_color(text)
                 address += reWd.sub('', text)
-                skipStrip = True
+                skipColorStrip = True
         if not reFullLink.search(address):
             address = address + '.html'
-        if not skipStrip:
-            fontClass = check_color(text)
-            text = strip_color(text)
+        if not skipColorStrip:
+            fontClass, text = strip_color(text)
         if inNavigationButtons:
             return '<a {} href="{}" class="drkbtn">{}</a>'.format(fontClass, address, text)
         else:
@@ -629,15 +627,18 @@ def wtxtToHtml(srcFile, outFile=None):
     # --Read source file --------------------------------------------------
     ins = open(srcFile, 'r')
     for line in ins:
-        isInParagraph, wasInParagraph = False, isInParagraph
         # --Liquid ------------------------------------
         line = re.sub(r'\{% raw %\}', '', line)
         line = re.sub(r'\{% endraw %\}', '', line)
         # --Preformatted? -----------------------------
         maPreBegin = rePreBegin.search(line)
         maPreEnd = rePreEnd.search(line)
-        if inPre or maPreBegin or maPreEnd:
-            inPre = maPreBegin or (inPre and not maPreEnd)
+        if (inPre and not maPreEnd) or maPreBegin:
+            inPre = True
+            outLines.append(line)
+            continue
+        if maPreEnd:
+            inPre = False
             outLines.append(line)
             continue
         maTitleTag = reTitleTag.match(line)
@@ -680,7 +681,6 @@ def wtxtToHtml(srcFile, outFile=None):
                 addContents = int(maContents.group(1))
             else:
                 addContents = 100
-            inPar = False
         # --CSS
         elif maCss:
             cssFile = maCss.group(1).strip()
@@ -734,8 +734,7 @@ def wtxtToHtml(srcFile, outFile=None):
             line = '<hr>\n'
         # --Paragraph
         elif maPar:
-            if not wasInParagraph: line = '<p>' + line.rstrip() + '</p>\n'
-            isInParagraph = True
+            line = '<p>' + line.rstrip() + '</p>\n'
         # --Empty line
         elif maEmpty:
             line = spaces + '<p class="empty">&nbsp;</p>\n'
@@ -794,7 +793,6 @@ def wtxtToHtml(srcFile, outFile=None):
                 line = re.sub(r'(\n)?$', '', line)
                 line = line + '</p>\n'
         # --Save line ------------------
-        # print line,
         outLines.append(line)
     ins.close()
     # --Get Css -----------------------------------------------------------
@@ -807,7 +805,10 @@ def wtxtToHtml(srcFile, outFile=None):
     for line in outLines:
         if reContentsTag.match(line):
             if not didContents:
-                baseLevel = min([level for (level, name, text) in contents])
+                if len(contents) > 0:
+                    baseLevel = min([level for (level, name, text) in contents])
+                else:
+                    baseLevel = 1
                 previousLevel = baseLevel
                 for heading in contents:
                     number = ''
@@ -844,11 +845,11 @@ def wtxtToHtml(srcFile, outFile=None):
         else:
             maIsHeader = re.search(r'<\/h\d>$', line)
             if maIsHeader:
-                text_search = re.sub(r'^<h.*id="(.*)">.*<\/h\d>', r'\1', line).rstrip('\n')
+                text_search = re.sub(r'^<h.*id="(.*)">(.*)<\/h\d>', r'\1', line).rstrip('\n')
                 for header_to_match in header_match:
                     if header_to_match[0] == text_search:
                         text_replace = '{} - {}'.format(header_to_match[1], header_to_match[2])
-                        line = re.sub(r'(<h.*>)(.*)(<\/h\d>)', r'\g<1>'+text_replace+'\g<3>', line)
+                        line = re.sub(r'(<h\d>|<h.*">)(.*)(<\/h\d>)', r'\g<1>'+text_replace+'\g<3>', line)
                         break
             out.write(line)
     out.write('</div>\n</section>\n</BODY>\n</HTML>\n')
