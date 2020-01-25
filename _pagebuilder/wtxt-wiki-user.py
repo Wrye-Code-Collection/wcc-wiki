@@ -398,81 +398,15 @@ def wtxtToHtml(srcFile, outFile=None):
         state = states['boldItalic'] = not states['boldItalic']
         return ('</I></B>', '<B><I>')[state]
 
-    def check_color(text):
-        fontClass = ''
-        if '{{a:black}}' in text:
-            fontClass = 'class="black"'
-        if '{{a:blue}}' in text:
-            fontClass = 'class="blue"'
-        if '{{a:brown}}' in text:
-            fontClass = 'class="brown"'
-        if '{{a:cyan}}' in text:
-            fontClass = 'class="cyan"'
-        if '{{a:dkgray}}' in text:
-            fontClass = 'class="dkgray"'
-        if '{{a:gray}}' in text:
-            fontClass = 'class="gray"'
-        if '{{a:green}}' in text:
-            fontClass = 'class="green"'
-        if '{{a:ltblue}}' in text:
-            fontClass = 'class="ltblue"'
-        if '{{a:ltgray}}' in text:
-            fontClass = 'class="ltgray"'
-        if '{{a:ltgreen}}' in text:
-            fontClass = 'class="ltgreen"'
-        if '{{a:orange}}' in text:
-            fontClass = 'class="orange"'
-        if '{{a:pink}}' in text:
-            fontClass = 'class="pink"'
-        if '{{a:purple}}' in text:
-            fontClass = 'class="purple"'
-        if '{{a:red}}' in text:
-            fontClass = 'class="red"'
-        if '{{a:tan}}' in text:
-            fontClass = 'class="tan"'
-        if '{{a:white}}' in text:
-            fontClass = 'class="white"'
-        if '{{a:yellow}}' in text:
-            fontClass = 'class="yellow"'
-        return fontClass
-
     def strip_color(text):
-        temp = text
-        if '{{a:black}}' in text:
-            temp = re.sub('{{a:black}}', '', text)
-        if '{{a:blue}}' in text:
-            temp = re.sub('{{a:blue}}', '', text)
-        if '{{a:brown}}' in text:
-            temp = re.sub('{{a:brown}}', '', text)
-        if '{{a:cyan}}' in text:
-            temp = re.sub('{{a:cyan}}', '', text)
-        if '{{a:dkgray}}' in text:
-            temp = re.sub('{{a:dkgray}}', '', text)
-        if '{{a:gray}}' in text:
-            temp = re.sub('{{a:gray}}', '', text)
-        if '{{a:green}}' in text:
-            temp = re.sub('{{a:green}}', '', text)
-        if '{{a:ltblue}}' in text:
-            temp = re.sub('{{a:ltblue}}', '', text)
-        if '{{a:ltgray}}' in text:
-            temp = re.sub('{{a:ltgray}}', '', text)
-        if '{{a:ltgreen}}' in text:
-            temp = re.sub('{{a:ltgreen}}', '', text)
-        if '{{a:orange}}' in text:
-            temp = re.sub('{{a:orange}}', '', text)
-        if '{{a:pink}}' in text:
-            temp = re.sub('{{a:pink}}', '', text)
-        if '{{a:purple}}' in text:
-            temp = re.sub('{{a:purple}}', '', text)
-        if '{{a:red}}' in text:
-            temp = re.sub('{{a:red}}', '', text)
-        if '{{a:tan}}' in text:
-            temp = re.sub('{{a:tan}}', '', text)
-        if '{{a:white}}' in text:
-            temp = re.sub('{{a:white}}', '', text)
-        if '{{a:yellow}}' in text:
-            temp = re.sub('{{a:yellow}}', '', text)
-        return temp
+        if reTextColor.search(text):
+            text_clolor = re.sub('(.*){{a:(.*)}}(.*)', r'\2', text)
+            fontClass = 'class="{}"'.format(text_clolor)
+            out_text = re.sub('{{{{a:{}}}}}'.format(text_clolor), '', text)
+        else:
+            fontClass = ''
+            out_text = text
+        return fontClass, out_text
 
     # RegEx ---------------------------------------------------------
     # --Headers
@@ -505,7 +439,6 @@ def wtxtToHtml(srcFile, outFile=None):
     # --TextColors
     reTextColor = re.compile(r'({{a:(.+?)}})')
     # --Tags
-    pageTitle = 'title: Your Content'
     reAnchorTag = re.compile('{{nav:(.+?)}}')
     reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
     reCssTag = re.compile('\s*{{CSS:(.+?)}}\s*$')
@@ -624,6 +557,7 @@ def wtxtToHtml(srcFile, outFile=None):
     dupeEntryCount = 1
     blockAuthor = "Unknown"
     inNavigationButtons = False
+    pageTitle = 'Your Content'
     # --Read source file --------------------------------------------------
     ins = open(srcFile, 'r')
     for line in ins:
