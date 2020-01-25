@@ -46,7 +46,7 @@
      . __[[https://www.blender.org/ | Blender]]__
           * **Author:** Blender Foundation
           * ~~TOOL~~
-          * Blender is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline—modeling, rigging, animation, simulation, rendering, compositing and motion tracking, video editing and 2D animation pipeline.
+          * Blender is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline-modeling, rigging, animation, simulation, rendering, compositing and motion tracking, video editing and 2D animation pipeline.
 
 ==  Cathedral Assets Optimizer ================================================================
 
@@ -185,7 +185,7 @@
           * **Author:** Draco Torre
           * ~~Intermediate~~
           * Goal: scan mesh files (nif) to ensure compatibility with Skyrim Special Edition and update unsupported meshes.
-          * This tutorial is aimed at the beginner using __[[http://www.nexusmods.com/skyrim/mods/39718/? | “Blades Hakama” by atomec]]__ as an example, and assumes familiarity working with folders and files. I do not cover HDT outfits here.
+          * This tutorial is aimed at the beginner using __[[http://www.nexusmods.com/skyrim/mods/39718/? | "Blades Hakama" by atomec]]__ as an example, and assumes familiarity working with folders and files. I do not cover HDT outfits here.
 
 
 ==  NifScan ================================================================
@@ -204,7 +204,7 @@
           * **Author:**
           * ~~Tutorial Link Type~~
           * Goal: scan mesh files (nif) to ensure compatibility with Skyrim Special Edition and update unsupported meshes.
-          * This tutorial is aimed at the beginner using __[[http://www.nexusmods.com/skyrim/mods/39718/? | “Blades Hakama” by atomec]]__ as an example, and assumes familiarity working with folders and files. I do not cover HDT outfits here.
+          * This tutorial is aimed at the beginner using __[[http://www.nexusmods.com/skyrim/mods/39718/? | "Blades Hakama" by atomec]]__ as an example, and assumes familiarity working with folders and files. I do not cover HDT outfits here.
 
      . __[[http://www.gamesas.com/how-use-nifscan-t412676.html | How to use Nifscan? Post]]__
           * **Author:** Sweet Blighty and Krystal Sowten
