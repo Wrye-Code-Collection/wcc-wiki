@@ -1772,7 +1772,7 @@ DarUI will conflict with NIE above plus you will lose some of the cool things ab
 [[http://evercharmer.blogspot.com/2012/05/nehrim-sound-and-graphics-mods.html | Evercharmer's Nehrim Mod list]] - a list of replacers recommended to work with Nehrim.
 As far as replacers go this is an area that is large and I'm not going to link everything that can be replaced. You can figure it out. Body mods are generally good and realizing that the Aeterna use mystic Elves resources makes finding replacers for them easier.
 
-(NEEDS LINK | Flora/Landscape retexture) - Vurt has relased landscape textures specifically with Nehrim in mind. Check back for more updates!
+. (NEEDS LINK | Flora/Landscape retexture) - Vurt has relased landscape textures specifically with Nehrim in mind. Check back for more updates!
 [[https://www.nexusmods.com/oblivion/mods/35454 | QTP3 Dark Cave Textures for Nehrim]] ... and see above the new LOD textures and also by Xerus [[https://www.nexusmods.com/oblivion/mods/38081 | Nehrim HiRes Palm Tree Retexture]]
 
 == The Bashed Patch:
