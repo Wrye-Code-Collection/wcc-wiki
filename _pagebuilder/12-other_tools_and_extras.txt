@@ -1,401 +1,363 @@
 {{PAGETITLE="Popular Modding Tools Tutorials"}}
+
 ==  Contents  ================================================================
 {{CONTENTS=4}}
 
 ==  Bethesda Archive Extractor ================================================================
 
-     . __[[https://www.nexusmods.com/fallout4/mods/78/? | B.A.E. - Bethesda Archive Extractor]]__
-          * **Author:** jonwd7
-          * ~~TOOL~~
-          * An extractor for the new BA2 format (extracts BSAs too!)
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://www.nexusmods.com/fallout4/mods/78/? | B.A.E. - Bethesda Archive Extractor]]__
+          * By: __jonwd7__ On: __11/18__
+          * ~~An extractor for the new BA2 format (extracts BSAs too!)~~
 
-     . __[[https://www.youtube.com/watch?v=hw8PFGjgxYc | BAE: Bethesda Archive Extractor: .bsa & .ba2]]__
-          * **Author:** GamerPoets
-          * ~~Beginner~~
-          * Easy. Interactive. Step-by-step. B.A.E. Bethesda Archive Extractor : .bsa & .ba2
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=hw8PFGjgxYc | BAE: Bethesda Archive Extractor: .bsa & .ba2]]__
+          * By: __GamerPoets__ On: __2/17__
+          * Format: __Video__ 
+          * ~~Easy. Interactive. Step-by-step. B.A.E. Bethesda Archive Extractor : .bsa & .ba2~~
 
-     . __[[https://www.youtube.com/watch?v=IL0_PLOWnho | Skyrim Special Edition Modding Guide Ep11 - Converting Mods: NIF Optimizer & BAE]]__
-          * **Author:** Dirty Weasel Media
-          * ~~Intermediate~~
-          * Episode 11 of the Skyrim Special Edition Modding Guide continues with more mod conversions. Now we will incorporate two of the tools we discussed in Episode 9: NIF Optimizer and the Bethesda Archive Extractor. I'll cover their use and show examples converting primarily armor and weapon mods, with a few exceptions.
+     . __{{inline:20px | Sqinter.png | I}} [[https://www.youtube.com/watch?v=IL0_PLOWnho | Skyrim Special Edition Modding Guide Ep11 - Converting Mods: NIF Optimizer & BAE]]__
+          * By: __Dirty Weasel Media__ On: __9/17__
+          * Format: __Video__ 
+          * ~~Episode 11 of the Skyrim Special Edition Modding Guide continues with more mod conversions. Now we will incorporate two of the tools we discussed in Episode 9: NIF Optimizer and the Bethesda Archive Extractor. I'll cover their use and show examples converting primarily armor and weapon mods, with a few exceptions.~~
 
-     . __[[https://www.youtube.com/watch?v=gRK6uLH8gB8 | 4 - Bethesda Archive Extraction]]__
-          * **Author:** Brain Poof
-          * ~~Possibly Outdated~~
-          * Installation and use of Bethesda Archive Extractor (BAE)
-
+     . __{{inline:20px | Sqold.png | O}}{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=gRK6uLH8gB8 | 4 - Bethesda Archive Extraction]]__
+          * By: __Brain Poof__ On: __1/16__
+          * Format: __Video__ 
+          * ~~Installation and use of Bethesda Archive Extractor (BAE)~~
+		  
 ==  BethINI ================================================================
 
-     . __[[https://www.nexusmods.com/skyrimspecialedition/mods/4875 | BethINI]]__
-          * **Author:** DoubleYou
-          * ~~TOOL~~
-          * Bethesda's INI configuration files are a mess. BethINI optimizes the game for increased graphical fidelity and performance.
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://www.nexusmods.com/skyrimspecialedition/mods/4875 | BethINI]]__
+          * By: __DoubleYou__ On: __5/19__
+          * ~~Bethesda's INI configuration files are a mess. BethINI optimizes the game for increased graphical fidelity and performance.~~
 
-     . __[[https://www.youtube.com/watch?v=NI8ezwpZQFw | The BEST INI GRAPHICS Settings - BethINI Skyrim Special Edition 2019 Fast Tutorial]]__
-          * **Author:** Ai Elias
-          * ~~Beginner~~
-          * INI file tweaking in Skyrim Legendary and Special Editions can be a daunting task but with a tool called BethINI it doesn't have to be. BethINI automatically optimizes your INI values to be set to the ones yield you the best performance and overall graphical fidelity, while also organizing them in a way to make manual tweaking less of a sight for sore eyes. On top of that it also crushes certain bugs all so you can get back to your sweet sweet immersion.
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=NI8ezwpZQFw | The BEST INI GRAPHICS Settings - BethINI Skyrim Special Edition 2019 Fast Tutorial]]__
+          * By: __Ai Elias__ On: __8/19__
+          * Format: __Video__ 
+          * ~~INI file tweaking in Skyrim Legendary and Special Editions can be a daunting task but with a tool called BethINI it doesn't have to be. BethINI automatically optimizes your INI values to be set to the ones yield you the best performance and overall graphical fidelity, while also organizing them in a way to make manual tweaking less of a sight for sore eyes. On top of that it also crushes certain bugs all so you can get back to your sweet sweet immersion.~~
 
-     . __[[https://www.youtube.com/watch?v=ECDgl5xfMKc | Skyrim Special Edition Modding Guide Ep3 - Tweaking Your INIs with BethINI]]__
-          * **Author:** Dirty Weasel Media
-          * ~~Beginner~~
-          * Tweaking your configuration files ( .ini files ) is a basic for anyone modding Bethesda games. We'll give you the basics and provide resources on what they all mean using some S.T.E.P. Guides. Then I show you a tool developed by STEP member Double You, called BethINI, that will help you make tweaks to those files.
-
+     . __{{inline:20px | Sqold.png | O}}{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=ECDgl5xfMKc | Skyrim Special Edition Modding Guide Ep3 - Tweaking Your INIs with BethINI]]__
+          * By: __Dirty Weasel Media__ On: __11/16__
+          * Format: __Video__ 
+          * ~~Tweaking your configuration files ( .ini files ) is a basic for anyone modding Bethesda games. We'll give you the basics and provide resources on what they all mean using some S.T.E.P. Guides. Then I show you a tool developed by STEP member Double You, called BethINI, that will help you make tweaks to those files.~~
+		  
 ==  Blender ================================================================
 
-     . __[[https://www.blender.org/ | Blender]]__
-          * **Author:** Blender Foundation
-          * ~~TOOL~~
-          * Blender is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline-modeling, rigging, animation, simulation, rendering, compositing and motion tracking, video editing and 2D animation pipeline.
-
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://www.blender.org/ | Blender]]__
+          * By: __Blender Foundation__ On: __11/16__
+          * ~~Blender is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline—modeling, rigging, animation, simulation, rendering, compositing and motion tracking, video editing and 2D animation pipeline.~~
+		  
 ==  Cathedral Assets Optimizer ================================================================
 
-     . __[[https://www.nexusmods.com/skyrimspecialedition/mods/23316 | Cathedral Assets Optimizer]]__
-          * **Author:** G_k
-          * ~~TOOL~~
-          * An automation tool used to optimize BSAs, meshes, textures and animations. It allows quickly porting an Oldrim mod to Skyrim Special Edition, and can optimize assets for many Bethesda games.
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://www.nexusmods.com/skyrimspecialedition/mods/23316 | Cathedral Assets Optimizer]]__
+          * By: __G_k__ On: __12/19__
+          * ~~An automation tool used to optimize BSAs, meshes, textures and animations. It allows quickly porting an Oldrim mod to Skyrim Special Edition, and can optimize assets for many Bethesda games.~~
 
-     . __[[https://discord.gg/mraruus | Modding Tools Discord]]__
-          * **Author:** G_k, Mator
-          * ~~Official Support Forum~~
-          * Discord Server for Mator's Mods and CAO support
-          . Discord Server and Forum Support Standard Disclaimer:
-          * Discord servers and Forum Support are a great way to get in contact directly with tool and mod developers, HOWEVER, they are real people with real lives, not bots placed to do your bidding. Before posting questions and asking for advice, utilize the many resources available as referenced by this link compendium. If you still have questions or concerns make sure you are respectful and polite. Don't be an entitled, pushy nub, no one owes you anything.
-
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqdiscus.png | D}} [[https://discord.gg/mraruus | Modding Tools Discord]]__
+          * By: __G_k, Mator__ On: __ongoing__
+          * ~~Discord Server for Mator's Mods and CAO support~~
+		  
 ==  CubeMapGen ================================================================
 
-     . __[[https://gpuopen.com/archive/gamescgi/cubemapgen/ | CubeMapGen]]__
-          * **Author:** AMD
-          * ~~TOOL~~
-          * CubeMapGen is a tool for importing, filtering, visualizing, and exporting cubemaps.
-
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://gpuopen.com/archive/gamescgi/cubemapgen/ | CubeMapGen]]__
+          * By: __AMD__ On: __no longer supported__
+          * ~~CubeMapGen is a tool for importing, filtering, visualizing, and exporting cubemaps. Per the developer: "AMD CubeMapGen has reached end of life. AMD no longer supports CubeMapGen, but makes it available for download without warrenty."~~
+		  
 ==  DynDOLOD ================================================================
 
-     . __[[https://forum.step-project.com/forum/101-shesons-dyndolod-support/ | Sheson's DynDOLOD Support S.T.E.P. Wiki Forum]]__
-          * **Author:** sheson
-          * ~~TOOL~~
-          * Generate tree, static and dynamic distant object LOD for Skyrim with DynDOLOD - Forum Support.
-          * The most recent build can be DL'ed here
-          + Remember that there is a manual included w/dl, check there first before posting!!
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://www.nexusmods.com/skyrim/mods/59721 | Dynamic Distant Objects LOD - DynDOLOD]]__
+          * By: __Sheson__ On: __1/2020__
+          * ~~DynDOLOD is a set of simple tools based on xEdit/xLODGen to automatically create a Skyrim mod based on the load order which adds distant LOD for objects and trees to Skyrim. By combining DynDOLOD with xLODGen users can create drastically enhanced static object LOD + tree LOD and the new, optional dynamic distant object LOD in a few simple steps.~~
 
-     . __[[https://www.youtube.com/watch?v=90TRMvFdduo&t=145s | DynDOLOD 2.00 Guide MO]]__
-          * **Author:** sheson
-          * ~~Beginner~~
-          * How to generate tree, static and dynamic distant object LOD for Skyrim with DynDOLOD as demonstrated by the tool author
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqdiscus.png | D}} [[https://forum.step-project.com/forum/101-shesons-dyndolod-support/ | Sheson's DynDOLOD Support S.T.E.P. Wiki Forum]]__
+          * By: __Sheson__ On: __ongoing__
+          * ~~Find support for the tools developed by Sheson.~~
 
-     . __[[https://www.youtube.com/watch?v=1_5MWqeHIzw | DynDOLOD: Dynamic Distant Object LOD: Start to Finish]]__
-          * **Author:** GamerPoets
-          * ~~Beginner~~
-          * DynDOLOD : Dynamic Distant Objects LOD : Start to Finish Easy. Interactive. Step by step.
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqold.png | O}}{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=90TRMvFdduo&t=145s | DynDOLOD 2.00 Guide MO]]__
+          * By: __Sheson__ On: __5/16__
+          * Format: __Video__ 
+          * ~~How to generate tree, static and dynamic distant object LOD for Skyrim with DynDOLOD as demonstrated by the tool author~~
 
-     . __[[https://www.youtube.com/watch?v=ncLQhCQgek4 | Setting Up DynDOLOD for Skyrim SE]]__
-          * **Author:** John Rose
-          * ~~Intermediate~~
-          * Streamed live on Oct 20, 2018
+     . __{{inline:20px | Sqold.png | O}}{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=1_5MWqeHIzw | DynDOLOD: Dynamic Distant Object LOD: Start to Finish]]__
+          * By: __GamerPoets__ On: __5/16__
+          * Format: __Video__ 
+          * ~~DynDOLOD : Dynamic Distant Objects LOD : Start to Finish Easy. Interactive. Step by step.~~
 
-     . __[[https://www.youtube.com/watch?v=8gu8inzs09s | Ultimate Trees Installation Guide - 2019 - DynDOLOD 3D Ultra Trees - Skyrim SE]]__
-          * **Author:** WazaLang
-          * ~~Advanced~~
-          * In-depth tutorial on generating ultra trees for high-end rigs
-
+     . __{{inline:20px | Sqinter.png | I}} [[https://www.youtube.com/watch?v=8gu8inzs09s | Ultimate Trees Installation Guide - 2019 - DynDOLOD 3D Ultra Trees - Skyrim SE]]__
+          * By: __WazaLang__ On: __3/19__
+          * Format: __Video__ 
+          * ~~In-depth tutorial on generating ultra trees for high-end rigs~~
+		  
+     . __{{inline:20px | Sqinter.png | I}} [[https://www.youtube.com/watch?v=ncLQhCQgek4 | Setting Up DynDOLOD for Skyrim SE]]__
+          * By: __John Rose__ On: __10/18__
+          * Format: __Video__ 
+          * ~~Streamed live on Oct 20, 2018~~
+		  
 ==  GIMP ================================================================
 
-     . __[[https://www.gimp.org/ | GIMP]]__
-          * **Author:** The GIMP Team
-          * ~~TOOL~~
-          * GIMP is a cross-platform image editor available for GNU/Linux, OS X, Windows and more operating systems. It is free software, you can change its source code and distribute your changes.
-          * Whether you are a graphic designer, photographer, illustrator, or scientist, GIMP provides you with sophisticated tools to get your job done. You can further enhance your productivity with GIMP thanks to many customization options and 3rd party plugins.
-
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://www.gimp.org/ | GIMP]]__
+          * By: __The GIMP Team__ On: __ongoing__
+          * ~~GIMP is a cross-platform image editor available for GNU/Linux, OS X, Windows and more operating systems. It is free software, you can change its source code and distribute your changes.~~
+          * ~~Whether you are a graphic designer, photographer, illustrator, or scientist, GIMP provides you with sophisticated tools to get your job done. You can further enhance your productivity with GIMP thanks to many customization options and 3rd party plugins.~~
 
 ==  LOOT ================================================================
 
-     . __[[https://www.nexusmods.com/skyrimspecialedition/mods/1918 | LOOT - Load Order Optimisation Tool]]__
-          * **Author:** wrinklyninja
-          * ~~TOOL~~
-          * Setting the right load order for your mods is a crucial step to enjoying a stable modded game. The Load Order Optimisation Tool (LOOT) can help with that, by providing automated load order sorting that's simple to use and fully customisable. See also: [[https://loot.github.io/ | Official LOOT site]]
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://www.nexusmods.com/skyrimspecialedition/mods/1918 | LOOT - Load Order Optimisation Tool]]__
+          * By: __wrinklyninja__ On: __12/19__
+          * ~~Setting the right load order for your mods is a crucial step to enjoying a stable modded game. The Load Order Optimisation Tool (LOOT) can help with that, by providing automated load order sorting that's simple to use and fully customisable. See also: [[https://loot.github.io/ | Official LOOT site]]~~
+		  
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqdiscus.png | D}} [[https://loot.github.io/discord/ | LOOT Discord]]__
+          * By: __LOOT Team__ On: __ongoing__
+          * ~~Support for LOOT~~
 
-     . __[[https://loot.github.io/discord/ | LOOT Discord]]__
-          * **Author:** LOOT Team
-          * ~~DISCORD~~
-          . Discord Server Standard Disclaimer:
-          * Discord servers are a great way to get in contact directly with tool and mod developers, HOWEVER, they are real people with real lives, not bots placed to do your bidding. Before posting questions and asking for advice, utilize the many resources available as referenced by this link compendium. If you still have questions or concerns make sure you are respectful and polite. Don't be an entitled, pushy nub, no one owes you anything.
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=Ncv_FWQUw0k&list=PLlN8weLk86Xi1s9UklgzsLl3sbLYKHBH7&index=2&t=0s | Modding 101 - Load Order - A to ESL - Elder Scrolls & Fallout]]__
+          * By: __GamerPoets__ On: __5/19__
+          * Format: __Video__ 
+          * ~~Background information on Load Ordering, how Modules Load, etc.. with some information about LOOT at the end~~
 
-     . __[[https://www.youtube.com/watch?v=Ncv_FWQUw0k&list=PLlN8weLk86Xi1s9UklgzsLl3sbLYKHBH7&index=2&t=0s | Modding 101 - Load Order - A to ESL - Elder Scrolls & Fallout]]__
-          * **Author:** GamerPoets
-          * ~~Beginner~~
-          * Background information on Load Ordering, how Modules Load, etc.. with some information about LOOT at the end
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=lSh35PUZKlQ | Fix 90pct of Mod Conflicts EASILY - LOOT Mod Organizer 2 Skyrim SE Guide]]__
+          * By: __Ai Cave__ On: __2/19__
+          * Format: __Video__ 
+          * ~~This video is an introduction to load order and its management through the Load Order Optimization Tool (LOOT).~~
 
-     . __[[https://www.youtube.com/watch?v=I35nNK8PWlw | LOOT: Load Order Optimization Tool]]__
-          * **Author:** GamerPoets
-          * ~~Beginner~~
-          * Easy. Interactive. Step-by-step. An all-encompassing and ever-evolving guide: LOOT Load Order Optimisation Tool
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=sTiqtVczZFs | A Beginner's Guide to Using LOOT to Organize your Mods (Fallout/Elder Scrolls) Tutorial]]__
+          * By: __^ChrisZPR__ On: __6/18__
+          * Format: __Video__ 
+          * ~~Step-by-step installation with a bit of troublshooting~~
 
-     . __[[https://www.youtube.com/watch?v=lSh35PUZKlQ | Fix 90pct of Mod Conflicts EASILY - LOOT Mod Organizer 2 Skyrim SE Guide]]__
-          * **Author:** Ai Cave
-          * ~~Tutorial Link Type~~
-          * This video is an introduction to load order and its management through the Load Order Optimization Tool (LOOT).
-
-     . __[[https://www.youtube.com/watch?v=sTiqtVczZFs | A Beginner's Guide to Using LOOT to Organize your Mods (Fallout/Elder Scrolls) Tutorial]]__
-          * **Author:** ^ChrisZPR
-          * ~~Beginner~~
-          * Step-by-step installation with a bit of troublshooting
-
-     . __[[https://www.youtube.com/watch?v=iOzY2SZ26LQ | Skyrim SE: LOOT Mod Organizer 2 Tutorial]]__
-          * **Author:** Tonyo Allie
-          * ~~Intermediate~~
-          * Hey everyone. I wanted to give you an indepth tutorial about Loot and load order for Mod Organizer 2 for Skyrim Special Edition. I know it's a pretty basic tool, but I felt this tutorial need to be stretched out a bit. Especially, with load order involved and how important it really is with your mods. Please make sure you endorse the mod author of loot and let him know we appreciate all his hard work.
-
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=iOzY2SZ26LQ | Skyrim SE: LOOT Mod Organizer 2 Tutorial]]__
+          * By: __Tonyo Allie__ On: __1/18__
+          * Format: __Video__ 
+          * ~~Hey everyone. I wanted to give you an indepth tutorial about Loot and load order for Mod Organizer 2 for Skyrim Special Edition. I know it's a pretty basic tool, but I felt this tutorial need to be stretched out a bit. Especially, with load order involved and how important it really is with your mods. Please make sure you endorse the mod author of loot and let him know we appreciate all his hard work.~~
+		  
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=I35nNK8PWlw | LOOT: Load Order Optimization Tool]]__
+          * By: __GamerPoets__ On: __5/17__
+          * Format: __Video__ 
+          * ~~Easy. Interactive. Step-by-step. An all-encompassing and ever-evolving guide: LOOT Load Order Optimisation Tool~~
+		  
 ==  Mator Smash ================================================================
 
-     . __[[https://www.nexusmods.com/skyrim/mods/90987 | Mator Smash]]__
-          * **Author:** Mator
-          * ~~TOOL~~
-          * Mator Smash is a tool that generates conflict resolution patches, similar to Wrye Bash's Bashed Patch.
-          * Smash is capable of handling conflicts in all record types.
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://www.nexusmods.com/skyrim/mods/90987 | Mator Smash]]__
+          * By: __Mator__ On: __5/18__
+          * ~~Mator Smash is a tool that generates conflict resolution patches, similar to Wrye Bash's Bashed Patch.~~
+          * ~~Smash is capable of handling conflicts in all record types.~~
 
-     . __[[https://discord.gg/mraruus | Modding Tools Discord]]__
-          * **Author:** Mator
-          * ~~Discord~~
-          . Discord Server and Forum Support Standard Disclaimer:
-          * Discord servers and Forum Support are a great way to get in contact directly with tool and mod developers, HOWEVER, they are real people with real lives, not bots placed to do your bidding. Before posting questions and asking for advice, utilize the many resources available as referenced by this link compendium. If you still have questions or concerns make sure you are respectful and polite. Don't be an entitled, pushy nub, no one owes you anything.
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqdiscus.png | D}} [[https://discord.gg/mraruus | Modding Tools Discord]]__
+          * By: __Mator__ On: __ongoing__
+          * ~~Support for Mator's tools~~
 
-     . __[[https://www.youtube.com/watch?v=l39VMssZmjE | Mator Smash: Installation & General Use]]__
-          * **Author:** GamerPoets
-          * ~~Beginner~~
-          * Easy. Interactive. Step-by-step. Mator Smash Installation & General Use
-
-     . __[[https://www.youtube.com/watch?v=2e-0mc8wmDs | Skyrim SE: Mator Smash Mod Organizer 2 Updated Tutorial]]__
-          * **Author:** Tonyo Allie
-          * ~~Intermediate~~
-          * Hey everyone. I've gone ahead and updated Mator Smash installation tutorial for Mod Organizer 2 for Skyrim Special Edition. I hope this helps everyone with their game and really breaks down how a Smash Patch work and how it can make your game a very stable and enjoyable experience.
-
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=2e-0mc8wmDs | Skyrim SE: Mator Smash Mod Organizer 2 Updated Tutorial]]__
+          * By: __Tonyo Allie__ On: __1/18__
+          * Format: __Video__ 
+          * ~~Hey everyone. I've gone ahead and updated Mator Smash installation tutorial for Mod Organizer 2 for Skyrim Special Edition. I hope this helps everyone with their game and really breaks down how a Smash Patch work and how it can make your game a very stable and enjoyable experience.~~
+		  
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=l39VMssZmjE | Mator Smash: Installation & General Use]]__
+          * By: __GamerPoets__ On: __10/17__
+          * Format: __Video__ 
+          * ~~Easy. Interactive. Step-by-step. Mator Smash Installation & General Use~~
+		  
 ==  Nif Optimizer ================================================================
 
-     . __[[https://www.nexusmods.com/skyrimspecialedition/mods/4089 | SSE Nif Optimizer]]__
-          * **Author:** ousnius
-          * ~~TOOL~~
-          * A tool for mod authors that optimizes your SK NIF files for the (actual) new SSE format and fixes issues. Can also scan textures for compatibility.
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://www.nexusmods.com/skyrimspecialedition/mods/4089 | SSE Nif Optimizer]]__
+          * By: __ousnius__ On: __8/19__
+          * ~~A tool for mod authors that optimizes your SK NIF files for the (actual) new SSE format and fixes issues. Can also scan textures for compatibility.~~
 
-     . __[[https://www.youtube.com/watch?v=IL0_PLOWnho]]__
-          * **Author:** Dirty Weasel Media
-          * ~~Intermediate~~
-          * Episode 11 of the Skyrim Special Edition Modding Guide continues with more mod conversions. Now we will incorporate two of the tools we discussed in Episode 9: NIF Optimizer and the Bethesda Archive Extractor. I'll cover their use and show examples converting primarily armor and weapon mods, with a few exceptions.
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=IL0_PLOWnho | Skyrim Special Edition Modding Guide Ep 11 - Converting Mods - NIF Optimizer & BAE]]__
+          * By: __Dirty Weasel Media__ On: __9/17__
+          * Format: __Video__ 
+          * ~~Episode 11 of the Skyrim Special Edition Modding Guide continues with more mod conversions. Now we will incorporate two of the tools we discussed in Episode 9: NIF Optimizer and the Bethesda Archive Extractor. I'll cover their use and show examples converting primarily armor and weapon mods, with a few exceptions.~~
 
-     . __[[https://www.dracotorre.com/blog/how-to-update-meshes-se/ | How to Update Meshes for Skyrim SE]]__
-          * **Author:** Draco Torre
-          * ~~Intermediate~~
-          * Goal: scan mesh files (nif) to ensure compatibility with Skyrim Special Edition and update unsupported meshes.
-          * This tutorial is aimed at the beginner using __[[http://www.nexusmods.com/skyrim/mods/39718/? | "Blades Hakama" by atomec]]__ as an example, and assumes familiarity working with folders and files. I do not cover HDT outfits here.
-
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.dracotorre.com/blog/how-to-update-meshes-se/ | How to Update Meshes for Skyrim SE]]__
+          * By: __Draco Torre__ On: __1/17__
+          * Format: __Text__ 
+          * ~~Goal: scan mesh files (nif) to ensure compatibility with Skyrim Special Edition and update unsupported meshes.~~
+          * ~~This tutorial is aimed at the beginner using __[[http://www.nexusmods.com/skyrim/mods/39718/? | Blades Hakama]]__ by atomec as an example, and assumes familiarity working with folders and files. I do not cover HDT outfits here.~~
 
 ==  NifScan ================================================================
 
-     . __[[https://www.nexusmods.com/skyrim/mods/75916/? | NifScan]]__
-          * **Author:** zilav
-          * ~~TOOL~~
-          * A simple command line utility to quickly scan nifs for common errors
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://www.nexusmods.com/skyrim/mods/75916/? | NifScan]]__
+          * By: __zilav__ On: __11/16__
+          * ~~A simple command line utility to quickly scan nifs for common errors~~
 
-     . __[[https://www.dracotorre.com/blog/how-to-update-meshes-se/ | How to Update Meshes for Skyrim SE]]__
-          * **Author:** Draco Torre
-          * ~~Intermediate~~
-          * Descrip of tutorial
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.dracotorre.com/blog/how-to-update-meshes-se/ | How to Update Meshes for Skyrim SE]]__
+          * By: __Draco Torre__ On: __2/17__
+          * Format: __Text__ 
+          * ~~Goal: scan mesh files (nif) to ensure compatibility with Skyrim Special Edition and update unsupported meshes.~~
+          * ~~This tutorial is aimed at the beginner using __[[http://www.nexusmods.com/skyrim/mods/39718/? | Blades Hakama]]__ by atomec as an example, and assumes familiarity working with folders and files. I do not cover HDT outfits here.~~
 
-     . __[[https:// | tutorial name]]__
-          * **Author:**
-          * ~~Tutorial Link Type~~
-          * Goal: scan mesh files (nif) to ensure compatibility with Skyrim Special Edition and update unsupported meshes.
-          * This tutorial is aimed at the beginner using __[[http://www.nexusmods.com/skyrim/mods/39718/? | "Blades Hakama" by atomec]]__ as an example, and assumes familiarity working with folders and files. I do not cover HDT outfits here.
-
-     . __[[http://www.gamesas.com/how-use-nifscan-t412676.html | How to use Nifscan? Post]]__
-          * **Author:** Sweet Blighty and Krystal Sowten
-          * ~~Advanced~~
-          * ? And answer on creating a batch file
-
+     . __{{inline:20px | Sqadvan.png | A}} [[http://www.gamesas.com/how-use-nifscan-t412676.html | How to use Nifscan? Post]]__
+          * By: __Sweet Blighty and Krystal Sowten__ On: __2/17__
+          * Format: __Text__ 
+          * ~~Q&A on creating a batch file to use with NifScan~~
+		  
 ==  NifSkope ================================================================
 
-     . __[[https://github.com/jonwd7/nifskope/releases | NifSkope]]__
-          * **Author:** jonwd7
-          * ~~TOOL~~
-          * A tool for opening and editing Model Files, also known as the NetImmerse File Format, meshes or .nifs
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://github.com/jonwd7/nifskope/releases | NifSkope]]__
+          * By: __jonwd7__ On: __8/19__
+          * ~~A tool for opening and editing Model Files, also known as the NetImmerse File Format, meshes or .nifs~~
 
-     . __[[https://www.youtube.com/watch?v=gHbbFs5R6Is | NifSkope - Installation & Setup]]__
-          * **Author:** GamerPoets
-          * ~~Beginner~~
-          * Why NifSkope, what does it do, how to install, and resource setup.
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=gHbbFs5R6Is | NifSkope - Installation & Setup]]__
+          * By: __GamerPoets__ On: __10/18__
+          * Format: __Video__ 
+          * ~~Why NifSkope, what does it do, how to install, and resource setup.~~
 
-     . __[[https://www.youtube.com/watch?v=TdtI2q-MSMk&list=PLiPgFWIHsr8XA0h8Q5MS-8dnufJGrxeAZ&index=3&t=0s | NifSkope Tutorial (Basic Program Setup) Skyrim]]__
-          * **Author:** Darkfox127
-          * ~~Beginner~~
-          * I thought I would go ahead and create a quick tutorial on Nifskope to show you how to get things set up for Skyrim modding. I don;t go into crazy detail, just show you the very basics of setup. You'll be able to view your textures in Nifskope while making changes to meshes and be sure that the texture paths are correct when it comes to packing and uploading your mods.
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=TdtI2q-MSMk&list=PLiPgFWIHsr8XA0h8Q5MS-8dnufJGrxeAZ&index=3&t=0s | NifSkope Tutorial (Basic Program Setup) Skyrim]]__
+          * By: __Darkfox127__ On: __2/17__
+          * Format: __Video__ 
+          * ~~I thought I would go ahead and create a quick tutorial on Nifskope to show you how to get things set up for Skyrim modding. I don;t go into crazy detail, just show you the very basics of setup. You'll be able to view your textures in Nifskope while making changes to meshes and be sure that the texture paths are correct when it comes to packing and uploading your mods.~~
 
-     . __[[https://www.youtube.com/watch?v=ktwHE8SX_JU&list=PLiPgFWIHsr8XA0h8Q5MS-8dnufJGrxeAZ&index=2&t=0s | Creating Harvestable Items]]__
-          * **Author:** Darkfox127
-          * ~~Intermediate~~
-          * In this video I'll be covering how to create your own harvestable items in the Creation Kit. The example I will be using is taking a Blary resource jar and having it filled with ingredients which then disappear as they are taken from the Jar. To achieve this, we need to use Nifskope to make some changes to our jar mesh. You have to attach some nodes and make copies of some NiTriShapes which is actually fairly easy to do. You then import your mesh into the kit and set some basic harvest item options up.
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=ktwHE8SX_JU&list=PLiPgFWIHsr8XA0h8Q5MS-8dnufJGrxeAZ&index=2&t=0s | Creating Harvestable Items]]__
+          * By: __Darkfox127__ On: __1/17__
+          * Format: __Video__ 
+          * ~~In this video I'll be covering how to create your own harvestable items in the Creation Kit. The example I will be using is taking a Blary resource jar and having it filled with ingredients which then disappear as they are taken from the Jar. To achieve this, we need to use Nifskope to make some changes to our jar mesh. You have to attach some nodes and make copies of some NiTriShapes which is actually fairly easy to do. You then import your mesh into the kit and set some basic harvest item options up.~~
 
-     . __[[https://www.youtube.com/watch?v=1u51yDEGzmQ&list=PLiPgFWIHsr8XA0h8Q5MS-8dnufJGrxeAZ&index=4&t=0s | NifSkope Tutorial (Editing UV Maps]]__
-          * **Author:** Darkfox127
-          * ~~Intermediate~~
-          * In this video I'll be showing you how to make changes to UV maps within Nifskope using two Skyrim meshes. I'll be taking the textures from one mesh, placing them on the other and then adjusting the UV map so that it fits nicely. There are some useful little tips and tricks in here from experience which you may find useful.
-
-     . __[[https://www.creationkit.com/index.php?title=Convert_New_Nif_from_3dsMax_to_Skyrim | Convert New Nif from 3dsMax to Skyrim]]__
-          * **Author:** Official CK Wiki Team
-          * ~~Intermediate~~
-          * If you have modeled an original outfit for skyrim, you can follow these steps to see if it works in-game. It requires use of __NifSkope__.
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=1u51yDEGzmQ&list=PLiPgFWIHsr8XA0h8Q5MS-8dnufJGrxeAZ&index=4&t=0s | NifSkope Tutorial (Editing UV Maps]]__
+          * By: __Darkfox127__ On: __6/17__
+          * Format: __Video__ 
+          * ~~In this video I'll be showing you how to make changes to UV maps within Nifskope using two Skyrim meshes. I'll be taking the textures from one mesh, placing them on the other and then adjusting the UV map so that it fits nicely. There are some useful little tips and tricks in here from experience which you may find useful.~~
+		  
+     . __{{inline:20px | Sqold.png | O}}{{inline:20px | Sqadvan.png | A}} [[https://www.creationkit.com/index.php?title=Convert_New_Nif_from_3dsMax_to_Skyrim | Convert New Nif from 3dsMax to Skyrim]]__
+          * By: __Monsto__ On: __8/12__
+          * Format: __Text__ 
+          * ~~If you have modeled an original outfit for skyrim, you can follow these steps to see if it works in-game. It requires use of __NifSkope__.~~
           . __This guide works with:__
-          * NifSkope 1.1.0 RC7
-          * NifSkope 1.1.0 RC6
+          * ~~NifSkope 1.1.0 RC7~~
+          * ~~NifSkope 1.1.0 RC6~~
           * __[[http://skyrim.nexusmods.com/mods/5622 | 3ds Max Nif Importer-Exporter 3.7.3]]__
-
+		  
 ==  NPC Nif Merge ================================================================
 
-     . __[[https://www.nexusmods.com/skyrim/mods/40494/ | NPC Nif Merge]]__
-          * **Author:** Turulo
-          *  ~~TOOL~~
-          * Small application to merge NPC's FaceGen NIF files
-
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://www.nexusmods.com/skyrim/mods/40494/ | NPC Nif Merge]]__
+          * By: __Turulo__ On: __8/13__
+          * ~~Small application to merge NPC's FaceGen NIF files~~
+		  
 ==  Paint.net ================================================================
 
-     . __[[https://www.getpaint.net/index.html | Paint.net]]__
-          * **Author:** Rick Brewster
-          *  ~~TOOL~~
-          * Paint.NET is image and photo editing software for PCs that run Windows. It features an intuitive and innovative   user interface with support for layers, unlimited undo, special effects, and a wide variety of useful and powerful   tools. An active and growing online community provides friendly help, tutorials, and plugins.
-          * This site has its own collection of tutorials and forums for the self-learner
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://www.getpaint.net/index.html | Paint.net]]__
+          * By: __Rick Brewster__ On: __12/19__
+          * ~~Paint.NET is image and photo editing software for PCs that run Windows. It features an intuitive and innovative user interface with support for layers, unlimited undo, special effects, and a wide variety of useful and powerful   tools. An active and growing online community provides friendly help, tutorials, and plugins.~~
+          * ~~This site has its own collection of tutorials and forums for the self-learner~~
 
-     . __[[https://www.youtube.com/watch?v=fsL935G0VMM | Beginner's Guide to Paint.net - The Basics]]__
-          * **Author:** JustinTheOreo
-          * ~~Beginner~~
-          * So with all my tutorials of this program on my channel, I wanted to help the newer users out there. So I am starting a short series where I try to help you beginners out to improve your skills in Paint.NET. I hope you enjoy this series!
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqdiscus.png | D}} [[https://forums.getpaint.net/forum/18-tutorials-publishing-only/ | paint.net Tutorials Forum - Publishing ONLY!]]__
+          * By: __Author here__ On: __date created__
+          * Format: __Video or text__ 
+          * ~~This section is for publishing tutorials and subsequent discussion of those tutorials. This section is not for tutorial requests or other general questions - please post these in [[https://forums.getpaint.net/forum/4-paintnet-discussion-and-questions/ | paint.net Discussions and Questions]] forum.~~
 
-     . __[[https://www.youtube.com/watch?v=15MkI0K0BXY | Beginner's Guide to Paint.NET - Tools]]__
-          * **Author:** JustinTheOreo
-          * ~~Beginner~~
-          * Today we cover tools, and how to use them!
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=fsL935G0VMM | Beginner's Guide to Paint.net - The Basics]]__
+          * By: __JustinTheOreo__ On: __8/17__
+          * Format: __Video__ 
+          * ~~So with all my tutorials of this program on my channel, I wanted to help the newer users out there. So I am starting a short series where I try to help you beginners out to improve your skills in Paint.NET. I hope you enjoy this series!~~
 
+     . __{{inline:20px | Sqbegin.png | B}} [[https://www.youtube.com/watch?v=15MkI0K0BXY | Beginner's Guide to Paint.NET - Tools]]__
+          * By: __JustinTheOreo__ On: __8/17__
+          * Format: __Video__ 
+          * ~~Today we cover tools, and how to use them!~~
+		  
 ==  xLODGen ================================================================
 
-     . __[[https:// | tool name]]__
-          * **Author:**
-          * ~~TOOL~~
-          * Descrip of official tool
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}}{{inline:20px | Sqdiscus.png | D}} [[https://forum.step-project.com/topic/13451-xlodgen-terrain-lod-beta-for-fnv-fo3-fo4-fo4vr-tes5-sse-tes5vr-enderal/ | xLODGen - Terrain LOD beta for FNV, FO3, FO4, FO4VR, TES5, SSE, TES5VR, ENDERAL]]__
+          * By: __Sheson__ On: __1/20__
+          * ~~Installed a mod that moves or changes trees but they remain unchanged when far way, or you can't see new farm houses from a new shiney villages overhaul when a top of the mountain? Then you need this tool: an almost one-click LOD generator for Skyrim Special Edition.~~
+          * ~~This link is for Sheson's official support forum, from which his official tools can also be dl'ed.~~
 
 ==  zEdit ================================================================
 
-     . __[[https:// | tool name]]__
-          * **Author:**
-          * ~~TOOL~~
-          * Descrip of official tool
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqtool.png | T}} [[https://github.com/z-edit/zedit/releases | zedit]]__
+          * By: __Mator__ On: __10/19__
+          * ~~zEdit is a Windows desktop application which provides a development environment for editing Bethesda Plugin Files.~~
+          * ~~zEdit is built off of xEdit's codebase through XEditLib. zEdit is built with Electron, which allows it to take advantage of web technologies such as HTML, CSS, and ES6 JavaScript.~~
+          * ~~The initial development goal for zEdit is to provide equivalent functionality to the xEdit GUI, but a number of popular extensions and improvements are also being developed. Check out xEdit Comparison for a comparison of xEdit and zEdit features.~~
 
 =  Random Tutorials and Fun Stuff ================================================================
 
 __A collection of tutorials and links to fun stuff that don't necessarily fit anywhere else.__
 
-==  Random Tutorials ================================================================
+     . __{{inline:20px | Sqadvan.png | A}} [[https://wiki.nexusmods.com/index.php/Creating_cubemaps_for_Skyrim | Creating Cubemaps for Skyrim]]__
+          * By: __Nexus Wiki Team__ On: __unknown__
+          * Format: __Text__ 
+          * ~~This tutorial shows all the main steps you need to follow to create a cubemap for Skyrim (the cubemap you create here may be used in other games, too).~~
 
-     . __[[https://wiki.nexusmods.com/index.php/Using_a_face_made_with_RaceMenu_on_an_NPC_for_Skyrim | Using a face made with RaceMenu on an NPC for Skyrim]]__
-          * **Author:** Nexus Wiki Team
-          * ~~Intermediate~~
-          * This tutorial shows how to give an NPC a face you've created using This tutorial shows how to give an NPC a face you've created using [[http://www.nexusmods.com/skyrim/mods/29624/ | Expired's RaceMenu]].
-          * For using a face created only with the vanilla Skyrim sliders, check the following: [[https://wiki.nexusmods.com/index.php/Adding_a_Follower_NPC_to_Skyrim#Use_the_face_of_your_player_character_for_the_NPC | Use the face of your player character for the NPC]].
-
-     . __[[https://www.nexusmods.com/skyrimspecialedition/mods/30041 | How to edit NPCs without Nifmerge]]__
-          * **Author:** Kalilies
-          * ~~Intermediate~~
-          * A step-by-step tutorial on how make your RaceMenu exported character an NPC without having to use Oldrim or Nifmerge.
-
-     . __[[https://wiki.nexusmods.com/index.php/Creating_cubemaps_for_Skyrim | Creating Cubemaps for Skyrim]]__
-          * **Author:** Nexus Wiki Team
-          * ~~Advanced~~
-          * This tutorial shows all the main steps you need to follow to create a cubemap for Skyrim (the cubemap you create here may be used in other games, too).
-
-     . __[[https://wiki.nexusmods.com/index.php/Importing_custom_videos_into_FNV/F3/Skyrim/Oblivion | Improting Custom Videos into FNV/F3/Skyrim/Oblivion]]__
-          * **Author:** Martin Purvis
-          * ~~Intermediate~~
-          * This basic tutorial shows how you can import your own custom videos into Fallout: New Vegas, Fallout 3, Skyrim and Oblivion. I haven't seen any tutorials on getting this to work, I worked out how to do it by spending a bit of time experimenting. You can watch the Video tutorial below or if you prefer I have written a text version. This particular tutorial will be Fallout New Vegas
-
-
+     . __{{inline:20px | Sqadvan.png | A}} [[https://wiki.nexusmods.com/index.php/Importing_custom_videos_into_FNV/F3/Skyrim/Oblivion | Importing Custom Videos into FNV/F3/Skyrim/Oblivion]]__
+          * By: __Martin Purvis__ On: __unknown__
+          * Format: __Text__ 
+          * ~~This basic tutorial shows how you can import your own custom videos into Fallout: New Vegas, Fallout 3, Skyrim and Oblivion. I haven't seen any tutorials on getting this to work, I worked out how to do it by spending a bit of time experimenting. You can watch the Video tutorial below or if you prefer I have written a text version. This particular tutorial will be Fallout New Vegas~~
+		  
 ==  Modding Guides ================================================================
 
-Some may decide that they really have no interest in learning the ins and outs of modding for themselves and would rather just follow a curated guide and get to the gaming. The following are guides we know are being actively maintained as of 2020. We have sorted by alphabetical order and make no judgements as to quality on any of these guides. The modder should choose based on their own play-style.
-
-          . Discord Server and Forum Support Standard Disclaimer:
-          * Discord servers and Forum Support are a great way to get in contact directly with tool and mod developers, HOWEVER, they are real people with real lives, not bots placed to do your bidding. Before posting questions and asking for advice, utilize the many resources available as referenced by this link compendium. If you still have questions or concerns make sure you are respectful and polite. Don't be an entitled, pushy nub, no one owes you anything.
+     . Some may decide that they really have no interest or time to learn the ins and outs of modding for themselves and would rather just follow a curated guide and get to the gaming. The following are guides known to be actively maintained as of 2020. These are sorted by alphabetical order and make no judgements as to quality. The modder should choose based on their own play-style. BE AWARE: mod guides are based on the tastes and playstyles of someone else. __If you want a list totally tailored to your own preferences, take the time to learn to mod__. DO NOT pester mod guide authors to change to suit you.
 
 ===  Lexy's LOTD
 
-     . __[[https://wiki.nexusmods.com/index.php/User:Darkladylexy/Lexys_LOTD_SE | Lexy's Legacy of the Dragonborn Special Edition: A Skyrim: SE Mod Guide]]__
-          * **Author:** DarkladyLexy and Darth_mathias
-          * ~~GUIDE~~
-          * This guide is designed for experienced modders. If you are new to the Skyrim Modding Experience, it is highly suggested you watch videos, read forums posts, and other such activities to ensure you are familiarized with all of the tools used in this mod build.
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqguide.png | G}} [[https://wiki.nexusmods.com/index.php/User:Darkladylexy/Lexys_LOTD_SE | Lexy's Legacy of the Dragonborn Special Edition: A Skyrim: SE Mod Guide]]__
+          * By: __DarkladyLexy and Darth_mathias__
+          * ~~This guide is designed for experienced modders. If you are new to the Skyrim Modding Experience, it is highly suggested you watch videos, read forums posts, and other such activities to ensure you are familiarized with all of the tools used in this mod build.~~
 
-     . __[[https://discord.gg/xj7JcZ7 | Lexy's: Legacy of the Dragonborn Discord]]__
-          * **Author:** DarkladyLexy
-          * ~~Forum~~
-          * Discord forum for the Lexy's LOTD guide.
-
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqdiscus.png | D}} [[https://discord.gg/xj7JcZ7 | Lexy's: Legacy of the Dragonborn Discord]]__
+          * By: __DarkladyLexy__ On: __ongoing__
+          * ~~Discord forum for the Lexy's LOTD guide.~~
+		  
 ===  The Phoenix Flavour
 
-    . __[[https://www.nexusmods.com/skyrimspecialedition/mods/14223 | The Phoenix Flavor - A Modular Modding Guide]]__
-          * **Author:** Phoenix
-          * ~~GUIDE~~
-          * Modular Mod Guide for SSE.
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqguide.png | G}} [[https://www.nexusmods.com/skyrimspecialedition/mods/14223 | The Phoenix Flavor - A Modding Guide for Skyrim SE]]__
+     * __[[https://thephoenixflavour.com/guide/introduction/ | Official The Phoenix Flavor site]]__
+          * By: __Phoenix__
+          * ~~The Nexus page for The Phoenix Flavour guide - thephoenixflavour.com - with all necessary files.~~
 
-     . __[[https://discordapp.com/invite/SV5N6n7/ | The Phoenix Flavour Discord]]__
-          * **Author:** Phoenix
-          * ~~Forum~~
-          * This is the official Discord server for The Phoenix Flavour, a modding guide for Skyrim Special Edition.
-
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqdiscus.png | D}} [[https://discordapp.com/invite/SV5N6n7 | The Phoenix Flavour Discord]]__
+          * By: __Phoenix__ On: __ongoing__
+          * ~~This is the official Discord server for The Phoenix Flavour, a modding guide for Skyrim Special Edition.~~
+		  
 ===  TucoGuide
 
-     . __[[https://www.nexusmods.com/skyrimspecialedition/mods/10694 | TUCOGUIDE - Modlist Guide and Tutorial for Mod Organizer 2]]__
-          * **Author:** OutdatedTV (Ponurymazepa) and TUCO Modding Team
-          * ~~GUIDE~~
-          * TUCOGUIDE - The compact modlist aimed for learning and promoting good modding practices and properly using Mod Organizer 2. Aimed to be a backbone for eventually installing further mods on top of it if you desire.
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqguide.png | G}} [[https://www.nexusmods.com/skyrimspecialedition/mods/10694 | TUCOGUIDE - Modlist Guide and Tutorial for Mod Organizer 2]]__
+          * By: __OutdatedTV (Ponurymazepa) and TUCO Modding Team__
+          * ~~TUCOGUIDE - The compact modlist aimed for learning and promoting good modding practices and properly using Mod Organizer 2. Aimed to be a backbone for eventually installing further mods on top of it if you desire.~~
 
-     . __[[https://discord.gg/tvjWjCr | Outdated TV Main Discord]]__
-          * **Author:** OutdatedTV
-          * ~~Forum~~
-          * Discord server for Outdated TV projects including the TUCOGUIDE
-
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqdiscus.png | D}} [[https://discord.gg/tvjWjCr | Outdated TV Main Discord]]__
+          * By: __OutdatedTV__ On: __ongoing__
+          * ~~Discord server for Outdated TV projects including the TUCOGUIDE~~
+		  
 ===  SkyRem Guide
 
-     . __[[https://www.nexusmods.com/skyrimspecialedition/mods/26789 | SkyREM Guide]]__
-     * __[[https://wiki.step-project.com/User:DrPharmDawg/SkyRem_Guide_Home | Official SkyREM Guide]]__
-          * **Author:** DrPharmDawg
-          * ~~GUIDE~~
-          * Skyrim Roleplay Enhancement Mod Guide. Patches and files needed for the guide will be available here on the Nexus.
-          * SkyRem Concept: Add to the Skyrim experience by incorporating elements of strategic roleplay that focus on character creation, growth, and development that works seamlessly with the base (vanilla) game. While this began with the desire to tweak character creation, it has since grown into two (currently) series of mods and now a guide as I work to put it all together.
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqguide.png | G}} [[https://www.nexusmods.com/skyrimspecialedition/mods/26789 | SkyREM Guide]]__
+     * __[[https://wiki.step-project.com/User:DrPharmDawg/SkyRem_Guide_Home | Official SkyREM Guide]]__	 
+          * By: __DrPharmDawg__
+          * ~~Skyrim Roleplay Enhancement Mod Guide. Patches and files needed for the guide will be available here on the Nexus.~~
+          * ~~SkyRem Concept: Add to the Skyrim experience by incorporating elements of strategic roleplay that focus on character creation, growth, and development that works seamlessly with the base (vanilla) game. While this began with the desire to tweak character creation, it has since grown into two (currently) series of mods and now a guide as I work to put it all together.~~
 
-     . __[[https://discord.gg/4VT6ZK9 | SkyRem Discord]]__
-          * **Author:** DrPharmDawg
-          * ~~Forum~~
-          * Welcome to the SkyRem Discord! This server is for all things SkyRem related - Guide and Mods.
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqdiscus.png | D}} [[https://discord.gg/4VT6ZK9 | SkyRem Discord]]__
+          * By: __DrPharmDawg__ On: __ongoing__
+          * ~~Welcome to the SkyRem Discord! This server is for all things SkyRem related - Guide and Mods.~~
+		  
+===  The Northern Experience Guide
 
-===  YASHed Guide
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqguide.png | G}} [[https://www.nexusmods.com/skyrimspecialedition/mods/23894 | The Northern Experience - Skyrim Modding Guide]]__
+          * By: __mnikjom__
+          * ~~Guide that will provide an unique, Gothic-esque adventure in a mod-list based on YASH2 overhaul.~~
 
-     . __[[https://www.nexusmods.com/skyrimspecialedition/mods/23894 | Yashed Guide]]__
-          * **Author:** mnikjom
-          * ~~GUIDE~~
-          * Guide made specifically for people that are just starting their adventure with Skyrim modding.
-          * Best graphics! Balanced and consistent gameplay!
-          * Mod Organizer 2 support only.
+     . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqdiscus.png | D}} [[https://discord.gg/fuhsnph | Rare Papug Association Discord]]__
+          * By: __mnikjom__ On: __ongoing__
+          * ~~Discord server for mnikjom's projects including the The Northern Experience Guide.~~
+		  
+= Reuse and Credits  ==============================================================================
 
-     . __[[https://discord.gg/fuhsnph | Rare Papug Association Discord]]__
-          * **Author:** mnikjom
-          * ~~Forum~~
-          * Discord server for mnikjom's projects including the Yashed Guide.
-
-
-=  Reuse and Credits ==========================================================
-
-==  License: WML 1.0 Modify and Redistribute, Share Alike
+#### License: WML 1.0 Modify and Redistribute, Share Alike
 
 * You are free to redistribute this work in unmodified form.
 * You are free to modify and re-distribute this work, so long as you:
-     * 1) give the author(s) credit proportional to their contribution to the final work,
-     * 2) distribute the final work under the same terms, and
-     * 3) make artistic resources included with the final work available under the same terms.
+     . 1) give the author(s) credit proportional to their contribution to the final work,
+     . 2) distribute the final work under the same terms, and
+     . 3) make artistic resources included with the final work available under the same terms.
 
-==  Credits
+#### Credits
+	 
+. **A Filthy N'wah**
+     * Link hoarder and author of this modding resource.
 
-* **A Filthy N'wah** and **Sharlikran** Thanks to the authors for providing this modder resource!
+. **Sharlikran** 
+     * Thanks for developing the wiki host site, and providing essential support and guidance.  
+
+. **Bethesda Studios** 
+     * For their games and tools that allow the community to enhance the product at will.	 
+
+. To all the tool developers and tutorial authors who have made their work available to the public; 
+**THANK YOU!**
