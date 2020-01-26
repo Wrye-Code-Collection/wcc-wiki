@@ -250,7 +250,7 @@ Internal Link 3: &#91;&#91;#ExtraNavigation | Extra Navigation&#93;&#93;
 <p>Internal Link 2: <a  href="#ReuseandCredits">Reuse and Credits</a></p>
 <p>Internal Link 3: <a  href="#ExtraNavigation">Extra Navigation</a></p>
 <p class="empty">&nbsp;</p>
-<p>There is no functional difference between the three examples. They will all link to another part of this document. One slight difference is that in the first two examples the text on the left side of the <code>|</code> has a space. The site builder will automatically convert that to a valid internal link. For a valid internal like you only need to specify the name of the header. The main benefit of this syntax is that as long as the header name does not change, it will not matter what other headers or sections of the document you add or remove. An internal link will always be valid as long as there is a matching header of the same name.</p>
+<p>There is no functional difference between the three examples. They will all link to another part of this document. One slight difference is that in the first two examples the text on the left side of the <code>|</code> has a space. The site builder will automatically convert that to a valid internal link. For a valid internal link you only need to specify the name of the header. The main benefit of this syntax is that as long as the header name does not change, it will not matter what other headers or sections of the document you add or remove. An internal link will always be valid as long as there is a matching header of the same name.</p>
 <p class="empty">&nbsp;</p>
 <p class="note">If you duplicate a header name a number will be appended to make the anchor unique. When that happens an internal link to a header will fail unless you specify the exact anchor produced by the pagebuilder. You will need to examine the HTML file generated.</p>
 <p class="empty">&nbsp;</p>
@@ -293,7 +293,9 @@ Internal Link 3: &#91;&#91;#ExtraNavigation | Extra Navigation&#93;&#93;
 {% raw %}&#91;&#91;https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}&#93;&#93;{% endraw %}
 </pre>
 <p class="empty">&nbsp;</p>
-{% raw %}<a class="orange" href="https://sharlikran.github.io/">This Link Text is Orange</a>{% endraw %}
+{% raw %}
+<p><a class="orange" href="https://sharlikran.github.io/">This Link Text is Orange</a></p>
+{% endraw %}
 <p class="empty">&nbsp;</p>
 <p class="note">The tag must be with the link name or it will be ignored.</p>
 <hr>

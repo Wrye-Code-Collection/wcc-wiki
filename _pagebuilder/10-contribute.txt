@@ -186,7 +186,7 @@ Internal Link 1: [[#Python Installation | Python Installation]]
 Internal Link 2: [[#| Reuse and Credits]]
 Internal Link 3: [[#ExtraNavigation | Extra Navigation]]
 
-There is no functional difference between the three examples. They will all link to another part of this document. One slight difference is that in the first two examples the text on the left side of the <code>|</code> has a space. The site builder will automatically convert that to a valid internal link. For a valid internal like you only need to specify the name of the header. The main benefit of this syntax is that as long as the header name does not change, it will not matter what other headers or sections of the document you add or remove. An internal link will always be valid as long as there is a matching header of the same name.
+There is no functional difference between the three examples. They will all link to another part of this document. One slight difference is that in the first two examples the text on the left side of the <code>|</code> has a space. The site builder will automatically convert that to a valid internal link. For a valid internal link you only need to specify the name of the header. The main benefit of this syntax is that as long as the header name does not change, it will not matter what other headers or sections of the document you add or remove. An internal link will always be valid as long as there is a matching header of the same name.
 
 {{note:If you duplicate a header name a number will be appended to make the anchor unique. When that happens an internal link to a header will fail unless you specify the exact anchor produced by the pagebuilder. You will need to examine the HTML file generated.}} 
 
@@ -233,7 +233,9 @@ You may be contributing a guide that has people download a mod and you wish to c
 {% raw %}&#91;&#91;https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}&#93;&#93;{% endraw %}
 </pre>
 
-{% raw %}[[https://sharlikran.github.io/ | This Link Text is Orange{{a:orange}}]]{% endraw %}
+{% raw %}
+[[https://sharlikran.github.io/ | This Link Text is Orange{{a:orange}}]]
+{% endraw %}
 
 {{note:The tag must be with the link name or it will be ignored.}}
 <hr>
