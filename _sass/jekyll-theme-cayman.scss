@@ -467,13 +467,13 @@ body {
     background-color: var( --code-background);
     border: solid 1px var(--cayman-border);
     border-radius: 0.3rem;
+    white-space: pre-wrap;
     >code {
       padding: 0;
       margin: 0;
       font-size: 0.9rem;
       color: var(--purple-text);
       word-break: normal;
-      white-space: pre;
       background: transparent;
       border: 0;
     }
@@ -600,7 +600,7 @@ input[id^="spoiler"]:checked+label {
 input[id^="spoiler"]~.spoiler {
   width: auto;
   height: 0;
-  overflow: hidden;
+  overflow: auto;
   opacity: 0;
   margin: 0.25rem;
   padding: 0.25rem;
@@ -611,6 +611,7 @@ input[id^="spoiler"]~.spoiler {
   border-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   transition: all .6s;
+  white-space: pre-wrap;
   p {
     color: inherit;
   }

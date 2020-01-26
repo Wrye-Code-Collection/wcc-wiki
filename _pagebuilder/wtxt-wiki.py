@@ -392,6 +392,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     dupeEntryCount = 1
     blockAuthor = "Unknown"
     inNavigationButtons = False
+    inSpoilerBlock = False
     pageTitle = 'title: Your Content'
     # --Read source file --------------------------------------------------
     ins = open(srcFile, 'r')
@@ -499,7 +500,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         elif maHRule:
             line = '<hr>\n'
         # --Paragraph
-        elif maPar:
+        elif maPar and not inSpoilerBlock:
             line = '<p>' + line.rstrip() + '</p>\n'
         # --Empty line
         elif maEmpty:
@@ -514,9 +515,11 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             outLines.append(secondLine)
             thirdLine = '<div class="spoiler">\n'
             outLines.append(thirdLine)
+            inSpoilerBlock = True
             continue
         elif maSpoilerEnd:
             line = '</div>\n'
+            inSpoilerBlock = False
         # --Blockquote ---------------------------
         elif maBlockquoteBegin:
             firstLine = '<section class="quote">\n'

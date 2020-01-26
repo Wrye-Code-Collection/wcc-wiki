@@ -791,7 +791,6 @@ With thought-out naming and numbering conventions one could even do all three at
 Taking Architecture as an example for choice 1 above one could create sub-packages for a texture replacer out of each folder within the Architecture folder.
 
 [[sb:spoiler1 | Spoiler]]
-<pre>
 ├[anvil]
 │ └[anvilinterior]
 ├[arena]
@@ -833,7 +832,6 @@ Taking Architecture as an example for choice 1 above one could create sub-packag
 ├[stonewall]
 │ └[bravil]
 └[tents]
-</pre>
 [[se:]]
 This would be a very complex task especially if you were to then combine with other texture replacers so that only one option of each is installed. Option 1 above gives a lot of organization over a specific replacer set while Option 2 provides the most control with relation to other replacer sets. Option 3 probably has the main advantage of an economical replacer package in terms of managing your installers tab, but again using naming conventions could again make this redundant.
 
@@ -852,7 +850,6 @@ These examples illustrate both the breaking apart of mods into component parts a
 This BAIN project combines most of the LOD variants available today. The package is divided up into five distinct sets of sub-packages or directories. The Core files are optional to use, Border regions are next, then the normal maps, color maps, and finally the optimized land meshes. Further the Shivering Isles maps are separated out for further customization. The purpose of this is to be able to have a BAIN archive that allows for easy switching between these mods in order to test mixing and matching, stability, and when what your looking at bores you. Most of these mods came as is and only cover the either normal or color maps. Zacherots, and Xerus had combined maps which I extracted and separated.
 
 [[sb:spoiler2 | Spoiler]]
-<pre>
 LOD Compilation-BAIN
 │
 ├[00 [[https://www.nexusmods.com/oblivion/mods/5127 | LOD NormalMap Fix MipMap Fix]] ]
@@ -908,7 +905,6 @@ LOD Compilation-BAIN
 ├[40 Noise Replacer - Koldorn Medium]
 ├[40 Noise Replacer - Koldorn Strong]
 ├[40 [[https://www.nexusmods.com/oblivion/mods/17300 | Noise Replacer - Xerus] ] Again if the terms are unfamiliar please read over the Texture Overhaul page for more information. This package zipped in a non solid format comes to about 1 gig in size.
-</pre>
 [[se:]]
 
 == Sky Replacers Compilation
@@ -916,7 +912,6 @@ LOD Compilation-BAIN
 This compilation focuses on making the sun, moons, stars, and nebula more interesting. It falls short of [[https://www.nexusmods.com/oblivion/mods/21945/ | Cosmic Sky Cycling]] because it does not cycle. But, then again one less thing running in the back ground. Actually I went through many of the images with Cosmic Night sky and only liked a handful. Many merely had nebula that invaded the entire sky and drowned out stars or mismatched very badly with existing star mods. Plus, there are many great crafted stars included below. Of the nasa images only nebula that was clear, not glaring, and meshed well with star packs got my inclusion.
 
 [[sb:spoiler3 | Spoiler]]
-<pre>
 Sky Climates-BAIN
 │
 ├[00 Sky Core]
@@ -1021,7 +1016,6 @@ Sky Climates-BAIN
 ├[50 Nebula - Real Night Sky]
 ├[50 Nebula CSC NGC 1365 Island Universe]
 ├[50 Nebula CSC NGC1333 Reflection Nebula] Sorry I'm not going to include links as it would be a mountain of work to get them all checked and in place. The old thread had a bunch of links, but it also only contained a lighter version of this. That said this package is only 90 mb that is really light considering the amount of diversity it gives to the game. Searching under the names sky, stars, moons, and sun and you will find them.
-</pre>
 [[se:]]
 = BAIN Wizards, OMODS, and BAIN Conversion Files
 
