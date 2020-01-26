@@ -64,21 +64,23 @@ Your page title will become the first line on the page and will be assigned as t
 <hr>
 === Table of Contents
 
-A table of contents is automatically generated from the headers in the document. It is best to place the first content tag where you want the table of contents to be, and after a header named Contents. The number indicates the maximum depth. You should not use H1 except at the beginning of your page. Considering that the following would then be true.
+A table of contents is automatically generated from the headers in the document. It is best to place the first content tag where you want the table of contents to be, and after a header named Contents. The number indicates the level of headers used. You should not use H1 except at the beginning of your page.
 
-A value of one would produce the following:
+In addition to building a table of contents, both the headers and the table of contents will be numbered automatically. It is not necessary to number the headers manually because they will be renumbered automatically as well. The numbering relies on the numer at the begining of the file name. For exmaple all the numbers will start with <code>6.x</code> if the file name is <code>6-yourpagename.html</code>.
+
+A value of two would use H2 headers:
 
 * H2 Heading
 * H2 Heading
 * H2 Heading
 
-A value of two would produce the following:
+A value of three would include H3 headers as well:
 
 * H2 Heading
   * H3 Heading
 * H2 Heading
 
-A value of three would produce the following:
+A value of four would include H4 headers:
 
 * H2 Heading
   * H3 Heading
