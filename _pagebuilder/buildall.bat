@@ -12,4 +12,3 @@ C:\Python38-32\python.exe wtxt-wiki.py genHtml 11-tutorial_Links.txt
 C:\Python38-32\python.exe wtxt-wiki.py genHtml 12-other_tools_and_extras.txt
 C:\Python38-32\python.exe wtxt-wiki.py genHtml 13-oblivionandbeyond.txt
 C:\Python38-32\python.exe wtxt-wiki.py genHtml 14-testoolghostwheel.txt
-pause
