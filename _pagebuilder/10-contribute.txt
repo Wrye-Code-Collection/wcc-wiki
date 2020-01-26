@@ -350,9 +350,9 @@ Keep in mind you would want to use small images about 24 to 36 pixels or less. U
 
 === 17.00 Update [1/25/2020]
 * released pagebuilder_v17.zip version 17
-  * Updated Regex for various thins to capture the text more accuratly
+  * Updated Regex for various thins to capture the text more accurately
   * Updated link generation (Provided it is valid to begin with)
-  * Updated header renumbering to use alters header text instead of original text
+  * Updated header renumbering to use altered header text instead of original text
   . from when it was first captured.
 
 === 16.00 Update [1/25/2020]
