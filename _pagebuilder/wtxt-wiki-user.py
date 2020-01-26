@@ -449,6 +449,7 @@ def wtxtToHtml(srcFile, outFile=None):
     reContentsTag = re.compile(r'\s*{{CONTENTS=?(\d+)}}\s*$')
     reCssTag = re.compile('\s*{{CSS:(.+?)}}\s*$')
     reTitleTag = re.compile(r'^{{PAGETITLE="(.+?)"}}')
+    reNoteTag = re.compile(r'^{{note:(.+?)}}')
     reComment = re.compile(r'^\/\*.+\*\/')
     reCTypeBegin = re.compile(r'^\/\*')
     reCTypeEnd = re.compile('\*\/$')
@@ -525,8 +526,14 @@ def wtxtToHtml(srcFile, outFile=None):
         else:
             address = text = link_object
         fontClass, text = strip_color(text)
-        if address == '#':
+        if len(address) == 1 and address == '#':
             address += reWd.sub('', text)
+        reInternalLink = re.compile(r'^#(.*)')
+        anchor_compile = reInternalLink.match(address)
+        if anchor_compile:
+            anchor_result = anchor_compile.group(1)
+            anchor_out = reWd.sub('', anchor_result)
+            address = '#{}'.format(anchor_out)
         if inNavigationButtons:
             return '<a {} href="{}" class="drkbtn">{}</a>'.format(fontClass, address, text)
         else:
@@ -707,6 +714,13 @@ def wtxtToHtml(srcFile, outFile=None):
         line = reLink.sub(linkReplace, line)
         line = httpReplace(line)
         line = wwwReplace(line)
+        # --Re Note -------------------------------
+        maNoteTag = reNoteTag.match(line)
+        if maNoteTag:
+            note_text = maNoteTag.group(1)
+            line_out = '<p class="note">{}</p>\n'.format(note_text)
+            outLines.append(line_out)
+            continue
         # --HTML Font or Code tag first of Line ------------------
         maHtmlBegin = reHtmlBegin.match(line)
         if maHtmlBegin:
