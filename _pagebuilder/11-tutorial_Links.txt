@@ -8,17 +8,21 @@
 
 . Here is an explanation of the difficulty identifier icons utilized within the **TLC**:
 
-* {{inline:20px | SqOC.png | OC}} This designates "official content". This material has been authored by the developer(s). Always read these first in any subject unit as the developers know their tools best. Other user videos will clarify or expand on this material.
+* {{inline:20px | SqOC.png | OC}} "Official content". This material has been authored or authorized by the developer(s). Always read these first in any subject unit as the developers know their tools best. Other user videos will clarify or expand on this material.
 
-* {{inline:20px | Sqbegin.png | B}} This designates "beginner" content. Most users will be able to understand this material without any prerequisites.
+* {{inline:20px | Sqbegin.png | B}} "Beginner" content. Most users will be able to understand this material without any prerequisites.
 
-* {{inline:20px | Sqinter.png | I}} This designates "intermediate" content. Typically, new users will need to review and understand beginner content before attempting to master this material.
+* {{inline:20px | Sqinter.png | I}} "Intermediate" content. Typically, new users will need to review and understand beginner content before attempting to master this material.
 
-* {{inline:20px | Sqadvan.png | A}} This designates "advanced" content. Do not attempt to use material covered in these tutorials unless you have a broad, in-depth understanding of the tool you are attempting to use.
+* {{inline:20px | Sqadvan.png | A}} "Advanced" content. Do not attempt to use material covered in these tutorials unless you have a broad, in-depth understanding of the tool you are attempting to use.
 
-* {{inline:20px | Sqtool.png | T}} This designates an actual tool download site, uploaded and maintained by the developer(s). 
+* {{inline:20px | Sqold.png | O}} "Older" content, typically anything before 2017. This doesn't necessarily mean the content is out of date, but just make sure you compare it to newer versions to see what has changed.
 
-* {{inline:20px | Sqdiscus.png | D}} This designates a forum discussion site or Discord server. These are typically built and maintained by the developer(s) of any specific tool.
+* {{inline:20px | Sqtool.png | T}} "Tool"; a tool download site, uploaded and maintained by the developer(s). 
+
+* {{inline:20px | Sqdiscus.png | D}} "Discussion"; a forum discussion site or Discord server. These are typically built and maintained by the developer(s) of any specific tool.
+
+* {{inline:20px | Sqguide.png | G}} "Guide"; curated mod collections.
 
 # Contribute:
 
