@@ -442,6 +442,7 @@ def wtxtToHtml(srcFile, outFile=None):
     reWd = re.compile(r'(<[^>]+>|\[[^\]]+\]|\W+)')
     rePar = re.compile(r'^([a-zA-Z\d]|\*\*|~~|__|^\.{1,}|^\*{1,}|^\"{1,})')
     reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}$)')
+    reLinkWithHashtag = re.compile(r'(.*)#(.*)$')
     # --TextColors
     reTextColor = re.compile(r'{{a:(.+?)}}')
     # --Tags
@@ -526,14 +527,18 @@ def wtxtToHtml(srcFile, outFile=None):
         else:
             address = text = link_object
         fontClass, text = strip_color(text)
-        if len(address) == 1 and address == '#':
+        text_only_object = reLinkWithHashtag.search(address)
+        if address == '#':
             address += reWd.sub('', text)
-        reInternalLink = re.compile(r'^#(.*)')
-        anchor_compile = reInternalLink.match(address)
-        if anchor_compile:
-            anchor_result = anchor_compile.group(1)
-            anchor_out = reWd.sub('', anchor_result)
-            address = '#{}'.format(anchor_out)
+        if text_only_object:
+            group1 = text_only_object.group(1)
+            group2 = text_only_object.group(2)
+            if (address.find('#') > 0) and not (group1.find(':') >= 0):
+                anchor_out = reWd.sub('', group2)
+                address = '{}#{}'.format(group1, anchor_out)
+            if not (len(group1) > 0) and (len(group2) > 0) and (address[0] == '#'):
+                anchor_out = reWd.sub('', group2)
+                address = '#{}'.format(anchor_out)
         if inNavigationButtons:
             return '<a {} href="{}" class="drkbtn">{}</a>'.format(fontClass, address, text)
         else:

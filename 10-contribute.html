@@ -49,7 +49,7 @@ title: Contributing
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Contents">Contents</h2>
 <p class="list-1">&bull;&nbsp; <a href="#Requirement">10.1 Requirement</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#Downloadpagebuilder_v18zip">10.1.1 Download pagebuilder_v18.zip</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#Downloadpagebuilder_v19zip">10.1.1 Download pagebuilder_v19.zip</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#ExampleTemplate">10.1.2 Example Template</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Syntax">10.2 Syntax</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#YourPagesTitle">10.2.1 Your Pages Title</a></p>
@@ -76,11 +76,11 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#AddinganImagewithCaptionandHyperlink">10.2.22 Adding an Image with Caption and Hyperlink</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#AddinganinlineImage">10.2.23 Adding an inline Image</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#Versions">10.3 Versions</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#1800Update1252020">10.3.1 18.00 Update [1/25/2020]</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#1700Update1252020">10.3.2 17.00 Update [1/25/2020]</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#1600Update1252020">10.3.3 16.00 Update [1/25/2020]</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#1500Update1242020">10.3.4 15.00 Update [1/24/2020]</a></p>
-<p class="list-2">&bull;&nbsp; <a href="#1400Update1222020">10.3.5 14.00 Update [1/22/2020]</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#1900Update1262020">10.3.1 19.00 Update [1/26/2020]</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#1800Update1252020">10.3.2 18.00 Update [1/25/2020]</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#1700Update1252020">10.3.3 17.00 Update [1/25/2020]</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#1600Update1252020">10.3.4 16.00 Update [1/25/2020]</a></p>
+<p class="list-2">&bull;&nbsp; <a href="#1500Update1242020">10.3.5 15.00 Update [1/24/2020]</a></p>
 <p class="list-1">&bull;&nbsp; <a href="#OptionalRequirement">10.4 Optional Requirement</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#PythonInstallation">10.4.1 Python Installation</a></p>
 <p class="list-2">&bull;&nbsp; <a href="#WherearethefilesIjustdownloaded">10.4.2 Where are the files I just downloaded?</a></p>
@@ -91,11 +91,11 @@ title: Contributing
 <p class="list-2">&bull;&nbsp; <a href="#Credits">10.5.2 Credits</a></p>
 <p class="empty">&nbsp;</p>
 <h2 class="header2" id="Requirement">10.1 - Requirement</h2>
-<p class="list-1">&bull;&nbsp; The <code>pagebuilder_v18.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.</p>
-<h3 id="Downloadpagebuilder_v18zip">10.1.1 - Download pagebuilder_v18.zip</h3>
+<p class="list-1">&bull;&nbsp; The <code>pagebuilder_v19.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.</p>
+<h3 id="Downloadpagebuilder_v19zip">10.1.1 - Download pagebuilder_v19.zip</h3>
 <p>{% include image.html file="img/pagebuilder.jpg" alt="Page Builder Zipfile" %}</p>
 <p class="empty">&nbsp;</p>
-<p class="list-1">&bull;&nbsp; <a  href="pagebuilder_v18.zip">pagebuilder_v18 Download Link.zip</a></p>
+<p class="list-1">&bull;&nbsp; <a  href="pagebuilder_v19.zip">pagebuilder_v19 Download Link.zip</a></p>
 <p class="empty">&nbsp;</p>
 <h3 id="ExampleTemplate">10.1.2 - Example Template</h3>
 <p>As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.</p>
@@ -437,11 +437,11 @@ Example of text in the spoiler tag
 <p class="empty">&nbsp;</p>
 <h4 id="ExamplesyntaxImagewithaCaptionandHyperlink">Example syntax Image with a Caption and Hyperlink</h4>
 {% raw %}<pre>
-{{image-cap-url:pagebuilder.jpg | Page Builder Image | This is what the zip looks like | pagebuilder_v18.zip | Page Builder Zip}}
+{{image-cap-url:pagebuilder.jpg | Page Builder Image | This is what the zip looks like | pagebuilder_v19.zip | Page Builder Zip}}
 </pre>{% endraw %}
 <p class="empty">&nbsp;</p>
 <h4 id="ExampleImagewithCaptionandHyperlink">Example Image with Caption and Hyperlink</h4>
-<p>{% include image-caption-url.html file="img/pagebuilder.jpg" alt="Page Builder Image" caption="This is what the zip looks like" url="pagebuilder_v18.zip" urlname="Page Builder Zip" %}</p>
+<p>{% include image-caption-url.html file="img/pagebuilder.jpg" alt="Page Builder Image" caption="This is what the zip looks like" url="pagebuilder_v19.zip" urlname="Page Builder Zip" %}</p>
 <hr>
 <h3 class="header3" id="AddinganinlineImage">10.2.23 - Adding an inline Image</h3>
 <p>You can use small inline images between {% include image-inline.html max-width="20px" file="img/Sqinter.png" alt="Wrye Avatar" %} text.</p>
@@ -461,30 +461,34 @@ Example of text in the spoiler tag
 <div id="thislink"></div>
 <h2 class="header2" id="Versions">10.3 - Versions</h2>
 <p class="empty">&nbsp;</p>
-<h3 class="header3" id="1800Update1252020">10.3.1 - 18.00 Update [1/25/2020]</h3>
+<h3 class="header3" id="1900Update1262020">10.3.1 - 19.00 Update [1/26/2020]</h3>
+<p class="list-1">&bull;&nbsp; released pagebuilder_v19.zip version 19</p>
+  <p class="list-2">&bull;&nbsp; More updates to hyperlink functions</p>
+  <p class="empty">&nbsp;</p>
+<h3 class="header3" id="1800Update1252020">10.3.2 - 18.00 Update [1/25/2020]</h3>
 <p class="list-1">&bull;&nbsp; released pagebuilder_v18.zip version 18</p>
   <p class="list-2">&bull;&nbsp; Fixed bug when compressing an internal link</p>
   <p class="list-2">&bull;&nbsp; Added additional note syntax. See <a  href="#Notes">Notes</a></p>
   <p class="empty">&nbsp;</p>
-<h3 class="header3" id="1700Update1252020">10.3.2 - 17.00 Update [1/25/2020]</h3>
+<h3 class="header3" id="1700Update1252020">10.3.3 - 17.00 Update [1/25/2020]</h3>
 <p class="list-1">&bull;&nbsp; released pagebuilder_v17.zip version 17</p>
   <p class="list-2">&bull;&nbsp; Updated Regex for various thins to capture the text more accurately</p>
   <p class="list-2">&bull;&nbsp; Updated link generation (Provided it is valid to begin with)</p>
   <p class="list-2">&bull;&nbsp; Updated header renumbering to use altered header text instead of original text</p>
   <p class="list-2">&nbsp;&nbsp; from when it was first captured.</p>
   <p class="empty">&nbsp;</p>
-<h3 class="header3" id="1600Update1252020">10.3.3 - 16.00 Update [1/25/2020]</h3>
+<h3 class="header3" id="1600Update1252020">10.3.4 - 16.00 Update [1/25/2020]</h3>
 <p class="list-1">&bull;&nbsp; released pagebuilder_v16.zip version 16</p>
   <p class="list-2">&bull;&nbsp; Remove and assign color better for links</p>
   <p class="list-2">&bull;&nbsp; Handle Paragraphs Better</p>
   <p class="list-2">&bull;&nbsp; Provide more control for Preformatted Blocks</p>
   <p class="empty">&nbsp;</p>
-<h3 class="header3" id="1500Update1242020">10.3.4 - 15.00 Update [1/24/2020]</h3>
+<h3 class="header3" id="1500Update1242020">10.3.5 - 15.00 Update [1/24/2020]</h3>
 <p class="list-1">&bull;&nbsp; released pagebuilder_v15.zip version 15</p>
   <p class="list-2">&bull;&nbsp; Fixed bug in page auto renumbering when there is no number prefix for the</p>
   <p class="list-2">&nbsp;&nbsp; filename.</p>
   <p class="empty">&nbsp;</p>
-<h3 class="header3" id="1400Update1222020">10.3.5 - 14.00 Update [1/22/2020]</h3>
+<h3 class="header3" id="1400Update1222020">14.00 Update [1/22/2020]</h3>
 <p class="list-1">&bull;&nbsp; released pagebuilder_v14.zip version 14</p>
   <p class="list-2">&bull;&nbsp; Updated builder to auto renumber page</p>
   <p class="list-2">&bull;&nbsp; Numbering is bassed on the number prefix of the file name</p>
