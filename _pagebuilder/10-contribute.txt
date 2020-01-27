@@ -163,7 +163,7 @@ Click [[#|this link]] and it will jump to the Version section so you can see wha
 
 {{note:The anchor __does not__ start with a <code>#</code>. However, the link to the anchor __must__ start with a <code>#</code>.}}
 
-/* 
+/*
 &#91; is for [
 &#93; is for ]
 */
@@ -188,7 +188,7 @@ Internal Link 3: [[#ExtraNavigation | Extra Navigation]]
 
 There is no functional difference between the three examples. They will all link to another part of this document. One slight difference is that in the first two examples the text on the left side of the <code>|</code> has a space. The site builder will automatically convert that to a valid internal link. For a valid internal link you only need to specify the name of the header. The main benefit of this syntax is that as long as the header name does not change, it will not matter what other headers or sections of the document you add or remove. An internal link will always be valid as long as there is a matching header of the same name.
 
-{{note:If you duplicate a header name a number will be appended to make the anchor unique. When that happens an internal link to a header will fail unless you specify the exact anchor produced by the pagebuilder. You will need to examine the HTML file generated.}} 
+{{note:If you duplicate a header name a number will be appended to make the anchor unique. When that happens an internal link to a header will fail unless you specify the exact anchor produced by the pagebuilder. You will need to examine the HTML file generated.}}
 
 <hr>
 === Text Colors
@@ -220,7 +220,7 @@ There are 16 dark themed colors (17 if you count black) for you to choose from s
 {{note:Obviously some colors will not contrast that well against this dark background but would look much better against a lighter background.}}
 
 <hr>
-/* 
+/*
 &#91; is for [
 &#93; is for ]
 */
@@ -286,7 +286,7 @@ Example of text in the spoiler tag
 
 /*
 &#123; = {
-&#125; = } 
+&#125; = }
 */
 === Notes
 
@@ -306,7 +306,7 @@ GitHub uses Jekyll pages. It will process certain characters in an undesirable w
 
 <pre>
 &amp;#123; = {
-&amp;#125; = } 
+&amp;#125; = }
 &amp;#91; is for [
 &amp;#93; is for ]
 &amp;lt; is for <
@@ -410,7 +410,7 @@ Keep in mind you would want to use small images about 24 to 36 pixels or less. U
 * released pagebuilder_v18.zip version 18
   * Fixed bug when compressing an internal link
   * Added additional note syntax. See [[#Notes | Notes]]
-  
+
 === 17.00 Update [1/25/2020]
 * released pagebuilder_v17.zip version 17
   * Updated Regex for various thins to capture the text more accurately
@@ -433,7 +433,7 @@ Keep in mind you would want to use small images about 24 to 36 pixels or less. U
 === 14.00 Update [1/22/2020]
 * released pagebuilder_v14.zip version 14
   * Updated builder to auto renumber page
-  * Numbering is bassed on the number prefix of the file name
+  * Numbering is based on the number prefix of the file name
 
 === 13.00 Update [1/21/2020]
 * released pagebuilder_v13.zip version 13
