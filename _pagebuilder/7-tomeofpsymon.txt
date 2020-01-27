@@ -96,6 +96,17 @@ The advantages I've experienced in moving to BAIN include:
 * It gave me a hobby, some might say an addiction.
 
 
+== Wrye Bash Download and Manuals
+
+[[https://www.nexusmods.com/oblivion/mods/22368 | Wrye Bash Main download]]
+
+[[https://wrye-bash.github.io/docs/Wrye%20Bash%20General%20Readme.html | General Readme]]
+[[https://wrye-bash.github.io/docs/Wrye%20Bash%20Advanced%20Readme.html | Advanced Readme]]
+[[https://wrye-bash.github.io/docs/Wrye%20Bash%20Technical%20Readme.html | Technical Readme]]
+[[https://wrye-bash.github.io/docs/Wrye%20Bash%20Version%20History.html | Version History]]
+
+{{note:All 4 sections are listed seperatly because of a lack of smooth navagation between pages}}
+
 == More links regarding installer tools
 
 I'm often told that I'm too wordy, so if you prefer pictures then check out:
@@ -104,8 +115,6 @@ Perhaps someday these two guides can be merged!
 
 Many a great resource and more Wrye Bash instructions for the mod user:
 [[http://wiki.theassimilationlab.com/tescosi/Main_Page | TESCosi by Tomlong]] available in Wiki format. [[http://forums.bethsoft.com/topic/1094618-tesivpositive-site-redesign/ | Current forum thread]].
-
-[[https://www.nexusmods.com/oblivion/mods/22368 | Wrye Bash Main download]]
 [[http://wryemusings.com/Wrye%20Bash.html | Wrye Bash Manual]] very outdated compared to the readme included with the latest download.
 [[https://cs.elderscrolls.com/index.php?title=Wrye_Bash | Wrye Bash on CS Wiki]]
 [[https://cs.elderscrolls.com/index.php?title=Bain | BAIN on the CS Wiki]]
@@ -134,7 +143,7 @@ And thanks to the modders and utility developers that make playing and modding t
 
 == Bash Installer (BAIN) tab functions
 
-To begin with most of what I'm writing is an elaboration of what is in the [[https://wrye-bash.github.io/ | Wrye bash readme]]  (the most current version packaged with the latest Wrye Bash and accessed with ? button on bottom toolbar of Wrye Bash) and I highly suggest you take that as the authority and follow it if I deviate from what is presented there. Next one should direct general questions about the technical problems and functioning in the current Wrye Bash thread. Otherwise if everything is understood and I can answer (or anyone can answer) then ask. I just want to emphasize that those places are a higher authority.
+To begin with most of what I'm writing is an elaboration of what is in the [[#Wrye Bash Download and Manuals | Wrye bash readme]]  (the most current version packaged with the latest Wrye Bash and accessed with ? button on bottom toolbar of Wrye Bash) and I highly suggest you take that as the authority and follow it if I deviate from what is presented there. Next one should direct general questions about the technical problems and functioning in the current Wrye Bash thread. Otherwise if everything is understood and I can answer (or anyone can answer) then ask. I just want to emphasize that those places are a higher authority.
 
 When first installing Wrye Bash (or Wrye Mash or Gary Bash/Wrye Flash) the Installers tab is usually deactivated and when you first click on it you will get a notice asking if you really want to activate the tab. After activating the tab the it will take a few minutes to initialize. It is important do not interrupt this scan because each time you open the tab from this point forward it will scan what you have installed to check if anything has been altered or removed in order to inform you. This is a good thing. The first time you open this may take a few minutes. If you do interrupt the scan then most often you can reopen the tab after restarting Wrye Bash and it will scan again.
 
@@ -199,6 +208,7 @@ As you learn more about package management and adjust the install order of packa
 
 The following is quoted directly from the Wrye Bash readme (where it is better illustrated) concerning package shapes, colors and general health:
 
+[[bb:Quote]]
 Checkmarks
 
 * Installed packages will be marked with a "+".
@@ -206,13 +216,13 @@ Checkmarks
 Icon Colors
 Icon colors indicate the degree to which the package is synchronized with the Oblivion\Data directory:
 
-* Green: Package is fully synced. Note that a package can be green even if it is not "Active". E.g. if you have two identical packages and one is (fully) installed, then it will be green and checked. But the identical package will also be green - since it too is fully synced with the data directory.
-* Red: Some files in the package are missing from the data directory.
-* Orange: All package files are present in the data directory, but some esps/esms are not identical. (E.g. another package installed an alternative version of that file, or the user modified the file after installation.)
-* Yellow: All package files are present in the data directory, but some resource files are not identical. (E.g. another package installed an alternative version of that file, or the user modified the file after installation.)
-* White: This is relatively rare. It just means that the package is configured in a way that it has no files to install. This can happen for complex packages where none of the sub-packages are checked.
-* Grey: This indicates that the package has a structure that Bain does not recognize, and so cannot install.
-* Red X: The package is corrupt and/or incomplete. You'll likely see this for packages that you are currently downloading into the Installers directory.
+* <font class="green">Green</font>: Package is fully synced. Note that a package can be green even if it is not "Active". E.g. if you have two identical packages and one is (fully) installed, then it will be green and checked. But the identical package will also be green - since it too is fully synced with the data directory.
+* <font class="red">Red</font>: Some files in the package are missing from the data directory.
+* <font class="orange">Orange</font>: All package files are present in the data directory, but some esps/esms are not identical. (E.g. another package installed an alternative version of that file, or the user modified the file after installation.)
+* <font class="yellow">Yellow</font>: All package files are present in the data directory, but some resource files are not identical. (E.g. another package installed an alternative version of that file, or the user modified the file after installation.)
+* <font class="white">White</font>: This is relatively rare. It just means that the package is configured in a way that it has no files to install. This can happen for complex packages where none of the sub-packages are checked.
+* <font class="grey">Grey</font>: This indicates that the package has a structure that Bain does not recognize, and so cannot install.
+* <font class="red">Red X</font>: The package is corrupt and/or incomplete. You'll likely see this for packages that you are currently downloading into the Installers directory.
 
 Icon Shape
 
@@ -221,15 +231,15 @@ Icon Shape
 
 Text Colors
 
-* Blue: Indicates a package with sub-packages. The files to be installed, and thus the install state of the package will depend on which sub-packages you have activated.
-* Grey: This indicates that the package has a structure that Bain does not recognize, and so, cannot install.
+* <font class="blue">Blue</font>: Indicates a package with sub-packages. The files to be installed, and thus the install state of the package will depend on which sub-packages you have activated.
+* <font class="grey">Grey</font>: This indicates that the package has a structure that Bain does not recognize, and so, cannot install.
 
 Text Background
 
-* Orange: Indicates that the install is dirty. This will occur for packages for which the configuration has been altered (either by altering active sub-packages and esmps, or by altering the package itself). This can be repaired by running Anneal or Anneal All.
-* Yellow: Indicates that the package has "underrides" i.e. some of its installed files should be overridden by higher order packages. This may happen after reordering mods that have already been installed. It can be repaired by running Anneal or Anneal All.
-* Grey: Indicates that some files present in the package will not be installed. This is usually due to a complex structure that is only partially handled by Bain, but can also be due to having files that Bain refuses to install (exe's, dlls, sub-archives, etc.)
-
+* <font class="orange">Orange</font>: Indicates that the install is dirty. This will occur for packages for which the configuration has been altered (either by altering active sub-packages and esmps, or by altering the package itself). This can be repaired by running Anneal or Anneal All.
+* <font class="yellow">Yellow</font>: Indicates that the package has "underrides" i.e. some of its installed files should be overridden by higher order packages. This may happen after reordering mods that have already been installed. It can be repaired by running Anneal or Anneal All.
+* <font class="grey">Grey</font>: Indicates that some files present in the package will not be installed. This is usually due to a complex structure that is only partially handled by Bain, but can also be due to having files that Bain refuses to install (exe's, dlls, sub-archives, etc.)
+[[be:]]
 Annealing is a method whereby you can auto-correct the errors reported in the above described package colors and sub-tabs. Using it will take out conflict losers and replace them with the winners. It will replace files that have been removed by other methods (such as OBMM use or manual alterations. It will also replace files that it determines are different than the one installed. This includes cleaned plugins (which is why I recommend cleaning prior to installing with BAIN as covered below). You can anneal individual packages or using the context menu off of the top packages bar set the installers tab to auto anneal when changes are made. This will work only for files installed via the packages and will not take into account files installed via OBMM or manual. You can also do group anneal of all packages installed
 
 Exercise caution and take notes if using OBMM and BAIN together! For instance if you do want to install a mod via OBMM and the result is that it makes a package turn red because it overwrote the files installed by a package then please remember that annealing that package will remove or change back what OBMM installed. Also my own experience is that setting to auto-anneal is a great option to have set all the time. It will auto-adjust files as you juggle package load order and sub-package options. it will not handle the manual changes or if OBMM is overwriting (but anneal all will).
@@ -313,9 +323,8 @@ There are pros and cons to consider when it comes to whether or not to repackage
 * For Morrowind there is testool - more info found here
 * For Oblivion and Fallout 3 there is the same edit program created by Elminster called either tes4edit or FO3edit. Depending upon how you name the exe. The latest version found here.
 
-The following are tutorials for cleaning Oblivion and Fallout 3 plugins:
-[[https://en.uesp.net/wiki/Tes4Mod:Tes4View#Cleaning_a_Dirty_Plugin | Cleaning a mod on UESP]]
-[[https://cs.elderscrolls.com/index.php?title=TES4Edit/Mod_cleaning_tutorial_with_TES4Edit | Cleaning a mod on CS Wiki]] A more extensive version [[https://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide | here]]
+Information on cleaning Oblivion or any plugin:
+[[https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#ModCleaningProcess | xEdit Documentation]]
 
 Please keep in mind that cleaning mods is a complex subject and that while these tutorials give very clear steps how to use TES4/FO3edit to automate cleaning it is also ideal to read the readme (and comments on the download site) and possibly bring the existence of dirty edits to the attention of the mod maker. Of course many mods are no longer supported. To be very brief do not clean the unofficial patches, overhauls, esp that have other esp as masters, or esm files. Even if you did run the automated program it may find bad edits (the dirt) but they may be intentional and needed. The best bet if your are not sure is to ask the mod maker or barring that ask on a forum release thread.
 
@@ -370,7 +379,7 @@ By now one should be familiar with the game directory pattern, how mods are ofte
 BAIN has a feature that really expands upon what an installer does and what the currently available versions of OBMM cannot do. This is the ability to combine packages (of mods) together in novel combinations. With this feature one could then combine mods together in such a way as to make each addition an option that can be installed or not. Really the only thing limiting the combinations is that the packages are read in a hierarchical manner and one's own imagination about how to combine or break apart archives into sub-packages. Since BAIN (like OBMM) can read one layer further into a packages directory to find the recognized structure of the data directory one can then add other directories that have the similar structure.Taking our Mod of Awesomeness example above one could then assign an alpha-numeric prefix to each sub-package then as long as each new sub-package has such a prefix then it will be recognized by BAIN and the alpha-numeric ordering will then be the order by which these packages will be installed. The reason for Alpha-Numeric is explained by PacificMorrowind:
 
 <pre>
-the reason is that in computers (at least generally and is certainly the standard in UIs) numbers are sorted before letters... same as underscores etc. (ie like in Windows Explore defaults sort is )
+the reason is that in computers (at least generally and is certainly the standard in UIs) numbers are sorted before letters... same as underscores etc. (ie like in Windows Explorer defaults sort is &lt;underbar and similar chars&gt;&lt;digits&gt;&lt;letters&gt;)
 </pre>
 
 So, with the lower numbers/letters being installed first (being higher in the install order) and the higher number/letters being installed last (being lower in the install order). This basically allows for micro install order options to be embedded in larger packages.
@@ -501,7 +510,7 @@ Et in Arkay Ego-BAIN
    │   └EtInArkay-UniqueLandscapes Merged patch.esp
 </pre>
 
-With this all in one package you will see several features. The core package number 00 to make sure it is always at the top contains all the main replacers needed. The next sub=package contains an esp that would overwrite the esp in the core sub-package if chosen. It also contains supplementary body replacer material for use with that version (although probably best to use other updated body replacers and only the esp here). The next two subpackages are available at the main download page and are to be used only if SI or C&C are also loaded. There are two numbered 30 sub-packages this is a method of saying that the choice is either/or and that one should not install both. The first one is part of another package of quest delayers made by statttis and the second one is (or was) available only by request from the authors. Since I would not want both installed they got the same number sub-package. The next package is another patch made by somebodys_kid for the mod Tears of the Fiend. The next sub-package is a the collected Unique Landscapes patches made by Vorians. And the final sub-package was a merger of the UL patches that is packaged with the other UL patches. It is likewise number the same as the UL patches to indicate that it should not be installed along with the normal UL patches. Notice also, as above, I took renaming the readme into my own hands and added further directories to the docs folder to better organize the ever growing library of readmes (you know ... those things we read after all else fails
+With this all in one package you will see several features. The core package number 00 to make sure it is always at the top contains all the main replacers needed. The next sub=package contains an esp that would overwrite the esp in the core sub-package if chosen. It also contains supplementary body replacer material for use with that version (although probably best to use other updated body replacers and only the esp here). The next two subpackages are available at the main download page and are to be used only if SI or C&C are also loaded. There are two numbered 30 sub-packages this is a method of saying that the choice is either/or and that one should not install both. The first one is part of another package of quest delayers made by statttis and the second one is (or was) available only by request from the authors. Since I would not want both installed they got the same number sub-package. The next package is another patch made by somebodys_kid for the mod [[https://www.nexusmods.com/oblivion/mods/11598 | Tears of the Fiend]]. The next sub-package is a the collected Unique Landscapes patches made by Vorians. And the final sub-package was a merger of the UL patches that is packaged with the other UL patches. It is likewise number the same as the UL patches to indicate that it should not be installed along with the normal UL patches. Notice also, as above, I took renaming the readme into my own hands and added further directories to the docs folder to better organize the ever growing library of readmes (you know ... those things we read after all else fails
 
 This package therefore contains several examples of the benefits and some of the rules necessary for constructing complex BAIN packages/projects. Later in other posts I will illustrate much more elaborate combinations of mods.
 
@@ -523,7 +532,7 @@ Read the Readme!! and Use [[https://github.com/boss-developers/boss/releases/tag
 
 = Managing Installer Packages
 
-== Install Order:
+== Install Order
 
 Install order is an important part of planning a modded game of Oblivion. Install order is different from what is commonly called load order because it deals with the entire mod including any replacer files (which could include meshes , textures, and sounds) or extra files (added meshes , textures, sounds, or any other number of files). Load order is about how the game reads the instructions from the esm and esp to run the game engine; whereas, install order is about what files are in place to be referenced by the game engine.
 
@@ -1424,49 +1433,54 @@ More about these below, but first some basics that do work well. These first thr
 
 Nehrim makes use of a now antiquated method of applying its modifications with the use of an archive invalidation.txt that serves to tell the game which files are to overwrite the files included in the BSA archives. More about this can be found ( NEEDS LINK | here). If one just wanted to add replacement textures and meshes then a more universally useful way of being able to put the files in the Nehrim data folder and play is to use [[https://www.nexusmods.com/oblivion/mods/10724 | Archive Invalidation Invalidated]]. This is a BSA that redirects the engine to use loose files to overide BSA files. You simply put it in the data folder and then add it to the Oblivion.ini as per the readme. Wrye Bash has this as an option and OBMM also has this function integrated.
 
+== Oblivion Mod Manager
+
 [[https://www.nexusmods.com/oblivion/mods/2097 | Oblivion Mod Manager]]:
 
 This has been the premier mod manager for Oblivion and the good news is that installing this into the Nehrim folder as you would into the Oblvion folder will give you the Nehrim Mod Manager (well you might have to rename it yourself). It will not interact with the regular Oblivion Mod Manager and you can set it to store it OMODs in a different directory closer to your Nehrim Directory. It is not finicky with the Oblivion.esm missing and so it is the most friendly tool to port over to Nerhim. The only file that OBMM needs to run that is not in the Nehrim folder is the Oblivion&gt;default.ini, which you can copy over to the Nehrim folder. Nehrim will not access this default ini so it will not disturb Nehrim. The one function I could not get to work was the launch the game function. OBMM also has a function similar to Archive Invalidation Invalidated called BSA redirection. If you use OBMM with this set you do not need Archive Invalidation Invalidated. [[https://www.nexusmods.com/oblivion/mods/32277 | Here is the extended version for more tools]]
 
-[[http://obse.silverlock.org/ | Oblivion Script Extender]]:
+== Oblivion Script Extender
+
+[[http://obse.silverlock.org/ | Oblivion Script Extender]]
 
 Much like the mod manager OBSE can be installed as you would in the Oblivion directory. And likewise you can create a shorcut for the OBSE launcher called 'Nehrim' or whatever. The question then remains whether mods that use OBSE can be ported over to Nehrim. It is my belief that it mostly works with Nehrim.
 
-### [[http://forums.bethsoft.com/topic/1113709-relz-oblivion-script-extender-obse-0018/page-5#entry16404075 | Here is a question]] I asked and the answer I recieved regarding OBSE and Nehrim
+### Regarding OBSE and Nehrim
 
-<pre>
+Here is a question I asked and the answer I recieved regarding OBSE and Nehrim.
+
+[[bb:Question]]
 Some of us have been attempting to port OBSE mods over and focusing on mods that are scripted and therefore do not rely much on the Oblivion.esm. What we are noticing is that some features of these mods work and some do not. Some initialize and some do not.
 
 I suppose one track could be to mod directly for nehrim but was wondering if perhaps it is something that could be handled with OBSE more directly. Perhaps there are entries that are needed from the Oblivion.esm or some other arcane thing I may not understand that is missing when trying to use OBSE with Nehrim. Maybe it needs a tweak or two so that these mods do initialize in this TC.
+[[be:]]
+[[http://forums.bethsoft.com/topic/1113709-relz-oblivion-script-extender-obse-0018/page-5#entry16404075 | Link to Question]]
 
-</pre>
-
-### [[http://forums.bethsoft.com/topic/1113709-relz-oblivion-script-extender-obse-0018/page-5#entry16411260 | Answer]]
-
-<pre>
+[[bb:Answer]]
 If OBSE is successfully loading and running the game then the .exe hasn't been modified. OBSE itself doesn't depend on anything in the .ini to the best of my knowledge. There may be a handful of commands that expect certain default objects to be present (I'm thinking things like Gold001, magic effects, skills, and game settings); if those objects are removed then some commands may fail to execute correctly. As you're probably finding, most mods are dependent on some of the data defined in Oblivion.esm as well, which will cause problems with or without OBSE.
-</pre>
+[[be:]]
+[[http://forums.bethsoft.com/topic/1113709-relz-oblivion-script-extender-obse-0018/page-5#entry16411260 | Link to Answer]]
 
-### Conclusion: Porting mods (described in the second post) that are primarly OBSE/Script driven and do not reference the Oblivion.esm are the best candidates. Mods that do reference entries in the Oblivion.esm may have certain functions that are not working or working properly.
+__Conclusion:__ Porting mods (described in the second post) that are primarly OBSE/Script driven and do not reference the Oblivion.esm are the best candidates. Mods that do reference entries in the Oblivion.esm may have certain functions that are not working or working properly.
 
-### The next set are more specifically about porting mods over to Nehrim
+~~The next set are more specifically about porting mods over to Nehrim~~
 
-[[https://www.nexusmods.com/oblivion/mods/8665 | TES4Gecko]]:
+[[https://www.nexusmods.com/oblivion/mods/8665 | TES4Gecko]]
 
 Can be used normally and you can direct it look anywhere on your computer you like for plugins. This is the best tool for reassigning masters (see post two).
 
-[[https://www.nexusmods.com/oblivion/mods/11536 | TES4Edit]]:
+[[https://www.nexusmods.com/oblivion/mods/11536 | TES4Edit]]
 
-The most current and up to date version for Fallout 3 and Oblivion found being discussed [[http://forums.bethsoft.com/topic/1047128-is-masterupdate-still-necessary/#entry15191175 | here]] and found [[https://www.nexusmods.com/fallout3/mods/1925 | here]].
+The most current and up to date version of xEdit can be found [[https://www.nexusmods.com/fallout3/mods/637 | here]]. Current discussion forum [[https://www.afkmods.com/index.php?/topic/3750-wipz-tes5edit/page/84/ | here]].
 
 There are two ways to use Tes4edit. You can leave it as it is working with the Oblivion directory and move Nehrim mods over to the Oblivion data directory for cleaning and examining, or you can change the directory it examines with Tes4Gecko as described [[http://forums.bethsoft.com/topic/1116000-mods-that-work-with-nehrim/page-6#entry16422983 | here]].
 
-<pre>
+[[bb:JdeRau]]JdeRau 
 I've just figured out a bit of a hack to make TES4Edit work with Nehrim, the only problem being that you can't use TES4Edit to work with mods in Oblivion's and Nehrim's data directories at the same time.
 
 First, you need TES4Gecko installed and working. Then again, if you're porting mods from Oblivion to Nehrim, you should probably already have it since TES4Gecko, IMHO, is the safest way of changing the master list of a plugin.
-Next, open TES4Gecko then click on the button that says "Set Directory". You will then get the option of choosing a new data directory, navigate to Nehrim's "Data" folder and make that the new directory. Once that is done, TES4Edit should show you a list of mods in Nehrim's directory instead of Oblivion's. Once you are finished, open TES4Gecko again and change the Data folder back to Oblivion's one.
-</pre>
+Next, open TES4Gecko then click on the button that says "Set Directory". You will then get the option of choosing a new data directory, navigate to Nehrim's "Data" folder and make that the new directory. Once that is done, TES4Edit should show you a list of mods in Nehrim's directory instead of Oblivion's. Once you are finished, open TES4Gecko again and change the Data folder back to Oblivion's one. 
+[[be:]]
 
 [[https://www.nexusmods.com/oblivion/mods/11367 | Construction Set]]
 
@@ -1488,9 +1502,20 @@ Now you can modding Nehrim with the TESConstructionSet.exe from the Nehrim-Direc
 <font class="red">Attention! The file NehrimData.esp should not to be loaded. It is not needed for modding and may later cause unnecessary troubles. Please only upload Nehrim.esm!</font>
 </pre>
 
-[[https://www.nexusmods.com/oblivion/mods/20516 | BOSS]]
-BOSS version 1.60+ is nerhim compatible and it will download the Nehrim Masterlist when you run the BOSS update. This masterlist is a separate list from Oblivion.
+### BOSS
+
+[[https://github.com/boss-developers/boss/releases/tag/v2.3.0 | BOSS]]
+
+BOSS version 2.3.0 is nerhim compatible and it will download the Nehrim Masterlist when you run the BOSS update. This masterlist is a separate list from Oblivion.
 [[http://forums.bethsoft.com/topic/1132338-boss-for-nehrim/ | BOSS for Nehrim thread]] - please take questions and topics about BOSS and Nehrim to that thread.
+
+If you receive an error downloading the master list you can review the solution [[https://loot.github.io/docs/help/LOOT-FAQs.html#tls | Here]]. I was able to get it working just installing the quick fix from the windows site. Some people may need to make a registry key.
+
+### LOOT
+
+[[https://github.com/loot/loot/releases | LOOT]]
+
+LOOT v0.15.1 is nerhim compatible and it will download the Nehrim Masterlist when you run the BOSS update. This masterlist is a separate list from Oblivion.
 
 ### The more complex issues
 
@@ -1643,7 +1668,7 @@ A lot of the most dramatic changes to game play can be seen in the character dev
 == Optimizations:
 These optimization methods for Oblivion should port over just fine into Nehrim. Optimizing is often another form of modding.
 
-[[http://forums.bethsoft.com/topic/1118450-oblivion-and-memory-usage/ | PyFFI]]
+[[http://forums.bethsoft.com/topic/1112284-inforelz-pyffi-python-file-format-interface/ | PyFFI]]
 The meshes that come with Nehrim are not optimized and really benefit from optimizing - as does the original meshes for Oblivion. The linked thread is a comprehensive guide to this process.
 
 [[https://www.nexusmods.com/oblivion/mods/23208 | Oblivion Stutter Remover]]
@@ -1673,85 +1698,85 @@ At this point I'm not interested in posting about mods that only partially work 
 [[https://www.nexusmods.com/oblivion/mods/39736 | Nehrim English Supplemental{{a:green}}]] The most comprehensive Unofficial English translation update.
 
 == Leveling:
-[[https://forum.sureai.net/viewtopic.php?t=3061 | Skill-Independent Attributes]]- a leveling mod for Nehrim.
+[[https://forum.sureai.net/viewtopic.php?t=3061 | Skill-Independent Attributes{{a:green}}]]- a leveling mod for Nehrim.
 NEEDS LINK | Intelligent Learning
-[[https://www.nexusmods.com/oblivion/mods/38189 | Progress Nehrim]]
-[[https://www.nexusmods.com/oblivion/mods/37547 | Exponential Levelling Nehrim]] (version for use with Progress [[https://www.nexusmods.com/oblivion/mods/38191 | here]])
-[[https://www.nexusmods.com/oblivion/mods/9914 | SPAM]] is purported to work.
+[[https://www.nexusmods.com/oblivion/mods/38189 | Progress Nehrim{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/37547 | Exponential Levelling Nehrim{{a:green}}]] (version for use with Progress [[https://www.nexusmods.com/oblivion/mods/38191 | here{{a:green}}]])
+[[https://www.nexusmods.com/oblivion/mods/9914 | SPAM{{a:orange}}]] is purported to work.
 
 == Menu Management:
-[[https://www.nexusmods.com/oblivion/mods/23404 | QZ Easy Menus]]
-[[https://www.nexusmods.com/oblivion/mods/12859 | Toggleable Quantity Prompt]]
-[[https://www.nexusmods.com/oblivion/mods/31855 | Display Stats]]
-[[https://forum.sureai.net/viewtopic.php?t=3057 | Nehrim Interface Extension]] - integrates the journal with the interface (will conflict with DarnUI)
+[[https://www.nexusmods.com/oblivion/mods/23404 | QZ Easy Menus{{a:blue}}]]
+[[https://www.nexusmods.com/oblivion/mods/12859 | Toggleable Quantity Prompt{{a:blue}}]]
+[[https://www.nexusmods.com/oblivion/mods/31855 | Display Stats{{a:blue}}]]
+[[https://forum.sureai.net/viewtopic.php?t=3057 | Nehrim Interface Extension{{a:green}}]] - integrates the journal with the interface (will conflict with DarnUI)
 
 DarUI will conflict with NIE above plus you will lose some of the cool things about Nehrim Menus and interface. I would imagine that a version that only effects inventory and other parts of menues and character sheet would be very popular - more so if combined with NIE.
 
 == HUD:
-[[https://www.nexusmods.com/oblivion/mods/40228 | Nehrim Experience Progress Bar]]
-[[https://www.nexusmods.com/oblivion/mods/34890 | Nehrim Colored Map Markers]]
-[[https://www.nexusmods.com/oblivion/mods/34905 | HUD status bars]] - may need a lot of work!!
+[[https://www.nexusmods.com/oblivion/mods/40228 | Nehrim Experience Progress Bar{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/34890 | Nehrim Colored Map Markers{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/34905 | HUD status bars{{a:blue}}]] - may need a lot of work!!
 
 == Hotkeys:
-[[https://www.nexusmods.com/oblivion/mods/34613 | Fast Equipping Nehrim]]
-[[https://www.nexusmods.com/oblivion/mods/34735 | Enhanced Hotkeys]] - amazing mod, recommended
-[[https://www.nexusmods.com/oblivion/mods/30673 | STHotkeys]]
-[[https://www.nexusmods.com/oblivion/mods/34644 | ROM Drop Lit Torches]]
+[[https://www.nexusmods.com/oblivion/mods/34613 | Fast Equipping Nehrim{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/34735 | Enhanced Hotkeys{{a:blue}}]] - amazing mod, recommended
+[[https://www.nexusmods.com/oblivion/mods/30673 | STHotkeys{{a:orange}}]]
+[[https://www.nexusmods.com/oblivion/mods/34644 | ROM Drop Lit Torches{{a:orange}}]]
 
 == Annoyance Removers:
-[[https://www.nexusmods.com/oblivion/mods/40045 | Creature Idles]] -  fixes creature animations when they get knocked down.
-[[https://forum.sureai.net/viewtopic.php?t=3186 | Donkey Flute]]
-[[https://forum.sureai.net/viewtopic.php?t=3141 | Initial Glow mods]] both armor and weapon and only armor variants
-[[https://www.nexusmods.com/oblivion/mods/37365 | Brighter Torches for Nehrim]]
-[[https://www.nexusmods.com/oblivion/mods/40558 | Harvest Flora for Nehrim]]
-[[https://www.nexusmods.com/oblivion/mods/32299 | Nehrim Camera Mod]]
-[[https://www.nexusmods.com/oblivion/mods/32656 | Nehrim Refractionless Chameleon]]
-[[https://www.nexusmods.com/oblivion/mods/34894 | Nehrim - Fast Roasting]]
-[[https://www.nexusmods.com/oblivion/mods/32411 | No Spiders]] - German mod but it shouldn't matter. There are a lot of spiders.
-[[https://www.nexusmods.com/oblivion/mods/9333 | Denock Arrows]]
-[[https://www.nexusmods.com/oblivion/mods/17894 | Zumbs Lockpicking Mod OBSE]]
+[[https://www.nexusmods.com/oblivion/mods/40045 | Creature Idles{{a:green}}]] -  fixes creature animations when they get knocked down.
+[[https://forum.sureai.net/viewtopic.php?t=3186 | Donkey Flute{{a:green}}]]
+[[https://forum.sureai.net/viewtopic.php?t=3141 | Initial Glow mods{{a:green}}]] both armor and weapon and only armor variants
+[[https://www.nexusmods.com/oblivion/mods/37365 | Brighter Torches for Nehrim{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/40558 | Harvest Flora for Nehrim{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/32299 | Nehrim Camera Mod{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/32656 | Nehrim Refractionless Chameleon{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/34894 | Nehrim - Fast Roasting{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/32411 | No Spiders{{a:green}}]] - German mod but it shouldn't matter. There are a lot of spiders.
+[[https://www.nexusmods.com/oblivion/mods/9333 | Denock Arrows{{a:orange}}]]
+[[https://www.nexusmods.com/oblivion/mods/17894 | Zumbs Lockpicking Mod OBSE{{a:orange}}]]
 
 == Combat:
-[[https://www.nexusmods.com/oblivion/mods/37943 | Nehrim Weapon Rebalance English Version]]
-[[http://modsreloaded.com/deadly-reflexes | Deadly Reflex 5 replacement plugins]]
-[[https://www.nexusmods.com/oblivion/mods/34887 | Hand-to-Hand for Nehrim]]
-[[https://www.nexusmods.com/oblivion/mods/23062 | Attribute-based and skill-based damage modifiers]]
-[[https://www.nexusmods.com/oblivion/mods/25533 | Marksman's Challenge]]
-[[https://www.nexusmods.com/oblivion/mods/27947 | Better Blocking]]
-[[https://www.nexusmods.com/oblivion/mods/32651 | Phitt's Phighting Phixes]]
+[[https://www.nexusmods.com/oblivion/mods/37943 | Nehrim Weapon Rebalance English Version{{a:green}}]]
+[[http://modsreloaded.com/deadly-reflexes | Deadly Reflex 5 replacement plugins{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/34887 | Hand-to-Hand for Nehrim{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/23062 | Attribute-based and skill-based damage modifiers{{a:blue}}]]
+[[https://www.nexusmods.com/oblivion/mods/25533 | Marksman's Challenge{{a:blue}}]]
+[[https://www.nexusmods.com/oblivion/mods/27947 | Better Blocking{{a:orange}}]]
+[[https://www.nexusmods.com/oblivion/mods/32651 | Phitt's Phighting Phixes{{a:orange}}]]
 
 
 == Stealth:
-[[https://www.nexusmods.com/oblivion/mods/34773 | Nehrim Sneak Fix]] - may be outdated with 1.0.8.0 patch.
-[[https://www.nexusmods.com/oblivion/mods/6359 | StealhOverhaul_Nehrim]]
-[[https://www.nexusmods.com/oblivion/mods/34675 | Realistic Sneak for NPCs]]
+[[https://www.nexusmods.com/oblivion/mods/34773 | Nehrim Sneak Fix{{a:green}}]] - may be outdated with 1.0.8.0 patch.
+[[https://www.nexusmods.com/oblivion/mods/6359 | StealhOverhaul_Nehrim{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/34675 | Realistic Sneak for NPCs{{a:orange}}]]
 
 == Companions:
-[[https://www.nexusmods.com/oblivion/mods/29652 | Companion Master]]
+[[https://www.nexusmods.com/oblivion/mods/29652 | Companion Master{{a:orange}}]]
 
 == Immersion-Realism:
 [[https://www.nexusmods.com/oblivion/mods/37088 | Basic Primary Needs -Nehrim- ]] - Status compatible. Designed to work with Nehrim
-[[https://www.nexusmods.com/oblivion/mods/35702 | Nehrim Improvment]]
-[[https://www.nexusmods.com/oblivion/mods/35848 | Nehrim Bedrolls]]
-[[https://www.nexusmods.com/oblivion/mods/12074 | SM Encumbrance and Fatigue]]
-[[https://www.nexusmods.com/oblivion/mods/21721 | Kuertee Inventory is a backpack]] - not 100% sure but reported that it works.
-[[https://www.nexusmods.com/oblivion/mods/38266 | Real Sleep Extended Nehrim]]
+[[https://www.nexusmods.com/oblivion/mods/35702 | Nehrim Improvment{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/35848 | Nehrim Bedrolls{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/12074 | SM Encumbrance and Fatigue{{a:orange}}]]
+[[https://www.nexusmods.com/oblivion/mods/21721 | Kuertee Inventory is a backpack{{a:orange}}]] - not 100% sure but reported that it works.
+[[https://www.nexusmods.com/oblivion/mods/38266 | Real Sleep Extended Nehrim{{a:green}}]]
 
 == Graphic Improvements:
-[[https://www.nexusmods.com/oblivion/mods/38301 | Nehrim Landscape LOD Textures]] by Xerus - finally better land LOD.
-[[https://www.nexusmods.com/oblivion/mods/36437 | Robert Male Body V5 for Nehrim]]
+[[https://www.nexusmods.com/oblivion/mods/38301 | Nehrim Landscape LOD Textures{{a:green}}]] by Xerus - finally better land LOD.
+[[https://www.nexusmods.com/oblivion/mods/36437 | Robert Male Body V5 for Nehrim{{a:orange}}]]
 
 == Environments/Weather:
-[[https://www.nexusmods.com/oblivion/mods/40130 | All Natural Nehrim]] by AN team.
+[[https://www.nexusmods.com/oblivion/mods/40130 | All Natural Nehrim{{a:green}}]] by AN team.
 
 == Homes:
-[[https://www.nexusmods.com/oblivion/mods/34838 | Nehrim - The Cloud Tower]]
-[[https://www.nexusmods.com/oblivion/mods/35101 | Nehrim Edelweiss Haus]]
-[[https://www.nexusmods.com/oblivion/mods/38959 | Andrews Terminus System]] -  both a home and new travel system more immersive than fast travel being activated.
+[[https://www.nexusmods.com/oblivion/mods/34838 | Nehrim - The Cloud Tower{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/35101 | Nehrim Edelweiss Haus{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/38959 | Andrews Terminus System{{a:green}}]] -  both a home and new travel system more immersive than fast travel being activated.
 
 == Other:
-[[https://www.nexusmods.com/oblivion/mods/32324 | Ring of Console Nehrim]]
-[[https://www.nexusmods.com/oblivion/mods/36325 | Nehrim Fast Travel]]
+[[https://www.nexusmods.com/oblivion/mods/32324 | Ring of Console Nehrim{{a:green}}]]
+[[https://www.nexusmods.com/oblivion/mods/36325 | Nehrim Fast Travel{{a:green}}]]
 
 
 == OBSE Plugins that so far work:
@@ -1763,11 +1788,11 @@ DarUI will conflict with NIE above plus you will lose some of the cool things ab
 [[https://www.nexusmods.com/oblivion/mods/30054 | OBGEv3]]
 
 == Replacers-Textures:
-[[http://evercharmer.blogspot.com/2012/05/nehrim-sound-and-graphics-mods.html | Evercharmer's Nehrim Mod list]] - a list of replacers recommended to work with Nehrim.
+[[http://evercharmer.blogspot.com/2012/05/nehrim-sound-and-graphics-mods.html | Evercharmer's Nehrim Mod list{{a:green}}]] - a list of replacers recommended to work with Nehrim.
 As far as replacers go this is an area that is large and I'm not going to link everything that can be replaced. You can figure it out. Body mods are generally good and realizing that the Aeterna use mystic Elves resources makes finding replacers for them easier.
 
 . (NEEDS LINK | Flora/Landscape retexture) - Vurt has relased landscape textures specifically with Nehrim in mind. Check back for more updates!
-[[https://www.nexusmods.com/oblivion/mods/35454 | QTP3 Dark Cave Textures for Nehrim]] ... and see above the new LOD textures and also by Xerus [[https://www.nexusmods.com/oblivion/mods/38081 | Nehrim HiRes Palm Tree Retexture]]
+[[https://www.nexusmods.com/oblivion/mods/35454 | QTP3 Dark Cave Textures for Nehrim{{a:green}}]] ... and see above the new LOD textures and also by Xerus [[https://www.nexusmods.com/oblivion/mods/38081 | Nehrim HiRes Palm Tree Retexture]]
 
 == The Bashed Patch:
 Very few of the settings in the bashed patch will work. But it can still be used for camera tweaks, and clothing tweaks for certain. Perhaps more - I've just not tested. You can also merge bashable mods with it. I've not seen anything level list related at all.
