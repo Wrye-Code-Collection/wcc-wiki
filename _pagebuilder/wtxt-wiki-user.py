@@ -469,7 +469,7 @@ def wtxtToHtml(srcFile, outFile=None):
     reImageCaptionUrl = re.compile(r'{{image-cap-url:(.+?)}}')
     # --Exclude from Paragraphs
     # reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<a\s{1,3}(class=".+?)?href.+?\>)|(^\<img\s{1,3}src.+?\>)|^\u00A9|^\<strong|^\<[bB]\>|(^{% include image)')
-    reHtmlNotPar = re.compile(r'\<h\d[>]?|<hr>|{{CONTENTS|class="drkbtn"|{% raw %}|{% endraw %}|<[\/]?div>')
+    reHtmlNotPar = re.compile(r'\<h\d[>]?|<hr>|{{CONTENTS|class="drkbtn"|{% raw %}|{% endraw %}|<[\/]?div>|<div id=|<div class=|<[\/]?iframe')
 
     def imageInline(maObject):
         image_line = maObject.group(1).strip()
