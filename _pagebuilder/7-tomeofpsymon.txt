@@ -871,7 +871,7 @@ LOD Compilation-BAIN
 ├[20 [[https://www.nexusmods.com/oblivion/mods/18677 | Normal Maps CorePC Vibrant]] ]
 ├[20 [[https://www.nexusmods.com/oblivion/mods/26911 | Normal Maps Deathb0rn 512]] ]
 ├[20 Normal Maps Deathb0rn Vanilla]
-├[20 [[https://www.nexusmods.com/oblivion/mods/11441 Normal Maps Qarl 1024 Reduced]] ]
+├[20 [[https://www.nexusmods.com/oblivion/mods/11441 | Normal Maps Qarl 1024 Reduced]] ]
 ├[20 Normal Maps Qarl 2048 Reduced]
 ├[20 [[https://www.nexusmods.com/oblivion/mods/18497/ | Normal Maps Qarl 4096 Compressed]] ]
 ├[20 Normal Maps Qarl 512 Better Looking]
@@ -1636,7 +1636,7 @@ What I would recommend is if a mod has scripts, that you check them using the CS
 
 These are the observations I was able to make before my computer broke down, so now i'm getting it fixed, so I might not remember everything I learned 100%. Nevertheless, I hope this helps your Nehrim modding/converting adventures some.
 </pre>
-and [[http://forums.bethsoft.com/topic/1118767-nehrim-and-mods/?p=16500972 | an idea]]:
+and [[http://forums.bethsoft.com/topic/1118767-nehrim-and-mods/page-3#entry16500972 | an idea]]:
 
 <pre>
 In fact, I had an idea for a Nehrim modders resource someone could make if they're interested. (I would do this myself, but I'm still waiting for my PC to be fixed... if you do it though before I get to it at least give me credit for the idea)
@@ -1678,8 +1678,7 @@ By having OBSE working for Nehrim this is easy to install and use.
 I know this works with Nehrim because when Nehrim installed it pulled this version of the exe out of my Oblivion folder. This is for operating systems that can handle more memory.
 
 Clean your mods
-[[https://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide a thorough guide]]
-[[https://www.uesp.net/wiki/Tes4Mod:Tes4Edit#Cleaning_a_Dirty_Plugin | a simple walkthrough]]
+[[https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#ModCleaningProcess | xEdit Documentation]]
 
 This may not matter for badly ported mods that still reference or duplicate the Oblivion.esm, but in exploring mods Nehrim I've found that there are edits that are duplicates and I've no doubt that as more dungeon and quest mods come out that deletions of the Nehrim.esm will come with them.
 
