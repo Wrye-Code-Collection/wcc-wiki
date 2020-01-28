@@ -444,10 +444,10 @@ body {
     color: var(--toc-header-text);
   }
   iframe {
-	margin: 0.38rem 0 0.38rem 0.95rem;
+	  margin: 0.38rem 0 0.38rem 0.95rem;
   }
   p {
-	margin: 0 0 0 0.95rem;
+	  margin: 0 0 0 0.95rem;
     color: var(--body-text);
   }
   code {
@@ -597,31 +597,24 @@ input[id^="spoiler"]:checked+label {
 }
 
 /* the spoiler tag text box */
-input[id^="spoiler"]~.spoiler {
-  width: auto;
+input[id^="spoiler"]~.main-content {
   height: 0;
   overflow: auto;
   opacity: 0;
-  margin: 0.25rem;
-  padding: 0.25rem;
-  color: var(--purple-text);
+	margin: 0 0 0 0.95rem;
   background-color: var(--code-background);
   border: 2px;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
+  font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
   transition: all .6s;
-  white-space: pre-wrap;
-  p {
-    color: inherit;
-  }
 }
 
 /* formatting for the text in the box such as padding */
-input[id^="spoiler"]:checked+label+.spoiler {
+input[id^="spoiler"]:checked+label+.main-content {
   height: auto;
   opacity: 1;
-  padding: 10px;
 }
 
 .main-content {
