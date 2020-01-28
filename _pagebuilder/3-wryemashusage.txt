@@ -79,7 +79,7 @@
           * dds files
     * Note that most texture replacement packs have the second form.
 * **Usage**
-  * Go to Mods tab, right click on the main column header and select "Replacers..." -- this will bring up a checkbox list of the available replacers.
+  * Go to Mods tab, right click on the main column header and select "Replacers..." -em- this will bring up a checkbox list of the available replacers.
   * Checking a replacer will apply it. (Large replacer collections may take a while to apply.)
   * Unchecking a replacer will remove it.
 
@@ -90,25 +90,21 @@
 
 === General Advice
 * **Run Repair All**
-  * Run Repair All on old save files -- this will often find problems to fix.
+  * Run Repair All on old save files -em- this will often find problems to fix.
   * Run Repair All once in a while after editing Master lists.
 * **Use Duplicate**
   * Before making major changes to a save file, create a duplicate and make the changes on it.
 
 == Features ===============================================================
 * **Manage Mod Files and Load List**
-  * Select load mods from a list that can be sorted by: File Name, Modification
-    date, Size, Mod Author, Load Order, Selection State and file type (Esm/Esp).
-  * Select mods by loads lists which you define. E.g., define a Bethesda Mods
-    list, or an LGNPC or Astarsis Heads list.
+  * Select load mods from a list that can be sorted by: File Name, Modification date, Size, Mod Author, Load Order, Selection State and file type (Esm/Esp).
+  * Select mods by loads lists which you define. E.g., define a Bethesda Mods list, or an LGNPC or Astarsis Heads list.
   * Hide rarely used mods. (Yes, there's an Unhide command too!)
   * Delete and Duplicate Mods.
   * Edit file name, modification date, author, description and master list.
-  * Automatically reset modification dates after file has been modified. (This
-    substantially reduces doubling problems.)
+  * Automatically reset modification dates after file has been modified. (This substantially reduces doubling problems.)
 * **Manage Save Games**
-  * View a list of your save games sorted by: File Name, Save Name, Player Name,
-    Current Cell, Load Status (see below).
+  * View a list of your save games sorted by: File Name, Save Name, Player Name, Current Cell, Load Status (see below).
   * Delete, Duplicate and Hide Save Games.
   * Edit file name, Save Name and master list.
 * **Reduce/Eliminate Doubling**
@@ -123,18 +119,11 @@
 * **Run Additional Commands**
   * View File Statistics. See the number and size of record types in any file.
 * **Create Your Own Utilities**
-  * Wrye Mash provides libraries and an interface that make it (relatively)
-    easy to define new save and file munching utilities and make them through
-    the Wrye Mash interface.
-  * You can also define your own command line utilities for munching on data
-    files. (The result is not as pretty as adding your utility to Wrye Mash,
-    but it's a lot easier to do, and allows you to ignore the roughly twice
-    as complex interface code.)
+  * Wrye Mash provides libraries and an interface that make it (relatively) easy to define new save and file munching utilities and make them through the Wrye Mash interface.
+  * You can also define your own command line utilities for munching on data files. (The result is not as pretty as adding your utility to Wrye Mash, but it's a lot easier to do, and allows you to ignore the roughly twice as complex interface code.)
 * **Modify Anything**
-  * Because the entire source code is available, and because no special tools
-    are required, you can modify whatever you like.
-  * Of course, making modifications that don't break the program requires care,
-    but some things are relatively easy and safe to modify
+  * Because the entire source code is available, and because no special tools are required, you can modify whatever you like.
+  * Of course, making modifications that don't break the program requires care, but some things are relatively easy and safe to modify
     * Context Menu structure.
     * Status icons and highlight colors.
     * Toolbar/launcher buttons.
@@ -184,7 +173,7 @@ You can download a standalone EXE that doesn't require Python to be installed.
 * **Do this if either Morrowind or Python is in a non-standard directory.**
   * Wrye Mash is not a regular program, but rather a script file. To run Mash, the Wrye Mash shortcut needs to tell Windows to: 1) find the Python script file interpreter (__pythonw.exe__), and 2) use it to run the __mash.py__ script file that is located in the 3) __Morrowind\Mopy__ directory.
   * Ordinarily the Wrye Mash shortcut does this pretty easily, but if either Python or Morrowind is in a non-standard directory, then you need to alter it to point to the new directories. The rest of this section shows you how to do that.
-* Copy the "Wrye Mash for Python 2.x" shortcut and give the copy a new name (e.g., "My Mash 2.x") -- this protects your changes from being overwritten by future Mash releases.
+* Copy the "Wrye Mash for Python 2.x" shortcut and give the copy a new name (e.g., "My Mash 2.x") -em- this protects your changes from being overwritten by future Mash releases.
 * Right click on the new shortcut, select __Properties__. This will open the Properties window for the shortcut.
 * Go to the __Shortcut__ tab in the Properties window.
 * If **Morrowind** is in a non-standard directory, then edit the __Start In__ field to be
@@ -201,12 +190,11 @@ You can download a standalone EXE that doesn't require Python to be installed.
   * Open a command shell (Start: Programs: Accessories: Command Prompt).
   * __chdir__ to the Mopy directory. "chdir" means "change directory". E.g.: <code>chdir C:\Program Files\Bethesda Softworks\Morrowind\Mopy</code>
   * Type: <code>c:\python24\python.exe mash.py 0</code>
-    * If you have a different version/location of python, adapt the first
-    argument accordingly.
+    * If you have a different version/location of python, adapt the first argument accordingly.
     * That's the number zero at the end, ~~not~~ the letter 'o'.
   * Doing this will cause any error messages that Mash generates on start to spew to the command shell. This is the bugdump.
 * __Dealing with the Bugdump__
-  * First, **look at it!** -- especially the last several lines -- this will often give you a good clue as to what the problem is, and you may be able to resolve it on your own.
+  * First, **look at it!** -em- especially the last several lines -em- this will often give you a good clue as to what the problem is, and you may be able to resolve it on your own.
   * Common Problems
     * **Can't find mash.py:** Make sure that you chdir to the Mopy directory first.
   * If that doesn't help, then go to the forums and post the whole bugdump. Preferably, you should post the dump in the **Relz/Help** topic (see [[#WryeMash|Discussion]] link at top of page) or you can start a new topic. Be sure to mention "Wrye Mash" in the text of the post.
@@ -214,21 +202,17 @@ You can download a standalone EXE that doesn't require Python to be installed.
 
 == Usage ======================================================================
 === Morrowind Install Directory
-* If you have a non-standard Morrowind Install directory, then the first time
-  you start, Mash will ask for the correct location. In subsequent startups,
-  Mash will remember the new directory and go directly to it without asking you.
+* If you have a non-standard Morrowind Install directory, then the first time you start, Mash will ask for the correct location. In subsequent startups, Mash will remember the new directory and go directly to it without asking you.
 
 === Overview
-* The interface is divided into two tabs: **Mods and Saves.** Each of these
-  is in turn divided into a list and a details view.
-* Commands are accessed through **context menus** which are invoked by
-  right-clicking on either an item or a column heading. The image above shows the context menu for the mod list column header.
+* The interface is divided into two tabs: **Mods and Saves.** Each of these is in turn divided into a list and a details view.
+* Commands are accessed through **context menus** which are invoked by right-clicking on either an item or a column heading. The image above shows the context menu for the mod list column header.
 * There is also a **Morrowind Launch** button at the left side of the status bar.
 
 == Installers Tab =============================================================
 The Installers tab provides a mod package installer facility (called Bain). It makes mod installation simpler, and perhaps more importantly, it makes mod UN-installation simple and safe. It's also useful for resolving resource file conflicts between different mods.
 
-Bain has been backported from Wrye Bash -- hence the name "Bain", aka Bash Installers.  (Yes, I probably should call it "Main", but that would be too boring.) If you're familiar with Timeslip's OBMM or MWMM, then Bain is fairly similar, but has some substantial advantages (and some disadvantages) compared to them. For a comparison, see [[http://www.uesp.net/wiki/Tes4Mod:Wrye_Bash/Bash_vs._OBMM | Bash vs. OBMM]].
+Bain has been backported from Wrye Bash -em- hence the name "Bain", aka Bash Installers.  (Yes, I probably should call it "Main", but that would be too boring.) If you're familiar with Timeslip's OBMM or MWMM, then Bain is fairly similar, but has some substantial advantages (and some disadvantages) compared to them. For a comparison, see [[http://www.uesp.net/wiki/Tes4Mod:Wrye_Bash/Bash_vs._OBMM | Bash vs. OBMM]].
 
 Note that if you have been using the [[#ManageTextureReplacers|Replacers Feature]], then you should upgrade/switch to using Bain instead, since Bain completely supercedes Replacers.
 
@@ -259,7 +243,7 @@ Bain will search for and display packages from the (new) __Morrowind\Installers_
   * Installed packages will be marked with a "+".
 * __Icon Colors__
 . Icon colors indicate the degree to which the package is synchronized with the Morrowind\Data Files directory:
-  * Green: Package is fully synced. Note that a package can be green even if it is not "Active". E.g. if you have two identical packages and one is (fully) installed, then it will be green and checked. But the identical package will also be green -- since it too is fully synced with the data directory.
+  * Green: Package is fully synced. Note that a package can be green even if it is not "Active". E.g. if you have two identical packages and one is (fully) installed, then it will be green and checked. But the identical package will also be green -em- since it too is fully synced with the data directory.
   * Red: Some files in the package are missing from the data directory.
   * Orange: All package files are present in the data directory, but some esps/esms are not identical. (E.g. another package installed an alternative version of that file, or the user modified the file after installation.)
   * Yellow: All package files are present in the data directory, but some resource files are not identical. (E.g. another package installed an alternative version of that file, or the user modified the file after installation.)
@@ -281,7 +265,7 @@ Bain will search for and display packages from the (new) __Morrowind\Installers_
 Details for the currently selected package will be show on the right. There are (currently) three fields here:
 * __Info Tabs__
 . The tabs at the top display several types of information relevant to the current mod. Note that much of this information is dependent on the install status of the mod and sometimes its order.
-  * General: Shows summary info and the files to be installed -- as determined by sub-package, esp/m, voice filtering, etc.
+  * General: Shows summary info and the files to be installed -em- as determined by sub-package, esp/m, voice filtering, etc.
   * Matched: Shows files which are identical to current data directory files.
   * Missing: Files which are missing from the data directory.
   * Mismatched: Files which are present in the data directory, but which aren't identical to the package's version of those files.
@@ -344,7 +328,7 @@ If you make a practice of renaming your installed espm files (as I do), then Bai
   * You'll see that the file has two columns.
     * On the left is "Official" which is the "official" name of the mod, i.e. the name of the mod that you'll find in the archive package that you downloaded.
     * On the right is "Local", which is the "local" name of the mod, i.e. the name you prefer for the mod.
-    * The way this works is simple -- when mash encounters a mod with a specified official name, it will map it to the local name. All install, uninstall, etc. commands will then act as if the file in the mod actually had the local name.
+    * The way this works is simple -em- when mash encounters a mod with a specified official name, it will map it to the local name. All install, uninstall, etc. commands will then act as if the file in the mod actually had the local name.
   * So to define entries, the easiest thing to do is:
     * Open Mash and go to the Installers tab. Find a mod for which you have changed the name.
     * Go to the Missing tab, select and copy the name of the missing mod, then paste that into the Official column.
@@ -363,11 +347,11 @@ The following commands are available from context menu of packages.
   * __Refresh:__ Refreshes all info for selected packages. Useful for updating info when package has been modified outside of Mash.
   * __Move To...__ Moves selected packages(s) to specified position. If multiple packages are active, they'll retain their relative order, but move as a block to the selected position.
 * __Configuration__
-  * __Has Special Directories:__ Ordinarily, Bain will only recognize a limited set of subdirectories of the Data directory -- and files that come from other directories will be skipped over. However if a package has special directories (usually restricted to OBSE scripts), checking this option will cause Bain to recognize these special directories as valid subdirectories (and thus allow them to be installed).
+  * __Has Special Directories:__ Ordinarily, Bain will only recognize a limited set of subdirectories of the Data directory -em- and files that come from other directories will be skipped over. However if a package has special directories (usually restricted to OBSE scripts), checking this option will cause Bain to recognize these special directories as valid subdirectories (and thus allow them to be installed).
 * __Install__
   * __Anneal:__ Will "anneal" the selected file(s). This will install any missing files and correct any install order errors (aka "underrides").
   * __Install:__ Will do an "in-order" install. I.e. it will fully install the package except for files that are masked by higher order packages.
-  * __Install Missing:__ The same as Install, except that it only installs missing files -- i.e. it will not override any currently existing files.
+  * __Install Missing:__ The same as Install, except that it only installs missing files -em- i.e. it will not override any currently existing files.
   * __Install Last:__ Moves the package to the end of the order list and installs it.
   * __Uninstall:__ Uninstalls the package. If Auto-Anneal is active, then files from lower order packages will automatically be restored as necessary.
 * __Project__
@@ -397,39 +381,30 @@ The following commands are available by right clicking on the column header of t
 
 === Mods List
 * **Sorting**
-  * Sort Mod list items by (left) clicking on a column header, or by
-    using the sort submenu of the column popup menu.
-  * Reverse a sort by redoing it. E.g., left click on the File column header
-    twice in a row.
-    * "Load Order" is the exception -- it will always appear in correct order.
-  * Force ESMS to the top of the list by selecting "Sort by Type" from the
-    context menu.
-  * Force selected mods to the top of the list by selecting "Sort by Selection"
-    from the context menu.
+  * Sort Mod list items by (left) clicking on a column header, or by using the sort submenu of the column popup menu.
+  * Reverse a sort by redoing it. E.g., left click on the File column header twice in a row.
+    * "Load Order" is the exception -em- it will always appear in correct order.
+  * Force ESMS to the top of the list by selecting "Sort by Type" from the context menu.
+  * Force selected mods to the top of the list by selecting "Sort by Selection" from the context menu.
 * **Selecting Load Mods**
   * Select load mods by clicking on the checkbox next to their file name.
   * Note: When a mod is selected, its master mods will also be selected.
-  * Conversely, when an esm is unselected, any mods that depend on it will
-    also be unselected.
+  * Conversely, when an esm is unselected, any mods that depend on it will also be unselected.
 * **Line Colors**
   * **Blue:** An esm file.
-  * **Pink:** A file that shares a modification date/time with another file.
-    Not a problem unless they're both selected, in which case, the lines turn...
-  * **Red:** A file that shares a modification date/time with another file -- with
-    both files being selected. This should definitely be corrected! Use details view to change the modification date of one of the files by a second or more.
+  * **Pink:** A file that shares a modification date/time with another file. Not a problem unless they're both selected, in which case, the lines turn...
+  * **Red:** A file that shares a modification date/time with another file -em- with both files being selected. This should definitely be corrected! Use details view to change the modification date of one of the files by a second or more.
   * **Orange:** Overloaded Exclusion Group (See below.)
 * **Checkbox Colors**
-  * Checkbox colors indicate the "health" of the mod file's master
-    files. See [[#| Master List Updating]] below. Basically, with mod files, you're okay unless the checkbox is red -- which indicates that a master file is missing.
+  * Checkbox colors indicate the "health" of the mod file's master files. See [[#| Master List Updating]] below. Basically, with mod files, you're okay unless the checkbox is red -em- which indicates that a master file is missing.
 * __Exclusion Groups__
   * Oftentimes users will have different versions of the same mod, or different mods which do the same sort of thing in an incompatible way. Exclusion groups can be used to help flag these mods so that you don't accidentally load more than one at once. When an exclusion group is violated, all violating mods will be highlighted in orange.
-  * Defining an exclusion group is easy -- just change the name of the mod to include a comma. The part of the name before the comma is the exclusion group.
+  * Defining an exclusion group is easy -em- just change the name of the mod to include a comma. The part of the name before the comma is the exclusion group.
 
 === Mod Details
 * Make changes to the file in the details view.
 * **File Name** Change the file name.
-  * Note that changes to the file name are **not** automatically reflected in
-    any mods that have the current mod as their master. See Doubling below.
+  * Note that changes to the file name are **not** automatically reflected in any mods that have the current mod as their master. See Doubling below.
 * **Modification Time** Change the file modification time.
   * Note that this affects file order. See Doubling below.
 * **Author** Change the author name.
@@ -447,42 +422,32 @@ The following commands are available by right clicking on the column header of t
 * **Save List...** Saves your currently selected files to a new load list.
 * **Edit Lists...** Allows you to delete and rename previously defined load lists.
 * **[Load List]** Selecting a load list causes all of its files to be selected.
-  This action is not exclusive, but ~~additive~~ -- i.e., the files will be selected ~~in addition~~ to the currently selected files.
+. This action is not exclusive, but ~~additive~~ -em- i.e., the files will be selected ~~in addition~~ to the currently selected files.
 
 === File Commands
 <img src="img/Wrye Mash_04.png" width="361" height="222" alt="File Commands">
 * **File Operations**
   * **Backup** Create a backup of the file. Note that backups are also automatically created (see "Revert to Backup" below). If you want to be sure that you can late restore from a specific point, use Duplicate or Snapshot instead.
   * **Duplicate** Creates a duplicate of the file in the mods directory.
-  * **Snapshot...** Creates a snapshot copy of the current mod in a subdirectory
-    (Mash\Snapshots).
-    * Snapshots are indicated by appending to "-l.n.m" to the root of the
-      file name. E.g., "My.esp" becomes "My-01.esp" or "My Mod v1.01.esp" becomes "My Mod v1.01-01.esp".
-    * Note that Mash will automatically generate the next available snapshot
-      number. However, you are free to choose a different number if you like.
-    * Also, if there's an existing version line (e.g., "Version NN.MM-LL")
-      in the description field of the mod, then it will update with the new version plus snapshot number when the snapshot is saved.
+  * **Snapshot...** Creates a snapshot copy of the current mod in a subdirectory (Mash\Snapshots).
+    * Snapshots are indicated by appending to "-l.n.m" to the root of the file name. E.g., "My.esp" becomes "My-01.esp" or "My Mod v1.01.esp" becomes "My Mod v1.01-01.esp".
+    * Note that Mash will automatically generate the next available snapshot number. However, you are free to choose a different number if you like.
+    * Also, if there's an existing version line (e.g., "Version NN.MM-LL") in the description field of the mod, then it will update with the new version plus snapshot number when the snapshot is saved.
   * **Delete** Deletes the file... **Permanently.**
     * Also deletes all backups and temp files, but **not** snapshots.
   * **Hide** Moves the file to a subdirectory (Mash\Hidden).
-    * Use this on seldom used mods to keep them from cluttering the mods
-      listing.
-    * This is especially useful when modding, since the TESCS Data Files list
-      cannot be sorted.
+    * Use this on seldom used mods to keep them from cluttering the mods listing.
+    * This is especially useful when modding, since the TESCS Data Files list cannot be sorted.
     * Note that there's a corresponding "Unhide..." command in the column context menu.
     * If the file's group is defined (e.g. Heads), and if the Mash\Hidden directory has a subdirectory with the same name (e.g. Mash\Hidden\Heads), then the file will be hidden in it.
   * **Sort** Reorders selected mods to make them sort in alphabetical order.
     * Modified time of first mod is set to earliest modified time of set. Other mods follow it at one minute increments.
     * **WARNING: Some mods must be loaded in a certain order (e.g., a patch mod must be loaded after the original). Sort may break that required ordering! Use sort with extreme caution! Note too that there is no "undo" command for sort!**
   * **Revert to Backup** Reverts the file to the last Backup made of it.
-    * Mash will make a backup of a file the first time it is significantly
-      changed in an application session.
-    * E.g., if you make two or three changes to a file in a given application
-      session, then only the first change will generate a backup.
-  * **Revert to First Backup** Same as Revert to Backup, only it reverts to
-    the very first backup that Mash made of the file.
-    * The first backup is generated the first time that Mash alters a file, and
-      is never overwritten. Hence it is guaranteed to be free of any problem that Mash might introduce.
+    * Mash will make a backup of a file the first time it is significantly changed in an application session.
+    * E.g., if you make two or three changes to a file in a given application session, then only the first change will generate a backup.
+  * **Revert to First Backup** Same as Revert to Backup, only it reverts to the very first backup that Mash made of the file.
+    * The first backup is generated the first time that Mash alters a file, and is never overwritten. Hence it is guaranteed to be free of any problem that Mash might introduce.
     * Of course, this also may mean that it's badly out of date!
   * **Revert to Snapshot** Reverts the file to a selected snapshot.
 
@@ -501,22 +466,16 @@ The following commands are available by right clicking on the column header of t
 === Export/Import Dialog
 * From the mods context menu, select **Export: Dialog** to export all dialog
   text to a file, or select **Import: Dialog** to reimport dialog text from a file.
-  * The purpose of these functions is to facilitate spellchecking and general
-    text editing. Accordingly, **only the text of the dialog is exported.** (I.e., this is a more focused dialog export/import than the similar TESCS function.)
+  * The purpose of these functions is to facilitate spellchecking and general text editing. Accordingly, **only the text of the dialog is exported.** (I.e., this is a more focused dialog export/import than the similar TESCS function.)
 * **Format**
-  * Exported text is sorted by speaker/topic. However, imported text may be
-    in any order, and can be trimmed to a subset of the originally exported set of entries.
-  * Lines beginning with '#' signs are comments and are ignored. Feel free to
-    add additional comment lines to the exported file -- they'll be ignored in import.
-  * Lines beginning with '@' encode the dialog type, topic and info entry
-    number. **Do not alter these lines!**
+  * Exported text is sorted by speaker/topic. However, imported text may be in any order, and can be trimmed to a subset of the originally exported set of entries.
+  * Lines beginning with '#' signs are comments and are ignored. Feel free to add additional comment lines to the exported file -em- they'll be ignored in import.
+  * Lines beginning with '@' encode the dialog type, topic and info entry number. **Do not alter these lines!**
 * **Trimming**
   * Text is automatically trimmed to some degree on import...
   * Leading and trailing spaces and new lines are trimmed.
-  * Some characters are replaced or deleted: curly quotes are straightened;
-    single character ellipses are replaced with multi-character ellipses; reserved characters (@, #) are deleted.)
-  * Any remaining text over 511 bytes will be trimmed. If such trims are made,
-    a window will popup detailing them.
+  * Some characters are replaced or deleted: curly quotes are straightened; single character ellipses are replaced with multi-character ellipses; reserved characters (@, #) are deleted.)
+  * Any remaining text over 511 bytes will be trimmed. If such trims are made, a window will popup detailing them.
 
 === Export/Import Scripts
 * These paired commands will export all scripts in a mod to a text file, and then subsequently reimport them.
@@ -527,12 +486,9 @@ The following commands are available by right clicking on the column header of t
   * **Note: This feature is only useful for modders working with LCV Schedules.**
 * **Schedule Generation Steps**
   * Generate the text file.
-    * The current LCV release includes its source text file. This can be
-      used as example when developing the schedule for a new location, or as starting point, when modifying an existing schedule.
-    * The source text file must contain the complete schedule for at least one
-      location.
-  * Select the esp to import schedules to and use the Import: LCV Schedules
-    command on it.
+    * The current LCV release includes its source text file. This can be used as example when developing the schedule for a new location, or as starting point, when modifying an existing schedule.
+    * The source text file must contain the complete schedule for at least one location.
+  * Select the esp to import schedules to and use the Import: LCV Schedules command on it.
   * Open the esp in TESCS and make in extra modifications that are required:
     * Be sure to include the current LCV Schedules esp in your load list.
     * Add state variables (SC_TownName_State)
@@ -543,12 +499,9 @@ The following commands are available by right clicking on the column header of t
       * Script: SC_TownName_Master
     * Add any extra items needed. E.g., boats for fishermen, etc.
   * Compile scripts, either manually or by using the **Recompile All** command.
-    * If you only imported a schedule for one town, then recompiling by hand is
-      probably simplest.
-    * If you imported schedule for several towns, then **Recompile All** is
-      probably best.
-    * Errors in your schedule files are most likely to show up during
-      the compile process. To fix them, go back and fix your text file, then re-import and recompile.
+    * If you only imported a schedule for one town, then recompiling by hand is probably simplest.
+    * If you imported schedule for several towns, then **Recompile All** is probably best.
+    * Errors in your schedule files are most likely to show up during the compile process. To fix them, go back and fix your text file, then re-import and recompile.
   * Save esp
     * Note that **Recompile All** typically recompiles several base Morrowind scripts: DagothUrCreature1, EndGame, Float and LorkhanHeart. After you save, you should use the Details view to delete these modified scripts from your esp. Then reload the esp and save again to completely eliminate these bogus scripts.
 
@@ -564,7 +517,7 @@ The following commands are available by right clicking on the column header of t
   * **Make sure you have your full load list loaded, then right click on the "Mashed Lists" esp and select "Import: Merged Lists".**
   * Don't forget to update the masters on your save game when you're done.
 * **Tech Notes**
-  * Mash's Merge List function is a bit more efficient that TesTools -- if there's no need to merge lists, then it won't.
+  * Mash's Merge List function is a bit more efficient that TesTools -em- if there's no need to merge lists, then it won't.
   * In merging lists, Mash ignores lists from any of the three Bethesda Masters, under the assumption that anything in them will also be in any plugin that tries to modify them.
   * In merging lists, Mash ignores any mod whose author is "Wrye Mash".
   * When merging two lists:
@@ -612,7 +565,7 @@ The following commands are available by right clicking on the column header of t
   * TES files are only semi-ordered. Some records **must** be in a certain order, e.g. DIALs and their associated INFO's form a block. Other records seem to have a record preferred by TESCS/Morrowind, while other types of records are loosely intermixed (e.g., most object type records).
   * The sort record commands follows both the required and preferred record order rules, but also orders records more strictly by record type and by record id (when available, and when not in conflict with other rules). This stricter ordering makes records easier to find.
 * **Inherited Order**
-  * Records that are modifications of pre-existing records (i.e., records inherited from master esms and even from esps selected in the load list) will be reordered when TESCS saves the esp file so that the inherited records are moved to the top of their TESCS save group (e.g., the "most objects" group), in the order that TESCS originally saw them in -- which is fairly disordered.
+  * Records that are modifications of pre-existing records (i.e., records inherited from master esms and even from esps selected in the load list) will be reordered when TESCS saves the esp file so that the inherited records are moved to the top of their TESCS save group (e.g., the "most objects" group), in the order that TESCS originally saw them in -em- which is fairly disordered.
   * However, it seems to be safe to use the Sort Records command on the Bethesda esms themselves. (But don't be surprised if Mash hangs for a minute or so while sorting Morrowind.esm!) Once this is done, when saving your esp, the modified records will still be moved up, but at least they'll be ordered by record type and id.
 
 === Statistics
@@ -626,8 +579,7 @@ The following commands are available by right clicking on the column header of t
 
 === Saves List
 * **Checkbox Colors**
-  * Checkbox colors indicate the "health" of the mod file or save files master
-    files. See [[#| Master List Updating]] below.
+  * Checkbox colors indicate the "health" of the mod file or save files master files. See [[#| Master List Updating]] below.
 
 === Save Details
 * Make changes to the file in the details view.
@@ -663,7 +615,7 @@ The following commands are available by right clicking on the column header of t
   * For a savegame, this has the effect of resetting all spawn points.
 * **Removers (Object Lists)**
   * Removers allow you to **remove all instances of arbitrary lists of objects from the game.** The only instances not removed will be those instances that reside in cells that match the list of "Safe Cells".
-  * **Warning! If the remover that you use includes standard containers, you should be sure that your safe cells list includes you stash cells -- e.g., your stronghold, mansion, etc.**
+  * **Warning! If the remover that you use includes standard containers, you should be sure that your safe cells list includes you stash cells -em- e.g., your stronghold, mansion, etc.**
   * **Setting up Removers:**
     * First, select "Edit Safe Cells..." and make sure that your stash cells, e.g., stronghold, mansion, etc. are included in it. Note that a safe cell named "Balmora" would protect all cells whose name begins in "Balmora".
     * Next, select "Edit Removers..." and select one or more of the files in Mopy\Data. This will add that(those) file(s) to the list of removers. Close the edit box when done. The new remover will now appear on the remover menu.
@@ -681,8 +633,7 @@ The following commands are available by right clicking on the column header of t
 
 === Load Masters
 * This causes the save game's master files to be loaded.
-  * Note that unlike Load Lists, this function is **exclusive, not additive.**
-    I.e., **only** the masters of the save file will be selected.
+  * Note that unlike Load Lists, this function is **exclusive, not additive.** I.e., **only** the masters of the save file will be selected.
 
 === Map Notes
 * From the saves context menu, select **Map Notes** to extract all of the notes that you have added to the map for that save game.
@@ -756,36 +707,31 @@ The following commands are available by right clicking on the column header of t
   * What follows is an extremely abridged summary of the long answer given in [[https://wryemusings.com/Wrye%20Mash.html | Wrye Matching]].
 * **Background: Reference Ids**
   * So, you start Morrowind, load your last saved game, and find yourself in Balmora. There on the bridge is the same MCA character. There at your feet is the potion that you just dropped. Over there is the door that you opened. And it occurs to you... How does Morrowind keep track of all this stuff? How does it know ~~this~~ potion is supposed to be here? How does it know ~~that~~ door needs to be open?
-  * The answer is **reference ids** -- every object that you see in the game world has an unique numerical id attached to it, defining it. When you load a set of mods (as you do when Morrowind starts up), Morrowind first recreates the world in a "virgin" (i.e. unchanged state). Then, when you load a savegame, it reapplies all the changes that you made -- killing bandits, filling quests, opening doors, moving NPCs, etc. It makes those changes by matching the reference ids stored in the savegame against the reference ids as calculated for the virgin gameworld (i.e. for the set of loaded mods).
+  * The answer is **reference ids** -em- every object that you see in the game world has an unique numerical id attached to it, defining it. When you load a set of mods (as you do when Morrowind starts up), Morrowind first recreates the world in a "virgin" (i.e. unchanged state). Then, when you load a savegame, it reapplies all the changes that you made -em- killing bandits, filling quests, opening doors, moving NPCs, etc. It makes those changes by matching the reference ids stored in the savegame against the reference ids as calculated for the virgin gameworld (i.e. for the set of loaded mods).
   * Unfortunately this matching/updating process can go wrong sometimes. **Doubling** is the most obvious such problem. But other problems can happen, e.g., changes meant for a bar door might be applied to an NPC. These mismatches might be invisible, might cause weird behavior, or might cause CTDs. As people have found in the past, if enough of them pile up (e.g., after repeatedly changing the mod list), you ~~will~~ get corrupted unplayable games.
   * Note that **all** of these problems are caused by mismatches between reference ids! E.g. from your loaded mod list, Morrowind determines that the referenceid number for that door should be 345672-05, but your savegame thinks that the reference id for the door should be 345672-07, or maybe 345674-05. So the secret to avoiding doubling, etc. is simply preventing such mismatches. Well, easier said then done, unfortunately!
   * So, a little more background... Each reference id is actually two numbers: the **ObjectIndex** and the **ModIndex.** For each mod, the objectindex is unique, i.e., there's only one "1292" objectindex in each mod. The modindex, on the other hand is simply the order of the source mod in the load list. Morrowind.esm loads first, so it has modindex == 1. Tribunal and Bloodmoon if loaded, are usually numbers 2 and 3 respectively. Okay, but how about objects that don't really belong to a particular mod? E.g. an arrow that you bought and dropped on the ground? Simple enough, these objects belong to the savegame itself, and are given the special modindex of 0.
   * That's the basic story. There are a lot of exceptions and complications (e.g., spawnpoints), but that's the basics, so let's go on...
 * **Reasons for Reference Mismatching**
-  * If you change the mod load order -- either by adding new mods that want to load before your current mod, or by resaving a mod (which changes its modification date, and thus load order), then the ModIndex numbers will be mismatched.
+  * If you change the mod load order -em- either by adding new mods that want to load before your current mod, or by resaving a mod (which changes its modification date, and thus load order), then the ModIndex numbers will be mismatched.
   * Also, if a mod has had new references added, then many of its objectIndexes of existing references will be changed. This is because TESCS completely renumbers all references when the mod is saved.
   * There are quite a few technicalities and qualifications here, but that's the gist of it.
 * **Morrowind Repair Work**
   * If the load order changes, Morrowind tries to correct ModIndex numbers. If  only the load order has changed (i.e., exactly the same files with the same names are present), then it seems to do a pretty good job of adapting.
   * But if new mods are added or if old mods are given new names, it gets confused and its repair often fails.
-  * Note that the effect of this failure may not be immediately apparent, and the effects may oscillate under certain conditions -- e.g., doors may disappear and reappear with each new load change.
+  * Note that the effect of this failure may not be immediately apparent, and the effects may oscillate under certain conditions -em- e.g., doors may disappear and reappear with each new load change.
 * **Doubling Prevention/Repair**
   * So to prevent/fix doubling, you need to do several things:
     * Prevent modification date related mod disordering. **(See [[#| Load Order Maintenance]].)**
     * Adjust ModIndex numbers to account for new load ordering. (I.e. complete the job that Morrowind does partially.) **(See [[#| Master List Updating]].)**
-    * Repair existing damaged games files by removing existing corrupted
-      records. **(See [[#| Master List Updating]].)**
+    * Repair existing damaged games files by removing existing corrupted records. **(See [[#| Master List Updating]].)**
     * Adjust for changes to objectIndex numbering from mod modification. **(See [[#| Mod Updating]].)**
 
 === Load Order Maintenance
-* In order to prevent doubling and to get correct behavior out of mods, it
-  is important that they load in the correct order. Since mod load order is determined by their modified time, it is important to be able to set and keep fixed the modified time.
-* **To set the load order of a mod,** just edit the Modified field of the mod
-  in the details view.
-* **To keep the modified time fixed,** Turn on the "Lock Times" feature in
-  the column context menu of the Mods Tab. When this is done, Mash will memorize the modified times for all files that it sees. Then, whenever Mash launches, or comes to the foreground, it will check to see if any Modified times have changed, and if so, reset them to the earlier memorized values.
-* Note: If you want **to use a non-Mash load ordering utility,** you'll first need
-  to turn off "Lock Times". When you're finished with the external ordering utility, turn Lock Times back on. It will reset to use the times set by the other utility.
+* In order to prevent doubling and to get correct behavior out of mods, it is important that they load in the correct order. Since mod load order is determined by their modified time, it is important to be able to set and keep fixed the modified time.
+* **To set the load order of a mod,** just edit the Modified field of the mod in the details view.
+* **To keep the modified time fixed,** Turn on the "Lock Times" feature in the column context menu of the Mods Tab. When this is done, Mash will memorize the modified times for all files that it sees. Then, whenever Mash launches, or comes to the foreground, it will check to see if any Modified times have changed, and if so, reset them to the earlier memorized values.
+* Note: If you want **to use a non-Mash load ordering utility,** you'll first need to turn off "Lock Times". When you're finished with the external ordering utility, turn Lock Times back on. It will reset to use the times set by the other utility.
 
 === Mod Updating
 * As described above, adding references to (or removing references from) an
@@ -835,7 +781,7 @@ The following commands are available by right clicking on the column header of t
       masters in the master list.
     * **Yellow:**
       The master file's size has changed since the game was last
-      saved. This likely indicates a change to the mod file -- which may result
+      saved. This likely indicates a change to the mod file -em- which may result
       in objectIndex caused mismatching.
     * **Green:**
       The master file is in order compared to the other files in the master list, but is out of order compared to the files in the current load list.
@@ -845,10 +791,10 @@ The following commands are available by right clicking on the column header of t
       This will only appears for saves. It indicates that not only are all of the masters synced, but also that no extra masters are loaded. If a save is blue (not purple), then the load list contains an extra esp that the save is not yet dependent on. If you play the save, then the save will become dependent on that new master.
   * For save games, you want every master to be blue - i.e. you want the save
     itself to be blue.
-  * Mod files have much less problems than save files -- so it's sufficient if
+  * Mod files have much less problems than save files -em- so it's sufficient if
     all masters are orange or better. I.e., as long as the master is present, it should be okay. For this reason, for mod files, "green" is considered to be perfect health.
 * **When to Update Masters**
-  * If the save game checkbox color is blue, then it's fine -- there's no
+  * If the save game checkbox color is blue, then it's fine -em- there's no
     need to edit it.
   * If the save game checkbox color is green, then its master list is fine,
     but it not compatible with the current load list. You can use the "Load Masters" to sync load list with the master list. Note that the load list does not have to be exactly the same as the master list. It can have additional load files, so long as those files will load ~~after~~ the files in the save games master list.
@@ -872,7 +818,7 @@ The following commands are available by right clicking on the column header of t
       (E.g., suppose you depending on an esp that has since been converted to an esm.)
     * You can change different existing masters to point to the same new master.
       You might do this if you merged several head mods. (Note that merging may
-      cause objectIndex doubling -- so hopefully the merge has been done in such a way as to prevent that.) When the file is saved, these different master references will be merged into a single reference.
+      cause objectIndex doubling -em- so hopefully the merge has been done in such a way as to prevent that.) When the file is saved, these different master references will be merged into a single reference.
     * If the rename has an Updater associated with it (i.e., from "AoScrye 1.1.esp" to "AoScrye 1.15.esp"), then the new name will highlighted in dark green. Otherwise, the rename will be highlighted in pale green. (See [[#| Mod Updating]] above for more information.)
   * You can unselect masters that you want removed.
     * Note that this will delete any changes that you made to that objects
@@ -897,7 +843,7 @@ The following commands are available by right clicking on the column header of t
 * Rematches: The Repair All function compares the object id for each reference with the object id expected from the save files master list for the references combined modIndex and objectIndex. If they those id's don't match, then Repair All tries to find a different value of modIndex for with the id's do match. If it finds such a match and if that match is not already used by another reference, then it switches the reference to use the new modIndex. This is a rematch.
 * If Mash can't find a non ambiguous match, then it will report "NO MASTER" and delete the reference.
 * If Mash finds a match, but it's already in use, then it will report "DOUBLE" and delete the reference.
-* Also if Mash finds a reference that is marked as "Deleted" but has a modIndex of 0 (meaning that it's owned by the save file, not any of its masters), then Mash will delete the reference. Note that a save game needs to remember when a master file reference is deleted, but should not remember when a save-game owned reference is deleted -- since there's no need to do so. These bad deletes seem to be responsible for doors, NPCs, etc. that disappear and reappear with every change in the load list.
+* Also if Mash finds a reference that is marked as "Deleted" but has a modIndex of 0 (meaning that it's owned by the save file, not any of its masters), then Mash will delete the reference. Note that a save game needs to remember when a master file reference is deleted, but should not remember when a save-game owned reference is deleted -em- since there's no need to do so. These bad deletes seem to be responsible for doors, NPCs, etc. that disappear and reappear with every change in the load list.
 
 === Repair All Command
 * In addition to repairing refs, as described [[#RepairRefsCommand| above]], Repair All performs several other cleanup tasks...
@@ -932,14 +878,14 @@ Mish is a command line interface to the features of mash. At the moment [5/30/20
 * **cleanRefs**
   * Usage: cleanRefs "Yadda.ess" "Data\Beth All.etxt"
   * This removes references from Yadda.ess that match the objects listed in "Data\Beth All.etxt". Or you can use one of the other list files or make your own.
-  * **DO NOT USE THIS ON AN ESP FILE** Unless, of course, you **want** to blow away a bunch of the references in that esp. Hmmm... Actually, that might be useful for cleaning gunk out of your file... But you had better know what you're doing -- this file makes no distinction between refs that you've modified from an esm and refs that you've placed yourself.
+  * **DO NOT USE THIS ON AN ESP FILE** Unless, of course, you **want** to blow away a bunch of the references in that esp. Hmmm... Actually, that might be useful for cleaning gunk out of your file... But you had better know what you're doing -em- this file makes no distinction between refs that you've modified from an esm and refs that you've placed yourself.
 * **genSchedule**
   * Usage: genSchedule "My Seyda Neen Schedule.etxt" "My Seyda Neen.esp"
   * Munches a schedule text file and from it generates a set of LCV style scheduling scripts. These scripts will either be written to the specified esp file or to a text file named after the source file (e.g., "My Seyda Neen Schedule.mws") if you leave off the second argument (name of the esp).
   * While this writes the scheduling scripts to the file, it does not compile them. You'll need to open the esp file in TESCS and either compile each new/updated script in turn, or use the compile all button. (But if you do that, you'll probably need to save, then go to the details view and delete several scripts that were uncompiled or incorrectly compiled in the original morrowind.esm, then open and resave. (Though I think that some of these four are fixed in the other Bethesda esms.)
   * Note that the "LCV Schedules.etxt" does **not** contain any of the idle defs. That's because all of these are defined in (and loaded frm) mush.py. You can still define and use your own idle (or any other defs), but I would advise that you use the ones in mush.py if possible since they're fairly standard.)
 * **etxtToHtml**
-  * This command generates html documents from an etxt document. I use this to generate all my html docs -- e.g. this one.
+  * This command generates html documents from an etxt document. I use this to generate all my html docs -em- e.g. this one.
   * Usage: etxtToHtml yadda.etxt
   * This will generate yadda.html in the same directory.
   * For etxt formatting, see "Wrye Mash.etxt" for examples.
@@ -951,7 +897,7 @@ Mash now supports localization for most? western languages (translation of progr
   * I'm not sure if the common control strings (Save, Cancel, Okay) will translate or not. If you're running Python 2.4, they probably won't. If you're running python 2.5, I hope they will, but I really don't know.
 * **Custom Program Strings**
   * Custom program strings are translated from lookup files that you'll find in the <code>Mopy\local</code>. E.g., for English, it would be <code>Mopy\locale\English.pkl</code>. (Of course, the program is already in English, so this isn't needed.)
-  * These pkl files are automatically compiled from the corresponding txt files (e.g., <code>Mopy\locale\English.txt</code>) as needed when Mash (or mish) starts up. So, to update the program strings for your language all you have to do is edit the txt file in a text editor adding translations for strings. Naturally, not everyone needs to do this -- once someone does the txt files for a language, they can redistribute them to other people -- including me, so that I can include them in next Mash release.
+  * These pkl files are automatically compiled from the corresponding txt files (e.g., <code>Mopy\locale\English.txt</code>) as needed when Mash (or mish) starts up. So, to update the program strings for your language all you have to do is edit the txt file in a text editor adding translations for strings. Naturally, not everyone needs to do this -em- once someone does the txt files for a language, they can redistribute them to other people -em- including me, so that I can include them in next Mash release.
   * If the text file for your language doesn't exist yet, open a DOS shell, chdir to the Mopy directory and type <code>python mish.py dumpTranslator</code>. This will create a new text language file for you in the locale directory (e.g., <code>Mopy\locale\NEWEnglish.txt</code>). If you already have some strings translated, this new file should contain all of them. And if mash has added new strings to be translated, they will appear.
   * So to create the strings, all you have to do is edit the text file to add the translations, and save the file with the leading "NEW" stripped off.
 * **Translation Tips**
@@ -969,104 +915,72 @@ DELETE PROFILE %s AND THE %d SAVE FILES IT CONTAINS?
 </pre>
   * Each entry begins with the source file and the line number (in case this helps you figure out how to translate the code).
   * After that is the original text, then a <code>>>>></code> dividing line, then the translated text. Here, the second entry has been translated, while the first has not. (Here the "translation" consists of changing it to upper case.
-  * It's important that you leave the formatting characters in place and in order! Formatting characters are text like <code> %s %d %08X \n</code>. The '%' strings are place holders where file names, counts, etc. are entered -- if they're not present, Mash will throw an exception. The \n combinations are newline characters -- I use them in dialogs and other places where I want line breaks.
-  * In translating, I would suggest that you translate the strings that you see the most first. E.g., a good one for a quick test is <code>masher.py, 2126: Mods</code> -- this is the name of the Mods tab. And right under it is the name of the Saves tab.
+  * It's important that you leave the formatting characters in place and in order! Formatting characters are text like <code> %s %d %08X \n</code>. The '%' strings are place holders where file names, counts, etc. are entered -em- if they're not present, Mash will throw an exception. The \n combinations are newline characters -em- I use them in dialogs and other places where I want line breaks.
+  * In translating, I would suggest that you translate the strings that you see the most first. E.g., a good one for a quick test is <code>masher.py, 2126: Mods</code> -em- this is the name of the Mods tab. And right under it is the name of the Saves tab.
   * To test your translations, just save your changes to the text file, and restart Mash. Your changes should appear immediately.
   * Of course, it's probably a good idea to keep backup copies of your translator file in case you mess one up. If you revert to a backup copy, just throw the pkl version away to it to update. (Remember it won't autocompile unless the text file is newer than the pkl file.)
-  * Spell checking: If you're using an office suite, you might want turn on dictionaries for both English and your language -- Abot mentions that Open Office allows you to do this.
+  * Spell checking: If you're using an office suite, you might want turn on dictionaries for both English and your language -em- Abot mentions that Open Office allows you to do this.
 
 === Python and wxPython
 * **Python**
-  * I've programmed in something like 20-30 different languages and of those,
-    Python is by far the easiest and most powerful. I strongly recommend it both for first time programmers and experienced, professional programmers.
-  * As you'll see from the code, it's an untyped, object oriented language. (By
-    "untyped" I mean that you don't have to declare the type of variables before
+  * I've programmed in something like 20-30 different languages and of those, Python is by far the easiest and most powerful. I strongly recommend it both for first time programmers and experienced, professional programmers.
+  * As you'll see from the code, it's an untyped, object oriented language. (By "untyped" I mean that you don't have to declare the type of variables before
     using them.)
-  * You'll also notice that it's compact with very little overhead -- it's
-    probably about as close a programming language can get to pseudocode -- i.e., to the way you think the program.
-  * Note that when you installed python, you got a very complete manual. When
-    programming, I just keep this manual open.
+  * You'll also notice that it's compact with very little overhead -em- it's probably about as close a programming language can get to pseudocode -em- i.e., to the way you think the program.
+  * Note that when you installed python, you got a very complete manual. When programming, I just keep this manual open.
 * **wxPython**
-  * wxWidgets is a cross-platform GUI widget set. wxPython is a python wrapper
-    around that library. Unlike Java, the graphics are native to each platform
-    -- hence drawing operations are fast.
-  * However, while there's a fair amount of documentation for wxPython, between
-    wxPython and wxWidgets, there can be something of a documentation gap. In
-    several places I had to search for a while, and do some experiments before
-    I figured out the right way to do things. In a few other places I couldn't
-    get things to work, that from the wxWidgets documentation seemed like they
-    should work. So, it's not a completely mature platform.
-  * However, the end result looks damned good and is responsive, (not bad for
-    my first real GUI application!) so I'm not regretting the choice.
-  * For your interface work: The closer you stick to my code the easier
-    things will go.
-  * As mentioned before, the wxPython manual and docs are a separate install
-    from the base wxPython install. There are several types of help available in it.
+  * wxWidgets is a cross-platform GUI widget set. wxPython is a python wrapper around that library. Unlike Java, the graphics are native to each platform -em- hence drawing operations are fast.
+  * However, while there's a fair amount of documentation for wxPython, between wxPython and wxWidgets, there can be something of a documentation gap. In
+    several places I had to search for a while, and do some experiments before I figured out the right way to do things. In a few other places I couldn't
+    get things to work, that from the wxWidgets documentation seemed like they should work. So, it's not a completely mature platform.
+  * However, the end result looks damned good and is responsive, (not bad for my first real GUI application!) so I'm not regretting the choice.
+  * For your interface work: The closer you stick to my code the easier things will go.
+  * As mentioned before, the wxPython manual and docs are a separate install from the base wxPython install. There are several types of help available in it.
     * Most useful is the wxPython Demo. This is where I usually start.
-    * Of secondary use are the wxPython manuals. These are fairly complete, but
-      they're primarily designed for the c++ version of wxWidgets. The conversion from C++ call to python call is unfortunately not always documented or obvious.
-    * And of course, there's the web. A well chosen google search will
-      oftentimes help substantially.
+    * Of secondary use are the wxPython manuals. These are fairly complete, but they're primarily designed for the c++ version of wxWidgets. The conversion from C++ call to python call is unfortunately not always documented or obvious.
+    * And of course, there's the web. A well chosen google search will oftentimes help substantially.
 
 === Mechanics: Editors and Navigation
-* If you want to do some serious new code, you'll probably want to get a
-  decent text editor (if you don't already have one). You'll find python plugins for any decent programming text editor.
-* The files are moderately large (1000-2000 lines). My text editor (Edit
-  Plus) has a function listing ability. I kind of lie to it and tell it that function lines look like "^(#|class|def) " This means that it will list root level classes and function definitions **and** lines that start with '# '. (Note the trailing space.) This allows me to set additional "bookmarks" to navigate by (e.g., "# Util Data ----").
+* If you want to do some serious new code, you'll probably want to get a decent text editor (if you don't already have one). You'll find python plugins for any decent programming text editor.
+* The files are moderately large (1000-2000 lines). My text editor (Edit Plus) has a function listing ability. I kind of lie to it and tell it that function lines look like "^(#|class|def) " This means that it will list root level classes and function definitions **and** lines that start with '# '. (Note the trailing space.) This allows me to set additional "bookmarks" to navigate by (e.g., "# Util Data -em--em-").
 
 === Getting Started
 * **Python**
   * If you're not familiar with it, check out python.org. There are lots of links to good tutorials there. Also, the python installation
 * **Mish.py**
-  * Command line programming is definitely easier than GUI! So if you just want
-    to understand the data level code, you can restrict yourself to mosh.py and mish.py.
-  * I'd suggest that you make your own copy of mish.py and then play around
-    with extracting data and spitting stuff out. Then when you feel confident, you can start modifying files.
+  * Command line programming is definitely easier than GUI! So if you just want to understand the data level code, you can restrict yourself to mosh.py and mish.py.
+  * I'd suggest that you make your own copy of mish.py and then play around with extracting data and spitting stuff out. Then when you feel confident, you can start modifying files.
 * **GUI Programming**
-  * Context menu items are the easiest things to add. They're relatively simple,
-    and I've specifically designed the code to make it easy to add new menu
+  * Context menu items are the easiest things to add. They're relatively simple, and I've specifically designed the code to make it easy to add new menu
     commands.
   * **Menu definition and Creation**
     * Both menu items and the Morrowind buttons are subclasses of my Link class.
-    * You'll notice that I define these classes last in the file, and don't
-      actually them into the interface until the InitLinks() function.
+    * You'll notice that I define these classes last in the file, and don't actually them into the interface until the InitLinks() function.
   * **Examples**
-    * **MorrowindLink** creates the Morrowind Launch button in the status bar.
-      It's very simple, and by following it back you can see how it gets added into the bar.
+    * **MorrowindLink** creates the Morrowind Launch button in the status bar. It's very simple, and by following it back you can see how it gets added into the bar.
     * **UnHideLink** Is more complicated, but is still pretty comprehensible.
     * **FileStatsLink** Is not very complicated in itself, but that's only because
-      it pushes most of the interface work onto a new class FileStatsList. But
-      it's an example of a menu command that introduces a little extra GUI
+      it pushes most of the interface work onto a new class FileStatsList. But it's an example of a menu command that introduces a little extra GUI
       complexity.
 
 === Code Layout
-* The code is self documenting... Yeah, right! Actually, I keep my code pretty
-  clean and well laid out so it shouldn't be too bad. But there are few hints that I can give you...
-  * Python supports internal code documentation through the triple quote
-    syntax ("""Function does x.""") This is similar to Java's code documenting
+* The code is self documenting... Yeah, right! Actually, I keep my code pretty clean and well laid out so it shouldn't be too bad. But there are few hints that I can give you...
+  * Python supports internal code documentation through the triple quote syntax ("""Function does x.""") This is similar to Java's code documenting
     feature. I've used this a little bit, but not as much as I should have.
 * **mosh**
   * **Settings**
     * The class and singleton are defined in mosh.py and used by other modules.
-    * For convenience, I use dictionary emulation to allow the singleton to be
-      accessed like a dictionary. (E.g., ___getitem___ supports the settings[key] syntax.
+    * For convenience, I use dictionary emulation to allow the singleton to be accessed like a dictionary. (E.g., ___getitem___ supports the settings[key] syntax.
   * **FileInfo and FileInfos**
-    * These are parent classes for ModInfo and ModInfos, and SaveInfo,
-      SaveInfos.
+    * These are parent classes for ModInfo and ModInfos, and SaveInfo, SaveInfos.
     * I.e., basically mod and save files and collections of them.
   * **TES3 File Structure**
     * Basically, I only defined as much as I had to.
-    * For performance reasons, I don't analyze the data file any more than I
-      have to. E.g., for the remapMasters function, I only care about the objects in the cells. Thus there's all other records (except for TES3)
-      are left in their raw data form, and even for cell objects, I leave most
-      subrecords in raw data form.
-    * Note also the use of the changed flags -- this allows me to skip repacking
-      data if the cell record hasn't been changed.
+    * For performance reasons, I don't analyze the data file any more than I have to. E.g., for the remapMasters function, I only care about the objects in the cells. Thus there's all other records (except for TES3) are left in their raw data form, and even for cell objects, I leave most subrecords in raw data form.
+    * Note also the use of the changed flags -em- this allows me to skip repacking data if the cell record hasn't been changed.
 * **masher**
   * **images** and **colours** are convenience collections for correspond objects.
-  * **Final interface assembly** does not take place until the end, through the
-    various init functions. This is done to make the program more easily
-    modifiable. (And easy to write in the first place!)
+  * **Final interface assembly** does not take place until the end, through the various init functions. This is done to make the program more easily modifiable. (And easy to write in the first place!)
 
 == Data and Extras ============================================================
 The Mash distribution includes additional files that assist in its operation and/or assist the modder in other ways...
@@ -1090,7 +1004,7 @@ The Mash distribution includes additional files that assist in its operation and
 * These are text files that define Ref Replacers.
 * **MCA Refs.etxt**
   * MCA spawn points. Note that these require that that placeholder spawn points be pre-added to the mod first.
-  * So why not just add MCA spawn points directly? Because this way, MCA becomes optional -- it's up to the user whether they want to install MCA or not. Also, if some other mod provides MCA-like functionality, a replacer can be defined to place their NPCs instead of MCA NPCs.
+  * So why not just add MCA spawn points directly? Because this way, MCA becomes optional -em- it's up to the user whether they want to install MCA or not. Also, if some other mod provides MCA-like functionality, a replacer can be defined to place their NPCs instead of MCA NPCs.
 * **NOM Refs.etxt**
   * Bottles, keg stands, ovens, wells, etc. This replaces certain statics and misc items with their NOM equivalents.
 
@@ -1291,8 +1205,7 @@ The Mash distribution includes additional files that assist in its operation and
 
 === 0.62 Misc. [1/10/2006]
 * **New/Improved**
-  * **Doc Editing** Minor bug fix and improvement to make it easier to add/edit
-    new doc files.
+  * **Doc Editing** Minor bug fix and improvement to make it easier to add/edit new doc files.
 
 === 0.61 Misc. [1/9/2006]
 * **New/Improved**
@@ -1416,8 +1329,7 @@ The Mash distribution includes additional files that assist in its operation and
   * Can now browse the journal for any save file.
 * **Repair All vs. Repair Refs**
   * Repair Refs no longer removes Orphan Contents. Instead...
-  * New Repair All does Repair Refs, but also removes Orphan Contents and
-    Debris (GLOBs, BOOKs, CREAs and NPC_s) in save games left over from previous games that are no longer associated with save game.
+  * New Repair All does Repair Refs, but also removes Orphan Contents and Debris (GLOBs, BOOKs, CREAs and NPC_s) in save games left over from previous games that are no longer associated with save game.
 * **Misc.**
   * More intelligent updater creation. If you try to create an updater when one is not necessary, you'll get a message saying as much and no updater will be created.
 * **Fixes**
@@ -1437,8 +1349,7 @@ The Mash distribution includes additional files that assist in its operation and
 * **Doc Browser**
   * Docs for mod files can now be accessed easily from within Mash.
 * **Internal**
-  * MTime info is now saved in Data Files\Mash\Table.pkl, along with doc names,
-    and (in the future) other mod specific data
+  * MTime info is now saved in Data Files\Mash\Table.pkl, along with doc names, and (in the future) other mod specific data
   * Misc. code cleanup.
 
 === 0.41 Misc. Upgrades [7/1/2005]
@@ -1475,7 +1386,7 @@ The Mash distribution includes additional files that assist in its operation and
 * **Map Notes**
   * Extracts map notes from save file.
 * **Remove Orphan Contents**
-  * Removes content records that have become "orphaned" -- i.e., no longer matched to a cell reference.
+  * Removes content records that have become "orphaned" -em- i.e., no longer matched to a cell reference.
 * **Sort Records**
   * Sorts mod file records for easier searching in TESCS Details view.
 * **Statistics**
@@ -1490,83 +1401,65 @@ The Mash distribution includes additional files that assist in its operation and
   * Remove Objects
   * Sort Records
 * **Save: Unspawn**
-  * New save file command resets all spawn points. Great for resetting
-    game after changing your spawned creature lists.
+  * New save file command resets all spawn points. Great for resetting game after changing your spawned creature lists.
 * **Misc.**
   * Rearrange Masters link list.
 
 === 0.37 Window Closing Bugfix [3/13/2005]
 * **Closing While Minimized**
-  * Previously, if Mash were closed while minimized, it would save a bogus
-    frame position in settings, which would prevent it from opening correctly on next use. This is fixed now.
+  * Previously, if Mash were closed while minimized, it would save a bogus frame position in settings, which would prevent it from opening correctly on next use. This is fixed now.
 
 === 0.36 Misc. Improvements [2/25/2005]
 * **Circular Masters**
-  * Mash was going into infinite loop if masters were circular. This is fixed
-    now.
+  * Mash was going into infinite loop if masters were circular. This is fixed now.
   * Sync to Load ESMs will no longer allow you to create circular masters.
 
 === 0.35 Misc. Improvements [2/13/2005]
 * **Dialog Export/Import**
   * Deleted dialogs no longer cause a problem.
   * Entries are now better sorted.
-  * Some characters are now replaced or deleted. (@, #, curly quotes, ellipses,
-    extra spaces).
+  * Some characters are now replaced or deleted. (@, #, curly quotes, ellipses, extra spaces).
 
 === 0.34 ObjectIndex Mapping, Dialog Export/Import, Misc. Fixes [2/5/2005]
 * **ObjectIndex Remapping**
-  * Mash now does ObjectIndex remapping, thus completing its program for
-    preventing/fixing doubling.
+  * Mash now does ObjectIndex remapping, thus completing its program for preventing/fixing doubling.
 * **Dialog Export/Import**
   * Can now export and import dialog.
 * **Snapshot Modifications**
   * Snapshot numbers can now only be preceded by a '-'.
   * **Is Snapshot** command has been removed.
 * **Interior Cells with Water**
-  * Mash was misidentifying interior cells with water as exterior cells. This
-    may have resulted in excessive reference deletion on repair. This is corrected now.
+  * Mash was misidentifying interior cells with water as exterior cells. This may have resulted in excessive reference deletion on repair. This is corrected now.
 
 === 0.33 Minor Fixes and Improvements [1/29/2005]
 * **Minor Bugfixes**
-  * Mash was throwing an error when you right clicked on a master that didn't
-    exist. This is fixed now.
-  * Mash was throwing an error when you tried to "Load Masters" when one or more
-    of the masters didn't exist. Mash now gives you a warning message.
+  * Mash was throwing an error when you right clicked on a master that didn't exist. This is fixed now.
+  * Mash was throwing an error when you tried to "Load Masters" when one or more of the masters didn't exist. Mash now gives you a warning message.
 * **Misc. Improvements**
-  * Add support for '+' at end of version numbers in descriptions (e.g.,
-    "Version 1.2.3+". Use this as a note that file has changed since snapshot was taken.
+  * Add support for '+' at end of version numbers in descriptions (e.g., "Version 1.2.3+". Use this as a note that file has changed since snapshot was taken.
 
 === 0.32 Minor Bug Fix [1/27/2005]
 * **Bugfix: New Lines in Mod Descriptions**
-  * Mash was writing descriptions with unix style new lines when it should have
-    been using windows style new lines. This is fixed now.
-  * If you have a lot of files contaminated with this error, you can use the
-    mish temp3 function to fix it. Ask on the forums for more info if you need it.
-  * AFAIK, this produced no run time problems -- it just messed up your
-    description display in TESCS.
+  * Mash was writing descriptions with unix style new lines when it should have been using windows style new lines. This is fixed now.
+  * If you have a lot of files contaminated with this error, you can use the mish temp3 function to fix it. Ask on the forums for more info if you need it.
+  * AFAIK, this produced no run time problems -em- it just messed up your description display in TESCS.
 
 === 0.31 New Features, Minor Fixes [1/27/2005]
 * **Copy to Esm/Esp**
-  * You can now copy an esp to an esm and vice versa. Look for new command
-    on Mod items context menu.
+  * You can now copy an esp to an esm and vice versa. Look for new command on Mod items context menu.
 * **Editing Masters**
   * Change menu item name from "Edit" to "Update".
-  * No more warning if select from menu. But clicking anywhere in list will
-    trigger Update query.
+  * No more warning if select from menu. But clicking anywhere in list will trigger Update query.
   * For esps/esms, change "Sync to Load Files" to  "Sync to Load ESMs".
-  * Can now directly "Sync to Load Files/ESMs". I.e., don't have to "Update
-    Masters" first.
+  * Can now directly "Sync to Load Files/ESMs". I.e., don't have to "Update Masters" first.
 * **Snapshot Improvements**
   * New **Is Snapshot** command for versioned mods.
-  * Version number is now written to description field if description has a
-    pre-existing "Version N.M" line.
+  * Version number is now written to description field if description has a pre-existing "Version N.M" line.
 * **Minor Bug Fixes**
-  * Mash was **failing to remove masters** when the user attempted to uncheck them
-    in the master list. This works now.
+  * Mash was **failing to remove masters** when the user attempted to uncheck them in the master list. This works now.
 * **Miscellaneous**
   * You can now sort mods by file version.
-  * Mash now deletes backups and temp files while deleting files. However,
-    it does **not** delete snapshots or hidden files.
+  * Mash now deletes backups and temp files while deleting files. However, it does **not** delete snapshots or hidden files.
 
 === 0.30 Itty Bitty Fix [1/24/2005]
 * **Minor Bug Fix**
@@ -1574,84 +1467,60 @@ The Mash distribution includes additional files that assist in its operation and
 
 === 0.29 Misc. Improvements and Fixes [1/23/2005]
 * **Major Bug Fix: Refs Repair on Exterior Cells**
-  * Mash was misidentifying exterior cells, and as a result erroneously marking
-    a change refs in those cells as BAD::NO MASTER, when they were fine. This
+  * Mash was misidentifying exterior cells, and as a result erroneously marking a change refs in those cells as BAD::NO MASTER, when they were fine. This
     is fixed now.
 * **Repair Refs on Mods**
   * You can now use Repair Refs on mods.
   * Also a (hopefully) rare bug on editing masters of esps has been fixed.
 * **Improved Error Checking**
-  * Mash now checks read size for reasonableness before attempting to read.
-    This fixes the slowness problem mentioned in File Corruption Handing for version 0.28.
-  * During Repair Refs, Mash now generates useful error messages if a
-    master needs to be repaired first.
+  * Mash now checks read size for reasonableness before attempting to read. This fixes the slowness problem mentioned in File Corruption Handing for version 0.28.
+  * During Repair Refs, Mash now generates useful error messages if a master needs to be repaired first.
   * Mash now checks for second NAM0 records in cells.
 * **Minor Bug Fixes**
-  * Mash would sometimes crash if a mod file was deleted or renamed
-    from outside Mash. It now handles handles this correctly.
+  * Mash would sometimes crash if a mod file was deleted or renamed from outside Mash. It now handles handles this correctly.
 
 === 0.28 Minor Fixes and Features [1/22/2005]
 * **Major Bug Fix**
-  * Mash was failing on manually unselecting files. (This is a recent "break
-    something while fixing something" bug.) This is fixed now.
+  * Mash was failing on manually unselecting files. (This is a recent "break something while fixing something" bug.) This is fixed now.
 * **More File Corruption Handling**
-  * Added a new handler for another type of file corruption, but it seems to
-    move pretty slowly (if such a corrupted file is present). Better than nothing, I guess.
+  * Added a new handler for another type of file corruption, but it seems to move pretty slowly (if such a corrupted file is present). Better than nothing, I guess.
 * **Bugfix: Morrowind.ini**
-  * Mash could enter an infinite loop at startup if the Morrowind.ini file
-    had been altered by hand in certain ways.
-  * Now, Mash handle most (all?) legitimate changes to the Morrowind.ini file.
-    However, a missing [Game Files] section will still result in a failure/exit
-    on startup.
+  * Mash could enter an infinite loop at startup if the Morrowind.ini file had been altered by hand in certain ways.
+  * Now, Mash handle most (all?) legitimate changes to the Morrowind.ini file. However, a missing [Game Files] section will still result in a failure/exit on startup.
 
 === 0.27 Major Bugfix [1/21/2005]
 * **Bugfix: File Version**
-  * Mash was reading the file version in as a float, but writing it out as
-    an int! This in fact, was the cause of the death animation problem as
+  * Mash was reading the file version in as a float, but writing it out as an int! This in fact, was the cause of the death animation problem as
     well as the character's attire becoming confused after header editing.
-  * Now, Mash writes file version as a float and no longer uses the current
-    animation deletion "fix" from version 0.26.
+  * Now, Mash writes file version as a float and no longer uses the current animation deletion "fix" from version 0.26.
   * Also, Mash now displays file version in both mod and save details views.
-    * Files with version 0.0 are mostly likely corrupted and should be
-      reverted to backup or first backup.
+    * Files with version 0.0 are mostly likely corrupted and should be reverted to backup or first backup.
 * **Bugfix: Corrupted Headers**
-  * Mash crashed on startup if you had mod or save files with missing or
-    corrupted headers.
+  * Mash crashed on startup if you had mod or save files with missing or corrupted headers.
   * Now, Mash warns you and ignores the damaged files.
 * **Bugfix: Y2038 Bug**
-  * Mash crashed on startup if you had files with modification dates
-    greater than 1/19/2038 (Unix Epoch rollover! Welcome to Y2038!).
-  * Now, Mash resets the modification dates of those files to around 1/1/2037
-    and notifies you of the change.
+  * Mash crashed on startup if you had files with modification dates greater than 1/19/2038 (Unix Epoch rollover! Welcome to Y2038!).
+  * Now, Mash resets the modification dates of those files to around 1/1/2037 and notifies you of the change.
 
 === 0.26 Major Bugfix [1/20/2005]
 * **Header Editing**
-  * Instead of blowing away all leveled creatures, I now blow away all
-    current animations. This seems to be a full solution.
-  * Drawbacks: NPCs may stand around for a little while before resuming their
-    normal activities. Also, corpses will repeat their death animations.
+  * Instead of blowing away all leveled creatures, I now blow away all current animations. This seems to be a full solution.
+  * Drawbacks: NPCs may stand around for a little while before resuming their normal activities. Also, corpses will repeat their death animations.
 * **Ref Repair**
   * Fixed an MVRF bug before I saw it.
 * **ESTemplate.ini**
-  * This is the Enchanted Editor template that I'm currently using. It has a
-    number of additions related to save files. It has not been massively
-    tested (but that's true for the original templates too, of course).
-    Still, use at your own risk.
+  * This is the Enchanted Editor template that I'm currently using. It has a number of additions related to save files. It has not been massively
+    tested (but that's true for the original templates too, of course). Still, use at your own risk.
   * Includes some additions from Beryllium as well.
 
 === 0.25 Partial Bugfixes [1/19/2005]
 * **ESM Ordering**
-  * Reworked this in an effort to mimic Bethesda's ordering. Seems to be
-    correct now...
+  * Reworked this in an effort to mimic Bethesda's ordering. Seems to be correct now...
 * **Header Editing (Partial Bug Fix)**
-  * After editing headers, creature corpses are not able to find their death
-    animations. Living creatures are fine, as are creatures that you kill
-    after the editing. Also, it doesn't seem to be a problem for NPCS -- just
-    for creatures.
-  * As a temporary partial solution, I'm resetting all LVCR references. This
-    is basically safe -- it will just cause those points to respawn. But this
-    still leaves the problems of non-spawned creatures (many of whom are
-    crucial to various quests.)
+  * After editing headers, creature corpses are not able to find their death animations. Living creatures are fine, as are creatures that you kill
+    after the editing. Also, it doesn't seem to be a problem for NPCS -em- just for creatures.
+  * As a temporary partial solution, I'm resetting all LVCR references. This is basically safe -em- it will just cause those points to respawn. But this
+    still leaves the problems of non-spawned creatures (many of whom are crucial to various quests.)
 * **Repair Refs**
   * Maintain original ordering of functions.
   * Note: This ~~may~~ also suffer from creature death animation bug.

@@ -871,7 +871,7 @@ __A collection of tutorials and information to help the novice modder begin addi
           . __The reader will learn:__
           * ~~What the story manager is.~~
           * ~~The idea behind how it works.~~
-          * ~~Nothing else -- there's no good way to make our existing tutorial content into something initiated by the story manager, so it's here that we're going to to leave the intrepid modder to explore.~~
+          * ~~Nothing else -em- there's no good way to make our existing tutorial content into something initiated by the story manager, so it's here that we're going to to leave the intrepid modder to explore.~~
 
      . __{{inline:20px | Sqold.png | O}}{{inline:20px | Sqinter.png | I}} [[https://www.youtube.com/watch?v=G3VBVF3vaGA&feature=youtu.be&hd=1 | Skyrim Creation Kit Tutorial 02: Extending the Quest]]__
           * By: __doughamil__ On: __2/12__
@@ -947,7 +947,7 @@ __A collection of tutorials and information to help the novice modder begin addi
      . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqold.png | O}}{{inline:20px | Sqadvan.png | A}} [[https://www.creationkit.com/index.php?title=Adding_Working_Scripts_to_Items | Adding Working Scripts to Items]]__
           * By: __Official CK Wiki Team__ On: __2/12__
           * Format: __Text__ 
-          * ~~This tutorial will go step-by-step to adding a simple script to an item-- gloves that grant you the Blizzard spell while wearing them.~~
+          * ~~This tutorial will go step-by-step to adding a simple script to an item -em- gloves that grant you the Blizzard spell while wearing them.~~
 
      . __{{inline:20px | SqOC.png | OC}}{{inline:20px | Sqold.png | O}}{{inline:20px | Sqadvan.png | A}} [[https://www.creationkit.com/index.php?title=Scripting_tutorial_lever | Lever Scripting Tutorial]]__
           * By: __Official CK Wiki Team__ On: __3/12__

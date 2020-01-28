@@ -265,6 +265,7 @@ defaultCss = """
 .project-tagline { margin-bottom: 2rem; font-weight: normal; opacity: 0.7; }
 .project-name { margin-top: 0; margin-bottom: 0.1rem; }
 html * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+html { font-size: 16px; }
 tr:nth-child(odd) { background: var(--header1-background); }
 tr:nth-child(even) { background: var(--header2-background); }
 tr:hover { background-color: var(--code-background); }
@@ -284,8 +285,8 @@ h6 { font-size: 0.75rem; margin: 1em 0; }
 .main-content :first-child { margin-top: 0; }
 
 .main-content code { padding: 0.13rem 0.25rem; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9rem; color: var(--purple-text); background-color: var(--code-background); border-radius: 0.3rem; }
-.main-content pre { padding: 0.8rem; margin: 0.25rem 0.75rem 0.25rem 0.75rem; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; color: var(--purple-text); word-wrap: normal; background-color: var(--code-background); border: solid 1px var(--cayman-border); border-radius: 0.3rem; }
-.main-content pre > code { padding: 0; margin: 0; font-size: 0.9rem; color: var(--purple-text); word-break: normal; white-space: pre; background: transparent; border: 0; }
+.main-content pre { padding: 0.8rem; margin: 0.25rem 0.75rem 0.25rem 0.75rem; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; color: var(--purple-text); word-wrap: normal; background-color: var(--code-background); border: solid 1px var(--cayman-border); border-radius: 0.3rem; white-space: pre-wrap; }
+.main-content pre > code { padding: 0; margin: 0; font-size: 0.9rem; color: var(--purple-text); word-break: normal; background: transparent; border: 0; }
 .main-content .highlight { margin-bottom: 0.75rem; }
 .main-content .highlight pre { margin-bottom: 0; word-break: normal; }
 .main-content .highlight pre, .main-content pre { padding: 0.75rem; overflow: auto; font-size: 0.9rem; line-height: 1.45; border-radius: 0.3rem; -webkit-overflow-scrolling: touch; }
@@ -293,21 +294,16 @@ h6 { font-size: 0.75rem; margin: 1em 0; }
 .main-content pre code:before, .main-content pre code:after, .main-content pre tt:before, .main-content pre tt:after { content: normal; }
 .main-content ul, .main-content ol { margin-top: 0; }
 
-.main-content table { display: block; width: 100%; overflow: auto; word-break: normal; word-break: keep-all; -webkit-overflow-scrolling: touch; }
+.main-content table { display: block; width: 100%; overflow: auto; word-break: normal; word-break: keep-all; /* For Firefox to horizontally scroll wider tables. */ -webkit-overflow-scrolling: touch; }
 .main-content table th { font-weight: bold; background-color: var(--header1-border); }
-.main-content table th, .main-content table td { padding: 0.25rem 0.75rem; border: 1px solid var(--header1-border); }
-
-.main-content table { display: block; width: 100%; overflow: auto; word-break: normal; word-break: keep-all; -webkit-overflow-scrolling: touch; }
-.main-content table th { font-weight: bold; background-color: var(--header1-border); }
-.main-content table th, .main-content table td { padding: 0.5rem 1rem; border: 1px solid var(--header1-border); }
+.main-content table th, .main-content table td { padding: 0.25rem 0.75rem; border: 0.13rem solid var(--header-border); }
 
 .main-content dl { padding: 0; }
 .main-content dl dt { padding: 0; margin-top: 0.75rem; font-size: 1rem; font-weight: bold; }
 .main-content dl dd { padding: 0; margin-bottom: 0.75rem; }
 
-.main-content hr { height: 0.13; padding: 0; margin: 0.75rem 0; background-color: var(--cayman-hr-border); border: 0; }
-
-.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin: 0.75rem; padding-left: 0.24rem; font-weight: normal; color: var(--toc-header-text); }
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin: 0.75rem; padding-left: 0.25rem; font-weight: normal; color: var(--toc-header-text); }
+.main-content hr { height: 0.13rem; padding: 0; margin: 0.75rem 0; background-color: var(--cayman-hr-border); border: 0; }
 .main-content h1.grhead1 { font-size: 1.40rem; margin: 0.13rem 0 0.13rem 0.9rem; color: var(--toc-header-text); padding: 0px 0px 0px 0px; line-height: 24px; }
 .main-content h2.grhead2 { font-size: 1.30rem; margin: 0.13rem 0 0.13rem 1.50rem; color: var(--toc-header-text); padding: 0px 0px 0px 0px; line-height: 24px; }
 .main-content h3.grhead3 { font-size: 1.20rem; margin: 0.13rem 0 0.13rem 2.10rem; color: var(--toc-header-text); padding: 0px 0px 0px 0px; line-height: 24px; }
@@ -340,14 +336,14 @@ font.white, a.white { color: var(--white-text); }
 font.yellow, a.yellow { color: var(--yellow-text); }
 
 input[id^="spoiler"] { display: none; }
-input[id^="spoiler"] + label { display: inline; margin: 0.25rem; padding: 0.25rem; color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); text-align: center; font-size: 1.25rem; border-radius: 0.5rem; cursor: pointer; transition: all .6s; }
+input[id^="spoiler"] + label { display: inline; margin: 0.85rem; padding: 0.25rem; color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); text-align: center; font-size: 1.25rem; border-radius: 0.5rem; cursor: pointer; transition: all .6s; }
 input[id^="spoiler"]:checked + label { color: var(--purple-text); background-color: var(--code-background); outline-style: hidden; }
-input[id^="spoiler"] ~ .spoiler { width: auto; height: 0; overflow: hidden; opacity: 0; margin: 0.25rem; padding: 0.25rem; color: var(--purple-text); background-color: var(--code-background); border: 2px; border-style: solid; border-color: rgba(255, 255, 255, 0.8); border-radius: 8px; transition: all .6s; }
-input[id^="spoiler"] ~ .spoiler p { color: inherit; }
-input[id^="spoiler"]:checked + label + .spoiler { height: auto; opacity: 1; padding: 10px; }
+input[id^="spoiler"] ~ .main-content { height: 0; overflow: auto; opacity: 0; margin: 0 0 0 0.95rem; background-color: var(--code-background); border: 2px; border-style: solid; border-color: rgba(255, 255, 255, 0.8); border-radius: 8px; font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace; transition: all .6s; }
+input[id^="spoiler"]:checked + label + .main-content { height: auto; opacity: 1; }
 
-.main-content p { margin: 0 0 0 0.75rem; color: var(--body-text); }
+.main-content p { margin: 0 0 0 0.95rem; color: var(--body-text); }
 .main-content p.empty { margin-top: 0.1rem; margin-bottom: 0.1rem; }
+.main-content p.note { -moz-border-radius: 6px; -webkit-border-radius: 6px; background-color: var(--code-background); background-image: url(img/note.png); background-position: 9px 0px; background-repeat: no-repeat; border: solid 0.13rem var(--header-border); border-radius: 6px; line-height: 18px; overflow: hidden; padding: 15px 60px; margin: 0 1rem; }
 .main-content p.list-1 { margin-left: 0.9rem; }
 .main-content p.list-2 { margin-left: 1.50rem; }
 .main-content p.list-3 { margin-left: 2.10rem; }
@@ -362,10 +358,14 @@ section.quote .attr { margin: 0; padding: 0 0 0.1rem 0.5rem; font: normal 400 1.
 section.quote .attr:before { content: " - "; }
 section.quote .attr:after { content: " - "; }
 
-.drkbtn {  padding: 0.9rem; font-size: 1.2rem; display: inline-block; margin-bottom: 0.5rem; margin-left: 0.90rem; /* Preserve these colors the look goof on the header background */ color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); border-style: solid; border-width: 1px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
+figure.image-caption { position: relative; height: auto; padding: 0.25rem 0 0.25rem 0; margin: 0 0 0 0.75rem; background: var(--body-background); }
+figure.image-caption a { position: relative; font-size: 0.90rem; color: #1e6bb8; background-color: var(--code-background); border-color: var(--header-border); border-style: solid; border-width: 0.13rem; border-radius: 0.3rem; padding: 0.25rem; margin: 0.25rem 0 0.25rem 0; }
+figure.image-caption figcaption { color: var(--header4-text); background-color: var(--code-background); border-color: var(--header-border); border-style: solid; border-width: 0.13rem; border-radius: 0.3rem; position: relative; font-size: 0.90rem; padding: 0.25rem; margin: 0.25rem 0 0.25rem 0; }
+figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0; margin: 0; }
+
+.drkbtn { padding: 0.9rem; font-size: 1.2rem; display: inline-block; margin-bottom: 0.5rem; margin-left: 0.90rem; color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); border-style: solid; border-width: 1px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
 .drkbtn:hover { text-decoration: none; color: rgba(255, 255, 255, 0.8); background-color: rgba(34, 195, 195, 0.7); border-color: rgba(255, 255, 255, 0.3); }
-.drkbtn + .drkbtn { margin-left: 0.50rem; }
-.drkbtn + .drkbtn { margin-top: 0.5rem; margin-left: 0; } }
+.drkbtn + .drkbtn { margin-top: 0.5rem; margin-left: 0; }
 """
 
 # Conversion ------------------------------------------------------------------
@@ -425,10 +425,10 @@ def wtxtToHtml(srcFile, outFile=None):
     # --Misc. text
     reHRule = re.compile(r'^\s*-{4,}\s*$')
     reEmpty = re.compile(r'\s+$')
-    reMDash = re.compile(r'--')
+    reMDash = re.compile(r'-em-')
     rePreBegin = re.compile('<pre>', re.I)
     rePreEnd = re.compile('</pre>', re.I)
-    reParagraph = re.compile('<p\s+|<p>', re.I)
+    reParagraph = re.compile('<p[\s]+|<p>', re.I)
     reCloseParagraph = re.compile('</p>', re.I)
     # --Bold, Italic, BoldItalic
     reBold = re.compile(r'__')
@@ -437,8 +437,8 @@ def wtxtToHtml(srcFile, outFile=None):
     states = {'bold': False, 'italic': False, 'boldItalic': False}
     # --Links
     reLink = re.compile(r'\[\[(.+?)\]\]')
-    reHttp = re.compile(r' (http:\/\/[\?=_~a-zA-Z0-9\.\/%-]+)')
-    reWww = re.compile(r' (www\.[\?=_~a-zA-Z0-9\./%-]+)')
+    reHttp = re.compile(r' (http:\/\/[\?=_~a-zA-Z0-9\.\/%-]+)| (https:\/\/[\?=_~a-zA-Z0-9\.\/%-]+)')
+    reWww = re.compile(r' (www\.[_~a-zA-Z0-9\./%-]+)')
     reWd = re.compile(r'(<[^>]+>|\[[^\]]+\]|\W+)')
     rePar = re.compile(r'^([a-zA-Z\d]|\*\*|~~|__|^\.{1,}|^\*{1,}|^\"{1,})')
     reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}$)')
@@ -458,7 +458,6 @@ def wtxtToHtml(srcFile, outFile=None):
     reSpoilerEnd = re.compile(r'\[\[se:\]\]')
     reBlockquoteBegin = re.compile(r'\[\[bb:(.*?)\]\]')
     reBlockquoteBEnd = re.compile(r'\[\[be:\]\]')
-    reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<a\s{1,3}(class=".+?)?href.+?\>)|(^\<img\s{1,3}src.+?\>)|^\u00A9|^\<strong|^\<[bB]\>')
     reNavigationButtonBegin = re.compile(r'{{nbb}}')
     reNavigationButtonEnd = re.compile(r'{{nbe}}')
     # --Open files
@@ -468,6 +467,9 @@ def wtxtToHtml(srcFile, outFile=None):
     reImageOnly = re.compile(r'{{image:(.+?)}}')
     reImageCaption = re.compile(r'{{image-caption:(.+?)}}')
     reImageCaptionUrl = re.compile(r'{{image-cap-url:(.+?)}}')
+    # --Exclude from Paragraphs
+    # reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<a\s{1,3}(class=".+?)?href.+?\>)|(^\<img\s{1,3}src.+?\>)|^\u00A9|^\<strong|^\<[bB]\>|(^{% include image)')
+    reHtmlNotPar = re.compile(r'\<h\d[>]?|<hr>|{{CONTENTS|class="drkbtn"|{% raw %}|{% endraw %}|<[\/]?div>')
 
     def imageInline(maObject):
         image_line = maObject.group(1).strip()
@@ -504,15 +506,15 @@ def wtxtToHtml(srcFile, outFile=None):
         spoilerID = spoilerID.lower()
         return (spoilerID, spoilerText)
 
-    def httpReplace(line):
-        temp_text = line
+    def httpReplace(maObject):
+        temp_text = maObject.group(1)
         if inNavigationButtons:
-            temp_line = reHttp.sub(r' <a href="\1" class="drkbtn">\1</a>', temp_text)
+            temp_line = '<a href="{}" class="drkbtn">{}</a>'.format(temp_text, temp_text)
         else:
-            temp_line = reHttp.sub(r' <a href="\1">\1</a>', temp_text)
+            temp_line = '<a href="{}">{}</a>'.format(temp_text, temp_text)
         return temp_line
 
-    def wwwReplace(line):
+    def wwwReplace(maObject):
         temp_text = line
         if inNavigationButtons:
             temp_line = reWww.sub(r' <a href="http://\1" class="drkbtn">\1</a>', temp_text)
@@ -566,10 +568,15 @@ def wtxtToHtml(srcFile, outFile=None):
     # --Read source file --------------------------------------------------
     ins = open(srcFile, 'r')
     for line in ins:
+        # --CSS
+        maCss = reCssTag.match(line)
+        if maCss:
+            cssFile = maCss.group(1).strip()
+            continue
         # --Liquid ------------------------------------
         line = re.sub(r'\{% raw %\}', '', line)
         line = re.sub(r'\{% endraw %\}', '', line)
-        # --Preformatted? -----------------------------
+        # --Preformatted Text Block -----------------------------
         maPreBegin = rePreBegin.search(line)
         maPreEnd = rePreEnd.search(line)
         if (inPre and not maPreEnd) or maPreBegin:
@@ -580,34 +587,39 @@ def wtxtToHtml(srcFile, outFile=None):
             inPre = False
             outLines.append(line)
             continue
+        # --Spoiler Tag ---------------------------
+        maSpoilerBegin = reSpoilerBegin.match(line)
+        maSpoilerEnd = reSpoilerEnd.match(line)
+        if maSpoilerBegin:
+            spoilerline = maSpoilerBegin.group(1)
+            spoilerID, spoilerName = spoilerTag(spoilerline)
+            firstLine = '<input type="checkbox" id="{}" />\n'.format(spoilerID)
+            outLines.append(firstLine)
+            secondLine = '<label for="{}">{}</label>\n'.format(spoilerID, spoilerName)
+            outLines.append(secondLine)
+            thirdLine = '<div class="main-content">\n'
+            outLines.append(thirdLine)
+            continue
+        if maSpoilerEnd:
+            line = '</div>\n'
+            outLines.append(line)
+            continue
+        # --Page Title -------------------------------
         maTitleTag = reTitleTag.match(line)
+        if maTitleTag:
+            pageTitle = re.sub(r'({{PAGETITLE=")(.*)("}})(\n)?', r'\2', line)
+            line = '= ' + pageTitle
+        maComment = reComment.match(line)
         maCTypeBegin = reCTypeBegin.match(line)
         maCTypeEnd = reCTypeEnd.search(line)
-        maComment = reComment.match(line)
         if maComment:
             continue
         if inComment or maCTypeBegin or maCTypeEnd or maComment:
             inComment = maCTypeBegin or (inComment and not maCTypeEnd)
             continue
-        if maTitleTag:
-            pageTitle = re.sub(r'({{PAGETITLE=")(.*)("}})(\n)?', r'\2', line)
-            line = '= ' + pageTitle
-        # --Re Matches -------------------------------
-        maContents = reContentsTag.match(line)
-        maCss = reCssTag.match(line)
-        maHead = reHead.match(line)
-        maHeadgreen = reHeadGreen.match(line)
-        maList = reList.match(line)
-        maPar = rePar.match(line)
-        maHRule = reHRule.match(line)
-        maEmpty = reEmpty.match(line)
-        maSpoilerBegin = reSpoilerBegin.match(line)
-        maSpoilerEnd = reSpoilerEnd.match(line)
-        maBlockquoteBegin = reBlockquoteBegin.match(line)
-        maBlockquoteEnd = reBlockquoteBEnd.match(line)
+        # --Navigation Buttons ----------------------------------
         maNavigationButtonBegin = reNavigationButtonBegin.match(line)
         maNavigationButtonEnd = reNavigationButtonEnd.match(line)
-        # --Navigation Buttons ----------------------------------
         if maNavigationButtonBegin:
             line = '<div>\n'
             inNavigationButtons = True
@@ -615,17 +627,40 @@ def wtxtToHtml(srcFile, outFile=None):
             line = '</div>\n'
             inNavigationButtons = False
         # --Contents ----------------------------------
+        maContents = reContentsTag.match(line)
         if maContents:
-            if maContents.group(1):
-                addContents = int(maContents.group(1))
-            else:
-                addContents = 100
-        # --CSS
-        elif maCss:
-            cssFile = maCss.group(1).strip()
+            temp_var = maContents.group(1)
+            addContents = int(temp_var)
+        # --Re Note -------------------------------
+        maNoteTag = reNoteTag.match(line)
+        if maNoteTag:
+            note_text = maNoteTag.group(1)
+            line = '<p class="note">{}</p>\n'.format(note_text)
+        # --Blockquote ---------------------------
+        maBlockquoteBegin = reBlockquoteBegin.match(line)
+        maBlockquoteEnd = reBlockquoteBEnd.match(line)
+        if maBlockquoteBegin:
+            firstLine = '<section class="quote">\n'
+            outLines.append(firstLine)
+            author = maBlockquoteBegin.group(1)
+            if len(author) < 1:
+                author = blockAuthor
+            authorLine = '<p class="attr">{}</p>\n'.format(author)
+            outLines.append(authorLine)
             continue
+        if maBlockquoteEnd:
+            line = '</section>\n'
+            outLines.append(line)
+            continue
+        # --Re Matches -------------------------------
+        maHead = reHead.match(line)
+        maHeadgreen = reHeadGreen.match(line)
+        maList = reList.match(line)
+        maPar = rePar.match(line)
+        maHRule = reHRule.match(line)
+        maEmpty = reEmpty.match(line)
         # --Headers
-        elif maHead:
+        if maHead:
             lead, text = maHead.group(1, 2)
             text = re.sub(' *=*$', '', text.strip())
             anchor = reWd.sub('', text)
@@ -677,36 +712,8 @@ def wtxtToHtml(srcFile, outFile=None):
         # --Empty line
         elif maEmpty:
             line = spaces + '<p class="empty">&nbsp;</p>\n'
-        # --Spoiler Tag ---------------------------
-        elif maSpoilerBegin:
-            spoilerline = maSpoilerBegin.group(1)
-            spoilerID, spoilerName = spoilerTag(spoilerline)
-            firstLine = '<input type="checkbox" id="{}" />\n'.format(spoilerID)
-            outLines.append(firstLine)
-            secondLine = '<label for="{}">{}</label>\n'.format(spoilerID, spoilerName)
-            outLines.append(secondLine)
-            thirdLine = '<div class="spoiler">\n'
-            outLines.append(thirdLine)
-            inSpoilerBlock = True
-            continue
-        elif maSpoilerEnd:
-            line = '</div>\n'
-            inSpoilerBlock = False
-        # --Blockquote ---------------------------
-        elif maBlockquoteBegin:
-            firstLine = '<section class="quote">\n'
-            outLines.append(firstLine)
-            author = maBlockquoteBegin.group(1)
-            if len(author) < 1:
-                author = blockAuthor
-            authorLine = '<p class="attr">{}</p>\n'.format(author)
-            outLines.append(authorLine)
-            continue
-        elif maBlockquoteEnd:
-            line = '</section>\n'
         # --Misc. Text changes --------------------
-        line = reMDash.sub('&#150', line)
-        line = reMDash.sub('&#150', line)
+        line = reMDash.sub('&mdash;', line)
         # --Bold/Italic subs
         line = reBold.sub(boldReplace, line)
         line = reItalic.sub(italicReplace, line)
@@ -720,19 +727,12 @@ def wtxtToHtml(srcFile, outFile=None):
         line = reImageCaptionUrl.sub(imageCaptionUrl, line)
         # --Hyperlinks
         line = reLink.sub(linkReplace, line)
-        line = httpReplace(line)
-        line = wwwReplace(line)
-        # --Re Note -------------------------------
-        maNoteTag = reNoteTag.match(line)
-        if maNoteTag:
-            note_text = maNoteTag.group(1)
-            line_out = '<p class="note">{}</p>\n'.format(note_text)
-            outLines.append(line_out)
-            continue
+        line = reHttp.sub(httpReplace, line)
+        # line = reWww.sub(wwwReplace, line)
         # --HTML Font or Code tag first of Line ------------------
-        maHtmlBegin = reHtmlBegin.match(line)
-        if maHtmlBegin:
-            maParagraph = reParagraph.match(line)
+        maHtmlNotPar = reHtmlNotPar.search(line)
+        if not maHtmlNotPar:
+            maParagraph = reParagraph.search(line)
             maCloseParagraph = reCloseParagraph.search(line)
             if not maParagraph:
                 line = '<p>' + line

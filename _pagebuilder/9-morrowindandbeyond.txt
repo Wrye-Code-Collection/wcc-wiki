@@ -63,11 +63,11 @@ I also wondered are there any other sites other then the Nexus and the UESP Wiki
 
 {% raw %}
 [[sb:spoiler1 | Old Wrye Mash]]
-  . [[https://www.nexusmods.com/morrowind/mods/27588 | Wrye Mash 84]] Nexus
-  . [[http://mw.modhistory.com/download-95-5568 | Wrye Mash 84]] MMH
-    . Wrye Mash 84 is the last version by Wrye Himself
-  . [[http://mw.modhistory.com/download-95-5624 | Wrye Mash Stand Alone v3]], by [[http://forums.bethsoft.com/index.php?/topic/1106095-wrye-mash-stand-alone/ | Melchor]]
-  . [[http://forums.bethsoft.com/topic/1331996-yacobys-wrye-mash-fork/ | Wrye Mash Stand Alone]], by [[http://www.jacobessex.com/ | Yacoby]]
+[[https://www.nexusmods.com/morrowind/mods/27588 | Wrye Mash 84]] Nexus
+[[http://mw.modhistory.com/download-95-5568 | Wrye Mash 84]] MMH
+. Wrye Mash 84 is the last version by Wrye Himself
+[[http://mw.modhistory.com/download-95-5624 | Wrye Mash Stand Alone v3]], by [[http://forums.bethsoft.com/index.php?/topic/1106095-wrye-mash-stand-alone/ | Melchor]]
+[[http://forums.bethsoft.com/topic/1331996-yacobys-wrye-mash-fork/ | Wrye Mash Stand Alone]], by [[http://www.jacobessex.com/ | Yacoby]]
 [[se:]]
 {% endraw %}
 * [[ https://cs.elderscrolls.com/index.php?title=DDS_Tools | DDS Tools CS Wiki]]
