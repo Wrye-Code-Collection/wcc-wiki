@@ -227,7 +227,7 @@ You may be contributing a guide that has people download a mod and you wish to c
 {% raw %}&#91;&#91;https://github.com/Sharlikran | The Link Text Will Be Green{{a:green}}&#93;&#93;{% endraw %}
 </pre>
 
-{% raw %}[[https://sharlikran.github.io/ | This Link Text is Orange{{a:orange}}]]{% endraw %}
+[[https://sharlikran.github.io/ | This Link Text is Orange{{a:orange}}]]
 
 {{note:The tag must be with the link name or it will be ignored.}}
 <hr>
