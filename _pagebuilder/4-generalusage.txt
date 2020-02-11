@@ -18,3 +18,11 @@ Browse to the location of your game's install. In this screen shot I have browse
 Once you have chosen the game folder and clicked okay, the install loaction will appear in the Installer window. Repeat that for any other games and continue with the instalation.
 
 {{image:continueinstall.jpg | continueinstall}}
+
+== cb_GetVersionMajor not found
+
+{{note:AttributeError: function cb_GetVersionMajor not found}}
+
+{{image:wryebashcbasherror.jpg | wryebashcbasherror}}
+
+Simply means that you didn't install the proper MSVC++ that is required for Cbash. This is mentioned in the official documentation under [[https://wrye-bash.github.io/docs/Wrye%20Bash%20General%20Readme.html#install | Installation]].
