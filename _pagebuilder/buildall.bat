@@ -8,7 +8,7 @@ C:\Python38-32\python.exe wtxt-wiki.py genHtml 7-tomeofpsymon.txt
 C:\Python38-32\python.exe wtxt-wiki.py genHtml 8-tomeofalt3rn1ty.txt
 C:\Python38-32\python.exe wtxt-wiki.py genHtml 9-morrowindandbeyond.txt
 C:\Python38-32\python.exe wtxt-wiki.py genHtml 10-contribute.txt
-C:\Python38-32\python.exe wtxt-wiki.py genHtml 11-tutorial_Links.txt
-C:\Python38-32\python.exe wtxt-wiki.py genHtml 12-other_tools_and_extras.txt
+REM C:\Python38-32\python.exe wtxt-wiki.py genHtml 11-tutorial_Links.txt
+REM C:\Python38-32\python.exe wtxt-wiki.py genHtml 12-other_tools_and_extras.txt
 C:\Python38-32\python.exe wtxt-wiki.py genHtml 13-oblivionandbeyond.txt
 C:\Python38-32\python.exe wtxt-wiki.py genHtml 14-testoolghostwheel.txt
