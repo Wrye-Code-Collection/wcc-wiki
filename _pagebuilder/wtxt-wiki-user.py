@@ -366,6 +366,10 @@ figure.image-caption figurl { position: relative; font-size: 0.90rem; padding: 0
 .drkbtn { padding: 0.9rem; font-size: 1.2rem; display: inline-block; margin-bottom: 0.5rem; margin-left: 0.90rem; color: white; background-color: rgba(23, 130, 130, 0.9); border-color: rgba(23, 130, 130, 0.2); border-style: solid; border-width: 1px; border-radius: 0.3rem; transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
 .drkbtn:hover { text-decoration: none; color: rgba(255, 255, 255, 0.8); background-color: rgba(34, 195, 195, 0.7); border-color: rgba(255, 255, 255, 0.3); }
 .drkbtn + .drkbtn { margin-top: 0.5rem; margin-left: 0; }
+
+.tooltip { position: relative; display: block; }
+.tooltip .tooltiptext { display: block; visibility: hidden; width: auto; color: var(--header4-text); background-color: var(--code-background); border-color: var(--header-border); border-style: solid; text-align: center; border-radius: 6px; padding: 0; position: absolute; z-index: 1; left: 0.9rem; /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */ opacity: 0; transition: opacity 1s; }
+.tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
 """
 
 # Conversion ------------------------------------------------------------------
@@ -412,6 +416,17 @@ def wtxtToHtml(srcFile, outFile=None):
             out_text = text
         return fontClass, out_text
 
+    def strip_title(text):
+        if reLinkTitle.search(text):
+            temp = reLinkTitle.search(text)
+            link_title = 'title="{}"'.format(temp.group(1))
+            strip_title = temp.group(0)
+            out_text = re.sub(strip_title, '', text)
+        else:
+            link_title = ''
+            out_text = text
+        return link_title, out_text
+
     # RegEx ---------------------------------------------------------
     # --Headers
     reHead = re.compile(r'(=+) *(.+)')
@@ -442,7 +457,11 @@ def wtxtToHtml(srcFile, outFile=None):
     reWd = re.compile(r'(<[^>]+>|\[[^\]]+\]|\W+)')
     rePar = re.compile(r'^([a-zA-Z\d]|\*\*|~~|__|^\.{1,}|^\*{1,}|^\"{1,})')
     reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}$)')
-    reLinkWithHashtag = re.compile(r'(.*)#(.*)$')
+    reLinkWithHashtag = re.compile(r'(.*)(#(.*))$')
+    # --Tooltip
+    reTooltip = re.compile(r'{{tooltip:(.+?)}}')
+    # --LinkTitle
+    reLinkTitle = re.compile(r'{{title:(.+?)}}')
     # --TextColors
     reTextColor = re.compile(r'{{a:(.+?)}}')
     # --Tags
@@ -469,7 +488,7 @@ def wtxtToHtml(srcFile, outFile=None):
     reImageCaptionUrl = re.compile(r'{{image-cap-url:(.+?)}}')
     # --Exclude from Paragraphs
     # reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<a\s{1,3}(class=".+?)?href.+?\>)|(^\<img\s{1,3}src.+?\>)|^\u00A9|^\<strong|^\<[bB]\>|(^{% include image)')
-    reHtmlNotPar = re.compile(r'\<h\d[>]?|<hr>|{{CONTENTS|class="drkbtn"|{% raw %}|{% endraw %}|<[\/]?div>|<div id=|<div class=|<[\/]?iframe')
+    reHtmlNotPar = re.compile(r'\<h\d[>]?|<hr>|{{CONTENTS|class="drkbtn"|{% raw %}|{% endraw %}|<[\/]?div>|<div id=|<div class=|<[\/]?iframe|<[\/]?table|<[\/]?tr')
 
     def imageInline(maObject):
         image_line = maObject.group(1).strip()
@@ -529,22 +548,30 @@ def wtxtToHtml(srcFile, outFile=None):
         else:
             address = text = link_object
         fontClass, text = strip_color(text)
+        linkTitle, text = strip_title(text)
         text_only_object = reLinkWithHashtag.search(address)
-        if address == '#':
-            address += reWd.sub('', text)
         if text_only_object:
             group1 = text_only_object.group(1)
             group2 = text_only_object.group(2)
-            if (address.find('#') > 0) and not (group1.find(':') >= 0):
-                anchor_out = reWd.sub('', group2)
-                address = '{}#{}'.format(group1, anchor_out)
-            if not (len(group1) > 0) and (len(group2) > 0) and (address[0] == '#'):
-                anchor_out = reWd.sub('', group2)
+            group3 = text_only_object.group(3)
+            # [[#|Implementing The Method]]
+            if len(group1) == 0 and len(group3) == 0 and group2 == '#':
+                address += reWd.sub('', text)
+            # [[#Implementing The Method | Implementing The Method]]
+            if len(group1) == 0 and len(group3) > 0 and address.find('#') == 0:
+                anchor_out = reWd.sub('', group3)
                 address = '#{}'.format(anchor_out)
+            # [[5-themethod.html#Implementing The Method | Implementing The Method]]
+            if (len(group1) > 0) and (len(group3) > 0) and (address.find('#') > 0) and not (group1.find(':') > 0):
+                anchor_out = reWd.sub('', group3)
+                address = '{}#{}'.format(group1, anchor_out)
+            # [[https://wiki.step-project.com/Guide:Troubleshooting#How_do_I_restore_vanilla_Skyrim.3F | This]]
+            if (address.find('#') > 0) and group1.find(':') > 0:
+                address = '{}#{}'.format(group1, group3)
         if inNavigationButtons:
-            return '<a {} href="{}" class="drkbtn">{}</a>'.format(fontClass, address, text)
+            return '<a {} href="{}" {} class="drkbtn">{}</a>'.format(fontClass, address, linkTitle, text)
         else:
-            return '<a {} href="{}">{}</a>'.format(fontClass, address, text)
+            return '<a {} href="{}" {}>{}</a>'.format(fontClass, address, linkTitle, text)
 
     # --Defaults ----------------------------------------------------------
     level = 1
@@ -707,7 +734,7 @@ def wtxtToHtml(srcFile, outFile=None):
         elif maHRule:
             line = '<hr>\n'
         # --Paragraph
-        elif maPar and not inSpoilerBlock:
+        elif maPar:
             line = '<p>' + line.rstrip() + '</p>\n'
         # --Empty line
         elif maEmpty:
@@ -731,6 +758,17 @@ def wtxtToHtml(srcFile, outFile=None):
         # line = reWww.sub(wwwReplace, line)
         # --HTML Font or Code tag first of Line ------------------
         maHtmlNotPar = reHtmlNotPar.search(line)
+        # --Tooltip
+        maTooltip = reTooltip.search(line)
+        if maTooltip:
+            text_split = maTooltip.group(1)
+            text_strip = maTooltip.group(0)
+            text_strip = re.sub('\|', '\|', text_strip)
+            (tooltip_text, hover_text) = [chunk.strip() for chunk in text_split.split('|', 1)]
+            newline = '<div class="tooltip"><p>{}</p>\n'.format(tooltip_text)
+            newline = newline + '    <span class="tooltiptext">{}</span>\n'.format(hover_text)
+            newline = newline + '</div>\n'
+            line = re.sub(text_strip, newline, line)
         if not maHtmlNotPar:
             maParagraph = reParagraph.search(line)
             maCloseParagraph = reCloseParagraph.search(line)

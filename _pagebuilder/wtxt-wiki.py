@@ -250,6 +250,17 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             out_text = text
         return fontClass, out_text
 
+    def strip_title(text):
+        if reLinkTitle.search(text):
+            temp = reLinkTitle.search(text)
+            link_title = 'title="{}"'.format(temp.group(1))
+            strip_title = temp.group(0)
+            out_text = re.sub(strip_title, '', text)
+        else:
+            link_title = ''
+            out_text = text
+        return link_title, out_text
+
     # RegEx ---------------------------------------------------------
     # --Headers
     reHead = re.compile(r'(=+) *(.+)')
@@ -281,6 +292,10 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     rePar = re.compile(r'^([a-zA-Z\d]|\*\*|~~|__|^\.{1,}|^\*{1,}|^\"{1,})')
     reFullLink = re.compile(r'(:|#|\.[a-zA-Z0-9]{2,4}$)')
     reLinkWithHashtag = re.compile(r'(.*)(#(.*))$')
+    # --Tooltip
+    reTooltip = re.compile(r'{{tooltip:(.+?)}}')
+    # --LinkTitle
+    reLinkTitle = re.compile(r'{{title:(.+?)}}')
     # --TextColors
     reTextColor = re.compile(r'{{a:(.+?)}}')
     # --Tags
@@ -307,7 +322,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reImageCaptionUrl = re.compile(r'{{image-cap-url:(.+?)}}')
     # --Exclude from Paragraphs
     # reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<a\s{1,3}(class=".+?)?href.+?\>)|(^\<img\s{1,3}src.+?\>)|^\u00A9|^\<strong|^\<[bB]\>|(^{% include image)')
-    reHtmlNotPar = re.compile(r'\<h\d[>]?|<hr>|{{CONTENTS|class="drkbtn"|<[\/]?div>|<div id=|<div class=|<[\/]?iframe')
+    reHtmlNotPar = re.compile(r'\<h\d[>]?|<hr>|{{CONTENTS|class="drkbtn"|<[\/]?div>|<div id=|<div class=|<[\/]?iframe|<[\/]?table|<[\/]?tr')
     reLiquidOnly = re.compile(r'{% raw %}|{% endraw %}')
 
     def imageInline(maObject):
@@ -365,6 +380,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         else:
             address = text = link_object
         fontClass, text = strip_color(text)
+        linkTitle, text = strip_title(text)
         text_only_object = reLinkWithHashtag.search(address)
         if text_only_object:
             group1 = text_only_object.group(1)
@@ -385,9 +401,9 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
             if (address.find('#') > 0) and group1.find(':') > 0:
                 address = '{}#{}'.format(group1, group3)
         if inNavigationButtons:
-            return '<a {} href="{}" class="drkbtn">{}</a>'.format(fontClass, address, text)
+            return '<a {} href="{}" {} class="drkbtn">{}</a>'.format(fontClass, address, linkTitle, text)
         else:
-            return '<a {} href="{}">{}</a>'.format(fontClass, address, text)
+            return '<a {} href="{}" {}>{}</a>'.format(fontClass, address, linkTitle, text)
 
     # --Defaults ----------------------------------------------------------
     level = 1
@@ -405,7 +421,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     blockAuthor = "Unknown"
     inNavigationButtons = False
     inLiquidOnly = False
-    inSpoilerBlock = False
     pageTitle = 'title: Your Content'
     # --Read source file --------------------------------------------------
     ins = open(srcFile, 'r')
@@ -576,6 +591,17 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         if maLiquidOnly:
             if line == '{% raw %}\n' or line == '{% endraw %}\n':
                 inLiquidOnly = True
+        # --Tooltip
+        maTooltip = reTooltip.search(line)
+        if maTooltip:
+            text_split = maTooltip.group(1)
+            text_strip = maTooltip.group(0)
+            text_strip = re.sub('\|', '\|', text_strip)
+            (tooltip_text, hover_text) = [chunk.strip() for chunk in text_split.split('|', 1)]
+            newline = '<div class="tooltip"><p>{}</p>\n'.format(tooltip_text)
+            newline = newline + '    <span class="tooltiptext">{}</span>\n'.format(hover_text)
+            newline = newline + '</div>\n'
+            line = re.sub(text_strip, newline, line)
         if not maHtmlNotPar and not inLiquidOnly:
             maParagraph = reParagraph.search(line)
             maCloseParagraph = reCloseParagraph.search(line)

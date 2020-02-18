@@ -17,11 +17,11 @@
 {{CONTENTS=3}}
 
 == Requirement
-* The <code>pagebuilder_v20.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.
-### Download pagebuilder_v20.zip
+* The <code>pagebuilder_v21.zip</code> contains all the files shown. However, in the future it may contain other files as well. As the file changes, the file name will have a version number added to it that you can compare to your copy. Then you will know if you have the most recent files.
+### Download pagebuilder_v21.zip
 {{image:pagebuilder.jpg | Page Builder Zipfile}}
 
-* [[pagebuilder_v20.zip | pagebuilder_v20 Download Link.zip]]
+* [[pagebuilder_v21.zip | pagebuilder_v21 Download Link.zip]]
 
 ### Example Template
 As part of the pagebuilder archive you have <code>Wiki Page Template.txt</code>. This will be the file you will modify as desired for the wiki content you wish to present. I will convert it into usable HTML after you are done and you may update the content and submit the changes.
@@ -231,6 +231,27 @@ You may be contributing a guide that has people download a mod and you wish to c
 
 {{note:The tag must be with the link name or it will be ignored.}}
 <hr>
+=== Link Titles
+Link titles can be used to display a brief description about the link.
+
+<pre>
+{% raw %}[[https://github.com/Sharlikran | The will be the Link Text{{title:This will be the brief description}}]]{% endraw %}
+</pre>
+
+[[https://github.com/Sharlikran | Sharlikran{{title:My modding autobiography and more info}}]]
+
+{{note:The title text must be with the link name or it will be ignored.}}
+<hr>
+===  Tooltip Text
+Tooltip text can be used to display extra information you want people to know and eliminate some clutter on the page.
+
+<pre>
+{% raw %}{{tooltip:This is the text users will see. | This is the tooltip text.}}{% endraw %}
+</pre>
+{{tooltip:This is the text users will see. | This is the tooltip text.}}
+
+{{note:Tooltips should be brief descriptions of the information and not long paragraphs.}}
+<hr>
 === Html
 * <i>Html tags work fine</i>
 * <code>code tag has special formatting</code>
@@ -366,11 +387,11 @@ The syntax for an image with a caption and a hyperlink will require five element
 
 #### Example syntax Image with a Caption and Hyperlink
 {% raw %}<pre>
-{{image-cap-url:pagebuilder.jpg | Page Builder Image | This is what the zip looks like | pagebuilder_v20.zip | Page Builder Zip}}
+{{image-cap-url:pagebuilder.jpg | Page Builder Image | This is what the zip looks like | pagebuilder_v21.zip | Page Builder Zip}}
 </pre>{% endraw %}
 
 #### Example Image with Caption and Hyperlink
-{{image-cap-url:pagebuilder.jpg | Page Builder Image | This is what the zip looks like | pagebuilder_v20.zip | Page Builder Zip}}
+{{image-cap-url:pagebuilder.jpg | Page Builder Image | This is what the zip looks like | pagebuilder_v21.zip | Page Builder Zip}}
 <hr>
 === Adding an inline Image
 You can use small inline images between {{inline:20px | Sqinter.png | Wrye Avatar}} text.
@@ -389,6 +410,11 @@ Keep in mind you would want to use small images about 24 to 36 pixels or less. U
 <hr>
 {{nav:thislink}}
 == Versions ===================================================================
+
+=== 21.00 Update [2/18/2020]
+* released pagebuilder_v21.zip version 21
+  * Added Tooltip Text
+  * Added Link Titles
 
 === 20.00 Update [1/27/2020]
 * released pagebuilder_v20.zip version 20
@@ -413,13 +439,13 @@ Keep in mind you would want to use small images about 24 to 36 pixels or less. U
   * Updated header renumbering to use altered header text instead of original text.
   . from when it was first captured.
 
+{{CONTENTS=0}}
 === 16.00 Update [1/25/2020]
 * released pagebuilder_v16.zip version 16
   * Remove and assign color better for links.
   * Handle Paragraphs Better.
   * Provide more control for Preformatted Blocks.
 
-{{CONTENTS=0}}
 === 15.00 Update [1/24/2020]
 * released pagebuilder_v15.zip version 15
   * Fixed bug in page auto renumbering when there is no number prefix for the filename.
