@@ -532,11 +532,12 @@ body {
   }
   table {
     display: block;
-    width: 100%;
-    overflow: auto;
+    width: calc(100% - (0.9rem * 2));
     word-break: normal;
     word-break: keep-all; /* For Firefox to horizontally scroll wider tables. */
     -webkit-overflow-scrolling: touch;
+    margin-left: 0.9rem;
+    margin-right: 0.9rem;
     th {
       font-weight: bold;
       background-color: var(--header3-background);
@@ -983,3 +984,30 @@ figure.image-caption {
 .site-footer-credits {
   color: var(--cayman-blockquote-text);
 }
+
+.cmp-no, 
+.cmp-unknown, 
+.cmp-yes {
+	background-repeat: no-repeat;
+	width: 3.2rem;
+	height: 3.2rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.cmp-yes
+{
+	background-image: url(../../img/tick.png);
+}
+
+.cmp-no
+{
+	background-image: url(../../img/cross.png);
+}
+
+.cmp-unknown
+{
+	background-image: url(../../img/question.png);
+}
+
