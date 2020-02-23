@@ -311,6 +311,7 @@ body {
     'lefttoc' 'righttoc';
   }
 }
+
 .grid-toc div {
   background: var(--body-background);
 }
@@ -444,10 +445,10 @@ body {
     color: var(--toc-header-text);
   }
   iframe {
-	  margin: 0.38rem 0 0.38rem 0.95rem;
+    margin: 0.38rem 0 0.38rem 0.95rem;
   }
   p {
-	  margin: 0 0 0 0.95rem;
+    margin: 0 0 0 0.95rem;
     color: var(--body-text);
   }
   code {
@@ -570,6 +571,7 @@ body {
   }
 }
 
+
 /* adding none to this hides the checkbox */
 input[id^="spoiler"] {
   display: none;
@@ -594,7 +596,7 @@ input[id^="spoiler"]+label {
 input[id^="spoiler"]:checked+label {
   color: var(--purple-text);
   background-color: var(--code-background);
-  outline-style: hidden ;
+  outline-style: hidden;
 }
 
 /* the spoiler tag text box */
@@ -602,7 +604,7 @@ input[id^="spoiler"]~.main-content {
   height: 0;
   overflow: auto;
   opacity: 0;
-	margin: 0 0 0 0.95rem;
+  margin: 0 0 0 0.95rem;
   background-color: var(--code-background);
   border: 2px;
   border-style: solid;
@@ -620,31 +622,31 @@ input[id^="spoiler"]:checked+label+.main-content {
 
 .main-content {
   h1.grhead1 {
-	font-size: 1.40rem;
+    font-size: 1.40rem;
     margin: 0.13rem 0 0.13rem 0.9rem;
     color: var(--toc-header-text);
-	padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     line-height: 24px;
   }
   h2.grhead2 {
-	font-size: 1.30rem;
+    font-size: 1.30rem;
     margin: 0.13rem 0 0.13rem 1.50rem;
     color: var(--toc-header-text);
-	padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     line-height: 24px;
   }
   h3.grhead3 {
-	font-size: 1.20rem;
+    font-size: 1.20rem;
     margin: 0.13rem 0 0.13rem 2.10rem;
     color: var(--toc-header-text);
-	padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     line-height: 24px;
   }
   h4.grhead4 {
-	font-size: 1.10rem;
+    font-size: 1.10rem;
     margin: 0.13rem 0 0.13rem 2.75rem;
     color: var(--toc-header-text);
-	padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     line-height: 24px;
   }
 }
@@ -932,7 +934,6 @@ figure.image-caption {
   position: absolute;
   z-index: 1;
   left: 0.9rem;
-  
   /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
   opacity: 0;
   transition: opacity 1s;
@@ -985,29 +986,24 @@ figure.image-caption {
   color: var(--cayman-blockquote-text);
 }
 
-.cmp-no, 
-.cmp-unknown, 
+.cmp-no,
+.cmp-unknown,
 .cmp-yes {
-	background-repeat: no-repeat;
-	width: 3.2rem;
-	height: 3.2rem;
-	margin-left: auto;
-	margin-right: auto;
+  background-repeat: no-repeat;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-.cmp-yes
-{
-	background-image: url(../../img/tick.png);
+.cmp-yes {
+  background-image: url(../../img/tick.png);
 }
 
-.cmp-no
-{
-	background-image: url(../../img/cross.png);
+.cmp-no {
+  background-image: url(../../img/cross.png);
 }
 
-.cmp-unknown
-{
-	background-image: url(../../img/question.png);
+.cmp-unknown {
+  background-image: url(../../img/question.png);
 }
-
