@@ -30,7 +30,7 @@
   * folder - no script - (00 Main, 01 Textures, 02 Alt Textures, 03 Body Slide, 04 Script Extender Plugins)
   * Install BAIN package
   * NMM XML or Fomod (Beta functionality currently implemented)
-* Ways to executo usefull programs for modding such as LOOT, xEdit, NifSkope, Photoshop, Blender (create custom links as well as default options)
+* Ways to execute usefull programs for modding such as LOOT, xEdit, NifSkope, Photoshop, Blender (create custom links as well as default options)
 * A watchdog of sorts (not necessarily a DLL of the same name) that notices when a file is added or removed from in the data folder and updates the list of plugins. The routine doesn't auto activate the mod but will cleanse the load order if a file is removed.
   * alters plugins.txt or loadorder.txt (should be TES5 only) when applicable.
   * loadorder.txt not used by Fallout 4 and Skyrim SE and any future games that uses the star load order system.
