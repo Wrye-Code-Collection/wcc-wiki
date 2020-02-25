@@ -3,6 +3,10 @@ The old Oblivion mod lists have some issues when it comes to links to other mod 
 
 == Contents
 {{CONTENTS=4}}
+
+== Modding Websites
+[[http://theelderscrolls.info/ | theelderscrolls.info]]
+
 === Cliffworms Mods
 Original Bethesda thread [[http://forums.bethsoft.com/topic/1010109-list-list-of-mod-lists/ | [LIST] List of Mod Lists]] by Cliffworms
 
