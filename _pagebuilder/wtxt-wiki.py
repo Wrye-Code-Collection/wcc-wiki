@@ -322,7 +322,7 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
     reImageCaptionUrl = re.compile(r'{{image-cap-url:(.+?)}}')
     # --Exclude from Paragraphs
     # reHtmlBegin = re.compile(r'(^\<font.+?\>)|(^\<code.+?\>)|(^\<a\s{1,3}href.+?\>)|(^\<a\s{1,3}(class=".+?)?href.+?\>)|(^\<img\s{1,3}src.+?\>)|^\u00A9|^\<strong|^\<[bB]\>|(^{% include image)')
-    reHtmlNotPar = re.compile(r'\<h\d[>]?|<hr>|{{CONTENTS|class="drkbtn"|<[\/]?div>|<div id=|<div class=|<[\/]?iframe|<[\/]?table|<[\/]?tr')
+    reHtmlNotPar = re.compile(r'\<h\d[>]?|<hr>|{{CONTENTS|class="drkbtn"|<[\/]?div>|<div id=|<div class=|<[\/]?iframe|<[\/]?table|<[\/]?tr|<[\/]?td|<[\/]?thead|<[\/]?tbody|<[\/]?th')
     reLiquidOnly = re.compile(r'{% raw %}|{% endraw %}')
 
     def imageInline(maObject):
@@ -487,6 +487,8 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         if maContents:
             temp_var = maContents.group(1)
             addContents = int(temp_var)
+        # -- Inline Images
+        line = reImageInline.sub(imageInline, line)
         # --Re Note -------------------------------
         maNoteTag = reNoteTag.match(line)
         if maNoteTag:
@@ -576,8 +578,6 @@ def wtxtToHtml(srcFile, outFile=None, cssDir=''):
         line = reBoldItalic.sub(boldItalicReplace, line)
         # --Wtxt Tags
         line = reAnchorTag.sub(anchorReplace, line)
-        # --Images
-        line = reImageInline.sub(imageInline, line)
         line = reImageOnly.sub(imageInclude, line)
         line = reImageCaption.sub(imageCaption, line)
         line = reImageCaptionUrl.sub(imageCaptionUrl, line)
