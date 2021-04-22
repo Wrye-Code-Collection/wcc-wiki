@@ -138,24 +138,13 @@ body {
     margin-left: 0;
   }
   /* Preserve these colors the look goof on the header background */
-  color: rgba(255,
-  255,
-  255,
-  1.0);
-  background-color: rgba(23,
-  130,
-  130,
-  0.9);
-  border-color: rgba(23,
-  130,
-  130,
-  0.2);
+  color: rgba(255, 255, 255, 1.0);
+  background-color: rgba(23, 130, 130, 0.9);
+  border-color: rgba(23, 130, 130, 0.2);
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
-  transition: color 0.2s,
-  background-color 0.2s,
-  border-color 0.2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   &:hover {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.8);
@@ -235,37 +224,15 @@ body {
   }
 }
 
-.gridhead1 {
-  grid-area: padding1;
-}
+.gridhead1 { grid-area: padding1; }
+.gridhead2 { grid-area: image; }
+.gridhead3 { grid-area: header; }
+.gridhead4 { grid-area: padding2; }
+.gridhead5 { grid-area: nav-buttons; }
+.gridhead6 { grid-area: page-buttons; }
 
-.gridhead2 {
-  grid-area: image;
-}
-
-.gridhead3 {
-  grid-area: header;
-}
-
-.gridhead4 {
-  grid-area: padding2;
-}
-
-.gridhead5 {
-  grid-area: nav-buttons;
-}
-
-.gridhead6 {
-  grid-area: page-buttons;
-}
-
-.toc1 {
-  grid-area: lefttoc;
-}
-
-.toc2 {
-  grid-area: righttoc;
-}
+.toc1 { grid-area: lefttoc; }
+.toc2 { grid-area: righttoc; }
 
 .grid-header {
   display: grid;
@@ -285,16 +252,28 @@ body {
     text-align: center;
   }
   @include full {
-    grid-template-areas: 'padding1 image header padding2' 'nav-buttons nav-buttons nav-buttons nav-buttons' 'page-buttons page-buttons page-buttons page-buttons';
+    grid-template-areas:
+    'padding1 image header padding2'
+    'nav-buttons nav-buttons nav-buttons nav-buttons'
+    'page-buttons page-buttons page-buttons page-buttons';
   }
   @include huge {
-    grid-template-areas: 'padding1 image header padding2' 'nav-buttons nav-buttons nav-buttons nav-buttons' 'page-buttons page-buttons page-buttons page-buttons';
+    grid-template-areas:
+    'padding1 image header padding2'
+    'nav-buttons nav-buttons nav-buttons nav-buttons'
+    'page-buttons page-buttons page-buttons page-buttons';
   }
   @include large {
-    grid-template-areas: 'padding1 image header padding2' 'nav-buttons nav-buttons nav-buttons nav-buttons' 'page-buttons page-buttons page-buttons page-buttons';
+    grid-template-areas:
+    'padding1 image header padding2'
+    'nav-buttons nav-buttons nav-buttons nav-buttons'
+    'page-buttons page-buttons page-buttons page-buttons';
   }
   @include medium {
-    grid-template-areas: 'padding1 image header padding2' 'nav-buttons nav-buttons nav-buttons nav-buttons' 'page-buttons page-buttons page-buttons page-buttons';
+    grid-template-areas:
+    'padding1 image header padding2'
+    'nav-buttons nav-buttons nav-buttons nav-buttons'
+    'page-buttons page-buttons page-buttons page-buttons';
   }
   @include small {
     grid-template-areas: 'padding1' 'image' 'header' 'padding2' 'nav-buttons' 'page-buttons';
@@ -336,19 +315,24 @@ body {
 .grid-toc {
   display: grid;
   @include full {
-    grid-template-areas: 'lefttoc righttoc';
+  grid-template-areas:
+    'lefttoc righttoc';
   }
   @include huge {
-    grid-template-areas: 'lefttoc righttoc';
+  grid-template-areas:
+    'lefttoc righttoc';
   }
   @include large {
-    grid-template-areas: 'lefttoc righttoc';
+  grid-template-areas:
+    'lefttoc righttoc';
   }
   @include medium {
-    grid-template-areas: 'lefttoc righttoc';
+  grid-template-areas:
+    'lefttoc righttoc';
   }
   @include small {
-    grid-template-areas: 'lefttoc' 'righttoc';
+  grid-template-areas:
+    'lefttoc' 'righttoc';
   }
 }
 
@@ -576,8 +560,7 @@ body {
     width: calc(100% - (0.9rem * 2));
     overflow: auto;
     word-break: normal;
-    word-break: keep-all;
-    /* For Firefox to horizontally scroll wider tables. */
+    word-break: keep-all; /* For Firefox to horizontally scroll wider tables. */
     -webkit-overflow-scrolling: touch;
     margin-left: 0.9rem;
     margin-right: 0.9rem;
@@ -929,9 +912,24 @@ section.quote {
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   border: 0.1rem solid rgba(0, 0, 0, 0.5);
   border-radius: 10px 10px 2px 2px;
-  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    inset 0 1px rgba(255, 255, 255, 0.3),
+    inset 0 10px rgba(255, 255, 255, 0.2),
+    inset 0 10px 20px rgba(255, 255, 255, 0.25),
+    inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    inset 0 1px rgba(255, 255, 255, 0.3),
+    inset 0 10px rgba(255, 255, 255, 0.2),
+    inset 0 10px 20px rgba(255, 255, 255, 0.25),
+    inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    inset 0 1px rgba(255, 255, 255, 0.3),
+    inset 0 10px rgba(255, 255, 255, 0.2),
+    inset 0 10px 20px rgba(255, 255, 255, 0.25),
+    inset 0 -15px 30px rgba(0, 0, 0, 0.3);
   p {
     margin: 0;
     padding: 0;
