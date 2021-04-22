@@ -888,28 +888,13 @@ section.quote {
   display: block;
   justify-content: center;
   align-items: center;
-  /* original glass settings
-  margin:10px; 
-  padding:0;
-	width:100px;
-	height:100px;
-  */
   margin: 0.5rem 1rem 0.5rem 1rem;
   color: rgba(150, 150, 150, 0.8);
-  /* new background */
 	background:rgba(0,0,0,0.25);
-  /* old background
-  background-color: rgba(150, 150, 150, 0.08);
-  */
   border-color: rgba(150, 150, 150, 0.2);
   border-style: solid;
   border-width: 0.1rem;
-  /* previous border
-  border-radius: 0.3rem;
-  box-shadow: 5px 3px 30px black;
-  */
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-  /* new border */
 	border:0.1rem solid rgba(0,0,0,0.5);
 	border-radius:10px 10px 2px 2px;
 	-webkit-box-shadow:
